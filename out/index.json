@@ -1,0 +1,2468 @@
+[
+  {
+    "title": "API Reference | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/api-reference/",
+    "path": "/docs/plugins/api/api-reference/",
+    "slug": "docs__plugins__api__api-reference"
+  },
+  {
+    "title": "The Typings File | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/typings/",
+    "path": "/docs/plugins/api/typings/",
+    "slug": "docs__plugins__api__typings"
+  },
+  {
+    "title": "API Errors | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/api-errors/",
+    "path": "/docs/plugins/api/api-errors/",
+    "slug": "docs__plugins__api__api-errors"
+  },
+  {
+    "title": "Global Objects | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/global-objects/",
+    "path": "/docs/plugins/api/global-objects/",
+    "slug": "docs__plugins__api__global-objects"
+  },
+  {
+    "title": "Node Types | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/nodes/",
+    "path": "/docs/plugins/api/nodes/",
+    "slug": "docs__plugins__api__nodes"
+  },
+  {
+    "title": "Shared Node Properties | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/node-properties/",
+    "path": "/docs/plugins/api/node-properties/",
+    "slug": "docs__plugins__api__node-properties"
+  },
+  {
+    "title": "Data Types | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/data-types/",
+    "path": "/docs/plugins/api/data-types/",
+    "slug": "docs__plugins__api__data-types"
+  },
+  {
+    "title": "figma | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma/",
+    "path": "/docs/plugins/api/figma/",
+    "slug": "docs__plugins__api__figma"
+  },
+  {
+    "title": "InstanceNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/InstanceNode/",
+    "path": "/docs/plugins/api/InstanceNode/",
+    "slug": "docs__plugins__api__InstanceNode"
+  },
+  {
+    "title": "figma.ui | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-ui/",
+    "path": "/docs/plugins/api/figma-ui/",
+    "slug": "docs__plugins__api__figma-ui"
+  },
+  {
+    "title": "figma.util | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-util/",
+    "path": "/docs/plugins/api/figma-util/",
+    "slug": "docs__plugins__api__figma-util"
+  },
+  {
+    "title": "figma.constants | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-constants/",
+    "path": "/docs/plugins/api/figma-constants/",
+    "slug": "docs__plugins__api__figma-constants"
+  },
+  {
+    "title": "figma.codegen | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-codegen/",
+    "path": "/docs/plugins/api/figma-codegen/",
+    "slug": "docs__plugins__api__figma-codegen"
+  },
+  {
+    "title": "figma.timer | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-timer/",
+    "path": "/docs/plugins/api/figma-timer/",
+    "slug": "docs__plugins__api__figma-timer"
+  },
+  {
+    "title": "figma.viewport | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-viewport/",
+    "path": "/docs/plugins/api/figma-viewport/",
+    "slug": "docs__plugins__api__figma-viewport"
+  },
+  {
+    "title": "figma.clientStorage | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-clientStorage/",
+    "path": "/docs/plugins/api/figma-clientStorage/",
+    "slug": "docs__plugins__api__figma-clientStorage"
+  },
+  {
+    "title": "figma.parameters | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-parameters/",
+    "path": "/docs/plugins/api/figma-parameters/",
+    "slug": "docs__plugins__api__figma-parameters"
+  },
+  {
+    "title": "figma.textreview | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-textreview/",
+    "path": "/docs/plugins/api/figma-textreview/",
+    "slug": "docs__plugins__api__figma-textreview"
+  },
+  {
+    "title": "figma.payments | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-payments/",
+    "path": "/docs/plugins/api/figma-payments/",
+    "slug": "docs__plugins__api__figma-payments"
+  },
+  {
+    "title": "figma.variables | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-variables/",
+    "path": "/docs/plugins/api/figma-variables/",
+    "slug": "docs__plugins__api__figma-variables"
+  },
+  {
+    "title": "figma.teamLibrary | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-teamlibrary/",
+    "path": "/docs/plugins/api/figma-teamlibrary/",
+    "slug": "docs__plugins__api__figma-teamlibrary"
+  },
+  {
+    "title": "figma.annotations | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-annotations/",
+    "path": "/docs/plugins/api/figma-annotations/",
+    "slug": "docs__plugins__api__figma-annotations"
+  },
+  {
+    "title": "figma.buzz | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-buzz/",
+    "path": "/docs/plugins/api/figma-buzz/",
+    "slug": "docs__plugins__api__figma-buzz"
+  },
+  {
+    "title": "mode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-mode/",
+    "path": "/docs/plugins/api/properties/figma-mode/",
+    "slug": "docs__plugins__api__properties__figma-mode"
+  },
+  {
+    "title": "skipInvisibleInstanceChildren | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-skipinvisibleinstancechildren/",
+    "path": "/docs/plugins/api/properties/figma-skipinvisibleinstancechildren/",
+    "slug": "docs__plugins__api__properties__figma-skipinvisibleinstancechildren"
+  },
+  {
+    "title": "closePlugin | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-closeplugin/",
+    "path": "/docs/plugins/api/properties/figma-closeplugin/",
+    "slug": "docs__plugins__api__properties__figma-closeplugin"
+  },
+  {
+    "title": "notify | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-notify/",
+    "path": "/docs/plugins/api/properties/figma-notify/",
+    "slug": "docs__plugins__api__properties__figma-notify"
+  },
+  {
+    "title": "commitUndo | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-commitundo/",
+    "path": "/docs/plugins/api/properties/figma-commitundo/",
+    "slug": "docs__plugins__api__properties__figma-commitundo"
+  },
+  {
+    "title": "saveVersionHistoryAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-saveversionhistoryasync/",
+    "path": "/docs/plugins/api/properties/figma-saveversionhistoryasync/",
+    "slug": "docs__plugins__api__properties__figma-saveversionhistoryasync"
+  },
+  {
+    "title": "openExternal | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-openexternal/",
+    "path": "/docs/plugins/api/properties/figma-openexternal/",
+    "slug": "docs__plugins__api__properties__figma-openexternal"
+  },
+  {
+    "title": "showUI | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-showui/",
+    "path": "/docs/plugins/api/properties/figma-showui/",
+    "slug": "docs__plugins__api__properties__figma-showui"
+  },
+  {
+    "title": "on | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-on/",
+    "path": "/docs/plugins/api/properties/figma-on/",
+    "slug": "docs__plugins__api__properties__figma-on"
+  },
+  {
+    "title": "off | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-off/",
+    "path": "/docs/plugins/api/properties/figma-off/",
+    "slug": "docs__plugins__api__properties__figma-off"
+  },
+  {
+    "title": "mixed | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-mixed/",
+    "path": "/docs/plugins/api/properties/figma-mixed/",
+    "slug": "docs__plugins__api__properties__figma-mixed"
+  },
+  {
+    "title": "createRectangle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createrectangle/",
+    "path": "/docs/plugins/api/properties/figma-createrectangle/",
+    "slug": "docs__plugins__api__properties__figma-createrectangle"
+  },
+  {
+    "title": "createLine | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createline/",
+    "path": "/docs/plugins/api/properties/figma-createline/",
+    "slug": "docs__plugins__api__properties__figma-createline"
+  },
+  {
+    "title": "createEllipse | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createellipse/",
+    "path": "/docs/plugins/api/properties/figma-createellipse/",
+    "slug": "docs__plugins__api__properties__figma-createellipse"
+  },
+  {
+    "title": "createPolygon | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createpolygon/",
+    "path": "/docs/plugins/api/properties/figma-createpolygon/",
+    "slug": "docs__plugins__api__properties__figma-createpolygon"
+  },
+  {
+    "title": "createStar | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createstar/",
+    "path": "/docs/plugins/api/properties/figma-createstar/",
+    "slug": "docs__plugins__api__properties__figma-createstar"
+  },
+  {
+    "title": "createVector | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createvector/",
+    "path": "/docs/plugins/api/properties/figma-createvector/",
+    "slug": "docs__plugins__api__properties__figma-createvector"
+  },
+  {
+    "title": "createText | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createtext/",
+    "path": "/docs/plugins/api/properties/figma-createtext/",
+    "slug": "docs__plugins__api__properties__figma-createtext"
+  },
+  {
+    "title": "createFrame | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createframe/",
+    "path": "/docs/plugins/api/properties/figma-createframe/",
+    "slug": "docs__plugins__api__properties__figma-createframe"
+  },
+  {
+    "title": "createComponent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createcomponent/",
+    "path": "/docs/plugins/api/properties/figma-createcomponent/",
+    "slug": "docs__plugins__api__properties__figma-createcomponent"
+  },
+  {
+    "title": "createComponentFromNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createcomponentfromnode/",
+    "path": "/docs/plugins/api/properties/figma-createcomponentfromnode/",
+    "slug": "docs__plugins__api__properties__figma-createcomponentfromnode"
+  },
+  {
+    "title": "createPage | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createpage/",
+    "path": "/docs/plugins/api/properties/figma-createpage/",
+    "slug": "docs__plugins__api__properties__figma-createpage"
+  },
+  {
+    "title": "createPageDivider | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createpagedivider/",
+    "path": "/docs/plugins/api/properties/figma-createpagedivider/",
+    "slug": "docs__plugins__api__properties__figma-createpagedivider"
+  },
+  {
+    "title": "createSlice | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createslice/",
+    "path": "/docs/plugins/api/properties/figma-createslice/",
+    "slug": "docs__plugins__api__properties__figma-createslice"
+  },
+  {
+    "title": "createSlide | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createslide/",
+    "path": "/docs/plugins/api/properties/figma-createslide/",
+    "slug": "docs__plugins__api__properties__figma-createslide"
+  },
+  {
+    "title": "createSlideRow | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createsliderow/",
+    "path": "/docs/plugins/api/properties/figma-createsliderow/",
+    "slug": "docs__plugins__api__properties__figma-createsliderow"
+  },
+  {
+    "title": "createSticky | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createsticky/",
+    "path": "/docs/plugins/api/properties/figma-createsticky/",
+    "slug": "docs__plugins__api__properties__figma-createsticky"
+  },
+  {
+    "title": "createConnector | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createconnector/",
+    "path": "/docs/plugins/api/properties/figma-createconnector/",
+    "slug": "docs__plugins__api__properties__figma-createconnector"
+  },
+  {
+    "title": "createShapeWithText | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createshapewithtext/",
+    "path": "/docs/plugins/api/properties/figma-createshapewithtext/",
+    "slug": "docs__plugins__api__properties__figma-createshapewithtext"
+  },
+  {
+    "title": "createTable | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createtable/",
+    "path": "/docs/plugins/api/properties/figma-createtable/",
+    "slug": "docs__plugins__api__properties__figma-createtable"
+  },
+  {
+    "title": "createTextPath | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createtextpath/",
+    "path": "/docs/plugins/api/properties/figma-createtextpath/",
+    "slug": "docs__plugins__api__properties__figma-createtextpath"
+  },
+  {
+    "title": "createNodeFromJSXAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createnodefromjsxasync/",
+    "path": "/docs/plugins/api/properties/figma-createnodefromjsxasync/",
+    "slug": "docs__plugins__api__properties__figma-createnodefromjsxasync"
+  },
+  {
+    "title": "createBooleanOperation | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createbooleanoperation/",
+    "path": "/docs/plugins/api/properties/figma-createbooleanoperation/",
+    "slug": "docs__plugins__api__properties__figma-createbooleanoperation"
+  },
+  {
+    "title": "loadFontAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-loadfontasync/",
+    "path": "/docs/plugins/api/properties/figma-loadfontasync/",
+    "slug": "docs__plugins__api__properties__figma-loadfontasync"
+  },
+  {
+    "title": "createImage | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createimage/",
+    "path": "/docs/plugins/api/properties/figma-createimage/",
+    "slug": "docs__plugins__api__properties__figma-createimage"
+  },
+  {
+    "title": "createImageAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createimageasync/",
+    "path": "/docs/plugins/api/properties/figma-createimageasync/",
+    "slug": "docs__plugins__api__properties__figma-createimageasync"
+  },
+  {
+    "title": "createVideoAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createvideoasync/",
+    "path": "/docs/plugins/api/properties/figma-createvideoasync/",
+    "slug": "docs__plugins__api__properties__figma-createvideoasync"
+  },
+  {
+    "title": "createLinkPreviewAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createlinkpreviewasync/",
+    "path": "/docs/plugins/api/properties/figma-createlinkpreviewasync/",
+    "slug": "docs__plugins__api__properties__figma-createlinkpreviewasync"
+  },
+  {
+    "title": "createGif | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-creategif/",
+    "path": "/docs/plugins/api/properties/figma-creategif/",
+    "slug": "docs__plugins__api__properties__figma-creategif"
+  },
+  {
+    "title": "combineAsVariants | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-combineasvariants/",
+    "path": "/docs/plugins/api/properties/figma-combineasvariants/",
+    "slug": "docs__plugins__api__properties__figma-combineasvariants"
+  },
+  {
+    "title": "group | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-group/",
+    "path": "/docs/plugins/api/properties/figma-group/",
+    "slug": "docs__plugins__api__properties__figma-group"
+  },
+  {
+    "title": "transformGroup | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-transformgroup/",
+    "path": "/docs/plugins/api/properties/figma-transformgroup/",
+    "slug": "docs__plugins__api__properties__figma-transformgroup"
+  },
+  {
+    "title": "flatten | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-flatten/",
+    "path": "/docs/plugins/api/properties/figma-flatten/",
+    "slug": "docs__plugins__api__properties__figma-flatten"
+  },
+  {
+    "title": "ungroup | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-ungroup/",
+    "path": "/docs/plugins/api/properties/figma-ungroup/",
+    "slug": "docs__plugins__api__properties__figma-ungroup"
+  },
+  {
+    "title": "getSlideGrid | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-getslidegrid/",
+    "path": "/docs/plugins/api/properties/figma-getslidegrid/",
+    "slug": "docs__plugins__api__properties__figma-getslidegrid"
+  },
+  {
+    "title": "setSlideGrid | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-setslidegrid/",
+    "path": "/docs/plugins/api/properties/figma-setslidegrid/",
+    "slug": "docs__plugins__api__properties__figma-setslidegrid"
+  },
+  {
+    "title": "getCanvasGrid | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-getcanvasgrid/",
+    "path": "/docs/plugins/api/properties/figma-getcanvasgrid/",
+    "slug": "docs__plugins__api__properties__figma-getcanvasgrid"
+  },
+  {
+    "title": "setCanvasGrid | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-setcanvasgrid/",
+    "path": "/docs/plugins/api/properties/figma-setcanvasgrid/",
+    "slug": "docs__plugins__api__properties__figma-setcanvasgrid"
+  },
+  {
+    "title": "createCanvasRow | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createcanvasrow/",
+    "path": "/docs/plugins/api/properties/figma-createcanvasrow/",
+    "slug": "docs__plugins__api__properties__figma-createcanvasrow"
+  },
+  {
+    "title": "moveNodesToCoord | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-movenodestocoord/",
+    "path": "/docs/plugins/api/properties/figma-movenodestocoord/",
+    "slug": "docs__plugins__api__properties__figma-movenodestocoord"
+  },
+  {
+    "title": "loadBrushesAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-loadbrushesasync/",
+    "path": "/docs/plugins/api/properties/figma-loadbrushesasync/",
+    "slug": "docs__plugins__api__properties__figma-loadbrushesasync"
+  },
+  {
+    "title": "fetch | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/global-fetch/",
+    "path": "/docs/plugins/api/properties/global-fetch/",
+    "slug": "docs__plugins__api__properties__global-fetch"
+  },
+  {
+    "title": "BooleanOperationNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/BooleanOperationNode/",
+    "path": "/docs/plugins/api/BooleanOperationNode/",
+    "slug": "docs__plugins__api__BooleanOperationNode"
+  },
+  {
+    "title": "CodeBlockNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/CodeBlockNode/",
+    "path": "/docs/plugins/api/CodeBlockNode/",
+    "slug": "docs__plugins__api__CodeBlockNode"
+  },
+  {
+    "title": "ComponentNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ComponentNode/",
+    "path": "/docs/plugins/api/ComponentNode/",
+    "slug": "docs__plugins__api__ComponentNode"
+  },
+  {
+    "title": "ComponentSetNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ComponentSetNode/",
+    "path": "/docs/plugins/api/ComponentSetNode/",
+    "slug": "docs__plugins__api__ComponentSetNode"
+  },
+  {
+    "title": "ConnectorNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ConnectorNode/",
+    "path": "/docs/plugins/api/ConnectorNode/",
+    "slug": "docs__plugins__api__ConnectorNode"
+  },
+  {
+    "title": "DocumentNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/DocumentNode/",
+    "path": "/docs/plugins/api/DocumentNode/",
+    "slug": "docs__plugins__api__DocumentNode"
+  },
+  {
+    "title": "EllipseNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/EllipseNode/",
+    "path": "/docs/plugins/api/EllipseNode/",
+    "slug": "docs__plugins__api__EllipseNode"
+  },
+  {
+    "title": "EmbedNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/EmbedNode/",
+    "path": "/docs/plugins/api/EmbedNode/",
+    "slug": "docs__plugins__api__EmbedNode"
+  },
+  {
+    "title": "FrameNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/FrameNode/",
+    "path": "/docs/plugins/api/FrameNode/",
+    "slug": "docs__plugins__api__FrameNode"
+  },
+  {
+    "title": "GroupNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/GroupNode/",
+    "path": "/docs/plugins/api/GroupNode/",
+    "slug": "docs__plugins__api__GroupNode"
+  },
+  {
+    "title": "HighlightNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/HighlightNode/",
+    "path": "/docs/plugins/api/HighlightNode/",
+    "slug": "docs__plugins__api__HighlightNode"
+  },
+  {
+    "title": "InteractiveSlideElementNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/InteractiveSlideElementNode/",
+    "path": "/docs/plugins/api/InteractiveSlideElementNode/",
+    "slug": "docs__plugins__api__InteractiveSlideElementNode"
+  },
+  {
+    "title": "LineNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/LineNode/",
+    "path": "/docs/plugins/api/LineNode/",
+    "slug": "docs__plugins__api__LineNode"
+  },
+  {
+    "title": "LinkUnfurlNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/LinkUnfurlNode/",
+    "path": "/docs/plugins/api/LinkUnfurlNode/",
+    "slug": "docs__plugins__api__LinkUnfurlNode"
+  },
+  {
+    "title": "MediaNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/MediaNode/",
+    "path": "/docs/plugins/api/MediaNode/",
+    "slug": "docs__plugins__api__MediaNode"
+  },
+  {
+    "title": "PageNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/PageNode/",
+    "path": "/docs/plugins/api/PageNode/",
+    "slug": "docs__plugins__api__PageNode"
+  },
+  {
+    "title": "PolygonNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/PolygonNode/",
+    "path": "/docs/plugins/api/PolygonNode/",
+    "slug": "docs__plugins__api__PolygonNode"
+  },
+  {
+    "title": "RectangleNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/RectangleNode/",
+    "path": "/docs/plugins/api/RectangleNode/",
+    "slug": "docs__plugins__api__RectangleNode"
+  },
+  {
+    "title": "RemovedNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/RemovedNode/",
+    "path": "/docs/plugins/api/RemovedNode/",
+    "slug": "docs__plugins__api__RemovedNode"
+  },
+  {
+    "title": "SectionNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/SectionNode/",
+    "path": "/docs/plugins/api/SectionNode/",
+    "slug": "docs__plugins__api__SectionNode"
+  },
+  {
+    "title": "ShapeWithTextNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ShapeWithTextNode/",
+    "path": "/docs/plugins/api/ShapeWithTextNode/",
+    "slug": "docs__plugins__api__ShapeWithTextNode"
+  },
+  {
+    "title": "SliceNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/SliceNode/",
+    "path": "/docs/plugins/api/SliceNode/",
+    "slug": "docs__plugins__api__SliceNode"
+  },
+  {
+    "title": "SlideGridNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/SlideGridNode/",
+    "path": "/docs/plugins/api/SlideGridNode/",
+    "slug": "docs__plugins__api__SlideGridNode"
+  },
+  {
+    "title": "SlideNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/SlideNode/",
+    "path": "/docs/plugins/api/SlideNode/",
+    "slug": "docs__plugins__api__SlideNode"
+  },
+  {
+    "title": "SlideRowNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/SlideRowNode/",
+    "path": "/docs/plugins/api/SlideRowNode/",
+    "slug": "docs__plugins__api__SlideRowNode"
+  },
+  {
+    "title": "StampNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/StampNode/",
+    "path": "/docs/plugins/api/StampNode/",
+    "slug": "docs__plugins__api__StampNode"
+  },
+  {
+    "title": "StarNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/StarNode/",
+    "path": "/docs/plugins/api/StarNode/",
+    "slug": "docs__plugins__api__StarNode"
+  },
+  {
+    "title": "StickyNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/StickyNode/",
+    "path": "/docs/plugins/api/StickyNode/",
+    "slug": "docs__plugins__api__StickyNode"
+  },
+  {
+    "title": "TableCellNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TableCellNode/",
+    "path": "/docs/plugins/api/TableCellNode/",
+    "slug": "docs__plugins__api__TableCellNode"
+  },
+  {
+    "title": "TableNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TableNode/",
+    "path": "/docs/plugins/api/TableNode/",
+    "slug": "docs__plugins__api__TableNode"
+  },
+  {
+    "title": "TextNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextNode/",
+    "path": "/docs/plugins/api/TextNode/",
+    "slug": "docs__plugins__api__TextNode"
+  },
+  {
+    "title": "TextPathNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextPathNode/",
+    "path": "/docs/plugins/api/TextPathNode/",
+    "slug": "docs__plugins__api__TextPathNode"
+  },
+  {
+    "title": "TransformGroupNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TransformGroupNode/",
+    "path": "/docs/plugins/api/TransformGroupNode/",
+    "slug": "docs__plugins__api__TransformGroupNode"
+  },
+  {
+    "title": "VectorNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VectorNode/",
+    "path": "/docs/plugins/api/VectorNode/",
+    "slug": "docs__plugins__api__VectorNode"
+  },
+  {
+    "title": "WashiTapeNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/WashiTapeNode/",
+    "path": "/docs/plugins/api/WashiTapeNode/",
+    "slug": "docs__plugins__api__WashiTapeNode"
+  },
+  {
+    "title": "WidgetNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/WidgetNode/",
+    "path": "/docs/plugins/api/WidgetNode/",
+    "slug": "docs__plugins__api__WidgetNode"
+  },
+  {
+    "title": "addDevResourceAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-adddevresourceasync/",
+    "path": "/docs/plugins/api/properties/nodes-adddevresourceasync/",
+    "slug": "docs__plugins__api__properties__nodes-adddevresourceasync"
+  },
+  {
+    "title": "appendChild | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-appendchild/",
+    "path": "/docs/plugins/api/properties/nodes-appendchild/",
+    "slug": "docs__plugins__api__properties__nodes-appendchild"
+  },
+  {
+    "title": "appendChildAt | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-appendchildat/",
+    "path": "/docs/plugins/api/properties/nodes-appendchildat/",
+    "slug": "docs__plugins__api__properties__nodes-appendchildat"
+  },
+  {
+    "title": "characters | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-characters/",
+    "path": "/docs/plugins/api/properties/TextNode-characters/",
+    "slug": "docs__plugins__api__properties__TextNode-characters"
+  },
+  {
+    "title": "children | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-children/",
+    "path": "/docs/plugins/api/properties/nodes-children/",
+    "slug": "docs__plugins__api__properties__nodes-children"
+  },
+  {
+    "title": "clearExplicitVariableModeForCollection | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/ExplicitVariableModesMixin-clearexplicitvariablemodeforcollection/",
+    "path": "/docs/plugins/api/properties/ExplicitVariableModesMixin-clearexplicitvariablemodeforcollection/",
+    "slug": "docs__plugins__api__properties__ExplicitVariableModesMixin-clearexplicitvariablemodeforcollection"
+  },
+  {
+    "title": "complexStrokeProperties | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-complexstrokeproperties/",
+    "path": "/docs/plugins/api/properties/nodes-complexstrokeproperties/",
+    "slug": "docs__plugins__api__properties__nodes-complexstrokeproperties"
+  },
+  {
+    "title": "componentPropertyDefinitions | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/ComponentPropertiesMixin-componentpropertydefinitions/",
+    "path": "/docs/plugins/api/properties/ComponentPropertiesMixin-componentpropertydefinitions/",
+    "slug": "docs__plugins__api__properties__ComponentPropertiesMixin-componentpropertydefinitions"
+  },
+  {
+    "title": "constraints | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-constraints/",
+    "path": "/docs/plugins/api/properties/nodes-constraints/",
+    "slug": "docs__plugins__api__properties__nodes-constraints"
+  },
+  {
+    "title": "cornerRadius | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-cornerradius/",
+    "path": "/docs/plugins/api/properties/nodes-cornerradius/",
+    "slug": "docs__plugins__api__properties__nodes-cornerradius"
+  },
+  {
+    "title": "cornerSmoothing | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-cornersmoothing/",
+    "path": "/docs/plugins/api/properties/nodes-cornersmoothing/",
+    "slug": "docs__plugins__api__properties__nodes-cornersmoothing"
+  },
+  {
+    "title": "counterAxisAlignContent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-counteraxisaligncontent/",
+    "path": "/docs/plugins/api/properties/nodes-counteraxisaligncontent/",
+    "slug": "docs__plugins__api__properties__nodes-counteraxisaligncontent"
+  },
+  {
+    "title": "counterAxisAlignItems | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-counteraxisalignitems/",
+    "path": "/docs/plugins/api/properties/nodes-counteraxisalignitems/",
+    "slug": "docs__plugins__api__properties__nodes-counteraxisalignitems"
+  },
+  {
+    "title": "counterAxisSizingMode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-counteraxissizingmode/",
+    "path": "/docs/plugins/api/properties/nodes-counteraxissizingmode/",
+    "slug": "docs__plugins__api__properties__nodes-counteraxissizingmode"
+  },
+  {
+    "title": "counterAxisSpacing | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-counteraxisspacing/",
+    "path": "/docs/plugins/api/properties/nodes-counteraxisspacing/",
+    "slug": "docs__plugins__api__properties__nodes-counteraxisspacing"
+  },
+  {
+    "title": "deleteCharacters | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-deletecharacters/",
+    "path": "/docs/plugins/api/properties/TextNode-deletecharacters/",
+    "slug": "docs__plugins__api__properties__TextNode-deletecharacters"
+  },
+  {
+    "title": "deleteDevResourceAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-deletedevresourceasync/",
+    "path": "/docs/plugins/api/properties/nodes-deletedevresourceasync/",
+    "slug": "docs__plugins__api__properties__nodes-deletedevresourceasync"
+  },
+  {
+    "title": "description | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-description/",
+    "path": "/docs/plugins/api/properties/nodes-description/",
+    "slug": "docs__plugins__api__properties__nodes-description"
+  },
+  {
+    "title": "descriptionMarkdown | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-descriptionmarkdown/",
+    "path": "/docs/plugins/api/properties/nodes-descriptionmarkdown/",
+    "slug": "docs__plugins__api__properties__nodes-descriptionmarkdown"
+  },
+  {
+    "title": "documentationLinks | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-documentationlinks/",
+    "path": "/docs/plugins/api/properties/nodes-documentationlinks/",
+    "slug": "docs__plugins__api__properties__nodes-documentationlinks"
+  },
+  {
+    "title": "editDevResourceAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-editdevresourceasync/",
+    "path": "/docs/plugins/api/properties/nodes-editdevresourceasync/",
+    "slug": "docs__plugins__api__properties__nodes-editdevresourceasync"
+  },
+  {
+    "title": "exportAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-exportasync/",
+    "path": "/docs/plugins/api/properties/nodes-exportasync/",
+    "slug": "docs__plugins__api__properties__nodes-exportasync"
+  },
+  {
+    "title": "fillStyleId | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-fillstyleid/",
+    "path": "/docs/plugins/api/properties/nodes-fillstyleid/",
+    "slug": "docs__plugins__api__properties__nodes-fillstyleid"
+  },
+  {
+    "title": "fills | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-fills/",
+    "path": "/docs/plugins/api/properties/nodes-fills/",
+    "slug": "docs__plugins__api__properties__nodes-fills"
+  },
+  {
+    "title": "findAll | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findall/",
+    "path": "/docs/plugins/api/properties/nodes-findall/",
+    "slug": "docs__plugins__api__properties__nodes-findall"
+  },
+  {
+    "title": "findAllWithCriteria | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findallwithcriteria/",
+    "path": "/docs/plugins/api/properties/nodes-findallwithcriteria/",
+    "slug": "docs__plugins__api__properties__nodes-findallwithcriteria"
+  },
+  {
+    "title": "findChild | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findchild/",
+    "path": "/docs/plugins/api/properties/nodes-findchild/",
+    "slug": "docs__plugins__api__properties__nodes-findchild"
+  },
+  {
+    "title": "findChildren | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findchildren/",
+    "path": "/docs/plugins/api/properties/nodes-findchildren/",
+    "slug": "docs__plugins__api__properties__nodes-findchildren"
+  },
+  {
+    "title": "findOne | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findone/",
+    "path": "/docs/plugins/api/properties/nodes-findone/",
+    "slug": "docs__plugins__api__properties__nodes-findone"
+  },
+  {
+    "title": "findWidgetNodesByWidgetId | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findwidgetnodesbywidgetid/",
+    "path": "/docs/plugins/api/properties/nodes-findwidgetnodesbywidgetid/",
+    "slug": "docs__plugins__api__properties__nodes-findwidgetnodesbywidgetid"
+  },
+  {
+    "title": "getDevResourcesAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-getdevresourcesasync/",
+    "path": "/docs/plugins/api/properties/nodes-getdevresourcesasync/",
+    "slug": "docs__plugins__api__properties__nodes-getdevresourcesasync"
+  },
+  {
+    "title": "getStyledTextSegments | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-getstyledtextsegments/",
+    "path": "/docs/plugins/api/properties/TextNode-getstyledtextsegments/",
+    "slug": "docs__plugins__api__properties__TextNode-getstyledtextsegments"
+  },
+  {
+    "title": "gridChildHorizontalAlign | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridchildhorizontalalign/",
+    "path": "/docs/plugins/api/properties/nodes-gridchildhorizontalalign/",
+    "slug": "docs__plugins__api__properties__nodes-gridchildhorizontalalign"
+  },
+  {
+    "title": "gridChildVerticalAlign | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridchildverticalalign/",
+    "path": "/docs/plugins/api/properties/nodes-gridchildverticalalign/",
+    "slug": "docs__plugins__api__properties__nodes-gridchildverticalalign"
+  },
+  {
+    "title": "gridColumnAnchorIndex | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumnanchorindex/",
+    "path": "/docs/plugins/api/properties/nodes-gridcolumnanchorindex/",
+    "slug": "docs__plugins__api__properties__nodes-gridcolumnanchorindex"
+  },
+  {
+    "title": "gridColumnCount | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumncount/",
+    "path": "/docs/plugins/api/properties/nodes-gridcolumncount/",
+    "slug": "docs__plugins__api__properties__nodes-gridcolumncount"
+  },
+  {
+    "title": "gridColumnGap | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumngap/",
+    "path": "/docs/plugins/api/properties/nodes-gridcolumngap/",
+    "slug": "docs__plugins__api__properties__nodes-gridcolumngap"
+  },
+  {
+    "title": "gridColumnSizes | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumnsizes/",
+    "path": "/docs/plugins/api/properties/nodes-gridcolumnsizes/",
+    "slug": "docs__plugins__api__properties__nodes-gridcolumnsizes"
+  },
+  {
+    "title": "gridColumnSpan | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumnspan/",
+    "path": "/docs/plugins/api/properties/nodes-gridcolumnspan/",
+    "slug": "docs__plugins__api__properties__nodes-gridcolumnspan"
+  },
+  {
+    "title": "gridRowAnchorIndex | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridrowanchorindex/",
+    "path": "/docs/plugins/api/properties/nodes-gridrowanchorindex/",
+    "slug": "docs__plugins__api__properties__nodes-gridrowanchorindex"
+  },
+  {
+    "title": "gridRowCount | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridrowcount/",
+    "path": "/docs/plugins/api/properties/nodes-gridrowcount/",
+    "slug": "docs__plugins__api__properties__nodes-gridrowcount"
+  },
+  {
+    "title": "gridRowGap | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridrowgap/",
+    "path": "/docs/plugins/api/properties/nodes-gridrowgap/",
+    "slug": "docs__plugins__api__properties__nodes-gridrowgap"
+  },
+  {
+    "title": "gridRowSizes | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridrowsizes/",
+    "path": "/docs/plugins/api/properties/nodes-gridrowsizes/",
+    "slug": "docs__plugins__api__properties__nodes-gridrowsizes"
+  },
+  {
+    "title": "gridRowSpan | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridrowspan/",
+    "path": "/docs/plugins/api/properties/nodes-gridrowspan/",
+    "slug": "docs__plugins__api__properties__nodes-gridrowspan"
+  },
+  {
+    "title": "id | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-id/",
+    "path": "/docs/plugins/api/properties/nodes-id/",
+    "slug": "docs__plugins__api__properties__nodes-id"
+  },
+  {
+    "title": "inferredVariables | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-inferredvariables/",
+    "path": "/docs/plugins/api/properties/nodes-inferredvariables/",
+    "slug": "docs__plugins__api__properties__nodes-inferredvariables"
+  },
+  {
+    "title": "insertCharacters | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-insertcharacters/",
+    "path": "/docs/plugins/api/properties/TextNode-insertcharacters/",
+    "slug": "docs__plugins__api__properties__TextNode-insertcharacters"
+  },
+  {
+    "title": "insertChild | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-insertchild/",
+    "path": "/docs/plugins/api/properties/nodes-insertchild/",
+    "slug": "docs__plugins__api__properties__nodes-insertchild"
+  },
+  {
+    "title": "isMask | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-ismask/",
+    "path": "/docs/plugins/api/properties/nodes-ismask/",
+    "slug": "docs__plugins__api__properties__nodes-ismask"
+  },
+  {
+    "title": "itemReverseZIndex | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-itemreversezindex/",
+    "path": "/docs/plugins/api/properties/nodes-itemreversezindex/",
+    "slug": "docs__plugins__api__properties__nodes-itemreversezindex"
+  },
+  {
+    "title": "itemSpacing | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-itemspacing/",
+    "path": "/docs/plugins/api/properties/nodes-itemspacing/",
+    "slug": "docs__plugins__api__properties__nodes-itemspacing"
+  },
+  {
+    "title": "layoutAlign | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutalign/",
+    "path": "/docs/plugins/api/properties/nodes-layoutalign/",
+    "slug": "docs__plugins__api__properties__nodes-layoutalign"
+  },
+  {
+    "title": "layoutGrow | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutgrow/",
+    "path": "/docs/plugins/api/properties/nodes-layoutgrow/",
+    "slug": "docs__plugins__api__properties__nodes-layoutgrow"
+  },
+  {
+    "title": "layoutMode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutmode/",
+    "path": "/docs/plugins/api/properties/nodes-layoutmode/",
+    "slug": "docs__plugins__api__properties__nodes-layoutmode"
+  },
+  {
+    "title": "layoutPositioning | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutpositioning/",
+    "path": "/docs/plugins/api/properties/nodes-layoutpositioning/",
+    "slug": "docs__plugins__api__properties__nodes-layoutpositioning"
+  },
+  {
+    "title": "layoutSizingHorizontal | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutsizinghorizontal/",
+    "path": "/docs/plugins/api/properties/nodes-layoutsizinghorizontal/",
+    "slug": "docs__plugins__api__properties__nodes-layoutsizinghorizontal"
+  },
+  {
+    "title": "layoutSizingVertical | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutsizingvertical/",
+    "path": "/docs/plugins/api/properties/nodes-layoutsizingvertical/",
+    "slug": "docs__plugins__api__properties__nodes-layoutsizingvertical"
+  },
+  {
+    "title": "layoutWrap | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutwrap/",
+    "path": "/docs/plugins/api/properties/nodes-layoutwrap/",
+    "slug": "docs__plugins__api__properties__nodes-layoutwrap"
+  },
+  {
+    "title": "locked | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-locked/",
+    "path": "/docs/plugins/api/properties/nodes-locked/",
+    "slug": "docs__plugins__api__properties__nodes-locked"
+  },
+  {
+    "title": "name | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-name/",
+    "path": "/docs/plugins/api/properties/nodes-name/",
+    "slug": "docs__plugins__api__properties__nodes-name"
+  },
+  {
+    "title": "numberOfFixedChildren | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-numberoffixedchildren/",
+    "path": "/docs/plugins/api/properties/nodes-numberoffixedchildren/",
+    "slug": "docs__plugins__api__properties__nodes-numberoffixedchildren"
+  },
+  {
+    "title": "openTypeFeatures | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-opentypefeatures/",
+    "path": "/docs/plugins/api/properties/TextNode-opentypefeatures/",
+    "slug": "docs__plugins__api__properties__TextNode-opentypefeatures"
+  },
+  {
+    "title": "overflowDirection | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-overflowdirection/",
+    "path": "/docs/plugins/api/properties/nodes-overflowdirection/",
+    "slug": "docs__plugins__api__properties__nodes-overflowdirection"
+  },
+  {
+    "title": "parent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-parent/",
+    "path": "/docs/plugins/api/properties/nodes-parent/",
+    "slug": "docs__plugins__api__properties__nodes-parent"
+  },
+  {
+    "title": "primaryAxisAlignItems | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-primaryaxisalignitems/",
+    "path": "/docs/plugins/api/properties/nodes-primaryaxisalignitems/",
+    "slug": "docs__plugins__api__properties__nodes-primaryaxisalignitems"
+  },
+  {
+    "title": "primaryAxisSizingMode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-primaryaxissizingmode/",
+    "path": "/docs/plugins/api/properties/nodes-primaryaxissizingmode/",
+    "slug": "docs__plugins__api__properties__nodes-primaryaxissizingmode"
+  },
+  {
+    "title": "reactions | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-reactions/",
+    "path": "/docs/plugins/api/properties/nodes-reactions/",
+    "slug": "docs__plugins__api__properties__nodes-reactions"
+  },
+  {
+    "title": "relativeTransform | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-relativetransform/",
+    "path": "/docs/plugins/api/properties/nodes-relativetransform/",
+    "slug": "docs__plugins__api__properties__nodes-relativetransform"
+  },
+  {
+    "title": "remove | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-remove/",
+    "path": "/docs/plugins/api/properties/nodes-remove/",
+    "slug": "docs__plugins__api__properties__nodes-remove"
+  },
+  {
+    "title": "removed | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-removed/",
+    "path": "/docs/plugins/api/properties/nodes-removed/",
+    "slug": "docs__plugins__api__properties__nodes-removed"
+  },
+  {
+    "title": "rescale | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-rescale/",
+    "path": "/docs/plugins/api/properties/nodes-rescale/",
+    "slug": "docs__plugins__api__properties__nodes-rescale"
+  },
+  {
+    "title": "resize | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-resize/",
+    "path": "/docs/plugins/api/properties/nodes-resize/",
+    "slug": "docs__plugins__api__properties__nodes-resize"
+  },
+  {
+    "title": "resizeWithoutConstraints | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-resizewithoutconstraints/",
+    "path": "/docs/plugins/api/properties/nodes-resizewithoutconstraints/",
+    "slug": "docs__plugins__api__properties__nodes-resizewithoutconstraints"
+  },
+  {
+    "title": "resolvedVariableModes | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-resolvedvariablemodes/",
+    "path": "/docs/plugins/api/properties/nodes-resolvedvariablemodes/",
+    "slug": "docs__plugins__api__properties__nodes-resolvedvariablemodes"
+  },
+  {
+    "title": "rotation | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-rotation/",
+    "path": "/docs/plugins/api/properties/nodes-rotation/",
+    "slug": "docs__plugins__api__properties__nodes-rotation"
+  },
+  {
+    "title": "setBoundVariable | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setboundvariable/",
+    "path": "/docs/plugins/api/properties/nodes-setboundvariable/",
+    "slug": "docs__plugins__api__properties__nodes-setboundvariable"
+  },
+  {
+    "title": "setExplicitVariableModeForCollection | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/",
+    "path": "/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/",
+    "slug": "docs__plugins__api__properties__ExplicitVariableModesMixin-setexplicitvariablemodeforcollection"
+  },
+  {
+    "title": "setGridChildPosition | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setgridchildposition/",
+    "path": "/docs/plugins/api/properties/nodes-setgridchildposition/",
+    "slug": "docs__plugins__api__properties__nodes-setgridchildposition"
+  },
+  {
+    "title": "setPluginData | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setplugindata/",
+    "path": "/docs/plugins/api/properties/nodes-setplugindata/",
+    "slug": "docs__plugins__api__properties__nodes-setplugindata"
+  },
+  {
+    "title": "setRelaunchData | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setrelaunchdata/",
+    "path": "/docs/plugins/api/properties/nodes-setrelaunchdata/",
+    "slug": "docs__plugins__api__properties__nodes-setrelaunchdata"
+  },
+  {
+    "title": "setSharedPluginData | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setsharedplugindata/",
+    "path": "/docs/plugins/api/properties/nodes-setsharedplugindata/",
+    "slug": "docs__plugins__api__properties__nodes-setsharedplugindata"
+  },
+  {
+    "title": "strokeAlign | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-strokealign/",
+    "path": "/docs/plugins/api/properties/nodes-strokealign/",
+    "slug": "docs__plugins__api__properties__nodes-strokealign"
+  },
+  {
+    "title": "strokeCap | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-strokecap/",
+    "path": "/docs/plugins/api/properties/nodes-strokecap/",
+    "slug": "docs__plugins__api__properties__nodes-strokecap"
+  },
+  {
+    "title": "strokeJoin | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-strokejoin/",
+    "path": "/docs/plugins/api/properties/nodes-strokejoin/",
+    "slug": "docs__plugins__api__properties__nodes-strokejoin"
+  },
+  {
+    "title": "strokes | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-strokes/",
+    "path": "/docs/plugins/api/properties/nodes-strokes/",
+    "slug": "docs__plugins__api__properties__nodes-strokes"
+  },
+  {
+    "title": "strokesIncludedInLayout | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-strokesincludedinlayout/",
+    "path": "/docs/plugins/api/properties/nodes-strokesincludedinlayout/",
+    "slug": "docs__plugins__api__properties__nodes-strokesincludedinlayout"
+  },
+  {
+    "title": "stuckNodes | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-stucknodes/",
+    "path": "/docs/plugins/api/properties/nodes-stucknodes/",
+    "slug": "docs__plugins__api__properties__nodes-stucknodes"
+  },
+  {
+    "title": "stuckTo | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-stuckto/",
+    "path": "/docs/plugins/api/properties/nodes-stuckto/",
+    "slug": "docs__plugins__api__properties__nodes-stuckto"
+  },
+  {
+    "title": "targetAspectRatio | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-targetaspectratio/",
+    "path": "/docs/plugins/api/properties/nodes-targetaspectratio/",
+    "slug": "docs__plugins__api__properties__nodes-targetaspectratio"
+  },
+  {
+    "title": "toString | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-tostring/",
+    "path": "/docs/plugins/api/properties/nodes-tostring/",
+    "slug": "docs__plugins__api__properties__nodes-tostring"
+  },
+  {
+    "title": "variableWidthStrokeProperties | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-variablewidthstrokeproperties/",
+    "path": "/docs/plugins/api/properties/nodes-variablewidthstrokeproperties/",
+    "slug": "docs__plugins__api__properties__nodes-variablewidthstrokeproperties"
+  },
+  {
+    "title": "variantProperties | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-variantproperties/",
+    "path": "/docs/plugins/api/properties/nodes-variantproperties/",
+    "slug": "docs__plugins__api__properties__nodes-variantproperties"
+  },
+  {
+    "title": "visible | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-visible/",
+    "path": "/docs/plugins/api/properties/nodes-visible/",
+    "slug": "docs__plugins__api__properties__nodes-visible"
+  },
+  {
+    "title": "x | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-x/",
+    "path": "/docs/plugins/api/properties/nodes-x/",
+    "slug": "docs__plugins__api__properties__nodes-x"
+  },
+  {
+    "title": "y | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-y/",
+    "path": "/docs/plugins/api/properties/nodes-y/",
+    "slug": "docs__plugins__api__properties__nodes-y"
+  },
+  {
+    "title": "Rect | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Rect/",
+    "path": "/docs/plugins/api/Rect/",
+    "slug": "docs__plugins__api__Rect"
+  },
+  {
+    "title": "Transform | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Transform/",
+    "path": "/docs/plugins/api/Transform/",
+    "slug": "docs__plugins__api__Transform"
+  },
+  {
+    "title": "ComponentPropertyType | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ComponentPropertyType/",
+    "path": "/docs/plugins/api/ComponentPropertyType/",
+    "slug": "docs__plugins__api__ComponentPropertyType"
+  },
+  {
+    "title": "VariableAlias | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableAlias/",
+    "path": "/docs/plugins/api/VariableAlias/",
+    "slug": "docs__plugins__api__VariableAlias"
+  },
+  {
+    "title": "ComponentPropertyOptions | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ComponentPropertyOptions/",
+    "path": "/docs/plugins/api/ComponentPropertyOptions/",
+    "slug": "docs__plugins__api__ComponentPropertyOptions"
+  },
+  {
+    "title": "MeasurementSide | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/MeasurementSide/",
+    "path": "/docs/plugins/api/MeasurementSide/",
+    "slug": "docs__plugins__api__MeasurementSide"
+  },
+  {
+    "title": "MeasurementOffset | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/MeasurementOffset/",
+    "path": "/docs/plugins/api/MeasurementOffset/",
+    "slug": "docs__plugins__api__MeasurementOffset"
+  },
+  {
+    "title": "Measurement | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Measurement/",
+    "path": "/docs/plugins/api/Measurement/",
+    "slug": "docs__plugins__api__Measurement"
+  },
+  {
+    "title": "Annotation | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Annotation/",
+    "path": "/docs/plugins/api/Annotation/",
+    "slug": "docs__plugins__api__Annotation"
+  },
+  {
+    "title": "Paint | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Paint/",
+    "path": "/docs/plugins/api/Paint/",
+    "slug": "docs__plugins__api__Paint"
+  },
+  {
+    "title": "BlendMode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/BlendMode/",
+    "path": "/docs/plugins/api/BlendMode/",
+    "slug": "docs__plugins__api__BlendMode"
+  },
+  {
+    "title": "VariableBindableNodeField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableBindableNodeField/",
+    "path": "/docs/plugins/api/VariableBindableNodeField/",
+    "slug": "docs__plugins__api__VariableBindableNodeField"
+  },
+  {
+    "title": "VariableBindableTextField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableBindableTextField/",
+    "path": "/docs/plugins/api/VariableBindableTextField/",
+    "slug": "docs__plugins__api__VariableBindableTextField"
+  },
+  {
+    "title": "TextSublayer | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextSublayer/",
+    "path": "/docs/plugins/api/TextSublayer/",
+    "slug": "docs__plugins__api__TextSublayer"
+  },
+  {
+    "title": "VariableCollection | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableCollection/",
+    "path": "/docs/plugins/api/VariableCollection/",
+    "slug": "docs__plugins__api__VariableCollection"
+  },
+  {
+    "title": "ComplexStrokeProperties | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ComplexStrokeProperties/",
+    "path": "/docs/plugins/api/ComplexStrokeProperties/",
+    "slug": "docs__plugins__api__ComplexStrokeProperties"
+  },
+  {
+    "title": "ComponentPropertyDefinitions | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ComponentPropertyDefinitions/",
+    "path": "/docs/plugins/api/ComponentPropertyDefinitions/",
+    "slug": "docs__plugins__api__ComponentPropertyDefinitions"
+  },
+  {
+    "title": "Constraints | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Constraints/",
+    "path": "/docs/plugins/api/Constraints/",
+    "slug": "docs__plugins__api__Constraints"
+  },
+  {
+    "title": "InferredAutoLayoutResult | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/InferredAutoLayoutResult/",
+    "path": "/docs/plugins/api/InferredAutoLayoutResult/",
+    "slug": "docs__plugins__api__InferredAutoLayoutResult"
+  },
+  {
+    "title": "EffectStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/EffectStyle/",
+    "path": "/docs/plugins/api/EffectStyle/",
+    "slug": "docs__plugins__api__EffectStyle"
+  },
+  {
+    "title": "GridStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/GridStyle/",
+    "path": "/docs/plugins/api/GridStyle/",
+    "slug": "docs__plugins__api__GridStyle"
+  },
+  {
+    "title": "PaintStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/PaintStyle/",
+    "path": "/docs/plugins/api/PaintStyle/",
+    "slug": "docs__plugins__api__PaintStyle"
+  },
+  {
+    "title": "TextStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextStyle/",
+    "path": "/docs/plugins/api/TextStyle/",
+    "slug": "docs__plugins__api__TextStyle"
+  },
+  {
+    "title": "DetachedInfo | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/DetachedInfo/",
+    "path": "/docs/plugins/api/DetachedInfo/",
+    "slug": "docs__plugins__api__DetachedInfo"
+  },
+  {
+    "title": "DevStatus | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/DevStatus/",
+    "path": "/docs/plugins/api/DevStatus/",
+    "slug": "docs__plugins__api__DevStatus"
+  },
+  {
+    "title": "DocumentationLink | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/DocumentationLink/",
+    "path": "/docs/plugins/api/DocumentationLink/",
+    "slug": "docs__plugins__api__DocumentationLink"
+  },
+  {
+    "title": "InstanceSwapPreferredValue | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/InstanceSwapPreferredValue/",
+    "path": "/docs/plugins/api/InstanceSwapPreferredValue/",
+    "slug": "docs__plugins__api__InstanceSwapPreferredValue"
+  },
+  {
+    "title": "Effect | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Effect/",
+    "path": "/docs/plugins/api/Effect/",
+    "slug": "docs__plugins__api__Effect"
+  },
+  {
+    "title": "ExportSettings | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ExportSettings/",
+    "path": "/docs/plugins/api/ExportSettings/",
+    "slug": "docs__plugins__api__ExportSettings"
+  },
+  {
+    "title": "VectorPath | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VectorPath/",
+    "path": "/docs/plugins/api/VectorPath/",
+    "slug": "docs__plugins__api__VectorPath"
+  },
+  {
+    "title": "FindAllCriteria | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/FindAllCriteria/",
+    "path": "/docs/plugins/api/FindAllCriteria/",
+    "slug": "docs__plugins__api__FindAllCriteria"
+  },
+  {
+    "title": "FontName | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/FontName/",
+    "path": "/docs/plugins/api/FontName/",
+    "slug": "docs__plugins__api__FontName"
+  },
+  {
+    "title": "DevResource | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/DevResource/",
+    "path": "/docs/plugins/api/DevResource/",
+    "slug": "docs__plugins__api__DevResource"
+  },
+  {
+    "title": "Variable | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Variable/",
+    "path": "/docs/plugins/api/Variable/",
+    "slug": "docs__plugins__api__Variable"
+  },
+  {
+    "title": "PublishStatus | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/PublishStatus/",
+    "path": "/docs/plugins/api/PublishStatus/",
+    "slug": "docs__plugins__api__PublishStatus"
+  },
+  {
+    "title": "HyperlinkTarget | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/HyperlinkTarget/",
+    "path": "/docs/plugins/api/HyperlinkTarget/",
+    "slug": "docs__plugins__api__HyperlinkTarget"
+  },
+  {
+    "title": "LetterSpacing | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/LetterSpacing/",
+    "path": "/docs/plugins/api/LetterSpacing/",
+    "slug": "docs__plugins__api__LetterSpacing"
+  },
+  {
+    "title": "LineHeight | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/LineHeight/",
+    "path": "/docs/plugins/api/LineHeight/",
+    "slug": "docs__plugins__api__LineHeight"
+  },
+  {
+    "title": "TextListOptions | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextListOptions/",
+    "path": "/docs/plugins/api/TextListOptions/",
+    "slug": "docs__plugins__api__TextListOptions"
+  },
+  {
+    "title": "OpenTypeFeature | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/OpenTypeFeature/",
+    "path": "/docs/plugins/api/OpenTypeFeature/",
+    "slug": "docs__plugins__api__OpenTypeFeature"
+  },
+  {
+    "title": "TextCase | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextCase/",
+    "path": "/docs/plugins/api/TextCase/",
+    "slug": "docs__plugins__api__TextCase"
+  },
+  {
+    "title": "TextDecoration | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextDecoration/",
+    "path": "/docs/plugins/api/TextDecoration/",
+    "slug": "docs__plugins__api__TextDecoration"
+  },
+  {
+    "title": "TextDecorationColor | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextDecorationColor/",
+    "path": "/docs/plugins/api/TextDecorationColor/",
+    "slug": "docs__plugins__api__TextDecorationColor"
+  },
+  {
+    "title": "TextDecorationOffset | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextDecorationOffset/",
+    "path": "/docs/plugins/api/TextDecorationOffset/",
+    "slug": "docs__plugins__api__TextDecorationOffset"
+  },
+  {
+    "title": "TextDecorationStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextDecorationStyle/",
+    "path": "/docs/plugins/api/TextDecorationStyle/",
+    "slug": "docs__plugins__api__TextDecorationStyle"
+  },
+  {
+    "title": "TextDecorationThickness | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextDecorationThickness/",
+    "path": "/docs/plugins/api/TextDecorationThickness/",
+    "slug": "docs__plugins__api__TextDecorationThickness"
+  },
+  {
+    "title": "StyledTextSegment | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/StyledTextSegment/",
+    "path": "/docs/plugins/api/StyledTextSegment/",
+    "slug": "docs__plugins__api__StyledTextSegment"
+  },
+  {
+    "title": "GridTrackSize | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/GridTrackSize/",
+    "path": "/docs/plugins/api/GridTrackSize/",
+    "slug": "docs__plugins__api__GridTrackSize"
+  },
+  {
+    "title": "Guide | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Guide/",
+    "path": "/docs/plugins/api/Guide/",
+    "slug": "docs__plugins__api__Guide"
+  },
+  {
+    "title": "HandleMirroring | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/HandleMirroring/",
+    "path": "/docs/plugins/api/HandleMirroring/",
+    "slug": "docs__plugins__api__HandleMirroring"
+  },
+  {
+    "title": "LayoutGrid | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/LayoutGrid/",
+    "path": "/docs/plugins/api/LayoutGrid/",
+    "slug": "docs__plugins__api__LayoutGrid"
+  },
+  {
+    "title": "LeadingTrim | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/LeadingTrim/",
+    "path": "/docs/plugins/api/LeadingTrim/",
+    "slug": "docs__plugins__api__LeadingTrim"
+  },
+  {
+    "title": "MaskType | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/MaskType/",
+    "path": "/docs/plugins/api/MaskType/",
+    "slug": "docs__plugins__api__MaskType"
+  },
+  {
+    "title": "OverflowDirection | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/OverflowDirection/",
+    "path": "/docs/plugins/api/OverflowDirection/",
+    "slug": "docs__plugins__api__OverflowDirection"
+  },
+  {
+    "title": "Overlay | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Overlay/",
+    "path": "/docs/plugins/api/Overlay/",
+    "slug": "docs__plugins__api__Overlay"
+  },
+  {
+    "title": "Reaction | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Reaction/",
+    "path": "/docs/plugins/api/Reaction/",
+    "slug": "docs__plugins__api__Reaction"
+  },
+  {
+    "title": "VectorNetwork | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VectorNetwork/",
+    "path": "/docs/plugins/api/VectorNetwork/",
+    "slug": "docs__plugins__api__VectorNetwork"
+  },
+  {
+    "title": "StrokeCap | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/StrokeCap/",
+    "path": "/docs/plugins/api/StrokeCap/",
+    "slug": "docs__plugins__api__StrokeCap"
+  },
+  {
+    "title": "StrokeJoin | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/StrokeJoin/",
+    "path": "/docs/plugins/api/StrokeJoin/",
+    "slug": "docs__plugins__api__StrokeJoin"
+  },
+  {
+    "title": "Vector | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Vector/",
+    "path": "/docs/plugins/api/Vector/",
+    "slug": "docs__plugins__api__Vector"
+  },
+  {
+    "title": "VariableWidthStrokeProperties | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableWidthStrokeProperties/",
+    "path": "/docs/plugins/api/VariableWidthStrokeProperties/",
+    "slug": "docs__plugins__api__VariableWidthStrokeProperties"
+  },
+  {
+    "title": "setWidgetSyncedState | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/WidgetNode-setwidgetsyncedstate/",
+    "path": "/docs/plugins/api/properties/WidgetNode-setwidgetsyncedstate/",
+    "slug": "docs__plugins__api__properties__WidgetNode-setwidgetsyncedstate"
+  },
+  {
+    "title": "Action | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Action/",
+    "path": "/docs/plugins/api/Action/",
+    "slug": "docs__plugins__api__Action"
+  },
+  {
+    "title": "ActiveUser | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ActiveUser/",
+    "path": "/docs/plugins/api/ActiveUser/",
+    "slug": "docs__plugins__api__ActiveUser"
+  },
+  {
+    "title": "AnnotationCategory | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/AnnotationCategory/",
+    "path": "/docs/plugins/api/AnnotationCategory/",
+    "slug": "docs__plugins__api__AnnotationCategory"
+  },
+  {
+    "title": "AnnotationCategoryColor | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/AnnotationCategoryColor/",
+    "path": "/docs/plugins/api/AnnotationCategoryColor/",
+    "slug": "docs__plugins__api__AnnotationCategoryColor"
+  },
+  {
+    "title": "AnnotationProperty | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/AnnotationProperty/",
+    "path": "/docs/plugins/api/AnnotationProperty/",
+    "slug": "docs__plugins__api__AnnotationProperty"
+  },
+  {
+    "title": "ArcData | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ArcData/",
+    "path": "/docs/plugins/api/ArcData/",
+    "slug": "docs__plugins__api__ArcData"
+  },
+  {
+    "title": "BaseUser | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/BaseUser/",
+    "path": "/docs/plugins/api/BaseUser/",
+    "slug": "docs__plugins__api__BaseUser"
+  },
+  {
+    "title": "BuzzAssetType | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/BuzzAssetType/",
+    "path": "/docs/plugins/api/BuzzAssetType/",
+    "slug": "docs__plugins__api__BuzzAssetType"
+  },
+  {
+    "title": "BuzzMediaField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/BuzzMediaField/",
+    "path": "/docs/plugins/api/BuzzMediaField/",
+    "slug": "docs__plugins__api__BuzzMediaField"
+  },
+  {
+    "title": "BuzzTextField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/BuzzTextField/",
+    "path": "/docs/plugins/api/BuzzTextField/",
+    "slug": "docs__plugins__api__BuzzTextField"
+  },
+  {
+    "title": "CanvasViewChangeEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/CanvasViewChangeEvent/",
+    "path": "/docs/plugins/api/CanvasViewChangeEvent/",
+    "slug": "docs__plugins__api__CanvasViewChangeEvent"
+  },
+  {
+    "title": "CodeLanguage | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/CodeLanguage/",
+    "path": "/docs/plugins/api/CodeLanguage/",
+    "slug": "docs__plugins__api__CodeLanguage"
+  },
+  {
+    "title": "CodegenEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/CodegenEvent/",
+    "path": "/docs/plugins/api/CodegenEvent/",
+    "slug": "docs__plugins__api__CodegenEvent"
+  },
+  {
+    "title": "CodegenPreference | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/CodegenPreference/",
+    "path": "/docs/plugins/api/CodegenPreference/",
+    "slug": "docs__plugins__api__CodegenPreference"
+  },
+  {
+    "title": "CodegenPreferencesEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/CodegenPreferencesEvent/",
+    "path": "/docs/plugins/api/CodegenPreferencesEvent/",
+    "slug": "docs__plugins__api__CodegenPreferencesEvent"
+  },
+  {
+    "title": "CodegenResult | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/CodegenResult/",
+    "path": "/docs/plugins/api/CodegenResult/",
+    "slug": "docs__plugins__api__CodegenResult"
+  },
+  {
+    "title": "CodeSyntaxPlatform | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/CodeSyntaxPlatform/",
+    "path": "/docs/plugins/api/CodeSyntaxPlatform/",
+    "slug": "docs__plugins__api__CodeSyntaxPlatform"
+  },
+  {
+    "title": "ColorPalette | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ColorPalette/",
+    "path": "/docs/plugins/api/ColorPalette/",
+    "slug": "docs__plugins__api__ColorPalette"
+  },
+  {
+    "title": "ColorPalettes | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ColorPalettes/",
+    "path": "/docs/plugins/api/ColorPalettes/",
+    "slug": "docs__plugins__api__ColorPalettes"
+  },
+  {
+    "title": "ConnectorEndpoint | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ConnectorEndpoint/",
+    "path": "/docs/plugins/api/ConnectorEndpoint/",
+    "slug": "docs__plugins__api__ConnectorEndpoint"
+  },
+  {
+    "title": "ConnectorStrokeCap | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ConnectorStrokeCap/",
+    "path": "/docs/plugins/api/ConnectorStrokeCap/",
+    "slug": "docs__plugins__api__ConnectorStrokeCap"
+  },
+  {
+    "title": "ComponentProperties | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ComponentProperties/",
+    "path": "/docs/plugins/api/ComponentProperties/",
+    "slug": "docs__plugins__api__ComponentProperties"
+  },
+  {
+    "title": "DocumentChange | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/DocumentChange/",
+    "path": "/docs/plugins/api/DocumentChange/",
+    "slug": "docs__plugins__api__DocumentChange"
+  },
+  {
+    "title": "DocumentChangeEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/DocumentChangeEvent/",
+    "path": "/docs/plugins/api/DocumentChangeEvent/",
+    "slug": "docs__plugins__api__DocumentChangeEvent"
+  },
+  {
+    "title": "DropEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/DropEvent/",
+    "path": "/docs/plugins/api/DropEvent/",
+    "slug": "docs__plugins__api__DropEvent"
+  },
+  {
+    "title": "EmbedData | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/EmbedData/",
+    "path": "/docs/plugins/api/EmbedData/",
+    "slug": "docs__plugins__api__EmbedData"
+  },
+  {
+    "title": "FontStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/FontStyle/",
+    "path": "/docs/plugins/api/FontStyle/",
+    "slug": "docs__plugins__api__FontStyle"
+  },
+  {
+    "title": "Image | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Image/",
+    "path": "/docs/plugins/api/Image/",
+    "slug": "docs__plugins__api__Image"
+  },
+  {
+    "title": "InheritedStyleField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/InheritedStyleField/",
+    "path": "/docs/plugins/api/InheritedStyleField/",
+    "slug": "docs__plugins__api__InheritedStyleField"
+  },
+  {
+    "title": "LabelSublayer | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/LabelSublayer/",
+    "path": "/docs/plugins/api/LabelSublayer/",
+    "slug": "docs__plugins__api__LabelSublayer"
+  },
+  {
+    "title": "LinkUnfurlData | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/LinkUnfurlData/",
+    "path": "/docs/plugins/api/LinkUnfurlData/",
+    "slug": "docs__plugins__api__LinkUnfurlData"
+  },
+  {
+    "title": "MediaData | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/MediaData/",
+    "path": "/docs/plugins/api/MediaData/",
+    "slug": "docs__plugins__api__MediaData"
+  },
+  {
+    "title": "NodeChange | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/NodeChange/",
+    "path": "/docs/plugins/api/NodeChange/",
+    "slug": "docs__plugins__api__NodeChange"
+  },
+  {
+    "title": "NodeChangeEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/NodeChangeEvent/",
+    "path": "/docs/plugins/api/NodeChangeEvent/",
+    "slug": "docs__plugins__api__NodeChangeEvent"
+  },
+  {
+    "title": "NodeChangeProperty | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/NodeChangeProperty/",
+    "path": "/docs/plugins/api/NodeChangeProperty/",
+    "slug": "docs__plugins__api__NodeChangeProperty"
+  },
+  {
+    "title": "RGB/RGBA | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/RGB/",
+    "path": "/docs/plugins/api/RGB/",
+    "slug": "docs__plugins__api__RGB"
+  },
+  {
+    "title": "RunEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/RunEvent/",
+    "path": "/docs/plugins/api/RunEvent/",
+    "slug": "docs__plugins__api__RunEvent"
+  },
+  {
+    "title": "SlideTransition | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/SlideTransition/",
+    "path": "/docs/plugins/api/SlideTransition/",
+    "slug": "docs__plugins__api__SlideTransition"
+  },
+  {
+    "title": "SlidesViewChangeEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/SlidesViewChangeEvent/",
+    "path": "/docs/plugins/api/SlidesViewChangeEvent/",
+    "slug": "docs__plugins__api__SlidesViewChangeEvent"
+  },
+  {
+    "title": "StyleChange | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/StyleChange/",
+    "path": "/docs/plugins/api/StyleChange/",
+    "slug": "docs__plugins__api__StyleChange"
+  },
+  {
+    "title": "StyleChangeEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/StyleChangeEvent/",
+    "path": "/docs/plugins/api/StyleChangeEvent/",
+    "slug": "docs__plugins__api__StyleChangeEvent"
+  },
+  {
+    "title": "StyleChangeProperty | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/StyleChangeProperty/",
+    "path": "/docs/plugins/api/StyleChangeProperty/",
+    "slug": "docs__plugins__api__StyleChangeProperty"
+  },
+  {
+    "title": "StyleConsumers | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/StyleConsumers/",
+    "path": "/docs/plugins/api/StyleConsumers/",
+    "slug": "docs__plugins__api__StyleConsumers"
+  },
+  {
+    "title": "TextPathStartData | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextPathStartData/",
+    "path": "/docs/plugins/api/TextPathStartData/",
+    "slug": "docs__plugins__api__TextPathStartData"
+  },
+  {
+    "title": "TextReviewEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextReviewEvent/",
+    "path": "/docs/plugins/api/TextReviewEvent/",
+    "slug": "docs__plugins__api__TextReviewEvent"
+  },
+  {
+    "title": "TextReviewRange | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextReviewRange/",
+    "path": "/docs/plugins/api/TextReviewRange/",
+    "slug": "docs__plugins__api__TextReviewRange"
+  },
+  {
+    "title": "TextStyleOverrides | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextStyleOverrides/",
+    "path": "/docs/plugins/api/TextStyleOverrides/",
+    "slug": "docs__plugins__api__TextStyleOverrides"
+  },
+  {
+    "title": "Transition | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Transition/",
+    "path": "/docs/plugins/api/Transition/",
+    "slug": "docs__plugins__api__Transition"
+  },
+  {
+    "title": "TransformModifier | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TransformModifier/",
+    "path": "/docs/plugins/api/TransformModifier/",
+    "slug": "docs__plugins__api__TransformModifier"
+  },
+  {
+    "title": "Trigger | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Trigger/",
+    "path": "/docs/plugins/api/Trigger/",
+    "slug": "docs__plugins__api__Trigger"
+  },
+  {
+    "title": "User | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/User/",
+    "path": "/docs/plugins/api/User/",
+    "slug": "docs__plugins__api__User"
+  },
+  {
+    "title": "LibraryVariable | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/LibraryVariable/",
+    "path": "/docs/plugins/api/LibraryVariable/",
+    "slug": "docs__plugins__api__LibraryVariable"
+  },
+  {
+    "title": "Video | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Video/",
+    "path": "/docs/plugins/api/Video/",
+    "slug": "docs__plugins__api__Video"
+  },
+  {
+    "title": "BaseStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/BaseStyle/",
+    "path": "/docs/plugins/api/BaseStyle/",
+    "slug": "docs__plugins__api__BaseStyle"
+  },
+  {
+    "title": "importVariableByKeyAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-importvariablebykeyasync/",
+    "path": "/docs/plugins/api/properties/figma-variables-importvariablebykeyasync/",
+    "slug": "docs__plugins__api__properties__figma-variables-importvariablebykeyasync"
+  },
+  {
+    "title": "findAll | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/DocumentNode-findall/",
+    "path": "/docs/plugins/api/properties/DocumentNode-findall/",
+    "slug": "docs__plugins__api__properties__DocumentNode-findall"
+  },
+  {
+    "title": "findOne | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/DocumentNode-findone/",
+    "path": "/docs/plugins/api/properties/DocumentNode-findone/",
+    "slug": "docs__plugins__api__properties__DocumentNode-findone"
+  },
+  {
+    "title": "findWidgetNodesByWidgetId | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/DocumentNode-findwidgetnodesbywidgetid/",
+    "path": "/docs/plugins/api/properties/DocumentNode-findwidgetnodesbywidgetid/",
+    "slug": "docs__plugins__api__properties__DocumentNode-findwidgetnodesbywidgetid"
+  },
+  {
+    "title": "swapComponent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/InstanceNode-swapcomponent/",
+    "path": "/docs/plugins/api/properties/InstanceNode-swapcomponent/",
+    "slug": "docs__plugins__api__properties__InstanceNode-swapcomponent"
+  },
+  {
+    "title": "scaleFactor | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/InstanceNode-scalefactor/",
+    "path": "/docs/plugins/api/properties/InstanceNode-scalefactor/",
+    "slug": "docs__plugins__api__properties__InstanceNode-scalefactor"
+  },
+  {
+    "title": "postMessage | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-ui-postmessage/",
+    "path": "/docs/plugins/api/properties/figma-ui-postmessage/",
+    "slug": "docs__plugins__api__properties__figma-ui-postmessage"
+  },
+  {
+    "title": "onmessage | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-ui-onmessage/",
+    "path": "/docs/plugins/api/properties/figma-ui-onmessage/",
+    "slug": "docs__plugins__api__properties__figma-ui-onmessage"
+  },
+  {
+    "title": "on | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-ui-on/",
+    "path": "/docs/plugins/api/properties/figma-ui-on/",
+    "slug": "docs__plugins__api__properties__figma-ui-on"
+  },
+  {
+    "title": "rgb | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-rgb/",
+    "path": "/docs/plugins/api/properties/figma-util-rgb/",
+    "slug": "docs__plugins__api__properties__figma-util-rgb"
+  },
+  {
+    "title": "rgba | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-rgba/",
+    "path": "/docs/plugins/api/properties/figma-util-rgba/",
+    "slug": "docs__plugins__api__properties__figma-util-rgba"
+  },
+  {
+    "title": "solidPaint | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-solidpaint/",
+    "path": "/docs/plugins/api/properties/figma-util-solidpaint/",
+    "slug": "docs__plugins__api__properties__figma-util-solidpaint"
+  },
+  {
+    "title": "normalizeMarkdown | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-normalizemarkdown/",
+    "path": "/docs/plugins/api/properties/figma-util-normalizemarkdown/",
+    "slug": "docs__plugins__api__properties__figma-util-normalizemarkdown"
+  },
+  {
+    "title": "colors | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-constants-colors/",
+    "path": "/docs/plugins/api/properties/figma-constants-colors/",
+    "slug": "docs__plugins__api__properties__figma-constants-colors"
+  },
+  {
+    "title": "on | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-codegen-on/",
+    "path": "/docs/plugins/api/properties/figma-codegen-on/",
+    "slug": "docs__plugins__api__properties__figma-codegen-on"
+  },
+  {
+    "title": "zoom | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-viewport-zoom/",
+    "path": "/docs/plugins/api/properties/figma-viewport-zoom/",
+    "slug": "docs__plugins__api__properties__figma-viewport-zoom"
+  },
+  {
+    "title": "slidesView | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-viewport-slidesview/",
+    "path": "/docs/plugins/api/properties/figma-viewport-slidesview/",
+    "slug": "docs__plugins__api__properties__figma-viewport-slidesview"
+  },
+  {
+    "title": "canvasView | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-viewport-canvasview/",
+    "path": "/docs/plugins/api/properties/figma-viewport-canvasview/",
+    "slug": "docs__plugins__api__properties__figma-viewport-canvasview"
+  },
+  {
+    "title": "getVariableByIdAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getvariablebyidasync/",
+    "path": "/docs/plugins/api/properties/figma-variables-getvariablebyidasync/",
+    "slug": "docs__plugins__api__properties__figma-variables-getvariablebyidasync"
+  },
+  {
+    "title": "getVariableById | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getvariablebyid/",
+    "path": "/docs/plugins/api/properties/figma-variables-getvariablebyid/",
+    "slug": "docs__plugins__api__properties__figma-variables-getvariablebyid"
+  },
+  {
+    "title": "getVariableCollectionByIdAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getvariablecollectionbyidasync/",
+    "path": "/docs/plugins/api/properties/figma-variables-getvariablecollectionbyidasync/",
+    "slug": "docs__plugins__api__properties__figma-variables-getvariablecollectionbyidasync"
+  },
+  {
+    "title": "getVariableCollectionById | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getvariablecollectionbyid/",
+    "path": "/docs/plugins/api/properties/figma-variables-getvariablecollectionbyid/",
+    "slug": "docs__plugins__api__properties__figma-variables-getvariablecollectionbyid"
+  },
+  {
+    "title": "getLocalVariablesAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getlocalvariablesasync/",
+    "path": "/docs/plugins/api/properties/figma-variables-getlocalvariablesasync/",
+    "slug": "docs__plugins__api__properties__figma-variables-getlocalvariablesasync"
+  },
+  {
+    "title": "getLocalVariables | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getlocalvariables/",
+    "path": "/docs/plugins/api/properties/figma-variables-getlocalvariables/",
+    "slug": "docs__plugins__api__properties__figma-variables-getlocalvariables"
+  },
+  {
+    "title": "createVariable | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-createvariable/",
+    "path": "/docs/plugins/api/properties/figma-variables-createvariable/",
+    "slug": "docs__plugins__api__properties__figma-variables-createvariable"
+  },
+  {
+    "title": "createVariableCollection | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-createvariablecollection/",
+    "path": "/docs/plugins/api/properties/figma-variables-createvariablecollection/",
+    "slug": "docs__plugins__api__properties__figma-variables-createvariablecollection"
+  },
+  {
+    "title": "extendLibraryCollectionByKeyAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-extendlibrarycollectionbykeyasync/",
+    "path": "/docs/plugins/api/properties/figma-variables-extendlibrarycollectionbykeyasync/",
+    "slug": "docs__plugins__api__properties__figma-variables-extendlibrarycollectionbykeyasync"
+  },
+  {
+    "title": "VariableResolvedDataType | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableResolvedDataType/",
+    "path": "/docs/plugins/api/VariableResolvedDataType/",
+    "slug": "docs__plugins__api__VariableResolvedDataType"
+  },
+  {
+    "title": "ExtendedVariableCollection | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/ExtendedVariableCollection/",
+    "path": "/docs/plugins/api/ExtendedVariableCollection/",
+    "slug": "docs__plugins__api__ExtendedVariableCollection"
+  },
+  {
+    "title": "VariableBindablePaintField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableBindablePaintField/",
+    "path": "/docs/plugins/api/VariableBindablePaintField/",
+    "slug": "docs__plugins__api__VariableBindablePaintField"
+  },
+  {
+    "title": "VariableBindableEffectField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableBindableEffectField/",
+    "path": "/docs/plugins/api/VariableBindableEffectField/",
+    "slug": "docs__plugins__api__VariableBindableEffectField"
+  },
+  {
+    "title": "VariableBindableLayoutGridField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableBindableLayoutGridField/",
+    "path": "/docs/plugins/api/VariableBindableLayoutGridField/",
+    "slug": "docs__plugins__api__VariableBindableLayoutGridField"
+  },
+  {
+    "title": "getAvailableLibraryVariableCollectionsAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-teamlibrary-getavailablelibraryvariablecollectionsasync/",
+    "path": "/docs/plugins/api/properties/figma-teamlibrary-getavailablelibraryvariablecollectionsasync/",
+    "slug": "docs__plugins__api__properties__figma-teamlibrary-getavailablelibraryvariablecollectionsasync"
+  },
+  {
+    "title": "getVariablesInLibraryCollectionAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-teamlibrary-getvariablesinlibrarycollectionasync/",
+    "path": "/docs/plugins/api/properties/figma-teamlibrary-getvariablesinlibrarycollectionasync/",
+    "slug": "docs__plugins__api__properties__figma-teamlibrary-getvariablesinlibrarycollectionasync"
+  },
+  {
+    "title": "LibraryVariableCollection | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/LibraryVariableCollection/",
+    "path": "/docs/plugins/api/LibraryVariableCollection/",
+    "slug": "docs__plugins__api__LibraryVariableCollection"
+  },
+  {
+    "title": "getAnnotationCategoryByIdAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-annotations-getannotationcategorybyidasync/",
+    "path": "/docs/plugins/api/properties/figma-annotations-getannotationcategorybyidasync/",
+    "slug": "docs__plugins__api__properties__figma-annotations-getannotationcategorybyidasync"
+  },
+  {
+    "title": "addAnnotationCategoryAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-annotations-addannotationcategoryasync/",
+    "path": "/docs/plugins/api/properties/figma-annotations-addannotationcategoryasync/",
+    "slug": "docs__plugins__api__properties__figma-annotations-addannotationcategoryasync"
+  },
+  {
+    "title": "createFrame | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-createframe/",
+    "path": "/docs/plugins/api/properties/figma-buzz-createframe/",
+    "slug": "docs__plugins__api__properties__figma-buzz-createframe"
+  },
+  {
+    "title": "createInstance | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-createinstance/",
+    "path": "/docs/plugins/api/properties/figma-buzz-createinstance/",
+    "slug": "docs__plugins__api__properties__figma-buzz-createinstance"
+  },
+  {
+    "title": "getBuzzAssetTypeForNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-getbuzzassettypefornode/",
+    "path": "/docs/plugins/api/properties/figma-buzz-getbuzzassettypefornode/",
+    "slug": "docs__plugins__api__properties__figma-buzz-getbuzzassettypefornode"
+  },
+  {
+    "title": "setBuzzAssetTypeForNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-setbuzzassettypefornode/",
+    "path": "/docs/plugins/api/properties/figma-buzz-setbuzzassettypefornode/",
+    "slug": "docs__plugins__api__properties__figma-buzz-setbuzzassettypefornode"
+  },
+  {
+    "title": "getTextContent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-gettextcontent/",
+    "path": "/docs/plugins/api/properties/figma-buzz-gettextcontent/",
+    "slug": "docs__plugins__api__properties__figma-buzz-gettextcontent"
+  },
+  {
+    "title": "getMediaContent | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-getmediacontent/",
+    "path": "/docs/plugins/api/properties/figma-buzz-getmediacontent/",
+    "slug": "docs__plugins__api__properties__figma-buzz-getmediacontent"
+  },
+  {
+    "title": "smartResize | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-smartresize/",
+    "path": "/docs/plugins/api/properties/figma-buzz-smartresize/",
+    "slug": "docs__plugins__api__properties__figma-buzz-smartresize"
+  },
+  {
+    "title": "on | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-on/",
+    "path": "/docs/plugins/api/properties/PageNode-on/",
+    "slug": "docs__plugins__api__properties__PageNode-on"
+  },
+  {
+    "title": "rotation | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/ConnectorNode-rotation/",
+    "path": "/docs/plugins/api/properties/ConnectorNode-rotation/",
+    "slug": "docs__plugins__api__properties__ConnectorNode-rotation"
+  },
+  {
+    "title": "findChildren | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/DocumentNode-findchildren/",
+    "path": "/docs/plugins/api/properties/DocumentNode-findchildren/",
+    "slug": "docs__plugins__api__properties__DocumentNode-findchildren"
+  },
+  {
+    "title": "findChild | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/DocumentNode-findchild/",
+    "path": "/docs/plugins/api/properties/DocumentNode-findchild/",
+    "slug": "docs__plugins__api__properties__DocumentNode-findchild"
+  },
+  {
+    "title": "resize | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/MediaNode-resize/",
+    "path": "/docs/plugins/api/properties/MediaNode-resize/",
+    "slug": "docs__plugins__api__properties__MediaNode-resize"
+  },
+  {
+    "title": "resizeWithoutConstraints | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/MediaNode-resizewithoutconstraints/",
+    "path": "/docs/plugins/api/properties/MediaNode-resizewithoutconstraints/",
+    "slug": "docs__plugins__api__properties__MediaNode-resizewithoutconstraints"
+  },
+  {
+    "title": "guides | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-guides/",
+    "path": "/docs/plugins/api/properties/PageNode-guides/",
+    "slug": "docs__plugins__api__properties__PageNode-guides"
+  },
+  {
+    "title": "selection | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-selection/",
+    "path": "/docs/plugins/api/properties/PageNode-selection/",
+    "slug": "docs__plugins__api__properties__PageNode-selection"
+  },
+  {
+    "title": "selectedTextRange | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-selectedtextrange/",
+    "path": "/docs/plugins/api/properties/PageNode-selectedtextrange/",
+    "slug": "docs__plugins__api__properties__PageNode-selectedtextrange"
+  },
+  {
+    "title": "flowStartingPoints | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-flowstartingpoints/",
+    "path": "/docs/plugins/api/properties/PageNode-flowstartingpoints/",
+    "slug": "docs__plugins__api__properties__PageNode-flowstartingpoints"
+  },
+  {
+    "title": "off | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-off/",
+    "path": "/docs/plugins/api/properties/PageNode-off/",
+    "slug": "docs__plugins__api__properties__PageNode-off"
+  },
+  {
+    "title": "focusedSlide | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-focusedslide/",
+    "path": "/docs/plugins/api/properties/PageNode-focusedslide/",
+    "slug": "docs__plugins__api__properties__PageNode-focusedslide"
+  },
+  {
+    "title": "focusedNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-focusednode/",
+    "path": "/docs/plugins/api/properties/PageNode-focusednode/",
+    "slug": "docs__plugins__api__properties__PageNode-focusednode"
+  },
+  {
+    "title": "resizeWithoutConstraints | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/SectionNode-resizewithoutconstraints/",
+    "path": "/docs/plugins/api/properties/SectionNode-resizewithoutconstraints/",
+    "slug": "docs__plugins__api__properties__SectionNode-resizewithoutconstraints"
+  },
+  {
+    "title": "rotation | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/ShapeWithTextNode-rotation/",
+    "path": "/docs/plugins/api/properties/ShapeWithTextNode-rotation/",
+    "slug": "docs__plugins__api__properties__ShapeWithTextNode-rotation"
+  },
+  {
+    "title": "resize | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/ShapeWithTextNode-resize/",
+    "path": "/docs/plugins/api/properties/ShapeWithTextNode-resize/",
+    "slug": "docs__plugins__api__properties__ShapeWithTextNode-resize"
+  },
+  {
+    "title": "rescale | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/ShapeWithTextNode-rescale/",
+    "path": "/docs/plugins/api/properties/ShapeWithTextNode-rescale/",
+    "slug": "docs__plugins__api__properties__ShapeWithTextNode-rescale"
+  },
+  {
+    "title": "cellAt | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-cellat/",
+    "path": "/docs/plugins/api/properties/TableNode-cellat/",
+    "slug": "docs__plugins__api__properties__TableNode-cellat"
+  },
+  {
+    "title": "insertRow | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-insertrow/",
+    "path": "/docs/plugins/api/properties/TableNode-insertrow/",
+    "slug": "docs__plugins__api__properties__TableNode-insertrow"
+  },
+  {
+    "title": "insertColumn | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-insertcolumn/",
+    "path": "/docs/plugins/api/properties/TableNode-insertcolumn/",
+    "slug": "docs__plugins__api__properties__TableNode-insertcolumn"
+  },
+  {
+    "title": "removeRow | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-removerow/",
+    "path": "/docs/plugins/api/properties/TableNode-removerow/",
+    "slug": "docs__plugins__api__properties__TableNode-removerow"
+  },
+  {
+    "title": "removeColumn | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-removecolumn/",
+    "path": "/docs/plugins/api/properties/TableNode-removecolumn/",
+    "slug": "docs__plugins__api__properties__TableNode-removecolumn"
+  },
+  {
+    "title": "moveRow | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-moverow/",
+    "path": "/docs/plugins/api/properties/TableNode-moverow/",
+    "slug": "docs__plugins__api__properties__TableNode-moverow"
+  },
+  {
+    "title": "moveColumn | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-movecolumn/",
+    "path": "/docs/plugins/api/properties/TableNode-movecolumn/",
+    "slug": "docs__plugins__api__properties__TableNode-movecolumn"
+  },
+  {
+    "title": "resizeRow | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-resizerow/",
+    "path": "/docs/plugins/api/properties/TableNode-resizerow/",
+    "slug": "docs__plugins__api__properties__TableNode-resizerow"
+  },
+  {
+    "title": "resizeColumn | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-resizecolumn/",
+    "path": "/docs/plugins/api/properties/TableNode-resizecolumn/",
+    "slug": "docs__plugins__api__properties__TableNode-resizecolumn"
+  },
+  {
+    "title": "textAutoResize | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-textautoresize/",
+    "path": "/docs/plugins/api/properties/TextNode-textautoresize/",
+    "slug": "docs__plugins__api__properties__TextNode-textautoresize"
+  },
+  {
+    "title": "textTruncation | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-texttruncation/",
+    "path": "/docs/plugins/api/properties/TextNode-texttruncation/",
+    "slug": "docs__plugins__api__properties__TextNode-texttruncation"
+  },
+  {
+    "title": "maxLines | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-maxlines/",
+    "path": "/docs/plugins/api/properties/TextNode-maxlines/",
+    "slug": "docs__plugins__api__properties__TextNode-maxlines"
+  },
+  {
+    "title": "autoRename | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-autorename/",
+    "path": "/docs/plugins/api/properties/TextNode-autorename/",
+    "slug": "docs__plugins__api__properties__TextNode-autorename"
+  },
+  {
+    "title": "autoRename | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextPathNode-autorename/",
+    "path": "/docs/plugins/api/properties/TextPathNode-autorename/",
+    "slug": "docs__plugins__api__properties__TextPathNode-autorename"
+  },
+  {
+    "title": "cloneWidget | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/WidgetNode-clonewidget/",
+    "path": "/docs/plugins/api/properties/WidgetNode-clonewidget/",
+    "slug": "docs__plugins__api__properties__WidgetNode-clonewidget"
+  },
+  {
+    "title": "VariableBindablePaintStyleField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableBindablePaintStyleField/",
+    "path": "/docs/plugins/api/VariableBindablePaintStyleField/",
+    "slug": "docs__plugins__api__VariableBindablePaintStyleField"
+  },
+  {
+    "title": "VariableBindableEffectStyleField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableBindableEffectStyleField/",
+    "path": "/docs/plugins/api/VariableBindableEffectStyleField/",
+    "slug": "docs__plugins__api__VariableBindableEffectStyleField"
+  },
+  {
+    "title": "VariableBindableGridStyleField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableBindableGridStyleField/",
+    "path": "/docs/plugins/api/VariableBindableGridStyleField/",
+    "slug": "docs__plugins__api__VariableBindableGridStyleField"
+  },
+  {
+    "title": "VariableBindableColorStopField | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableBindableColorStopField/",
+    "path": "/docs/plugins/api/VariableBindableColorStopField/",
+    "slug": "docs__plugins__api__VariableBindableColorStopField"
+  },
+  {
+    "title": "VariableScope | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableScope/",
+    "path": "/docs/plugins/api/VariableScope/",
+    "slug": "docs__plugins__api__VariableScope"
+  },
+  {
+    "title": "VariableValue | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/VariableValue/",
+    "path": "/docs/plugins/api/VariableValue/",
+    "slug": "docs__plugins__api__VariableValue"
+  },
+  {
+    "title": "setBoundVariable | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextStyle-setboundvariable/",
+    "path": "/docs/plugins/api/properties/TextStyle-setboundvariable/",
+    "slug": "docs__plugins__api__properties__TextStyle-setboundvariable"
+  },
+  {
+    "title": "setVariableCodeSyntax | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/Variable-setvariablecodesyntax/",
+    "path": "/docs/plugins/api/properties/Variable-setvariablecodesyntax/",
+    "slug": "docs__plugins__api__properties__Variable-setvariablecodesyntax"
+  },
+  {
+    "title": "data | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/VectorPath-data/",
+    "path": "/docs/plugins/api/properties/VectorPath-data/",
+    "slug": "docs__plugins__api__properties__VectorPath-data"
+  },
+  {
+    "title": "windingRule | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/VectorPath-windingrule/",
+    "path": "/docs/plugins/api/properties/VectorPath-windingrule/",
+    "slug": "docs__plugins__api__properties__VectorPath-windingrule"
+  },
+  {
+    "title": "hiddenFromPublishing | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/Variable-hiddenfrompublishing/",
+    "path": "/docs/plugins/api/properties/Variable-hiddenfrompublishing/",
+    "slug": "docs__plugins__api__properties__Variable-hiddenfrompublishing"
+  },
+  {
+    "title": "resolveForConsumer | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/Variable-resolveforconsumer/",
+    "path": "/docs/plugins/api/properties/Variable-resolveforconsumer/",
+    "slug": "docs__plugins__api__properties__Variable-resolveforconsumer"
+  },
+  {
+    "title": "scopes | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/Variable-scopes/",
+    "path": "/docs/plugins/api/properties/Variable-scopes/",
+    "slug": "docs__plugins__api__properties__Variable-scopes"
+  }
+]

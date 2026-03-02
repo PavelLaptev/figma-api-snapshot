@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+
+# Keep out/llm/ and out/index.json in git, but skip per-page raw JSON (can be large)
+out/raw/
+out/.complete
