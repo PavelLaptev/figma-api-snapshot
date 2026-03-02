@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-WidgetAttachedStickablesChangedEvent/",
+  "path": "/docs/widgets/api/type-WidgetAttachedStickablesChangedEvent/",
+  "slug": "docs__widgets__api__type-WidgetAttachedStickablesChangedEvent",
+  "title": "WidgetAttachedStickablesChangedEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   WidgetAttachedStickablesChangedEvent\n\n# WidgetAttachedStickablesChangedEvent\n\nParameter passed to the callback of **[`useStickableHost`](/docs/widgets/api/properties/widget-usestickablehost/)**.\n\n### stuckNodeIds: string\\[\\]\n\nThese are the node IDs that are newly stuck to your widget.\n\n* * *\n\n### unstuckNodeIds: string\\[\\]\n\nThese are the node IDs that were removed from your widget. Note that these nodes could also have been deleted.\n\n* * *\n\n[\n\nPrevious\n\nWidgetStuckEvent\n\n](/docs/widgets/api/type-WidgetStuckEvent/)"
+}

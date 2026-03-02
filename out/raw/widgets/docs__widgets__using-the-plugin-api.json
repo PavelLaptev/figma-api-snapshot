@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/using-the-plugin-api/",
+  "path": "/docs/widgets/using-the-plugin-api/",
+  "slug": "docs__widgets__using-the-plugin-api",
+  "title": "Using the Plugin API | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Basics of Widgets\n*   Using the Plugin API\n\n# Using the Plugin API\n\nAs you probably already figured out, the widget API and [plugin API](/docs/plugins/) are very much related and meant to be used together when building widgets.\n\nThe plugin API can only be used in event handlers and hooks.\n\nYou can think of this model as:\n\n1.  The Widget API is an interface to describing what goes on the canvas\n2.  The Plugin API is an interface to manipulate things on the canvas\n\nConsequently, you might find that your widget code looks very much like the following pseudocode:\n\nUsing the Plugin API\n\n```\nconst { widget } = figmaconst { AutoLayout, Text, useWidgetId } = widgetfunction AverageWidget() {  const widgetId = useWidgetId()  return (    // Use the Widget JSX API here to describe how to render the widget!    <AutoLayout      onClick={() => {        // Use Plugin API here in response to user interactions!        const widgetNode = await figma.getNodeByIdAsync(widgetId) as WidgetNode      }}    >      <Text>Hello</Text>    </AutoLayout>  )}widget.register(AverageWidget)\n```\n\n[\n\nPrevious\n\nPrototyping Widget UI\n\n](/docs/widgets/prototyping-widget-ui/)[\n\nNext\n\nWorking with Widgets\n\n](/docs/widgets/working-with-widgets/)"
+}

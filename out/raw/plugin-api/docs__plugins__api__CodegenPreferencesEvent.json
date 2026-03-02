@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/CodegenPreferencesEvent/",
+  "path": "/docs/plugins/api/CodegenPreferencesEvent/",
+  "slug": "docs__plugins__api__CodegenPreferencesEvent",
+  "title": "CodegenPreferencesEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   CodegenPreferencesEvent\n\n# CodegenPreferencesEvent\n\n```\ntype CodegenPreferencesEvent = {  propertyName: string}\n```\n\n[\n\nPrevious\n\nCodegenPreference\n\n](/docs/plugins/api/CodegenPreference/)[\n\nNext\n\nCodegenResult\n\n](/docs/plugins/api/CodegenResult/)"
+}

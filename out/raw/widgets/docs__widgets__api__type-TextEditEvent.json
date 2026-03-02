@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-TextEditEvent/",
+  "path": "/docs/widgets/api/type-TextEditEvent/",
+  "slug": "docs__widgets__api__type-TextEditEvent",
+  "title": "TextEditEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   TextEditEvent\n\n# TextEditEvent\n\n```\ninterface TextEditEvent {  /**   * The text that was edited in the input component.   */  characters: string}\n```\n\n[\n\nPrevious\n\nSyncedMap\n\n](/docs/widgets/api/type-SyncedMap/)[\n\nNext\n\nTransform\n\n](/docs/widgets/api/type-Transform/)"
+}

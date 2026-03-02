@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createpage/",
+  "path": "/docs/plugins/api/properties/figma-createpage/",
+  "slug": "docs__plugins__api__properties__figma-createpage",
+  "title": "createPage | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createPage\n\n# createPage\n\ninfo\n\nThis API is only available in Figma Design\n\nCreates a new page, appended to the document's list of children.\n\n## Signature​\n\n### [createPage](/docs/plugins/api/properties/figma-createpage/)(): [PageNode](/docs/plugins/api/PageNode/)\n\n## Remarks​\n\nA page node can be the parent of all types of nodes except for the document node and other page nodes.\n\nFiles in a Starter team are limited to three pages. When a plugin tries to create more than three pages in a Starter team file, it triggers the following error:\n\nPage limit error\n\n```\nThe Starter plan only comes with 3 pages. Upgrade toProfessional for unlimited pages.\n```\n\n[\n\nPrevious\n\ncreateComponentFromNode\n\n](/docs/plugins/api/properties/figma-createcomponentfromnode/)[\n\nNext\n\ncreatePageDivider\n\n](/docs/plugins/api/properties/figma-createpagedivider/)\n\n*   Signature\n*   Remarks"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-LayoutGap/",
+  "path": "/docs/widgets/api/type-LayoutGap/",
+  "slug": "docs__widgets__api__type-LayoutGap",
+  "title": "LayoutGap | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   LayoutGap\n\n# LayoutGap\n\n```\ninterface LayoutGap {  /**   * The horizontal gap between auto-layout children.   *   * `\"auto\"` is the same as `justify-content: space-between` in css.   */  horizontal?: number | 'auto'  /**   * The vertical gap between auto-layout children.   *   * `\"auto\"` is the same as `align-content: space-between` in css.   */  vertical?: number | 'auto'}\n```\n\n[\n\nPrevious\n\nImagePaint\n\n](/docs/widgets/api/type-ImagePaint/)[\n\nNext\n\nPadding\n\n](/docs/widgets/api/type-Padding/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getvariablebyidasync/",
+  "path": "/docs/plugins/api/properties/figma-variables-getvariablebyidasync/",
+  "slug": "docs__plugins__api__properties__figma-variables-getvariablebyidasync",
+  "title": "getVariableByIdAsync | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [variables](/docs/plugins/api/figma-variables/)\n*   getVariableByIdAsync\n\n# getVariableByIdAsync\n\nFinds a variable by ID. If not found or the provided ID is invalid, returns a promise containing `null`.\n\n## Signature​\n\n### getVariableByIdAsync(id: string): Promise<[Variable](/docs/plugins/api/Variable/) | null>\n\n## Parameters​\n\n### id​\n\nThe variable ID to search for, which represents a unique identifier for the variable.\n\n[\n\nPrevious\n\nvariables\n\n](/docs/plugins/api/figma-variables/)[\n\nNext\n\ngetVariableById\n\n](/docs/plugins/api/properties/figma-variables-getvariablebyid/)\n\n*   Signature\n*   Parameters\n    *   id"
+}

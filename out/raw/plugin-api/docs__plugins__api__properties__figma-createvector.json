@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createvector/",
+  "path": "/docs/plugins/api/properties/figma-createvector/",
+  "slug": "docs__plugins__api__properties__figma-createvector",
+  "title": "createVector | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createVector\n\n# createVector\n\nCreates a new, empty vector network with no vertices.\n\n## Signature​\n\n### [createVector](/docs/plugins/api/properties/figma-createvector/)(): [VectorNode](/docs/plugins/api/VectorNode/)\n\n## Remarks​\n\nBy default, parented under `figma.currentPage`. Without setting additional properties, the vector has a bounding box but doesn't have any vertices. There are two ways to assign vertices to a vector node - [`vectorPaths`](/docs/plugins/api/VectorNode/#vectorpaths) and [`setVectorNetworkAsync`](/docs/plugins/api/VectorNode/#setvectornetworkasync). Please refer to the documentation of those properties for more details.\n\n[\n\nPrevious\n\ncreateStar\n\n](/docs/plugins/api/properties/figma-createstar/)[\n\nNext\n\ncreateText\n\n](/docs/plugins/api/properties/figma-createtext/)\n\n*   Signature\n*   Remarks"
+}

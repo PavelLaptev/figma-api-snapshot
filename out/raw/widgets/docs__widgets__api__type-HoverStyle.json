@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-HoverStyle/",
+  "path": "/docs/widgets/api/type-HoverStyle/",
+  "slug": "docs__widgets__api__type-HoverStyle",
+  "title": "HoverStyle | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   HoverStyle\n\n# HoverStyle\n\nFor more details about hover states see this guide: [Adding Hover States](/docs/widgets/adding-hover-states/).\n\n```\ninterface HoverStyle {  fill?: HexCode | Color | Paint | (SolidPaint | GradientPaint)[]  stroke?: HexCode | Color | SolidPaint | GradientPaint | (SolidPaint | GradientPaint)[]  opacity?: number}\n```\n\n[\n\nPrevious\n\nGradientPaint\n\n](/docs/widgets/api/type-GradientPaint/)[\n\nNext\n\nImagePaint\n\n](/docs/widgets/api/type-ImagePaint/)"
+}

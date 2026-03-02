@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/VariableBindableTextField/",
+  "path": "/docs/plugins/api/VariableBindableTextField/",
+  "slug": "docs__plugins__api__VariableBindableTextField",
+  "title": "VariableBindableTextField | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   VariableBindableTextField\n\n# VariableBindableTextField\n\n```\ntype VariableBindableTextField =  | 'fontFamily'  | 'fontSize'  | 'fontStyle'  | 'fontWeight'  | 'letterSpacing'  | 'lineHeight'  | 'paragraphSpacing'  | 'paragraphIndent'\n```\n\nA list of text node fields that can be bound to a variable.\n\n[\n\nPrevious\n\nVariableBindableNodeField\n\n](/docs/plugins/api/VariableBindableNodeField/)[\n\nNext\n\nVariableBindablePaintField\n\n](/docs/plugins/api/VariableBindablePaintField/)"
+}

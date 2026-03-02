@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/VariableBindableEffectStyleField/",
+  "path": "/docs/plugins/api/VariableBindableEffectStyleField/",
+  "slug": "docs__plugins__api__VariableBindableEffectStyleField",
+  "title": "VariableBindableEffectStyleField | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   VariableBindableEffectStyleField\n\n# VariableBindableEffectStyleField\n\n```\ntype VariableBindableEffectStyleField = 'effects'\n```\n\nA list of bound variable types that can exist on a [`EffectStyle`](/docs/plugins/api/EffectStyle/).\n\n[\n\nPrevious\n\nVariableBindablePaintStyleField\n\n](/docs/plugins/api/VariableBindablePaintStyleField/)[\n\nNext\n\nVariableBindableGridStyleField\n\n](/docs/plugins/api/VariableBindableGridStyleField/)"
+}

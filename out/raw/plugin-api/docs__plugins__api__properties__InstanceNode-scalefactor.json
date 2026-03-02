@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/InstanceNode-scalefactor/",
+  "path": "/docs/plugins/api/properties/InstanceNode-scalefactor/",
+  "slug": "docs__plugins__api__properties__InstanceNode-scalefactor",
+  "title": "scaleFactor | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [InstanceNode](/docs/plugins/api/InstanceNode/)\n*   scaleFactor\n\n# scaleFactor\n\nThe scale factor applied to the instance.\n\nSupported on:\n\n*   [InstanceNode](/docs/plugins/api/InstanceNode/)\n\n## Signature​\n\n### [scaleFactor](/docs/plugins/api/properties/InstanceNode-scalefactor/): number\n\n## Remarks​\n\nNormally, this has value `1`, even if the instance is resized. However, if the instance is resized via the scale tool (shortcut `K`), then the instance is scaled and the scale factor is stored in this property.\n\n[\n\nPrevious\n\nswapComponent\n\n](/docs/plugins/api/properties/InstanceNode-swapcomponent/)[\n\nNext\n\nInteractiveSlideElementNode\n\n](/docs/plugins/api/InteractiveSlideElementNode/)\n\n*   Signature\n*   Remarks"
+}

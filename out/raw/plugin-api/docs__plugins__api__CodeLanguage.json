@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/CodeLanguage/",
+  "path": "/docs/plugins/api/CodeLanguage/",
+  "slug": "docs__plugins__api__CodeLanguage",
+  "title": "CodeLanguage | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   CodeLanguage\n\n# CodeLanguage\n\n```\ntype CodeLanguage = {  // A label for the code language. This label is displayed in the Figma UI.  label: string  // A specific code language. This value can be accessed and used in the plugin code.  value: string}\n```\n\n[\n\nPrevious\n\nCanvasViewChangeEvent\n\n](/docs/plugins/api/CanvasViewChangeEvent/)[\n\nNext\n\nCodegenEvent\n\n](/docs/plugins/api/CodegenEvent/)"
+}

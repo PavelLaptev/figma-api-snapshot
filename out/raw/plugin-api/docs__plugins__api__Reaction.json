@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/Reaction/",
+  "path": "/docs/plugins/api/Reaction/",
+  "slug": "docs__plugins__api__Reaction",
+  "title": "Reaction | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Reaction\n\n# Reaction\n\n```\ntype Reaction = { action?: Action, actions?: Action[], trigger: Trigger | null }\n```\n\nA prototyping `Reaction` describes interactivity in prototypes. It contains a list of [`Action`](/docs/plugins/api/Action/) objects (\"what happens?\") and a [`Trigger`](/docs/plugins/api/Trigger/) (\"how do you make it happen?\").\n\n> Note: The `action` field is now deprecated and replaced by the `actions` field in order to allow for multiple `Actions` on a `Reaction`.\n\ninfo\n\nWhen setting reactions, each `Reaction` must contain both a `Trigger` and a non-empty list of `Action` objects.\n\n[\n\nPrevious\n\nPublishStatus\n\n](/docs/plugins/api/PublishStatus/)[\n\nNext\n\nRect\n\n](/docs/plugins/api/Rect/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-ui-onmessage/",
+  "path": "/docs/plugins/api/properties/figma-ui-onmessage/",
+  "slug": "docs__plugins__api__properties__figma-ui-onmessage",
+  "title": "onmessage | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [ui](/docs/plugins/api/figma-ui/)\n*   onmessage\n\n# onmessage\n\nRegister a handler for incoming messages from the UI's `<iframe>` window.\n\n## Signature​\n\n### [onmessage](/docs/plugins/api/properties/figma-ui-onmessage/): [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#message-event-handler) | undefined\n\n## Remarks​\n\nThe `pluginMessage` argument contains the message passed by the call to `postMessage` on the UI side.\n\nThe `props` argument contains a `origin` property contains the origin of the document that sent the message. It is an advanced feature, mainly used for implementing OAuth.\n\n[\n\nPrevious\n\npostMessage\n\n](/docs/plugins/api/properties/figma-ui-postmessage/)[\n\nNext\n\non\n\n](/docs/plugins/api/properties/figma-ui-on/)\n\n*   Signature\n*   Remarks"
+}

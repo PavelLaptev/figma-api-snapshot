@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/TextReviewRange/",
+  "path": "/docs/plugins/api/TextReviewRange/",
+  "slug": "docs__plugins__api__TextReviewRange",
+  "title": "TextReviewRange | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   TextReviewRange\n\n# TextReviewRange\n\n```\ntype TextReviewRange = {  start: number  end: number  suggestions: string[]  color?: 'RED' | 'GREEN' | 'BLUE'}\n```\n\n[\n\nPrevious\n\nTextReviewEvent\n\n](/docs/plugins/api/TextReviewEvent/)[\n\nNext\n\nTextStyleOverrides\n\n](/docs/plugins/api/TextStyleOverrides/)"
+}

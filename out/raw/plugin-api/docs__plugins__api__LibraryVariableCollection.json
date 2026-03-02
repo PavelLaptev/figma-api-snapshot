@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/LibraryVariableCollection/",
+  "path": "/docs/plugins/api/LibraryVariableCollection/",
+  "slug": "docs__plugins__api__LibraryVariableCollection",
+  "title": "LibraryVariableCollection | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Team Library\n*   LibraryVariableCollection\n\n# LibraryVariableCollection\n\n## Library Variable Collection properties​\n\n### name: string\n\nThe name of the variable collection.\n\n* * *\n\n### key: string\n\nThe key of the variable collection.\n\n* * *\n\n### libraryName: string\n\nThe name of the library that contains this variable collection.\n\n* * *\n\n[\n\nPrevious\n\nLibraryVariable\n\n](/docs/plugins/api/LibraryVariable/)[\n\nNext\n\nVariableWidthStrokeProperties\n\n](/docs/plugins/api/VariableWidthStrokeProperties/)\n\n*   Library Variable Collection properties"
+}

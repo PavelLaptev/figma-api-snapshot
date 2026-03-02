@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/NodeChangeEvent/",
+  "path": "/docs/plugins/api/NodeChangeEvent/",
+  "slug": "docs__plugins__api__NodeChangeEvent",
+  "title": "NodeChangeEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   NodeChangeEvent\n\n# NodeChangeEvent\n\n```\ninterface NodeChangeEvent {  nodeChanges: NodeChange[]}\n```\n\n[\n\nPrevious\n\nNodeChange\n\n](/docs/plugins/api/NodeChange/)[\n\nNext\n\nOpenTypeFeature\n\n](/docs/plugins/api/OpenTypeFeature/)"
+}

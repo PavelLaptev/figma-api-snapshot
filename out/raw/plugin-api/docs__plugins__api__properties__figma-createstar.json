@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createstar/",
+  "path": "/docs/plugins/api/properties/figma-createstar/",
+  "slug": "docs__plugins__api__properties__figma-createstar",
+  "title": "createStar | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createStar\n\n# createStar\n\nCreates a new star.\n\n## Signature​\n\n### [createStar](/docs/plugins/api/properties/figma-createstar/)(): [StarNode](/docs/plugins/api/StarNode/)\n\n## Remarks​\n\nBy default, the new node has five points edges (i.e. a canonical star), a default fill, width and height both at 100, and is parented under `figma.currentPage`.\n\nCreate a red, 7-pointed star\n\n```\nconst star = figma.createStar()// Move to (50, 50)star.x = 50star.y = 50// Set size to 200 x 200star.resize(200, 200)// Make the star 7-pointedstar.pointCount = 7// Set solid red fillstar.fills = [{ type: 'SOLID', color: { r: 1, g: 0, b: 0 } }]// Make the angles of each point less acutestar.innerRadius = 0.6\n```\n\n[\n\nPrevious\n\ncreatePolygon\n\n](/docs/plugins/api/properties/figma-createpolygon/)[\n\nNext\n\ncreateVector\n\n](/docs/plugins/api/properties/figma-createvector/)\n\n*   Signature\n*   Remarks"
+}

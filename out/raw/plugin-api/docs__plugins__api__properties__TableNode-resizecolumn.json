@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-resizecolumn/",
+  "path": "/docs/plugins/api/properties/TableNode-resizecolumn/",
+  "slug": "docs__plugins__api__properties__TableNode-resizecolumn",
+  "title": "resizeColumn | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [TableNode](/docs/plugins/api/TableNode/)\n*   resizeColumn\n\n# resizeColumn\n\nResizes the column. Columns cannot be resized to be smaller than their minimum size.\n\nSupported on:\n\n*   [TableNode](/docs/plugins/api/TableNode/)\n\n## Signature​\n\n### resizeColumn(columnIndex: number, width: number): void\n\n## Parameters​\n\n### width​\n\nNew width of the column. Must be >= 0.01\n\n[\n\nPrevious\n\nresizeRow\n\n](/docs/plugins/api/properties/TableNode-resizerow/)[\n\nNext\n\nTextNode\n\n](/docs/plugins/api/TextNode/)\n\n*   Signature\n*   Parameters\n    *   width"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/TextDecorationStyle/",
+  "path": "/docs/plugins/api/TextDecorationStyle/",
+  "slug": "docs__plugins__api__TextDecorationStyle",
+  "title": "TextDecorationStyle | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   TextDecorationStyle\n\n# TextDecorationStyle\n\n```\ntype TextDecorationStyle = \"SOLID\" | \"WAVY\" | \"DOTTED\"\n```\n\n[\n\nPrevious\n\nTextDecoration\n\n](/docs/plugins/api/TextDecoration/)[\n\nNext\n\nTextDecorationOffset\n\n](/docs/plugins/api/TextDecorationOffset/)"
+}

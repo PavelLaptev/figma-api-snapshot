@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumngap/",
+  "path": "/docs/plugins/api/properties/nodes-gridcolumngap/",
+  "slug": "docs__plugins__api__properties__nodes-gridcolumngap",
+  "title": "gridColumnGap | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Shared Node Properties](/docs/plugins/api/node-properties/)\n*   gridColumnGap\n\n# gridColumnGap\n\nApplicable only on auto-layout frames with `layoutMode` set to `\"GRID\"`. Determines the gap between columns in the grid.\n\nSupported on:\n\n*   [ComponentNode](/docs/plugins/api/ComponentNode/)\n*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)\n*   [FrameNode](/docs/plugins/api/FrameNode/)\n*   [InstanceNode](/docs/plugins/api/InstanceNode/)\n*   [SlideNode](/docs/plugins/api/SlideNode/)\n\n## Signature​\n\n### [gridColumnGap](/docs/plugins/api/properties/nodes-gridcolumngap/): number\n\n## Remarks​\n\nIf the setter for this value is called on a grid with a value less than 0, it will throw an error.\n\n[\n\nPrevious\n\ngridColumnCount\n\n](/docs/plugins/api/properties/nodes-gridcolumncount/)[\n\nNext\n\ngridColumnSizes\n\n](/docs/plugins/api/properties/nodes-gridcolumnsizes/)\n\n*   Signature\n*   Remarks"
+}

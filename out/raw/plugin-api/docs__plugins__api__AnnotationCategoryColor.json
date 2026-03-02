@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/AnnotationCategoryColor/",
+  "path": "/docs/plugins/api/AnnotationCategoryColor/",
+  "slug": "docs__plugins__api__AnnotationCategoryColor",
+  "title": "AnnotationCategoryColor | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   AnnotationCategoryColor\n\n# AnnotationCategoryColor\n\n```\ntype AnnotationCategoryColor =  | 'yellow'  | 'orange'  | 'red'  | 'pink'  | 'violet'  | 'blue'  | 'teal'  | 'green'\n```\n\nThe color assigned to an [AnnotationCategory](/docs/plugins/api/AnnotationCategory/)\n\n[\n\nPrevious\n\nAnnotationCategory\n\n](/docs/plugins/api/AnnotationCategory/)[\n\nNext\n\nAnnotationProperty\n\n](/docs/plugins/api/AnnotationProperty/)"
+}

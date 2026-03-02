@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/VariableBindableGridStyleField/",
+  "path": "/docs/plugins/api/VariableBindableGridStyleField/",
+  "slug": "docs__plugins__api__VariableBindableGridStyleField",
+  "title": "VariableBindableGridStyleField | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   VariableBindableGridStyleField\n\n# VariableBindableGridStyleField\n\n```\ntype VariableBindableGridStyleField = 'layoutGrids'\n```\n\nA list of bound variable types that can exist on a [`GridStyle`](/docs/plugins/api/GridStyle/).\n\n[\n\nPrevious\n\nVariableBindableEffectStyleField\n\n](/docs/plugins/api/VariableBindableEffectStyleField/)[\n\nNext\n\nVariableBindableColorStopField\n\n](/docs/plugins/api/VariableBindableColorStopField/)"
+}

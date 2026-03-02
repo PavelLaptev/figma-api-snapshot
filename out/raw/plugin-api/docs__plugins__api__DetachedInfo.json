@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/DetachedInfo/",
+  "path": "/docs/plugins/api/DetachedInfo/",
+  "slug": "docs__plugins__api__DetachedInfo",
+  "title": "DetachedInfo | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   DetachedInfo\n\n# DetachedInfo\n\n```\ntype DetachedInfo = {  type: 'local'  componentId: string} | {  type: 'library'  componentKey: string}\n```\n\nInformation about detached instances. If the node is detached from a local component (a component in the same file), `type` will show `local` and `componentId` will contain the ID of this component. If the node is detached from a library component, `type` will show `library` and `componentKey` will contain the key of this component.\n\n`detachedInfo` will be present even if the component from which the node was detached has been deleted. It will also be present even if the user doesn't have access to the file containing that component.\n\n[\n\nPrevious\n\nComponentPropertyType\n\n](/docs/plugins/api/ComponentPropertyType/)[\n\nNext\n\nDevResource\n\n](/docs/plugins/api/DevResource/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/VariableBindableColorStopField/",
+  "path": "/docs/plugins/api/VariableBindableColorStopField/",
+  "slug": "docs__plugins__api__VariableBindableColorStopField",
+  "title": "VariableBindableColorStopField | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   VariableBindableColorStopField\n\n# VariableBindableColorStopField\n\n```\ntype VariableBindableColorStopField = 'color'\n```\n\nA list of node fields that can be bound to a [`ColorStop`](/docs/plugins/api/Paint/).\n\n[\n\nPrevious\n\nVariableBindableGridStyleField\n\n](/docs/plugins/api/VariableBindableGridStyleField/)[\n\nNext\n\nVariableResolvedDataType\n\n](/docs/plugins/api/VariableResolvedDataType/)"
+}

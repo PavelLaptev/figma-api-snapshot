@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/MeasurementSide/",
+  "path": "/docs/plugins/api/MeasurementSide/",
+  "slug": "docs__plugins__api__MeasurementSide",
+  "title": "MeasurementSide | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   MeasurementSide\n\n# MeasurementSide\n\n```\ntype MeasurementSide = 'TOP' | 'RIGHT' | 'BOTTOM' | 'LEFT'\n```\n\nThe side of a node a [Measurement](/docs/plugins/api/Measurement/) is attached to.\n\n[\n\nPrevious\n\nMeasurementOffset\n\n](/docs/plugins/api/MeasurementOffset/)[\n\nNext\n\nMediaData\n\n](/docs/plugins/api/MediaData/)"
+}

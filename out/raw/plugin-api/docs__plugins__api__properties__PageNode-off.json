@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-off/",
+  "path": "/docs/plugins/api/properties/PageNode-off/",
+  "slug": "docs__plugins__api__properties__PageNode-off",
+  "title": "off | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [PageNode](/docs/plugins/api/PageNode/)\n*   off\n\n# off\n\nRemoves a callback added with [`on`](/docs/plugins/api/properties/PageNode-on/) or [`once`](/docs/plugins/api/PageNode/#once).\n\nSupported on:\n\n*   [PageNode](/docs/plugins/api/PageNode/)\n\n## Signature​\n\n### [off](/docs/plugins/api/properties/PageNode-off/)(type: 'nodechange', callback: (event: [NodeChangeEvent](/docs/plugins/api/NodeChangeEvent/)) => void): void\n\n## Remarks​\n\nThe callback needs to be the same object that was originally added. For example, you can do this:\n\nCorrect way to remove a callback\n\n```\nlet fn = () => { console.log(\"nodechange\") }page.on(\"nodechange\", fn)page.off(\"nodechange\", fn)\n```\n\nwhereas the following won't work, because the function objects are different:\n\nIncorrect way to remove a callback\n\n```\npage.on(\"nodechange\", () => { console.log(\"nodechange\") })page.off(\"nodechange\", () => { console.log(\"nodechange\") })\n```\n\n[\n\nPrevious\n\non\n\n](/docs/plugins/api/properties/PageNode-on/)[\n\nNext\n\nfocusedSlide\n\n](/docs/plugins/api/properties/PageNode-focusedslide/)\n\n*   Signature\n*   Remarks"
+}

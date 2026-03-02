@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-Padding/",
+  "path": "/docs/widgets/api/type-Padding/",
+  "slug": "docs__widgets__api__type-Padding",
+  "title": "Padding | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   Padding\n\n# Padding\n\n```\ntype Padding = number | FullPadding | VerticalHorizontalPadding;type FullPadding = {  top?: number  left?: number  bottom?: number  right?: number}type VerticalHorizontalPadding = {  vertical?: number  horizontal?: number}\n```\n\n[\n\nPrevious\n\nLayoutGap\n\n](/docs/widgets/api/type-LayoutGap/)[\n\nNext\n\nPaint\n\n](/docs/widgets/api/type-Paint/)"
+}

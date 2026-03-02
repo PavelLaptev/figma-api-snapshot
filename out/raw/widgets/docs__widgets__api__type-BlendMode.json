@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-BlendMode/",
+  "path": "/docs/widgets/api/type-BlendMode/",
+  "slug": "docs__widgets__api__type-BlendMode",
+  "title": "BlendMode | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   BlendMode\n\n# BlendMode\n\nBlend mode describes how a color blends with what's underneath it.\n\nThese blend modes are fairly standard and should match what you would find in other image processing tools. [Some examples](https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode)\n\n```\ntype BlendMode =  | 'pass-through'  | 'normal'  | 'multiply'  | 'screen'  | 'overlay'  | 'darken'  | 'lighten'  | 'color-dodge'  | 'color-burn'  | 'hard-light'  | 'soft-light'  | 'difference'  | 'exclusion'  | 'hue'  | 'saturation'  | 'color'  | 'luminosity'\n```\n\n[\n\nPrevious\n\nArcData\n\n](/docs/widgets/api/type-ArcData/)[\n\nNext\n\nColor\n\n](/docs/widgets/api/type-Color/)"
+}

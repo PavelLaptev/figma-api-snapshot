@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/VariableBindablePaintField/",
+  "path": "/docs/plugins/api/VariableBindablePaintField/",
+  "slug": "docs__plugins__api__VariableBindablePaintField",
+  "title": "VariableBindablePaintField | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   VariableBindablePaintField\n\n# VariableBindablePaintField\n\n```\ntype VariableBindablePaintField = 'color'\n```\n\nA list of node fields that can be bound to a [`SolidPaint`](/docs/plugins/api/Paint/).\n\n[\n\nPrevious\n\nVariableBindableTextField\n\n](/docs/plugins/api/VariableBindableTextField/)[\n\nNext\n\nVariableBindableEffectField\n\n](/docs/plugins/api/VariableBindableEffectField/)"
+}

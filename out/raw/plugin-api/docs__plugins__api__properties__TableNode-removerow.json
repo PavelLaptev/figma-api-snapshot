@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-removerow/",
+  "path": "/docs/plugins/api/properties/TableNode-removerow/",
+  "slug": "docs__plugins__api__properties__TableNode-removerow",
+  "title": "removeRow | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [TableNode](/docs/plugins/api/TableNode/)\n*   removeRow\n\n# removeRow\n\nRemoves the row at the specified index.\n\nSupported on:\n\n*   [TableNode](/docs/plugins/api/TableNode/)\n\n## Signature​\n\n### removeRow(rowIndex: number): void\n\n## Parameters​\n\n### rowIndex​\n\nIndex of the row to remove. Must satisfy `0 <= rowIndex < numRows`.\n\n[\n\nPrevious\n\ninsertColumn\n\n](/docs/plugins/api/properties/TableNode-insertcolumn/)[\n\nNext\n\nremoveColumn\n\n](/docs/plugins/api/properties/TableNode-removecolumn/)\n\n*   Signature\n*   Parameters\n    *   rowIndex"
+}

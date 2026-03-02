@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-setbuzzassettypefornode/",
+  "path": "/docs/plugins/api/properties/figma-buzz-setbuzzassettypefornode/",
+  "slug": "docs__plugins__api__properties__figma-buzz-setbuzzassettypefornode",
+  "title": "setBuzzAssetTypeForNode | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [buzz](/docs/plugins/api/figma-buzz/)\n*   setBuzzAssetTypeForNode\n\n# setBuzzAssetTypeForNode\n\nSets the Buzz asset type for a given node.\n\n## Signature​\n\n### setBuzzAssetTypeForNode(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), assetType: [BuzzAssetType](/docs/plugins/api/BuzzAssetType/)): void\n\n## Parameters​\n\n### node​\n\nThe SceneNode to modify\n\n### assetType​\n\nThe BuzzAssetType to assign to the node\n\n[\n\nPrevious\n\ngetBuzzAssetTypeForNode\n\n](/docs/plugins/api/properties/figma-buzz-getbuzzassettypefornode/)[\n\nNext\n\ngetTextContent\n\n](/docs/plugins/api/properties/figma-buzz-gettextcontent/)\n\n*   Signature\n*   Parameters\n    *   node\n    *   assetType"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-Color/",
+  "path": "/docs/widgets/api/type-Color/",
+  "slug": "docs__widgets__api__type-Color",
+  "title": "Color | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   Color\n\n# Color\n\n```\ninterface Color {  r: number  g: number  b: number  a: number}\n```\n\nRepresents a full Figma color value. These values are from 0 to 1. For example black is `{r: 0, g: 0, b: 0, a: 1}` and white is `{r: 1, g: 1, b: 1, a: 1}`.\n\nAll colors are specified in the same color space. This color space is sRGB in modern browsers and in the Figma desktop app is either sRGB or unmanaged depending on [how you have it configured](https://www.figma.com/blog/figma-desktop-app-improvements/#you-can-now-manage-your-color-space). Unmanaged means the color space is whatever the current color space is of your display.\n\n## HexCode​\n\nWe also use the following type alias in our documentation to refer to a hex color string. Eg. \"#FFFFFF\".\n\n```\ntype HexCode = string\n```\n\n[\n\nPrevious\n\nBlendMode\n\n](/docs/widgets/api/type-BlendMode/)[\n\nNext\n\nConstraint\n\n](/docs/widgets/api/type-Constraint/)\n\n*   HexCode"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/AnnotationProperty/",
+  "path": "/docs/plugins/api/AnnotationProperty/",
+  "slug": "docs__plugins__api__AnnotationProperty",
+  "title": "AnnotationProperty | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   AnnotationProperty\n\n# AnnotationProperty\n\n```\ninterface AnnotationProperty {  readonly type: AnnotationPropertyType}type AnnotationPropertyType =  | 'width'  | 'height'  | 'maxWidth'  | 'minWidth'  | 'maxHeight'  | 'minHeight'  | 'fills'  | 'strokes'  | 'effects'  | 'strokeWeight'  | 'cornerRadius'  | 'textStyleId'  | 'textAlignHorizontal'  | 'fontFamily'  | 'fontStyle'  | 'fontSize'  | 'fontWeight'  | 'lineHeight'  | 'letterSpacing'  | 'itemSpacing'  | 'padding'  | 'layoutMode'  | 'alignItems'  | 'opacity'  | 'mainComponent'  | 'gridRowGap'  | 'gridColumnGap'  | 'gridRowCount'  | 'gridColumnCount'  | 'gridRowAnchorIndex'  | 'gridColumnAnchorIndex'  | 'gridRowSpan'  | 'gridColumnSpan'\n```\n\nA property pinned in an [Annotation](/docs/plugins/api/Annotation/).\n\n[\n\nPrevious\n\nAnnotationCategoryColor\n\n](/docs/plugins/api/AnnotationCategoryColor/)[\n\nNext\n\nArcData\n\n](/docs/plugins/api/ArcData/)"
+}

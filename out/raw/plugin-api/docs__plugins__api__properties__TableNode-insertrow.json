@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-insertrow/",
+  "path": "/docs/plugins/api/properties/TableNode-insertrow/",
+  "slug": "docs__plugins__api__properties__TableNode-insertrow",
+  "title": "insertRow | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [TableNode](/docs/plugins/api/TableNode/)\n*   insertRow\n\n# insertRow\n\nInserts a row before the specified index.\n\nSupported on:\n\n*   [TableNode](/docs/plugins/api/TableNode/)\n\n## Signature​\n\n### insertRow(rowIndex: number): void\n\n## Parameters​\n\n### rowIndex​\n\nIndex of the new row. Must satisfy `0 <= rowIndex <= numRows`.\n\n[\n\nPrevious\n\ncellAt\n\n](/docs/plugins/api/properties/TableNode-cellat/)[\n\nNext\n\ninsertColumn\n\n](/docs/plugins/api/properties/TableNode-insertcolumn/)\n\n*   Signature\n*   Parameters\n    *   rowIndex"
+}

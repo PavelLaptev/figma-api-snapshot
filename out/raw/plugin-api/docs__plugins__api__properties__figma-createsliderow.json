@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createsliderow/",
+  "path": "/docs/plugins/api/properties/figma-createsliderow/",
+  "slug": "docs__plugins__api__properties__figma-createsliderow",
+  "title": "createSlideRow | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createSlideRow\n\n# createSlideRow\n\ninfo\n\nThis API is only available in Figma Slides\n\nCreates a new Slide Row, which automatically gets appended to the Slide Grid.\n\n## Signature​\n\n### [createSlideRow](/docs/plugins/api/properties/figma-createsliderow/)(row?: number): [SlideRowNode](/docs/plugins/api/SlideRowNode/)\n\n## Remarks​\n\nBy default, the row gets appended to the end of the Slide Grid.\n\nCreate a slide row\n\n```\nconst slideRow = figma.createSlideRow()\n```\n\nTo specify a position in the Slide Grid, pass a row index to the function.\n\nCreate a slide row at index 0\n\n```\nconst slideRow = figma.createSlideRow(0)\n```\n\n[\n\nPrevious\n\ncreateSlide\n\n](/docs/plugins/api/properties/figma-createslide/)[\n\nNext\n\ncreateSticky\n\n](/docs/plugins/api/properties/figma-createsticky/)\n\n*   Signature\n*   Remarks"
+}

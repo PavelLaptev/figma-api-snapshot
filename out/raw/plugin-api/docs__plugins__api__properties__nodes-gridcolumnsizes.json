@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumnsizes/",
+  "path": "/docs/plugins/api/properties/nodes-gridcolumnsizes/",
+  "slug": "docs__plugins__api__properties__nodes-gridcolumnsizes",
+  "title": "gridColumnSizes | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Shared Node Properties](/docs/plugins/api/node-properties/)\n*   gridColumnSizes\n\n# gridColumnSizes\n\nOnly applicable on auto-layout frames with `layoutMode` set to `\"GRID\"`. Returns an array of [`GridTrackSize`](/docs/plugins/api/GridTrackSize/) objects representing the columns in the grid in order.\n\nSupported on:\n\n*   [ComponentNode](/docs/plugins/api/ComponentNode/)\n*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)\n*   [FrameNode](/docs/plugins/api/FrameNode/)\n*   [InstanceNode](/docs/plugins/api/InstanceNode/)\n*   [SlideNode](/docs/plugins/api/SlideNode/)\n\n## Signature​\n\n### [gridColumnSizes](/docs/plugins/api/properties/nodes-gridcolumnsizes/): Array<[GridTrackSize](/docs/plugins/api/GridTrackSize/)\\>\n\n## Remarks​\n\nThe order of the columns is from left to right. The [`GridTrackSize`](/docs/plugins/api/GridTrackSize/) can be used to change the type of the column (either `\"FLEX\"` or `\"FIXED\"`) and the size of the track (if it is a `\"FIXED\"` track).\n\n[\n\nPrevious\n\ngridColumnGap\n\n](/docs/plugins/api/properties/nodes-gridcolumngap/)[\n\nNext\n\ngridColumnSpan\n\n](/docs/plugins/api/properties/nodes-gridcolumnspan/)\n\n*   Signature\n*   Remarks"
+}

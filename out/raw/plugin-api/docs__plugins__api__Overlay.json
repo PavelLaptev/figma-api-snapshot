@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/Overlay/",
+  "path": "/docs/plugins/api/Overlay/",
+  "slug": "docs__plugins__api__Overlay",
+  "title": "Overlay | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Overlay\n\n# Overlay\n\n```\ntype OverlayBackground =  { readonly type: \"NONE\" } |  { readonly type: \"SOLID_COLOR\", readonly color: RGBA }\n```\n\nAn overlay either has no background or a single colored background (usually transparent).\n\n```\ntype OverlayPositionType = \"CENTER\" | \"TOP_LEFT\" | \"TOP_CENTER\" | \"TOP_RIGHT\" | \"BOTTOM_LEFT\" | \"BOTTOM_CENTER\" | \"BOTTOM_RIGHT\" | \"MANUAL\"\n```\n\nDescribes where the overlay is located with respect to the device screen. The exception is `\"MANUAL\"`, which is relative to the element that triggered the overlay.\n\n```\ntype OverlayBackgroundInteraction = \"NONE\" | \"CLOSE_ON_CLICK_OUTSIDE\"\n```\n\n[\n\nPrevious\n\nOverflowDirection\n\n](/docs/plugins/api/OverflowDirection/)[\n\nNext\n\nNodeChangeProperty\n\n](/docs/plugins/api/NodeChangeProperty/)"
+}

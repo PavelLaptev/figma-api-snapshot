@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/ArcData/",
+  "path": "/docs/plugins/api/ArcData/",
+  "slug": "docs__plugins__api__ArcData",
+  "title": "ArcData | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   ArcData\n\n# ArcData\n\n```\ninterface ArcData {  readonly startingAngle: number  readonly endingAngle: number  readonly innerRadius: number}\n```\n\nThis data controls the \"arc\" properties of the circle shape:\n\n![](https://static.figma.com/uploads/abd31088233f035d829a22d99a4e481263f5db68)\n\nThe angles are in radians and the inner radius value is from 0 to 1. For the angles, 0° is the x axis and increasing angles rotate clockwise.\n\nExamples:\n\n```\n// Make a half-circlenode.arcData = {startingAngle: 0, endingAngle: Math.PI, innerRadius: 0}\n```\n\n```\n// Make a donutnode.arcData = {startingAngle: 0, endingAngle: 2 * Math.PI, innerRadius: 0.5}\n```\n\n[\n\nPrevious\n\nAnnotationProperty\n\n](/docs/plugins/api/AnnotationProperty/)[\n\nNext\n\nBaseUser\n\n](/docs/plugins/api/BaseUser/)"
+}

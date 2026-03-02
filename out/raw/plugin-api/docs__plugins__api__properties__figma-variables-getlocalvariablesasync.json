@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getlocalvariablesasync/",
+  "path": "/docs/plugins/api/properties/figma-variables-getlocalvariablesasync/",
+  "slug": "docs__plugins__api__properties__figma-variables-getlocalvariablesasync",
+  "title": "getLocalVariablesAsync | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [variables](/docs/plugins/api/figma-variables/)\n*   getLocalVariablesAsync\n\n# getLocalVariablesAsync\n\nReturns all local variables in the current file, optionally filtering by resolved type.\n\n## Signature​\n\n### getLocalVariablesAsync(type?: [VariableResolvedDataType](/docs/plugins/api/VariableResolvedDataType/)): Promise<[Variable](/docs/plugins/api/Variable/)\\[\\]>\n\n## Parameters​\n\n### type​\n\nFilters the returned variables to only be of the given resolved type.\n\n[\n\nPrevious\n\ngetVariableCollectionById\n\n](/docs/plugins/api/properties/figma-variables-getvariablecollectionbyid/)[\n\nNext\n\ngetLocalVariables\n\n](/docs/plugins/api/properties/figma-variables-getlocalvariables/)\n\n*   Signature\n*   Parameters\n    *   type"
+}

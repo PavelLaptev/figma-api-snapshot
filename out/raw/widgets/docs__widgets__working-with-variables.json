@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/working-with-variables/",
+  "path": "/docs/widgets/working-with-variables/",
+  "slug": "docs__widgets__working-with-variables",
+  "title": "Working with Variables | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Development Guides\n*   Working with Variables\n\n# Working with Variables\n\nVariables in Figma design store reusable values that can be applied to all kinds of design properties and prototyping actions. They help save time and effort when building designs, managing design systems, and creating complex prototyping flows.\n\nThe Variables API is available to widgets by [using the Plugin API](/docs/widgets/using-the-plugin-api/) in your widget.\n\nFor more information about using the Variables API, see [Working with Variables](/docs/plugins/working-with-variables/) in the Plugin API documentation.\n\n[\n\nPrevious\n\nWorking with Lists\n\n](/docs/widgets/working-with-lists/)[\n\nNext\n\nImages in Widgets\n\n](/docs/widgets/images-in-widgets/)"
+}

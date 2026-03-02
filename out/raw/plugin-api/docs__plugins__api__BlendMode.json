@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/BlendMode/",
+  "path": "/docs/plugins/api/BlendMode/",
+  "slug": "docs__plugins__api__BlendMode",
+  "title": "BlendMode | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   BlendMode\n\n# BlendMode\n\n```\ntype BlendMode =  \"PASS_THROUGH\" |  \"NORMAL\" |  \"DARKEN\" |  \"MULTIPLY\" |  \"LINEAR_BURN\" | // \"Plus darker\" in Figma  \"COLOR_BURN\" |  \"LIGHTEN\" |  \"SCREEN\" |  \"LINEAR_DODGE\" | // \"Plus lighter\" in Figma  \"COLOR_DODGE\" |  \"OVERLAY\" |  \"SOFT_LIGHT\" |  \"HARD_LIGHT\" |  \"DIFFERENCE\" |  \"EXCLUSION\" |  \"HUE\" |  \"SATURATION\" |  \"COLOR\" |  \"LUMINOSITY\"\n```\n\nBlend mode describes how a color blends with what's underneath it. This property is typically set on a layer, fill or effect (e.g. blend mode of the shadow).\n\nThese blend modes are fairly standard and should match what you would find in other image processing tools. [\\[Examples\\]](https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode)\n\n[\n\nPrevious\n\nBaseUser\n\n](/docs/plugins/api/BaseUser/)[\n\nNext\n\nBuzzAssetType\n\n](/docs/plugins/api/BuzzAssetType/)"
+}

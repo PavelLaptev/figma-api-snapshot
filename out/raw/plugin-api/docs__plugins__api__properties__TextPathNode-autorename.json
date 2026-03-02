@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TextPathNode-autorename/",
+  "path": "/docs/plugins/api/properties/TextPathNode-autorename/",
+  "slug": "docs__plugins__api__properties__TextPathNode-autorename",
+  "title": "autoRename | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [TextPathNode](/docs/plugins/api/TextPathNode/)\n*   autoRename\n\n# autoRename\n\nWhether updating the characters in the text node should update the name of the node. If this is set to true, `name` will be auto-derived from `characters`.\n\nSupported on:\n\n*   [TextPathNode](/docs/plugins/api/TextPathNode/)\n\n## Signature​\n\n### [autoRename](/docs/plugins/api/properties/TextPathNode-autorename/): boolean\n\n## Remarks​\n\nThis is automatically reset to false if `name` is modified in order to allow the node to keep the new name.\n\n[\n\nPrevious\n\nTextPathNode\n\n](/docs/plugins/api/TextPathNode/)[\n\nNext\n\nTransformGroupNode\n\n](/docs/plugins/api/TransformGroupNode/)\n\n*   Signature\n*   Remarks"
+}

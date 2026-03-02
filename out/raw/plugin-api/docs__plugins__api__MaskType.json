@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/MaskType/",
+  "path": "/docs/plugins/api/MaskType/",
+  "slug": "docs__plugins__api__MaskType",
+  "title": "MaskType | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   MaskType\n\n# MaskType\n\n```\ntype MaskType =  \"ALPHA\" |  \"VECTOR\" |  \"LUMINANCE\"\n```\n\nMask type defines what type of masking a node should use if it is a mask.\n\nThe possible values are:\n\n*   `\"ALPHA\"`: the mask node's alpha channel will be used to determine the opacity of each pixel in the masked result.\n*   `\"VECTOR\"`: if the mask node has visible fill paints, every pixel inside the node's fill regions will be fully visible in the masked result. If the mask has visible stroke paints, every pixel inside the node's stroke regions will be fully visible in the masked result.\n*   `\"LUMINANCE\"`: the luminance value of each pixel of the mask node will be used to determine the opacity of that pixel in the masked result.\n\n[\n\nPrevious\n\nLinkUnfurlData\n\n](/docs/plugins/api/LinkUnfurlData/)[\n\nNext\n\nMeasurement\n\n](/docs/plugins/api/Measurement/)"
+}

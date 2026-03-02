@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createtext/",
+  "path": "/docs/plugins/api/properties/figma-createtext/",
+  "slug": "docs__plugins__api__properties__figma-createtext",
+  "title": "createText | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createText\n\n# createText\n\nCreates a new, empty text node.\n\n## Signature​\n\n### [createText](/docs/plugins/api/properties/figma-createtext/)(): [TextNode](/docs/plugins/api/TextNode/)\n\n## Remarks​\n\nBy default, parented under `figma.currentPage`. Without setting additional properties, the text has no characters. You can assign a string, to the [`characters`](/docs/plugins/api/properties/TextNode-characters/) property of the returned node to provide it with text.\n\nCreate a styled 'Hello world!' text node\n\n```\n(async () => {  const text = figma.createText()  // Move to (50, 50)  text.x = 50  text.y = 50  // Load the font in the text node before setting the characters  await figma.loadFontAsync(text.fontName)  text.characters = 'Hello world!'  // Set bigger font size and red color  text.fontSize = 18  text.fills = [{ type: 'SOLID', color: { r: 1, g: 0, b: 0 } }]})()\n```\n\n[\n\nPrevious\n\ncreateVector\n\n](/docs/plugins/api/properties/figma-createvector/)[\n\nNext\n\ncreateFrame\n\n](/docs/plugins/api/properties/figma-createframe/)\n\n*   Signature\n*   Remarks"
+}

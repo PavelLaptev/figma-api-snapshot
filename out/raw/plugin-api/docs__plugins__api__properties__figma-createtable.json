@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createtable/",
+  "path": "/docs/plugins/api/properties/figma-createtable/",
+  "slug": "docs__plugins__api__properties__figma-createtable",
+  "title": "createTable | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createTable\n\n# createTable\n\ninfo\n\nThis API is only available in FigJam\n\nCreates a new table.\n\n## Signature​\n\n### [createTable](/docs/plugins/api/properties/figma-createtable/)(numRows?: number, numColumns?: number): [TableNode](/docs/plugins/api/TableNode/)\n\n## Remarks​\n\nBy default, a table has two rows and two columns, and is parented under `figma.currentPage`.\n\nCreate a table and add text to cells inside\n\n```\n(async () => {  // Create a table with 2 rows and 3 columns  const table = figma.createTable(2, 3)  // Load the font before setting characters  await figma.loadFontAsync(table.cellAt(0, 0).text.fontName)  // Sets characters for the table cells:  // A B C  // 1 2 3  table.cellAt(0, 0).text.characters = 'A'  table.cellAt(0, 1).text.characters = 'B'  table.cellAt(0, 2).text.characters = 'C'  table.cellAt(1, 0).text.characters = '1'  table.cellAt(1, 1).text.characters = '2'  table.cellAt(1, 2).text.characters = '3'})()\n```\n\n[\n\nPrevious\n\ncreateShapeWithText\n\n](/docs/plugins/api/properties/figma-createshapewithtext/)[\n\nNext\n\ncreateTextPath\n\n](/docs/plugins/api/properties/figma-createtextpath/)\n\n*   Signature\n*   Remarks"
+}

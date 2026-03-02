@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/Rect/",
+  "path": "/docs/plugins/api/Rect/",
+  "slug": "docs__plugins__api__Rect",
+  "title": "Rect | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Rect\n\n# Rect\n\n```\ninterface Rect {  readonly x: number  readonly y: number  readonly width: number  readonly height: number}\n```\n\n[\n\nPrevious\n\nReaction\n\n](/docs/plugins/api/Reaction/)[\n\nNext\n\nRGB/RGBA\n\n](/docs/plugins/api/RGB/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-gettextcontent/",
+  "path": "/docs/plugins/api/properties/figma-buzz-gettextcontent/",
+  "slug": "docs__plugins__api__properties__figma-buzz-gettextcontent",
+  "title": "getTextContent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [buzz](/docs/plugins/api/figma-buzz/)\n*   getTextContent\n\n# getTextContent\n\nExtracts all text content fields from a node for dynamic content management.\n\n## Signature​\n\n### getTextContent(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [BuzzTextField](/docs/plugins/api/BuzzTextField/)\\[\\]\n\n## Parameters​\n\n### node​\n\nThe SceneNode to extract text content from\n\n[\n\nPrevious\n\nsetBuzzAssetTypeForNode\n\n](/docs/plugins/api/properties/figma-buzz-setbuzzassettypefornode/)[\n\nNext\n\ngetMediaContent\n\n](/docs/plugins/api/properties/figma-buzz-getmediacontent/)\n\n*   Signature\n*   Parameters\n    *   node"
+}

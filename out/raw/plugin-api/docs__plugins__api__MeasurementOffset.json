@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/MeasurementOffset/",
+  "path": "/docs/plugins/api/MeasurementOffset/",
+  "slug": "docs__plugins__api__MeasurementOffset",
+  "title": "MeasurementOffset | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   MeasurementOffset\n\n# MeasurementOffset\n\n```\ntype MeasurementOffset =  | { type: 'INNER'; relative: number }  | { type: 'OUTER'; fixed: number }\n```\n\nThe offset of a [Measurement](/docs/plugins/api/Measurement/). The offset field is relative to the start node’s center. It can either be:\n\n*   type `'INNER'` where the field `relative` is between -1 and 1, indicating where along the node’s edge the measurement starts.\n*   type `'OUTER'` where the node field `fixed` is the space between the measurement and the edge of the start node. The sign of the number determines which side it sticks out of. Its value must be non-zero (use type `'INNER'` for an offset of `0`).\n\n![Image showing measurement offsets](https://static.figma.com/uploads/dca6b7f03f5f8e876a9eb2481fb6e6aec7d94944)\n\n[\n\nPrevious\n\nMeasurement\n\n](/docs/plugins/api/Measurement/)[\n\nNext\n\nMeasurementSide\n\n](/docs/plugins/api/MeasurementSide/)"
+}

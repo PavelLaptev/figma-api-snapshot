@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/LineHeight/",
+  "path": "/docs/plugins/api/LineHeight/",
+  "slug": "docs__plugins__api__LineHeight",
+  "title": "LineHeight | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   LineHeight\n\n# LineHeight\n\n```\ntype LineHeight = {  readonly value: number  readonly unit: \"PIXELS\" | \"PERCENT\"} | {  readonly unit: \"AUTO\"}\n```\n\nAn object representing a number with a unit. This is similar to how you can set either `100%` or `100px` in a lot of CSS properties. It can also be set to `AUTO`.\n\n[\n\nPrevious\n\nLetterSpacing\n\n](/docs/plugins/api/LetterSpacing/)[\n\nNext\n\nLinkUnfurlData\n\n](/docs/plugins/api/LinkUnfurlData/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/StrokeCap/",
+  "path": "/docs/plugins/api/StrokeCap/",
+  "slug": "docs__plugins__api__StrokeCap",
+  "title": "StrokeCap | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   StrokeCap\n\n# StrokeCap\n\n```\ntype StrokeCap = \"NONE\" |\"ROUND\" |\"SQUARE\" |\"ARROW_LINES\" |\"ARROW_EQUILATERAL\" |\"DIAMOND_FILLED\" |\"TRIANGLE_FILLED\" |\"CIRCLE_FILLED\"\n```\n\nThe possible values are:\n\n*   `\"NONE\"`: nothing is added to the end of the stroke\n*   `\"ROUND\"`: a semi-circle is added to the end of the stroke\n*   `\"SQUARE\"`: a square is added to the end of the stroke\n*   `\"ARROW_LINES\"`: an arrow made up of two lines is added to the end of the stroke\n*   `\"ARROW_EQUILATERAL\"`: an arrow made up of an equilateral triangle pointing outwards is added to the end of the stroke\n*   `\"DIAMOND_FILLED\"`: a filled diamond is added to the end of the stroke\n*   `\"TRIANGLE_FILLED\"`: an arrow made up of an equilateral triangle pointing inwards is added to the end of the stroke\n*   `\"CIRCLE_FILLED\"`: a filled circle is added to the end of the stroke\n\n[\n\nPrevious\n\nSlidesViewChangeEvent\n\n](/docs/plugins/api/SlidesViewChangeEvent/)[\n\nNext\n\nStrokeJoin\n\n](/docs/plugins/api/StrokeJoin/)"
+}

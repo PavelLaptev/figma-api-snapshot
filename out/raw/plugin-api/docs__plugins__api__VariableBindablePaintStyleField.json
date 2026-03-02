@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/VariableBindablePaintStyleField/",
+  "path": "/docs/plugins/api/VariableBindablePaintStyleField/",
+  "slug": "docs__plugins__api__VariableBindablePaintStyleField",
+  "title": "VariableBindablePaintStyleField | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   VariableBindablePaintStyleField\n\n# VariableBindablePaintStyleField\n\n```\ntype VariableBindablePaintStyleField = 'color'\n```\n\nA list of bound variable types that can exist on a [`PaintStyle`](/docs/plugins/api/PaintStyle/).\n\n[\n\nPrevious\n\nVariableBindableLayoutGridField\n\n](/docs/plugins/api/VariableBindableLayoutGridField/)[\n\nNext\n\nVariableBindableEffectStyleField\n\n](/docs/plugins/api/VariableBindableEffectStyleField/)"
+}

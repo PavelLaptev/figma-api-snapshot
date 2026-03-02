@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-selectedtextrange/",
+  "path": "/docs/plugins/api/properties/PageNode-selectedtextrange/",
+  "slug": "docs__plugins__api__properties__PageNode-selectedtextrange",
+  "title": "selectedTextRange | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [PageNode](/docs/plugins/api/PageNode/)\n*   selectedTextRange\n\n# selectedTextRange\n\nThe current text node being edited, if any, and the text currently being selected within that text node.\n\nSupported on:\n\n*   [PageNode](/docs/plugins/api/PageNode/)\n\n## Signature​\n\n### [selectedTextRange](/docs/plugins/api/properties/PageNode-selectedtextrange/): { node: [TextNode](/docs/plugins/api/TextNode/); start: number; end: number } | null\n\n## Remarks​\n\nThis property will return `null` if there is no text node being edited. Setting this property to a `node` will enter text edit mode on that `node`. Leaving text edit mode will set this value to `null`.\n\nWhen `start == end`, it means that no characters is currently selected -- i.e., there is just a cursor.\n\nChanging `selectedTextRange` will trigger a `selectionchange` message.\n\n[\n\nPrevious\n\nselection\n\n](/docs/plugins/api/properties/PageNode-selection/)[\n\nNext\n\nflowStartingPoints\n\n](/docs/plugins/api/properties/PageNode-flowstartingpoints/)\n\n*   Signature\n*   Remarks"
+}

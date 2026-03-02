@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/data-types/",
+  "path": "/docs/plugins/api/data-types/",
+  "slug": "docs__plugins__api__data-types",
+  "title": "Data Types | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   Data Types\n\n# Data Types\n\nTo assist you with writing your plugin code, we provide a TypeScript typings file for the entire Plugin API.\n\nThe typings file is a collection of type and interface declarations you can use for type checking. These declarations represent groups of related properties, parameters, and other data sets you’ll interact with.\n\nYou’ll see **types** and **interfaces** in a few places:\n\n*   To get and set properties on nodes or global objects\n*   Passed as parameters in a function\n*   Returned by a method\n\nTypes and interfaces come in varying levels of complexity.\n\n*   Choose one option from a list of values, like [`BlendMode`](/docs/plugins/api/BlendMode/).\n*   Support a mixture of required and optional properties. You’ll see a “?” at the end of any optional properties.\n*   Offer different properties based on the outcome you want to achieve, like [`ConnectorEndpoint`](/docs/plugins/api/ConnectorEndpoint/).\n*   Support or reference other types and interfaces, like [`Paint`](/docs/plugins/api/Paint/) and [`Effect`](/docs/plugins/api/Effect/).\n\n[\n\nPrevious\n\ny\n\n](/docs/plugins/api/properties/nodes-y/)[\n\nNext\n\nAction\n\n](/docs/plugins/api/Action/)"
+}

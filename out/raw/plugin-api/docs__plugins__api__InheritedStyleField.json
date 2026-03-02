@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/InheritedStyleField/",
+  "path": "/docs/plugins/api/InheritedStyleField/",
+  "slug": "docs__plugins__api__InheritedStyleField",
+  "title": "InheritedStyleField | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   InheritedStyleField\n\n# InheritedStyleField\n\n```\ntype InheritedStyleField =  | 'fillStyleId'  | 'strokeStyleId'  | 'backgroundStyleId'  | 'textStyleId'  | 'effectStyleId'  | 'gridStyleId'  | 'strokeStyleId'\n```\n\nA [StyleConsumer](/docs/plugins/api/StyleConsumers/) will have this style applied in one of these style fields. Note that not every style type can be applied to every style field. For example, a PaintStyle can be applied in `fillStyleId` or `strokeStyleId`, but not in `textStyleId`.\n\n[\n\nPrevious\n\nInferredAutoLayoutResult\n\n](/docs/plugins/api/InferredAutoLayoutResult/)[\n\nNext\n\nInstanceSwapPreferredValue\n\n](/docs/plugins/api/InstanceSwapPreferredValue/)"
+}

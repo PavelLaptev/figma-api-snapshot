@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-insertcolumn/",
+  "path": "/docs/plugins/api/properties/TableNode-insertcolumn/",
+  "slug": "docs__plugins__api__properties__TableNode-insertcolumn",
+  "title": "insertColumn | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [TableNode](/docs/plugins/api/TableNode/)\n*   insertColumn\n\n# insertColumn\n\nInserts a column before the specified index.\n\nSupported on:\n\n*   [TableNode](/docs/plugins/api/TableNode/)\n\n## Signature​\n\n### insertColumn(columnIndex: number): void\n\n## Parameters​\n\n### columnIndex​\n\nIndex of the new column. Must satisfy `0 <= columnIndex <= numColumns`.\n\n[\n\nPrevious\n\ninsertRow\n\n](/docs/plugins/api/properties/TableNode-insertrow/)[\n\nNext\n\nremoveRow\n\n](/docs/plugins/api/properties/TableNode-removerow/)\n\n*   Signature\n*   Parameters\n    *   columnIndex"
+}

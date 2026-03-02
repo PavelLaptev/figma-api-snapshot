@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-AlignItems/",
+  "path": "/docs/widgets/api/type-AlignItems/",
+  "slug": "docs__widgets__api__type-AlignItems",
+  "title": "AlignItems | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   AlignItems\n\n# AlignItems\n\nDetermines how the AutoLayout frame’s children should be aligned in primary/counter axis direction.\n\n```\ntype AlignItems = 'center' | 'start' | 'end' | 'baseline'\n```\n\n## Remarks​\n\n*   `\"start\"` and `\"end\"` correspond to:\n    *   left and right respectively for AutoLayout frames with \"horizontal\" direction.\n    *   top and bottom respectively for AutoLayout frames with \"vertical\" direction.\n*   `\"baseline\"` can only be set on horizontal AutoLayout frames, and aligns all children along the text baseline.\n\n[\n\nPrevious\n\nFragment\n\n](/docs/widgets/api/component-Fragment/)[\n\nNext\n\nArcData\n\n](/docs/widgets/api/type-ArcData/)\n\n*   Remarks"
+}

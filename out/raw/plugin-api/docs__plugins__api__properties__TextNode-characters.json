@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-characters/",
+  "path": "/docs/plugins/api/properties/TextNode-characters/",
+  "slug": "docs__plugins__api__properties__TextNode-characters",
+  "title": "characters | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Shared Node Properties](/docs/plugins/api/node-properties/)\n*   characters\n\n# characters\n\nThe raw characters in the text node. Setting this property requires the font the be loaded.\n\nSupported on:\n\n*   [TextNode](/docs/plugins/api/TextNode/)\n*   [TextPathNode](/docs/plugins/api/TextPathNode/)\n*   [TextSublayerNode](/docs/plugins/api/TextSublayer/)\n\n## Signature​\n\n### [characters](/docs/plugins/api/properties/TextNode-characters/): string\n\n## Remarks​\n\nSetting this property will reset styles applied to character ranges.\n\nSetting the `characters` property can change the [`name`](/docs/plugins/api/properties/nodes-name/) of the node if `autoRename === true`.\n\n[\n\nPrevious\n\nappendChildAt\n\n](/docs/plugins/api/properties/nodes-appendchildat/)[\n\nNext\n\nchildren\n\n](/docs/plugins/api/properties/nodes-children/)\n\n*   Signature\n*   Remarks"
+}

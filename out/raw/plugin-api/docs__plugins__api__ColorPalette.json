@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/ColorPalette/",
+  "path": "/docs/plugins/api/ColorPalette/",
+  "slug": "docs__plugins__api__ColorPalette",
+  "title": "ColorPalette | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   ColorPalette\n\n# ColorPalette\n\n```\ntype ColorPalette = {  [key: string]: string}\n```\n\n[\n\nPrevious\n\nCodeSyntaxPlatform\n\n](/docs/plugins/api/CodeSyntaxPlatform/)[\n\nNext\n\nColorPalettes\n\n](/docs/plugins/api/ColorPalettes/)"
+}

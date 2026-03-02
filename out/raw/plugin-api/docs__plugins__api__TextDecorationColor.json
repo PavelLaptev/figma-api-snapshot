@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/TextDecorationColor/",
+  "path": "/docs/plugins/api/TextDecorationColor/",
+  "slug": "docs__plugins__api__TextDecorationColor",
+  "title": "TextDecorationColor | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   TextDecorationColor\n\n# TextDecorationColor\n\n```\ntype TextDecorationColor =  | {      readonly value: SolidPaint    }  | {      readonly value: 'AUTO'    }\n```\n\n[\n\nPrevious\n\nTextDecorationThickness\n\n](/docs/plugins/api/TextDecorationThickness/)[\n\nNext\n\nTextListOptions\n\n](/docs/plugins/api/TextListOptions/)"
+}

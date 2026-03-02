@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/RemovedNode/",
+  "path": "/docs/plugins/api/RemovedNode/",
+  "slug": "docs__plugins__api__RemovedNode",
+  "title": "RemovedNode | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   RemovedNode\n\n# RemovedNode\n\nAn representation of a node that has been removed from the document. Can be part of a [DocumentChange](/docs/plugins/api/DocumentChange/).\n\n## Properties​\n\n### removed: true \\[readonly\\]\n\n`removed` is set to `true` to distinguish a deleted node from one that is on the document.\n\n* * *\n\n### type: [NodeType](/docs/plugins/api/nodes/#node-type) \\[readonly\\]\n\nThe type of the node before it was removed from the document\n\n* * *\n\n### id: string \\[readonly\\]\n\nThe id of the node\n\n* * *\n\n[\n\nPrevious\n\nRectangleNode\n\n](/docs/plugins/api/RectangleNode/)[\n\nNext\n\nSectionNode\n\n](/docs/plugins/api/SectionNode/)\n\n*   Properties"
+}

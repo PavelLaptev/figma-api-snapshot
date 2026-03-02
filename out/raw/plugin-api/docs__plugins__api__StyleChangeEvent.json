@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/StyleChangeEvent/",
+  "path": "/docs/plugins/api/StyleChangeEvent/",
+  "slug": "docs__plugins__api__StyleChangeEvent",
+  "title": "StyleChangeEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   StyleChangeEvent\n\n# StyleChangeEvent\n\n```\ninterface StyleChangeEvent {  styleChanges: StyleChange[]}\n```\n\n[\n\nPrevious\n\nStyleChange\n\n](/docs/plugins/api/StyleChange/)[\n\nNext\n\nStyleChangeProperty\n\n](/docs/plugins/api/StyleChangeProperty/)"
+}

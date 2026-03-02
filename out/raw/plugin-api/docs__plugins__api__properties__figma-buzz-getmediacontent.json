@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-getmediacontent/",
+  "path": "/docs/plugins/api/properties/figma-buzz-getmediacontent/",
+  "slug": "docs__plugins__api__properties__figma-buzz-getmediacontent",
+  "title": "getMediaContent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [buzz](/docs/plugins/api/figma-buzz/)\n*   getMediaContent\n\n# getMediaContent\n\nExtracts all media content fields from a node for dynamic content management.\n\n## Signature​\n\n### getMediaContent(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [BuzzMediaField](/docs/plugins/api/BuzzMediaField/)\\[\\]\n\n## Parameters​\n\n### node​\n\nThe SceneNode to extract media content from\n\n[\n\nPrevious\n\ngetTextContent\n\n](/docs/plugins/api/properties/figma-buzz-gettextcontent/)[\n\nNext\n\nsmartResize\n\n](/docs/plugins/api/properties/figma-buzz-smartresize/)\n\n*   Signature\n*   Parameters\n    *   node"
+}

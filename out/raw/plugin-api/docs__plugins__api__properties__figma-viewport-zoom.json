@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-viewport-zoom/",
+  "path": "/docs/plugins/api/properties/figma-viewport-zoom/",
+  "slug": "docs__plugins__api__properties__figma-viewport-zoom",
+  "title": "zoom | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [viewport](/docs/plugins/api/figma-viewport/)\n*   zoom\n\n# zoom\n\nZoom level. A value of 1.0 means 100% zoom, 0.5 means 50% zoom.\n\n## Signature​\n\n### [zoom](/docs/plugins/api/properties/figma-viewport-zoom/): number\n\n## Remarks​\n\n*   zoom < 1: design is zoomed out\n*   zoom = 1: design is shown at exact size\n*   zoom > 1: design is zoomed in\n\n[\n\nPrevious\n\nviewport\n\n](/docs/plugins/api/figma-viewport/)[\n\nNext\n\nslidesView\n\n](/docs/plugins/api/properties/figma-viewport-slidesview/)\n\n*   Signature\n*   Remarks"
+}

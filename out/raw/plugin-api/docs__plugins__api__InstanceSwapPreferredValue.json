@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/InstanceSwapPreferredValue/",
+  "path": "/docs/plugins/api/InstanceSwapPreferredValue/",
+  "slug": "docs__plugins__api__InstanceSwapPreferredValue",
+  "title": "InstanceSwapPreferredValue | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   InstanceSwapPreferredValue\n\n# InstanceSwapPreferredValue\n\n```\ntype InstanceSwapPreferredValue = { type: 'COMPONENT' | 'COMPONENT_SET'; key: string }\n```\n\nInstance swap preferred value object that specifies the type and key of the asset.\n\n[\n\nPrevious\n\nInheritedStyleField\n\n](/docs/plugins/api/InheritedStyleField/)[\n\nNext\n\nLabelSublayer\n\n](/docs/plugins/api/LabelSublayer/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-StrokeAlign/",
+  "path": "/docs/widgets/api/type-StrokeAlign/",
+  "slug": "docs__widgets__api__type-StrokeAlign",
+  "title": "StrokeAlign | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   StrokeAlign\n\n# StrokeAlign\n\n```\ntype StrokeAlign = 'inside' | 'outside' | 'center'\n```\n\n[\n\nPrevious\n\nSolidPaint\n\n](/docs/widgets/api/type-SolidPaint/)[\n\nNext\n\nStrokeCap\n\n](/docs/widgets/api/type-StrokeCap/)"
+}

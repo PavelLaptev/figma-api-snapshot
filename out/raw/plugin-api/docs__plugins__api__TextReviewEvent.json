@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/TextReviewEvent/",
+  "path": "/docs/plugins/api/TextReviewEvent/",
+  "slug": "docs__plugins__api__TextReviewEvent",
+  "title": "TextReviewEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   TextReviewEvent\n\n# TextReviewEvent\n\n```\ninterface TextReviewEvent {  text: string}\n```\n\n[\n\nPrevious\n\nTextPathStartData\n\n](/docs/plugins/api/TextPathStartData/)[\n\nNext\n\nTextReviewRange\n\n](/docs/plugins/api/TextReviewRange/)"
+}

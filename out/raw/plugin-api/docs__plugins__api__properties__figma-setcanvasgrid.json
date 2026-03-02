@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-setcanvasgrid/",
+  "path": "/docs/plugins/api/properties/figma-setcanvasgrid/",
+  "slug": "docs__plugins__api__properties__figma-setcanvasgrid",
+  "title": "setCanvasGrid | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   setCanvasGrid\n\n# setCanvasGrid\n\nSets the canvas grid layout, reorganizing nodes in the canvas.\n\ninfo\n\nThis API is only available in Figma Slides and Figma Buzz\n\n## Signature​\n\n### [setCanvasGrid](/docs/plugins/api/properties/figma-setcanvasgrid/)(canvasGrid: Array<Array<[SceneNode](/docs/plugins/api/nodes/#scene-node)\\>>): void\n\n## Parameters​\n\n### canvasGrid​\n\nA 2D array representing the new canvas grid layout\n\n## Remarks​\n\nThis allows you to programmatically rearrange the layout of slides or assets in the canvas grid. All nodes in the current grid must be included in the new layout.\n\nFor example:\n\n```\nconst grid = figma.getCanvasGrid()const [firstRow, ...rest] = grid// move the first row to the endfigma.setCanvasGrid([...rest, firstRow])\n```\n\n[\n\nPrevious\n\ngetCanvasGrid\n\n](/docs/plugins/api/properties/figma-getcanvasgrid/)[\n\nNext\n\ncreateCanvasRow\n\n](/docs/plugins/api/properties/figma-createcanvasrow/)\n\n*   Signature\n*   Parameters\n    *   canvasGrid\n*   Remarks"
+}

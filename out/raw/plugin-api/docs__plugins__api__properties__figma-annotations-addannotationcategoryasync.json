@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-annotations-addannotationcategoryasync/",
+  "path": "/docs/plugins/api/properties/figma-annotations-addannotationcategoryasync/",
+  "slug": "docs__plugins__api__properties__figma-annotations-addannotationcategoryasync",
+  "title": "addAnnotationCategoryAsync | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [annotations](/docs/plugins/api/figma-annotations/)\n*   addAnnotationCategoryAsync\n\n# addAnnotationCategoryAsync\n\nAdds a new [`AnnotationCategory`](/docs/plugins/api/AnnotationCategory/).\n\n## Signature​\n\n### addAnnotationCategoryAsync(categoryInput: { label: string; color: [AnnotationCategoryColor](/docs/plugins/api/AnnotationCategoryColor/) }): Promise<[AnnotationCategory](/docs/plugins/api/AnnotationCategory/)\\>\n\n## Parameters​\n\n### categoryInput​\n\nThe label and color of the annotation category.\n\n[\n\nPrevious\n\ngetAnnotationCategoryByIdAsync\n\n](/docs/plugins/api/properties/figma-annotations-getannotationcategorybyidasync/)[\n\nNext\n\nbuzz\n\n](/docs/plugins/api/figma-buzz/)\n\n*   Signature\n*   Parameters\n    *   categoryInput"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-constants-colors/",
+  "path": "/docs/plugins/api/properties/figma-constants-colors/",
+  "slug": "docs__plugins__api__properties__figma-constants-colors",
+  "title": "colors | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [constants](/docs/plugins/api/figma-constants/)\n*   colors\n\n# colors\n\nHolds color palettes, which maps color names to hex codes.\n\nExample usage\n\n```\nconst colorMapBase = figma.constants.colors.figJamBaseconst colorMapBaseLight = figma.constants.colors.figJamBaseLight\n```\n\n## Signature​\n\n### colors: [ColorPalettes](/docs/plugins/api/ColorPalettes/)\n\n[\n\nPrevious\n\nconstants\n\n](/docs/plugins/api/figma-constants/)[\n\nNext\n\ncodegen\n\n](/docs/plugins/api/figma-codegen/)\n\n*   Signature"
+}

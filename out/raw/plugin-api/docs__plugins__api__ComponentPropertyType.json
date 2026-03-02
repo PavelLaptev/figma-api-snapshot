@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/ComponentPropertyType/",
+  "path": "/docs/plugins/api/ComponentPropertyType/",
+  "slug": "docs__plugins__api__ComponentPropertyType",
+  "title": "ComponentPropertyType | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   ComponentPropertyType\n\n# ComponentPropertyType\n\n```\ntype ComponentPropertyType =  'BOOLEAN' |  'TEXT' |  'INSTANCE_SWAP' |  'VARIANT'\n```\n\nThe different types of component properties.\n\n[\n\nPrevious\n\nComponentPropertyOptions\n\n](/docs/plugins/api/ComponentPropertyOptions/)[\n\nNext\n\nDetachedInfo\n\n](/docs/plugins/api/DetachedInfo/)"
+}

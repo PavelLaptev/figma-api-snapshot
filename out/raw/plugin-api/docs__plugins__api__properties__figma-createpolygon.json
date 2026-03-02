@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createpolygon/",
+  "path": "/docs/plugins/api/properties/figma-createpolygon/",
+  "slug": "docs__plugins__api__properties__figma-createpolygon",
+  "title": "createPolygon | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createPolygon\n\n# createPolygon\n\nCreates a new polygon (defaults to a triangle).\n\n## Signature​\n\n### [createPolygon](/docs/plugins/api/properties/figma-createpolygon/)(): [PolygonNode](/docs/plugins/api/PolygonNode/)\n\n## Remarks​\n\nBy default, the new node has three edges (i.e. a triangle), a default fill, width and height both at 100, and is parented under `figma.currentPage`.\n\nCreate a red octagon\n\n```\nconst polygon = figma.createPolygon()// Move to (50, 50)polygon.x = 50polygon.y = 50// Set size to 200 x 200polygon.resize(200, 200)// Make the polygon 8-sidedpolygon.pointCount = 8// Set solid red fillpolygon.fills = [{ type: 'SOLID', color: { r: 1, g: 0, b: 0 } }]\n```\n\n[\n\nPrevious\n\ncreateEllipse\n\n](/docs/plugins/api/properties/figma-createellipse/)[\n\nNext\n\ncreateStar\n\n](/docs/plugins/api/properties/figma-createstar/)\n\n*   Signature\n*   Remarks"
+}

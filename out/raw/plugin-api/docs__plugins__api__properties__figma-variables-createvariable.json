@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-createvariable/",
+  "path": "/docs/plugins/api/properties/figma-variables-createvariable/",
+  "slug": "docs__plugins__api__properties__figma-variables-createvariable",
+  "title": "createVariable | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [variables](/docs/plugins/api/figma-variables/)\n*   createVariable\n\n# createVariable\n\nCreates a variable with a given name and resolved type inside a collection.\n\n## Signature​\n\n### createVariable(name: string, collection: [VariableCollection](/docs/plugins/api/VariableCollection/), resolvedType: [VariableResolvedDataType](/docs/plugins/api/VariableResolvedDataType/)): [Variable](/docs/plugins/api/Variable/)\n\n## Parameters​\n\n### name​\n\nThe name of the newly created variable\n\n### collection​\n\nA variable collection. Make sure to pass a collection object here; passing a collection ID is deprecated.\n\n### resolvedType​\n\nThe resolved type of this variable\n\n[\n\nPrevious\n\ngetLocalVariables\n\n](/docs/plugins/api/properties/figma-variables-getlocalvariables/)[\n\nNext\n\ncreateVariableCollection\n\n](/docs/plugins/api/properties/figma-variables-createvariablecollection/)\n\n*   Signature\n*   Parameters\n    *   name\n    *   collection\n    *   resolvedType"
+}

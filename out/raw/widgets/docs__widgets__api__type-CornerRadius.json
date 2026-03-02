@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-CornerRadius/",
+  "path": "/docs/widgets/api/type-CornerRadius/",
+  "slug": "docs__widgets__api__type-CornerRadius",
+  "title": "CornerRadius | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   CornerRadius\n\n# CornerRadius\n\n```\ntype CornerRadius =  | number  | {      topLeft?: number      topRight?: number      bottomLeft?: number      bottomRight?: number    }\n```\n\n[\n\nPrevious\n\nConstraint\n\n](/docs/widgets/api/type-Constraint/)[\n\nNext\n\nEffect\n\n](/docs/widgets/api/type-Effect/)"
+}

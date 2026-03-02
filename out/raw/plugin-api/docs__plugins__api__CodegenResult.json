@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/CodegenResult/",
+  "path": "/docs/plugins/api/CodegenResult/",
+  "slug": "docs__plugins__api__CodegenResult",
+  "title": "CodegenResult | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   CodegenResult\n\n# CodegenResult\n\n```\ntype CodegenResult = {  // The title of the section  title: string  // The code of the section  code: string  // The language to use for syntax highlighting  language:    | 'TYPESCRIPT'    | 'CPP'    | 'RUBY'    | 'CSS'    | 'JAVASCRIPT'    | 'HTML'    | 'JSON'    | 'GRAPHQL'    | 'PYTHON'    | 'GO'    | 'SQL'    | 'SWIFT'    | 'KOTLIN'    | 'RUST'    | 'BASH'    | 'PLAINTEXT'}\n```\n\n[\n\nPrevious\n\nCodegenPreferencesEvent\n\n](/docs/plugins/api/CodegenPreferencesEvent/)[\n\nNext\n\nCodeSyntaxPlatform\n\n](/docs/plugins/api/CodeSyntaxPlatform/)"
+}

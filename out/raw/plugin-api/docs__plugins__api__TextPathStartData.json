@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/TextPathStartData/",
+  "path": "/docs/plugins/api/TextPathStartData/",
+  "slug": "docs__plugins__api__TextPathStartData",
+  "title": "TextPathStartData | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   TextPathStartData\n\n# TextPathStartData\n\n### segment: number\n\nThe segment index where the text path starts.\n\n* * *\n\n### position: number\n\nThe position (0 to 1) along the segment where the text path starts.\n\n* * *\n\n[\n\nPrevious\n\nTextListOptions\n\n](/docs/plugins/api/TextListOptions/)[\n\nNext\n\nTextReviewEvent\n\n](/docs/plugins/api/TextReviewEvent/)"
+}

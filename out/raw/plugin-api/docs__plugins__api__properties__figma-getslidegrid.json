@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-getslidegrid/",
+  "path": "/docs/plugins/api/properties/figma-getslidegrid/",
+  "slug": "docs__plugins__api__properties__figma-getslidegrid",
+  "title": "getSlideGrid | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   getSlideGrid\n\n# getSlideGrid\n\n**DEPRECATED:** Use [`figma.getCanvasGrid`](/docs/plugins/api/properties/figma-getcanvasgrid/) instead.\n\ninfo\n\nThis API is only available in Figma Slides\n\n## Signature​\n\n### [getSlideGrid](/docs/plugins/api/properties/figma-getslidegrid/)(): Array<Array<[SlideNode](/docs/plugins/api/SlideNode/)\\>>\n\n## Remarks​\n\nThe slide grid provides structure to both single slide view and grid view. The order of Slides within a presentation is a key part of updating and editing a deck. To visualize the slide nodes in a 2D array, you can call this function.\n\n```\nconst grid = figma.getSlideGrid()\n```\n\nThe returned grid is a 2D array of SlideNodes. For example:\n\n```\n[  [SlideNode, SlideNode],  [SlideNode, SlideNode, SlideNode, SlideNode, SlideNode],  [SlideNode, SlideNode, SlideNode, SlideNode, SlideNode],  [SlideNode, SlideNode, SlideNode],]\n```\n\n[\n\nPrevious\n\nungroup\n\n](/docs/plugins/api/properties/figma-ungroup/)[\n\nNext\n\nsetSlideGrid\n\n](/docs/plugins/api/properties/figma-setslidegrid/)\n\n*   Signature\n*   Remarks"
+}

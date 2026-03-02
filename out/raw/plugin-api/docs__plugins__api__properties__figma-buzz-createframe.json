@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-createframe/",
+  "path": "/docs/plugins/api/properties/figma-buzz-createframe/",
+  "slug": "docs__plugins__api__properties__figma-buzz-createframe",
+  "title": "createFrame | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [buzz](/docs/plugins/api/figma-buzz/)\n*   createFrame\n\n# createFrame\n\nCreates a new frame in Buzz, optionally positioned at specific canvas coordinates.\n\n## Signature​\n\n### [createFrame](/docs/plugins/api/properties/figma-buzz-createframe/)(rowIndex?: number, columnIndex?: number): [FrameNode](/docs/plugins/api/FrameNode/)\n\n## Parameters​\n\n### rowIndex​\n\nThe row position on the canvas grid (optional)\n\n### columnIndex​\n\nThe column position on the canvas grid (optional)\n\n## Remarks​\n\nIf no rowIndex and columnIndex are specified, the new frame will be created at the end of the canvas grid.\n\n[\n\nPrevious\n\nbuzz\n\n](/docs/plugins/api/figma-buzz/)[\n\nNext\n\ncreateInstance\n\n](/docs/plugins/api/properties/figma-buzz-createinstance/)\n\n*   Signature\n*   Parameters\n    *   rowIndex\n    *   columnIndex\n*   Remarks"
+}

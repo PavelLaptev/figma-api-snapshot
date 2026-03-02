@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createrectangle/",
+  "path": "/docs/plugins/api/properties/figma-createrectangle/",
+  "slug": "docs__plugins__api__properties__figma-createrectangle",
+  "title": "createRectangle | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createRectangle\n\n# createRectangle\n\nCreates a new rectangle. The behavior is similar to using the `R` shortcut followed by a click.\n\n## Signature​\n\n### [createRectangle](/docs/plugins/api/properties/figma-createrectangle/)(): [RectangleNode](/docs/plugins/api/RectangleNode/)\n\n## Remarks​\n\nBy default, the new node has a default fill, width and height both at 100, and is parented under `figma.currentPage`.\n\nCreate a rectangle and set basic styles\n\n```\nconst rect = figma.createRectangle()// Move to (50, 50)rect.x = 50rect.y = 50// Set size to 200 x 100rect.resize(200, 100)// Set solid red fillrect.fills = [{ type: 'SOLID', color: { r: 1, g: 0, b: 0 } }]\n```\n\n[\n\nPrevious\n\nmixed\n\n](/docs/plugins/api/properties/figma-mixed/)[\n\nNext\n\ncreateLine\n\n](/docs/plugins/api/properties/figma-createline/)\n\n*   Signature\n*   Remarks"
+}

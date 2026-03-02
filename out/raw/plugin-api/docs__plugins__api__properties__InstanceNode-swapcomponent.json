@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/InstanceNode-swapcomponent/",
+  "path": "/docs/plugins/api/properties/InstanceNode-swapcomponent/",
+  "slug": "docs__plugins__api__properties__InstanceNode-swapcomponent",
+  "title": "swapComponent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [InstanceNode](/docs/plugins/api/InstanceNode/)\n*   swapComponent\n\n# swapComponent\n\nSwaps this instance's current main component with `componentNode` and preserves overrides using the same heuristics as instance swap in the Figma editor UI. Note that we may update these override preservation heuristics from time to time.\n\nSupported on:\n\n*   [InstanceNode](/docs/plugins/api/InstanceNode/)\n\n## Signature​\n\n### [swapComponent](/docs/plugins/api/properties/InstanceNode-swapcomponent/)(componentNode: [ComponentNode](/docs/plugins/api/ComponentNode/)): void\n\n## Remarks​\n\nLearn more about instance swap and override preservation in our [help center](https://help.figma.com/hc/en-us/articles/360039150413-Swap-between-component-instances-in-a-file). If you do not want to preserve overrides when swapping, you should assign to [`mainComponent`](/docs/plugins/api/InstanceNode/#maincomponent), which sets the instance's main component directly and clears all overrides.\n\n[\n\nPrevious\n\nInstanceNode\n\n](/docs/plugins/api/InstanceNode/)[\n\nNext\n\nscaleFactor\n\n](/docs/plugins/api/properties/InstanceNode-scalefactor/)\n\n*   Signature\n*   Remarks"
+}

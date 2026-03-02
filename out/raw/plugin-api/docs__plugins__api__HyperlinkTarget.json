@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/HyperlinkTarget/",
+  "path": "/docs/plugins/api/HyperlinkTarget/",
+  "slug": "docs__plugins__api__HyperlinkTarget",
+  "title": "HyperlinkTarget | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   HyperlinkTarget\n\n# HyperlinkTarget\n\n```\ntype HyperlinkTarget = {    type: \"URL\" | \"NODE\"    value: string}\n```\n\nAn object representing hyperlink target. The possible values for `type` are:\n\n*   `\"URL\"`: value is a hyperlink URL. If the URL points to a valid node in the current document, the `HyperlinkTarget` is automatically converted to type `\"NODE\"`.\n*   `\"NODE\"`: value is the `id` of a node in the current document. Note that the node cannot be a sublayer of an instance.\n\n[\n\nPrevious\n\nHandleMirroring\n\n](/docs/plugins/api/HandleMirroring/)[\n\nNext\n\nImage\n\n](/docs/plugins/api/Image/)"
+}

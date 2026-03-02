@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-StrokeCap/",
+  "path": "/docs/widgets/api/type-StrokeCap/",
+  "slug": "docs__widgets__api__type-StrokeCap",
+  "title": "StrokeCap | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   StrokeCap\n\n# StrokeCap\n\n```\ntype StrokeCap = 'none' | 'round' | 'square' | 'arrow-lines' | 'arrow-equilateral'\n```\n\nThe possible values are:\n\n*   `'none'`: nothing is added to the end of the stroke\n*   `'round'`: a semi-circle is added to the end of the stroke\n*   `'square'`: a square is added to the end of the stroke\n*   `'arrow-lines'`: an arrow made up of two lines is added to the end of the stroke\n\n[\n\nPrevious\n\nStrokeAlign\n\n](/docs/widgets/api/type-StrokeAlign/)[\n\nNext\n\nSyncedMap\n\n](/docs/widgets/api/type-SyncedMap/)"
+}

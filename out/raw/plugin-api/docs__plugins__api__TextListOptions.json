@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/TextListOptions/",
+  "path": "/docs/plugins/api/TextListOptions/",
+  "slug": "docs__plugins__api__TextListOptions",
+  "title": "TextListOptions | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   TextListOptions\n\n# TextListOptions\n\n```\ntype TextListOptions = {    type: \"ORDERED\" | \"UNORDERED\" | \"NONE\"}\n```\n\nAn object describing list settings for a range of text. The possible values for `type` are:\n\n*   `\"ORDERED\"`: if the text range has been set to be part of an ordered list (ie: list with numerical counter).\n*   `\"UNORDERED\"`: if the text range has been set to be part of an unordered list (ie: bulleted list).\n*   `\"NONE\"`: if the text range is plain text and is not part of any list\n\n[\n\nPrevious\n\nTextDecorationColor\n\n](/docs/plugins/api/TextDecorationColor/)[\n\nNext\n\nTextPathStartData\n\n](/docs/plugins/api/TextPathStartData/)"
+}

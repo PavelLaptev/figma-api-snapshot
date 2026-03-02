@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/VariableAlias/",
+  "path": "/docs/plugins/api/VariableAlias/",
+  "slug": "docs__plugins__api__VariableAlias",
+  "title": "VariableAlias | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   VariableAlias\n\n# VariableAlias\n\n```\ninterface VariableAlias {  type: 'VARIABLE_ALIAS'  id: string}\n```\n\nA structure used to describe when a particular node or variable is directly bound to a variable. The `id` of the bound variable can be used in conjunction with functions that accept a VariableId, such as `figma.variables.getVariableById`.\n\n[\n\nPrevious\n\nExtendedVariableCollection\n\n](/docs/plugins/api/ExtendedVariableCollection/)[\n\nNext\n\nVariableBindableNodeField\n\n](/docs/plugins/api/VariableBindableNodeField/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/HandleMirroring/",
+  "path": "/docs/plugins/api/HandleMirroring/",
+  "slug": "docs__plugins__api__HandleMirroring",
+  "title": "HandleMirroring | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   HandleMirroring\n\n# HandleMirroring\n\n```\ntype HandleMirroring = \"NONE\" | \"ANGLE\" | \"ANGLE_AND_LENGTH\"\n```\n\nThe possible values are:\n\n*   `\"NONE\"`: the two vector handles are independent from each other\n*   `\"ANGLE\"`: the two vector handles form a single tangent line, but the length of each handle is independent\n*   `\"ANGLE_AND_LENGTH\"`: the two vector handles form a single tangent line, equidistant on both sides of the vertex\n\n[\n\nPrevious\n\nGridTrackSize\n\n](/docs/plugins/api/GridTrackSize/)[\n\nNext\n\nHyperlinkTarget\n\n](/docs/plugins/api/HyperlinkTarget/)"
+}

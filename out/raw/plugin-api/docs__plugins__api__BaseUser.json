@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/BaseUser/",
+  "path": "/docs/plugins/api/BaseUser/",
+  "slug": "docs__plugins__api__BaseUser",
+  "title": "BaseUser | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   BaseUser\n\n# BaseUser\n\nThe `BaseUser` object contains details about a user that was in a file at some point. They may not be active in the file.\n\n### id: string | null \\[readonly\\]\n\nThe user's id. `id` will be automatically generated users in workshop mode. `id` will also be automatically generated for the current user if they are not logged in. For other non-logged in users, this value will be null.\n\n* * *\n\n### name: string \\[readonly\\]\n\nThe user's name. `name` will be 'Anonymous' for non-logged in users.\n\n* * *\n\n### photoUrl: string | null \\[readonly\\]\n\nThe user's photo URL. `photoUrl` will be automatically generated users in workshop mode. `photoUrl` will also be automatically generated for the current user if they are not logged in. For other non-logged in users, this value will be null.\n\n* * *\n\n[\n\nPrevious\n\nArcData\n\n](/docs/plugins/api/ArcData/)[\n\nNext\n\nBlendMode\n\n](/docs/plugins/api/BlendMode/)"
+}

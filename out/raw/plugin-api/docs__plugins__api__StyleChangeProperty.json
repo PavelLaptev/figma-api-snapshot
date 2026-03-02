@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/StyleChangeProperty/",
+  "path": "/docs/plugins/api/StyleChangeProperty/",
+  "slug": "docs__plugins__api__StyleChangeProperty",
+  "title": "StyleChangeProperty | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   StyleChangeProperty\n\n# StyleChangeProperty\n\n```\ntype StyleChangeProperty =  | 'name'  | 'pluginData'  | 'type'  | 'description'  | 'remote'  | 'documentationLinks'  | 'fontSize'  | 'textDecoration'  | 'leadingTrim'  | 'letterSpacing'  | 'lineHeight'  | 'paragraphIndent'  | 'paragraphSpacing'  | 'listSpacing'  | 'hangingPunctuation'  | 'hangingList'  | 'textCase'  | 'paint'  | 'effects'  | 'layoutGrids'\n```\n\nDifferent properties that can be reported by a [StylePropertyChange](/docs/plugins/api/DocumentChange/#stylepropertychange).\n\n[\n\nPrevious\n\nStyleChangeEvent\n\n](/docs/plugins/api/StyleChangeEvent/)[\n\nNext\n\nStyleConsumers\n\n](/docs/plugins/api/StyleConsumers/)"
+}

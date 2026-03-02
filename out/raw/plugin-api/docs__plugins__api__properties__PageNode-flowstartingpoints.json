@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-flowstartingpoints/",
+  "path": "/docs/plugins/api/properties/PageNode-flowstartingpoints/",
+  "slug": "docs__plugins__api__properties__PageNode-flowstartingpoints",
+  "title": "flowStartingPoints | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [PageNode](/docs/plugins/api/PageNode/)\n*   flowStartingPoints\n\n# flowStartingPoints\n\nThe sorted list of flow starting points used when accessing Presentation view.\n\nSupported on:\n\n*   [PageNode](/docs/plugins/api/PageNode/)\n\n## Signature​\n\n### [flowStartingPoints](/docs/plugins/api/properties/PageNode-flowstartingpoints/): ReadonlyArray<{ nodeId: string; name: string }>\n\n## Remarks​\n\nThe default starting point is the first one (e.g., used when no frames are selected and you click the toolbar's play icon to enter Presentation view).\n\n[\n\nPrevious\n\nselectedTextRange\n\n](/docs/plugins/api/properties/PageNode-selectedtextrange/)[\n\nNext\n\non\n\n](/docs/plugins/api/properties/PageNode-on/)\n\n*   Signature\n*   Remarks"
+}

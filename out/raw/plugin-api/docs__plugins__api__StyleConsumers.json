@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/StyleConsumers/",
+  "path": "/docs/plugins/api/StyleConsumers/",
+  "slug": "docs__plugins__api__StyleConsumers",
+  "title": "StyleConsumers | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   StyleConsumers\n\n# StyleConsumers\n\n## Properties​\n\n### node: [SceneNode](/docs/plugins/api/nodes/#scene-node)\n\nNode consuming style.\n\n* * *\n\n### fields: [InheritedStyleField](/docs/plugins/api/InheritedStyleField/)\\[\\]\n\nField in which style is applied.\n\n* * *\n\n[\n\nPrevious\n\nStyleChangeProperty\n\n](/docs/plugins/api/StyleChangeProperty/)[\n\nNext\n\nStyledTextSegment\n\n](/docs/plugins/api/StyledTextSegment/)\n\n*   Properties"
+}

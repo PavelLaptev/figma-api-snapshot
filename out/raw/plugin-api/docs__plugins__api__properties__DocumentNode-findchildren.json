@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/DocumentNode-findchildren/",
+  "path": "/docs/plugins/api/properties/DocumentNode-findchildren/",
+  "slug": "docs__plugins__api__properties__DocumentNode-findchildren",
+  "title": "findChildren | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [DocumentNode](/docs/plugins/api/DocumentNode/)\n*   findChildren\n\n# findChildren\n\nSearches the immediate children of this node (i.e. all page nodes, not including their children). Returns all pages for which `callback` returns true.\n\nSupported on:\n\n*   [DocumentNode](/docs/plugins/api/DocumentNode/)\n\n## Signature​\n\n### [findChildren](/docs/plugins/api/properties/DocumentNode-findchildren/)(callback?: (node: [PageNode](/docs/plugins/api/PageNode/)) => boolean): Array<[PageNode](/docs/plugins/api/PageNode/)\\>\n\n## Parameters​\n\n### callback​\n\nA function that evaluates whether to return the provided `node`. If this argument is omitted, `findChildren` returns `node.children`.\n\n## Remarks​\n\nExample: find pages matching a certain name scheme\n\n```\nconst templates = figma.root.findChildren(n => n.name.includes(\"template\"))\n```\n\n[\n\nPrevious\n\nDocumentNode\n\n](/docs/plugins/api/DocumentNode/)[\n\nNext\n\nfindChild\n\n](/docs/plugins/api/properties/DocumentNode-findchild/)\n\n*   Signature\n*   Parameters\n    *   callback\n*   Remarks"
+}

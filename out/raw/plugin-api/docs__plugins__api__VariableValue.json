@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/VariableValue/",
+  "path": "/docs/plugins/api/VariableValue/",
+  "slug": "docs__plugins__api__VariableValue",
+  "title": "VariableValue | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   VariableValue\n\n# VariableValue\n\n```\ntype VariableValue =  string |  number |  boolean |  RGB |  RGBA |  VariableAlias\n```\n\n## Variable Alias​\n\nCreated via `figma.variables.createVariableBinding()`. Used to alias variables to other variables. Each `VariableValue` has at least one corresponding [`VariableResolvedDataType`](/docs/plugins/api/VariableResolvedDataType/).\n\n[\n\nPrevious\n\nVariableScope\n\n](/docs/plugins/api/VariableScope/)[\n\nNext\n\nsetBoundVariable\n\n](/docs/plugins/api/properties/TextStyle-setboundvariable/)\n\n*   Variable Alias"
+}

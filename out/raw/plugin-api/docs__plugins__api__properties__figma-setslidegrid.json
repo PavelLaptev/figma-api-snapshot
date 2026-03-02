@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-setslidegrid/",
+  "path": "/docs/plugins/api/properties/figma-setslidegrid/",
+  "slug": "docs__plugins__api__properties__figma-setslidegrid",
+  "title": "setSlideGrid | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   setSlideGrid\n\n# setSlideGrid\n\n**DEPRECATED:** Use [`figma.setCanvasGrid`](/docs/plugins/api/properties/figma-setcanvasgrid/) instead.\n\ninfo\n\nThis API is only available in Figma Slides\n\n## Signature​\n\n### [setSlideGrid](/docs/plugins/api/properties/figma-setslidegrid/)(slideGrid: Array<Array<[SlideNode](/docs/plugins/api/SlideNode/)\\>>): void\n\n## Remarks​\n\nThe order of Slides within a presentation is a key part of updating and editing a deck. Using this method you can manipulate and reorder the grid.\n\nFor example:\n\n```\nconst grid = figma.getSlideGrid()const [firstRow, ...rest] = grid// move the first row to the endfigma.setSlideGrid([...rest, firstRow])\n```\n\nSo long as all the Slides in the current grid are passed back to `setSlideGrid` the update will succeed. Meaning, you can change the amount of rows as you please - flatten all to one row, explode to many rows, etc, and the method will handle all updates for you.\n\n[\n\nPrevious\n\ngetSlideGrid\n\n](/docs/plugins/api/properties/figma-getslidegrid/)[\n\nNext\n\ngetCanvasGrid\n\n](/docs/plugins/api/properties/figma-getcanvasgrid/)\n\n*   Signature\n*   Remarks"
+}

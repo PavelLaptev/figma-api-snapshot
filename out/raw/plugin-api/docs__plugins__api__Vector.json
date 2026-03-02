@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/Vector/",
+  "path": "/docs/plugins/api/Vector/",
+  "slug": "docs__plugins__api__Vector",
+  "title": "Vector | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Vector\n\n# Vector\n\n```\ninterface Vector {  readonly x: number  readonly y: number}\n```\n\nThis type represents a 2D vector. This same type is used to represent absolute points, relative offsets, and rectangular sizes.\n\n[\n\nPrevious\n\nUser\n\n](/docs/plugins/api/User/)[\n\nNext\n\nVariable\n\n](/docs/plugins/api/Variable/)"
+}

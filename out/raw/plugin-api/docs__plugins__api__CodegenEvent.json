@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/CodegenEvent/",
+  "path": "/docs/plugins/api/CodegenEvent/",
+  "slug": "docs__plugins__api__CodegenEvent",
+  "title": "CodegenEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   CodegenEvent\n\n# CodegenEvent\n\n```\ntype CodegenEvent = {  node: SceneNode  language: string // typeof manifest.codegenLanguages[0].value}\n```\n\n[\n\nPrevious\n\nCodeLanguage\n\n](/docs/plugins/api/CodeLanguage/)[\n\nNext\n\nCodegenPreference\n\n](/docs/plugins/api/CodegenPreference/)"
+}

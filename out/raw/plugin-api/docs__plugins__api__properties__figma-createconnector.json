@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createconnector/",
+  "path": "/docs/plugins/api/properties/figma-createconnector/",
+  "slug": "docs__plugins__api__properties__figma-createconnector",
+  "title": "createConnector | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createConnector\n\n# createConnector\n\ninfo\n\nThis API is only available in FigJam\n\nCreates a new connector. The behavior is similar to using the `Shift-C` shortcut followed by a click.\n\n## Signature​\n\n### [createConnector](/docs/plugins/api/properties/figma-createconnector/)(): [ConnectorNode](/docs/plugins/api/ConnectorNode/)\n\n## Remarks​\n\nBy default, the new node has a width of 200, and is parented under `figma.currentPage`.\n\nAdd a connector between two stickies\n\n```\n// Create two stickiesconst stickyLeft = figma.createSticky()stickyLeft.x = -200const stickyRight = figma.createSticky()stickyRight.x = 200// Connect the two stickiesconst connector = figma.createConnector()connector.connectorStart = {  endpointNodeId: stickyLeft.id,  magnet: 'AUTO'}connector.connectorEnd = {  endpointNodeId: stickyRight.id,  magnet: 'AUTO'}\n```\n\n[\n\nPrevious\n\ncreateSticky\n\n](/docs/plugins/api/properties/figma-createsticky/)[\n\nNext\n\ncreateShapeWithText\n\n](/docs/plugins/api/properties/figma-createshapewithtext/)\n\n*   Signature\n*   Remarks"
+}

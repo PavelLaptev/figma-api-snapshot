@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-texttruncation/",
+  "path": "/docs/plugins/api/properties/TextNode-texttruncation/",
+  "slug": "docs__plugins__api__properties__TextNode-texttruncation",
+  "title": "textTruncation | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [TextNode](/docs/plugins/api/TextNode/)\n*   textTruncation\n\n# textTruncation\n\nWhether this text node will truncate with an ellipsis when the text node size is smaller than the text inside.\n\nSupported on:\n\n*   [TextNode](/docs/plugins/api/TextNode/)\n\n## Signature​\n\n### [textTruncation](/docs/plugins/api/properties/TextNode-texttruncation/): 'DISABLED' | 'ENDING'\n\n## Remarks​\n\nWhen [`textAutoResize`](/docs/plugins/api/properties/TextNode-textautoresize/) is set to `\"NONE\"`, the text will truncate when the fixed size is smaller than the text inside. When it is `\"HEIGHT\"` or `\"WIDTH_AND_HEIGHT\"`, truncation will only occur if used in conjunction with [`maxHeight`](/docs/plugins/api/node-properties/#maxheight) or [`maxLines`](/docs/plugins/api/properties/TextNode-maxlines/).\n\n[\n\nPrevious\n\ntextAutoResize\n\n](/docs/plugins/api/properties/TextNode-textautoresize/)[\n\nNext\n\nmaxLines\n\n](/docs/plugins/api/properties/TextNode-maxlines/)\n\n*   Signature\n*   Remarks"
+}

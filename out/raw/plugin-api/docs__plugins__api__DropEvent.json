@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/DropEvent/",
+  "path": "/docs/plugins/api/DropEvent/",
+  "slug": "docs__plugins__api__DropEvent",
+  "title": "DropEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   DropEvent\n\n# DropEvent\n\n```\ninterface DropEvent { node: BaseNode | SceneNode x: number y: number absoluteX: number absoluteY: number items: DropItem[] files: DropFile[] dropMetadata?: any}\n```\n\n[\n\nPrevious\n\nDocumentationLink\n\n](/docs/plugins/api/DocumentationLink/)[\n\nNext\n\nEffect\n\n](/docs/plugins/api/Effect/)"
+}

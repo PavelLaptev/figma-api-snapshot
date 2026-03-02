@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-getcanvasgrid/",
+  "path": "/docs/plugins/api/properties/figma-getcanvasgrid/",
+  "slug": "docs__plugins__api__properties__figma-getcanvasgrid",
+  "title": "getCanvasGrid | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   getCanvasGrid\n\n# getCanvasGrid\n\nGets the current canvas grid layout as a 2D array of nodes.\n\ninfo\n\nThis API is only available in Figma Slides and Figma Buzz\n\n## Signature​\n\n### [getCanvasGrid](/docs/plugins/api/properties/figma-getcanvasgrid/)(): Array<Array<[SceneNode](/docs/plugins/api/nodes/#scene-node)\\>>\n\n## Remarks​\n\nThe canvas grid represents the organizational structure of assets in Slides and Buzz, where each position can contain a node (slide or asset).\n\nTo visualize the nodes in the canvas grid in a 2D array, you can call this function.\n\n```\nconst grid = figma.getCanvasGrid()\n```\n\n[\n\nPrevious\n\nsetSlideGrid\n\n](/docs/plugins/api/properties/figma-setslidegrid/)[\n\nNext\n\nsetCanvasGrid\n\n](/docs/plugins/api/properties/figma-setcanvasgrid/)\n\n*   Signature\n*   Remarks"
+}

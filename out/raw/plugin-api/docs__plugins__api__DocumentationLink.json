@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/DocumentationLink/",
+  "path": "/docs/plugins/api/DocumentationLink/",
+  "slug": "docs__plugins__api__DocumentationLink",
+  "title": "DocumentationLink | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   DocumentationLink\n\n# DocumentationLink\n\n```\ninterface DocumentationLink {  readonly uri: string}\n```\n\nRepresents a link to documentation for a component. `uri` should be a valid URI (e.g. `https://www.figma.com`).\n\n[\n\nPrevious\n\nDocumentChangeEvent\n\n](/docs/plugins/api/DocumentChangeEvent/)[\n\nNext\n\nDropEvent\n\n](/docs/plugins/api/DropEvent/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-moverow/",
+  "path": "/docs/plugins/api/properties/TableNode-moverow/",
+  "slug": "docs__plugins__api__properties__TableNode-moverow",
+  "title": "moveRow | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [TableNode](/docs/plugins/api/TableNode/)\n*   moveRow\n\n# moveRow\n\nMoves the row from the start index to the destination index.\n\nSupported on:\n\n*   [TableNode](/docs/plugins/api/TableNode/)\n\n## Signature​\n\n### moveRow(fromIndex: number, toIndex: number): void\n\n## Parameters​\n\n### fromIndex​\n\nIndex of the row to move. Must satisfy `0 <= rowIndex < numRows`.\n\n### toIndex​\n\nIndex that specifies where the row will be moved before. Must satisfy `0 <= rowIndex < numRows`.\n\n[\n\nPrevious\n\nremoveColumn\n\n](/docs/plugins/api/properties/TableNode-removecolumn/)[\n\nNext\n\nmoveColumn\n\n](/docs/plugins/api/properties/TableNode-movecolumn/)\n\n*   Signature\n*   Parameters\n    *   fromIndex\n    *   toIndex"
+}

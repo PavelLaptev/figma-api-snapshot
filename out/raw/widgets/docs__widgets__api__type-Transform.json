@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-Transform/",
+  "path": "/docs/widgets/api/type-Transform/",
+  "slug": "docs__widgets__api__type-Transform",
+  "title": "Transform | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   Transform\n\n# Transform\n\n```\ntype Transform = [  [number, number, number],  [number, number, number]]\n```\n\nA transformation matrix is standard way in computer graphics to represent translation and rotation. These are the top two rows of a 3x3 matrix. The bottom row of the matrix is assumed to be \\[0, 0, 1\\]. This is known as an [affine transform](https://www.mathworks.com/discovery/affine-transformation.html) and is enough to represent translation, rotation, and skew.\n\nThe identity transform is `[[1, 0, 0], [0, 1, 0]]`.\n\nA translation matrix will typically look like:\n\nTranslation matrix\n\n```\n[[1, 0, tx], [0, 1, ty]]\n```\n\nand a rotation matrix will typically look like:\n\nRotation matrix\n\n```\n[[cos(angle), sin(angle), 0], [-sin(angle), cos(angle), 0]]\n```\n\nAnother way to think about this transform is as three vectors:\n\n*   The x axis (t\\[0\\]\\[0\\], t\\[1\\]\\[0\\])\n*   The y axis (t\\[0\\]\\[1\\], t\\[1\\]\\[1\\])\n*   The translation offset (t\\[0\\]\\[2\\], t\\[1\\]\\[2\\])\n\n[\n\nPrevious\n\nTextEditEvent\n\n](/docs/widgets/api/type-TextEditEvent/)[\n\nNext\n\nWidgetClickEvent\n\n](/docs/widgets/api/type-WidgetClickEvent/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-removecolumn/",
+  "path": "/docs/plugins/api/properties/TableNode-removecolumn/",
+  "slug": "docs__plugins__api__properties__TableNode-removecolumn",
+  "title": "removeColumn | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [TableNode](/docs/plugins/api/TableNode/)\n*   removeColumn\n\n# removeColumn\n\nRemoves the column at the specified index.\n\nSupported on:\n\n*   [TableNode](/docs/plugins/api/TableNode/)\n\n## Signature​\n\n### removeColumn(columnIndex: number): void\n\n## Parameters​\n\n### columnIndex​\n\nIndex of the column to remove. Must satisfy `0 <= columnIndex < numColumns`.\n\n[\n\nPrevious\n\nremoveRow\n\n](/docs/plugins/api/properties/TableNode-removerow/)[\n\nNext\n\nmoveRow\n\n](/docs/plugins/api/properties/TableNode-moverow/)\n\n*   Signature\n*   Parameters\n    *   columnIndex"
+}

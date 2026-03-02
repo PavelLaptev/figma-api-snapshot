@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-Size/",
+  "path": "/docs/widgets/api/type-Size/",
+  "slug": "docs__widgets__api__type-Size",
+  "title": "Size | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   Size\n\n# Size\n\n## Size​\n\n```\ntype Size = number | 'fill-parent'\n```\n\n## AutolayoutSize​\n\n```\ntype AutolayoutSize = Size | 'hug-contents'\n```\n\n[\n\nPrevious\n\nPropertyMenu\n\n](/docs/widgets/api/type-PropertyMenu/)[\n\nNext\n\nSolidPaint\n\n](/docs/widgets/api/type-SolidPaint/)\n\n*   Size\n*   AutolayoutSize"
+}

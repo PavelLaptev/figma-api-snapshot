@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/TextDecoration/",
+  "path": "/docs/plugins/api/TextDecoration/",
+  "slug": "docs__plugins__api__TextDecoration",
+  "title": "TextDecoration | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   TextDecoration\n\n# TextDecoration\n\n```\ntype TextDecoration = \"NONE\" | \"UNDERLINE\" | \"STRIKETHROUGH\"\n```\n\nThe possible values are:\n\n*   `\"NONE\"`: the text is shown without decorations.\n*   `\"UNDERLINE\"`: the text has a horizontal line underneath it.\n*   `\"STRIKETHROUGH\"`: the text has a horizontal line crossing it in the middle.\n\n[\n\nPrevious\n\nTextCase\n\n](/docs/plugins/api/TextCase/)[\n\nNext\n\nTextDecorationStyle\n\n](/docs/plugins/api/TextDecorationStyle/)"
+}

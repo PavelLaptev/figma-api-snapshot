@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/LinkUnfurlData/",
+  "path": "/docs/plugins/api/LinkUnfurlData/",
+  "slug": "docs__plugins__api__LinkUnfurlData",
+  "title": "LinkUnfurlData | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   LinkUnfurlData\n\n# LinkUnfurlData\n\nThe metadata for a LinkUnfurl node in FigJam\n\n## LinkUnfurlData​\n\n### url: string\n\nThe URL of the link being unfurled\n\nExample: [https://mynewssite.com/stories/abcdefg](https://mynewssite.com/stories/abcdefg)\n\n* * *\n\n### title: string | null\n\nThe title of the link being unfurled\n\nExample: \"Important News Headline\"\n\n* * *\n\n### description: string | null\n\nThe description of the link being unfurled\n\nExample: \"An astonishing event happened today in a random part of the world....\"\n\n* * *\n\n### provider: string | null\n\nThe provider name of the link being unfurled\n\nExample: \"CNN\" | \"The Onion\" | \"TechCrunch\"\n\n* * *\n\n[\n\nPrevious\n\nLineHeight\n\n](/docs/plugins/api/LineHeight/)[\n\nNext\n\nMaskType\n\n](/docs/plugins/api/MaskType/)\n\n*   LinkUnfurlData"
+}

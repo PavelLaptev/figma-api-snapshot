@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/FontName/",
+  "path": "/docs/plugins/api/FontName/",
+  "slug": "docs__plugins__api__FontName",
+  "title": "FontName | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   FontName\n\n# FontName\n\n```\ninterface Font {  fontName: FontName}interface FontName {  readonly family: string  readonly style: string}\n```\n\nDescribes a font used by a text node. For example, the default font is `{ family: \"Inter\", style: \"Regular\" }`.\n\n[\n\nPrevious\n\nFindAllCriteria\n\n](/docs/plugins/api/FindAllCriteria/)[\n\nNext\n\nFontStyle\n\n](/docs/plugins/api/FontStyle/)"
+}

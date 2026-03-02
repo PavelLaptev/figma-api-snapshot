@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-smartresize/",
+  "path": "/docs/plugins/api/properties/figma-buzz-smartresize/",
+  "slug": "docs__plugins__api__properties__figma-buzz-smartresize",
+  "title": "smartResize | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [buzz](/docs/plugins/api/figma-buzz/)\n*   smartResize\n\n# smartResize\n\nPerforms intelligent resizing of a node while maintaining layout integrity and aspect ratios.\n\n## Signature​\n\n### smartResize(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), width: number, height: number): void\n\n## Parameters​\n\n### node​\n\nThe SceneNode to resize\n\n### width​\n\nThe target width in pixels\n\n### height​\n\nThe target height in pixels\n\n[\n\nPrevious\n\ngetMediaContent\n\n](/docs/plugins/api/properties/figma-buzz-getmediacontent/)[\n\nNext\n\nmode\n\n](/docs/plugins/api/properties/figma-mode/)\n\n*   Signature\n*   Parameters\n    *   node\n    *   width\n    *   height"
+}

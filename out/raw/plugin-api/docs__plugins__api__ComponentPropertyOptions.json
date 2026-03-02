@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/ComponentPropertyOptions/",
+  "path": "/docs/plugins/api/ComponentPropertyOptions/",
+  "slug": "docs__plugins__api__ComponentPropertyOptions",
+  "title": "ComponentPropertyOptions | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   ComponentPropertyOptions\n\n# ComponentPropertyOptions\n\n```\ntype ComponentPropertyOptions = { preferredValues?: InstanceSwapPreferredValue[] }\n```\n\nAdditional options that can be specified when creating a new component property.\n\n[\n\nPrevious\n\nComponentPropertyDefinitions\n\n](/docs/plugins/api/ComponentPropertyDefinitions/)[\n\nNext\n\nComponentPropertyType\n\n](/docs/plugins/api/ComponentPropertyType/)"
+}

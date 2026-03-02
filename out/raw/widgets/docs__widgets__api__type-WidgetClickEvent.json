@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-WidgetClickEvent/",
+  "path": "/docs/widgets/api/type-WidgetClickEvent/",
+  "slug": "docs__widgets__api__type-WidgetClickEvent",
+  "title": "WidgetClickEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   WidgetClickEvent\n\n# WidgetClickEvent\n\nParameter passed to onClick callbacks. See also: [Handling User Events](/docs/widgets/handling-user-events/).\n\n```\ntype WidgetClickEvent = {  canvasX: number  canvasY: number  offsetX: number  offsetY: number}\n```\n\n### canvasX: number\n\ncanvasX is the x position of the mouse relative to the canvas. This is the same as the absolute position that is used to position a node.\n\n* * *\n\n### canvasY: number\n\ncanvasY is the y position of the mouse relative to the canvas. This is the same as the absolute position that is used to position a node.\n\n* * *\n\n### offsetX: number\n\noffsetX is the X coordinate of the mouse relative to the component that was clicked.\n\n* * *\n\n### offsetY: number\n\noffsetY is the Y coordinate of the mouse relative to the component that was clicked.\n\n* * *\n\n[\n\nPrevious\n\nTransform\n\n](/docs/widgets/api/type-Transform/)[\n\nNext\n\nWidgetStuckEvent\n\n](/docs/widgets/api/type-WidgetStuckEvent/)"
+}

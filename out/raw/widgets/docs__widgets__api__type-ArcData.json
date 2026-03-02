@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-ArcData/",
+  "path": "/docs/widgets/api/type-ArcData/",
+  "slug": "docs__widgets__api__type-ArcData",
+  "title": "ArcData | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   ArcData\n\n# ArcData\n\n```\ntype ArcData = {  readonly startingAngle: number  readonly endingAngle: number  readonly innerRadius: number}\n```\n\nThis data controls the \"arc\" properties of the [`Ellipse`](/docs/widgets/api/component-Ellipse/) component:\n\n![](https://static.figma.com/uploads/abd31088233f035d829a22d99a4e481263f5db68)\n\nThe angles are in radians and the inner radius value is from 0 to 1. For the angles, 0° is the x axis and increasing angles rotate clockwise.\n\nExamples:\n\nHalf-circle\n\n```\n// Make a half-circle<Ellipse  arcData={{  \tstartingAngle: 0,  \tendingAngle: Math.PI,  \tinnerRadius: 0  }}/>\n```\n\nDonut\n\n```\n// Make a donut<Ellipse  arcData={{  \tstartingAngle: 0,  \tendingAngle: 2 * Math.PI,  \tinnerRadius: 0.5  }}/>\n```\n\n[\n\nPrevious\n\nAlignItems\n\n](/docs/widgets/api/type-AlignItems/)[\n\nNext\n\nBlendMode\n\n](/docs/widgets/api/type-BlendMode/)"
+}

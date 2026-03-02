@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/SlidesViewChangeEvent/",
+  "path": "/docs/plugins/api/SlidesViewChangeEvent/",
+  "slug": "docs__plugins__api__SlidesViewChangeEvent",
+  "title": "SlidesViewChangeEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   SlidesViewChangeEvent\n\n# SlidesViewChangeEvent\n\nThis event is triggered when the user toggles between grid view and single slide view in Figma Slides.\n\n```\ninterface SlidesViewChangeEvent {  view: 'GRID' | 'SINGLE_SLIDE'}\n```\n\nTo read the current view, use the [`figma.viewport.slidesView`](/docs/plugins/api/properties/figma-viewport-slidesview/) property.\n\n[\n\nPrevious\n\nSlideTransition\n\n](/docs/plugins/api/SlideTransition/)[\n\nNext\n\nStrokeCap\n\n](/docs/plugins/api/StrokeCap/)"
+}

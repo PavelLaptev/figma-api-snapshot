@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/ConnectorNode-rotation/",
+  "path": "/docs/plugins/api/properties/ConnectorNode-rotation/",
+  "slug": "docs__plugins__api__properties__ConnectorNode-rotation",
+  "title": "rotation | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)\n*   rotation\n\n# rotation\n\nThe rotation of the node in degrees. Returns values from -180 to 180. Identical to `Math.atan2(-m10, m00)` in the [`relativeTransform`](/docs/plugins/api/properties/nodes-relativetransform/) matrix. When setting `rotation`, it will also set `m00`, `m01`, `m10`, `m11`.\n\nSupported on:\n\n*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)\n\n## Signature​\n\n### [rotation](/docs/plugins/api/properties/ConnectorNode-rotation/): number\n\n## Remarks​\n\nThe rotation is with respect to the top-left of the object. Therefore, it is independent from the position of the object. If you want to rotate with respect to the center (or any arbitrary point), you can do so via matrix transformations and [`relativeTransform`](/docs/plugins/api/properties/nodes-relativetransform/).\n\n[\n\nPrevious\n\nConnectorNode\n\n](/docs/plugins/api/ConnectorNode/)[\n\nNext\n\nDocumentNode\n\n](/docs/plugins/api/DocumentNode/)\n\n*   Signature\n*   Remarks"
+}

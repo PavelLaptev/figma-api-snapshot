@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/VariableBindableEffectField/",
+  "path": "/docs/plugins/api/VariableBindableEffectField/",
+  "slug": "docs__plugins__api__VariableBindableEffectField",
+  "title": "VariableBindableEffectField | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   VariableBindableEffectField\n\n# VariableBindableEffectField\n\n```\ntype VariableBindableShadowEffectField =  'radius' |  'color' |  'spread' |  'offsetX' |  'offsetY'type VariableBindableBlurEffectField = 'radius'type VariableBindableEffectField =  VariableBindableShadowEffectField  | VariableBindableBlurEffectField\n```\n\nA list of node fields that can be bound to a [`Effect`](/docs/plugins/api/Effect/) by type.\n\n[\n\nPrevious\n\nVariableBindablePaintField\n\n](/docs/plugins/api/VariableBindablePaintField/)[\n\nNext\n\nVariableBindableLayoutGridField\n\n](/docs/plugins/api/VariableBindableLayoutGridField/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/PublishStatus/",
+  "path": "/docs/plugins/api/PublishStatus/",
+  "slug": "docs__plugins__api__PublishStatus",
+  "title": "PublishStatus | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   PublishStatus\n\n# PublishStatus\n\n```\ntype PublishStatus = \"UNPUBLISHED\" | \"CURRENT\" | \"CHANGED\"\n```\n\nDescribes the status of elements that could be published to the team library, namely styles and components.\n\nThe possible values are:\n\n*   `\"UNPUBLISHED\"`: the element is not published to the team library\n*   `\"CURRENT\"`: the element is published and the published version matches the local version\n*   `\"CHANGED\"`: the element is published, but has local changes\n\n[\n\nPrevious\n\nPaint\n\n](/docs/plugins/api/Paint/)[\n\nNext\n\nReaction\n\n](/docs/plugins/api/Reaction/)"
+}

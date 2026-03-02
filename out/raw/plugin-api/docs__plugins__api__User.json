@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/User/",
+  "path": "/docs/plugins/api/User/",
+  "slug": "docs__plugins__api__User",
+  "title": "User | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   User\n\n# User\n\nThe `User` object contains details about a user.\n\n### id: string | null \\[readonly\\]\n\nThe user's id. `id` will be automatically generated users in workshop mode. `id` will also be automatically generated for the current user if they are not logged in. For other non-logged in users, this value will be null.\n\n* * *\n\n### name: string \\[readonly\\]\n\nThe user's name. `name` will be 'Anonymous' for non-logged in users.\n\n* * *\n\n### photoUrl: string | null \\[readonly\\]\n\nThe user's photo URL. `photoUrl` will be automatically generated users in workshop mode. `photoUrl` will also be automatically generated for the current user if they are not logged in. For other non-logged in users, this value will be null.\n\n* * *\n\n### color: string \\[readonly\\]\n\nThe current user's multiplayer color. This will match the color of their dot stamps and cursor.\n\n* * *\n\n### sessionId: number \\[readonly\\]\n\nThe user's session id. This is guaranteed to be unique among active users. For example, if a user with the same `id` opens a file in different tabs, each `User` will have a unique `sessionId`.\n\n* * *\n\n[\n\nPrevious\n\nTrigger\n\n](/docs/plugins/api/Trigger/)[\n\nNext\n\nVector\n\n](/docs/plugins/api/Vector/)"
+}

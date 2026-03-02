@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/VariableBindableNodeField/",
+  "path": "/docs/plugins/api/VariableBindableNodeField/",
+  "slug": "docs__plugins__api__VariableBindableNodeField",
+  "title": "VariableBindableNodeField | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   VariableBindableNodeField\n\n# VariableBindableNodeField\n\n```\ntype VariableBindableNodeField =  | 'height'  | 'width'  | 'characters'  | 'itemSpacing'  | 'paddingLeft'  | 'paddingRight'  | 'paddingTop'  | 'paddingBottom'  | 'visible'  | 'topLeftRadius'  | 'topRightRadius'  | 'bottomLeftRadius'  | 'bottomRightRadius'  | 'minWidth'  | 'maxWidth'  | 'minHeight'  | 'maxHeight'  | 'counterAxisSpacing'  | 'strokeWeight'  | 'strokeTopWeight'  | 'strokeRightWeight'  | 'strokeBottomWeight'  | 'strokeLeftWeight'  | 'opacity'  | 'gridRowGap'  | 'gridColumnGap'\n```\n\nA list of node fields that can be bound to a variable.\n\n[\n\nPrevious\n\nVariableAlias\n\n](/docs/plugins/api/VariableAlias/)[\n\nNext\n\nVariableBindableTextField\n\n](/docs/plugins/api/VariableBindableTextField/)"
+}

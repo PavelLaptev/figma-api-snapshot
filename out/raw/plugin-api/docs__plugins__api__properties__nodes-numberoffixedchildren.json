@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-numberoffixedchildren/",
+  "path": "/docs/plugins/api/properties/nodes-numberoffixedchildren/",
+  "slug": "docs__plugins__api__properties__nodes-numberoffixedchildren",
+  "title": "numberOfFixedChildren | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Shared Node Properties](/docs/plugins/api/node-properties/)\n*   numberOfFixedChildren\n\n# numberOfFixedChildren\n\nDetermines which children of the frame are fixed children in a scrolling frame.\n\nSupported on:\n\n*   [ComponentNode](/docs/plugins/api/ComponentNode/)\n*   [FrameNode](/docs/plugins/api/FrameNode/)\n*   [InstanceNode](/docs/plugins/api/InstanceNode/)\n\n## Signature​\n\n### [numberOfFixedChildren](/docs/plugins/api/properties/nodes-numberoffixedchildren/): number\n\n## Remarks​\n\nIn Figma, fixed children are always on top of scrolling (non-fixed) children. Despite the \"Fix position when scrolling\" checkbox in the UI, fixed layers are not represented as a boolean property on individual layers. Instead, what we really have are two sections of children inside each frame. These section headers are visible in the layers panel when a frame has at least one fixed child.\n\n[\n\nPrevious\n\nname\n\n](/docs/plugins/api/properties/nodes-name/)[\n\nNext\n\nopenTypeFeatures\n\n](/docs/plugins/api/properties/TextNode-opentypefeatures/)\n\n*   Signature\n*   Remarks"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-movenodestocoord/",
+  "path": "/docs/plugins/api/properties/figma-movenodestocoord/",
+  "slug": "docs__plugins__api__properties__figma-movenodestocoord",
+  "title": "moveNodesToCoord | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   moveNodesToCoord\n\n# moveNodesToCoord\n\nMoves the specified nodes to a specific coordinate in the canvas grid.\n\ninfo\n\nThis API is only available in Figma Slides and Figma Buzz\n\nThis function allows precise positioning of multiple nodes within the canvas grid system used in Slides and Buzz.\n\n## Signature​\n\n### [moveNodesToCoord](/docs/plugins/api/properties/figma-movenodestocoord/)(nodeIds: string\\[\\], rowIndex?: number, columnIndex?: number): void\n\n## Parameters​\n\n### nodeIds​\n\nArray of node IDs to move\n\n### rowIndex​\n\nThe target row index in the canvas grid (optional)\n\n### columnIndex​\n\nThe target column index in the canvas grid (optional)\n\n## Remarks​\n\nCalling this function without rowIndex and columnIndex will move the node to the end of the grid\n\n[\n\nPrevious\n\ncreateCanvasRow\n\n](/docs/plugins/api/properties/figma-createcanvasrow/)[\n\nNext\n\nloadBrushesAsync\n\n](/docs/plugins/api/properties/figma-loadbrushesasync/)\n\n*   Signature\n*   Parameters\n    *   nodeIds\n    *   rowIndex\n    *   columnIndex\n*   Remarks"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/SectionNode-resizewithoutconstraints/",
+  "path": "/docs/plugins/api/properties/SectionNode-resizewithoutconstraints/",
+  "slug": "docs__plugins__api__properties__SectionNode-resizewithoutconstraints",
+  "title": "resizeWithoutConstraints | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [SectionNode](/docs/plugins/api/SectionNode/)\n*   resizeWithoutConstraints\n\n# resizeWithoutConstraints\n\nResizes the section node without constraints.\n\nSupported on:\n\n*   [SectionNode](/docs/plugins/api/SectionNode/)\n\n## Signature​\n\n### resizeWithoutConstraints(width: number, height: number): void\n\n## Parameters​\n\n### width​\n\nNew width of the node. Must be >= 0.01\n\n### height​\n\nNew height of the node. Must be >= 0.01\n\n[\n\nPrevious\n\nSectionNode\n\n](/docs/plugins/api/SectionNode/)[\n\nNext\n\nShapeWithTextNode\n\n](/docs/plugins/api/ShapeWithTextNode/)\n\n*   Signature\n*   Parameters\n    *   width\n    *   height"
+}

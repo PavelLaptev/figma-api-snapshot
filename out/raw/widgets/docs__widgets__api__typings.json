@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/typings/",
+  "path": "/docs/widgets/api/typings/",
+  "slug": "docs__widgets__api__typings",
+  "title": "The Typings File | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Overview\n*   The Typings File\n\n# The Typings File\n\nHere’s a sample tsconfig.json to get you started. Widgets created from the default templates will already have this included:\n\n```\n{   \"compilerOptions\": {      \"jsx\": \"react\",      \"jsxFactory\": \"figma.widget.h\",      \"jsxFragmentFactory\": \"figma.widget.Fragment\",      \"target\": \"es6\",      \"strict\": true,      \"typeRoots\": [         \"./node_modules/@types\",         \"./node_modules/@figma\"      ]   }}\n```\n\nYou’ll also need to install widget and plugins typings from npm\n\n```\nnpm install --save-dev @figma/widget-typings @figma/plugin-typings\n```\n\n[\n\nPrevious\n\nWidget Manifest\n\n](/docs/widgets/widget-manifest/)[\n\nNext\n\nfigma.widget\n\n](/docs/widgets/api/figma-widget/)"
+}

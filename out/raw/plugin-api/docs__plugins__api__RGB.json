@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/RGB/",
+  "path": "/docs/plugins/api/RGB/",
+  "slug": "docs__plugins__api__RGB",
+  "title": "RGB/RGBA | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   RGB/RGBA\n\n# RGB/RGBA\n\n```\ninterface RGBA {  // \"Red\"  readonly r: number  // \"Green\"  readonly g: number  // \"Blue\"  readonly b: number  // \"Alpha\" or \"opacity\"  readonly a: number}\n```\n\nRepresents a full Figma color value. These values are from 0 to 1. For example black is `{r: 0, g: 0, b: 0, a: 1}` and white is `{r: 1, g: 1, b: 1, a: 1}`.\n\n```\ninterface RGB {  readonly r: number  readonly g: number  readonly b: number}\n```\n\nRepresents a color just like RGBA but without an alpha value. This is only used for [`SolidPaint`](/docs/plugins/api/Paint/). Colors normally have an alpha value but all paints have an opacity value so alpha was redundant for [`SolidPaint`](/docs/plugins/api/Paint/).\n\nFigma supports [color management](https://help.figma.com/hc/en-us/articles/360039825114). All colors are specified in the same color space which will be the color profile of the document, [`documentColorProfile`](/docs/plugins/api/DocumentNode/#documentcolorprofile).\n\n[\n\nPrevious\n\nRect\n\n](/docs/plugins/api/Rect/)[\n\nNext\n\nRunEvent\n\n](/docs/plugins/api/RunEvent/)"
+}

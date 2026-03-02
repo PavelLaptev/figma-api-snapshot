@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-rgba/",
+  "path": "/docs/plugins/api/properties/figma-util-rgba/",
+  "slug": "docs__plugins__api__properties__figma-util-rgba",
+  "title": "rgba | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [util](/docs/plugins/api/figma-util/)\n*   rgba\n\n# rgba\n\nCreates an `RGBA` color object from a variety of common color encodings.\n\nAccepted color formats include CSS color strings with hex, `rgb()`, `hsl()`, or `lab()` encodings, as well as `RGB` and `RGBA` objects. Alpha defaults to 1 (opaque) if not provided in the input. If a string encoding cannot be parsed, an error will be thrown.\n\nExamples:\n\n```\nconst layoutGrid = {  pattern: 'GRID',  sectionSize: 1,  color: figma.util.rgba('rgb(25% 25% 25% / 0.5)')}\n```\n\nYou can alias this function for more concise code:\n\n```\nconst rgba = figma.util.rgbaconst color = rgba('rgb(25% 25% 25% / 0.5)')\n```\n\n## Signature​\n\n### rgba(color: string | [RGB](/docs/plugins/api/RGB/) | [RGBA](/docs/plugins/api/RGB/#rgba)): [RGBA](/docs/plugins/api/RGB/#rgba)\n\n## Parameters​\n\n### color​\n\nA CSS color string, `RGB` object, or `RGBA` object.\n\n[\n\nPrevious\n\nrgb\n\n](/docs/plugins/api/properties/figma-util-rgb/)[\n\nNext\n\nsolidPaint\n\n](/docs/plugins/api/properties/figma-util-solidpaint/)\n\n*   Signature\n*   Parameters\n    *   color"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getvariablecollectionbyid/",
+  "path": "/docs/plugins/api/properties/figma-variables-getvariablecollectionbyid/",
+  "slug": "docs__plugins__api__properties__figma-variables-getvariablecollectionbyid",
+  "title": "getVariableCollectionById | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [variables](/docs/plugins/api/figma-variables/)\n*   getVariableCollectionById\n\n# getVariableCollectionById\n\n**DEPRECATED:** Use [`getVariableCollectionByIdAsync`](/docs/plugins/api/properties/figma-variables-getvariablecollectionbyidasync/) instead. This function will throw an exception if the plugin manifest contains `\"documentAccess\": \"dynamic-page\"`.\n\nFinds a variable collection by ID. If not found or the provided ID is invalid, returns `null`.\n\n## Signature​\n\n### getVariableCollectionById(id: string): [VariableCollection](/docs/plugins/api/VariableCollection/) | null\n\n## Parameters​\n\n### id​\n\nThe variable collection ID to search for, which represents a unique identifier for the variable collection.\n\n[\n\nPrevious\n\ngetVariableCollectionByIdAsync\n\n](/docs/plugins/api/properties/figma-variables-getvariablecollectionbyidasync/)[\n\nNext\n\ngetLocalVariablesAsync\n\n](/docs/plugins/api/properties/figma-variables-getlocalvariablesasync/)\n\n*   Signature\n*   Parameters\n    *   id"
+}

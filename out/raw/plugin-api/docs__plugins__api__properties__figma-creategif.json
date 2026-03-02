@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-creategif/",
+  "path": "/docs/plugins/api/properties/figma-creategif/",
+  "slug": "docs__plugins__api__properties__figma-creategif",
+  "title": "createGif | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createGif\n\n# createGif\n\ninfo\n\nThis API is only available in FigJam\n\nCreates a new GIF with the given `Image` hash.\n\n## Signature​\n\n### [createGif](/docs/plugins/api/properties/figma-creategif/)(hash: string): [MediaNode](/docs/plugins/api/MediaNode/)\n\n## Parameters​\n\n### hash​\n\n## Remarks​\n\nThis API is only available in FigJam\n\n[\n\nPrevious\n\ncreateLinkPreviewAsync\n\n](/docs/plugins/api/properties/figma-createlinkpreviewasync/)[\n\nNext\n\ncombineAsVariants\n\n](/docs/plugins/api/properties/figma-combineasvariants/)\n\n*   Signature\n*   Parameters\n    *   hash\n*   Remarks"
+}

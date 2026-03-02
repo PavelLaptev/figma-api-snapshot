@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-importvariablebykeyasync/",
+  "path": "/docs/plugins/api/properties/figma-variables-importvariablebykeyasync/",
+  "slug": "docs__plugins__api__properties__figma-variables-importvariablebykeyasync",
+  "title": "importVariableByKeyAsync | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [variables](/docs/plugins/api/figma-variables/)\n*   importVariableByKeyAsync\n\n# importVariableByKeyAsync\n\nLoads a variable from the team library. Promise is rejected if there is no published variable with that key or if the request fails.\n\n## Signature​\n\n### importVariableByKeyAsync(key: string): Promise<[Variable](/docs/plugins/api/Variable/)\\>\n\n## Parameters​\n\n### key​\n\nthe key of the variable to import.\n\n[\n\nPrevious\n\nextendLibraryCollectionByKeyAsync\n\n](/docs/plugins/api/properties/figma-variables-extendlibrarycollectionbykeyasync/)[\n\nNext\n\nteamLibrary\n\n](/docs/plugins/api/figma-teamlibrary/)\n\n*   Signature\n*   Parameters\n    *   key"
+}

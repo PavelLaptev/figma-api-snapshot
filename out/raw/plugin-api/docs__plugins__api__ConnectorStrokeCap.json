@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/ConnectorStrokeCap/",
+  "path": "/docs/plugins/api/ConnectorStrokeCap/",
+  "slug": "docs__plugins__api__ConnectorStrokeCap",
+  "title": "ConnectorStrokeCap | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   ConnectorStrokeCap\n\n# ConnectorStrokeCap\n\n```\ntype ConnectorStrokeCap = \"NONE\" | \"ARROW_EQUILATERAL\" | \"ARROW_LINES\" | \"TRIANGLE_FILLED\" | \"DIAMOND_FILLED\" | \"CIRCLE_FILLED\";\n```\n\nThe possible values are:\n\n*   `\"NONE\"`: nothing is added to the end of the connector\n*   `\"ARROW_EQUILATERAL\"`: an arrow made up of an equilateral triangle is added to the end of the connector\n*   `\"ARROW_LINES\"`: an arrow made up of two lines is added to the end of the connector\n*   `\"TRIANGLE_FILLED\"`: a filled triangle is added to the end of the connector\n*   `\"DIAMOND_FILLED\"`: a filled diamond is added to the end of the connector\n*   `\"CIRCLE_FILLED\"`: a filled circle is added to the end of the connector\n\n[\n\nPrevious\n\nConnectorEndpoint\n\n](/docs/plugins/api/ConnectorEndpoint/)[\n\nNext\n\nConstraints\n\n](/docs/plugins/api/Constraints/)"
+}

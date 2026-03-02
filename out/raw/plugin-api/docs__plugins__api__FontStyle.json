@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/FontStyle/",
+  "path": "/docs/plugins/api/FontStyle/",
+  "slug": "docs__plugins__api__FontStyle",
+  "title": "FontStyle | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   FontStyle\n\n# FontStyle\n\n```\ntype FontStyle = \"REGULAR\" | \"ITALIC\"\n```\n\nThe possible values are:\n\n*   `REGULAR`: The font is not italic.\n*   `ITALIC`: The font is italicized. This includes fonts marked as \"oblique\" in the font file as well.\n\n[\n\nPrevious\n\nFontName\n\n](/docs/plugins/api/FontName/)[\n\nNext\n\nGuide\n\n](/docs/plugins/api/Guide/)"
+}

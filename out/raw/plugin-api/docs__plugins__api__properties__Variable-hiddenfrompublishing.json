@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/Variable-hiddenfrompublishing/",
+  "path": "/docs/plugins/api/properties/Variable-hiddenfrompublishing/",
+  "slug": "docs__plugins__api__properties__Variable-hiddenfrompublishing",
+  "title": "hiddenFromPublishing | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   [Variable](/docs/plugins/api/Variable/)\n*   hiddenFromPublishing\n\n# hiddenFromPublishing\n\nWhether this variable is hidden when publishing the current file as a library. Can only true if [`remote`](/docs/plugins/api/Variable/#remote) is false (e.g. this is a local variable).\n\n## Signature​\n\n### [hiddenFromPublishing](/docs/plugins/api/properties/Variable-hiddenfrompublishing/): boolean\n\n## Remarks​\n\nIf the parent [`VariableCollection`](/docs/plugins/api/VariableCollection/) is marked as `hiddenFromPublishing`, then this variable will also be hidden from publishing via the UI. `hiddenFromPublishing` is independently toggled for a variable and collection, however both must be true for a given variable to be publishable.\n\n[\n\nPrevious\n\nVariable\n\n](/docs/plugins/api/Variable/)[\n\nNext\n\nresolveForConsumer\n\n](/docs/plugins/api/properties/Variable-resolveforconsumer/)\n\n*   Signature\n*   Remarks"
+}

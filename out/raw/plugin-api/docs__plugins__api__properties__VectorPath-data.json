@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/VectorPath-data/",
+  "path": "/docs/plugins/api/properties/VectorPath-data/",
+  "slug": "docs__plugins__api__properties__VectorPath-data",
+  "title": "data | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   [VectorPath](/docs/plugins/api/VectorPath/)\n*   data\n\n# data\n\nA series of path commands that encodes how to draw the path.\n\n## Signature​\n\n### [data](/docs/plugins/api/properties/VectorPath-data/): string \\[readonly\\]\n\n## Remarks​\n\nFigma supports a subset of the SVG path format. Path commands must be joined into a single string in order separated by a single space. Here are the path commands we support:\n\n*   `M x y`: The absolute \"move to\" command.\n*   `L x y`: The absolute \"line to\" command.\n*   `Q x0 y0 x y`: The absolute \"quadratic spline to\" command. _Note_ that while Figma supports this as input, we will never generate this ourselves. All quadratic splines are converted to cubic splines internally.\n*   `C x0 y0 x1 y1 x y`: The absolute \"cubic spline to\" command.\n*   `Z`: The \"close path\" command.\n\n[\n\nPrevious\n\nVectorPath\n\n](/docs/plugins/api/VectorPath/)[\n\nNext\n\nwindingRule\n\n](/docs/plugins/api/properties/VectorPath-windingrule/)\n\n*   Signature\n*   Remarks"
+}

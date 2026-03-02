@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-normalizemarkdown/",
+  "path": "/docs/plugins/api/properties/figma-util-normalizemarkdown/",
+  "slug": "docs__plugins__api__properties__figma-util-normalizemarkdown",
+  "title": "normalizeMarkdown | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [util](/docs/plugins/api/figma-util/)\n*   normalizeMarkdown\n\n# normalizeMarkdown\n\nNormalizes the markdown string to verify what markdown will render with Figma's rich-text editors.\n\nExamples:\n\n```\nconst md = \"# Hello, world!\\n\\nThis is a **bold** text.\"const normalizedMd = figma.util.normalizeMarkdown(md);// Set an component description with descriptionMarkdowncomponent.descriptionMarkdown = normalizedMd;\n```\n\n## Signature​\n\n### normalizeMarkdown(markdown: string): string\n\n## Parameters​\n\n### markdown​\n\nA markdown string to normalize.\n\n[\n\nPrevious\n\nsolidPaint\n\n](/docs/plugins/api/properties/figma-util-solidpaint/)[\n\nNext\n\nconstants\n\n](/docs/plugins/api/figma-constants/)\n\n*   Signature\n*   Parameters\n    *   markdown"
+}

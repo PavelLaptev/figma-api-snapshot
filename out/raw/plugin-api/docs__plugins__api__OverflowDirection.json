@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/OverflowDirection/",
+  "path": "/docs/plugins/api/OverflowDirection/",
+  "slug": "docs__plugins__api__OverflowDirection",
+  "title": "OverflowDirection | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   OverflowDirection\n\n# OverflowDirection\n\n```\ntype OverflowDirection = \"NONE\" | \"HORIZONTAL\" | \"VERTICAL\" | \"BOTH\"\n```\n\nThe possible values are:\n\n*   `\"NONE\"`: the frame does not _explicitly_ scroll\n*   `\"HORIZONTAL\"`: the frame can scroll in the horizontal direction if its content exceeds the frame's bounds horizontally\n*   `\"VERTICAL\"`: the frame can in the vertical direction if its content exceeds the frame's bounds vertically\n*   `\"BOTH\"`: the frame can scroll in either direction if the content exceeds the frame's bounds\n\nNote that top-level frames (parented directly under the canvas) can still scroll even when `OverflowDirection` is `NONE`.\n\n[\n\nPrevious\n\nOpenTypeFeature\n\n](/docs/plugins/api/OpenTypeFeature/)[\n\nNext\n\nOverlay\n\n](/docs/plugins/api/Overlay/)"
+}

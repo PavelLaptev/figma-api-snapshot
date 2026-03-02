@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/StrokeJoin/",
+  "path": "/docs/plugins/api/StrokeJoin/",
+  "slug": "docs__plugins__api__StrokeJoin",
+  "title": "StrokeJoin | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   StrokeJoin\n\n# StrokeJoin\n\n```\ntype StrokeJoin = \"MITER\" | \"BEVEL\" | \"ROUND\"\n```\n\nThe possible values are:\n\n*   `\"MITER\"`: the junction between two strokes will be sharp and pointy, unless the angle is below the \"Miter Angle\" in which case it the pointy bit will be cut off to \"BEVEL\" (this is necessary because extremely sharp angles would have an extremely long sharp edge)\n*   `\"BEVEL\"`: the sharp bit at the corner of the join is cut off\n*   `\"ROUND\"`: the corner is rounded\n\n[\n\nPrevious\n\nStrokeCap\n\n](/docs/plugins/api/StrokeCap/)[\n\nNext\n\nStyleChange\n\n](/docs/plugins/api/StyleChange/)"
+}

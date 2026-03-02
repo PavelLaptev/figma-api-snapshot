@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-documentationlinks/",
+  "path": "/docs/plugins/api/properties/nodes-documentationlinks/",
+  "slug": "docs__plugins__api__properties__nodes-documentationlinks",
+  "title": "documentationLinks | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Shared Node Properties](/docs/plugins/api/node-properties/)\n*   documentationLinks\n\n# documentationLinks\n\nThe documentation links for this style/component.\n\nSupported on:\n\n*   [ComponentNode](/docs/plugins/api/ComponentNode/)\n*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)\n*   [EffectStyle](/docs/plugins/api/EffectStyle/)\n*   [GridStyle](/docs/plugins/api/GridStyle/)\n*   [PaintStyle](/docs/plugins/api/PaintStyle/)\n*   [TextStyle](/docs/plugins/api/TextStyle/)\n\n## Signature​\n\n### [documentationLinks](/docs/plugins/api/properties/nodes-documentationlinks/): ReadonlyArray<[DocumentationLink](/docs/plugins/api/DocumentationLink/)\\>\n\n## Remarks​\n\nThis API currently only supports setting a single documentation link. To clear the documentation links, set to the empty list \\[\\].\n\nExample:\n\n```\nnode.documentationLinks = [{uri: \"https://www.figma.com\"}]// clear documentation linksnode.documentationLinks = []\n```\n\n[\n\nPrevious\n\ndescriptionMarkdown\n\n](/docs/plugins/api/properties/nodes-descriptionmarkdown/)[\n\nNext\n\neditDevResourceAsync\n\n](/docs/plugins/api/properties/nodes-editdevresourceasync/)\n\n*   Signature\n*   Remarks"
+}

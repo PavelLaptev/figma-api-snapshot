@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-annotations-getannotationcategorybyidasync/",
+  "path": "/docs/plugins/api/properties/figma-annotations-getannotationcategorybyidasync/",
+  "slug": "docs__plugins__api__properties__figma-annotations-getannotationcategorybyidasync",
+  "title": "getAnnotationCategoryByIdAsync | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [annotations](/docs/plugins/api/figma-annotations/)\n*   getAnnotationCategoryByIdAsync\n\n# getAnnotationCategoryByIdAsync\n\nReturns an [`AnnotationCategory`](/docs/plugins/api/AnnotationCategory/) by its ID. If not found, returns a promise containing null.\n\n## Signature​\n\n### getAnnotationCategoryByIdAsync(id: string): Promise<[AnnotationCategory](/docs/plugins/api/AnnotationCategory/) | null>\n\n## Parameters​\n\n### id​\n\nThe annotation category ID to search for.\n\n[\n\nPrevious\n\nannotations\n\n](/docs/plugins/api/figma-annotations/)[\n\nNext\n\naddAnnotationCategoryAsync\n\n](/docs/plugins/api/properties/figma-annotations-addannotationcategoryasync/)\n\n*   Signature\n*   Parameters\n    *   id"
+}

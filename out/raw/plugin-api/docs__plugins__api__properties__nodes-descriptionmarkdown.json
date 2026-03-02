@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-descriptionmarkdown/",
+  "path": "/docs/plugins/api/properties/nodes-descriptionmarkdown/",
+  "slug": "docs__plugins__api__properties__nodes-descriptionmarkdown",
+  "title": "descriptionMarkdown | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Shared Node Properties](/docs/plugins/api/node-properties/)\n*   descriptionMarkdown\n\n# descriptionMarkdown\n\nThe rich-text annotation entered by the user for this style/component.\n\nSupported on:\n\n*   [ComponentNode](/docs/plugins/api/ComponentNode/)\n*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)\n*   [EffectStyle](/docs/plugins/api/EffectStyle/)\n*   [GridStyle](/docs/plugins/api/GridStyle/)\n*   [PaintStyle](/docs/plugins/api/PaintStyle/)\n*   [TextStyle](/docs/plugins/api/TextStyle/)\n\n## Signature​\n\n### [descriptionMarkdown](/docs/plugins/api/properties/nodes-descriptionmarkdown/): string\n\n## Remarks​\n\ncaution\n\n⚠️ There is a currently a bug in Figma where the description field will appear to be missing or not up to date. Until this is fixed, the workaround is to re-publish nodes for which the description is missing.\n\n[\n\nPrevious\n\ndescription\n\n](/docs/plugins/api/properties/nodes-description/)[\n\nNext\n\ndocumentationLinks\n\n](/docs/plugins/api/properties/nodes-documentationlinks/)\n\n*   Signature\n*   Remarks"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createcanvasrow/",
+  "path": "/docs/plugins/api/properties/figma-createcanvasrow/",
+  "slug": "docs__plugins__api__properties__figma-createcanvasrow",
+  "title": "createCanvasRow | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createCanvasRow\n\n# createCanvasRow\n\nCreates a new row in the canvas grid at the specified index.\n\ninfo\n\nThis API is only available in Figma Slides and Figma Buzz\n\n## Signature​\n\n### [createCanvasRow](/docs/plugins/api/properties/figma-createcanvasrow/)(rowIndex?: number): [SceneNode](/docs/plugins/api/nodes/#scene-node)\n\n## Parameters​\n\n### rowIndex​\n\nThe index where to insert the new row (optional)\n\n## Remarks​\n\nIf no row index is provided, the row will be added at the end of the grid.\n\n[\n\nPrevious\n\nsetCanvasGrid\n\n](/docs/plugins/api/properties/figma-setcanvasgrid/)[\n\nNext\n\nmoveNodesToCoord\n\n](/docs/plugins/api/properties/figma-movenodestocoord/)\n\n*   Signature\n*   Parameters\n    *   rowIndex\n*   Remarks"
+}

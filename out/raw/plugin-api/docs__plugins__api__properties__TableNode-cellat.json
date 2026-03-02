@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-cellat/",
+  "path": "/docs/plugins/api/properties/TableNode-cellat/",
+  "slug": "docs__plugins__api__properties__TableNode-cellat",
+  "title": "cellAt | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [TableNode](/docs/plugins/api/TableNode/)\n*   cellAt\n\n# cellAt\n\nReturns the table cell node at a specific cell coordinate.\n\nSupported on:\n\n*   [TableNode](/docs/plugins/api/TableNode/)\n\n## Signature​\n\n### cellAt(rowIndex: number, columnIndex: number): [TableCellNode](/docs/plugins/api/TableCellNode/)\n\n## Parameters​\n\n### rowIndex​\n\nThe index of the row. Must satisfy `0 <= rowIndex < numRows`.\n\n### columnIndex​\n\nThe index of the column. Must satisfy `0 <= columnInde < numColumns`.\n\n[\n\nPrevious\n\nTableNode\n\n](/docs/plugins/api/TableNode/)[\n\nNext\n\ninsertRow\n\n](/docs/plugins/api/properties/TableNode-insertrow/)\n\n*   Signature\n*   Parameters\n    *   rowIndex\n    *   columnIndex"
+}

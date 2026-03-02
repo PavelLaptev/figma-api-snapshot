@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-commitundo/",
+  "path": "/docs/plugins/api/properties/figma-commitundo/",
+  "slug": "docs__plugins__api__properties__figma-commitundo",
+  "title": "commitUndo | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   commitUndo\n\n# commitUndo\n\nCommits actions to undo history. This does not trigger an undo.\n\n## Signature​\n\n### [commitUndo](/docs/plugins/api/properties/figma-commitundo/)(): void\n\n## Remarks​\n\nBy default, plugin actions are not committed to undo history. Call `figma.commitUndo()` so that triggered undos can revert a subset of plugin actions.\n\nFor example, after running the following plugin code, the first triggered undo will undo both the rectangle and the ellipse:\n\n```\nfigma.createRectangle();figma.createEllipse();figma.closePlugin();\n```\n\nWhereas if we call `commitUndo()` in our plugin, the first triggered undo will only undo the ellipse:\n\n```\nfigma.createRectangle();figma.commitUndo();figma.createEllipse();figma.closePlugin();\n```\n\n[\n\nPrevious\n\nnotify\n\n](/docs/plugins/api/properties/figma-notify/)[\n\nNext\n\nsaveVersionHistoryAsync\n\n](/docs/plugins/api/properties/figma-saveversionhistoryasync/)\n\n*   Signature\n*   Remarks"
+}

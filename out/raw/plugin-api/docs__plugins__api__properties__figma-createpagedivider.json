@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createpagedivider/",
+  "path": "/docs/plugins/api/properties/figma-createpagedivider/",
+  "slug": "docs__plugins__api__properties__figma-createpagedivider",
+  "title": "createPageDivider | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createPageDivider\n\n# createPageDivider\n\nCreates a new page divider, appended to the document's list of children. A page divider is a [`PageNode`](/docs/plugins/api/PageNode/) with `isPageDivider` true.\n\n## Signature​\n\n### [createPageDivider](/docs/plugins/api/properties/figma-createpagedivider/)(dividerName?: string): [PageNode](/docs/plugins/api/PageNode/)\n\n## Parameters​\n\n### dividerName​\n\nAn optional argument to specify the name of the page divider node. It won't change how the page divider appears in the UI, but it specifies the name of the underlying node. The dividerName must be a page divider name (all asterisks, all en dashes, all em dashes, or all spaces). If no dividerName is specified, the default name for the created page divider node is \"---\".\n\n## Remarks​\n\nA page divider is always the child of the document node and cannot have any children.\n\n[\n\nPrevious\n\ncreatePage\n\n](/docs/plugins/api/properties/figma-createpage/)[\n\nNext\n\ncreateSlice\n\n](/docs/plugins/api/properties/figma-createslice/)\n\n*   Signature\n*   Parameters\n    *   dividerName\n*   Remarks"
+}

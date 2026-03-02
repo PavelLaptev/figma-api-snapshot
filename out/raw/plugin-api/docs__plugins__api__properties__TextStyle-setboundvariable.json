@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TextStyle-setboundvariable/",
+  "path": "/docs/plugins/api/properties/TextStyle-setboundvariable/",
+  "slug": "docs__plugins__api__properties__TextStyle-setboundvariable",
+  "title": "setBoundVariable | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   setBoundVariable\n\n# setBoundVariable\n\nBinds the provided `field` on this node to the given variable. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.\n\nIf `null` is provided as the variable, the given `field` will be unbound from any variables.\n\n## Signature​\n\n### setBoundVariable(field: [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/), variable: [Variable](/docs/plugins/api/Variable/) | null): void\n\n## Parameters​\n\n### field​\n\nThe field to bind the variable to.\n\n### variable​\n\nThe variable to bind to the field. If `null` is provided, the field will be unbound from any variables. Make sure to pass a Variable object or null; passing a variable ID is not supported.\n\n[\n\nPrevious\n\nVariableValue\n\n](/docs/plugins/api/VariableValue/)[\n\nNext\n\nLibraryVariable\n\n](/docs/plugins/api/LibraryVariable/)\n\n*   Signature\n*   Parameters\n    *   field\n    *   variable"
+}

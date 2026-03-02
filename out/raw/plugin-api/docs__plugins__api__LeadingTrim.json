@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/LeadingTrim/",
+  "path": "/docs/plugins/api/LeadingTrim/",
+  "slug": "docs__plugins__api__LeadingTrim",
+  "title": "LeadingTrim | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   LeadingTrim\n\n# LeadingTrim\n\n```\ntype LineHeight = {  type: 'CAP_HEIGHT' | 'NONE'}\n```\n\nAn object representing the removal of vertical space above and below text glyphs.\n\n[\n\nPrevious\n\nLayoutGrid\n\n](/docs/plugins/api/LayoutGrid/)[\n\nNext\n\nLetterSpacing\n\n](/docs/plugins/api/LetterSpacing/)"
+}

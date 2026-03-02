@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createslice/",
+  "path": "/docs/plugins/api/properties/figma-createslice/",
+  "slug": "docs__plugins__api__properties__figma-createslice",
+  "title": "createSlice | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createSlice\n\n# createSlice\n\nCreates a new slice object.\n\n## Signature​\n\n### [createSlice](/docs/plugins/api/properties/figma-createslice/)(): [SliceNode](/docs/plugins/api/SliceNode/)\n\n## Remarks​\n\nBy default, the new node is parented under `figma.currentPage`.\n\nCreate a slice and export as PNG\n\n```\n(async () => {  const slice = figma.createSlice()  // Move to (50, 50)  slice.x = 50  slice.y = 50  // Set size to 500 x 500  slice.resize(500, 500)  // Export a PNG of this region of the canvas  const bytes = await slice.exportAsync()  // Add the image onto the canvas as an image fill in a frame  const image = figma.createImage(bytes)  const frame = figma.createFrame()  frame.resize(500, 500)  frame.fills = [{    imageHash: image.hash,    scaleMode: \"FILL\",    scalingFactor: 1,    type: \"IMAGE\",  }]})()\n```\n\n[\n\nPrevious\n\ncreatePageDivider\n\n](/docs/plugins/api/properties/figma-createpagedivider/)[\n\nNext\n\ncreateSlide\n\n](/docs/plugins/api/properties/figma-createslide/)\n\n*   Signature\n*   Remarks"
+}

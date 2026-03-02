@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getlocalvariables/",
+  "path": "/docs/plugins/api/properties/figma-variables-getlocalvariables/",
+  "slug": "docs__plugins__api__properties__figma-variables-getlocalvariables",
+  "title": "getLocalVariables | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [variables](/docs/plugins/api/figma-variables/)\n*   getLocalVariables\n\n# getLocalVariables\n\n**DEPRECATED:** Use [`getLocalVariablesAsync`](/docs/plugins/api/properties/figma-variables-getlocalvariablesasync/) instead. This function will throw an exception if the plugin manifest contains `\"documentAccess\": \"dynamic-page\"`.\n\nReturns all local variables in the current file, optionally filtering by resolved type.\n\n## Signature​\n\n### getLocalVariables(type?: [VariableResolvedDataType](/docs/plugins/api/VariableResolvedDataType/)): [Variable](/docs/plugins/api/Variable/)\\[\\]\n\n## Parameters​\n\n### type​\n\nFilters the returned variables to only be of the given resolved type.\n\n[\n\nPrevious\n\ngetLocalVariablesAsync\n\n](/docs/plugins/api/properties/figma-variables-getlocalvariablesasync/)[\n\nNext\n\ncreateVariable\n\n](/docs/plugins/api/properties/figma-variables-createvariable/)\n\n*   Signature\n*   Parameters\n    *   type"
+}

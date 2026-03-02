@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/VectorPath-windingrule/",
+  "path": "/docs/plugins/api/properties/VectorPath-windingrule/",
+  "slug": "docs__plugins__api__properties__VectorPath-windingrule",
+  "title": "windingRule | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   [VectorPath](/docs/plugins/api/VectorPath/)\n*   windingRule\n\n# windingRule\n\nThe winding rule for the path (same as in SVGs). This determines whether a given point in space is inside or outside the path.\n\n## Signature​\n\n### [windingRule](/docs/plugins/api/properties/VectorPath-windingrule/): [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/#winding-rule) | 'NONE' \\[readonly\\]\n\n## Remarks​\n\n```\ntype WindingRule = \"NONZERO\" | \"EVENODD\"\n```\n\nWinding rules work off a concept called the winding number, which tells you for a given point how many times the path winds around that point. This is described in much more detail [here](https://oreillymedia.github.io/Using_SVG/extras/ch06-fill-rule.html). This field can have three possible values:\n\n*   `\"NONZERO\"`: The point is considered inside the path if the winding number is NONZERO.\n*   `\"EVENODD\"`: The point is considered inside the path if the winding number is odd.\n*   `\"NONE\"`: An open path won’t have a fill.\n\n[\n\nPrevious\n\ndata\n\n](/docs/plugins/api/properties/VectorPath-data/)[\n\nNext\n\nVectorNetwork\n\n](/docs/plugins/api/VectorNetwork/)\n\n*   Signature\n*   Remarks"
+}

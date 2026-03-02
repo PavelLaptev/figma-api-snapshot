@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createframe/",
+  "path": "/docs/plugins/api/properties/figma-createframe/",
+  "slug": "docs__plugins__api__properties__figma-createframe",
+  "title": "createFrame | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createFrame\n\n# createFrame\n\nCreates a new frame. The behavior is similar to using the `F` shortcut followed by a click.\n\n## Signature​\n\n### [createFrame](/docs/plugins/api/properties/figma-createframe/)(): [FrameNode](/docs/plugins/api/FrameNode/)\n\n## Remarks​\n\nBy default, the new node has a white background, width and height both at 100, and is parented under `figma.currentPage`.\n\nCreate a frame\n\n```\nconst frame = figma.createFrame()// Move to (50, 50)frame.x = 50frame.y = 50// Set size to 1280 x 720frame.resize(1280, 720)\n```\n\n[\n\nPrevious\n\ncreateText\n\n](/docs/plugins/api/properties/figma-createtext/)[\n\nNext\n\ncreateComponent\n\n](/docs/plugins/api/properties/figma-createcomponent/)\n\n*   Signature\n*   Remarks"
+}

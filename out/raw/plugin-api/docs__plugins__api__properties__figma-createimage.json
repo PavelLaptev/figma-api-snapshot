@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createimage/",
+  "path": "/docs/plugins/api/properties/figma-createimage/",
+  "slug": "docs__plugins__api__properties__figma-createimage",
+  "title": "createImage | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createImage\n\n# createImage\n\nCreates an `Image` object from the raw bytes of a file content. Note that `Image` objects **are not nodes**. They are handles to images stored by Figma. Frame backgrounds, or fills of shapes (e.g. a rectangle) may contain images. [Example: how to work with images](/docs/plugins/working-with-images/).\n\n## Signature​\n\n### [createImage](/docs/plugins/api/properties/figma-createimage/)(data: Uint8Array): [Image](/docs/plugins/api/Image/)\n\n## Remarks​\n\nThe `data` passed in must be encoded as a PNG, JPEG, or GIF. Images have a maximum size of 4096 pixels (4K) in width and height. Invalid images will throw an error.\n\n## Possible error cases​\n\n`Image is too small`\n\n`Image is too large`\n\n`Image type is unsupported`\n\n[\n\nPrevious\n\nloadFontAsync\n\n](/docs/plugins/api/properties/figma-loadfontasync/)[\n\nNext\n\ncreateImageAsync\n\n](/docs/plugins/api/properties/figma-createimageasync/)\n\n*   Signature\n*   Remarks\n*   Possible error cases"
+}

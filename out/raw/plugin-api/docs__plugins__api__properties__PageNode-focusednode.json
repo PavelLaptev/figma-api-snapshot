@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-focusednode/",
+  "path": "/docs/plugins/api/properties/PageNode-focusednode/",
+  "slug": "docs__plugins__api__properties__PageNode-focusednode",
+  "title": "focusedNode | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [PageNode](/docs/plugins/api/PageNode/)\n*   focusedNode\n\n# focusedNode\n\ninfo\n\nThis API is only available in Figma Slides and Figma Buzz\n\nWhen in Asset View, the Slide/Asset that is currently focused is accessible via this property.\n\nSupported on:\n\n*   [PageNode](/docs/plugins/api/PageNode/)\n\n## Signature​\n\n### [focusedNode](/docs/plugins/api/properties/PageNode-focusednode/): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null\n\n## Remarks​\n\nYou can also set this via:\n\n```\nfigma.currentPage.focusedNode = node\n```\n\n[\n\nPrevious\n\nfocusedSlide\n\n](/docs/plugins/api/properties/PageNode-focusedslide/)[\n\nNext\n\nPolygonNode\n\n](/docs/plugins/api/PolygonNode/)\n\n*   Signature\n*   Remarks"
+}

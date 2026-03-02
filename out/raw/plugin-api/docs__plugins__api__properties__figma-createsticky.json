@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createsticky/",
+  "path": "/docs/plugins/api/properties/figma-createsticky/",
+  "slug": "docs__plugins__api__properties__figma-createsticky",
+  "title": "createSticky | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createSticky\n\n# createSticky\n\ninfo\n\nThis API is only available in FigJam\n\nCreates a new sticky. The behavior is similar to using the `S` shortcut followed by a click.\n\n## Signature​\n\n### [createSticky](/docs/plugins/api/properties/figma-createsticky/)(): [StickyNode](/docs/plugins/api/StickyNode/)\n\n## Remarks​\n\nBy default, the new node has constant width and height both at 240, and is parented under `figma.currentPage`.\n\nCreate a sticky with text\n\n```\n(async () => {  const sticky = figma.createSticky()  // Load the font before setting characters  await figma.loadFontAsync(sticky.text.fontName)  sticky.text.characters = 'Hello world!'})()\n```\n\n[\n\nPrevious\n\ncreateSlideRow\n\n](/docs/plugins/api/properties/figma-createsliderow/)[\n\nNext\n\ncreateConnector\n\n](/docs/plugins/api/properties/figma-createconnector/)\n\n*   Signature\n*   Remarks"
+}

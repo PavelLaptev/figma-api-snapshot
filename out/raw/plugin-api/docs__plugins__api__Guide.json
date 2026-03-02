@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/Guide/",
+  "path": "/docs/plugins/api/Guide/",
+  "slug": "docs__plugins__api__Guide",
+  "title": "Guide | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Guide\n\n# Guide\n\n```\ninterface Guide {  readonly axis: \"X\" | \"Y\"  readonly offset: number}\n```\n\nGuides are either a horizontal (Y-axis) or vertical straight (X-axis) line. The offset determines its position relative to the node it is stored in (usually either the canvas or a frame).\n\n[\n\nPrevious\n\nFontStyle\n\n](/docs/plugins/api/FontStyle/)[\n\nNext\n\nGridTrackSize\n\n](/docs/plugins/api/GridTrackSize/)"
+}

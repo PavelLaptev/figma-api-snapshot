@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/VariableResolvedDataType/",
+  "path": "/docs/plugins/api/VariableResolvedDataType/",
+  "slug": "docs__plugins__api__VariableResolvedDataType",
+  "title": "VariableResolvedDataType | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   VariableResolvedDataType\n\n# VariableResolvedDataType\n\n```\ntype VariableResolvedDataType =  \"BOOLEAN\" |  \"COLOR\" |  \"FLOAT\" |  \"STRING\"\n```\n\nThe list of resolved [`Variable`](/docs/plugins/api/Variable/) types that Figma current supports.\n\n*   `\"BOOLEAN\"` variables can be assigned to `true` or `false`\n*   `\"COLOR\"` variables can be assigned to [`RGB`](/docs/plugins/api/RGB/) values\n*   `\"FLOAT\"` variables can be assigned to `number` values\n*   `\"STRING\"` variables can be assigned to `string` values\n\nSince a variable can be assigned to a [`VariableAlias`](/docs/plugins/api/VariableAlias/) for any given mode, this type refers to the type of the fully resolved value (after following all aliases).\n\n[\n\nPrevious\n\nVariableBindableColorStopField\n\n](/docs/plugins/api/VariableBindableColorStopField/)[\n\nNext\n\nVariableScope\n\n](/docs/plugins/api/VariableScope/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/LetterSpacing/",
+  "path": "/docs/plugins/api/LetterSpacing/",
+  "slug": "docs__plugins__api__LetterSpacing",
+  "title": "LetterSpacing | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   LetterSpacing\n\n# LetterSpacing\n\n```\ntype LetterSpacing = {  readonly value: number  readonly unit: \"PIXELS\" | \"PERCENT\"}\n```\n\nAn object representing a number with a unit. This is similar to how you can set either `100%` or `100px` in a lot of CSS properties.\n\n[\n\nPrevious\n\nLeadingTrim\n\n](/docs/plugins/api/LeadingTrim/)[\n\nNext\n\nLineHeight\n\n](/docs/plugins/api/LineHeight/)"
+}

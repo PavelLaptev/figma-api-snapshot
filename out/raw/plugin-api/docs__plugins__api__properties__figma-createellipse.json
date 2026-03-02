@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createellipse/",
+  "path": "/docs/plugins/api/properties/figma-createellipse/",
+  "slug": "docs__plugins__api__properties__figma-createellipse",
+  "title": "createEllipse | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createEllipse\n\n# createEllipse\n\nCreates a new ellipse. The behavior is similar to using the `O` shortcut followed by a click.\n\n## Signature​\n\n### [createEllipse](/docs/plugins/api/properties/figma-createellipse/)(): [EllipseNode](/docs/plugins/api/EllipseNode/)\n\n## Remarks​\n\nBy default, the new node has a default fill, width and height both at 100, and is parented under `figma.currentPage`.\n\nCreate a red, U-shaped half donut\n\n```\nconst ellipse = figma.createEllipse()// Move to (50, 50)ellipse.x = 50ellipse.y = 50// Set size to 200 x 100ellipse.resize(200, 100)// Set solid red fillellipse.fills = [{ type: 'SOLID', color: { r: 1, g: 0, b: 0 } }]// Arc from 0° to 180° clockwiseellipse.arcData = {startingAngle: 0, endingAngle: Math.PI, innerRadius: 0.5}\n```\n\n[\n\nPrevious\n\ncreateLine\n\n](/docs/plugins/api/properties/figma-createline/)[\n\nNext\n\ncreatePolygon\n\n](/docs/plugins/api/properties/figma-createpolygon/)\n\n*   Signature\n*   Remarks"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createslide/",
+  "path": "/docs/plugins/api/properties/figma-createslide/",
+  "slug": "docs__plugins__api__properties__figma-createslide",
+  "title": "createSlide | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createSlide\n\n# createSlide\n\ninfo\n\nThis API is only available in Figma Slides\n\n## Signature​\n\n### [createSlide](/docs/plugins/api/properties/figma-createslide/)(row?: number, col?: number): [SlideNode](/docs/plugins/api/SlideNode/)\n\n## Remarks​\n\nBy default, the slide gets appended to the end of the presentation (the last child in the last Slide Row).\n\nCreate a slide\n\n```\nconst slide = figma.createSlide()\n```\n\nTo specify a position in the Slide Grid, pass a row and column index to the function.\n\nCreate a slide at index 0, 0\n\n```\nconst slide = figma.createSlide(0, 0)\n```\n\n[\n\nPrevious\n\ncreateSlice\n\n](/docs/plugins/api/properties/figma-createslice/)[\n\nNext\n\ncreateSlideRow\n\n](/docs/plugins/api/properties/figma-createsliderow/)\n\n*   Signature\n*   Remarks"
+}

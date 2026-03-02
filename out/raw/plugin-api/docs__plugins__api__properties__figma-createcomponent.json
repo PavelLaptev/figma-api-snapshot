@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createcomponent/",
+  "path": "/docs/plugins/api/properties/figma-createcomponent/",
+  "slug": "docs__plugins__api__properties__figma-createcomponent",
+  "title": "createComponent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createComponent\n\n# createComponent\n\ninfo\n\nThis API is only available in Figma Design\n\nCreates a new, empty component.\n\n## Signature​\n\n### [createComponent](/docs/plugins/api/properties/figma-createcomponent/)(): [ComponentNode](/docs/plugins/api/ComponentNode/)\n\n## Remarks​\n\nBy default, the new node has width and height both at 100, and is parented under `figma.currentPage`.\n\nThis function creates a brand new component. To create a component from an existing node, use [`figma.createComponentFromNode`](/docs/plugins/api/properties/figma-createcomponentfromnode/).\n\nCreate a component\n\n```\nconst component = figma.createComponent()\n```\n\n[\n\nPrevious\n\ncreateFrame\n\n](/docs/plugins/api/properties/figma-createframe/)[\n\nNext\n\ncreateComponentFromNode\n\n](/docs/plugins/api/properties/figma-createcomponentfromnode/)\n\n*   Signature\n*   Remarks"
+}

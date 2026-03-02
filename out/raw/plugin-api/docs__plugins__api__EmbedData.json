@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/EmbedData/",
+  "path": "/docs/plugins/api/EmbedData/",
+  "slug": "docs__plugins__api__EmbedData",
+  "title": "EmbedData | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   EmbedData\n\n# EmbedData\n\nThe metadata for a Embed node in FigJam\n\n## EmbedData​\n\n### srcUrl: string\n\nThe srcUrl of an embed is the URL that will be loaded in an iFrame when the embed is activated\n\n* * *\n\n### canonicalUrl: string | null\n\nThe canonicalUrl of an embed is the URL that will be navigated to when the embed is opened in an external tab\n\n* * *\n\n### title: string | null\n\nThe title of the embed, as displayed on the canvas\n\n* * *\n\n### provider: string | null\n\nThe name of the provider of an embed.\n\nex. 'Spotify', 'YouTube'\n\n* * *\n\n[\n\nPrevious\n\nEffect\n\n](/docs/plugins/api/Effect/)[\n\nNext\n\nExportSettings\n\n](/docs/plugins/api/ExportSettings/)\n\n*   EmbedData"
+}

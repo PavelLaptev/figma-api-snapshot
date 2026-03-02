@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-maxlines/",
+  "path": "/docs/plugins/api/properties/TextNode-maxlines/",
+  "slug": "docs__plugins__api__properties__TextNode-maxlines",
+  "title": "maxLines | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [TextNode](/docs/plugins/api/TextNode/)\n*   maxLines\n\n# maxLines\n\nThe maximum number of lines a text node can reach before it truncates. Only applicable when [`textTruncation`](/docs/plugins/api/properties/TextNode-texttruncation/) is set to `\"ENDING\"`.\n\nSupported on:\n\n*   [TextNode](/docs/plugins/api/TextNode/)\n\n## Signature​\n\n### [maxLines](/docs/plugins/api/properties/TextNode-maxlines/): number | null\n\n## Remarks​\n\nThe value must be >= 1. To disable truncation at a maximum number of lines, set to `null`.\n\n[\n\nPrevious\n\ntextTruncation\n\n](/docs/plugins/api/properties/TextNode-texttruncation/)[\n\nNext\n\nautoRename\n\n](/docs/plugins/api/properties/TextNode-autorename/)\n\n*   Signature\n*   Remarks"
+}

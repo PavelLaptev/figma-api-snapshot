@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-guides/",
+  "path": "/docs/plugins/api/properties/PageNode-guides/",
+  "slug": "docs__plugins__api__properties__PageNode-guides",
+  "title": "guides | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [PageNode](/docs/plugins/api/PageNode/)\n*   guides\n\n# guides\n\nThe guides on this page.\n\nSupported on:\n\n*   [PageNode](/docs/plugins/api/PageNode/)\n\n## Signature​\n\n### [guides](/docs/plugins/api/properties/PageNode-guides/): ReadonlyArray<[Guide](/docs/plugins/api/Guide/)\\>\n\n## Remarks​\n\nLike many of our array properties, `page.guide` creates a new, read-only array every time it is called. To change the guides, you will need to make a copy of the existing array and/or assign a new array.\n\nExample:\n\n```\nfunction addNewGuide(page: PageNode, guide: Guide) {  // .concat() creates a new array  page.guides = page.guides.concat(guide)}\n```\n\n[\n\nPrevious\n\nPageNode\n\n](/docs/plugins/api/PageNode/)[\n\nNext\n\nselection\n\n](/docs/plugins/api/properties/PageNode-selection/)\n\n*   Signature\n*   Remarks"
+}

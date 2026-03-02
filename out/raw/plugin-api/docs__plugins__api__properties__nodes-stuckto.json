@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-stuckto/",
+  "path": "/docs/plugins/api/properties/nodes-stuckto/",
+  "slug": "docs__plugins__api__properties__nodes-stuckto",
+  "title": "stuckTo | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Shared Node Properties](/docs/plugins/api/node-properties/)\n*   stuckTo\n\n# stuckTo\n\nIf this node is stuck to another node this property returns that node or null.\n\nSupported on:\n\n*   [HighlightNode](/docs/plugins/api/HighlightNode/)\n*   [StampNode](/docs/plugins/api/StampNode/)\n*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)\n*   [WidgetNode](/docs/plugins/api/WidgetNode/)\n\n## Signature​\n\n### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null\n\n## Remarks​\n\nThis property is only available in FigJam.\n\n[\n\nPrevious\n\nstuckNodes\n\n](/docs/plugins/api/properties/nodes-stucknodes/)[\n\nNext\n\ntargetAspectRatio\n\n](/docs/plugins/api/properties/nodes-targetaspectratio/)\n\n*   Signature\n*   Remarks"
+}

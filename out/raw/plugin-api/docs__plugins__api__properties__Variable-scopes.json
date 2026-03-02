@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/Variable-scopes/",
+  "path": "/docs/plugins/api/properties/Variable-scopes/",
+  "slug": "docs__plugins__api__properties__Variable-scopes",
+  "title": "scopes | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Variables\n*   [Variable](/docs/plugins/api/Variable/)\n*   scopes\n\n# scopes\n\nAn array of scopes in the UI where this variable is shown. Setting this property will show/hide this variable in the variable picker UI for different fields.\n\n## Signature​\n\n### [scopes](/docs/plugins/api/properties/Variable-scopes/): Array<[VariableScope](/docs/plugins/api/VariableScope/)\\>\n\n## Remarks​\n\nSetting scopes for a variable does not prevent that variable from being bound in other scopes (for example, via the Plugin API). This only limits the variables that are shown in pickers within the Figma UI.\n\n[\n\nPrevious\n\nresolveForConsumer\n\n](/docs/plugins/api/properties/Variable-resolveforconsumer/)[\n\nNext\n\nsetVariableCodeSyntax\n\n](/docs/plugins/api/properties/Variable-setvariablecodesyntax/)\n\n*   Signature\n*   Remarks"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/MediaData/",
+  "path": "/docs/plugins/api/MediaData/",
+  "slug": "docs__plugins__api__MediaData",
+  "title": "MediaData | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   MediaData\n\n# MediaData\n\nThe metadata for a Media node in FigJam\n\n## MediaData​\n\n### hash: string\n\nA unique hash of the contents of the media node\n\n* * *\n\n[\n\nPrevious\n\nMeasurementSide\n\n](/docs/plugins/api/MeasurementSide/)[\n\nNext\n\nNodeChange\n\n](/docs/plugins/api/NodeChange/)\n\n*   MediaData"
+}

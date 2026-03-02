@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/TextDecorationOffset/",
+  "path": "/docs/plugins/api/TextDecorationOffset/",
+  "slug": "docs__plugins__api__TextDecorationOffset",
+  "title": "TextDecorationOffset | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   TextDecorationOffset\n\n# TextDecorationOffset\n\n```\ntype TextDecorationOffset =  | {      readonly value: number      readonly unit: 'PIXELS' | 'PERCENT'    }  | {      readonly unit: 'AUTO'    }\n```\n\n[\n\nPrevious\n\nTextDecorationStyle\n\n](/docs/plugins/api/TextDecorationStyle/)[\n\nNext\n\nTextDecorationThickness\n\n](/docs/plugins/api/TextDecorationThickness/)"
+}

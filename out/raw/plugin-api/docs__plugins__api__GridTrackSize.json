@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/GridTrackSize/",
+  "path": "/docs/plugins/api/GridTrackSize/",
+  "slug": "docs__plugins__api__GridTrackSize",
+  "title": "GridTrackSize | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   GridTrackSize\n\n# GridTrackSize\n\n## GridTrackSize​\n\n### value?: number\n\nApplicable only on FIXED or FLEX grid tracks. In FIXED tracks, the size of the track in pixels. In FLEX tracks, the fractional unit value (equivalent to the [`fr` unit](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#the_fr_unit) in CSS) Optional for `FLEX` tracks.\n\n* * *\n\n### type: 'FLEX' | 'FIXED' | 'HUG'\n\nThe type of the grid track. `FLEX` indicates that the track behaves like the CSS grid [`fr` unit](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#the_fr_unit). `FIXED` indicates that the track will have a fixed pixel size. `HUG` indicates that the track will size to fit its content, equivalent to a CSS setting of `fit-content(100%)`. It is not a valid state for 'FLEX' tracks to be set on a grid when the container is set to layoutSizingHorizonal/layoutSizingVertical 'HUG'\n\n* * *\n\n[\n\nPrevious\n\nGuide\n\n](/docs/plugins/api/Guide/)[\n\nNext\n\nHandleMirroring\n\n](/docs/plugins/api/HandleMirroring/)\n\n*   GridTrackSize"
+}

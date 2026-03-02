@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/DocumentChangeEvent/",
+  "path": "/docs/plugins/api/DocumentChangeEvent/",
+  "slug": "docs__plugins__api__DocumentChangeEvent",
+  "title": "DocumentChangeEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   DocumentChangeEvent\n\n# DocumentChangeEvent\n\n```\ninterface DocumentChangeEvent {  documentChanges: DocumentChange[]}\n```\n\n[\n\nPrevious\n\nDocumentChange\n\n](/docs/plugins/api/DocumentChange/)[\n\nNext\n\nDocumentationLink\n\n](/docs/plugins/api/DocumentationLink/)"
+}

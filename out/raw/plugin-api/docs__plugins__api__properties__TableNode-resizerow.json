@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-resizerow/",
+  "path": "/docs/plugins/api/properties/TableNode-resizerow/",
+  "slug": "docs__plugins__api__properties__TableNode-resizerow",
+  "title": "resizeRow | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [TableNode](/docs/plugins/api/TableNode/)\n*   resizeRow\n\n# resizeRow\n\nResizes the row. Rows cannot be resized to be smaller than their minimum size.\n\nSupported on:\n\n*   [TableNode](/docs/plugins/api/TableNode/)\n\n## Signature​\n\n### resizeRow(rowIndex: number, height: number): void\n\n## Parameters​\n\n### height​\n\nNew width of the row. Must be `>= 0.01`\n\n[\n\nPrevious\n\nmoveColumn\n\n](/docs/plugins/api/properties/TableNode-movecolumn/)[\n\nNext\n\nresizeColumn\n\n](/docs/plugins/api/properties/TableNode-resizecolumn/)\n\n*   Signature\n*   Parameters\n    *   height"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/Constraints/",
+  "path": "/docs/plugins/api/Constraints/",
+  "slug": "docs__plugins__api__Constraints",
+  "title": "Constraints | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   Constraints\n\n# Constraints\n\n```\ninterface Constraints {  readonly horizontal: ConstraintType  readonly vertical: ConstraintType}\n```\n\nThe resizing behavior of a layer when its containing frame is resized.\n\n```\ntype ConstraintType = \"MIN\" | \"CENTER\" | \"MAX\" | \"STRETCH\" | \"SCALE\"\n```\n\nThe possible values of the resizing behavior of a layer when its containing frame is resized. In the UI, these are referred to as:\n\n*   \"MIN\": Left or Top\n*   \"MAX\": Right or Bottom\n*   \"CENTER\": Center\n*   \"STRETCH\": Left & Right or Top & Bottom\n*   \"SCALE\": Scale\n\n[\n\nPrevious\n\nConnectorStrokeCap\n\n](/docs/plugins/api/ConnectorStrokeCap/)[\n\nNext\n\nComponentProperties\n\n](/docs/plugins/api/ComponentProperties/)"
+}

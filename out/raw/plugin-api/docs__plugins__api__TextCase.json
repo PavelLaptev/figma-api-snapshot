@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/TextCase/",
+  "path": "/docs/plugins/api/TextCase/",
+  "slug": "docs__plugins__api__TextCase",
+  "title": "TextCase | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   TextCase\n\n# TextCase\n\n```\ntype TextCase = \"ORIGINAL\" | \"UPPER\" | \"LOWER\" | \"TITLE\" | \"SMALL_CAPS\" | \"SMALL_CAPS_FORCED\"\n```\n\nThe possible values are:\n\n*   `\"ORIGINAL\"`: show the text as defined, no overrides.\n*   `\"UPPER\"`: all characters are in upper case.\n*   `\"LOWER\"`: all characters are in lower case.\n*   `\"TITLE\"`: the first character of each word is upper case and all other characters are in lower case.\n*   `\"SMALL_CAPS\"`: all characters are in small upper case.\n*   `\"SMALL_CAPS_FORCED\"`: the first character of each word is upper case and all other characters are in small upper case.\n\n[\n\nPrevious\n\nTableCellNode\n\n](/docs/plugins/api/TableCellNode/)[\n\nNext\n\nTextDecoration\n\n](/docs/plugins/api/TextDecoration/)"
+}

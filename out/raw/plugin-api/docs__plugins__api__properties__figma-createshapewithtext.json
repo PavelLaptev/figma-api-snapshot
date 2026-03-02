@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createshapewithtext/",
+  "path": "/docs/plugins/api/properties/figma-createshapewithtext/",
+  "slug": "docs__plugins__api__properties__figma-createshapewithtext",
+  "title": "createShapeWithText | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   createShapeWithText\n\n# createShapeWithText\n\ninfo\n\nThis API is only available in FigJam\n\nCreates a new shape with text.\n\n## Signature​\n\n### [createShapeWithText](/docs/plugins/api/properties/figma-createshapewithtext/)(): [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)\n\n## Remarks​\n\nBy default, the new node has a width and height of 208, and is parented under `figma.currentPage`.\n\nCreate a rounded rectangle shape with text\n\n```\n(async () => {  const shape = figma.createShapeWithText()  shape.shapeType = 'ROUNDED_RECTANGLE'  // Load the font before setting characters  await figma.loadFontAsync(shape.text.fontName)  shape.text.characters = 'Hello world!'})()\n```\n\n[\n\nPrevious\n\ncreateConnector\n\n](/docs/plugins/api/properties/figma-createconnector/)[\n\nNext\n\ncreateTable\n\n](/docs/plugins/api/properties/figma-createtable/)\n\n*   Signature\n*   Remarks"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/MediaNode-resize/",
+  "path": "/docs/plugins/api/properties/MediaNode-resize/",
+  "slug": "docs__plugins__api__properties__MediaNode-resize",
+  "title": "resize | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [MediaNode](/docs/plugins/api/MediaNode/)\n*   resize\n\n# resize\n\nResizes the media node.\n\nSupported on:\n\n*   [MediaNode](/docs/plugins/api/MediaNode/)\n\n## Signature​\n\n### resize(width: number, height: number): void\n\n## Parameters​\n\n### width​\n\nNew width of the node. Must be >= 0.01\n\n### height​\n\nNew height of the node. Must be >= 0.01\n\n[\n\nPrevious\n\nMediaNode\n\n](/docs/plugins/api/MediaNode/)[\n\nNext\n\nresizeWithoutConstraints\n\n](/docs/plugins/api/properties/MediaNode-resizewithoutconstraints/)\n\n*   Signature\n*   Parameters\n    *   width\n    *   height"
+}

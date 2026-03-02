@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/RunEvent/",
+  "path": "/docs/plugins/api/RunEvent/",
+  "slug": "docs__plugins__api__RunEvent",
+  "title": "RunEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   RunEvent\n\n# RunEvent\n\n```\ninterface RunEvent {  parameters?: ParameterValues  command: string}\n```\n\n[\n\nPrevious\n\nRGB/RGBA\n\n](/docs/plugins/api/RGB/)[\n\nNext\n\nSlideTransition\n\n](/docs/plugins/api/SlideTransition/)"
+}

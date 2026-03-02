@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-SolidPaint/",
+  "path": "/docs/widgets/api/type-SolidPaint/",
+  "slug": "docs__widgets__api__type-SolidPaint",
+  "title": "SolidPaint | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   SolidPaint\n\n# SolidPaint\n\n```\ninterface SolidPaint extends PaintProps {  type: 'solid'  color: Color | HexCode}\n```\n\n### type: 'solid'\n\nThe type of the solid paint.\n\n* * *\n\n### color: [Color](/docs/widgets/api/type-Color/#color) | HexCode\n\nThe solid color of the paint.\n\n* * *\n\n[\n\nPrevious\n\nSize\n\n](/docs/widgets/api/type-Size/)[\n\nNext\n\nStrokeAlign\n\n](/docs/widgets/api/type-StrokeAlign/)"
+}

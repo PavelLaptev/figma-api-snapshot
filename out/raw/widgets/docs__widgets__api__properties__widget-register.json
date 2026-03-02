@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/properties/widget-register/",
+  "path": "/docs/widgets/api/properties/widget-register/",
+  "slug": "docs__widgets__api__properties__widget-register",
+  "title": "register | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Global Objects\n*   [figma.widget](/docs/widgets/api/figma-widget/)\n*   register\n\n# register\n\nUsed to register your widget. **This is the main entry point to widgets.**\n\nThis function expects a widget function that describes the widget and returns a Figma element (eg. one of the components AutoLayout, Frame, Text etc).\n\n## Signature​\n\n### [register](/docs/widgets/api/properties/widget-register/)(component: FunctionalWidget<any>): void\n\n## Remarks​\n\nThe provided function will be called any time a widget is inserted and anytime the widget’s state is updated.\n\ncaution\n\nThe `widget.register` function should only be called once when the `manifest.main` file runs.\n\n### Usage Example​\n\nFirst widget\n\n```\nconst { widget } = figmaconst { Text } = widgetfunction MyFirstWidget() {  return <Text>Hello Widget</Text>}widget.register(MyFirstWidget)\n```\n\n[\n\nPrevious\n\nfigma.widget\n\n](/docs/widgets/api/figma-widget/)[\n\nNext\n\nuseSyncedState\n\n](/docs/widgets/api/properties/widget-usesyncedstate/)\n\n*   Signature\n*   Remarks\n    *   Usage Example"
+}

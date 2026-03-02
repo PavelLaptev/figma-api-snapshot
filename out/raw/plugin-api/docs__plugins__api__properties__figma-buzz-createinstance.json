@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-createinstance/",
+  "path": "/docs/plugins/api/properties/figma-buzz-createinstance/",
+  "slug": "docs__plugins__api__properties__figma-buzz-createinstance",
+  "title": "createInstance | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [buzz](/docs/plugins/api/figma-buzz/)\n*   createInstance\n\n# createInstance\n\nCreates an instance of a component in Buzz, optionally positioned at specific canvas coordinates.\n\n## Signature​\n\n### [createInstance](/docs/plugins/api/properties/figma-buzz-createinstance/)(component: [ComponentNode](/docs/plugins/api/ComponentNode/), rowIndex: number, columnIndex?: number): [InstanceNode](/docs/plugins/api/InstanceNode/)\n\n## Parameters​\n\n### component​\n\nThe ComponentNode to create an instance from\n\n### rowIndex​\n\nThe row position on the canvas grid (optional)\n\n### columnIndex​\n\nThe column position on the canvas grid (optional)\n\n## Remarks​\n\nIf no rowIndex and columnIndex are specified, the new instance will be created at the end of the canvas grid.\n\n[\n\nPrevious\n\ncreateFrame\n\n](/docs/plugins/api/properties/figma-buzz-createframe/)[\n\nNext\n\ngetBuzzAssetTypeForNode\n\n](/docs/plugins/api/properties/figma-buzz-getbuzzassettypefornode/)\n\n*   Signature\n*   Parameters\n    *   component\n    *   rowIndex\n    *   columnIndex\n*   Remarks"
+}

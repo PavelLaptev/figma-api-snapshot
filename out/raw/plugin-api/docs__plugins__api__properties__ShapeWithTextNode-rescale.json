@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/ShapeWithTextNode-rescale/",
+  "path": "/docs/plugins/api/properties/ShapeWithTextNode-rescale/",
+  "slug": "docs__plugins__api__properties__ShapeWithTextNode-rescale",
+  "title": "rescale | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Node Types](/docs/plugins/api/nodes/)\n*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)\n*   rescale\n\n# rescale\n\nRescale the ShapeWithText.\n\nSupported on:\n\n*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)\n\n## Signature​\n\n### rescale(scale: number): void\n\n## Parameters​\n\n### scale​\n\nThe scale by which to resize the node from the top-left corner.\n\n[\n\nPrevious\n\nresize\n\n](/docs/plugins/api/properties/ShapeWithTextNode-resize/)[\n\nNext\n\nSliceNode\n\n](/docs/plugins/api/SliceNode/)\n\n*   Signature\n*   Parameters\n    *   scale"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/widgets/api/type-WidgetStuckEvent/",
+  "path": "/docs/widgets/api/type-WidgetStuckEvent/",
+  "slug": "docs__widgets__api__type-WidgetStuckEvent",
+  "title": "WidgetStuckEvent | Developer Docs",
+  "markdown": "*   [](/)\n*   Widgets\n*   Data Types\n*   WidgetStuckEvent\n\n# WidgetStuckEvent\n\nParameter passed to the callback of **[`useStickable`](/docs/widgets/api/properties/widget-usestickable/)**.\n\n### newHostId: string | null\n\nThis is the id of the new node that your widget is stuck to or null if it is no longer stuck to anything.\n\n* * *\n\n### oldHostId: string | null\n\nThis is the id of the node that your widget was stuck to or null if it is no longer stuck to anything.\n\n* * *\n\n[\n\nPrevious\n\nWidgetClickEvent\n\n](/docs/widgets/api/type-WidgetClickEvent/)[\n\nNext\n\nWidgetAttachedStickablesChangedEvent\n\n](/docs/widgets/api/type-WidgetAttachedStickablesChangedEvent/)"
+}

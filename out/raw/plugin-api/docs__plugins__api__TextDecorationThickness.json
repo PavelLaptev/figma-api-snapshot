@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/TextDecorationThickness/",
+  "path": "/docs/plugins/api/TextDecorationThickness/",
+  "slug": "docs__plugins__api__TextDecorationThickness",
+  "title": "TextDecorationThickness | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   TextDecorationThickness\n\n# TextDecorationThickness\n\n```\ntype TextDecorationThickness =  | {      readonly value: number      readonly unit: 'PIXELS' | 'PERCENT'    }  | {      readonly unit: 'AUTO'    }\n```\n\n[\n\nPrevious\n\nTextDecorationOffset\n\n](/docs/plugins/api/TextDecorationOffset/)[\n\nNext\n\nTextDecorationColor\n\n](/docs/plugins/api/TextDecorationColor/)"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/CodeSyntaxPlatform/",
+  "path": "/docs/plugins/api/CodeSyntaxPlatform/",
+  "slug": "docs__plugins__api__CodeSyntaxPlatform",
+  "title": "CodeSyntaxPlatform | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   CodeSyntaxPlatform\n\n# CodeSyntaxPlatform\n\n```\ntype CodeSyntaxPlatform =    \"WEB\" |    \"ANDROID\" |    \"iOS\"\n```\n\n[`codeSyntax`](/docs/plugins/api/Variable/#codesyntax) is a variable field used for defining custom token names for up to three unique code platforms. There are no formatting or syntax restrictions enforced on the code syntax entries.\n\n[\n\nPrevious\n\nCodegenResult\n\n](/docs/plugins/api/CodegenResult/)[\n\nNext\n\nColorPalette\n\n](/docs/plugins/api/ColorPalette/)"
+}

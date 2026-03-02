@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-loadbrushesasync/",
+  "path": "/docs/plugins/api/properties/figma-loadbrushesasync/",
+  "slug": "docs__plugins__api__properties__figma-loadbrushesasync",
+  "title": "loadBrushesAsync | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   loadBrushesAsync\n\n# loadBrushesAsync\n\nMakes all built-in brushes of the specified type available for use in the plugin. This function must be called before setting the stroke of a node to a brush of the specified type.\n\nThere are two types of brushes: 'STRETCH' brushes, which stretch along the length of the stroke, and 'SCATTER' brushes, which scatter instances of the brush shape along the stroke.\n\n## Signature​\n\n### [loadBrushesAsync](/docs/plugins/api/properties/figma-loadbrushesasync/)(brushType: 'STRETCH' | 'SCATTER'): Promise<void>\n\n## Parameters​\n\n### brushType​\n\nThe type of brush to load. Can be either 'STRETCH' or 'SCATTER'.\n\n## Remarks​\n\nThis function only needs to be called once per plugin run for each brush type that will be used. Once loaded, brushes of the specified type can be used freely.\n\n[\n\nPrevious\n\nmoveNodesToCoord\n\n](/docs/plugins/api/properties/figma-movenodestocoord/)[\n\nNext\n\nfetch\n\n](/docs/plugins/api/properties/global-fetch/)\n\n*   Signature\n*   Parameters\n    *   brushType\n*   Remarks"
+}
