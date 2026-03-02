@@ -2,22 +2,22 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import crypto from "node:crypto";
 
-import { DEFAULTS } from "./config.js";
+import { TARGETS } from "./config.js";
 import { crawlDocs } from "./crawler.js";
 import { ensureDir, markdownToChunks, writeJson, writeText } from "./utils.js";
 
-async function main() {
+async function processTarget(config) {
   const startedAt = new Date().toISOString();
-  const config = { ...DEFAULTS };
+  const { id, label } = config;
 
   const outRoot = path.resolve(process.cwd(), config.outputDir);
-  const rawDir = path.join(outRoot, "raw");
+  const rawDir = path.join(outRoot, "raw", id);
   const llmDir = path.join(outRoot, "llm");
 
   await ensureDir(rawDir);
   await ensureDir(llmDir);
 
-  console.log("Crawling Figma Plugin API reference docs...");
+  console.log(`\nCrawling ${label}...`);
   const pages = await crawlDocs(config);
 
   const chunks = [];
@@ -32,7 +32,7 @@ async function main() {
     const pageChunks = markdownToChunks(
       `# ${page.title}\n\nSource: ${page.url}\n\n${page.markdown}`,
       config.chunkSizeChars,
-      config.chunkOverlapChars,
+      config.chunkOverlapChars
     ).map((content, index) => ({
       id: hash(`${page.url}::${index}::${content.slice(0, 40)}`),
       source: page.url,
@@ -40,7 +40,7 @@ async function main() {
       path: page.path,
       chunkIndex: index,
       content,
-      length: content.length,
+      length: content.length
     }));
 
     chunks.push(...pageChunks);
@@ -49,9 +49,15 @@ async function main() {
   const deduped = dedupeChunks(chunks);
   const jsonl = deduped.map((x) => JSON.stringify(x)).join("\n");
 
-  await writeText(path.join(llmDir, "figma-plugin-api-corpus.md"), markdownCorpus.trim() + "\n");
-  await writeText(path.join(llmDir, "figma-plugin-api-chunks.jsonl"), jsonl + "\n");
-  await writeJson(path.join(llmDir, "manifest.json"), {
+  const corpusFile = path.join(llmDir, `figma-${id}-corpus.md`);
+  const chunksFile = path.join(llmDir, `figma-${id}-chunks.jsonl`);
+  const manifestFile = path.join(llmDir, `figma-${id}-manifest.json`);
+
+  await writeText(corpusFile, markdownCorpus.trim() + "\n");
+  await writeText(chunksFile, jsonl + "\n");
+  await writeJson(manifestFile, {
+    id,
+    label,
     sourceRoot: config.startUrl,
     generatedAt: new Date().toISOString(),
     startedAt,
@@ -59,22 +65,41 @@ async function main() {
     chunkCount: deduped.length,
     chunking: {
       chunkSizeChars: config.chunkSizeChars,
-      chunkOverlapChars: config.chunkOverlapChars,
+      chunkOverlapChars: config.chunkOverlapChars
     },
     files: {
-      rawPagesDir: "out/raw",
-      markdownCorpus: "out/llm/figma-plugin-api-corpus.md",
-      jsonlChunks: "out/llm/figma-plugin-api-chunks.jsonl",
-    },
+      rawPagesDir: `out/raw/${id}`,
+      markdownCorpus: `out/llm/figma-${id}-corpus.md`,
+      jsonlChunks: `out/llm/figma-${id}-chunks.jsonl`
+    }
   });
 
-  await writeJson(path.join(outRoot, "index.json"),
-    pages.map((p) => ({ title: p.title, url: p.url, path: p.path, slug: p.slug })),
+  console.log(
+    `Done. Saved ${pages.length} pages and ${deduped.length} chunks → out/llm/figma-${id}-*`
   );
 
+  return pages.map((p) => ({
+    dataset: id,
+    title: p.title,
+    url: p.url,
+    path: p.path,
+    slug: p.slug
+  }));
+}
+
+async function main() {
+  const allPages = [];
+
+  for (const target of TARGETS) {
+    const pages = await processTarget(target);
+    allPages.push(...pages);
+  }
+
+  const outRoot = path.resolve(process.cwd(), TARGETS[0].outputDir);
+  await writeJson(path.join(outRoot, "index.json"), allPages);
   await fs.writeFile(path.join(outRoot, ".complete"), "ok\n", "utf8");
 
-  console.log(`Done. Saved ${pages.length} pages and ${deduped.length} chunks in ${outRoot}`);
+  console.log(`\nAll done. Total pages indexed: ${allPages.length}`);
 }
 
 function hash(value) {

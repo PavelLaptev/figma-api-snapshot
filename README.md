@@ -1,17 +1,31 @@
-# figma-plugin-api-for-ai
+# figma-api-snapshot
 
-Auto-updated dataset of the [Figma Plugin API](https://developers.figma.com/docs/plugins/api/api-reference/) reference docs, compressed into LLM-ready formats.
+Auto-updated LLM-ready datasets of Figma developer docs, refreshed daily by GitHub Actions.
 
-Refreshed daily by GitHub Actions. Use the files in `out/llm/` directly.
+Covers:
+
+- [Figma Plugin API](https://developers.figma.com/docs/plugins/api/api-reference/)
+- [Figma Widgets](https://developers.figma.com/docs/widgets/)
 
 ## Output files (updated daily)
 
+### Plugin API
+
 | File | Description |
 |---|---|
-| [`out/llm/figma-plugin-api-corpus.md`](out/llm/figma-plugin-api-corpus.md) | Full Markdown corpus — all pages merged, great for long-context models |
-| [`out/llm/figma-plugin-api-chunks.jsonl`](out/llm/figma-plugin-api-chunks.jsonl) | Chunked JSONL for RAG, vector DBs, or fine-tuning |
-| [`out/llm/manifest.json`](out/llm/manifest.json) | Metadata: page count, chunk count, generation timestamp |
-| [`out/index.json`](out/index.json) | Flat index of all crawled pages with titles and URLs |
+| [`out/llm/figma-plugin-api-corpus.md`](out/llm/figma-plugin-api-corpus.md) | Full Markdown corpus — great for long-context models |
+| [`out/llm/figma-plugin-api-chunks.jsonl`](out/llm/figma-plugin-api-chunks.jsonl) | Chunked JSONL for RAG / vector DBs / fine-tuning |
+| [`out/llm/figma-plugin-api-manifest.json`](out/llm/figma-plugin-api-manifest.json) | Metadata: page count, chunk count, timestamps |
+
+### Widgets
+
+| File | Description |
+|---|---|
+| [`out/llm/figma-widgets-corpus.md`](out/llm/figma-widgets-corpus.md) | Full Markdown corpus |
+| [`out/llm/figma-widgets-chunks.jsonl`](out/llm/figma-widgets-chunks.jsonl) | Chunked JSONL |
+| [`out/llm/figma-widgets-manifest.json`](out/llm/figma-widgets-manifest.json) | Metadata |
+
+[`out/index.json`](out/index.json) — flat index of all crawled pages across both datasets.
 
 Each JSONL record has: `id`, `title`, `source`, `path`, `chunkIndex`, `content`, `length`.
 
@@ -22,23 +36,25 @@ npm install
 npm run build
 ```
 
-Outputs are written to `out/`.
+Outputs are written to `out/`. Both datasets are crawled in sequence.
 
 ## Daily automation
 
-A GitHub Actions workflow (`.github/workflows/daily-crawl.yml`) runs every day at 03:00 UTC, crawls the docs, and commits any changes back to the repo automatically.
+A GitHub Actions workflow (`.github/workflows/daily-crawl.yml`) runs every day at 03:00 UTC, crawls all docs, and commits any changes back to the repo automatically.
 
-To trigger a manual refresh: **Actions → Daily Figma API Docs Crawl → Run workflow**.
+To trigger a manual refresh: **Actions → Daily Figma Docs Crawl → Run workflow**.
+
+## Adding more doc sections
+
+Edit the `TARGETS` array in `src/config.js` — add an entry with `id`, `label`, `startUrl`, and `allowedPathPrefix`.
 
 ## Configuration
 
-All tunable options are in `src/config.js`:
+Shared options (in `src/config.js`):
 
 | Option | Default | Description |
 |---|---|---|
-| `startUrl` | API reference root | Starting URL for the crawl |
-| `allowedPathPrefix` | `/docs/plugins/api` | Scope of pages to follow |
-| `maxPages` | 800 | Safety cap on number of pages |
+| `maxPages` | 800 | Safety cap on number of pages per target |
 | `requestDelayMs` | 120 | Delay between requests (ms) |
 | `chunkSizeChars` | 2200 | Max chars per JSONL chunk |
 | `chunkOverlapChars` | 220 | Overlap between adjacent chunks |

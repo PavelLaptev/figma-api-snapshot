@@ -1,0 +1,18 @@
+{
+  "id": "widgets",
+  "label": "Figma Widgets",
+  "sourceRoot": "https://developers.figma.com/docs/widgets/",
+  "generatedAt": "2026-03-02T20:48:20.805Z",
+  "startedAt": "2026-03-02T20:47:51.157Z",
+  "pageCount": 78,
+  "chunkCount": 232,
+  "chunking": {
+    "chunkSizeChars": 2200,
+    "chunkOverlapChars": 220
+  },
+  "files": {
+    "rawPagesDir": "out/raw/widgets",
+    "markdownCorpus": "out/llm/figma-widgets-corpus.md",
+    "jsonlChunks": "out/llm/figma-widgets-chunks.jsonl"
+  }
+}

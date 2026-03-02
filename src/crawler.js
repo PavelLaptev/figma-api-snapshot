@@ -7,7 +7,7 @@ import {
   normalizeWhitespace,
   safeSlug,
   stripHashAndUtm,
-  toAbsoluteUrl,
+  toAbsoluteUrl
 } from "./utils.js";
 
 function pickMainContent($) {
@@ -17,7 +17,7 @@ function pickMainContent($) {
     "[data-pagefind-body]",
     "[role='main']",
     ".docs-content",
-    ".markdown",
+    ".markdown"
   ];
 
   for (const selector of candidates) {
@@ -43,9 +43,15 @@ function cleanupNode($, node) {
 }
 
 function htmlToMarkdown(html) {
-  const turndown = new TurndownService({ headingStyle: "atx", codeBlockStyle: "fenced" });
+  const turndown = new TurndownService({
+    headingStyle: "atx",
+    codeBlockStyle: "fenced"
+  });
   turndown.remove(["img", "picture"]);
-  return turndown.turndown(html).replace(/\n{3,}/g, "\n\n").trim();
+  return turndown
+    .turndown(html)
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }
 
 function extractTitle($) {
@@ -72,7 +78,7 @@ export async function crawlDocs(config) {
     try {
       const response = await axios.get(canonical, {
         timeout: config.timeoutMs,
-        headers: { "User-Agent": config.userAgent },
+        headers: { "User-Agent": config.userAgent }
       });
       html = String(response.data || "");
     } catch (error) {
@@ -93,7 +99,7 @@ export async function crawlDocs(config) {
         path: urlPath,
         slug: safeSlug(urlPath),
         title,
-        markdown,
+        markdown
       });
       console.log(`Captured ${canonical}`);
     }

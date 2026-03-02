@@ -1,4 +1,4 @@
-name: Daily Figma API Docs Crawl
+name: Daily Figma Docs Crawl
 
 on:
   schedule:
@@ -29,15 +29,45 @@ jobs:
         run: npm run build
 
       - name: Commit and push updated dataset
+        id: commit
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add out/
           if git diff --cached --quiet; then
             echo "No changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            PAGES=$(node -e "const m=require('./out/llm/manifest.json'); console.log(m.pageCount)")
-            CHUNKS=$(node -e "const m=require('./out/llm/manifest.json'); console.log(m.chunkCount)")
-            git commit -m "chore: refresh dataset — ${PAGES} pages, ${CHUNKS} chunks [$(date -u +%Y-%m-%d)]"
-            git push
+            TOTAL=$(node -e "const idx=JSON.parse(require('fs').readFileSync('./out/index.json','utf8')); console.log(idx.length)")
+            git commit -m "chore: refresh dataset — ${TOTAL} pages total [$(date -u +%Y-%m-%d)]"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Bump minor version
+        id: bump
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          npm version minor --no-git-tag-version
+          NEW_VERSION=$(node -e "console.log(require('./package.json').version)")
+          echo "version=${NEW_VERSION}" >> "$GITHUB_OUTPUT"
+          git add package.json
+          git commit -m "chore: bump version to v${NEW_VERSION}"
+
+      - name: Push commits and tag
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          VERSION=${{ steps.bump.outputs.version }}
+          git tag "v${VERSION}"
+          git push --follow-tags
+
+      - name: Create GitHub Release
+        if: steps.commit.outputs.changed == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.bump.outputs.version }}
+          name: v${{ steps.bump.outputs.version }}
+          generate_release_notes: false
+          body: |
+            Automated dataset refresh — ${{ steps.bump.outputs.version }}
+
+            Crawled on $(date -u +%Y-%m-%d).

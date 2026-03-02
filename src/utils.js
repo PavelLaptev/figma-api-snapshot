@@ -29,7 +29,12 @@ export function looksLikeDocUrl(url, origin, allowedPathPrefix) {
     const parsed = new URL(url);
     if (parsed.origin !== origin) return false;
     if (!parsed.pathname.startsWith(allowedPathPrefix)) return false;
-    if (/(\.(png|jpg|jpeg|gif|svg|webp|ico|pdf|zip|css|js))$/i.test(parsed.pathname)) return false;
+    if (
+      /(\.(png|jpg|jpeg|gif|svg|webp|ico|pdf|zip|css|js))$/i.test(
+        parsed.pathname
+      )
+    )
+      return false;
     return true;
   } catch {
     return false;
@@ -39,7 +44,13 @@ export function looksLikeDocUrl(url, origin, allowedPathPrefix) {
 export function stripHashAndUtm(url) {
   const parsed = new URL(url);
   parsed.hash = "";
-  ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach((k) => {
+  [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content"
+  ].forEach((k) => {
     parsed.searchParams.delete(k);
   });
   return parsed.toString();

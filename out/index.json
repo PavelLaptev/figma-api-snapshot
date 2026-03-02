@@ -1,2468 +1,3425 @@
 [
   {
+    "dataset": "plugin-api",
     "title": "API Reference | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/api-reference/",
     "path": "/docs/plugins/api/api-reference/",
     "slug": "docs__plugins__api__api-reference"
   },
   {
+    "dataset": "plugin-api",
     "title": "The Typings File | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/typings/",
     "path": "/docs/plugins/api/typings/",
     "slug": "docs__plugins__api__typings"
   },
   {
+    "dataset": "plugin-api",
     "title": "API Errors | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/api-errors/",
     "path": "/docs/plugins/api/api-errors/",
     "slug": "docs__plugins__api__api-errors"
   },
   {
+    "dataset": "plugin-api",
     "title": "Global Objects | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/global-objects/",
     "path": "/docs/plugins/api/global-objects/",
     "slug": "docs__plugins__api__global-objects"
   },
   {
+    "dataset": "plugin-api",
     "title": "Node Types | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/nodes/",
     "path": "/docs/plugins/api/nodes/",
     "slug": "docs__plugins__api__nodes"
   },
   {
+    "dataset": "plugin-api",
     "title": "Shared Node Properties | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/node-properties/",
     "path": "/docs/plugins/api/node-properties/",
     "slug": "docs__plugins__api__node-properties"
   },
   {
+    "dataset": "plugin-api",
     "title": "Data Types | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/data-types/",
     "path": "/docs/plugins/api/data-types/",
     "slug": "docs__plugins__api__data-types"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma/",
     "path": "/docs/plugins/api/figma/",
     "slug": "docs__plugins__api__figma"
   },
   {
+    "dataset": "plugin-api",
     "title": "InstanceNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/InstanceNode/",
     "path": "/docs/plugins/api/InstanceNode/",
     "slug": "docs__plugins__api__InstanceNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.ui | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-ui/",
     "path": "/docs/plugins/api/figma-ui/",
     "slug": "docs__plugins__api__figma-ui"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.util | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-util/",
     "path": "/docs/plugins/api/figma-util/",
     "slug": "docs__plugins__api__figma-util"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.constants | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-constants/",
     "path": "/docs/plugins/api/figma-constants/",
     "slug": "docs__plugins__api__figma-constants"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.codegen | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-codegen/",
     "path": "/docs/plugins/api/figma-codegen/",
     "slug": "docs__plugins__api__figma-codegen"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.timer | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-timer/",
     "path": "/docs/plugins/api/figma-timer/",
     "slug": "docs__plugins__api__figma-timer"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.viewport | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-viewport/",
     "path": "/docs/plugins/api/figma-viewport/",
     "slug": "docs__plugins__api__figma-viewport"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.clientStorage | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-clientStorage/",
     "path": "/docs/plugins/api/figma-clientStorage/",
     "slug": "docs__plugins__api__figma-clientStorage"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.parameters | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-parameters/",
     "path": "/docs/plugins/api/figma-parameters/",
     "slug": "docs__plugins__api__figma-parameters"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.textreview | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-textreview/",
     "path": "/docs/plugins/api/figma-textreview/",
     "slug": "docs__plugins__api__figma-textreview"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.payments | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-payments/",
     "path": "/docs/plugins/api/figma-payments/",
     "slug": "docs__plugins__api__figma-payments"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.variables | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-variables/",
     "path": "/docs/plugins/api/figma-variables/",
     "slug": "docs__plugins__api__figma-variables"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.teamLibrary | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-teamlibrary/",
     "path": "/docs/plugins/api/figma-teamlibrary/",
     "slug": "docs__plugins__api__figma-teamlibrary"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.annotations | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-annotations/",
     "path": "/docs/plugins/api/figma-annotations/",
     "slug": "docs__plugins__api__figma-annotations"
   },
   {
+    "dataset": "plugin-api",
     "title": "figma.buzz | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-buzz/",
     "path": "/docs/plugins/api/figma-buzz/",
     "slug": "docs__plugins__api__figma-buzz"
   },
   {
+    "dataset": "plugin-api",
     "title": "mode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-mode/",
     "path": "/docs/plugins/api/properties/figma-mode/",
     "slug": "docs__plugins__api__properties__figma-mode"
   },
   {
+    "dataset": "plugin-api",
     "title": "skipInvisibleInstanceChildren | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-skipinvisibleinstancechildren/",
     "path": "/docs/plugins/api/properties/figma-skipinvisibleinstancechildren/",
     "slug": "docs__plugins__api__properties__figma-skipinvisibleinstancechildren"
   },
   {
+    "dataset": "plugin-api",
     "title": "closePlugin | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-closeplugin/",
     "path": "/docs/plugins/api/properties/figma-closeplugin/",
     "slug": "docs__plugins__api__properties__figma-closeplugin"
   },
   {
+    "dataset": "plugin-api",
     "title": "notify | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-notify/",
     "path": "/docs/plugins/api/properties/figma-notify/",
     "slug": "docs__plugins__api__properties__figma-notify"
   },
   {
+    "dataset": "plugin-api",
     "title": "commitUndo | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-commitundo/",
     "path": "/docs/plugins/api/properties/figma-commitundo/",
     "slug": "docs__plugins__api__properties__figma-commitundo"
   },
   {
+    "dataset": "plugin-api",
     "title": "saveVersionHistoryAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-saveversionhistoryasync/",
     "path": "/docs/plugins/api/properties/figma-saveversionhistoryasync/",
     "slug": "docs__plugins__api__properties__figma-saveversionhistoryasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "openExternal | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-openexternal/",
     "path": "/docs/plugins/api/properties/figma-openexternal/",
     "slug": "docs__plugins__api__properties__figma-openexternal"
   },
   {
+    "dataset": "plugin-api",
     "title": "showUI | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-showui/",
     "path": "/docs/plugins/api/properties/figma-showui/",
     "slug": "docs__plugins__api__properties__figma-showui"
   },
   {
+    "dataset": "plugin-api",
     "title": "on | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-on/",
     "path": "/docs/plugins/api/properties/figma-on/",
     "slug": "docs__plugins__api__properties__figma-on"
   },
   {
+    "dataset": "plugin-api",
     "title": "off | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-off/",
     "path": "/docs/plugins/api/properties/figma-off/",
     "slug": "docs__plugins__api__properties__figma-off"
   },
   {
+    "dataset": "plugin-api",
     "title": "mixed | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-mixed/",
     "path": "/docs/plugins/api/properties/figma-mixed/",
     "slug": "docs__plugins__api__properties__figma-mixed"
   },
   {
+    "dataset": "plugin-api",
     "title": "createRectangle | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createrectangle/",
     "path": "/docs/plugins/api/properties/figma-createrectangle/",
     "slug": "docs__plugins__api__properties__figma-createrectangle"
   },
   {
+    "dataset": "plugin-api",
     "title": "createLine | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createline/",
     "path": "/docs/plugins/api/properties/figma-createline/",
     "slug": "docs__plugins__api__properties__figma-createline"
   },
   {
+    "dataset": "plugin-api",
     "title": "createEllipse | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createellipse/",
     "path": "/docs/plugins/api/properties/figma-createellipse/",
     "slug": "docs__plugins__api__properties__figma-createellipse"
   },
   {
+    "dataset": "plugin-api",
     "title": "createPolygon | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createpolygon/",
     "path": "/docs/plugins/api/properties/figma-createpolygon/",
     "slug": "docs__plugins__api__properties__figma-createpolygon"
   },
   {
+    "dataset": "plugin-api",
     "title": "createStar | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createstar/",
     "path": "/docs/plugins/api/properties/figma-createstar/",
     "slug": "docs__plugins__api__properties__figma-createstar"
   },
   {
+    "dataset": "plugin-api",
     "title": "createVector | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createvector/",
     "path": "/docs/plugins/api/properties/figma-createvector/",
     "slug": "docs__plugins__api__properties__figma-createvector"
   },
   {
+    "dataset": "plugin-api",
     "title": "createText | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createtext/",
     "path": "/docs/plugins/api/properties/figma-createtext/",
     "slug": "docs__plugins__api__properties__figma-createtext"
   },
   {
+    "dataset": "plugin-api",
     "title": "createFrame | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createframe/",
     "path": "/docs/plugins/api/properties/figma-createframe/",
     "slug": "docs__plugins__api__properties__figma-createframe"
   },
   {
+    "dataset": "plugin-api",
     "title": "createComponent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createcomponent/",
     "path": "/docs/plugins/api/properties/figma-createcomponent/",
     "slug": "docs__plugins__api__properties__figma-createcomponent"
   },
   {
+    "dataset": "plugin-api",
     "title": "createComponentFromNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createcomponentfromnode/",
     "path": "/docs/plugins/api/properties/figma-createcomponentfromnode/",
     "slug": "docs__plugins__api__properties__figma-createcomponentfromnode"
   },
   {
+    "dataset": "plugin-api",
     "title": "createPage | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createpage/",
     "path": "/docs/plugins/api/properties/figma-createpage/",
     "slug": "docs__plugins__api__properties__figma-createpage"
   },
   {
+    "dataset": "plugin-api",
     "title": "createPageDivider | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createpagedivider/",
     "path": "/docs/plugins/api/properties/figma-createpagedivider/",
     "slug": "docs__plugins__api__properties__figma-createpagedivider"
   },
   {
+    "dataset": "plugin-api",
     "title": "createSlice | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createslice/",
     "path": "/docs/plugins/api/properties/figma-createslice/",
     "slug": "docs__plugins__api__properties__figma-createslice"
   },
   {
+    "dataset": "plugin-api",
     "title": "createSlide | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createslide/",
     "path": "/docs/plugins/api/properties/figma-createslide/",
     "slug": "docs__plugins__api__properties__figma-createslide"
   },
   {
+    "dataset": "plugin-api",
     "title": "createSlideRow | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createsliderow/",
     "path": "/docs/plugins/api/properties/figma-createsliderow/",
     "slug": "docs__plugins__api__properties__figma-createsliderow"
   },
   {
+    "dataset": "plugin-api",
     "title": "createSticky | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createsticky/",
     "path": "/docs/plugins/api/properties/figma-createsticky/",
     "slug": "docs__plugins__api__properties__figma-createsticky"
   },
   {
+    "dataset": "plugin-api",
     "title": "createConnector | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createconnector/",
     "path": "/docs/plugins/api/properties/figma-createconnector/",
     "slug": "docs__plugins__api__properties__figma-createconnector"
   },
   {
+    "dataset": "plugin-api",
     "title": "createShapeWithText | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createshapewithtext/",
     "path": "/docs/plugins/api/properties/figma-createshapewithtext/",
     "slug": "docs__plugins__api__properties__figma-createshapewithtext"
   },
   {
+    "dataset": "plugin-api",
     "title": "createTable | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createtable/",
     "path": "/docs/plugins/api/properties/figma-createtable/",
     "slug": "docs__plugins__api__properties__figma-createtable"
   },
   {
+    "dataset": "plugin-api",
     "title": "createTextPath | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createtextpath/",
     "path": "/docs/plugins/api/properties/figma-createtextpath/",
     "slug": "docs__plugins__api__properties__figma-createtextpath"
   },
   {
+    "dataset": "plugin-api",
     "title": "createNodeFromJSXAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createnodefromjsxasync/",
     "path": "/docs/plugins/api/properties/figma-createnodefromjsxasync/",
     "slug": "docs__plugins__api__properties__figma-createnodefromjsxasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "createBooleanOperation | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createbooleanoperation/",
     "path": "/docs/plugins/api/properties/figma-createbooleanoperation/",
     "slug": "docs__plugins__api__properties__figma-createbooleanoperation"
   },
   {
+    "dataset": "plugin-api",
     "title": "loadFontAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-loadfontasync/",
     "path": "/docs/plugins/api/properties/figma-loadfontasync/",
     "slug": "docs__plugins__api__properties__figma-loadfontasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "createImage | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createimage/",
     "path": "/docs/plugins/api/properties/figma-createimage/",
     "slug": "docs__plugins__api__properties__figma-createimage"
   },
   {
+    "dataset": "plugin-api",
     "title": "createImageAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createimageasync/",
     "path": "/docs/plugins/api/properties/figma-createimageasync/",
     "slug": "docs__plugins__api__properties__figma-createimageasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "createVideoAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createvideoasync/",
     "path": "/docs/plugins/api/properties/figma-createvideoasync/",
     "slug": "docs__plugins__api__properties__figma-createvideoasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "createLinkPreviewAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createlinkpreviewasync/",
     "path": "/docs/plugins/api/properties/figma-createlinkpreviewasync/",
     "slug": "docs__plugins__api__properties__figma-createlinkpreviewasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "createGif | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-creategif/",
     "path": "/docs/plugins/api/properties/figma-creategif/",
     "slug": "docs__plugins__api__properties__figma-creategif"
   },
   {
+    "dataset": "plugin-api",
     "title": "combineAsVariants | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-combineasvariants/",
     "path": "/docs/plugins/api/properties/figma-combineasvariants/",
     "slug": "docs__plugins__api__properties__figma-combineasvariants"
   },
   {
+    "dataset": "plugin-api",
     "title": "group | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-group/",
     "path": "/docs/plugins/api/properties/figma-group/",
     "slug": "docs__plugins__api__properties__figma-group"
   },
   {
+    "dataset": "plugin-api",
     "title": "transformGroup | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-transformgroup/",
     "path": "/docs/plugins/api/properties/figma-transformgroup/",
     "slug": "docs__plugins__api__properties__figma-transformgroup"
   },
   {
+    "dataset": "plugin-api",
     "title": "flatten | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-flatten/",
     "path": "/docs/plugins/api/properties/figma-flatten/",
     "slug": "docs__plugins__api__properties__figma-flatten"
   },
   {
+    "dataset": "plugin-api",
     "title": "ungroup | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-ungroup/",
     "path": "/docs/plugins/api/properties/figma-ungroup/",
     "slug": "docs__plugins__api__properties__figma-ungroup"
   },
   {
+    "dataset": "plugin-api",
     "title": "getSlideGrid | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-getslidegrid/",
     "path": "/docs/plugins/api/properties/figma-getslidegrid/",
     "slug": "docs__plugins__api__properties__figma-getslidegrid"
   },
   {
+    "dataset": "plugin-api",
     "title": "setSlideGrid | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-setslidegrid/",
     "path": "/docs/plugins/api/properties/figma-setslidegrid/",
     "slug": "docs__plugins__api__properties__figma-setslidegrid"
   },
   {
+    "dataset": "plugin-api",
     "title": "getCanvasGrid | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-getcanvasgrid/",
     "path": "/docs/plugins/api/properties/figma-getcanvasgrid/",
     "slug": "docs__plugins__api__properties__figma-getcanvasgrid"
   },
   {
+    "dataset": "plugin-api",
     "title": "setCanvasGrid | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-setcanvasgrid/",
     "path": "/docs/plugins/api/properties/figma-setcanvasgrid/",
     "slug": "docs__plugins__api__properties__figma-setcanvasgrid"
   },
   {
+    "dataset": "plugin-api",
     "title": "createCanvasRow | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createcanvasrow/",
     "path": "/docs/plugins/api/properties/figma-createcanvasrow/",
     "slug": "docs__plugins__api__properties__figma-createcanvasrow"
   },
   {
+    "dataset": "plugin-api",
     "title": "moveNodesToCoord | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-movenodestocoord/",
     "path": "/docs/plugins/api/properties/figma-movenodestocoord/",
     "slug": "docs__plugins__api__properties__figma-movenodestocoord"
   },
   {
+    "dataset": "plugin-api",
     "title": "loadBrushesAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-loadbrushesasync/",
     "path": "/docs/plugins/api/properties/figma-loadbrushesasync/",
     "slug": "docs__plugins__api__properties__figma-loadbrushesasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "fetch | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/global-fetch/",
     "path": "/docs/plugins/api/properties/global-fetch/",
     "slug": "docs__plugins__api__properties__global-fetch"
   },
   {
+    "dataset": "plugin-api",
     "title": "BooleanOperationNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/BooleanOperationNode/",
     "path": "/docs/plugins/api/BooleanOperationNode/",
     "slug": "docs__plugins__api__BooleanOperationNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "CodeBlockNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/CodeBlockNode/",
     "path": "/docs/plugins/api/CodeBlockNode/",
     "slug": "docs__plugins__api__CodeBlockNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "ComponentNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ComponentNode/",
     "path": "/docs/plugins/api/ComponentNode/",
     "slug": "docs__plugins__api__ComponentNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "ComponentSetNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ComponentSetNode/",
     "path": "/docs/plugins/api/ComponentSetNode/",
     "slug": "docs__plugins__api__ComponentSetNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "ConnectorNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ConnectorNode/",
     "path": "/docs/plugins/api/ConnectorNode/",
     "slug": "docs__plugins__api__ConnectorNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "DocumentNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/DocumentNode/",
     "path": "/docs/plugins/api/DocumentNode/",
     "slug": "docs__plugins__api__DocumentNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "EllipseNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/EllipseNode/",
     "path": "/docs/plugins/api/EllipseNode/",
     "slug": "docs__plugins__api__EllipseNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "EmbedNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/EmbedNode/",
     "path": "/docs/plugins/api/EmbedNode/",
     "slug": "docs__plugins__api__EmbedNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "FrameNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/FrameNode/",
     "path": "/docs/plugins/api/FrameNode/",
     "slug": "docs__plugins__api__FrameNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "GroupNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/GroupNode/",
     "path": "/docs/plugins/api/GroupNode/",
     "slug": "docs__plugins__api__GroupNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "HighlightNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/HighlightNode/",
     "path": "/docs/plugins/api/HighlightNode/",
     "slug": "docs__plugins__api__HighlightNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "InteractiveSlideElementNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/InteractiveSlideElementNode/",
     "path": "/docs/plugins/api/InteractiveSlideElementNode/",
     "slug": "docs__plugins__api__InteractiveSlideElementNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "LineNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/LineNode/",
     "path": "/docs/plugins/api/LineNode/",
     "slug": "docs__plugins__api__LineNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "LinkUnfurlNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/LinkUnfurlNode/",
     "path": "/docs/plugins/api/LinkUnfurlNode/",
     "slug": "docs__plugins__api__LinkUnfurlNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "MediaNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/MediaNode/",
     "path": "/docs/plugins/api/MediaNode/",
     "slug": "docs__plugins__api__MediaNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "PageNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/PageNode/",
     "path": "/docs/plugins/api/PageNode/",
     "slug": "docs__plugins__api__PageNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "PolygonNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/PolygonNode/",
     "path": "/docs/plugins/api/PolygonNode/",
     "slug": "docs__plugins__api__PolygonNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "RectangleNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/RectangleNode/",
     "path": "/docs/plugins/api/RectangleNode/",
     "slug": "docs__plugins__api__RectangleNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "RemovedNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/RemovedNode/",
     "path": "/docs/plugins/api/RemovedNode/",
     "slug": "docs__plugins__api__RemovedNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "SectionNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/SectionNode/",
     "path": "/docs/plugins/api/SectionNode/",
     "slug": "docs__plugins__api__SectionNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "ShapeWithTextNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ShapeWithTextNode/",
     "path": "/docs/plugins/api/ShapeWithTextNode/",
     "slug": "docs__plugins__api__ShapeWithTextNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "SliceNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/SliceNode/",
     "path": "/docs/plugins/api/SliceNode/",
     "slug": "docs__plugins__api__SliceNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "SlideGridNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/SlideGridNode/",
     "path": "/docs/plugins/api/SlideGridNode/",
     "slug": "docs__plugins__api__SlideGridNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "SlideNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/SlideNode/",
     "path": "/docs/plugins/api/SlideNode/",
     "slug": "docs__plugins__api__SlideNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "SlideRowNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/SlideRowNode/",
     "path": "/docs/plugins/api/SlideRowNode/",
     "slug": "docs__plugins__api__SlideRowNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "StampNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StampNode/",
     "path": "/docs/plugins/api/StampNode/",
     "slug": "docs__plugins__api__StampNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "StarNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StarNode/",
     "path": "/docs/plugins/api/StarNode/",
     "slug": "docs__plugins__api__StarNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "StickyNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StickyNode/",
     "path": "/docs/plugins/api/StickyNode/",
     "slug": "docs__plugins__api__StickyNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "TableCellNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TableCellNode/",
     "path": "/docs/plugins/api/TableCellNode/",
     "slug": "docs__plugins__api__TableCellNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "TableNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TableNode/",
     "path": "/docs/plugins/api/TableNode/",
     "slug": "docs__plugins__api__TableNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextNode/",
     "path": "/docs/plugins/api/TextNode/",
     "slug": "docs__plugins__api__TextNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextPathNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextPathNode/",
     "path": "/docs/plugins/api/TextPathNode/",
     "slug": "docs__plugins__api__TextPathNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "TransformGroupNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TransformGroupNode/",
     "path": "/docs/plugins/api/TransformGroupNode/",
     "slug": "docs__plugins__api__TransformGroupNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "VectorNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VectorNode/",
     "path": "/docs/plugins/api/VectorNode/",
     "slug": "docs__plugins__api__VectorNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "WashiTapeNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/WashiTapeNode/",
     "path": "/docs/plugins/api/WashiTapeNode/",
     "slug": "docs__plugins__api__WashiTapeNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "WidgetNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/WidgetNode/",
     "path": "/docs/plugins/api/WidgetNode/",
     "slug": "docs__plugins__api__WidgetNode"
   },
   {
+    "dataset": "plugin-api",
     "title": "addDevResourceAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-adddevresourceasync/",
     "path": "/docs/plugins/api/properties/nodes-adddevresourceasync/",
     "slug": "docs__plugins__api__properties__nodes-adddevresourceasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "appendChild | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-appendchild/",
     "path": "/docs/plugins/api/properties/nodes-appendchild/",
     "slug": "docs__plugins__api__properties__nodes-appendchild"
   },
   {
+    "dataset": "plugin-api",
     "title": "appendChildAt | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-appendchildat/",
     "path": "/docs/plugins/api/properties/nodes-appendchildat/",
     "slug": "docs__plugins__api__properties__nodes-appendchildat"
   },
   {
+    "dataset": "plugin-api",
     "title": "characters | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-characters/",
     "path": "/docs/plugins/api/properties/TextNode-characters/",
     "slug": "docs__plugins__api__properties__TextNode-characters"
   },
   {
+    "dataset": "plugin-api",
     "title": "children | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-children/",
     "path": "/docs/plugins/api/properties/nodes-children/",
     "slug": "docs__plugins__api__properties__nodes-children"
   },
   {
+    "dataset": "plugin-api",
     "title": "clearExplicitVariableModeForCollection | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/ExplicitVariableModesMixin-clearexplicitvariablemodeforcollection/",
     "path": "/docs/plugins/api/properties/ExplicitVariableModesMixin-clearexplicitvariablemodeforcollection/",
     "slug": "docs__plugins__api__properties__ExplicitVariableModesMixin-clearexplicitvariablemodeforcollection"
   },
   {
+    "dataset": "plugin-api",
     "title": "complexStrokeProperties | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-complexstrokeproperties/",
     "path": "/docs/plugins/api/properties/nodes-complexstrokeproperties/",
     "slug": "docs__plugins__api__properties__nodes-complexstrokeproperties"
   },
   {
+    "dataset": "plugin-api",
     "title": "componentPropertyDefinitions | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/ComponentPropertiesMixin-componentpropertydefinitions/",
     "path": "/docs/plugins/api/properties/ComponentPropertiesMixin-componentpropertydefinitions/",
     "slug": "docs__plugins__api__properties__ComponentPropertiesMixin-componentpropertydefinitions"
   },
   {
+    "dataset": "plugin-api",
     "title": "constraints | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-constraints/",
     "path": "/docs/plugins/api/properties/nodes-constraints/",
     "slug": "docs__plugins__api__properties__nodes-constraints"
   },
   {
+    "dataset": "plugin-api",
     "title": "cornerRadius | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-cornerradius/",
     "path": "/docs/plugins/api/properties/nodes-cornerradius/",
     "slug": "docs__plugins__api__properties__nodes-cornerradius"
   },
   {
+    "dataset": "plugin-api",
     "title": "cornerSmoothing | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-cornersmoothing/",
     "path": "/docs/plugins/api/properties/nodes-cornersmoothing/",
     "slug": "docs__plugins__api__properties__nodes-cornersmoothing"
   },
   {
+    "dataset": "plugin-api",
     "title": "counterAxisAlignContent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-counteraxisaligncontent/",
     "path": "/docs/plugins/api/properties/nodes-counteraxisaligncontent/",
     "slug": "docs__plugins__api__properties__nodes-counteraxisaligncontent"
   },
   {
+    "dataset": "plugin-api",
     "title": "counterAxisAlignItems | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-counteraxisalignitems/",
     "path": "/docs/plugins/api/properties/nodes-counteraxisalignitems/",
     "slug": "docs__plugins__api__properties__nodes-counteraxisalignitems"
   },
   {
+    "dataset": "plugin-api",
     "title": "counterAxisSizingMode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-counteraxissizingmode/",
     "path": "/docs/plugins/api/properties/nodes-counteraxissizingmode/",
     "slug": "docs__plugins__api__properties__nodes-counteraxissizingmode"
   },
   {
+    "dataset": "plugin-api",
     "title": "counterAxisSpacing | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-counteraxisspacing/",
     "path": "/docs/plugins/api/properties/nodes-counteraxisspacing/",
     "slug": "docs__plugins__api__properties__nodes-counteraxisspacing"
   },
   {
+    "dataset": "plugin-api",
     "title": "deleteCharacters | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-deletecharacters/",
     "path": "/docs/plugins/api/properties/TextNode-deletecharacters/",
     "slug": "docs__plugins__api__properties__TextNode-deletecharacters"
   },
   {
+    "dataset": "plugin-api",
     "title": "deleteDevResourceAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-deletedevresourceasync/",
     "path": "/docs/plugins/api/properties/nodes-deletedevresourceasync/",
     "slug": "docs__plugins__api__properties__nodes-deletedevresourceasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "description | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-description/",
     "path": "/docs/plugins/api/properties/nodes-description/",
     "slug": "docs__plugins__api__properties__nodes-description"
   },
   {
+    "dataset": "plugin-api",
     "title": "descriptionMarkdown | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-descriptionmarkdown/",
     "path": "/docs/plugins/api/properties/nodes-descriptionmarkdown/",
     "slug": "docs__plugins__api__properties__nodes-descriptionmarkdown"
   },
   {
+    "dataset": "plugin-api",
     "title": "documentationLinks | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-documentationlinks/",
     "path": "/docs/plugins/api/properties/nodes-documentationlinks/",
     "slug": "docs__plugins__api__properties__nodes-documentationlinks"
   },
   {
+    "dataset": "plugin-api",
     "title": "editDevResourceAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-editdevresourceasync/",
     "path": "/docs/plugins/api/properties/nodes-editdevresourceasync/",
     "slug": "docs__plugins__api__properties__nodes-editdevresourceasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "exportAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-exportasync/",
     "path": "/docs/plugins/api/properties/nodes-exportasync/",
     "slug": "docs__plugins__api__properties__nodes-exportasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "fillStyleId | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-fillstyleid/",
     "path": "/docs/plugins/api/properties/nodes-fillstyleid/",
     "slug": "docs__plugins__api__properties__nodes-fillstyleid"
   },
   {
+    "dataset": "plugin-api",
     "title": "fills | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-fills/",
     "path": "/docs/plugins/api/properties/nodes-fills/",
     "slug": "docs__plugins__api__properties__nodes-fills"
   },
   {
+    "dataset": "plugin-api",
     "title": "findAll | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findall/",
     "path": "/docs/plugins/api/properties/nodes-findall/",
     "slug": "docs__plugins__api__properties__nodes-findall"
   },
   {
+    "dataset": "plugin-api",
     "title": "findAllWithCriteria | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findallwithcriteria/",
     "path": "/docs/plugins/api/properties/nodes-findallwithcriteria/",
     "slug": "docs__plugins__api__properties__nodes-findallwithcriteria"
   },
   {
+    "dataset": "plugin-api",
     "title": "findChild | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findchild/",
     "path": "/docs/plugins/api/properties/nodes-findchild/",
     "slug": "docs__plugins__api__properties__nodes-findchild"
   },
   {
+    "dataset": "plugin-api",
     "title": "findChildren | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findchildren/",
     "path": "/docs/plugins/api/properties/nodes-findchildren/",
     "slug": "docs__plugins__api__properties__nodes-findchildren"
   },
   {
+    "dataset": "plugin-api",
     "title": "findOne | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findone/",
     "path": "/docs/plugins/api/properties/nodes-findone/",
     "slug": "docs__plugins__api__properties__nodes-findone"
   },
   {
+    "dataset": "plugin-api",
     "title": "findWidgetNodesByWidgetId | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-findwidgetnodesbywidgetid/",
     "path": "/docs/plugins/api/properties/nodes-findwidgetnodesbywidgetid/",
     "slug": "docs__plugins__api__properties__nodes-findwidgetnodesbywidgetid"
   },
   {
+    "dataset": "plugin-api",
     "title": "getDevResourcesAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-getdevresourcesasync/",
     "path": "/docs/plugins/api/properties/nodes-getdevresourcesasync/",
     "slug": "docs__plugins__api__properties__nodes-getdevresourcesasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "getStyledTextSegments | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-getstyledtextsegments/",
     "path": "/docs/plugins/api/properties/TextNode-getstyledtextsegments/",
     "slug": "docs__plugins__api__properties__TextNode-getstyledtextsegments"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridChildHorizontalAlign | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridchildhorizontalalign/",
     "path": "/docs/plugins/api/properties/nodes-gridchildhorizontalalign/",
     "slug": "docs__plugins__api__properties__nodes-gridchildhorizontalalign"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridChildVerticalAlign | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridchildverticalalign/",
     "path": "/docs/plugins/api/properties/nodes-gridchildverticalalign/",
     "slug": "docs__plugins__api__properties__nodes-gridchildverticalalign"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridColumnAnchorIndex | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumnanchorindex/",
     "path": "/docs/plugins/api/properties/nodes-gridcolumnanchorindex/",
     "slug": "docs__plugins__api__properties__nodes-gridcolumnanchorindex"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridColumnCount | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumncount/",
     "path": "/docs/plugins/api/properties/nodes-gridcolumncount/",
     "slug": "docs__plugins__api__properties__nodes-gridcolumncount"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridColumnGap | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumngap/",
     "path": "/docs/plugins/api/properties/nodes-gridcolumngap/",
     "slug": "docs__plugins__api__properties__nodes-gridcolumngap"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridColumnSizes | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumnsizes/",
     "path": "/docs/plugins/api/properties/nodes-gridcolumnsizes/",
     "slug": "docs__plugins__api__properties__nodes-gridcolumnsizes"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridColumnSpan | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumnspan/",
     "path": "/docs/plugins/api/properties/nodes-gridcolumnspan/",
     "slug": "docs__plugins__api__properties__nodes-gridcolumnspan"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridRowAnchorIndex | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridrowanchorindex/",
     "path": "/docs/plugins/api/properties/nodes-gridrowanchorindex/",
     "slug": "docs__plugins__api__properties__nodes-gridrowanchorindex"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridRowCount | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridrowcount/",
     "path": "/docs/plugins/api/properties/nodes-gridrowcount/",
     "slug": "docs__plugins__api__properties__nodes-gridrowcount"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridRowGap | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridrowgap/",
     "path": "/docs/plugins/api/properties/nodes-gridrowgap/",
     "slug": "docs__plugins__api__properties__nodes-gridrowgap"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridRowSizes | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridrowsizes/",
     "path": "/docs/plugins/api/properties/nodes-gridrowsizes/",
     "slug": "docs__plugins__api__properties__nodes-gridrowsizes"
   },
   {
+    "dataset": "plugin-api",
     "title": "gridRowSpan | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridrowspan/",
     "path": "/docs/plugins/api/properties/nodes-gridrowspan/",
     "slug": "docs__plugins__api__properties__nodes-gridrowspan"
   },
   {
+    "dataset": "plugin-api",
     "title": "id | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-id/",
     "path": "/docs/plugins/api/properties/nodes-id/",
     "slug": "docs__plugins__api__properties__nodes-id"
   },
   {
+    "dataset": "plugin-api",
     "title": "inferredVariables | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-inferredvariables/",
     "path": "/docs/plugins/api/properties/nodes-inferredvariables/",
     "slug": "docs__plugins__api__properties__nodes-inferredvariables"
   },
   {
+    "dataset": "plugin-api",
     "title": "insertCharacters | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-insertcharacters/",
     "path": "/docs/plugins/api/properties/TextNode-insertcharacters/",
     "slug": "docs__plugins__api__properties__TextNode-insertcharacters"
   },
   {
+    "dataset": "plugin-api",
     "title": "insertChild | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-insertchild/",
     "path": "/docs/plugins/api/properties/nodes-insertchild/",
     "slug": "docs__plugins__api__properties__nodes-insertchild"
   },
   {
+    "dataset": "plugin-api",
     "title": "isMask | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-ismask/",
     "path": "/docs/plugins/api/properties/nodes-ismask/",
     "slug": "docs__plugins__api__properties__nodes-ismask"
   },
   {
+    "dataset": "plugin-api",
     "title": "itemReverseZIndex | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-itemreversezindex/",
     "path": "/docs/plugins/api/properties/nodes-itemreversezindex/",
     "slug": "docs__plugins__api__properties__nodes-itemreversezindex"
   },
   {
+    "dataset": "plugin-api",
     "title": "itemSpacing | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-itemspacing/",
     "path": "/docs/plugins/api/properties/nodes-itemspacing/",
     "slug": "docs__plugins__api__properties__nodes-itemspacing"
   },
   {
+    "dataset": "plugin-api",
     "title": "layoutAlign | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutalign/",
     "path": "/docs/plugins/api/properties/nodes-layoutalign/",
     "slug": "docs__plugins__api__properties__nodes-layoutalign"
   },
   {
+    "dataset": "plugin-api",
     "title": "layoutGrow | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutgrow/",
     "path": "/docs/plugins/api/properties/nodes-layoutgrow/",
     "slug": "docs__plugins__api__properties__nodes-layoutgrow"
   },
   {
+    "dataset": "plugin-api",
     "title": "layoutMode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutmode/",
     "path": "/docs/plugins/api/properties/nodes-layoutmode/",
     "slug": "docs__plugins__api__properties__nodes-layoutmode"
   },
   {
+    "dataset": "plugin-api",
     "title": "layoutPositioning | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutpositioning/",
     "path": "/docs/plugins/api/properties/nodes-layoutpositioning/",
     "slug": "docs__plugins__api__properties__nodes-layoutpositioning"
   },
   {
+    "dataset": "plugin-api",
     "title": "layoutSizingHorizontal | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutsizinghorizontal/",
     "path": "/docs/plugins/api/properties/nodes-layoutsizinghorizontal/",
     "slug": "docs__plugins__api__properties__nodes-layoutsizinghorizontal"
   },
   {
+    "dataset": "plugin-api",
     "title": "layoutSizingVertical | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutsizingvertical/",
     "path": "/docs/plugins/api/properties/nodes-layoutsizingvertical/",
     "slug": "docs__plugins__api__properties__nodes-layoutsizingvertical"
   },
   {
+    "dataset": "plugin-api",
     "title": "layoutWrap | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-layoutwrap/",
     "path": "/docs/plugins/api/properties/nodes-layoutwrap/",
     "slug": "docs__plugins__api__properties__nodes-layoutwrap"
   },
   {
+    "dataset": "plugin-api",
     "title": "locked | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-locked/",
     "path": "/docs/plugins/api/properties/nodes-locked/",
     "slug": "docs__plugins__api__properties__nodes-locked"
   },
   {
+    "dataset": "plugin-api",
     "title": "name | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-name/",
     "path": "/docs/plugins/api/properties/nodes-name/",
     "slug": "docs__plugins__api__properties__nodes-name"
   },
   {
+    "dataset": "plugin-api",
     "title": "numberOfFixedChildren | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-numberoffixedchildren/",
     "path": "/docs/plugins/api/properties/nodes-numberoffixedchildren/",
     "slug": "docs__plugins__api__properties__nodes-numberoffixedchildren"
   },
   {
+    "dataset": "plugin-api",
     "title": "openTypeFeatures | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-opentypefeatures/",
     "path": "/docs/plugins/api/properties/TextNode-opentypefeatures/",
     "slug": "docs__plugins__api__properties__TextNode-opentypefeatures"
   },
   {
+    "dataset": "plugin-api",
     "title": "overflowDirection | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-overflowdirection/",
     "path": "/docs/plugins/api/properties/nodes-overflowdirection/",
     "slug": "docs__plugins__api__properties__nodes-overflowdirection"
   },
   {
+    "dataset": "plugin-api",
     "title": "parent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-parent/",
     "path": "/docs/plugins/api/properties/nodes-parent/",
     "slug": "docs__plugins__api__properties__nodes-parent"
   },
   {
+    "dataset": "plugin-api",
     "title": "primaryAxisAlignItems | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-primaryaxisalignitems/",
     "path": "/docs/plugins/api/properties/nodes-primaryaxisalignitems/",
     "slug": "docs__plugins__api__properties__nodes-primaryaxisalignitems"
   },
   {
+    "dataset": "plugin-api",
     "title": "primaryAxisSizingMode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-primaryaxissizingmode/",
     "path": "/docs/plugins/api/properties/nodes-primaryaxissizingmode/",
     "slug": "docs__plugins__api__properties__nodes-primaryaxissizingmode"
   },
   {
+    "dataset": "plugin-api",
     "title": "reactions | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-reactions/",
     "path": "/docs/plugins/api/properties/nodes-reactions/",
     "slug": "docs__plugins__api__properties__nodes-reactions"
   },
   {
+    "dataset": "plugin-api",
     "title": "relativeTransform | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-relativetransform/",
     "path": "/docs/plugins/api/properties/nodes-relativetransform/",
     "slug": "docs__plugins__api__properties__nodes-relativetransform"
   },
   {
+    "dataset": "plugin-api",
     "title": "remove | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-remove/",
     "path": "/docs/plugins/api/properties/nodes-remove/",
     "slug": "docs__plugins__api__properties__nodes-remove"
   },
   {
+    "dataset": "plugin-api",
     "title": "removed | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-removed/",
     "path": "/docs/plugins/api/properties/nodes-removed/",
     "slug": "docs__plugins__api__properties__nodes-removed"
   },
   {
+    "dataset": "plugin-api",
     "title": "rescale | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-rescale/",
     "path": "/docs/plugins/api/properties/nodes-rescale/",
     "slug": "docs__plugins__api__properties__nodes-rescale"
   },
   {
+    "dataset": "plugin-api",
     "title": "resize | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-resize/",
     "path": "/docs/plugins/api/properties/nodes-resize/",
     "slug": "docs__plugins__api__properties__nodes-resize"
   },
   {
+    "dataset": "plugin-api",
     "title": "resizeWithoutConstraints | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-resizewithoutconstraints/",
     "path": "/docs/plugins/api/properties/nodes-resizewithoutconstraints/",
     "slug": "docs__plugins__api__properties__nodes-resizewithoutconstraints"
   },
   {
+    "dataset": "plugin-api",
     "title": "resolvedVariableModes | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-resolvedvariablemodes/",
     "path": "/docs/plugins/api/properties/nodes-resolvedvariablemodes/",
     "slug": "docs__plugins__api__properties__nodes-resolvedvariablemodes"
   },
   {
+    "dataset": "plugin-api",
     "title": "rotation | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-rotation/",
     "path": "/docs/plugins/api/properties/nodes-rotation/",
     "slug": "docs__plugins__api__properties__nodes-rotation"
   },
   {
+    "dataset": "plugin-api",
     "title": "setBoundVariable | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setboundvariable/",
     "path": "/docs/plugins/api/properties/nodes-setboundvariable/",
     "slug": "docs__plugins__api__properties__nodes-setboundvariable"
   },
   {
+    "dataset": "plugin-api",
     "title": "setExplicitVariableModeForCollection | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/",
     "path": "/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/",
     "slug": "docs__plugins__api__properties__ExplicitVariableModesMixin-setexplicitvariablemodeforcollection"
   },
   {
+    "dataset": "plugin-api",
     "title": "setGridChildPosition | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setgridchildposition/",
     "path": "/docs/plugins/api/properties/nodes-setgridchildposition/",
     "slug": "docs__plugins__api__properties__nodes-setgridchildposition"
   },
   {
+    "dataset": "plugin-api",
     "title": "setPluginData | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setplugindata/",
     "path": "/docs/plugins/api/properties/nodes-setplugindata/",
     "slug": "docs__plugins__api__properties__nodes-setplugindata"
   },
   {
+    "dataset": "plugin-api",
     "title": "setRelaunchData | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setrelaunchdata/",
     "path": "/docs/plugins/api/properties/nodes-setrelaunchdata/",
     "slug": "docs__plugins__api__properties__nodes-setrelaunchdata"
   },
   {
+    "dataset": "plugin-api",
     "title": "setSharedPluginData | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setsharedplugindata/",
     "path": "/docs/plugins/api/properties/nodes-setsharedplugindata/",
     "slug": "docs__plugins__api__properties__nodes-setsharedplugindata"
   },
   {
+    "dataset": "plugin-api",
     "title": "strokeAlign | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-strokealign/",
     "path": "/docs/plugins/api/properties/nodes-strokealign/",
     "slug": "docs__plugins__api__properties__nodes-strokealign"
   },
   {
+    "dataset": "plugin-api",
     "title": "strokeCap | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-strokecap/",
     "path": "/docs/plugins/api/properties/nodes-strokecap/",
     "slug": "docs__plugins__api__properties__nodes-strokecap"
   },
   {
+    "dataset": "plugin-api",
     "title": "strokeJoin | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-strokejoin/",
     "path": "/docs/plugins/api/properties/nodes-strokejoin/",
     "slug": "docs__plugins__api__properties__nodes-strokejoin"
   },
   {
+    "dataset": "plugin-api",
     "title": "strokes | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-strokes/",
     "path": "/docs/plugins/api/properties/nodes-strokes/",
     "slug": "docs__plugins__api__properties__nodes-strokes"
   },
   {
+    "dataset": "plugin-api",
     "title": "strokesIncludedInLayout | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-strokesincludedinlayout/",
     "path": "/docs/plugins/api/properties/nodes-strokesincludedinlayout/",
     "slug": "docs__plugins__api__properties__nodes-strokesincludedinlayout"
   },
   {
+    "dataset": "plugin-api",
     "title": "stuckNodes | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-stucknodes/",
     "path": "/docs/plugins/api/properties/nodes-stucknodes/",
     "slug": "docs__plugins__api__properties__nodes-stucknodes"
   },
   {
+    "dataset": "plugin-api",
     "title": "stuckTo | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-stuckto/",
     "path": "/docs/plugins/api/properties/nodes-stuckto/",
     "slug": "docs__plugins__api__properties__nodes-stuckto"
   },
   {
+    "dataset": "plugin-api",
     "title": "targetAspectRatio | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-targetaspectratio/",
     "path": "/docs/plugins/api/properties/nodes-targetaspectratio/",
     "slug": "docs__plugins__api__properties__nodes-targetaspectratio"
   },
   {
+    "dataset": "plugin-api",
     "title": "toString | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-tostring/",
     "path": "/docs/plugins/api/properties/nodes-tostring/",
     "slug": "docs__plugins__api__properties__nodes-tostring"
   },
   {
+    "dataset": "plugin-api",
     "title": "variableWidthStrokeProperties | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-variablewidthstrokeproperties/",
     "path": "/docs/plugins/api/properties/nodes-variablewidthstrokeproperties/",
     "slug": "docs__plugins__api__properties__nodes-variablewidthstrokeproperties"
   },
   {
+    "dataset": "plugin-api",
     "title": "variantProperties | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-variantproperties/",
     "path": "/docs/plugins/api/properties/nodes-variantproperties/",
     "slug": "docs__plugins__api__properties__nodes-variantproperties"
   },
   {
+    "dataset": "plugin-api",
     "title": "visible | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-visible/",
     "path": "/docs/plugins/api/properties/nodes-visible/",
     "slug": "docs__plugins__api__properties__nodes-visible"
   },
   {
+    "dataset": "plugin-api",
     "title": "x | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-x/",
     "path": "/docs/plugins/api/properties/nodes-x/",
     "slug": "docs__plugins__api__properties__nodes-x"
   },
   {
+    "dataset": "plugin-api",
     "title": "y | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-y/",
     "path": "/docs/plugins/api/properties/nodes-y/",
     "slug": "docs__plugins__api__properties__nodes-y"
   },
   {
+    "dataset": "plugin-api",
     "title": "Rect | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Rect/",
     "path": "/docs/plugins/api/Rect/",
     "slug": "docs__plugins__api__Rect"
   },
   {
+    "dataset": "plugin-api",
     "title": "Transform | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Transform/",
     "path": "/docs/plugins/api/Transform/",
     "slug": "docs__plugins__api__Transform"
   },
   {
+    "dataset": "plugin-api",
     "title": "ComponentPropertyType | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ComponentPropertyType/",
     "path": "/docs/plugins/api/ComponentPropertyType/",
     "slug": "docs__plugins__api__ComponentPropertyType"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableAlias | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableAlias/",
     "path": "/docs/plugins/api/VariableAlias/",
     "slug": "docs__plugins__api__VariableAlias"
   },
   {
+    "dataset": "plugin-api",
     "title": "ComponentPropertyOptions | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ComponentPropertyOptions/",
     "path": "/docs/plugins/api/ComponentPropertyOptions/",
     "slug": "docs__plugins__api__ComponentPropertyOptions"
   },
   {
+    "dataset": "plugin-api",
     "title": "MeasurementSide | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/MeasurementSide/",
     "path": "/docs/plugins/api/MeasurementSide/",
     "slug": "docs__plugins__api__MeasurementSide"
   },
   {
+    "dataset": "plugin-api",
     "title": "MeasurementOffset | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/MeasurementOffset/",
     "path": "/docs/plugins/api/MeasurementOffset/",
     "slug": "docs__plugins__api__MeasurementOffset"
   },
   {
+    "dataset": "plugin-api",
     "title": "Measurement | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Measurement/",
     "path": "/docs/plugins/api/Measurement/",
     "slug": "docs__plugins__api__Measurement"
   },
   {
+    "dataset": "plugin-api",
     "title": "Annotation | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Annotation/",
     "path": "/docs/plugins/api/Annotation/",
     "slug": "docs__plugins__api__Annotation"
   },
   {
+    "dataset": "plugin-api",
     "title": "Paint | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Paint/",
     "path": "/docs/plugins/api/Paint/",
     "slug": "docs__plugins__api__Paint"
   },
   {
+    "dataset": "plugin-api",
     "title": "BlendMode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/BlendMode/",
     "path": "/docs/plugins/api/BlendMode/",
     "slug": "docs__plugins__api__BlendMode"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableBindableNodeField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableBindableNodeField/",
     "path": "/docs/plugins/api/VariableBindableNodeField/",
     "slug": "docs__plugins__api__VariableBindableNodeField"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableBindableTextField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableBindableTextField/",
     "path": "/docs/plugins/api/VariableBindableTextField/",
     "slug": "docs__plugins__api__VariableBindableTextField"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextSublayer | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextSublayer/",
     "path": "/docs/plugins/api/TextSublayer/",
     "slug": "docs__plugins__api__TextSublayer"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableCollection | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableCollection/",
     "path": "/docs/plugins/api/VariableCollection/",
     "slug": "docs__plugins__api__VariableCollection"
   },
   {
+    "dataset": "plugin-api",
     "title": "ComplexStrokeProperties | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ComplexStrokeProperties/",
     "path": "/docs/plugins/api/ComplexStrokeProperties/",
     "slug": "docs__plugins__api__ComplexStrokeProperties"
   },
   {
+    "dataset": "plugin-api",
     "title": "ComponentPropertyDefinitions | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ComponentPropertyDefinitions/",
     "path": "/docs/plugins/api/ComponentPropertyDefinitions/",
     "slug": "docs__plugins__api__ComponentPropertyDefinitions"
   },
   {
+    "dataset": "plugin-api",
     "title": "Constraints | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Constraints/",
     "path": "/docs/plugins/api/Constraints/",
     "slug": "docs__plugins__api__Constraints"
   },
   {
+    "dataset": "plugin-api",
     "title": "InferredAutoLayoutResult | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/InferredAutoLayoutResult/",
     "path": "/docs/plugins/api/InferredAutoLayoutResult/",
     "slug": "docs__plugins__api__InferredAutoLayoutResult"
   },
   {
+    "dataset": "plugin-api",
     "title": "EffectStyle | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/EffectStyle/",
     "path": "/docs/plugins/api/EffectStyle/",
     "slug": "docs__plugins__api__EffectStyle"
   },
   {
+    "dataset": "plugin-api",
     "title": "GridStyle | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/GridStyle/",
     "path": "/docs/plugins/api/GridStyle/",
     "slug": "docs__plugins__api__GridStyle"
   },
   {
+    "dataset": "plugin-api",
     "title": "PaintStyle | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/PaintStyle/",
     "path": "/docs/plugins/api/PaintStyle/",
     "slug": "docs__plugins__api__PaintStyle"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextStyle | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextStyle/",
     "path": "/docs/plugins/api/TextStyle/",
     "slug": "docs__plugins__api__TextStyle"
   },
   {
+    "dataset": "plugin-api",
     "title": "DetachedInfo | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/DetachedInfo/",
     "path": "/docs/plugins/api/DetachedInfo/",
     "slug": "docs__plugins__api__DetachedInfo"
   },
   {
+    "dataset": "plugin-api",
     "title": "DevStatus | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/DevStatus/",
     "path": "/docs/plugins/api/DevStatus/",
     "slug": "docs__plugins__api__DevStatus"
   },
   {
+    "dataset": "plugin-api",
     "title": "DocumentationLink | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/DocumentationLink/",
     "path": "/docs/plugins/api/DocumentationLink/",
     "slug": "docs__plugins__api__DocumentationLink"
   },
   {
+    "dataset": "plugin-api",
     "title": "InstanceSwapPreferredValue | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/InstanceSwapPreferredValue/",
     "path": "/docs/plugins/api/InstanceSwapPreferredValue/",
     "slug": "docs__plugins__api__InstanceSwapPreferredValue"
   },
   {
+    "dataset": "plugin-api",
     "title": "Effect | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Effect/",
     "path": "/docs/plugins/api/Effect/",
     "slug": "docs__plugins__api__Effect"
   },
   {
+    "dataset": "plugin-api",
     "title": "ExportSettings | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ExportSettings/",
     "path": "/docs/plugins/api/ExportSettings/",
     "slug": "docs__plugins__api__ExportSettings"
   },
   {
+    "dataset": "plugin-api",
     "title": "VectorPath | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VectorPath/",
     "path": "/docs/plugins/api/VectorPath/",
     "slug": "docs__plugins__api__VectorPath"
   },
   {
+    "dataset": "plugin-api",
     "title": "FindAllCriteria | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/FindAllCriteria/",
     "path": "/docs/plugins/api/FindAllCriteria/",
     "slug": "docs__plugins__api__FindAllCriteria"
   },
   {
+    "dataset": "plugin-api",
     "title": "FontName | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/FontName/",
     "path": "/docs/plugins/api/FontName/",
     "slug": "docs__plugins__api__FontName"
   },
   {
+    "dataset": "plugin-api",
     "title": "DevResource | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/DevResource/",
     "path": "/docs/plugins/api/DevResource/",
     "slug": "docs__plugins__api__DevResource"
   },
   {
+    "dataset": "plugin-api",
     "title": "Variable | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Variable/",
     "path": "/docs/plugins/api/Variable/",
     "slug": "docs__plugins__api__Variable"
   },
   {
+    "dataset": "plugin-api",
     "title": "PublishStatus | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/PublishStatus/",
     "path": "/docs/plugins/api/PublishStatus/",
     "slug": "docs__plugins__api__PublishStatus"
   },
   {
+    "dataset": "plugin-api",
     "title": "HyperlinkTarget | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/HyperlinkTarget/",
     "path": "/docs/plugins/api/HyperlinkTarget/",
     "slug": "docs__plugins__api__HyperlinkTarget"
   },
   {
+    "dataset": "plugin-api",
     "title": "LetterSpacing | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/LetterSpacing/",
     "path": "/docs/plugins/api/LetterSpacing/",
     "slug": "docs__plugins__api__LetterSpacing"
   },
   {
+    "dataset": "plugin-api",
     "title": "LineHeight | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/LineHeight/",
     "path": "/docs/plugins/api/LineHeight/",
     "slug": "docs__plugins__api__LineHeight"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextListOptions | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextListOptions/",
     "path": "/docs/plugins/api/TextListOptions/",
     "slug": "docs__plugins__api__TextListOptions"
   },
   {
+    "dataset": "plugin-api",
     "title": "OpenTypeFeature | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/OpenTypeFeature/",
     "path": "/docs/plugins/api/OpenTypeFeature/",
     "slug": "docs__plugins__api__OpenTypeFeature"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextCase | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextCase/",
     "path": "/docs/plugins/api/TextCase/",
     "slug": "docs__plugins__api__TextCase"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextDecoration | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextDecoration/",
     "path": "/docs/plugins/api/TextDecoration/",
     "slug": "docs__plugins__api__TextDecoration"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextDecorationColor | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextDecorationColor/",
     "path": "/docs/plugins/api/TextDecorationColor/",
     "slug": "docs__plugins__api__TextDecorationColor"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextDecorationOffset | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextDecorationOffset/",
     "path": "/docs/plugins/api/TextDecorationOffset/",
     "slug": "docs__plugins__api__TextDecorationOffset"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextDecorationStyle | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextDecorationStyle/",
     "path": "/docs/plugins/api/TextDecorationStyle/",
     "slug": "docs__plugins__api__TextDecorationStyle"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextDecorationThickness | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextDecorationThickness/",
     "path": "/docs/plugins/api/TextDecorationThickness/",
     "slug": "docs__plugins__api__TextDecorationThickness"
   },
   {
+    "dataset": "plugin-api",
     "title": "StyledTextSegment | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StyledTextSegment/",
     "path": "/docs/plugins/api/StyledTextSegment/",
     "slug": "docs__plugins__api__StyledTextSegment"
   },
   {
+    "dataset": "plugin-api",
     "title": "GridTrackSize | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/GridTrackSize/",
     "path": "/docs/plugins/api/GridTrackSize/",
     "slug": "docs__plugins__api__GridTrackSize"
   },
   {
+    "dataset": "plugin-api",
     "title": "Guide | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Guide/",
     "path": "/docs/plugins/api/Guide/",
     "slug": "docs__plugins__api__Guide"
   },
   {
+    "dataset": "plugin-api",
     "title": "HandleMirroring | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/HandleMirroring/",
     "path": "/docs/plugins/api/HandleMirroring/",
     "slug": "docs__plugins__api__HandleMirroring"
   },
   {
+    "dataset": "plugin-api",
     "title": "LayoutGrid | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/LayoutGrid/",
     "path": "/docs/plugins/api/LayoutGrid/",
     "slug": "docs__plugins__api__LayoutGrid"
   },
   {
+    "dataset": "plugin-api",
     "title": "LeadingTrim | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/LeadingTrim/",
     "path": "/docs/plugins/api/LeadingTrim/",
     "slug": "docs__plugins__api__LeadingTrim"
   },
   {
+    "dataset": "plugin-api",
     "title": "MaskType | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/MaskType/",
     "path": "/docs/plugins/api/MaskType/",
     "slug": "docs__plugins__api__MaskType"
   },
   {
+    "dataset": "plugin-api",
     "title": "OverflowDirection | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/OverflowDirection/",
     "path": "/docs/plugins/api/OverflowDirection/",
     "slug": "docs__plugins__api__OverflowDirection"
   },
   {
+    "dataset": "plugin-api",
     "title": "Overlay | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Overlay/",
     "path": "/docs/plugins/api/Overlay/",
     "slug": "docs__plugins__api__Overlay"
   },
   {
+    "dataset": "plugin-api",
     "title": "Reaction | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Reaction/",
     "path": "/docs/plugins/api/Reaction/",
     "slug": "docs__plugins__api__Reaction"
   },
   {
+    "dataset": "plugin-api",
     "title": "VectorNetwork | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VectorNetwork/",
     "path": "/docs/plugins/api/VectorNetwork/",
     "slug": "docs__plugins__api__VectorNetwork"
   },
   {
+    "dataset": "plugin-api",
     "title": "StrokeCap | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StrokeCap/",
     "path": "/docs/plugins/api/StrokeCap/",
     "slug": "docs__plugins__api__StrokeCap"
   },
   {
+    "dataset": "plugin-api",
     "title": "StrokeJoin | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StrokeJoin/",
     "path": "/docs/plugins/api/StrokeJoin/",
     "slug": "docs__plugins__api__StrokeJoin"
   },
   {
+    "dataset": "plugin-api",
     "title": "Vector | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Vector/",
     "path": "/docs/plugins/api/Vector/",
     "slug": "docs__plugins__api__Vector"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableWidthStrokeProperties | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableWidthStrokeProperties/",
     "path": "/docs/plugins/api/VariableWidthStrokeProperties/",
     "slug": "docs__plugins__api__VariableWidthStrokeProperties"
   },
   {
+    "dataset": "plugin-api",
     "title": "setWidgetSyncedState | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/WidgetNode-setwidgetsyncedstate/",
     "path": "/docs/plugins/api/properties/WidgetNode-setwidgetsyncedstate/",
     "slug": "docs__plugins__api__properties__WidgetNode-setwidgetsyncedstate"
   },
   {
+    "dataset": "plugin-api",
     "title": "Action | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Action/",
     "path": "/docs/plugins/api/Action/",
     "slug": "docs__plugins__api__Action"
   },
   {
+    "dataset": "plugin-api",
     "title": "ActiveUser | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ActiveUser/",
     "path": "/docs/plugins/api/ActiveUser/",
     "slug": "docs__plugins__api__ActiveUser"
   },
   {
+    "dataset": "plugin-api",
     "title": "AnnotationCategory | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/AnnotationCategory/",
     "path": "/docs/plugins/api/AnnotationCategory/",
     "slug": "docs__plugins__api__AnnotationCategory"
   },
   {
+    "dataset": "plugin-api",
     "title": "AnnotationCategoryColor | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/AnnotationCategoryColor/",
     "path": "/docs/plugins/api/AnnotationCategoryColor/",
     "slug": "docs__plugins__api__AnnotationCategoryColor"
   },
   {
+    "dataset": "plugin-api",
     "title": "AnnotationProperty | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/AnnotationProperty/",
     "path": "/docs/plugins/api/AnnotationProperty/",
     "slug": "docs__plugins__api__AnnotationProperty"
   },
   {
+    "dataset": "plugin-api",
     "title": "ArcData | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ArcData/",
     "path": "/docs/plugins/api/ArcData/",
     "slug": "docs__plugins__api__ArcData"
   },
   {
+    "dataset": "plugin-api",
     "title": "BaseUser | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/BaseUser/",
     "path": "/docs/plugins/api/BaseUser/",
     "slug": "docs__plugins__api__BaseUser"
   },
   {
+    "dataset": "plugin-api",
     "title": "BuzzAssetType | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/BuzzAssetType/",
     "path": "/docs/plugins/api/BuzzAssetType/",
     "slug": "docs__plugins__api__BuzzAssetType"
   },
   {
+    "dataset": "plugin-api",
     "title": "BuzzMediaField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/BuzzMediaField/",
     "path": "/docs/plugins/api/BuzzMediaField/",
     "slug": "docs__plugins__api__BuzzMediaField"
   },
   {
+    "dataset": "plugin-api",
     "title": "BuzzTextField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/BuzzTextField/",
     "path": "/docs/plugins/api/BuzzTextField/",
     "slug": "docs__plugins__api__BuzzTextField"
   },
   {
+    "dataset": "plugin-api",
     "title": "CanvasViewChangeEvent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/CanvasViewChangeEvent/",
     "path": "/docs/plugins/api/CanvasViewChangeEvent/",
     "slug": "docs__plugins__api__CanvasViewChangeEvent"
   },
   {
+    "dataset": "plugin-api",
     "title": "CodeLanguage | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/CodeLanguage/",
     "path": "/docs/plugins/api/CodeLanguage/",
     "slug": "docs__plugins__api__CodeLanguage"
   },
   {
+    "dataset": "plugin-api",
     "title": "CodegenEvent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/CodegenEvent/",
     "path": "/docs/plugins/api/CodegenEvent/",
     "slug": "docs__plugins__api__CodegenEvent"
   },
   {
+    "dataset": "plugin-api",
     "title": "CodegenPreference | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/CodegenPreference/",
     "path": "/docs/plugins/api/CodegenPreference/",
     "slug": "docs__plugins__api__CodegenPreference"
   },
   {
+    "dataset": "plugin-api",
     "title": "CodegenPreferencesEvent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/CodegenPreferencesEvent/",
     "path": "/docs/plugins/api/CodegenPreferencesEvent/",
     "slug": "docs__plugins__api__CodegenPreferencesEvent"
   },
   {
+    "dataset": "plugin-api",
     "title": "CodegenResult | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/CodegenResult/",
     "path": "/docs/plugins/api/CodegenResult/",
     "slug": "docs__plugins__api__CodegenResult"
   },
   {
+    "dataset": "plugin-api",
     "title": "CodeSyntaxPlatform | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/CodeSyntaxPlatform/",
     "path": "/docs/plugins/api/CodeSyntaxPlatform/",
     "slug": "docs__plugins__api__CodeSyntaxPlatform"
   },
   {
+    "dataset": "plugin-api",
     "title": "ColorPalette | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ColorPalette/",
     "path": "/docs/plugins/api/ColorPalette/",
     "slug": "docs__plugins__api__ColorPalette"
   },
   {
+    "dataset": "plugin-api",
     "title": "ColorPalettes | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ColorPalettes/",
     "path": "/docs/plugins/api/ColorPalettes/",
     "slug": "docs__plugins__api__ColorPalettes"
   },
   {
+    "dataset": "plugin-api",
     "title": "ConnectorEndpoint | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ConnectorEndpoint/",
     "path": "/docs/plugins/api/ConnectorEndpoint/",
     "slug": "docs__plugins__api__ConnectorEndpoint"
   },
   {
+    "dataset": "plugin-api",
     "title": "ConnectorStrokeCap | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ConnectorStrokeCap/",
     "path": "/docs/plugins/api/ConnectorStrokeCap/",
     "slug": "docs__plugins__api__ConnectorStrokeCap"
   },
   {
+    "dataset": "plugin-api",
     "title": "ComponentProperties | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ComponentProperties/",
     "path": "/docs/plugins/api/ComponentProperties/",
     "slug": "docs__plugins__api__ComponentProperties"
   },
   {
+    "dataset": "plugin-api",
     "title": "DocumentChange | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/DocumentChange/",
     "path": "/docs/plugins/api/DocumentChange/",
     "slug": "docs__plugins__api__DocumentChange"
   },
   {
+    "dataset": "plugin-api",
     "title": "DocumentChangeEvent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/DocumentChangeEvent/",
     "path": "/docs/plugins/api/DocumentChangeEvent/",
     "slug": "docs__plugins__api__DocumentChangeEvent"
   },
   {
+    "dataset": "plugin-api",
     "title": "DropEvent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/DropEvent/",
     "path": "/docs/plugins/api/DropEvent/",
     "slug": "docs__plugins__api__DropEvent"
   },
   {
+    "dataset": "plugin-api",
     "title": "EmbedData | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/EmbedData/",
     "path": "/docs/plugins/api/EmbedData/",
     "slug": "docs__plugins__api__EmbedData"
   },
   {
+    "dataset": "plugin-api",
     "title": "FontStyle | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/FontStyle/",
     "path": "/docs/plugins/api/FontStyle/",
     "slug": "docs__plugins__api__FontStyle"
   },
   {
+    "dataset": "plugin-api",
     "title": "Image | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Image/",
     "path": "/docs/plugins/api/Image/",
     "slug": "docs__plugins__api__Image"
   },
   {
+    "dataset": "plugin-api",
     "title": "InheritedStyleField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/InheritedStyleField/",
     "path": "/docs/plugins/api/InheritedStyleField/",
     "slug": "docs__plugins__api__InheritedStyleField"
   },
   {
+    "dataset": "plugin-api",
     "title": "LabelSublayer | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/LabelSublayer/",
     "path": "/docs/plugins/api/LabelSublayer/",
     "slug": "docs__plugins__api__LabelSublayer"
   },
   {
+    "dataset": "plugin-api",
     "title": "LinkUnfurlData | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/LinkUnfurlData/",
     "path": "/docs/plugins/api/LinkUnfurlData/",
     "slug": "docs__plugins__api__LinkUnfurlData"
   },
   {
+    "dataset": "plugin-api",
     "title": "MediaData | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/MediaData/",
     "path": "/docs/plugins/api/MediaData/",
     "slug": "docs__plugins__api__MediaData"
   },
   {
+    "dataset": "plugin-api",
     "title": "NodeChange | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/NodeChange/",
     "path": "/docs/plugins/api/NodeChange/",
     "slug": "docs__plugins__api__NodeChange"
   },
   {
+    "dataset": "plugin-api",
     "title": "NodeChangeEvent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/NodeChangeEvent/",
     "path": "/docs/plugins/api/NodeChangeEvent/",
     "slug": "docs__plugins__api__NodeChangeEvent"
   },
   {
+    "dataset": "plugin-api",
     "title": "NodeChangeProperty | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/NodeChangeProperty/",
     "path": "/docs/plugins/api/NodeChangeProperty/",
     "slug": "docs__plugins__api__NodeChangeProperty"
   },
   {
+    "dataset": "plugin-api",
     "title": "RGB/RGBA | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/RGB/",
     "path": "/docs/plugins/api/RGB/",
     "slug": "docs__plugins__api__RGB"
   },
   {
+    "dataset": "plugin-api",
     "title": "RunEvent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/RunEvent/",
     "path": "/docs/plugins/api/RunEvent/",
     "slug": "docs__plugins__api__RunEvent"
   },
   {
+    "dataset": "plugin-api",
     "title": "SlideTransition | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/SlideTransition/",
     "path": "/docs/plugins/api/SlideTransition/",
     "slug": "docs__plugins__api__SlideTransition"
   },
   {
+    "dataset": "plugin-api",
     "title": "SlidesViewChangeEvent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/SlidesViewChangeEvent/",
     "path": "/docs/plugins/api/SlidesViewChangeEvent/",
     "slug": "docs__plugins__api__SlidesViewChangeEvent"
   },
   {
+    "dataset": "plugin-api",
     "title": "StyleChange | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StyleChange/",
     "path": "/docs/plugins/api/StyleChange/",
     "slug": "docs__plugins__api__StyleChange"
   },
   {
+    "dataset": "plugin-api",
     "title": "StyleChangeEvent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StyleChangeEvent/",
     "path": "/docs/plugins/api/StyleChangeEvent/",
     "slug": "docs__plugins__api__StyleChangeEvent"
   },
   {
+    "dataset": "plugin-api",
     "title": "StyleChangeProperty | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StyleChangeProperty/",
     "path": "/docs/plugins/api/StyleChangeProperty/",
     "slug": "docs__plugins__api__StyleChangeProperty"
   },
   {
+    "dataset": "plugin-api",
     "title": "StyleConsumers | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StyleConsumers/",
     "path": "/docs/plugins/api/StyleConsumers/",
     "slug": "docs__plugins__api__StyleConsumers"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextPathStartData | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextPathStartData/",
     "path": "/docs/plugins/api/TextPathStartData/",
     "slug": "docs__plugins__api__TextPathStartData"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextReviewEvent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextReviewEvent/",
     "path": "/docs/plugins/api/TextReviewEvent/",
     "slug": "docs__plugins__api__TextReviewEvent"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextReviewRange | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextReviewRange/",
     "path": "/docs/plugins/api/TextReviewRange/",
     "slug": "docs__plugins__api__TextReviewRange"
   },
   {
+    "dataset": "plugin-api",
     "title": "TextStyleOverrides | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TextStyleOverrides/",
     "path": "/docs/plugins/api/TextStyleOverrides/",
     "slug": "docs__plugins__api__TextStyleOverrides"
   },
   {
+    "dataset": "plugin-api",
     "title": "Transition | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Transition/",
     "path": "/docs/plugins/api/Transition/",
     "slug": "docs__plugins__api__Transition"
   },
   {
+    "dataset": "plugin-api",
     "title": "TransformModifier | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/TransformModifier/",
     "path": "/docs/plugins/api/TransformModifier/",
     "slug": "docs__plugins__api__TransformModifier"
   },
   {
+    "dataset": "plugin-api",
     "title": "Trigger | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Trigger/",
     "path": "/docs/plugins/api/Trigger/",
     "slug": "docs__plugins__api__Trigger"
   },
   {
+    "dataset": "plugin-api",
     "title": "User | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/User/",
     "path": "/docs/plugins/api/User/",
     "slug": "docs__plugins__api__User"
   },
   {
+    "dataset": "plugin-api",
     "title": "LibraryVariable | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/LibraryVariable/",
     "path": "/docs/plugins/api/LibraryVariable/",
     "slug": "docs__plugins__api__LibraryVariable"
   },
   {
+    "dataset": "plugin-api",
     "title": "Video | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Video/",
     "path": "/docs/plugins/api/Video/",
     "slug": "docs__plugins__api__Video"
   },
   {
+    "dataset": "plugin-api",
     "title": "BaseStyle | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/BaseStyle/",
     "path": "/docs/plugins/api/BaseStyle/",
     "slug": "docs__plugins__api__BaseStyle"
   },
   {
+    "dataset": "plugin-api",
     "title": "importVariableByKeyAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-importvariablebykeyasync/",
     "path": "/docs/plugins/api/properties/figma-variables-importvariablebykeyasync/",
     "slug": "docs__plugins__api__properties__figma-variables-importvariablebykeyasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "findAll | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/DocumentNode-findall/",
     "path": "/docs/plugins/api/properties/DocumentNode-findall/",
     "slug": "docs__plugins__api__properties__DocumentNode-findall"
   },
   {
+    "dataset": "plugin-api",
     "title": "findOne | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/DocumentNode-findone/",
     "path": "/docs/plugins/api/properties/DocumentNode-findone/",
     "slug": "docs__plugins__api__properties__DocumentNode-findone"
   },
   {
+    "dataset": "plugin-api",
     "title": "findWidgetNodesByWidgetId | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/DocumentNode-findwidgetnodesbywidgetid/",
     "path": "/docs/plugins/api/properties/DocumentNode-findwidgetnodesbywidgetid/",
     "slug": "docs__plugins__api__properties__DocumentNode-findwidgetnodesbywidgetid"
   },
   {
+    "dataset": "plugin-api",
     "title": "swapComponent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/InstanceNode-swapcomponent/",
     "path": "/docs/plugins/api/properties/InstanceNode-swapcomponent/",
     "slug": "docs__plugins__api__properties__InstanceNode-swapcomponent"
   },
   {
+    "dataset": "plugin-api",
     "title": "scaleFactor | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/InstanceNode-scalefactor/",
     "path": "/docs/plugins/api/properties/InstanceNode-scalefactor/",
     "slug": "docs__plugins__api__properties__InstanceNode-scalefactor"
   },
   {
+    "dataset": "plugin-api",
     "title": "postMessage | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-ui-postmessage/",
     "path": "/docs/plugins/api/properties/figma-ui-postmessage/",
     "slug": "docs__plugins__api__properties__figma-ui-postmessage"
   },
   {
+    "dataset": "plugin-api",
     "title": "onmessage | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-ui-onmessage/",
     "path": "/docs/plugins/api/properties/figma-ui-onmessage/",
     "slug": "docs__plugins__api__properties__figma-ui-onmessage"
   },
   {
+    "dataset": "plugin-api",
     "title": "on | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-ui-on/",
     "path": "/docs/plugins/api/properties/figma-ui-on/",
     "slug": "docs__plugins__api__properties__figma-ui-on"
   },
   {
+    "dataset": "plugin-api",
     "title": "rgb | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-rgb/",
     "path": "/docs/plugins/api/properties/figma-util-rgb/",
     "slug": "docs__plugins__api__properties__figma-util-rgb"
   },
   {
+    "dataset": "plugin-api",
     "title": "rgba | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-rgba/",
     "path": "/docs/plugins/api/properties/figma-util-rgba/",
     "slug": "docs__plugins__api__properties__figma-util-rgba"
   },
   {
+    "dataset": "plugin-api",
     "title": "solidPaint | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-solidpaint/",
     "path": "/docs/plugins/api/properties/figma-util-solidpaint/",
     "slug": "docs__plugins__api__properties__figma-util-solidpaint"
   },
   {
+    "dataset": "plugin-api",
     "title": "normalizeMarkdown | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-normalizemarkdown/",
     "path": "/docs/plugins/api/properties/figma-util-normalizemarkdown/",
     "slug": "docs__plugins__api__properties__figma-util-normalizemarkdown"
   },
   {
+    "dataset": "plugin-api",
     "title": "colors | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-constants-colors/",
     "path": "/docs/plugins/api/properties/figma-constants-colors/",
     "slug": "docs__plugins__api__properties__figma-constants-colors"
   },
   {
+    "dataset": "plugin-api",
     "title": "on | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-codegen-on/",
     "path": "/docs/plugins/api/properties/figma-codegen-on/",
     "slug": "docs__plugins__api__properties__figma-codegen-on"
   },
   {
+    "dataset": "plugin-api",
     "title": "zoom | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-viewport-zoom/",
     "path": "/docs/plugins/api/properties/figma-viewport-zoom/",
     "slug": "docs__plugins__api__properties__figma-viewport-zoom"
   },
   {
+    "dataset": "plugin-api",
     "title": "slidesView | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-viewport-slidesview/",
     "path": "/docs/plugins/api/properties/figma-viewport-slidesview/",
     "slug": "docs__plugins__api__properties__figma-viewport-slidesview"
   },
   {
+    "dataset": "plugin-api",
     "title": "canvasView | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-viewport-canvasview/",
     "path": "/docs/plugins/api/properties/figma-viewport-canvasview/",
     "slug": "docs__plugins__api__properties__figma-viewport-canvasview"
   },
   {
+    "dataset": "plugin-api",
     "title": "getVariableByIdAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getvariablebyidasync/",
     "path": "/docs/plugins/api/properties/figma-variables-getvariablebyidasync/",
     "slug": "docs__plugins__api__properties__figma-variables-getvariablebyidasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "getVariableById | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getvariablebyid/",
     "path": "/docs/plugins/api/properties/figma-variables-getvariablebyid/",
     "slug": "docs__plugins__api__properties__figma-variables-getvariablebyid"
   },
   {
+    "dataset": "plugin-api",
     "title": "getVariableCollectionByIdAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getvariablecollectionbyidasync/",
     "path": "/docs/plugins/api/properties/figma-variables-getvariablecollectionbyidasync/",
     "slug": "docs__plugins__api__properties__figma-variables-getvariablecollectionbyidasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "getVariableCollectionById | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getvariablecollectionbyid/",
     "path": "/docs/plugins/api/properties/figma-variables-getvariablecollectionbyid/",
     "slug": "docs__plugins__api__properties__figma-variables-getvariablecollectionbyid"
   },
   {
+    "dataset": "plugin-api",
     "title": "getLocalVariablesAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getlocalvariablesasync/",
     "path": "/docs/plugins/api/properties/figma-variables-getlocalvariablesasync/",
     "slug": "docs__plugins__api__properties__figma-variables-getlocalvariablesasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "getLocalVariables | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-getlocalvariables/",
     "path": "/docs/plugins/api/properties/figma-variables-getlocalvariables/",
     "slug": "docs__plugins__api__properties__figma-variables-getlocalvariables"
   },
   {
+    "dataset": "plugin-api",
     "title": "createVariable | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-createvariable/",
     "path": "/docs/plugins/api/properties/figma-variables-createvariable/",
     "slug": "docs__plugins__api__properties__figma-variables-createvariable"
   },
   {
+    "dataset": "plugin-api",
     "title": "createVariableCollection | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-createvariablecollection/",
     "path": "/docs/plugins/api/properties/figma-variables-createvariablecollection/",
     "slug": "docs__plugins__api__properties__figma-variables-createvariablecollection"
   },
   {
+    "dataset": "plugin-api",
     "title": "extendLibraryCollectionByKeyAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-variables-extendlibrarycollectionbykeyasync/",
     "path": "/docs/plugins/api/properties/figma-variables-extendlibrarycollectionbykeyasync/",
     "slug": "docs__plugins__api__properties__figma-variables-extendlibrarycollectionbykeyasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableResolvedDataType | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableResolvedDataType/",
     "path": "/docs/plugins/api/VariableResolvedDataType/",
     "slug": "docs__plugins__api__VariableResolvedDataType"
   },
   {
+    "dataset": "plugin-api",
     "title": "ExtendedVariableCollection | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/ExtendedVariableCollection/",
     "path": "/docs/plugins/api/ExtendedVariableCollection/",
     "slug": "docs__plugins__api__ExtendedVariableCollection"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableBindablePaintField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableBindablePaintField/",
     "path": "/docs/plugins/api/VariableBindablePaintField/",
     "slug": "docs__plugins__api__VariableBindablePaintField"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableBindableEffectField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableBindableEffectField/",
     "path": "/docs/plugins/api/VariableBindableEffectField/",
     "slug": "docs__plugins__api__VariableBindableEffectField"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableBindableLayoutGridField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableBindableLayoutGridField/",
     "path": "/docs/plugins/api/VariableBindableLayoutGridField/",
     "slug": "docs__plugins__api__VariableBindableLayoutGridField"
   },
   {
+    "dataset": "plugin-api",
     "title": "getAvailableLibraryVariableCollectionsAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-teamlibrary-getavailablelibraryvariablecollectionsasync/",
     "path": "/docs/plugins/api/properties/figma-teamlibrary-getavailablelibraryvariablecollectionsasync/",
     "slug": "docs__plugins__api__properties__figma-teamlibrary-getavailablelibraryvariablecollectionsasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "getVariablesInLibraryCollectionAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-teamlibrary-getvariablesinlibrarycollectionasync/",
     "path": "/docs/plugins/api/properties/figma-teamlibrary-getvariablesinlibrarycollectionasync/",
     "slug": "docs__plugins__api__properties__figma-teamlibrary-getvariablesinlibrarycollectionasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "LibraryVariableCollection | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/LibraryVariableCollection/",
     "path": "/docs/plugins/api/LibraryVariableCollection/",
     "slug": "docs__plugins__api__LibraryVariableCollection"
   },
   {
+    "dataset": "plugin-api",
     "title": "getAnnotationCategoryByIdAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-annotations-getannotationcategorybyidasync/",
     "path": "/docs/plugins/api/properties/figma-annotations-getannotationcategorybyidasync/",
     "slug": "docs__plugins__api__properties__figma-annotations-getannotationcategorybyidasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "addAnnotationCategoryAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-annotations-addannotationcategoryasync/",
     "path": "/docs/plugins/api/properties/figma-annotations-addannotationcategoryasync/",
     "slug": "docs__plugins__api__properties__figma-annotations-addannotationcategoryasync"
   },
   {
+    "dataset": "plugin-api",
     "title": "createFrame | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-createframe/",
     "path": "/docs/plugins/api/properties/figma-buzz-createframe/",
     "slug": "docs__plugins__api__properties__figma-buzz-createframe"
   },
   {
+    "dataset": "plugin-api",
     "title": "createInstance | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-createinstance/",
     "path": "/docs/plugins/api/properties/figma-buzz-createinstance/",
     "slug": "docs__plugins__api__properties__figma-buzz-createinstance"
   },
   {
+    "dataset": "plugin-api",
     "title": "getBuzzAssetTypeForNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-getbuzzassettypefornode/",
     "path": "/docs/plugins/api/properties/figma-buzz-getbuzzassettypefornode/",
     "slug": "docs__plugins__api__properties__figma-buzz-getbuzzassettypefornode"
   },
   {
+    "dataset": "plugin-api",
     "title": "setBuzzAssetTypeForNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-setbuzzassettypefornode/",
     "path": "/docs/plugins/api/properties/figma-buzz-setbuzzassettypefornode/",
     "slug": "docs__plugins__api__properties__figma-buzz-setbuzzassettypefornode"
   },
   {
+    "dataset": "plugin-api",
     "title": "getTextContent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-gettextcontent/",
     "path": "/docs/plugins/api/properties/figma-buzz-gettextcontent/",
     "slug": "docs__plugins__api__properties__figma-buzz-gettextcontent"
   },
   {
+    "dataset": "plugin-api",
     "title": "getMediaContent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-getmediacontent/",
     "path": "/docs/plugins/api/properties/figma-buzz-getmediacontent/",
     "slug": "docs__plugins__api__properties__figma-buzz-getmediacontent"
   },
   {
+    "dataset": "plugin-api",
     "title": "smartResize | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-buzz-smartresize/",
     "path": "/docs/plugins/api/properties/figma-buzz-smartresize/",
     "slug": "docs__plugins__api__properties__figma-buzz-smartresize"
   },
   {
+    "dataset": "plugin-api",
     "title": "on | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-on/",
     "path": "/docs/plugins/api/properties/PageNode-on/",
     "slug": "docs__plugins__api__properties__PageNode-on"
   },
   {
+    "dataset": "plugin-api",
     "title": "rotation | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/ConnectorNode-rotation/",
     "path": "/docs/plugins/api/properties/ConnectorNode-rotation/",
     "slug": "docs__plugins__api__properties__ConnectorNode-rotation"
   },
   {
+    "dataset": "plugin-api",
     "title": "findChildren | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/DocumentNode-findchildren/",
     "path": "/docs/plugins/api/properties/DocumentNode-findchildren/",
     "slug": "docs__plugins__api__properties__DocumentNode-findchildren"
   },
   {
+    "dataset": "plugin-api",
     "title": "findChild | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/DocumentNode-findchild/",
     "path": "/docs/plugins/api/properties/DocumentNode-findchild/",
     "slug": "docs__plugins__api__properties__DocumentNode-findchild"
   },
   {
+    "dataset": "plugin-api",
     "title": "resize | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/MediaNode-resize/",
     "path": "/docs/plugins/api/properties/MediaNode-resize/",
     "slug": "docs__plugins__api__properties__MediaNode-resize"
   },
   {
+    "dataset": "plugin-api",
     "title": "resizeWithoutConstraints | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/MediaNode-resizewithoutconstraints/",
     "path": "/docs/plugins/api/properties/MediaNode-resizewithoutconstraints/",
     "slug": "docs__plugins__api__properties__MediaNode-resizewithoutconstraints"
   },
   {
+    "dataset": "plugin-api",
     "title": "guides | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-guides/",
     "path": "/docs/plugins/api/properties/PageNode-guides/",
     "slug": "docs__plugins__api__properties__PageNode-guides"
   },
   {
+    "dataset": "plugin-api",
     "title": "selection | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-selection/",
     "path": "/docs/plugins/api/properties/PageNode-selection/",
     "slug": "docs__plugins__api__properties__PageNode-selection"
   },
   {
+    "dataset": "plugin-api",
     "title": "selectedTextRange | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-selectedtextrange/",
     "path": "/docs/plugins/api/properties/PageNode-selectedtextrange/",
     "slug": "docs__plugins__api__properties__PageNode-selectedtextrange"
   },
   {
+    "dataset": "plugin-api",
     "title": "flowStartingPoints | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-flowstartingpoints/",
     "path": "/docs/plugins/api/properties/PageNode-flowstartingpoints/",
     "slug": "docs__plugins__api__properties__PageNode-flowstartingpoints"
   },
   {
+    "dataset": "plugin-api",
     "title": "off | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-off/",
     "path": "/docs/plugins/api/properties/PageNode-off/",
     "slug": "docs__plugins__api__properties__PageNode-off"
   },
   {
+    "dataset": "plugin-api",
     "title": "focusedSlide | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-focusedslide/",
     "path": "/docs/plugins/api/properties/PageNode-focusedslide/",
     "slug": "docs__plugins__api__properties__PageNode-focusedslide"
   },
   {
+    "dataset": "plugin-api",
     "title": "focusedNode | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/PageNode-focusednode/",
     "path": "/docs/plugins/api/properties/PageNode-focusednode/",
     "slug": "docs__plugins__api__properties__PageNode-focusednode"
   },
   {
+    "dataset": "plugin-api",
     "title": "resizeWithoutConstraints | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/SectionNode-resizewithoutconstraints/",
     "path": "/docs/plugins/api/properties/SectionNode-resizewithoutconstraints/",
     "slug": "docs__plugins__api__properties__SectionNode-resizewithoutconstraints"
   },
   {
+    "dataset": "plugin-api",
     "title": "rotation | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/ShapeWithTextNode-rotation/",
     "path": "/docs/plugins/api/properties/ShapeWithTextNode-rotation/",
     "slug": "docs__plugins__api__properties__ShapeWithTextNode-rotation"
   },
   {
+    "dataset": "plugin-api",
     "title": "resize | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/ShapeWithTextNode-resize/",
     "path": "/docs/plugins/api/properties/ShapeWithTextNode-resize/",
     "slug": "docs__plugins__api__properties__ShapeWithTextNode-resize"
   },
   {
+    "dataset": "plugin-api",
     "title": "rescale | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/ShapeWithTextNode-rescale/",
     "path": "/docs/plugins/api/properties/ShapeWithTextNode-rescale/",
     "slug": "docs__plugins__api__properties__ShapeWithTextNode-rescale"
   },
   {
+    "dataset": "plugin-api",
     "title": "cellAt | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-cellat/",
     "path": "/docs/plugins/api/properties/TableNode-cellat/",
     "slug": "docs__plugins__api__properties__TableNode-cellat"
   },
   {
+    "dataset": "plugin-api",
     "title": "insertRow | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-insertrow/",
     "path": "/docs/plugins/api/properties/TableNode-insertrow/",
     "slug": "docs__plugins__api__properties__TableNode-insertrow"
   },
   {
+    "dataset": "plugin-api",
     "title": "insertColumn | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-insertcolumn/",
     "path": "/docs/plugins/api/properties/TableNode-insertcolumn/",
     "slug": "docs__plugins__api__properties__TableNode-insertcolumn"
   },
   {
+    "dataset": "plugin-api",
     "title": "removeRow | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-removerow/",
     "path": "/docs/plugins/api/properties/TableNode-removerow/",
     "slug": "docs__plugins__api__properties__TableNode-removerow"
   },
   {
+    "dataset": "plugin-api",
     "title": "removeColumn | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-removecolumn/",
     "path": "/docs/plugins/api/properties/TableNode-removecolumn/",
     "slug": "docs__plugins__api__properties__TableNode-removecolumn"
   },
   {
+    "dataset": "plugin-api",
     "title": "moveRow | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-moverow/",
     "path": "/docs/plugins/api/properties/TableNode-moverow/",
     "slug": "docs__plugins__api__properties__TableNode-moverow"
   },
   {
+    "dataset": "plugin-api",
     "title": "moveColumn | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-movecolumn/",
     "path": "/docs/plugins/api/properties/TableNode-movecolumn/",
     "slug": "docs__plugins__api__properties__TableNode-movecolumn"
   },
   {
+    "dataset": "plugin-api",
     "title": "resizeRow | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-resizerow/",
     "path": "/docs/plugins/api/properties/TableNode-resizerow/",
     "slug": "docs__plugins__api__properties__TableNode-resizerow"
   },
   {
+    "dataset": "plugin-api",
     "title": "resizeColumn | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TableNode-resizecolumn/",
     "path": "/docs/plugins/api/properties/TableNode-resizecolumn/",
     "slug": "docs__plugins__api__properties__TableNode-resizecolumn"
   },
   {
+    "dataset": "plugin-api",
     "title": "textAutoResize | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-textautoresize/",
     "path": "/docs/plugins/api/properties/TextNode-textautoresize/",
     "slug": "docs__plugins__api__properties__TextNode-textautoresize"
   },
   {
+    "dataset": "plugin-api",
     "title": "textTruncation | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-texttruncation/",
     "path": "/docs/plugins/api/properties/TextNode-texttruncation/",
     "slug": "docs__plugins__api__properties__TextNode-texttruncation"
   },
   {
+    "dataset": "plugin-api",
     "title": "maxLines | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-maxlines/",
     "path": "/docs/plugins/api/properties/TextNode-maxlines/",
     "slug": "docs__plugins__api__properties__TextNode-maxlines"
   },
   {
+    "dataset": "plugin-api",
     "title": "autoRename | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-autorename/",
     "path": "/docs/plugins/api/properties/TextNode-autorename/",
     "slug": "docs__plugins__api__properties__TextNode-autorename"
   },
   {
+    "dataset": "plugin-api",
     "title": "autoRename | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextPathNode-autorename/",
     "path": "/docs/plugins/api/properties/TextPathNode-autorename/",
     "slug": "docs__plugins__api__properties__TextPathNode-autorename"
   },
   {
+    "dataset": "plugin-api",
     "title": "cloneWidget | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/WidgetNode-clonewidget/",
     "path": "/docs/plugins/api/properties/WidgetNode-clonewidget/",
     "slug": "docs__plugins__api__properties__WidgetNode-clonewidget"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableBindablePaintStyleField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableBindablePaintStyleField/",
     "path": "/docs/plugins/api/VariableBindablePaintStyleField/",
     "slug": "docs__plugins__api__VariableBindablePaintStyleField"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableBindableEffectStyleField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableBindableEffectStyleField/",
     "path": "/docs/plugins/api/VariableBindableEffectStyleField/",
     "slug": "docs__plugins__api__VariableBindableEffectStyleField"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableBindableGridStyleField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableBindableGridStyleField/",
     "path": "/docs/plugins/api/VariableBindableGridStyleField/",
     "slug": "docs__plugins__api__VariableBindableGridStyleField"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableBindableColorStopField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableBindableColorStopField/",
     "path": "/docs/plugins/api/VariableBindableColorStopField/",
     "slug": "docs__plugins__api__VariableBindableColorStopField"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableScope | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableScope/",
     "path": "/docs/plugins/api/VariableScope/",
     "slug": "docs__plugins__api__VariableScope"
   },
   {
+    "dataset": "plugin-api",
     "title": "VariableValue | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableValue/",
     "path": "/docs/plugins/api/VariableValue/",
     "slug": "docs__plugins__api__VariableValue"
   },
   {
+    "dataset": "plugin-api",
     "title": "setBoundVariable | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextStyle-setboundvariable/",
     "path": "/docs/plugins/api/properties/TextStyle-setboundvariable/",
     "slug": "docs__plugins__api__properties__TextStyle-setboundvariable"
   },
   {
+    "dataset": "plugin-api",
     "title": "setVariableCodeSyntax | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/Variable-setvariablecodesyntax/",
     "path": "/docs/plugins/api/properties/Variable-setvariablecodesyntax/",
     "slug": "docs__plugins__api__properties__Variable-setvariablecodesyntax"
   },
   {
+    "dataset": "plugin-api",
     "title": "data | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/VectorPath-data/",
     "path": "/docs/plugins/api/properties/VectorPath-data/",
     "slug": "docs__plugins__api__properties__VectorPath-data"
   },
   {
+    "dataset": "plugin-api",
     "title": "windingRule | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/VectorPath-windingrule/",
     "path": "/docs/plugins/api/properties/VectorPath-windingrule/",
     "slug": "docs__plugins__api__properties__VectorPath-windingrule"
   },
   {
+    "dataset": "plugin-api",
     "title": "hiddenFromPublishing | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/Variable-hiddenfrompublishing/",
     "path": "/docs/plugins/api/properties/Variable-hiddenfrompublishing/",
     "slug": "docs__plugins__api__properties__Variable-hiddenfrompublishing"
   },
   {
+    "dataset": "plugin-api",
     "title": "resolveForConsumer | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/Variable-resolveforconsumer/",
     "path": "/docs/plugins/api/properties/Variable-resolveforconsumer/",
     "slug": "docs__plugins__api__properties__Variable-resolveforconsumer"
   },
   {
+    "dataset": "plugin-api",
     "title": "scopes | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/Variable-scopes/",
     "path": "/docs/plugins/api/properties/Variable-scopes/",
     "slug": "docs__plugins__api__properties__Variable-scopes"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Introduction | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/",
+    "path": "/docs/widgets/",
+    "slug": "docs__widgets"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Prerequisites | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/prerequisites/",
+    "path": "/docs/widgets/prerequisites/",
+    "slug": "docs__widgets__prerequisites"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Setup Guide | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/setup-guide/",
+    "path": "/docs/widgets/setup-guide/",
+    "slug": "docs__widgets__setup-guide"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Widgets vs Plugins | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/widgets-vs-plugins/",
+    "path": "/docs/widgets/widgets-vs-plugins/",
+    "slug": "docs__widgets__widgets-vs-plugins"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Figma and FigJam Widgets | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/figma-figjam-widgets/",
+    "path": "/docs/widgets/figma-figjam-widgets/",
+    "slug": "docs__widgets__figma-figjam-widgets"
+  },
+  {
+    "dataset": "widgets",
+    "title": "How Widgets Run | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/how-widgets-run/",
+    "path": "/docs/widgets/how-widgets-run/",
+    "slug": "docs__widgets__how-widgets-run"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Widget State & Multiplayer | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/widget-state-and-multiplayer/",
+    "path": "/docs/widgets/widget-state-and-multiplayer/",
+    "slug": "docs__widgets__widget-state-and-multiplayer"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Stability and Updates | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/stability-and-updates/",
+    "path": "/docs/widgets/stability-and-updates/",
+    "slug": "docs__widgets__stability-and-updates"
+  },
+  {
+    "dataset": "widgets",
+    "title": "API Reference | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/api-reference/",
+    "path": "/docs/widgets/api/api-reference/",
+    "slug": "docs__widgets__api__api-reference"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Handling User Events | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/handling-user-events/",
+    "path": "/docs/widgets/handling-user-events/",
+    "slug": "docs__widgets__handling-user-events"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Using the Plugin API | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/using-the-plugin-api/",
+    "path": "/docs/widgets/using-the-plugin-api/",
+    "slug": "docs__widgets__using-the-plugin-api"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Setting Editor Type | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/setting-editor-type/",
+    "path": "/docs/widgets/setting-editor-type/",
+    "slug": "docs__widgets__setting-editor-type"
+  },
+  {
+    "dataset": "widgets",
+    "title": "useStickable | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/properties/widget-usestickable/",
+    "path": "/docs/widgets/api/properties/widget-usestickable/",
+    "slug": "docs__widgets__api__properties__widget-usestickable"
+  },
+  {
+    "dataset": "widgets",
+    "title": "useStickableHost | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/properties/widget-usestickablehost/",
+    "path": "/docs/widgets/api/properties/widget-usestickablehost/",
+    "slug": "docs__widgets__api__properties__widget-usestickablehost"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Widget State | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/widget-state/",
+    "path": "/docs/widgets/widget-state/",
+    "slug": "docs__widgets__widget-state"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Prototyping Widget UI | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/prototyping-widget-ui/",
+    "path": "/docs/widgets/prototyping-widget-ui/",
+    "slug": "docs__widgets__prototyping-widget-ui"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Working with Widgets | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/working-with-widgets/",
+    "path": "/docs/widgets/working-with-widgets/",
+    "slug": "docs__widgets__working-with-widgets"
+  },
+  {
+    "dataset": "widgets",
+    "title": "useSyncedState | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/properties/widget-usesyncedstate/",
+    "path": "/docs/widgets/api/properties/widget-usesyncedstate/",
+    "slug": "docs__widgets__api__properties__widget-usesyncedstate"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Widget Manifest | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/widget-manifest/",
+    "path": "/docs/widgets/widget-manifest/",
+    "slug": "docs__widgets__widget-manifest"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Making Network Requests | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/making-network-requests/",
+    "path": "/docs/widgets/making-network-requests/",
+    "slug": "docs__widgets__making-network-requests"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Text Editing | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/text-editing/",
+    "path": "/docs/widgets/text-editing/",
+    "slug": "docs__widgets__text-editing"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Working with Lists | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/working-with-lists/",
+    "path": "/docs/widgets/working-with-lists/",
+    "slug": "docs__widgets__working-with-lists"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Working with Variables | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/working-with-variables/",
+    "path": "/docs/widgets/working-with-variables/",
+    "slug": "docs__widgets__working-with-variables"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Images in Widgets | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/images-in-widgets/",
+    "path": "/docs/widgets/images-in-widgets/",
+    "slug": "docs__widgets__images-in-widgets"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Managing Multiple Widgets | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/managing-multiple-widgets/",
+    "path": "/docs/widgets/managing-multiple-widgets/",
+    "slug": "docs__widgets__managing-multiple-widgets"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Adding Hover States | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/adding-hover-states/",
+    "path": "/docs/widgets/adding-hover-states/",
+    "slug": "docs__widgets__adding-hover-states"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Undo/Redo for Widgets | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/undo-redo/",
+    "path": "/docs/widgets/undo-redo/",
+    "slug": "docs__widgets__undo-redo"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Best Practices | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/best-practices/",
+    "path": "/docs/widgets/best-practices/",
+    "slug": "docs__widgets__best-practices"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Testing | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/testing/",
+    "path": "/docs/widgets/testing/",
+    "slug": "docs__widgets__testing"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Samples | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/samples/",
+    "path": "/docs/widgets/samples/",
+    "slug": "docs__widgets__samples"
+  },
+  {
+    "dataset": "widgets",
+    "title": "What's Supported | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/whats-supported/",
+    "path": "/docs/widgets/whats-supported/",
+    "slug": "docs__widgets__whats-supported"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Get Help | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/get-help/",
+    "path": "/docs/widgets/get-help/",
+    "slug": "docs__widgets__get-help"
+  },
+  {
+    "dataset": "widgets",
+    "title": "The Typings File | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/typings/",
+    "path": "/docs/widgets/api/typings/",
+    "slug": "docs__widgets__api__typings"
+  },
+  {
+    "dataset": "widgets",
+    "title": "figma.widget | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/figma-widget/",
+    "path": "/docs/widgets/api/figma-widget/",
+    "slug": "docs__widgets__api__figma-widget"
+  },
+  {
+    "dataset": "widgets",
+    "title": "<AutoLayout /> | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/component-AutoLayout/",
+    "path": "/docs/widgets/api/component-AutoLayout/",
+    "slug": "docs__widgets__api__component-AutoLayout"
+  },
+  {
+    "dataset": "widgets",
+    "title": "AlignItems | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-AlignItems/",
+    "path": "/docs/widgets/api/type-AlignItems/",
+    "slug": "docs__widgets__api__type-AlignItems"
+  },
+  {
+    "dataset": "widgets",
+    "title": "<Frame /> | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/component-Frame/",
+    "path": "/docs/widgets/api/component-Frame/",
+    "slug": "docs__widgets__api__component-Frame"
+  },
+  {
+    "dataset": "widgets",
+    "title": "<Text /> | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/component-Text/",
+    "path": "/docs/widgets/api/component-Text/",
+    "slug": "docs__widgets__api__component-Text"
+  },
+  {
+    "dataset": "widgets",
+    "title": "<Rectangle /> | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/component-Rectangle/",
+    "path": "/docs/widgets/api/component-Rectangle/",
+    "slug": "docs__widgets__api__component-Rectangle"
+  },
+  {
+    "dataset": "widgets",
+    "title": "<Image /> | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/component-Image/",
+    "path": "/docs/widgets/api/component-Image/",
+    "slug": "docs__widgets__api__component-Image"
+  },
+  {
+    "dataset": "widgets",
+    "title": "<Ellipse /> | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/component-Ellipse/",
+    "path": "/docs/widgets/api/component-Ellipse/",
+    "slug": "docs__widgets__api__component-Ellipse"
+  },
+  {
+    "dataset": "widgets",
+    "title": "<SVG /> | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/component-SVG/",
+    "path": "/docs/widgets/api/component-SVG/",
+    "slug": "docs__widgets__api__component-SVG"
+  },
+  {
+    "dataset": "widgets",
+    "title": "<Line /> | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/component-Line/",
+    "path": "/docs/widgets/api/component-Line/",
+    "slug": "docs__widgets__api__component-Line"
+  },
+  {
+    "dataset": "widgets",
+    "title": "<Input /> | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/component-Input/",
+    "path": "/docs/widgets/api/component-Input/",
+    "slug": "docs__widgets__api__component-Input"
+  },
+  {
+    "dataset": "widgets",
+    "title": "<Fragment /> | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/component-Fragment/",
+    "path": "/docs/widgets/api/component-Fragment/",
+    "slug": "docs__widgets__api__component-Fragment"
+  },
+  {
+    "dataset": "widgets",
+    "title": "<Span /> | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/component-Span/",
+    "path": "/docs/widgets/api/component-Span/",
+    "slug": "docs__widgets__api__component-Span"
+  },
+  {
+    "dataset": "widgets",
+    "title": "register | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/properties/widget-register/",
+    "path": "/docs/widgets/api/properties/widget-register/",
+    "slug": "docs__widgets__api__properties__widget-register"
+  },
+  {
+    "dataset": "widgets",
+    "title": "waitForTask | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/properties/widget-waitfortask/",
+    "path": "/docs/widgets/api/properties/widget-waitfortask/",
+    "slug": "docs__widgets__api__properties__widget-waitfortask"
+  },
+  {
+    "dataset": "widgets",
+    "title": "colorMapToOptions | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/properties/widget-colormaptooptions/",
+    "path": "/docs/widgets/api/properties/widget-colormaptooptions/",
+    "slug": "docs__widgets__api__properties__widget-colormaptooptions"
+  },
+  {
+    "dataset": "widgets",
+    "title": "useEffect | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/properties/widget-useeffect/",
+    "path": "/docs/widgets/api/properties/widget-useeffect/",
+    "slug": "docs__widgets__api__properties__widget-useeffect"
+  },
+  {
+    "dataset": "widgets",
+    "title": "usePropertyMenu | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/properties/widget-usepropertymenu/",
+    "path": "/docs/widgets/api/properties/widget-usepropertymenu/",
+    "slug": "docs__widgets__api__properties__widget-usepropertymenu"
+  },
+  {
+    "dataset": "widgets",
+    "title": "useSyncedMap | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/properties/widget-usesyncedmap/",
+    "path": "/docs/widgets/api/properties/widget-usesyncedmap/",
+    "slug": "docs__widgets__api__properties__widget-usesyncedmap"
+  },
+  {
+    "dataset": "widgets",
+    "title": "useWidgetId | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/properties/widget-usewidgetid/",
+    "path": "/docs/widgets/api/properties/widget-usewidgetid/",
+    "slug": "docs__widgets__api__properties__widget-usewidgetid"
+  },
+  {
+    "dataset": "widgets",
+    "title": "WidgetStuckEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-WidgetStuckEvent/",
+    "path": "/docs/widgets/api/type-WidgetStuckEvent/",
+    "slug": "docs__widgets__api__type-WidgetStuckEvent"
+  },
+  {
+    "dataset": "widgets",
+    "title": "WidgetAttachedStickablesChangedEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-WidgetAttachedStickablesChangedEvent/",
+    "path": "/docs/widgets/api/type-WidgetAttachedStickablesChangedEvent/",
+    "slug": "docs__widgets__api__type-WidgetAttachedStickablesChangedEvent"
+  },
+  {
+    "dataset": "widgets",
+    "title": "HoverStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-HoverStyle/",
+    "path": "/docs/widgets/api/type-HoverStyle/",
+    "slug": "docs__widgets__api__type-HoverStyle"
+  },
+  {
+    "dataset": "widgets",
+    "title": "SyncedMap | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-SyncedMap/",
+    "path": "/docs/widgets/api/type-SyncedMap/",
+    "slug": "docs__widgets__api__type-SyncedMap"
+  },
+  {
+    "dataset": "widgets",
+    "title": "PropertyMenu | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-PropertyMenu/",
+    "path": "/docs/widgets/api/type-PropertyMenu/",
+    "slug": "docs__widgets__api__type-PropertyMenu"
+  },
+  {
+    "dataset": "widgets",
+    "title": "WidgetClickEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-WidgetClickEvent/",
+    "path": "/docs/widgets/api/type-WidgetClickEvent/",
+    "slug": "docs__widgets__api__type-WidgetClickEvent"
+  },
+  {
+    "dataset": "widgets",
+    "title": "BlendMode | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-BlendMode/",
+    "path": "/docs/widgets/api/type-BlendMode/",
+    "slug": "docs__widgets__api__type-BlendMode"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Effect | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-Effect/",
+    "path": "/docs/widgets/api/type-Effect/",
+    "slug": "docs__widgets__api__type-Effect"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Constraint | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-Constraint/",
+    "path": "/docs/widgets/api/type-Constraint/",
+    "slug": "docs__widgets__api__type-Constraint"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Size | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-Size/",
+    "path": "/docs/widgets/api/type-Size/",
+    "slug": "docs__widgets__api__type-Size"
+  },
+  {
+    "dataset": "widgets",
+    "title": "LayoutGap | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-LayoutGap/",
+    "path": "/docs/widgets/api/type-LayoutGap/",
+    "slug": "docs__widgets__api__type-LayoutGap"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Padding | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-Padding/",
+    "path": "/docs/widgets/api/type-Padding/",
+    "slug": "docs__widgets__api__type-Padding"
+  },
+  {
+    "dataset": "widgets",
+    "title": "CornerRadius | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-CornerRadius/",
+    "path": "/docs/widgets/api/type-CornerRadius/",
+    "slug": "docs__widgets__api__type-CornerRadius"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Color | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-Color/",
+    "path": "/docs/widgets/api/type-Color/",
+    "slug": "docs__widgets__api__type-Color"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Paint | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-Paint/",
+    "path": "/docs/widgets/api/type-Paint/",
+    "slug": "docs__widgets__api__type-Paint"
+  },
+  {
+    "dataset": "widgets",
+    "title": "SolidPaint | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-SolidPaint/",
+    "path": "/docs/widgets/api/type-SolidPaint/",
+    "slug": "docs__widgets__api__type-SolidPaint"
+  },
+  {
+    "dataset": "widgets",
+    "title": "GradientPaint | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-GradientPaint/",
+    "path": "/docs/widgets/api/type-GradientPaint/",
+    "slug": "docs__widgets__api__type-GradientPaint"
+  },
+  {
+    "dataset": "widgets",
+    "title": "StrokeAlign | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-StrokeAlign/",
+    "path": "/docs/widgets/api/type-StrokeAlign/",
+    "slug": "docs__widgets__api__type-StrokeAlign"
+  },
+  {
+    "dataset": "widgets",
+    "title": "ArcData | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-ArcData/",
+    "path": "/docs/widgets/api/type-ArcData/",
+    "slug": "docs__widgets__api__type-ArcData"
+  },
+  {
+    "dataset": "widgets",
+    "title": "FontWeight | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-FontWeight/",
+    "path": "/docs/widgets/api/type-FontWeight/",
+    "slug": "docs__widgets__api__type-FontWeight"
+  },
+  {
+    "dataset": "widgets",
+    "title": "ImagePaint | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-ImagePaint/",
+    "path": "/docs/widgets/api/type-ImagePaint/",
+    "slug": "docs__widgets__api__type-ImagePaint"
+  },
+  {
+    "dataset": "widgets",
+    "title": "PlaceholderProps | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-PlaceholderProps/",
+    "path": "/docs/widgets/api/type-PlaceholderProps/",
+    "slug": "docs__widgets__api__type-PlaceholderProps"
+  },
+  {
+    "dataset": "widgets",
+    "title": "StrokeCap | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-StrokeCap/",
+    "path": "/docs/widgets/api/type-StrokeCap/",
+    "slug": "docs__widgets__api__type-StrokeCap"
+  },
+  {
+    "dataset": "widgets",
+    "title": "TextEditEvent | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-TextEditEvent/",
+    "path": "/docs/widgets/api/type-TextEditEvent/",
+    "slug": "docs__widgets__api__type-TextEditEvent"
+  },
+  {
+    "dataset": "widgets",
+    "title": "Transform | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-Transform/",
+    "path": "/docs/widgets/api/type-Transform/",
+    "slug": "docs__widgets__api__type-Transform"
   }
 ]

@@ -1,0 +1,18 @@
+{
+  "id": "plugin-api",
+  "label": "Figma Plugin API",
+  "sourceRoot": "https://developers.figma.com/docs/plugins/api/api-reference/",
+  "generatedAt": "2026-03-02T20:47:51.157Z",
+  "startedAt": "2026-03-02T20:45:17.831Z",
+  "pageCount": 411,
+  "chunkCount": 1664,
+  "chunking": {
+    "chunkSizeChars": 2200,
+    "chunkOverlapChars": 220
+  },
+  "files": {
+    "rawPagesDir": "out/raw/plugin-api",
+    "markdownCorpus": "out/llm/figma-plugin-api-corpus.md",
+    "jsonlChunks": "out/llm/figma-plugin-api-chunks.jsonl"
+  }
+}
