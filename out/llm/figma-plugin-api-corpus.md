@@ -7028,6 +7028,30 @@ This API is only available in Figma Slides
 
 * * *
 
+### [getDocumentThemes](/docs/plugins/api/properties/figma-getdocumentthemes/)(): [Theme](/docs/plugins/api/Theme/)\[\]
+
+info
+
+This API is only available in Figma Slides
+
+Returns all [`Theme`](/docs/plugins/api/Theme/)s in the current document.
+
+Each theme contains references to its color variables and text/grid styles, which can be resolved using the existing Variables and Styles APIs.
+
+[View more →](/docs/plugins/api/properties/figma-getdocumentthemes/)
+
+* * *
+
+### getDocumentThemesAsync(): Promise<[Theme](/docs/plugins/api/Theme/)\[\]>
+
+info
+
+This API is only available in Figma Slides
+
+Returns all [`Theme`](/docs/plugins/api/Theme/)s in the current document. This is the async version of [`figma.getDocumentThemes`](/docs/plugins/api/properties/figma-getdocumentthemes/).
+
+* * *
+
 ## Canvas Grid​
 
 ### [getCanvasGrid](/docs/plugins/api/properties/figma-getcanvasgrid/)(): Array<Array<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>>
@@ -13030,15 +13054,64 @@ flatten
 
 Next
 
-getSlideGrid
+getDocumentThemes
 
-](/docs/plugins/api/properties/figma-getslidegrid/)
+](/docs/plugins/api/properties/figma-getdocumentthemes/)
 
 *   Signature
 *   Parameters
     *   node
 *   Remarks
 *   Possible error cases
+
+---
+
+# getDocumentThemes | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-getdocumentthemes/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   getDocumentThemes
+
+# getDocumentThemes
+
+info
+
+This API is only available in Figma Slides
+
+Returns all [`Theme`](/docs/plugins/api/Theme/)s in the current document.
+
+Each theme contains references to its color variables and text/grid styles, which can be resolved using the existing Variables and Styles APIs.
+
+## Signature​
+
+### [getDocumentThemes](/docs/plugins/api/properties/figma-getdocumentthemes/)(): [Theme](/docs/plugins/api/Theme/)\[\]
+
+## Remarks​
+
+```
+const themes = figma.getDocumentThemes()for (const theme of themes) {  console.log(theme.name)  const collection = await figma.variables.getVariableCollectionByIdAsync(theme.variableCollectionId)  // Access theme colors via collection}
+```
+
+[
+
+Previous
+
+ungroup
+
+](/docs/plugins/api/properties/figma-ungroup/)[
+
+Next
+
+getSlideGrid
+
+](/docs/plugins/api/properties/figma-getslidegrid/)
+
+*   Signature
+*   Remarks
 
 ---
 
@@ -13082,9 +13155,9 @@ The returned grid is a 2D array of SlideNodes. For example:
 
 Previous
 
-ungroup
+getDocumentThemes
 
-](/docs/plugins/api/properties/figma-ungroup/)[
+](/docs/plugins/api/properties/figma-getdocumentthemes/)[
 
 Next
 
@@ -24922,9 +24995,11 @@ When in single slide view, the Slide that is currently focused is accessible via
 
 info
 
-This API is only available in Figma Slides and Figma Buzz
+This API is only available in Figma Slides, Figma Buzz, and Dev Mode.
 
-When in Asset View, the Slide/Asset that is currently focused is accessible via this property.
+For Figma Slides and Figma Buzz: When in Asset View, this is the focused slide or asset.
+
+For Dev Mode: This is the node currently focused in Dev Mode focus view. This property is read-only in Dev Mode.
 
 [View more →](/docs/plugins/api/properties/PageNode-focusednode/)
 
@@ -29443,6 +29518,18 @@ Set the [`SlideTransition`](/docs/plugins/api/SlideTransition/) of the slide nod
 ### isSkippedSlide: boolean
 
 Read and set whether or not the slide is skipped in the presentation.
+
+* * *
+
+### themeId: string | null \[readonly\]
+
+info
+
+This API is only available in Figma Slides
+
+The ID of the [`Theme`](/docs/plugins/api/Theme/) applied to this slide.
+
+Use this ID with [`figma.getDocumentThemes`](/docs/plugins/api/properties/figma-getdocumentthemes/) to find the corresponding theme object.
 
 * * *
 
@@ -47181,9 +47268,9 @@ TextStyleOverrides
 
 Next
 
-Transition
+Theme
 
-](/docs/plugins/api/Transition/)
+](/docs/plugins/api/Theme/)
 
 *   Basic traits
 *   Text node traits
@@ -53894,6 +53981,87 @@ TextSublayer
 
 ---
 
+# Theme | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/Theme/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   Theme
+
+# Theme
+
+A `Theme` represents a visual theme in Figma Slides. Each theme groups together a set of color variables and text/grid styles that define a cohesive visual identity for slides.
+
+Use [`figma.getDocumentThemes`](/docs/plugins/api/properties/figma-getdocumentthemes/) to retrieve all themes in the current document:
+
+```
+const themes = figma.getDocumentThemes()for (const theme of themes) {  console.log(theme.name)}
+```
+
+You can resolve a theme's variables and styles using the existing Variables and Styles APIs:
+
+```
+const themes = figma.getDocumentThemes()const theme = themes[0]const collection = await figma.variables.getVariableCollectionByIdAsync(theme.variableCollectionId)
+```
+
+## Theme properties​
+
+### id: string \[readonly\]
+
+The unique identifier for this theme.
+
+* * *
+
+### name: string \[readonly\]
+
+The name of this theme.
+
+* * *
+
+### variableCollectionId: string \[readonly\]
+
+The ID of the [`VariableCollection`](/docs/plugins/api/VariableCollection/) that contains this theme's color variables.
+
+Use [`getVariableCollectionByIdAsync`](/docs/plugins/api/properties/figma-variables-getvariablecollectionbyidasync/) to retrieve the collection.
+
+* * *
+
+### variableIds: readonly string\[\] \[readonly\]
+
+The IDs of the color [`Variable`](/docs/plugins/api/Variable/)s in this theme.
+
+Use [`getVariableByIdAsync`](/docs/plugins/api/properties/figma-variables-getvariablebyidasync/) to retrieve individual variables.
+
+* * *
+
+### styleIds: readonly string\[\] \[readonly\]
+
+The IDs of the styles (text and grid) in this theme.
+
+Use [`figma.getStyleByIdAsync`](/docs/plugins/api/figma/#getstylebyidasync) to retrieve individual styles.
+
+* * *
+
+[
+
+Previous
+
+TextSublayer
+
+](/docs/plugins/api/TextSublayer/)[
+
+Next
+
+Transition
+
+](/docs/plugins/api/Transition/)
+
+*   Theme properties
+
+---
+
 # Transition | Developer Docs
 
 Source: https://developers.figma.com/docs/plugins/api/Transition/
@@ -53921,9 +54089,9 @@ When the easing `type` is `"CUSTOM_SPRING"`, then `easingFunctionSpring` will de
 
 Previous
 
-TextSublayer
+Theme
 
-](/docs/plugins/api/TextSublayer/)[
+](/docs/plugins/api/Theme/)[
 
 Next
 
@@ -57399,9 +57567,11 @@ Source: https://developers.figma.com/docs/plugins/api/properties/PageNode-focuse
 
 info
 
-This API is only available in Figma Slides and Figma Buzz
+This API is only available in Figma Slides, Figma Buzz, and Dev Mode.
 
-When in Asset View, the Slide/Asset that is currently focused is accessible via this property.
+For Figma Slides and Figma Buzz: When in Asset View, this is the focused slide or asset.
+
+For Dev Mode: This is the node currently focused in Dev Mode focus view. This property is read-only in Dev Mode.
 
 Supported on:
 
@@ -57413,7 +57583,7 @@ Supported on:
 
 ## Remarks​
 
-You can also set this via:
+In Figma Slides and Figma Buzz, you can also set this via:
 
 ```
 figma.currentPage.focusedNode = node

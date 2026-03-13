@@ -2,10 +2,10 @@
   "id": "plugin-api",
   "label": "Figma Plugin API",
   "sourceRoot": "https://developers.figma.com/docs/plugins/api/api-reference/",
-  "generatedAt": "2026-03-12T03:53:45.590Z",
-  "startedAt": "2026-03-12T03:51:24.133Z",
-  "pageCount": 411,
-  "chunkCount": 1664,
+  "generatedAt": "2026-03-13T03:53:17.487Z",
+  "startedAt": "2026-03-13T03:51:06.879Z",
+  "pageCount": 413,
+  "chunkCount": 1668,
   "chunking": {
     "chunkSizeChars": 2200,
     "chunkOverlapChars": 220

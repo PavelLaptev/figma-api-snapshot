@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-getdocumentthemes/",
+  "path": "/docs/plugins/api/properties/figma-getdocumentthemes/",
+  "slug": "docs__plugins__api__properties__figma-getdocumentthemes",
+  "title": "getDocumentThemes | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   getDocumentThemes\n\n# getDocumentThemes\n\ninfo\n\nThis API is only available in Figma Slides\n\nReturns all [`Theme`](/docs/plugins/api/Theme/)s in the current document.\n\nEach theme contains references to its color variables and text/grid styles, which can be resolved using the existing Variables and Styles APIs.\n\n## Signature​\n\n### [getDocumentThemes](/docs/plugins/api/properties/figma-getdocumentthemes/)(): [Theme](/docs/plugins/api/Theme/)\\[\\]\n\n## Remarks​\n\n```\nconst themes = figma.getDocumentThemes()for (const theme of themes) {  console.log(theme.name)  const collection = await figma.variables.getVariableCollectionByIdAsync(theme.variableCollectionId)  // Access theme colors via collection}\n```\n\n[\n\nPrevious\n\nungroup\n\n](/docs/plugins/api/properties/figma-ungroup/)[\n\nNext\n\ngetSlideGrid\n\n](/docs/plugins/api/properties/figma-getslidegrid/)\n\n*   Signature\n*   Remarks"
+}
