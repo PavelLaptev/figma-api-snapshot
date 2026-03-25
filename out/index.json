@@ -470,13 +470,6 @@
   },
   {
     "dataset": "plugin-api",
-    "title": "getDocumentThemes | Developer Docs",
-    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-getdocumentthemes/",
-    "path": "/docs/plugins/api/properties/figma-getdocumentthemes/",
-    "slug": "docs__plugins__api__properties__figma-getdocumentthemes"
-  },
-  {
-    "dataset": "plugin-api",
     "title": "getSlideGrid | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-getslidegrid/",
     "path": "/docs/plugins/api/properties/figma-getslidegrid/",
@@ -705,6 +698,13 @@
     "url": "https://developers.figma.com/docs/plugins/api/SlideRowNode/",
     "path": "/docs/plugins/api/SlideRowNode/",
     "slug": "docs__plugins__api__SlideRowNode"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "SlotNode | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/SlotNode/",
+    "path": "/docs/plugins/api/SlotNode/",
+    "slug": "docs__plugins__api__SlotNode"
   },
   {
     "dataset": "plugin-api",
@@ -2210,13 +2210,6 @@
     "url": "https://developers.figma.com/docs/plugins/api/TextStyleOverrides/",
     "path": "/docs/plugins/api/TextStyleOverrides/",
     "slug": "docs__plugins__api__TextStyleOverrides"
-  },
-  {
-    "dataset": "plugin-api",
-    "title": "Theme | Developer Docs",
-    "url": "https://developers.figma.com/docs/plugins/api/Theme/",
-    "path": "/docs/plugins/api/Theme/",
-    "slug": "docs__plugins__api__Theme"
   },
   {
     "dataset": "plugin-api",
