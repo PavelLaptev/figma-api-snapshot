@@ -295,6 +295,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "createAutoLayout | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createautolayout/",
+    "path": "/docs/plugins/api/properties/figma-createautolayout/",
+    "slug": "docs__plugins__api__properties__figma-createautolayout"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "createComponent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createcomponent/",
     "path": "/docs/plugins/api/properties/figma-createcomponent/",

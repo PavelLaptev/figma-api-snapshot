@@ -6869,6 +6869,18 @@ Creates a new frame. The behavior is similar to using the `F` shortcut followed 
 
 * * *
 
+### [createAutoLayout](/docs/plugins/api/properties/figma-createautolayout/)(direction?: 'HORIZONTAL' | 'VERTICAL'): [FrameNode](/docs/plugins/api/FrameNode/)
+
+info
+
+This API is only available via `use_figma` in the MCP server
+
+Creates a new frame with auto layout already enabled. Both axes default to hug content (`primaryAxisSizingMode = "AUTO"`, `counterAxisSizingMode = "AUTO"`), so children can immediately use `layoutSizingHorizontal/Vertical = "FILL"` after being appended.
+
+[View more →](/docs/plugins/api/properties/figma-createautolayout/)
+
+* * *
+
 ### [createComponent](/docs/plugins/api/properties/figma-createcomponent/)(): [ComponentNode](/docs/plugins/api/ComponentNode/)
 
 info
@@ -11635,6 +11647,59 @@ createText
 
 Next
 
+createAutoLayout
+
+](/docs/plugins/api/properties/figma-createautolayout/)
+
+*   Signature
+*   Remarks
+
+---
+
+# createAutoLayout | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-createautolayout/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   createAutoLayout
+
+# createAutoLayout
+
+info
+
+This API is only available via `use_figma` in the MCP server
+
+Creates a new frame with auto layout already enabled. Both axes default to hug content (`primaryAxisSizingMode = "AUTO"`, `counterAxisSizingMode = "AUTO"`), so children can immediately use `layoutSizingHorizontal/Vertical = "FILL"` after being appended.
+
+## Signature​
+
+### [createAutoLayout](/docs/plugins/api/properties/figma-createautolayout/)(direction?: 'HORIZONTAL' | 'VERTICAL'): [FrameNode](/docs/plugins/api/FrameNode/)
+
+## Remarks​
+
+Prefer this over `createFrame()` whenever you need an auto-layout parent. Since `layoutMode` is already set, children can use `FILL` sizing immediately after being appended.
+
+The default direction is `"HORIZONTAL"`. Pass `"VERTICAL"` for a column layout.
+
+Create an auto-layout frame
+
+```
+const row = figma.createAutoLayout()const column = figma.createAutoLayout("VERTICAL")row.itemSpacing = 16row.paddingTop = 24row.paddingBottom = 24row.paddingLeft = 24row.paddingRight = 24
+```
+
+[
+
+Previous
+
+createFrame
+
+](/docs/plugins/api/properties/figma-createframe/)[
+
+Next
+
 createComponent
 
 ](/docs/plugins/api/properties/figma-createcomponent/)
@@ -11682,9 +11747,9 @@ const component = figma.createComponent()
 
 Previous
 
-createFrame
+createAutoLayout
 
-](/docs/plugins/api/properties/figma-createframe/)[
+](/docs/plugins/api/properties/figma-createautolayout/)[
 
 Next
 
