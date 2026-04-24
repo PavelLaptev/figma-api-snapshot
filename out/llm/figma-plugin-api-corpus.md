@@ -27452,6 +27452,14 @@ Resizes the section node without constraints.
 
 * * *
 
+### resize(width: number, height: number): void
+
+Resizes the section node. Sections do not propagate constraints to their children, so this behaves equivalently to [`resizeWithoutConstraints`](/docs/plugins/api/properties/SectionNode-resizewithoutconstraints/) and is provided to match the resize ergonomics of other resizable nodes.
+
+[View more →](/docs/plugins/api/properties/SectionNode-resize/)
+
+* * *
+
 ### devStatus: [DevStatus](/docs/plugins/api/DevStatus/)
 
 Whether the node is marked [ready for development](https://help.figma.com/hc/en-us/articles/15023124644247-Guide-to-Dev-Mode#01H8CR3K6V9S02RK503QCX0367) or [completed](https://help.figma.com/hc/en-us/articles/15023124644247-Guide-to-Dev-Mode#01H8CR3K6V9S02RK503QCX0367).
@@ -28580,9 +28588,9 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 Previous
 
-resizeWithoutConstraints
+resize
 
-](/docs/plugins/api/properties/SectionNode-resizewithoutconstraints/)[
+](/docs/plugins/api/properties/SectionNode-resize/)[
 
 Next
 
@@ -59170,6 +59178,59 @@ Previous
 SectionNode
 
 ](/docs/plugins/api/SectionNode/)[
+
+Next
+
+resize
+
+](/docs/plugins/api/properties/SectionNode-resize/)
+
+*   Signature
+*   Parameters
+    *   width
+    *   height
+
+---
+
+# resize | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/SectionNode-resize/
+
+*   [](/)
+*   Plugins
+*   [Node Types](/docs/plugins/api/nodes/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   resize
+
+# resize
+
+Resizes the section node. Sections do not propagate constraints to their children, so this behaves equivalently to [`resizeWithoutConstraints`](/docs/plugins/api/properties/SectionNode-resizewithoutconstraints/) and is provided to match the resize ergonomics of other resizable nodes.
+
+Supported on:
+
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+
+## Signature​
+
+### resize(width: number, height: number): void
+
+## Parameters​
+
+### width​
+
+New width of the node. Must be >= 0.01
+
+### height​
+
+New height of the node. Must be >= 0.01
+
+[
+
+Previous
+
+resizeWithoutConstraints
+
+](/docs/plugins/api/properties/SectionNode-resizewithoutconstraints/)[
 
 Next
 

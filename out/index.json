@@ -2675,6 +2675,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "resize | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/SectionNode-resize/",
+    "path": "/docs/plugins/api/properties/SectionNode-resize/",
+    "slug": "docs__plugins__api__properties__SectionNode-resize"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "rotation | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/ShapeWithTextNode-rotation/",
     "path": "/docs/plugins/api/properties/ShapeWithTextNode-rotation/",
