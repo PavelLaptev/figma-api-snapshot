@@ -3687,7 +3687,7 @@ The spacing between the lines in a paragraph of text. Requires the font to be lo
 
 * * *
 
-### listSpacing: number
+### listSpacing: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 Supported on:
 
@@ -4228,7 +4228,7 @@ Applicable only on auto-layout frames. Determines the top padding between the bo
 
 * * *
 
-### paragraphIndent: number
+### paragraphIndent: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 Supported on:
 
@@ -4239,7 +4239,7 @@ The indentation of paragraphs (offset of the first line from the left). Setting 
 
 * * *
 
-### paragraphSpacing: number
+### paragraphSpacing: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 Supported on:
 
@@ -31485,6 +31485,12 @@ The type of this node, represented by the string literal "SLOT"
 
 * * *
 
+### clone(): [FrameNode](/docs/plugins/api/FrameNode/)
+
+Create a copy of this node. By default, the duplicate will be parented under `figma.currentPage`. The clone is returned as a plain `FrameNode` rather than a `SlotNode`, because slots are defined by a component property reference that only makes sense inside their parent component.
+
+* * *
+
 ### resetSlot(): void
 
 Resets a given slot node to the original component slot content.
@@ -35678,19 +35684,19 @@ The maximum number of lines a text node can reach before it truncates. Only appl
 
 * * *
 
-### paragraphIndent: number
+### paragraphIndent: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 The indentation of paragraphs (offset of the first line from the left). Setting this property requires the font the be loaded.
 
 * * *
 
-### paragraphSpacing: number
+### paragraphSpacing: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 The vertical distance between paragraphs. Setting this property requires the font to be loaded.
 
 * * *
 
-### listSpacing: number
+### listSpacing: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 The vertical distance between lines of a list.
 
@@ -48618,19 +48624,19 @@ Tip: `parent` will always return a [ConnectorNode](/docs/plugins/api/ConnectorNo
 
 ## Text node traits​
 
-### paragraphIndent: number
+### paragraphIndent: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 The indentation of paragraphs (offset of the first line from the left). Setting this property requires the font the be loaded.
 
 * * *
 
-### paragraphSpacing: number
+### paragraphSpacing: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 The vertical distance between paragraphs. Setting this property requires the font to be loaded.
 
 * * *
 
-### listSpacing: number
+### listSpacing: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 The vertical distance between lines of a list.
 
