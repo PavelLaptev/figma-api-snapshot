@@ -754,7 +754,7 @@ There are many ways a user can interact with a widget:
 
 ## Click listeners​
 
-![onclick](/assets/images/widget_onclick-1ce6731a525f216c600e6d5b6e107f2d.gif)
+![onclick](data:image/gif;base64,dmVyc2lvbiBodHRwczovL2dpdC1sZnMuZ2l0aHViLmNvbS9zcGVjL3YxCm9pZCBzaGEyNTY6ZTc3OTk4NGIwMDM1YzllZDhjNGYzNDc3NGVkODVmMDQ3YWFjZDk2YTBmMzk3YjdjNmM1YmQ0YzM2NzAxZDA1YwpzaXplIDM0NDg2Cg==)
 
 Widget are able to register event listeners that respond to user events. For now, we only support `click` events on nodes inside the widget
 
@@ -812,7 +812,7 @@ For more information, refer to the documentation on [usePropertyMenu](/docs/widg
 
 ## iFrames​
 
-![Widget iFrame](/assets/images/widget_iframe-564a594a9ee78a3019748b56a78245a9.gif)
+![Widget iFrame](data:image/gif;base64,dmVyc2lvbiBodHRwczovL2dpdC1sZnMuZ2l0aHViLmNvbS9zcGVjL3YxCm9pZCBzaGEyNTY6YjJjMzJkYTMwM2ZlMWZkYjJiNDRhM2EyZWQ3OTcwZTZlMWEzMzQ3Y2RkZTJjMDkyNDFhMGFhODhkOTA1MTQwMQpzaXplIDIxMzczMAo=)
 
 For more complex input methods (such as a textbox), you can open an iFrame window to receive the input.
 
@@ -844,7 +844,7 @@ If a widget is declared as a stickable it will attach itself to all other non st
 
 In this example below you can see that the widget sticks to this sticky note when dragged over top of it.
 
-![Example of useStickable](/assets/images/stick-3f2d37ec3e87c7b7f18be914ae9c74ad.gif)
+![Example of useStickable](data:image/gif;base64,dmVyc2lvbiBodHRwczovL2dpdC1sZnMuZ2l0aHViLmNvbS9zcGVjL3YxCm9pZCBzaGEyNTY6MWVmNmQ5YWFiNDk1NmRhMThiMzdhOGM3YjkxMTc5NGFiMTJlNzhlNTE2MTVlZDE0MDUxZjFiYWE3ZTAxYmM4ZgpzaXplIDMwOTI1MAo=)
 
 To make a widget a **stickable** you can use the [`useStickable`](/docs/widgets/api/properties/widget-usestickable/). hook.
 
@@ -860,7 +860,7 @@ Note that calling [`useStickableHost`](/docs/widgets/api/properties/widget-usest
 
 Below you can see an example of a widget that uses [`useStickableHost`](/docs/widgets/api/properties/widget-usestickablehost/). to count the number of attached stamps when a new stamp is stuck to it.
 
-![Example of useStickableHost](/assets/images/stick-host-e2340c890d1d691f321c6c2269cd2a38.gif)
+![Example of useStickableHost](data:image/gif;base64,dmVyc2lvbiBodHRwczovL2dpdC1sZnMuZ2l0aHViLmNvbS9zcGVjL3YxCm9pZCBzaGEyNTY6YjBiMjM4OTQ3MDZkZjZlMmIzYjliNDliYWMxMjQ1NTFiZDZhZmMyNTNjY2E3YjJkOGVkZGExYTIwMWY2N2E1YQpzaXplIDE4NDUzMQo=)
 
 [
 
@@ -1059,7 +1059,7 @@ useStickable without callback
 const { useStickable, Rectangle } = figma.widget;function Widget() {  // This widget sticks to other nodes now!  useStickable();  return <Rectangle width={100} height={100} fill="#F00" />;}figma.widget.register(Widget);
 ```
 
-![Gif of widget sticking to a sticky note](/assets/images/stick-3f2d37ec3e87c7b7f18be914ae9c74ad.gif)
+![Gif of widget sticking to a sticky note](data:image/gif;base64,dmVyc2lvbiBodHRwczovL2dpdC1sZnMuZ2l0aHViLmNvbS9zcGVjL3YxCm9pZCBzaGEyNTY6MWVmNmQ5YWFiNDk1NmRhMThiMzdhOGM3YjkxMTc5NGFiMTJlNzhlNTE2MTVlZDE0MDUxZjFiYWE3ZTAxYmM4ZgpzaXplIDMwOTI1MAo=)
 
 ### Example​
 
@@ -2265,7 +2265,7 @@ Adding hover styles to a button
 const { widget } = figmaconst { useSyncedState, AutoLayout, Text } = widgetfunction Widget() {  const [count, setCount] = useSyncedState('count', 0)  return (    <AutoLayout      verticalAlignItems={'center'}      spacing={8}      padding={16}      cornerRadius={8}      fill={'#FFFFFF'}      stroke={'#E6E6E6'}      onClick={() => setCount(count + 1)}      hoverStyle={{        fill: '#000000',      }}    >      <Text        fill="#000000"        hoverStyle={{          fill: '#FFFFFF',        }}      >        Count: {String(count)}      </Text>    </AutoLayout>  )}widget.register(Widget)
 ```
 
-Here is a gif of it in action: ![Hover button](/assets/images/hover-button-6a47ce07f8c6983d93533c757fe3842d.gif)
+Here is a gif of it in action: ![Hover button](data:image/gif;base64,dmVyc2lvbiBodHRwczovL2dpdC1sZnMuZ2l0aHViLmNvbS9zcGVjL3YxCm9pZCBzaGEyNTY6OWI4ZDgyMjg4YjM2NmVjNjZjNGQ0YTU1MzIwYmE4ZmU5ZmIxNzNhZTNkMmQ5ZjJhYTZmYmYzYjRkNGU4ZTZhZgpzaXplIDE4NjY1OAo=)
 
 [
 
