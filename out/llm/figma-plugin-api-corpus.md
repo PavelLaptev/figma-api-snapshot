@@ -554,7 +554,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText: string }): [Measurement](/docs/plugins/api/Measurement/)
+### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
 
 Supported on:
 
@@ -766,6 +766,7 @@ Supported on:
 *   [FrameNode](/docs/plugins/api/FrameNode/)
 *   [InstanceNode](/docs/plugins/api/InstanceNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 
@@ -780,12 +781,13 @@ Supported on:
 *   [FrameNode](/docs/plugins/api/FrameNode/)
 *   [InstanceNode](/docs/plugins/api/InstanceNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 Supported on:
 
@@ -1085,6 +1087,7 @@ Supported on:
 *   [InstanceNode](/docs/plugins/api/InstanceNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 *   [StarNode](/docs/plugins/api/StarNode/)
@@ -1109,6 +1112,7 @@ Supported on:
 *   [InstanceNode](/docs/plugins/api/InstanceNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 *   [StarNode](/docs/plugins/api/StarNode/)
@@ -1207,6 +1211,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -1400,7 +1405,7 @@ The documentation links for this style/component.
 
 * * *
 
-### editComponentProperty(propertyName: string, newValue: { name: string; defaultValue: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description: string }): string
+### editComponentProperty(propertyName: string, newValue: { name?: string; defaultValue?: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues?: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description?: string }): string
 
 Supported on:
 
@@ -1418,7 +1423,7 @@ This function supports properties with type `'BOOLEAN'`, `'TEXT'`, `'INSTANCE_SW
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Supported on:
 
@@ -1465,7 +1470,7 @@ Edits a dev resource on a node. This will fail if the node does not have a dev r
 
 * * *
 
-### editMeasurement(id: string, newValue: { offset: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText: string }): [Measurement](/docs/plugins/api/Measurement/)
+### editMeasurement(id: string, newValue: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
 
 Supported on:
 
@@ -2039,7 +2044,7 @@ Resolves to a JSON object of CSS properties of the node. This is the same CSS th
 
 * * *
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Supported on:
 
@@ -2542,7 +2547,7 @@ Supported on:
 *   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
 *   [WidgetNode](/docs/plugins/api/WidgetNode/)
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -2708,6 +2713,23 @@ Returns the top-most frame that contains this node. If the node is not inside a 
 info
 
 This function will only work in Figma Design and will throw an error if called in FigJam or Slides.
+
+* * *
+
+### [gridAutoTracks](/docs/plugins/api/properties/nodes-gridautotracks/): 'NONE' | 'ROWS'
+
+Supported on:
+
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how the grid handles automatic row creation.
+
+[View more →](/docs/plugins/api/properties/nodes-gridautotracks/)
 
 * * *
 
@@ -2887,6 +2909,23 @@ Supported on:
 Applicable only on direct children of grid auto-layout frames. Determines the number of columns this node will span within the parent grid.
 
 [View more →](/docs/plugins/api/properties/nodes-gridcolumnspan/)
+
+* * *
+
+### [gridItemsPositioning](/docs/plugins/api/properties/nodes-griditemspositioning/): 'MANUAL' | 'ROW\_AUTO\_FLOW'
+
+Supported on:
+
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how children are positioned within the grid.
+
+[View more →](/docs/plugins/api/properties/nodes-griditemspositioning/)
 
 * * *
 
@@ -3221,7 +3260,7 @@ This method uses a heuristic to infer the auto layout properties.
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 Supported on:
 
@@ -4518,6 +4557,40 @@ Returns true if this node has been removed since it was first accessed. If your 
 
 * * *
 
+### [reorderColumns](/docs/plugins/api/properties/nodes-reordercolumns/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Supported on:
+
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more columns to a new position in the grid, shifting other columns as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reordercolumns/)
+
+* * *
+
+### [reorderRows](/docs/plugins/api/properties/nodes-reorderrows/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Supported on:
+
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more rows to a new position in the grid, shifting other rows as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reorderrows/)
+
+* * *
+
 ### [rescale](/docs/plugins/api/properties/nodes-rescale/)(scale: number): void
 
 Supported on:
@@ -5442,6 +5515,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -5471,6 +5545,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -5511,6 +5586,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -5587,6 +5663,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -5616,6 +5693,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -5706,6 +5784,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -5753,6 +5832,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -5795,6 +5875,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -6054,6 +6135,7 @@ Supported on:
 *   [FrameNode](/docs/plugins/api/FrameNode/)
 *   [InstanceNode](/docs/plugins/api/InstanceNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 
@@ -6068,6 +6150,7 @@ Supported on:
 *   [FrameNode](/docs/plugins/api/FrameNode/)
 *   [InstanceNode](/docs/plugins/api/InstanceNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 
@@ -7801,7 +7884,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -7877,7 +7960,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -7893,7 +7976,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -7957,7 +8040,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -7973,7 +8056,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -8332,6 +8415,38 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
 [View more →](/docs/plugins/api/properties/nodes-appendchildat/)
+
+* * *
+
+### [gridAutoTracks](/docs/plugins/api/properties/nodes-gridautotracks/): 'NONE' | 'ROWS'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how the grid handles automatic row creation.
+
+[View more →](/docs/plugins/api/properties/nodes-gridautotracks/)
+
+* * *
+
+### [gridItemsPositioning](/docs/plugins/api/properties/nodes-griditemspositioning/): 'MANUAL' | 'ROW\_AUTO\_FLOW'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how children are positioned within the grid.
+
+[View more →](/docs/plugins/api/properties/nodes-griditemspositioning/)
+
+* * *
+
+### [reorderRows](/docs/plugins/api/properties/nodes-reorderrows/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more rows to a new position in the grid, shifting other rows as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reorderrows/)
+
+* * *
+
+### [reorderColumns](/docs/plugins/api/properties/nodes-reordercolumns/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more columns to a new position in the grid, shifting other columns as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reordercolumns/)
 
 * * *
 
@@ -9622,7 +9737,7 @@ The `result` object passed to the `'input'` event handler contains API for contr
 
 But the `result` object also enables showing error messages and loading states.
 
-### setSuggestions(suggestions: Array<string | { name: string; data: any; icon: string | Uint8Array; iconUrl: string }>): void
+### setSuggestions(suggestions: Array<string | { name: string; data?: any; icon?: string | Uint8Array; iconUrl?: string }>): void
 
 Sets the list of autocomplete suggestions to be displayed in the quick action UI.
 
@@ -9825,7 +9940,7 @@ This is defined as the number of seconds since the current user ran the plugin o
 
 * * *
 
-### initiateCheckoutAsync(options?: { interstitial: 'PAID\_FEATURE' | 'TRIAL\_ENDED' | 'SKIP' }): Promise<void>
+### initiateCheckoutAsync(options?: { interstitial?: 'PAID\_FEATURE' | 'TRIAL\_ENDED' | 'SKIP' }): Promise<void>
 
 This triggers a checkout flow in the Figma UI for the user to purchase your plugin or widget. The user will be prompted to enter their payment information and purchase your resource. This function resolves either when the user has completed the checkout flow, or they’ve dismissed it.
 
@@ -13852,7 +13967,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -13928,7 +14043,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -13944,7 +14059,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -14008,7 +14123,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -14024,7 +14139,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -14797,7 +14912,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -14873,7 +14988,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -14889,7 +15004,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -15027,7 +15142,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -15043,7 +15158,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -15293,7 +15408,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -15369,7 +15484,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -15385,7 +15500,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -15449,7 +15564,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -15465,7 +15580,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -15824,6 +15939,38 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
 [View more →](/docs/plugins/api/properties/nodes-appendchildat/)
+
+* * *
+
+### [gridAutoTracks](/docs/plugins/api/properties/nodes-gridautotracks/): 'NONE' | 'ROWS'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how the grid handles automatic row creation.
+
+[View more →](/docs/plugins/api/properties/nodes-gridautotracks/)
+
+* * *
+
+### [gridItemsPositioning](/docs/plugins/api/properties/nodes-griditemspositioning/): 'MANUAL' | 'ROW\_AUTO\_FLOW'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how children are positioned within the grid.
+
+[View more →](/docs/plugins/api/properties/nodes-griditemspositioning/)
+
+* * *
+
+### [reorderRows](/docs/plugins/api/properties/nodes-reorderrows/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more rows to a new position in the grid, shifting other rows as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reorderrows/)
+
+* * *
+
+### [reorderColumns](/docs/plugins/api/properties/nodes-reordercolumns/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more columns to a new position in the grid, shifting other columns as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reordercolumns/)
 
 * * *
 
@@ -16467,7 +16614,7 @@ Adds a new component property to this node and returns the property name with it
 
 * * *
 
-### editComponentProperty(propertyName: string, newValue: { name: string; defaultValue: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description: string }): string
+### editComponentProperty(propertyName: string, newValue: { name?: string; defaultValue?: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues?: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description?: string }): string
 
 Modifies the name, default value, or preferred values of an existing component property on this node and returns the property name with its unique identifier suffixed.
 
@@ -16694,7 +16841,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -16770,7 +16917,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -16786,7 +16933,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -16850,7 +16997,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -16866,7 +17013,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -17225,6 +17372,38 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
 [View more →](/docs/plugins/api/properties/nodes-appendchildat/)
+
+* * *
+
+### [gridAutoTracks](/docs/plugins/api/properties/nodes-gridautotracks/): 'NONE' | 'ROWS'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how the grid handles automatic row creation.
+
+[View more →](/docs/plugins/api/properties/nodes-gridautotracks/)
+
+* * *
+
+### [gridItemsPositioning](/docs/plugins/api/properties/nodes-griditemspositioning/): 'MANUAL' | 'ROW\_AUTO\_FLOW'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how children are positioned within the grid.
+
+[View more →](/docs/plugins/api/properties/nodes-griditemspositioning/)
+
+* * *
+
+### [reorderRows](/docs/plugins/api/properties/nodes-reorderrows/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more rows to a new position in the grid, shifting other rows as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reorderrows/)
+
+* * *
+
+### [reorderColumns](/docs/plugins/api/properties/nodes-reordercolumns/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more columns to a new position in the grid, shifting other columns as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reordercolumns/)
 
 * * *
 
@@ -17802,7 +17981,7 @@ Adds a new component property to this node and returns the property name with it
 
 * * *
 
-### editComponentProperty(propertyName: string, newValue: { name: string; defaultValue: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description: string }): string
+### editComponentProperty(propertyName: string, newValue: { name?: string; defaultValue?: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues?: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description?: string }): string
 
 Modifies the name, default value, or preferred values of an existing component property on this node and returns the property name with its unique identifier suffixed.
 
@@ -18113,7 +18292,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -18189,7 +18368,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -18205,7 +18384,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -18343,7 +18522,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -18359,7 +18538,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -18612,7 +18791,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -18688,7 +18867,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -18704,7 +18883,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -18846,7 +19025,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -18922,7 +19101,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -18938,7 +19117,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -19002,7 +19181,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -19018,7 +19197,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -19697,7 +19876,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -19773,7 +19952,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -19789,7 +19968,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -19927,7 +20106,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -19943,7 +20122,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -20122,7 +20301,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -20198,7 +20377,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -20214,7 +20393,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -20278,7 +20457,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -20294,7 +20473,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -20653,6 +20832,38 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
 [View more →](/docs/plugins/api/properties/nodes-appendchildat/)
+
+* * *
+
+### [gridAutoTracks](/docs/plugins/api/properties/nodes-gridautotracks/): 'NONE' | 'ROWS'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how the grid handles automatic row creation.
+
+[View more →](/docs/plugins/api/properties/nodes-gridautotracks/)
+
+* * *
+
+### [gridItemsPositioning](/docs/plugins/api/properties/nodes-griditemspositioning/): 'MANUAL' | 'ROW\_AUTO\_FLOW'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how children are positioned within the grid.
+
+[View more →](/docs/plugins/api/properties/nodes-griditemspositioning/)
+
+* * *
+
+### [reorderRows](/docs/plugins/api/properties/nodes-reorderrows/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more rows to a new position in the grid, shifting other rows as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reorderrows/)
+
+* * *
+
+### [reorderColumns](/docs/plugins/api/properties/nodes-reordercolumns/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more columns to a new position in the grid, shifting other columns as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reordercolumns/)
 
 * * *
 
@@ -21431,7 +21642,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -21507,7 +21718,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -21523,7 +21734,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -22025,7 +22236,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -22041,7 +22252,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -22226,7 +22437,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -22302,7 +22513,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -22318,7 +22529,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -22382,7 +22593,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -22398,7 +22609,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -23060,7 +23271,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -23136,7 +23347,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -23152,7 +23363,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -23290,7 +23501,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -23306,7 +23517,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -23481,7 +23692,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -23557,7 +23768,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -23573,7 +23784,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -23637,7 +23848,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -23653,7 +23864,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -24290,7 +24501,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -24366,7 +24577,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -24382,7 +24593,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -24520,7 +24731,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -24536,7 +24747,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -24733,7 +24944,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -24809,7 +25020,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -24825,7 +25036,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -24963,7 +25174,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -24979,7 +25190,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -25140,9 +25351,9 @@ The starting point when launching a prototype. Prototypes with a starting node c
 
 * * *
 
-### isPageDivider: boolean
+### isPageDivider: boolean \[readonly\]
 
-Returns true if the node is a page divider, which is only possible when the page node is empty and has a page divider name. A page divider name consists of all asterisks, all en dashes, all em dashes, or all spaces.
+Returns true if the node is a page divider, which is only possible when the page node is empty and has a page divider name. A page divider name consists of all asterisks, all en dashes, all em dashes, or all spaces. To create a page divider, use [`figma.createPageDivider`](/docs/plugins/api/properties/figma-createpagedivider/) or rename an empty page to a page divider name.
 
 * * *
 
@@ -25218,7 +25429,7 @@ Get all measurements pointing to a node in the current page. This includes all m
 
 * * *
 
-### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText: string }): [Measurement](/docs/plugins/api/Measurement/)
+### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
 
 Adds a measurement between two nodes in the current page.
 
@@ -25238,7 +25449,7 @@ if (figma.editorType === 'dev') {  // In Figma's Dev Mode}
 
 * * *
 
-### editMeasurement(id: string, newValue: { offset: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText: string }): [Measurement](/docs/plugins/api/Measurement/)
+### editMeasurement(id: string, newValue: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
 
 Edit a measurement’s offset.
 
@@ -25334,7 +25545,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -25410,7 +25621,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -25426,7 +25637,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -25710,7 +25921,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -25786,7 +25997,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -25802,7 +26013,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -25866,7 +26077,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -25882,7 +26093,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -26555,7 +26766,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -26631,7 +26842,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -26647,7 +26858,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -26711,7 +26922,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -26727,7 +26938,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -27535,7 +27746,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -27611,7 +27822,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -27627,7 +27838,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -27765,7 +27976,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -27781,7 +27992,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -27965,6 +28176,119 @@ Sets the fills of the node asynchronously. This is the only way to set pattern f
 
 * * *
 
+### [strokes](/docs/plugins/api/properties/nodes-strokes/): ReadonlyArray<[Paint](/docs/plugins/api/Paint/)\>
+
+The paints used to fill the area of the shape's strokes. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
+
+[View more →](/docs/plugins/api/properties/nodes-strokes/)
+
+* * *
+
+### strokeStyleId: string
+
+The id of the [`PaintStyle`](/docs/plugins/api/PaintStyle/) object that the [`strokes`](/docs/plugins/api/properties/nodes-strokes/) property of this node is linked to.
+
+If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setStrokeStyleIdAsync` to update the style.
+
+* * *
+
+### setStrokeStyleIdAsync(styleId: string): Promise<void>
+
+Set the [`PaintStyle`](/docs/plugins/api/PaintStyle/) that the [`strokes`](/docs/plugins/api/properties/nodes-strokes/) property of this node is linked to.
+
+* * *
+
+### strokeWeight: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+The thickness of the stroke, in pixels. This value must be non-negative and can be fractional.
+
+caution
+
+For rectangle nodes or frame-like nodes using different individual stroke weights, this property will return [`figma.mixed`](/docs/plugins/api/properties/figma-mixed/).
+
+info
+
+For rectangle nodes or frame-like nodes, individual stroke weights can be set for each side using the following properties:
+
+*   [`strokeTopWeight`](/docs/plugins/api/node-properties/#stroketopweight)
+*   [`strokeBottomWeight`](/docs/plugins/api/node-properties/#strokebottomweight)
+*   [`strokeLeftWeight`](/docs/plugins/api/node-properties/#strokeleftweight)
+*   [`strokeRightWeight`](/docs/plugins/api/node-properties/#strokerightweight)
+
+* * *
+
+### [strokeJoin](/docs/plugins/api/properties/nodes-strokejoin/): [StrokeJoin](/docs/plugins/api/StrokeJoin/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+The decoration applied to vertices which have two or more connected segments.
+
+[View more →](/docs/plugins/api/properties/nodes-strokejoin/)
+
+* * *
+
+### [strokeAlign](/docs/plugins/api/properties/nodes-strokealign/): 'CENTER' | 'INSIDE' | 'OUTSIDE'
+
+The alignment of the stroke with respect to the boundaries of the shape.
+
+[View more →](/docs/plugins/api/properties/nodes-strokealign/)
+
+* * *
+
+### dashPattern: ReadonlyArray<number>
+
+A list of numbers specifying alternating dash and gap lengths, in pixels.
+
+* * *
+
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+
+An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
+
+* * *
+
+### setStrokesAsync(strokes: ReadonlyArray<[Paint](/docs/plugins/api/Paint/)\>): Promise<void>
+
+Sets the strokes of the node asynchronously. This is the only way to set pattern strokes on a node, since we need to ensure that the source node of the pattern is loaded first. See [Adding Pattern Fills and Strokes](/docs/plugins/adding-pattern-fills-and-strokes/) for more information.
+
+* * *
+
+## Corner-related properties​
+
+### [cornerRadius](/docs/plugins/api/properties/nodes-cornerradius/): number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+The number of pixels to round the corners of the object by.
+
+[View more →](/docs/plugins/api/properties/nodes-cornerradius/)
+
+* * *
+
+### [cornerSmoothing](/docs/plugins/api/properties/nodes-cornersmoothing/): number
+
+A value that lets you control how "smooth" the corners are. Ranges from 0 to 1.
+
+[View more →](/docs/plugins/api/properties/nodes-cornersmoothing/)
+
+* * *
+
+### topLeftRadius: number
+
+* * *
+
+### topRightRadius: number
+
+* * *
+
+### bottomLeftRadius: number
+
+* * *
+
+### bottomRightRadius: number
+
+* * *
+
+You can set individual corner radius of each of the four corners of a rectangle node or frame-like node. Similar to `cornerRadius`, these value must be non-negative and can be fractional. If an edge length is less than twice the corner radius, the corner radius for each vertex of the edge will be clamped to half the edge length.
+
+Setting `cornerRadius` sets the property for all four corners. Setting these corners to different values makes `cornerRadius` return `mixed`.
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -28018,6 +28342,7 @@ resizeWithoutConstraints
 *   Export-related properties
 *   Children-related properties
 *   Geometry-related properties
+*   Corner-related properties
 *   Lock aspect ratio properties
 
 ---
@@ -28278,7 +28603,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -28354,7 +28679,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -28370,7 +28695,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -28508,7 +28833,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -28524,7 +28849,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -28701,7 +29026,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -28777,7 +29102,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -28793,7 +29118,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -28857,7 +29182,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -28873,7 +29198,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -29266,7 +29591,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -29342,7 +29667,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -29358,7 +29683,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -29496,7 +29821,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -29512,7 +29837,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -29802,7 +30127,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -29878,7 +30203,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -29894,7 +30219,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -29958,7 +30283,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -29974,7 +30299,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -30333,6 +30658,38 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
 [View more →](/docs/plugins/api/properties/nodes-appendchildat/)
+
+* * *
+
+### [gridAutoTracks](/docs/plugins/api/properties/nodes-gridautotracks/): 'NONE' | 'ROWS'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how the grid handles automatic row creation.
+
+[View more →](/docs/plugins/api/properties/nodes-gridautotracks/)
+
+* * *
+
+### [gridItemsPositioning](/docs/plugins/api/properties/nodes-griditemspositioning/): 'MANUAL' | 'ROW\_AUTO\_FLOW'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how children are positioned within the grid.
+
+[View more →](/docs/plugins/api/properties/nodes-griditemspositioning/)
+
+* * *
+
+### [reorderRows](/docs/plugins/api/properties/nodes-reorderrows/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more rows to a new position in the grid, shifting other rows as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reorderrows/)
+
+* * *
+
+### [reorderColumns](/docs/plugins/api/properties/nodes-reordercolumns/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more columns to a new position in the grid, shifting other columns as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reordercolumns/)
 
 * * *
 
@@ -31039,7 +31396,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -31115,7 +31472,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -31131,7 +31488,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -31269,7 +31626,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -31285,7 +31642,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -31561,7 +31918,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -31637,7 +31994,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -31653,7 +32010,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -31717,7 +32074,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -31733,7 +32090,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -32092,6 +32449,38 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
 [View more →](/docs/plugins/api/properties/nodes-appendchildat/)
+
+* * *
+
+### [gridAutoTracks](/docs/plugins/api/properties/nodes-gridautotracks/): 'NONE' | 'ROWS'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how the grid handles automatic row creation.
+
+[View more →](/docs/plugins/api/properties/nodes-gridautotracks/)
+
+* * *
+
+### [gridItemsPositioning](/docs/plugins/api/properties/nodes-griditemspositioning/): 'MANUAL' | 'ROW\_AUTO\_FLOW'
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how children are positioned within the grid.
+
+[View more →](/docs/plugins/api/properties/nodes-griditemspositioning/)
+
+* * *
+
+### [reorderRows](/docs/plugins/api/properties/nodes-reorderrows/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more rows to a new position in the grid, shifting other rows as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reorderrows/)
+
+* * *
+
+### [reorderColumns](/docs/plugins/api/properties/nodes-reordercolumns/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more columns to a new position in the grid, shifting other columns as needed.
+
+[View more →](/docs/plugins/api/properties/nodes-reordercolumns/)
 
 * * *
 
@@ -32869,7 +33258,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -32945,7 +33334,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -32961,7 +33350,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -33025,7 +33414,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -33041,7 +33430,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -33692,7 +34081,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -33768,7 +34157,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -33784,7 +34173,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -33848,7 +34237,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -33864,7 +34253,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -34607,7 +34996,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -34683,7 +35072,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -34699,7 +35088,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -34837,7 +35226,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -34853,7 +35242,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -35281,7 +35670,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -35357,7 +35746,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -35373,7 +35762,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -35511,7 +35900,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -35527,7 +35916,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -36222,7 +36611,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -36298,7 +36687,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -36314,7 +36703,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -36378,7 +36767,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -36394,7 +36783,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -37353,7 +37742,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -37429,7 +37818,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -37445,7 +37834,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -37509,7 +37898,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -37525,7 +37914,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -38195,7 +38584,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -38271,7 +38660,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -38287,7 +38676,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -38789,7 +39178,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -38805,7 +39194,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -38991,7 +39380,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -39067,7 +39456,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -39083,7 +39472,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -39147,7 +39536,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -39163,7 +39552,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -39836,7 +40225,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -39912,7 +40301,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -39928,7 +40317,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -39992,7 +40381,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -40008,7 +40397,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -40669,7 +41058,7 @@ In Figma and Dev Mode, this shows up in the properties panel. In FigJam, this sh
 
 ### getRelaunchData(): { \[command: string\]: string }
 
-Retreives the reluanch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+Retrieves the relaunch data stored on this node using [`setRelaunchData`](/docs/plugins/api/properties/nodes-setrelaunchdata/)
 
 * * *
 
@@ -40745,7 +41134,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -40761,7 +41150,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 Edits a dev resource on a node. This will fail if the node does not have a dev resource with the same url.
 
@@ -40899,7 +41288,7 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
 
@@ -40915,7 +41304,7 @@ If `null` is provided as the variable, the given `field` will be unbound from an
 
 * * *
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 An object, keyed by field, returning any variables that match the raw value of that field for the mode of the node (or the default variable value if no mode is set)
 
@@ -41636,6 +42025,7 @@ Supported on:
 *   [InstanceNode](/docs/plugins/api/InstanceNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 *   [StarNode](/docs/plugins/api/StarNode/)
@@ -41694,6 +42084,7 @@ Supported on:
 *   [InstanceNode](/docs/plugins/api/InstanceNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 *   [StarNode](/docs/plugins/api/StarNode/)
@@ -42305,7 +42696,7 @@ Supported on:
 
 ## Signature​
 
-### editDevResourceAsync(currentUrl: string, newValue: { name: string; url: string }): Promise<void>
+### editDevResourceAsync(currentUrl: string, newValue: { name?: string; url?: string }): Promise<void>
 
 ## Parameters​
 
@@ -43123,7 +43514,7 @@ Supported on:
 
 ## Signature​
 
-### getDevResourcesAsync(options?: { includeChildren: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
 
 ## Parameters​
 
@@ -43253,15 +43644,71 @@ getDevResourcesAsync
 
 Next
 
-gridChildHorizontalAlign
+gridAutoTracks
 
-](/docs/plugins/api/properties/nodes-gridchildhorizontalalign/)
+](/docs/plugins/api/properties/nodes-gridautotracks/)
 
 *   Signature
 *   Parameters
     *   fields
     *   start
     *   end
+*   Remarks
+
+---
+
+# gridAutoTracks | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-gridautotracks/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   gridAutoTracks
+
+# gridAutoTracks
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how the grid handles automatic row creation.
+
+Supported on:
+
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+
+## Signature​
+
+### [gridAutoTracks](/docs/plugins/api/properties/nodes-gridautotracks/): 'NONE' | 'ROWS'
+
+## Remarks​
+
+*   `"NONE"` (default): the row count is controlled by [`gridRowCount`](/docs/plugins/api/properties/nodes-gridrowcount/), but will never go below the number of rows necessary to hold all children in the grid.
+*   `"ROWS"`: new rows are added automatically as children are appended, and removed when a row becomes empty. Setting [`gridRowCount`](/docs/plugins/api/properties/nodes-gridrowcount/) directly will throw an error while this is set to `"ROWS"`.
+
+Grid with automatic rows
+
+```
+const grid = figma.createFrame()grid.layoutMode = 'GRID'grid.gridColumnCount = 3grid.gridAutoTracks = 'ROWS'// The grid starts with 1 row and 3 columns.// Appending more children than the grid can fit// automatically adds new rows.for (let i = 0; i < 7; i++) {  grid.appendChild(figma.createFrame())}// + --- + --- + --- +// |  1  |  2  |  3  |// + --- + --- + --- +// |  4  |  5  |  6  |// + --- + --- + --- +// |  7  |     |     |// + --- + --- + --- +grid.gridRowCount // 3 (auto-managed)
+```
+
+[
+
+Previous
+
+getStyledTextSegments
+
+](/docs/plugins/api/properties/TextNode-getstyledtextsegments/)[
+
+Next
+
+gridChildHorizontalAlign
+
+](/docs/plugins/api/properties/nodes-gridchildhorizontalalign/)
+
+*   Signature
 *   Remarks
 
 ---
@@ -43320,9 +43767,9 @@ Possible values are:
 
 Previous
 
-getStyledTextSegments
+gridAutoTracks
 
-](/docs/plugins/api/properties/TextNode-getstyledtextsegments/)[
+](/docs/plugins/api/properties/nodes-gridautotracks/)[
 
 Next
 
@@ -43670,6 +44117,62 @@ gridColumnSizes
 
 Next
 
+gridItemsPositioning
+
+](/docs/plugins/api/properties/nodes-griditemspositioning/)
+
+*   Signature
+*   Remarks
+
+---
+
+# gridItemsPositioning | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-griditemspositioning/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   gridItemsPositioning
+
+# gridItemsPositioning
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Controls how children are positioned within the grid.
+
+Supported on:
+
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+
+## Signature​
+
+### [gridItemsPositioning](/docs/plugins/api/properties/nodes-griditemspositioning/): 'MANUAL' | 'ROW\_AUTO\_FLOW'
+
+## Remarks​
+
+*   `"MANUAL"` (default): children stay at the grid cell they are placed in. Use [`setGridChildPosition`](/docs/plugins/api/properties/nodes-setgridchildposition/) or [`appendChildAt`](/docs/plugins/api/properties/nodes-appendchildat/) to position children explicitly.
+*   `"ROW_AUTO_FLOW"`: children are placed by layer order into the next available cell in row-major order (left to right, top to bottom), similar to CSS [`grid-auto-flow: row`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow). Calling [`setGridChildPosition`](/docs/plugins/api/properties/nodes-setgridchildposition/) will throw an error in this mode — reorder children using [`insertChild`](/docs/plugins/api/properties/nodes-insertchild/) instead.
+
+Grid with automatic item positioning
+
+```
+const grid = figma.createFrame()grid.layoutMode = 'GRID'grid.gridColumnCount = 2grid.gridAutoTracks = 'ROWS'grid.gridItemsPositioning = 'ROW_AUTO_FLOW'const a = figma.createFrame()const b = figma.createFrame()const c = figma.createFrame()grid.appendChild(a)grid.appendChild(b)grid.appendChild(c)// Children flow automatically:// + --- + --- +// |  a  |  b  |// + --- + --- +// |  c  |     |// + --- + --- +
+```
+
+[
+
+Previous
+
+gridColumnSpan
+
+](/docs/plugins/api/properties/nodes-gridcolumnspan/)[
+
+Next
+
 gridRowAnchorIndex
 
 ](/docs/plugins/api/properties/nodes-gridrowanchorindex/)
@@ -43728,9 +44231,9 @@ The row index is 0-based, where 0 is the first row in the grid. This property wo
 
 Previous
 
-gridColumnSpan
+gridItemsPositioning
 
-](/docs/plugins/api/properties/nodes-gridcolumnspan/)[
+](/docs/plugins/api/properties/nodes-griditemspositioning/)[
 
 Next
 
@@ -43772,6 +44275,10 @@ Supported on:
 ## Remarks​
 
 If the setter for this value is called on a grid with a value less than 1, it will throw an error. Users cannot remove rows from a grid if they are occupied by children, so if you try to reduce the count of rows in a grid and some of those rows have children, it will throw an error. By default, when the row count is increased, the new rows will be added as [`GridTrackSize`](/docs/plugins/api/GridTrackSize/) objects with type `"FLEX"`. If you want to change the type of the new rows, you can use the setters on GridTrackSize objects returned by [`gridRowSizes`](/docs/plugins/api/properties/nodes-gridrowsizes/) or [`gridColumnSizes`](/docs/plugins/api/properties/nodes-gridcolumnsizes/).
+
+caution
+
+⚠️ Setting `gridRowCount` will throw an error if [`gridAutoTracks`](/docs/plugins/api/properties/nodes-gridautotracks/) is set to `"ROWS"`, since the row count is managed automatically. Add or remove children to change the number of rows instead, or set `gridAutoTracks` to `NONE` before setting `gridRowCount`.
 
 Grid layout with 2 rows and 3 columns
 
@@ -44099,7 +44606,7 @@ Supported on:
 
 ## Signature​
 
-### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
+### [inferredVariables](/docs/plugins/api/properties/nodes-inferredvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]\[\] } \[readonly\]
 
 ## Remarks​
 
@@ -45833,6 +46340,114 @@ remove
 
 Next
 
+reorderColumns
+
+](/docs/plugins/api/properties/nodes-reordercolumns/)
+
+*   Signature
+*   Remarks
+
+---
+
+# reorderColumns | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-reordercolumns/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   reorderColumns
+
+# reorderColumns
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more columns to a new position in the grid, shifting other columns as needed.
+
+Supported on:
+
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+
+## Signature​
+
+### [reorderColumns](/docs/plugins/api/properties/nodes-reordercolumns/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+## Remarks​
+
+If a child in one of the selected columns spans multiple columns, all of those spanned columns are automatically included in the move. The returned array describes both the input tracks and any tracks that were added implicitly due to spanning.
+
+All values in `fromIndices` must be in the range `[0, gridColumnCount)` and `insertionIndex` must be in the range `[0, gridColumnCount]`, otherwise an error will be thrown. If an error is thrown, the grid is left unchanged.
+
+[
+
+Previous
+
+removed
+
+](/docs/plugins/api/properties/nodes-removed/)[
+
+Next
+
+reorderRows
+
+](/docs/plugins/api/properties/nodes-reorderrows/)
+
+*   Signature
+*   Remarks
+
+---
+
+# reorderRows | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-reorderrows/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   reorderRows
+
+# reorderRows
+
+Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Moves one or more rows to a new position in the grid, shifting other rows as needed.
+
+Supported on:
+
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+
+## Signature​
+
+### [reorderRows](/docs/plugins/api/properties/nodes-reorderrows/)(options: [GridTrackReorderOptions](/docs/plugins/api/GridTrackReorderOptions/)): ReadonlyArray<[GridTrackReorderEntry](/docs/plugins/api/GridTrackReorderEntry/)\>
+
+## Remarks​
+
+If a child in one of the selected rows spans multiple rows, all of those spanned rows are automatically included in the move. The returned array describes both the input tracks and any tracks that were added implicitly due to spanning.
+
+All values in `fromIndices` must be in the range `[0, gridRowCount)` and `insertionIndex` must be in the range `[0, gridRowCount]`, otherwise an error will be thrown. If an error is thrown, the grid is left unchanged.
+
+Moving the first row to the end of the grid
+
+```
+const grid = figma.createFrame()grid.layoutMode = 'GRID'grid.gridRowCount = 3grid.gridColumnCount = 2// Populate the gridfor (let i = 0; i < 6; i++) {  grid.appendChild(figma.createFrame())}// Before:// + --- + --- +// |  1  |  2  |  <- row 0// + --- + --- +// |  3  |  4  |  <- row 1// + --- + --- +// |  5  |  6  |  <- row 2// + --- + --- +const moves = grid.reorderRows({ fromIndices: [0], insertionIndex: 3 })// After:// + --- + --- +// |  3  |  4  |// + --- + --- +// |  5  |  6  |// + --- + --- +// |  1  |  2  |// + --- + --- +// moves => [{ from: 0, to: 2 }, { from: 1, to: 0 }, { from: 2, to: 1 }]
+```
+
+[
+
+Previous
+
+reorderColumns
+
+](/docs/plugins/api/properties/nodes-reordercolumns/)[
+
+Next
+
 rescale
 
 ](/docs/plugins/api/properties/nodes-rescale/)
@@ -45897,9 +46512,9 @@ The scale factor must be >= 0.01
 
 Previous
 
-removed
+reorderRows
 
-](/docs/plugins/api/properties/nodes-removed/)[
+](/docs/plugins/api/properties/nodes-reorderrows/)[
 
 Next
 
@@ -46445,6 +47060,10 @@ Supported on:
 
 This method sets the position of the node within the grid based on the specified row and column indices. The row and column indices are 0-based, where 0 is the top row in the grid, and 0 is the left-most column in the grid. If the specified row or column index is out of bounds, it will throw an error. If the specified row or column index is occupied by another node, it will throw an error.
 
+caution
+
+⚠️ This method will throw an error if the parent grid has [`gridItemsPositioning`](/docs/plugins/api/properties/nodes-griditemspositioning/) set to `"ROW_AUTO_FLOW"`, since child positions are managed automatically. Use [`insertChild`](/docs/plugins/api/properties/nodes-insertchild/) to change the order of children instead.
+
 Setting the position of a node in a grid
 
 ```
@@ -46855,6 +47474,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -46985,6 +47605,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -47050,6 +47671,7 @@ Supported on:
 *   [LineNode](/docs/plugins/api/LineNode/)
 *   [PolygonNode](/docs/plugins/api/PolygonNode/)
 *   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
@@ -48071,7 +48693,7 @@ Get all measurements pointing to a node in the current page. This includes all m
 
 * * *
 
-### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText: string }): [Measurement](/docs/plugins/api/Measurement/)
+### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
 
 Adds a measurement between two nodes in the current page.
 
@@ -48091,7 +48713,7 @@ if (figma.editorType === 'dev') {  // In Figma's Dev Mode}
 
 * * *
 
-### editMeasurement(id: string, newValue: { offset: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText: string }): [Measurement](/docs/plugins/api/Measurement/)
+### editMeasurement(id: string, newValue: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
 
 Edit a measurement’s offset.
 
@@ -50695,7 +51317,7 @@ Whether this blur is visible.
 
 * * *
 
-### boundVariables?: { \['radius'\]: [VariableAlias](/docs/plugins/api/VariableAlias/) } \[readonly\]
+### boundVariables?: { \['radius'\]?: [VariableAlias](/docs/plugins/api/VariableAlias/) } \[readonly\]
 
 The variable bound to the radius field on this blur effect
 
@@ -50775,7 +51397,13 @@ The blend mode of the noise.
 
 ### noiseSize: number \[readonly\]
 
-The size of the noise effect.
+The size of the noise effect. Applies to both axes. When `noiseSizeVector` is set, this value is always equal to `noiseSizeVector.x`.
+
+* * *
+
+### noiseSizeVector?: [Vector](/docs/plugins/api/Vector/) \[readonly\]
+
+The size of the noise effect along the x and y axes. When omitted, `noiseSize` applies to both axes. When provided, its `x` component must equal `noiseSize` or an error is thrown on write.
 
 * * *
 
@@ -50845,7 +51473,13 @@ Whether the texture effect is visible.
 
 ### noiseSize: number \[readonly\]
 
-The size of the texture effect.
+The size of the texture effect. Applies to both axes. When `noiseSizeVector` is set, this value is always equal to `noiseSizeVector.x`.
+
+* * *
+
+### noiseSizeVector?: [Vector](/docs/plugins/api/Vector/) \[readonly\]
+
+The size of the texture effect along the x and y axes. When omitted, `noiseSize` applies to both axes. When provided, its `x` component must equal `noiseSize` or an error is thrown on write.
 
 * * *
 
@@ -51220,7 +51854,7 @@ If specified, the search will match nodes that have one of the given types.
 
 * * *
 
-### pluginData?: { keys: string\[\] }
+### pluginData?: { keys?: string\[\] }
 
 If specified, the search will match nodes that have [`PluginData`](/docs/plugins/api/node-properties/#getplugindata) stored for your plugin.
 
@@ -51230,7 +51864,7 @@ If specified, the search will match nodes that have [`PluginData`](/docs/plugins
 
 * * *
 
-### sharedPluginData?: { namespace: string; keys: string\[\] }
+### sharedPluginData?: { namespace: string; keys?: string\[\] }
 
 If specified, the search will match nodes that have [`SharedPluginData`](/docs/plugins/api/node-properties/#getsharedplugindata) stored on the given `namespace` and `keys`.
 
@@ -52198,9 +52832,9 @@ The type of the grid track. `FLEX` indicates that the track behaves like the CSS
 
 Previous
 
-Guide
+GridTrackReorderOptions
 
-](/docs/plugins/api/Guide/)[
+](/docs/plugins/api/GridTrackReorderOptions/)[
 
 Next
 
@@ -52239,9 +52873,9 @@ FontStyle
 
 Next
 
-GridTrackSize
+GridTrackReorderEntry
 
-](/docs/plugins/api/GridTrackSize/)
+](/docs/plugins/api/GridTrackReorderEntry/)
 
 ---
 
@@ -52576,6 +53210,98 @@ Next
 Rect
 
 ](/docs/plugins/api/Rect/)
+
+---
+
+# GridTrackReorderOptions | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/GridTrackReorderOptions/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   GridTrackReorderOptions
+
+# GridTrackReorderOptions
+
+## GridTrackReorderOptions​
+
+### fromIndices: ReadonlyArray<number>
+
+The indices of the rows or columns (tracks) to move. Does not need to be sorted, contiguous, or deduplicated. All indices must be within bounds for the current number of rows or columns.
+
+* * *
+
+### insertionIndex: number
+
+The index to insert the selected rows or columns (tracks) at. This is evaluated against the original row/column order (before the move).
+
+As an example, take a grid with 4 columns and 2 rows. fromIndices could be 0 to 3 (inclusive), and insertionIndex could be 0 to 4 (inclusive).
+
+```
+  0         1         2         3         4 ← possible insertion indices---- 0 --- --- 1 --- --- 2 --- --- 3 ----   ← track indices+-------------------+---------+---------+|                   |         |         ||                   |         |         |+---------+---------+---------+---------+|         |         |         |         ||         |         |         |         |+---------+---------+---------+---------+
+```
+
+* * *
+
+[
+
+Previous
+
+GridTrackReorderEntry
+
+](/docs/plugins/api/GridTrackReorderEntry/)[
+
+Next
+
+GridTrackSize
+
+](/docs/plugins/api/GridTrackSize/)
+
+*   GridTrackReorderOptions
+
+---
+
+# GridTrackReorderEntry | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/GridTrackReorderEntry/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   GridTrackReorderEntry
+
+# GridTrackReorderEntry
+
+## GridTrackReorderEntry​
+
+### from: number
+
+The original index of the track before the reorder.
+
+* * *
+
+### to: number
+
+The new index of the track after the reorder.
+
+* * *
+
+[
+
+Previous
+
+Guide
+
+](/docs/plugins/api/Guide/)[
+
+Next
+
+GridTrackReorderOptions
+
+](/docs/plugins/api/GridTrackReorderOptions/)
+
+*   GridTrackReorderEntry
 
 ---
 
@@ -55178,7 +55904,7 @@ The easing of the slide transition.
 
 * * *
 
-### timing: { type: 'ON\_CLICK' | 'AFTER\_DELAY'; delay: number } \[readonly\]
+### timing: { type: 'ON\_CLICK' | 'AFTER\_DELAY'; delay?: number } \[readonly\]
 
 The timing of the slide transition.
 

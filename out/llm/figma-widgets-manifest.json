@@ -2,10 +2,10 @@
   "id": "widgets",
   "label": "Figma Widgets",
   "sourceRoot": "https://developers.figma.com/docs/widgets/",
-  "generatedAt": "2026-05-22T04:33:57.508Z",
-  "startedAt": "2026-05-22T04:33:34.199Z",
-  "pageCount": 78,
-  "chunkCount": 232,
+  "generatedAt": "2026-05-23T04:24:11.814Z",
+  "startedAt": "2026-05-23T04:23:48.437Z",
+  "pageCount": 77,
+  "chunkCount": 230,
   "chunking": {
     "chunkSizeChars": 2200,
     "chunkOverlapChars": 220

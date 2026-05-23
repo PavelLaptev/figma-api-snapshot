@@ -1016,6 +1016,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "gridAutoTracks | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridautotracks/",
+    "path": "/docs/plugins/api/properties/nodes-gridautotracks/",
+    "slug": "docs__plugins__api__properties__nodes-gridautotracks"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "gridChildHorizontalAlign | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridchildhorizontalalign/",
     "path": "/docs/plugins/api/properties/nodes-gridchildhorizontalalign/",
@@ -1062,6 +1069,13 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-gridcolumnspan/",
     "path": "/docs/plugins/api/properties/nodes-gridcolumnspan/",
     "slug": "docs__plugins__api__properties__nodes-gridcolumnspan"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "gridItemsPositioning | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-griditemspositioning/",
+    "path": "/docs/plugins/api/properties/nodes-griditemspositioning/",
+    "slug": "docs__plugins__api__properties__nodes-griditemspositioning"
   },
   {
     "dataset": "plugin-api",
@@ -1279,6 +1293,20 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-removed/",
     "path": "/docs/plugins/api/properties/nodes-removed/",
     "slug": "docs__plugins__api__properties__nodes-removed"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "reorderColumns | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-reordercolumns/",
+    "path": "/docs/plugins/api/properties/nodes-reordercolumns/",
+    "slug": "docs__plugins__api__properties__nodes-reordercolumns"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "reorderRows | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-reorderrows/",
+    "path": "/docs/plugins/api/properties/nodes-reorderrows/",
+    "slug": "docs__plugins__api__properties__nodes-reorderrows"
   },
   {
     "dataset": "plugin-api",
@@ -1846,6 +1874,20 @@
     "url": "https://developers.figma.com/docs/plugins/api/Reaction/",
     "path": "/docs/plugins/api/Reaction/",
     "slug": "docs__plugins__api__Reaction"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "GridTrackReorderOptions | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/GridTrackReorderOptions/",
+    "path": "/docs/plugins/api/GridTrackReorderOptions/",
+    "slug": "docs__plugins__api__GridTrackReorderOptions"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "GridTrackReorderEntry | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/GridTrackReorderEntry/",
+    "path": "/docs/plugins/api/GridTrackReorderEntry/",
+    "slug": "docs__plugins__api__GridTrackReorderEntry"
   },
   {
     "dataset": "plugin-api",
@@ -3414,13 +3456,6 @@
     "url": "https://developers.figma.com/docs/widgets/api/type-ImagePaint/",
     "path": "/docs/widgets/api/type-ImagePaint/",
     "slug": "docs__widgets__api__type-ImagePaint"
-  },
-  {
-    "dataset": "widgets",
-    "title": "PlaceholderProps | Developer Docs",
-    "url": "https://developers.figma.com/docs/widgets/api/type-PlaceholderProps/",
-    "path": "/docs/widgets/api/type-PlaceholderProps/",
-    "slug": "docs__widgets__api__type-PlaceholderProps"
   },
   {
     "dataset": "widgets",

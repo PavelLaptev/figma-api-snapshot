@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/GridTrackReorderEntry/",
+  "path": "/docs/plugins/api/GridTrackReorderEntry/",
+  "slug": "docs__plugins__api__GridTrackReorderEntry",
+  "title": "GridTrackReorderEntry | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   GridTrackReorderEntry\n\n# GridTrackReorderEntry\n\n## GridTrackReorderEntry​\n\n### from: number\n\nThe original index of the track before the reorder.\n\n* * *\n\n### to: number\n\nThe new index of the track after the reorder.\n\n* * *\n\n[\n\nPrevious\n\nGuide\n\n](/docs/plugins/api/Guide/)[\n\nNext\n\nGridTrackReorderOptions\n\n](/docs/plugins/api/GridTrackReorderOptions/)\n\n*   GridTrackReorderEntry"
+}
