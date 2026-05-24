@@ -3459,6 +3459,13 @@
   },
   {
     "dataset": "widgets",
+    "title": "PlaceholderProps | Developer Docs",
+    "url": "https://developers.figma.com/docs/widgets/api/type-PlaceholderProps/",
+    "path": "/docs/widgets/api/type-PlaceholderProps/",
+    "slug": "docs__widgets__api__type-PlaceholderProps"
+  },
+  {
+    "dataset": "widgets",
     "title": "StrokeCap | Developer Docs",
     "url": "https://developers.figma.com/docs/widgets/api/type-StrokeCap/",
     "path": "/docs/widgets/api/type-StrokeCap/",
