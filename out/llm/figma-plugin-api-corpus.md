@@ -10796,47 +10796,6 @@ openExternal
 
 ---
 
-# openExternal | Developer Docs
-
-Source: https://developers.figma.com/docs/plugins/api/properties/figma-openexternal/
-
-*   [](/)
-*   Plugins
-*   [Global Objects](/docs/plugins/api/global-objects/)
-*   [figma](/docs/plugins/api/figma/)
-*   openExternal
-
-# openExternal
-
-Open a url in a new tab.
-
-## Signature​
-
-### [openExternal](/docs/plugins/api/properties/figma-openexternal/)(url: string): void
-
-## Remarks​
-
-In the VS Code Extension, this API is required to open a url in the browser. Read more in [Dev Mode plugins in Visual Studio Code](/docs/plugins/working-in-dev-mode/#dev-mode-plugins-in-visual-studio-code).
-
-[
-
-Previous
-
-saveVersionHistoryAsync
-
-](/docs/plugins/api/properties/figma-saveversionhistoryasync/)[
-
-Next
-
-showUI
-
-](/docs/plugins/api/properties/figma-showui/)
-
-*   Signature
-*   Remarks
-
----
-
 # showUI | Developer Docs
 
 Source: https://developers.figma.com/docs/plugins/api/properties/figma-showui/
