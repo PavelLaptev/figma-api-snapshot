@@ -204,6 +204,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "openExternal | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-openexternal/",
+    "path": "/docs/plugins/api/properties/figma-openexternal/",
+    "slug": "docs__plugins__api__properties__figma-openexternal"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "showUI | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-showui/",
     "path": "/docs/plugins/api/properties/figma-showui/",
