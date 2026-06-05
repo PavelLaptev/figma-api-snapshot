@@ -770,6 +770,8 @@ Supported on:
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 
+The radius of the bottom left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### bottomRightRadius: number
@@ -784,6 +786,8 @@ Supported on:
 *   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
+
+The radius of the bottom right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
@@ -1405,7 +1409,7 @@ The documentation links for this style/component.
 
 * * *
 
-### editComponentProperty(propertyName: string, newValue: { name?: string; defaultValue?: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues?: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description?: string }): string
+### editComponentProperty(propertyName: string, newValue: { name?: string; defaultValue?: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues?: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description?: string; slotSettings?: [SlotSettings](/docs/plugins/api/SlotSettings/) }): string
 
 Supported on:
 
@@ -1420,6 +1424,7 @@ This function supports properties with type `'BOOLEAN'`, `'TEXT'`, `'INSTANCE_SW
 *   `defaultValue` is supported for `'BOOLEAN'`, `'TEXT'`, and `'INSTANCE_SWAP'` properties, but not for `'VARIANT'` or `'SLOT'` properties
 *   `preferredValues` is only supported for `'INSTANCE_SWAP'` and `'SLOT'` properties
 *   `description` is only supported for `'SLOT'` properties
+*   `slotSettings` is only supported for `'SLOT'` properties
 
 * * *
 
@@ -6139,6 +6144,8 @@ Supported on:
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 
+The radius of the top left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### topRightRadius: number
@@ -6153,6 +6160,8 @@ Supported on:
 *   [SectionNode](/docs/plugins/api/SectionNode/)
 *   [SlideNode](/docs/plugins/api/SlideNode/)
 *   [SlotNode](/docs/plugins/api/SlotNode/)
+
+The radius of the top right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
@@ -8644,17 +8653,25 @@ A value that lets you control how "smooth" the corners are. Ranges from 0 to 1.
 
 ### topLeftRadius: number
 
+The radius of the top left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### topRightRadius: number
+
+The radius of the top right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
 ### bottomLeftRadius: number
 
+The radius of the bottom left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### bottomRightRadius: number
+
+The radius of the bottom right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
@@ -16168,17 +16185,25 @@ A value that lets you control how "smooth" the corners are. Ranges from 0 to 1.
 
 ### topLeftRadius: number
 
+The radius of the top left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### topRightRadius: number
+
+The radius of the top right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
 ### bottomLeftRadius: number
 
+The radius of the bottom left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### bottomRightRadius: number
+
+The radius of the bottom right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
@@ -16614,7 +16639,7 @@ Adds a new component property to this node and returns the property name with it
 
 * * *
 
-### editComponentProperty(propertyName: string, newValue: { name?: string; defaultValue?: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues?: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description?: string }): string
+### editComponentProperty(propertyName: string, newValue: { name?: string; defaultValue?: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues?: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description?: string; slotSettings?: [SlotSettings](/docs/plugins/api/SlotSettings/) }): string
 
 Modifies the name, default value, or preferred values of an existing component property on this node and returns the property name with its unique identifier suffixed.
 
@@ -16624,6 +16649,7 @@ This function supports properties with type `'BOOLEAN'`, `'TEXT'`, `'INSTANCE_SW
 *   `defaultValue` is supported for `'BOOLEAN'`, `'TEXT'`, and `'INSTANCE_SWAP'` properties, but not for `'VARIANT'` or `'SLOT'` properties
 *   `preferredValues` is only supported for `'INSTANCE_SWAP'` and `'SLOT'` properties
 *   `description` is only supported for `'SLOT'` properties
+*   `slotSettings` is only supported for `'SLOT'` properties
 
 * * *
 
@@ -17601,17 +17627,25 @@ A value that lets you control how "smooth" the corners are. Ranges from 0 to 1.
 
 ### topLeftRadius: number
 
+The radius of the top left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### topRightRadius: number
+
+The radius of the top right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
 ### bottomLeftRadius: number
 
+The radius of the bottom left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### bottomRightRadius: number
+
+The radius of the bottom right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
@@ -17981,7 +18015,7 @@ Adds a new component property to this node and returns the property name with it
 
 * * *
 
-### editComponentProperty(propertyName: string, newValue: { name?: string; defaultValue?: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues?: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description?: string }): string
+### editComponentProperty(propertyName: string, newValue: { name?: string; defaultValue?: string | boolean | [VariableAlias](/docs/plugins/api/VariableAlias/); preferredValues?: [InstanceSwapPreferredValue](/docs/plugins/api/InstanceSwapPreferredValue/)\[\]; description?: string; slotSettings?: [SlotSettings](/docs/plugins/api/SlotSettings/) }): string
 
 Modifies the name, default value, or preferred values of an existing component property on this node and returns the property name with its unique identifier suffixed.
 
@@ -17991,6 +18025,7 @@ This function supports properties with type `'BOOLEAN'`, `'TEXT'`, `'INSTANCE_SW
 *   `defaultValue` is supported for `'BOOLEAN'`, `'TEXT'`, and `'INSTANCE_SWAP'` properties, but not for `'VARIANT'` or `'SLOT'` properties
 *   `preferredValues` is only supported for `'INSTANCE_SWAP'` and `'SLOT'` properties
 *   `description` is only supported for `'SLOT'` properties
+*   `slotSettings` is only supported for `'SLOT'` properties
 
 * * *
 
@@ -21061,17 +21096,25 @@ A value that lets you control how "smooth" the corners are. Ranges from 0 to 1.
 
 ### topLeftRadius: number
 
+The radius of the top left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### topRightRadius: number
+
+The radius of the top right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
 ### bottomLeftRadius: number
 
+The radius of the bottom left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### bottomRightRadius: number
+
+The radius of the bottom right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
@@ -27044,17 +27087,25 @@ A value that lets you control how "smooth" the corners are. Ranges from 0 to 1.
 
 ### topLeftRadius: number
 
+The radius of the top left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### topRightRadius: number
+
+The radius of the top right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
 ### bottomLeftRadius: number
 
+The radius of the bottom left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### bottomRightRadius: number
+
+The radius of the bottom right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
@@ -28271,17 +28322,25 @@ A value that lets you control how "smooth" the corners are. Ranges from 0 to 1.
 
 ### topLeftRadius: number
 
+The radius of the top left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### topRightRadius: number
+
+The radius of the top right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
 ### bottomLeftRadius: number
 
+The radius of the bottom left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### bottomRightRadius: number
+
+The radius of the bottom right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
@@ -30887,17 +30946,25 @@ A value that lets you control how "smooth" the corners are. Ranges from 0 to 1.
 
 ### topLeftRadius: number
 
+The radius of the top left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### topRightRadius: number
+
+The radius of the top right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
 ### bottomLeftRadius: number
 
+The radius of the bottom left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### bottomRightRadius: number
+
+The radius of the bottom right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
@@ -31832,8 +31899,6 @@ Source: https://developers.figma.com/docs/plugins/api/SlotNode/
 
 A SlotNode represents a slot within a component or instance. In Figma, a slot is a child frame of a component that has freeform content editing. Slots can be created with [`createSlot`](/docs/plugins/api/ComponentNode/#createslot), which also creates a property within [`ComponentPropertyDefinitions`](/docs/plugins/api/ComponentPropertyDefinitions/) corresponding to that slot.
 
-Note: Slots is currently in open beta.
-
 ## Slot properties​
 
 ### type: 'SLOT' \[readonly\]
@@ -31851,6 +31916,16 @@ Create a copy of this node. By default, the duplicate will be parented under `fi
 ### resetSlot(): void
 
 Resets a given slot node to the original component slot content.
+
+* * *
+
+### limitViolations: Array<'BELOW\_MIN' | 'ABOVE\_MAX' | 'HAS\_NON\_PREFERRED'> \[readonly\]
+
+The set of limits, configured on the corresponding `'SLOT'` component property's [`SlotSettings`](/docs/plugins/api/SlotSettings/), that the current contents of this slot violate. Returns an empty array when within limits. Multiple kinds may be present simultaneously (e.g. `['BELOW_MIN', 'HAS_NON_PREFERRED']`), since `HAS_NON_PREFERRED` is independent of the child count. `BELOW_MIN` and `ABOVE_MAX` are mutually exclusive.
+
+*   `'BELOW_MIN'`: the slot has fewer children than its configured `minChildren`.
+*   `'ABOVE_MAX'`: the slot has more children than its configured `maxChildren`.
+*   `'HAS_NON_PREFERRED'`: the slot contains a child that is not in the property's preferred values, while `allowPreferredValuesOnly` is `true`.
 
 * * *
 
@@ -32678,17 +32753,25 @@ A value that lets you control how "smooth" the corners are. Ranges from 0 to 1.
 
 ### topLeftRadius: number
 
+The radius of the top left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### topRightRadius: number
+
+The radius of the top right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
 ### bottomLeftRadius: number
 
+The radius of the bottom left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### bottomRightRadius: number
+
+The radius of the bottom right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
@@ -48558,10 +48641,10 @@ Source: https://developers.figma.com/docs/plugins/api/ComponentPropertyOptions/
 # ComponentPropertyOptions
 
 ```
-type ComponentPropertyOptions = { preferredValues?: InstanceSwapPreferredValue[]; description?: string }
+type ComponentPropertyOptions = {  preferredValues?: InstanceSwapPreferredValue[]  description?: string  slotSettings?: SlotSettings}
 ```
 
-Additional options that can be specified when creating a new component property. Description is only applicable to slot properties.
+Additional options that can be specified when creating a new component property. `description` and `slotSettings` are only applicable to slot properties. See [`SlotSettings`](/docs/plugins/api/SlotSettings/) for the available fields.
 
 [
 
@@ -49962,10 +50045,10 @@ Source: https://developers.figma.com/docs/plugins/api/ComponentPropertyDefinitio
 # ComponentPropertyDefinitions
 
 ```
-type ComponentPropertyDefinitions = {  [propertyName: string]: {    type: ComponentPropertyType    defaultValue: string | boolean    variantOptions?: string[]    preferredValues?: InstanceSwapPreferredValue[]    description?: string    readonly boundVariables?: {      [field in VariableBindableComponentPropertyDefinitionField]?: VariableAlias    }  }}type VariableBindableComponentPropertyDefinitionField = "defaultValue"
+type ComponentPropertyDefinitions = {  [propertyName: string]: {    type: ComponentPropertyType    defaultValue: string | boolean    variantOptions?: string[]    preferredValues?: InstanceSwapPreferredValue[]    description?: string    slotSettings?: SlotSettings    readonly boundVariables?: {      [field in VariableBindableComponentPropertyDefinitionField]?: VariableAlias    }  }}type VariableBindableComponentPropertyDefinitionField = "defaultValue"
 ```
 
-A map of component property definitions that exist on a component or component set node. Each definition in the map must have a type matching [`ComponentPropertyType`](/docs/plugins/api/ComponentPropertyType/). `defaultValue` represents the value that instances will initially have for that property. `'VARIANT'` properties also have `variantOptions`, a list of possible values for that variant property. `'INSTANCE_SWAP'` properties may optionally have a list of [`InstanceSwapPreferredValue`](/docs/plugins/api/InstanceSwapPreferredValue/)s. A component property can optionally be bound to a [`Variable`](/docs/plugins/api/Variable/), in which case the `boundVariables` structure will be populated with a [`VariableAlias`](/docs/plugins/api/VariableAlias/) describing the variable controlling this property. Only Slot properties can have a `description` property.
+A map of component property definitions that exist on a component or component set node. Each definition in the map must have a type matching [`ComponentPropertyType`](/docs/plugins/api/ComponentPropertyType/). `defaultValue` represents the value that instances will initially have for that property. `'VARIANT'` properties also have `variantOptions`, a list of possible values for that variant property. `'INSTANCE_SWAP'` properties may optionally have a list of [`InstanceSwapPreferredValue`](/docs/plugins/api/InstanceSwapPreferredValue/)s. A component property can optionally be bound to a [`Variable`](/docs/plugins/api/Variable/), in which case the `boundVariables` structure will be populated with a [`VariableAlias`](/docs/plugins/api/VariableAlias/) describing the variable controlling this property. Only `'SLOT'` properties can have a `description` property. `'SLOT'` properties may also have a [`SlotSettings`](/docs/plugins/api/SlotSettings/) on `slotSettings` describing the slot's insertion, visibility, and child-count limits.
 
 [
 
@@ -51163,6 +51246,46 @@ Next
 LabelSublayer
 
 ](/docs/plugins/api/LabelSublayer/)
+
+---
+
+# SlotSettings | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/SlotSettings/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   SlotSettings
+
+# SlotSettings
+
+```
+type SlotSettings = {  stretchChildOnInsert?: boolean  displayEmptyByDefault?: boolean  minChildren?: number | null  maxChildren?: number | null  allowPreferredValuesOnly?: boolean}
+```
+
+Slot-specific configuration for `'SLOT'`\-typed component properties. Passed to [`ComponentPropertyOptions`](/docs/plugins/api/ComponentPropertyOptions/) when creating or editing a slot property, and returned on each entry in [`ComponentPropertyDefinitions`](/docs/plugins/api/ComponentPropertyDefinitions/) for slot properties.
+
+*   `stretchChildOnInsert`: when a layer is inserted into the slot, apply counter-axis fill.
+*   `displayEmptyByDefault`: whether the slot highlight is always shown on empty instances of this slot.
+*   `minChildren` / `maxChildren`: enforced child count range. `null` means "not set". `minChildren` must be ≤ `maxChildren` when both are set.
+*   `allowPreferredValuesOnly`: restrict the slot to its `preferredValues` list.
+
+Edits that cause violations to `minChildren` / `maxChildren` and `allowPreferredValuesOnly` do not fail or cause runtime errors. If the current slot contents violate the configured limits, the slot node's [`SlotNode`](/docs/plugins/api/SlotNode/) `limitViolations` getter returns the set of violation kinds.
+
+[
+
+Previous
+
+SlidesViewChangeEvent
+
+](/docs/plugins/api/SlidesViewChangeEvent/)[
+
+Next
+
+StrokeCap
+
+](/docs/plugins/api/StrokeCap/)
 
 ---
 
@@ -53512,9 +53635,9 @@ The possible values are:
 
 Previous
 
-SlidesViewChangeEvent
+SlotSettings
 
-](/docs/plugins/api/SlidesViewChangeEvent/)[
+](/docs/plugins/api/SlotSettings/)[
 
 Next
 
@@ -54930,7 +55053,7 @@ Source: https://developers.figma.com/docs/plugins/api/ConnectorStrokeCap/
 # ConnectorStrokeCap
 
 ```
-type ConnectorStrokeCap = "NONE" | "ARROW_EQUILATERAL" | "ARROW_LINES" | "TRIANGLE_FILLED" | "DIAMOND_FILLED" | "CIRCLE_FILLED";
+type ConnectorStrokeCap = "NONE" | "ARROW_EQUILATERAL" | "ARROW_LINES" | "TRIANGLE_FILLED" | "DIAMOND_FILLED" | "CIRCLE_FILLED" | "ERD_ZERO_OR_ONE" | "ERD_EXACTLY_ONE" | "ERD_ZERO_OR_MORE" | "ERD_ONE_OR_MORE" | "ERD_ONE" | "ERD_MANY";
 ```
 
 The possible values are:
@@ -54941,6 +55064,15 @@ The possible values are:
 *   `"TRIANGLE_FILLED"`: a filled triangle is added to the end of the connector
 *   `"DIAMOND_FILLED"`: a filled diamond is added to the end of the connector
 *   `"CIRCLE_FILLED"`: a filled circle is added to the end of the connector
+
+Additionally, `ERD` cap types add entity-relationship diagram (ERD) cardinality markers to the end of the connector:
+
+*   `"ERD_ZERO_OR_ONE"`: a zero-or-one cardinality marker (hollow circle and perpendicular line)
+*   `"ERD_EXACTLY_ONE"`: an exactly-one cardinality marker (two perpendicular lines)
+*   `"ERD_ZERO_OR_MORE"`: a zero-or-more cardinality marker (hollow circle and crow's foot)
+*   `"ERD_ONE_OR_MORE"`: a one-or-more cardinality marker (perpendicular line and crow's foot)
+*   `"ERD_ONE"`: a one cardinality marker (perpendicular line)
+*   `"ERD_MANY"`: a many cardinality marker (crow's foot)
 
 [
 
@@ -55466,17 +55598,25 @@ The number of pixels to round the corners of the object by.
 
 ### topLeftRadius: number
 
+The radius of the top left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### topRightRadius: number
+
+The radius of the top right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
 ### bottomLeftRadius: number
 
+The radius of the bottom left corner, in pixels. This value must be non-negative and can be fractional.
+
 * * *
 
 ### bottomRightRadius: number
+
+The radius of the bottom right corner, in pixels. This value must be non-negative and can be fractional.
 
 * * *
 
@@ -55957,9 +56097,9 @@ SlideTransition
 
 Next
 
-StrokeCap
+SlotSettings
 
-](/docs/plugins/api/StrokeCap/)
+](/docs/plugins/api/SlotSettings/)
 
 ---
 

@@ -1674,6 +1674,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "SlotSettings | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/SlotSettings/",
+    "path": "/docs/plugins/api/SlotSettings/",
+    "slug": "docs__plugins__api__SlotSettings"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "Effect | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Effect/",
     "path": "/docs/plugins/api/Effect/",
