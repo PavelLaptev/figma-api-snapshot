@@ -9346,6 +9346,22 @@ const md = "# Hello, world!\n\nThis is a **bold** text."const normalizedMd = fig
 
 * * *
 
+### getSfSymbolCharacter(name: string): string
+
+Returns the single-character Private Use Area string for an Apple SF Symbol, given the symbol's canonical name (e.g. `'square.and.arrow.up'`). Assigning the returned character to a text node's `characters` — after loading the SF Pro font — causes the symbol to render in the text layer.
+
+Throws if `name` is not a string or does not match a known SF Symbol.
+
+Example:
+
+```
+const text = figma.createText()await figma.loadFontAsync({ family: 'SF Pro', style: 'Regular' })text.characters = 'Share ' + figma.util.getSfSymbolCharacter('square.and.arrow.up')
+```
+
+[View more →](/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/)
+
+* * *
+
 [
 
 Previous
@@ -9394,9 +9410,9 @@ const colorMapBase = figma.constants.colors.figJamBaseconst colorMapBaseLight = 
 
 Previous
 
-normalizeMarkdown
+getSfSymbolCharacter
 
-](/docs/plugins/api/properties/figma-util-normalizemarkdown/)[
+](/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/)[
 
 Next
 
@@ -57669,13 +57685,66 @@ solidPaint
 
 Next
 
+getSfSymbolCharacter
+
+](/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/)
+
+*   Signature
+*   Parameters
+    *   markdown
+
+---
+
+# getSfSymbolCharacter | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   [util](/docs/plugins/api/figma-util/)
+*   getSfSymbolCharacter
+
+# getSfSymbolCharacter
+
+Returns the single-character Private Use Area string for an Apple SF Symbol, given the symbol's canonical name (e.g. `'square.and.arrow.up'`). Assigning the returned character to a text node's `characters` — after loading the SF Pro font — causes the symbol to render in the text layer.
+
+Throws if `name` is not a string or does not match a known SF Symbol.
+
+Example:
+
+```
+const text = figma.createText()await figma.loadFontAsync({ family: 'SF Pro', style: 'Regular' })text.characters = 'Share ' + figma.util.getSfSymbolCharacter('square.and.arrow.up')
+```
+
+## Signature​
+
+### getSfSymbolCharacter(name: string): string
+
+## Parameters​
+
+### name​
+
+The canonical SF Symbol name.
+
+[
+
+Previous
+
+normalizeMarkdown
+
+](/docs/plugins/api/properties/figma-util-normalizemarkdown/)[
+
+Next
+
 constants
 
 ](/docs/plugins/api/figma-constants/)
 
 *   Signature
 *   Parameters
-    *   markdown
+    *   name
 
 ---
 

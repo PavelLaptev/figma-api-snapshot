@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/",
+  "path": "/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/",
+  "slug": "docs__plugins__api__properties__figma-util-getsfsymbolcharacter",
+  "title": "getSfSymbolCharacter | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [util](/docs/plugins/api/figma-util/)\n*   getSfSymbolCharacter\n\n# getSfSymbolCharacter\n\nReturns the single-character Private Use Area string for an Apple SF Symbol, given the symbol's canonical name (e.g. `'square.and.arrow.up'`). Assigning the returned character to a text node's `characters` — after loading the SF Pro font — causes the symbol to render in the text layer.\n\nThrows if `name` is not a string or does not match a known SF Symbol.\n\nExample:\n\n```\nconst text = figma.createText()await figma.loadFontAsync({ family: 'SF Pro', style: 'Regular' })text.characters = 'Share ' + figma.util.getSfSymbolCharacter('square.and.arrow.up')\n```\n\n## Signature​\n\n### getSfSymbolCharacter(name: string): string\n\n## Parameters​\n\n### name​\n\nThe canonical SF Symbol name.\n\n[\n\nPrevious\n\nnormalizeMarkdown\n\n](/docs/plugins/api/properties/figma-util-normalizemarkdown/)[\n\nNext\n\nconstants\n\n](/docs/plugins/api/figma-constants/)\n\n*   Signature\n*   Parameters\n    *   name"
+}

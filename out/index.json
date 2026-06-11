@@ -2409,6 +2409,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "getSfSymbolCharacter | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/",
+    "path": "/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/",
+    "slug": "docs__plugins__api__properties__figma-util-getsfsymbolcharacter"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "colors | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-constants-colors/",
     "path": "/docs/plugins/api/properties/figma-constants-colors/",
