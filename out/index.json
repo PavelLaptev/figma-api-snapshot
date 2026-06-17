@@ -295,13 +295,6 @@
   },
   {
     "dataset": "plugin-api",
-    "title": "createAutoLayout | Developer Docs",
-    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createautolayout/",
-    "path": "/docs/plugins/api/properties/figma-createautolayout/",
-    "slug": "docs__plugins__api__properties__figma-createautolayout"
-  },
-  {
-    "dataset": "plugin-api",
     "title": "createComponent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createcomponent/",
     "path": "/docs/plugins/api/properties/figma-createcomponent/",
@@ -810,6 +803,13 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-appendchildat/",
     "path": "/docs/plugins/api/properties/nodes-appendchildat/",
     "slug": "docs__plugins__api__properties__nodes-appendchildat"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "boundVariables | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-boundvariables/",
+    "path": "/docs/plugins/api/properties/nodes-boundvariables/",
+    "slug": "docs__plugins__api__properties__nodes-boundvariables"
   },
   {
     "dataset": "plugin-api",
@@ -2406,13 +2406,6 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-normalizemarkdown/",
     "path": "/docs/plugins/api/properties/figma-util-normalizemarkdown/",
     "slug": "docs__plugins__api__properties__figma-util-normalizemarkdown"
-  },
-  {
-    "dataset": "plugin-api",
-    "title": "getSfSymbolCharacter | Developer Docs",
-    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/",
-    "path": "/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/",
-    "slug": "docs__plugins__api__properties__figma-util-getsfsymbolcharacter"
   },
   {
     "dataset": "plugin-api",

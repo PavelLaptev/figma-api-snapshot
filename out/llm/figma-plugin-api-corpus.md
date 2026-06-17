@@ -791,7 +791,7 @@ The radius of the bottom right corner, in pixels. This value must be non-negativ
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 Supported on:
 
@@ -831,6 +831,8 @@ Supported on:
 *   [WidgetNode](/docs/plugins/api/WidgetNode/)
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -2658,7 +2660,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 * * *
 
-### [getStyledTextSegments](/docs/plugins/api/properties/TextNode-getstyledtextsegments/)<StyledTextSegmentFields extends (keyof Omit< StyledTextSegment, 'characters' | 'start' | 'end' >)\[\]>(fields: StyledTextSegmentFields, start?: number, end?: number): Array<Pick<[StyledTextSegment](/docs/plugins/api/StyledTextSegment/), StyledTextSegmentFields\[number\] | 'characters' | 'start' | 'end'>>
+### [getStyledTextSegments](/docs/plugins/api/properties/TextNode-getstyledtextsegments/)<StyledTextSegmentFields extends (keyof Omit<StyledTextSegment, 'characters' | 'start' | 'end'>)\[\]>(fields: StyledTextSegmentFields, start?: number, end?: number): Array<Pick<[StyledTextSegment](/docs/plugins/api/StyledTextSegment/), StyledTextSegmentFields\[number\] | 'characters' | 'start' | 'end'>>
 
 Supported on:
 
@@ -6961,18 +6963,6 @@ Creates a new frame. The behavior is similar to using the `F` shortcut followed 
 
 * * *
 
-### [createAutoLayout](/docs/plugins/api/properties/figma-createautolayout/)(direction?: 'HORIZONTAL' | 'VERTICAL'): [FrameNode](/docs/plugins/api/FrameNode/)
-
-info
-
-This API is only available via `use_figma` in the MCP server
-
-Creates a new frame with auto layout already enabled. Both axes default to hug content (`primaryAxisSizingMode = "AUTO"`, `counterAxisSizingMode = "AUTO"`), so children can immediately use `layoutSizingHorizontal/Vertical = "FILL"` after being appended.
-
-[View more →](/docs/plugins/api/properties/figma-createautolayout/)
-
-* * *
-
 ### [createComponent](/docs/plugins/api/properties/figma-createcomponent/)(): [ComponentNode](/docs/plugins/api/ComponentNode/)
 
 info
@@ -7006,10 +6996,6 @@ Creates a component from an existing node, preserving all of its properties and 
 * * *
 
 ### [createPage](/docs/plugins/api/properties/figma-createpage/)(): [PageNode](/docs/plugins/api/PageNode/)
-
-info
-
-This API is only available in Figma Design
 
 Creates a new page, appended to the document's list of children.
 
@@ -8049,9 +8035,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -9346,22 +9334,6 @@ const md = "# Hello, world!\n\nThis is a **bold** text."const normalizedMd = fig
 
 * * *
 
-### getSfSymbolCharacter(name: string): string
-
-Returns the single-character Private Use Area string for an Apple SF Symbol, given the symbol's canonical name (e.g. `'square.and.arrow.up'`). Assigning the returned character to a text node's `characters` — after loading the SF Pro font — causes the symbol to render in the text layer.
-
-Throws if `name` is not a string or does not match a known SF Symbol.
-
-Example:
-
-```
-const text = figma.createText()await figma.loadFontAsync({ family: 'SF Pro', style: 'Regular' })text.characters = 'Share ' + figma.util.getSfSymbolCharacter('square.and.arrow.up')
-```
-
-[View more →](/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/)
-
-* * *
-
 [
 
 Previous
@@ -9410,9 +9382,9 @@ const colorMapBase = figma.constants.colors.figJamBaseconst colorMapBaseLight = 
 
 Previous
 
-getSfSymbolCharacter
+normalizeMarkdown
 
-](/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/)[
+](/docs/plugins/api/properties/figma-util-normalizemarkdown/)[
 
 Next
 
@@ -11795,59 +11767,6 @@ createText
 
 Next
 
-createAutoLayout
-
-](/docs/plugins/api/properties/figma-createautolayout/)
-
-*   Signature
-*   Remarks
-
----
-
-# createAutoLayout | Developer Docs
-
-Source: https://developers.figma.com/docs/plugins/api/properties/figma-createautolayout/
-
-*   [](/)
-*   Plugins
-*   [Global Objects](/docs/plugins/api/global-objects/)
-*   [figma](/docs/plugins/api/figma/)
-*   createAutoLayout
-
-# createAutoLayout
-
-info
-
-This API is only available via `use_figma` in the MCP server
-
-Creates a new frame with auto layout already enabled. Both axes default to hug content (`primaryAxisSizingMode = "AUTO"`, `counterAxisSizingMode = "AUTO"`), so children can immediately use `layoutSizingHorizontal/Vertical = "FILL"` after being appended.
-
-## Signature​
-
-### [createAutoLayout](/docs/plugins/api/properties/figma-createautolayout/)(direction?: 'HORIZONTAL' | 'VERTICAL'): [FrameNode](/docs/plugins/api/FrameNode/)
-
-## Remarks​
-
-Prefer this over `createFrame()` whenever you need an auto-layout parent. Since `layoutMode` is already set, children can use `FILL` sizing immediately after being appended.
-
-The default direction is `"HORIZONTAL"`. Pass `"VERTICAL"` for a column layout.
-
-Create an auto-layout frame
-
-```
-const row = figma.createAutoLayout()const column = figma.createAutoLayout("VERTICAL")row.itemSpacing = 16row.paddingTop = 24row.paddingBottom = 24row.paddingLeft = 24row.paddingRight = 24
-```
-
-[
-
-Previous
-
-createFrame
-
-](/docs/plugins/api/properties/figma-createframe/)[
-
-Next
-
 createComponent
 
 ](/docs/plugins/api/properties/figma-createcomponent/)
@@ -11895,9 +11814,9 @@ const component = figma.createComponent()
 
 Previous
 
-createAutoLayout
+createFrame
 
-](/docs/plugins/api/properties/figma-createautolayout/)[
+](/docs/plugins/api/properties/figma-createframe/)[
 
 Next
 
@@ -11977,10 +11896,6 @@ Source: https://developers.figma.com/docs/plugins/api/properties/figma-createpag
 
 # createPage
 
-info
-
-This API is only available in Figma Design
-
 Creates a new page, appended to the document's list of children.
 
 ## Signature​
@@ -11991,7 +11906,7 @@ Creates a new page, appended to the document's list of children.
 
 A page node can be the parent of all types of nodes except for the document node and other page nodes.
 
-Files in a Starter team are limited to three pages. When a plugin tries to create more than three pages in a Starter team file, it triggers the following error:
+Files in a Starter team are limited to three pages in Figma Design files and one page in FigJam files. When a plugin tries to exceed this limit, it triggers the following error:
 
 Page limit error
 
@@ -12092,7 +12007,7 @@ By default, the new node is parented under `figma.currentPage`.
 Create a slice and export as PNG
 
 ```
-(async () => {  const slice = figma.createSlice()  // Move to (50, 50)  slice.x = 50  slice.y = 50  // Set size to 500 x 500  slice.resize(500, 500)  // Export a PNG of this region of the canvas  const bytes = await slice.exportAsync()  // Add the image onto the canvas as an image fill in a frame  const image = figma.createImage(bytes)  const frame = figma.createFrame()  frame.resize(500, 500)  frame.fills = [{    imageHash: image.hash,    scaleMode: "FILL",    scalingFactor: 1,    type: "IMAGE",  }]})()
+(async () => {  const slice = figma.createSlice()  // Move to (50, 50)  slice.x = 50  slice.y = 50  // Set size to 500 x 500  slice.resize(500, 500)  // Export a PNG of this region of the canvas  const bytes = await slice.exportAsync()  // Add the image onto the canvas as an image fill in a frame  const image = figma.createImage(bytes)  const frame = figma.createFrame()  frame.resize(500, 500)  frame.fills = [{    imageHash: image.hash,    scaleMode: "FILL",    scalingFactor: 1,    type: "IMAGE",  }]  })()
 ```
 
 [
@@ -12776,7 +12691,7 @@ The `src` passed in must be a URL to a PNG, JPEG, or GIF. Images have a maximum 
 Example usage of createImageAsync
 
 ```
-    figma.createImageAsync(        'https://picsum.photos/200'      ).then(async (image: Image) => {        // Create node        const node = figma.createRectangle()        // Resize the node to match the image's width and height        const { width, height } = await image.getSizeAsync()        node.resize(width, height)        // Set the fill on the node        node.fills = [          {            type: 'IMAGE',            imageHash: image.hash,            scaleMode: 'FILL'          }        ]        figma.closePlugin()      }).catch((error: any) => {        console.log(error)        figma.closePlugin()      })
+      figma.createImageAsync(          'https://picsum.photos/200'        ).then(async (image: Image) => {          // Create node          const node = figma.createRectangle()          // Resize the node to match the image's width and height          const { width, height } = await image.getSizeAsync()          node.resize(width, height)          // Set the fill on the node          node.fills = [            {              type: 'IMAGE',              imageHash: image.hash,              scaleMode: 'FILL'            }          ]          figma.closePlugin()        }).catch((error: any) => {          console.log(error)          figma.closePlugin()        })
 ```
 
 ## Possible error cases​
@@ -14156,9 +14071,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -15175,9 +15092,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -15597,9 +15516,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -17039,9 +16960,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -18573,9 +18496,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -19232,9 +19157,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -20157,9 +20084,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -20508,9 +20437,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -22295,9 +22226,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -22652,9 +22585,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -23560,9 +23495,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -23907,9 +23844,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -24790,9 +24729,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -25233,9 +25174,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -26136,9 +26079,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -26981,9 +26926,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -28043,9 +27990,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -28908,9 +28857,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -29257,9 +29208,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -29896,9 +29849,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -30358,9 +30313,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -31709,9 +31666,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -32165,9 +32124,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -33513,9 +33474,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -34336,9 +34299,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -35325,9 +35290,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -35999,9 +35966,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -36350,7 +36319,7 @@ A [`HyperlinkTarget`](/docs/plugins/api/HyperlinkTarget/) if the text node has e
 
 These functions allow you to get and set text properties on parts of the text.
 
-### [getStyledTextSegments](/docs/plugins/api/properties/TextNode-getstyledtextsegments/)<StyledTextSegmentFields extends (keyof Omit< StyledTextSegment, 'characters' | 'start' | 'end' >)\[\]>(fields: StyledTextSegmentFields, start?: number, end?: number): Array<Pick<[StyledTextSegment](/docs/plugins/api/StyledTextSegment/), StyledTextSegmentFields\[number\] | 'characters' | 'start' | 'end'>>
+### [getStyledTextSegments](/docs/plugins/api/properties/TextNode-getstyledtextsegments/)<StyledTextSegmentFields extends (keyof Omit<StyledTextSegment, 'characters' | 'start' | 'end'>)\[\]>(fields: StyledTextSegmentFields, start?: number, end?: number): Array<Pick<[StyledTextSegment](/docs/plugins/api/StyledTextSegment/), StyledTextSegmentFields\[number\] | 'characters' | 'start' | 'end'>>
 
 Get text segments along with the desired text properties (font size, text case, etc...)
 
@@ -36866,9 +36835,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -37625,7 +37596,7 @@ A [`HyperlinkTarget`](/docs/plugins/api/HyperlinkTarget/) if the text node has e
 
 These functions allow you to get and set text properties on parts of the text.
 
-### [getStyledTextSegments](/docs/plugins/api/properties/TextNode-getstyledtextsegments/)<StyledTextSegmentFields extends (keyof Omit< StyledTextSegment, 'characters' | 'start' | 'end' >)\[\]>(fields: StyledTextSegmentFields, start?: number, end?: number): Array<Pick<[StyledTextSegment](/docs/plugins/api/StyledTextSegment/), StyledTextSegmentFields\[number\] | 'characters' | 'start' | 'end'>>
+### [getStyledTextSegments](/docs/plugins/api/properties/TextNode-getstyledtextsegments/)<StyledTextSegmentFields extends (keyof Omit<StyledTextSegment, 'characters' | 'start' | 'end'>)\[\]>(fields: StyledTextSegmentFields, start?: number, end?: number): Array<Pick<[StyledTextSegment](/docs/plugins/api/StyledTextSegment/), StyledTextSegmentFields\[number\] | 'characters' | 'start' | 'end'>>
 
 Get text segments along with the desired text properties (font size, text case, etc...)
 
@@ -37997,9 +37968,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -39277,9 +39250,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -39635,9 +39610,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -40480,9 +40457,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -41387,9 +41366,11 @@ When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameN
 
 * * *
 
-### boundVariables?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
 
 The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+[View more →](/docs/plugins/api/properties/nodes-boundvariables/)
 
 * * *
 
@@ -41726,6 +41707,83 @@ appendChild
 
 Next
 
+boundVariables
+
+](/docs/plugins/api/properties/nodes-boundvariables/)
+
+*   Signature
+*   Remarks
+
+---
+
+# boundVariables | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-boundvariables/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   boundVariables
+
+# boundVariables
+
+The variables bound to a particular field on this node. Please see the [Working with Variables](/docs/plugins/working-with-variables/) guide for how to get and set variable bindings.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+## Signature​
+
+### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
+
+## Remarks​
+
+On nodes with independent corner radii (e.g. rectangles, frames), a `cornerRadius` binding sets all four corners and appears in `boundVariables` as `topLeftRadius`/`topRightRadius`/`bottomLeftRadius`/`bottomRightRadius` rather than `cornerRadius`; elsewhere it appears as `cornerRadius`.
+
+[
+
+Previous
+
+appendChildAt
+
+](/docs/plugins/api/properties/nodes-appendchildat/)[
+
+Next
+
 characters
 
 ](/docs/plugins/api/properties/TextNode-characters/)
@@ -41768,9 +41826,9 @@ Setting the `characters` property can change the [`name`](/docs/plugins/api/prop
 
 Previous
 
-appendChildAt
+boundVariables
 
-](/docs/plugins/api/properties/nodes-appendchildat/)[
+](/docs/plugins/api/properties/nodes-boundvariables/)[
 
 Next
 
@@ -41823,6 +41881,8 @@ Supported on:
 This array can be read like and iterated like a regular array. However, calling this property always returns a new array, and both the property and the new array are read-only.
 
 As such, this property cannot be assigned to, and the array cannot be modified directly (it wouldn't do anything). Instead, use [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/), [`insertChild`](/docs/plugins/api/properties/nodes-insertchild/) or [`remove`](/docs/plugins/api/properties/nodes-remove/).
+
+Do not recursively walk the entire document tree by repeatedly reading `children` (for example, a manual DFS/BFS over `node.children`). That pattern is often much slower in large files. Prefer [`findAllWithCriteria`](/docs/plugins/api/properties/nodes-findallwithcriteria/) when you know the target node types, and use [`findAll`](/docs/plugins/api/properties/nodes-findall/) when you need callback-based logic.
 
 info
 
@@ -43662,7 +43722,7 @@ Supported on:
 
 ## Signature​
 
-### [getStyledTextSegments](/docs/plugins/api/properties/TextNode-getstyledtextsegments/)<StyledTextSegmentFields extends (keyof Omit< StyledTextSegment, 'characters' | 'start' | 'end' >)\[\]>(fields: StyledTextSegmentFields, start?: number, end?: number): Array<Pick<[StyledTextSegment](/docs/plugins/api/StyledTextSegment/), StyledTextSegmentFields\[number\] | 'characters' | 'start' | 'end'>>
+### [getStyledTextSegments](/docs/plugins/api/properties/TextNode-getstyledtextsegments/)<StyledTextSegmentFields extends (keyof Omit<StyledTextSegment, 'characters' | 'start' | 'end'>)\[\]>(fields: StyledTextSegmentFields, start?: number, end?: number): Array<Pick<[StyledTextSegment](/docs/plugins/api/StyledTextSegment/), StyledTextSegmentFields\[number\] | 'characters' | 'start' | 'end'>>
 
 ## Parameters​
 
@@ -49251,7 +49311,7 @@ Source: https://developers.figma.com/docs/plugins/api/VariableBindableNodeField/
 # VariableBindableNodeField
 
 ```
-type VariableBindableNodeField =  | 'height'  | 'width'  | 'characters'  | 'itemSpacing'  | 'paddingLeft'  | 'paddingRight'  | 'paddingTop'  | 'paddingBottom'  | 'visible'  | 'topLeftRadius'  | 'topRightRadius'  | 'bottomLeftRadius'  | 'bottomRightRadius'  | 'minWidth'  | 'maxWidth'  | 'minHeight'  | 'maxHeight'  | 'counterAxisSpacing'  | 'strokeWeight'  | 'strokeTopWeight'  | 'strokeRightWeight'  | 'strokeBottomWeight'  | 'strokeLeftWeight'  | 'opacity'  | 'gridRowGap'  | 'gridColumnGap'
+type VariableBindableNodeField =  | 'height'  | 'width'  | 'characters'  | 'itemSpacing'  | 'paddingLeft'  | 'paddingRight'  | 'paddingTop'  | 'paddingBottom'  | 'visible'  | 'cornerRadius'  | 'topLeftRadius'  | 'topRightRadius'  | 'bottomLeftRadius'  | 'bottomRightRadius'  | 'minWidth'  | 'maxWidth'  | 'minHeight'  | 'maxHeight'  | 'counterAxisSpacing'  | 'strokeWeight'  | 'strokeTopWeight'  | 'strokeRightWeight'  | 'strokeBottomWeight'  | 'strokeLeftWeight'  | 'opacity'  | 'gridRowGap'  | 'gridColumnGap'
 ```
 
 A list of node fields that can be bound to a variable.
@@ -57685,66 +57745,13 @@ solidPaint
 
 Next
 
-getSfSymbolCharacter
-
-](/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/)
-
-*   Signature
-*   Parameters
-    *   markdown
-
----
-
-# getSfSymbolCharacter | Developer Docs
-
-Source: https://developers.figma.com/docs/plugins/api/properties/figma-util-getsfsymbolcharacter/
-
-*   [](/)
-*   Plugins
-*   [Global Objects](/docs/plugins/api/global-objects/)
-*   [figma](/docs/plugins/api/figma/)
-*   [util](/docs/plugins/api/figma-util/)
-*   getSfSymbolCharacter
-
-# getSfSymbolCharacter
-
-Returns the single-character Private Use Area string for an Apple SF Symbol, given the symbol's canonical name (e.g. `'square.and.arrow.up'`). Assigning the returned character to a text node's `characters` — after loading the SF Pro font — causes the symbol to render in the text layer.
-
-Throws if `name` is not a string or does not match a known SF Symbol.
-
-Example:
-
-```
-const text = figma.createText()await figma.loadFontAsync({ family: 'SF Pro', style: 'Regular' })text.characters = 'Share ' + figma.util.getSfSymbolCharacter('square.and.arrow.up')
-```
-
-## Signature​
-
-### getSfSymbolCharacter(name: string): string
-
-## Parameters​
-
-### name​
-
-The canonical SF Symbol name.
-
-[
-
-Previous
-
-normalizeMarkdown
-
-](/docs/plugins/api/properties/figma-util-normalizemarkdown/)[
-
-Next
-
 constants
 
 ](/docs/plugins/api/figma-constants/)
 
 *   Signature
 *   Parameters
-    *   name
+    *   markdown
 
 ---
 
