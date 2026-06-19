@@ -11453,6 +11453,53 @@ createLine
 
 ---
 
+# createLine | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-createline/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   createLine
+
+# createLine
+
+Creates a new line.
+
+## Signature​
+
+### [createLine](/docs/plugins/api/properties/figma-createline/)(): [LineNode](/docs/plugins/api/LineNode/)
+
+## Remarks​
+
+By default, the new node is 100 in width, has a black stroke, with weight 1, and is parented under `figma.currentPage`.
+
+Create a line and set basic styles
+
+```
+const line = figma.createLine()// Move to (50, 50)line.x = 50line.y = 50// Make line 200px longline.resize(200, 0)// 4px thick red line with arrows at each endline.strokeWeight = 4line.strokes = [{ type: 'SOLID', color: { r: 1, g: 0, b: 0 } }]line.strokeCap = 'ARROW_LINES'
+```
+
+[
+
+Previous
+
+createRectangle
+
+](/docs/plugins/api/properties/figma-createrectangle/)[
+
+Next
+
+createEllipse
+
+](/docs/plugins/api/properties/figma-createellipse/)
+
+*   Signature
+*   Remarks
+
+---
+
 # createEllipse | Developer Docs
 
 Source: https://developers.figma.com/docs/plugins/api/properties/figma-createellipse/
