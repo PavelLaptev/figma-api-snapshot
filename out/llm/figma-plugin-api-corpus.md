@@ -229,6 +229,7 @@ There are several other global objects available. You can access these from meth
 *   [`figma.codegen`](/docs/plugins/api/figma-codegen/) to implement code generation in Dev Mode
 *   [`figma.timer`](/docs/plugins/api/figma-timer/) to control the timer object in FigJam files
 *   [`figma.viewport`](/docs/plugins/api/figma-viewport/) to control the viewport: the area of the canvas that's visible on screen
+*   [`figma.motion`](/docs/plugins/api/figma-motion/) to read and apply Motion animation styles
 *   [`figma.clientStorage`](/docs/plugins/api/figma-clientStorage/) to store data on a user's local machine
 *   [`figma.parameters`](/docs/plugins/api/figma-parameters/) to accept parameters as input
 *   [`figma.variables`](/docs/plugins/api/figma-variables/) to interact with variables
@@ -578,6 +579,96 @@ if (figma.editorType === 'dev') {  // In Figma's Dev Mode}
 
 * * *
 
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
 ### annotations: ReadonlyArray<[Annotation](/docs/plugins/api/Annotation/)\>
 
 Supported on:
@@ -643,6 +734,96 @@ Supported on:
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
 [View more →](/docs/plugins/api/properties/nodes-appendchildat/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
 
 * * *
 
@@ -3818,6 +3999,51 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
 ### maskType: [MaskType](/docs/plugins/api/MaskType/)
 
 Supported on:
@@ -4514,6 +4740,96 @@ Supported on:
 Removes this node and **all of its children** from the document.
 
 [View more →](/docs/plugins/api/properties/nodes-remove/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
 
 * * *
 
@@ -5567,6 +5883,51 @@ Sets the strokes of the node asynchronously. This is the only way to set pattern
 
 * * *
 
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ### setVectorNetworkAsync(vectorNetwork: [VectorNetwork](/docs/plugins/api/VectorNetwork/)): Promise<void>
 
 Supported on:
@@ -6083,6 +6444,51 @@ Supported on:
 *   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
 
 The text decoration thickness. If the text is not underlined, this value will be null. Requires the font to be loaded.
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
 
 * * *
 
@@ -6645,6 +7051,14 @@ Read more in the [util section](/docs/plugins/api/figma-util/).
 This property contains constants that can be accessed by the plugin API.
 
 Read more in the [constants section](/docs/plugins/api/figma-constants/).
+
+* * *
+
+### motion: [MotionAPI](/docs/plugins/api/figma-motion/#motion-api) \[readonly\]
+
+This property contains methods for reading Motion animation styles available in the current document.
+
+Read more in the [Motion section](/docs/plugins/api/figma-motion/).
 
 * * *
 
@@ -7557,6 +7971,26 @@ Loads a variable from the team library. Promise is rejected if there is no publi
 
 * * *
 
+## Shaders​
+
+These APIs let you discover and import [shaders](/docs/plugins/api/Shader/) so they can be applied to a node.
+
+### [listAvailableShaders](/docs/plugins/api/properties/figma-listavailableshaders/)(): Promise<[Shader](/docs/plugins/api/Shader/)\[\]>
+
+Lists every shader available to the current file: shaders already in the file, shaders from subscribed libraries, and the user's owned shaders.
+
+[View more →](/docs/plugins/api/properties/figma-listavailableshaders/)
+
+* * *
+
+### [importShaderById](/docs/plugins/api/properties/figma-importshaderbyid/)(id: string): Promise<[Shader](/docs/plugins/api/Shader/)\>
+
+Materializes a shader into the current file by `id` and returns it with `imported: true` and its `propertyDefinitions` populated. The `id` is one returned by [`figma.listAvailableShaders`](/docs/plugins/api/properties/figma-listavailableshaders/). This is idempotent for a shader that is already imported, and mirrors [`figma.importComponentByKeyAsync`](/docs/plugins/api/figma/#importcomponentbykeyasync).
+
+[View more →](/docs/plugins/api/properties/figma-importshaderbyid/)
+
+* * *
+
 ## Other​
 
 ### listAvailableFontsAsync(): Promise<[Font](/docs/plugins/api/FontName/#font)\[\]>
@@ -7700,6 +8134,7 @@ ui
 *   Canvas Grid
 *   Styles
 *   Team Library
+*   Shaders
 *   Other
 
 ---
@@ -8088,6 +8523,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -9116,6 +9625,7 @@ swapComponent
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Children-related properties
 *   Frame-related properties
 *   Annotation properties
@@ -9394,6 +9904,62 @@ colors
 
 ---
 
+# figma.motion | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/figma-motion/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   motion
+
+# figma.motion
+
+note
+
+The Motion API is available in Beta. This API is subject to change.
+
+These APIs are available on `figma.motion` and provide access to Motion animation styles in the current document.
+
+For example, a plugin can read the available Motion animation styles, convert physical spring parameters to a normalized spring value, apply one to the selected node, add a manual keyframe track, and adjust the node's timeline duration.
+
+```
+const node = figma.currentPage.selection[0]const [style] = figma.motion.figmaAnimationStyles()if (node && style) {  node.applyAnimationStyle(style.styleId, {    duration: 0.4,    timelineOffset: 0,  })  node.applyManualKeyframeTrack(    { type: 'PROPERTY', name: 'TRANSLATION_X' },    {      baseValue: { type: 'FLOAT', value: 0 },      keyframes: [        { timelinePosition: 0, value: { type: 'FLOAT', value: 0 } },        {          timelinePosition: 0.4,          easing: {            type: 'CUSTOM_SPRING',            easingFunctionSpring: {              bounce: figma.motion.physicalSpringToNormalized({                mass: 1,                stiffness: 100,                damping: 10,              }),            },          },          value: { type: 'FLOAT', value: 120 },        },      ],    },  )  const [timeline] = node.timelines  if (timeline) {    node.setTimelineDuration(timeline.id, 1.2)  }}
+```
+
+### [figmaAnimationStyles](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)(): [AvailableAnimationStyle](/docs/plugins/api/Motion/#available-animation-style)\[\]
+
+Returns the Motion animation styles available in the current document.
+
+[View more →](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)
+
+* * *
+
+### [physicalSpringToNormalized](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)(spring: [PhysicalSpring](/docs/plugins/api/Motion/#physical-spring)): number
+
+Converts physical spring parameters to Motion's normalized `bounce` value from 0 to 1.
+
+[View more →](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)
+
+* * *
+
+[
+
+Previous
+
+colors
+
+](/docs/plugins/api/properties/figma-constants-colors/)[
+
+Next
+
+figmaAnimationStyles
+
+](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)
+
+---
+
 # figma.codegen | Developer Docs
 
 Source: https://developers.figma.com/docs/plugins/api/figma-codegen/
@@ -9472,9 +10038,9 @@ This is is useful for plugins that need to refresh the codegen output. For examp
 
 Previous
 
-colors
+physicalSpringToNormalized
 
-](/docs/plugins/api/properties/figma-constants-colors/)[
+](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)[
 
 Next
 
@@ -12556,6 +13122,96 @@ createNodeFromJSXAsync
 
 Next
 
+listAvailableShaders
+
+](/docs/plugins/api/properties/figma-listavailableshaders/)
+
+*   Signature
+*   Remarks
+
+---
+
+# listAvailableShaders | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-listavailableshaders/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   listAvailableShaders
+
+# listAvailableShaders
+
+Lists every shader available to the current file: shaders already in the file, shaders from subscribed libraries, and the user's owned shaders.
+
+## Signature​
+
+### [listAvailableShaders](/docs/plugins/api/properties/figma-listavailableshaders/)(): Promise<[Shader](/docs/plugins/api/Shader/)\[\]>
+
+## Remarks​
+
+A shader applies either as an effect (`node.effects`) or as a fill (`node.fills` / `node.strokes`), depending on its `type`. Owned or subscribed shaders that aren't materialized in the file yet are returned with `imported: false` — call [`figma.importShaderById`](/docs/plugins/api/properties/figma-importshaderbyid/) on the shader's `id` before applying it (this mirrors `loadFontAsync` for fonts).
+
+```
+const shaders = await figma.listAvailableShaders()for (const shader of shaders) {  console.log(shader.name, shader.type, shader.imported)}
+```
+
+[
+
+Previous
+
+createBooleanOperation
+
+](/docs/plugins/api/properties/figma-createbooleanoperation/)[
+
+Next
+
+importShaderById
+
+](/docs/plugins/api/properties/figma-importshaderbyid/)
+
+*   Signature
+*   Remarks
+
+---
+
+# importShaderById | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-importshaderbyid/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   importShaderById
+
+# importShaderById
+
+Materializes a shader into the current file by `id` and returns it with `imported: true` and its `propertyDefinitions` populated. The `id` is one returned by [`figma.listAvailableShaders`](/docs/plugins/api/properties/figma-listavailableshaders/). This is idempotent for a shader that is already imported, and mirrors [`figma.importComponentByKeyAsync`](/docs/plugins/api/figma/#importcomponentbykeyasync).
+
+## Signature​
+
+### [importShaderById](/docs/plugins/api/properties/figma-importshaderbyid/)(id: string): Promise<[Shader](/docs/plugins/api/Shader/)\>
+
+## Remarks​
+
+A shader must be imported before it can be applied. Applying an unloaded shader id throws `Shader not imported. Call figma.importShaderById(id) first.`
+
+```
+const [shader] = await figma.listAvailableShaders()if (shader && !shader.imported) {  const imported = await figma.importShaderById(shader.id)  console.log(imported.propertyDefinitions)}
+```
+
+[
+
+Previous
+
+listAvailableShaders
+
+](/docs/plugins/api/properties/figma-listavailableshaders/)[
+
+Next
+
 loadFontAsync
 
 ](/docs/plugins/api/properties/figma-loadfontasync/)
@@ -12601,9 +13257,9 @@ However, note that `loadFontAsync` returns a Promise. Even a Promise resolves im
 
 Previous
 
-createBooleanOperation
+importShaderById
 
-](/docs/plugins/api/properties/figma-createbooleanoperation/)[
+](/docs/plugins/api/properties/figma-importshaderbyid/)[
 
 Next
 
@@ -14127,6 +14783,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Blend-related properties​
 
 ### opacity: number
@@ -14733,6 +15463,7 @@ CodeBlockNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Children-related properties
 *   Layout-related properties
@@ -15148,6 +15879,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -15191,6 +15996,7 @@ ComponentNode
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 
 ---
@@ -15569,6 +16375,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -16634,6 +17514,7 @@ ComponentSetNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Children-related properties
 *   Frame-related properties
 *   Annotation properties
@@ -17013,6 +17894,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -18012,6 +18967,7 @@ ConnectorNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Children-related properties
 *   Frame-related properties
 *   Annotation properties
@@ -18552,6 +19508,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -18596,6 +19626,7 @@ rotation
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 
 ---
@@ -19213,6 +20244,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Blend-related properties​
 
 ### opacity: number
@@ -19745,6 +20850,7 @@ EmbedNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Corner-related properties
 *   Geometry-related properties
@@ -20140,6 +21246,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -20182,6 +21362,7 @@ FrameNode
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 
 ---
@@ -20490,6 +21671,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -21506,6 +22761,7 @@ GroupNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Children-related properties
 *   Frame-related properties
 *   Annotation properties
@@ -22282,6 +23538,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 [
 
 Previous
@@ -22309,6 +23639,7 @@ HighlightNode
 *   Export-related properties
 *   Reaction prototyping-related properties
 *   Scene node properties
+*   Motion node properties
 
 ---
 
@@ -22638,6 +23969,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -23157,6 +24562,7 @@ InstanceNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Corner-related properties
 *   Geometry-related properties
@@ -23551,6 +24957,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -23593,6 +25073,7 @@ LineNode
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 
 ---
@@ -23897,6 +25378,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -24392,6 +25947,7 @@ LinkUnfurlNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Geometry-related properties
 *   Layout-related properties
@@ -24785,6 +26341,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -24827,6 +26457,7 @@ MediaNode
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 
 ---
@@ -25230,6 +26861,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -25272,6 +26977,7 @@ resize
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 
 ---
@@ -26135,6 +27841,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Blend-related properties​
 
 ### opacity: number
@@ -26667,6 +28447,7 @@ RectangleNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Corner-related properties
 *   Geometry-related properties
@@ -26979,6 +28760,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -27572,6 +29427,7 @@ RemovedNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Corner-related properties
 *   Geometry-related properties
@@ -28046,6 +29902,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -28363,6 +30293,7 @@ resizeWithoutConstraints
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 *   Children-related properties
 *   Geometry-related properties
@@ -28913,6 +30844,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -28957,6 +30962,7 @@ rotation
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 
 ---
@@ -29264,6 +31270,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Layout-related properties​
 
 ### [x](/docs/plugins/api/properties/nodes-x/): number
@@ -29521,6 +31601,7 @@ SlideGridNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Layout-related properties
 *   Export-related properties
 
@@ -29905,6 +31986,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -30039,6 +32194,7 @@ SlideNode
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 *   Children-related properties
 
@@ -30366,6 +32522,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -31328,6 +33558,7 @@ SlideRowNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Children-related properties
 *   Frame-related properties
 *   Annotation properties
@@ -31722,6 +33953,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -31856,6 +34161,7 @@ SlotNode
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 *   Children-related properties
 
@@ -32177,6 +34483,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -33193,6 +35573,7 @@ StampNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Children-related properties
 *   Frame-related properties
 *   Annotation properties
@@ -33527,6 +35908,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -34028,6 +36483,7 @@ StarNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Geometry-related properties
 *   Layout-related properties
@@ -34352,6 +36808,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -34887,6 +37417,7 @@ StickyNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Corner-related properties
 *   Geometry-related properties
@@ -35346,6 +37877,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -35390,6 +37995,7 @@ TableCellNode
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 
 ---
@@ -36022,6 +38628,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -36066,6 +38746,7 @@ cellAt
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 
 ---
@@ -36891,6 +39572,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Blend-related properties​
 
 ### opacity: number
@@ -37408,6 +40163,7 @@ textAutoResize
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Geometry-related properties
 *   Layout-related properties
@@ -38024,6 +40780,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Blend-related properties​
 
 ### opacity: number
@@ -38542,6 +41372,7 @@ autoRename
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Geometry-related properties
 *   Layout-related properties
@@ -39306,6 +42137,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 [
 
 Previous
@@ -39332,6 +42237,7 @@ VectorNode
 *   Export-related properties
 *   Reaction prototyping-related properties
 *   Scene node properties
+*   Motion node properties
 
 ---
 
@@ -39663,6 +42569,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -40198,6 +43178,7 @@ WashiTapeNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Corner-related properties
 *   Geometry-related properties
@@ -40510,6 +43491,80 @@ Clears an explicit mode for the given collection on this node
 Sets an explicit mode for the given collection on this node
 
 [View more →](/docs/plugins/api/properties/ExplicitVariableModesMixin-setexplicitvariablemodeforcollection/)
+
+* * *
+
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 * * *
 
@@ -41003,6 +44058,7 @@ WidgetNode
 *   Plugin data properties
 *   Dev resource properties
 *   Scene node properties
+*   Motion node properties
 *   Blend-related properties
 *   Geometry-related properties
 *   Layout-related properties
@@ -41422,6 +44478,80 @@ Sets an explicit mode for the given collection on this node
 
 * * *
 
+## Motion node properties​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+[View more →](/docs/plugins/api/properties/nodes-animationstyles/)
+
+* * *
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+[View more →](/docs/plugins/api/properties/nodes-animations/)
+
+* * *
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+The manual Motion keyframe tracks bound to this node.
+
+[View more →](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+* * *
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+[View more →](/docs/plugins/api/properties/nodes-timelines/)
+
+* * *
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+[View more →](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+* * *
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+Removes an applied Motion animation style from this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+* * *
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+* * *
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+[View more →](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+* * *
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+[View more →](/docs/plugins/api/properties/nodes-settimelineduration/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -41476,6 +44606,7 @@ cloneWidget
 *   Dev resource properties
 *   Layout-related properties
 *   Scene node properties
+*   Motion node properties
 *   Export-related properties
 *   Stickable properties
 
@@ -41557,14 +44688,172 @@ Shared Node Properties
 
 Next
 
-appendChild
+animationStyles
 
-](/docs/plugins/api/properties/nodes-appendchild/)
+](/docs/plugins/api/properties/nodes-animationstyles/)
 
 *   Signature
 *   Parameters
     *   url
     *   name
+
+---
+
+# animationStyles | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-animationstyles/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   animationStyles
+
+# animationStyles
+
+The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+## Signature​
+
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+
+## Remarks​
+
+```
+const node = figma.currentPage.selection[0]if (node) {  for (const style of node.animationStyles) {    console.log(style.name, style.id, style.props)  }}
+```
+
+[
+
+Previous
+
+addDevResourceAsync
+
+](/docs/plugins/api/properties/nodes-adddevresourceasync/)[
+
+Next
+
+animations
+
+](/docs/plugins/api/properties/nodes-animations/)
+
+*   Signature
+*   Remarks
+
+---
+
+# animations | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-animations/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   animations
+
+# animations
+
+All Motion animation keyframes on this node, including keyframes created by animation styles and manual keyframe tracks.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+## Signature​
+
+### [animations](/docs/plugins/api/properties/nodes-animations/): [Animations](/docs/plugins/api/Motion/#animations) \[readonly\]
+
+## Remarks​
+
+```
+const node = figma.currentPage.selection[0]const translationX = node?.animations.TRANSLATION_Xif (translationX) {  console.log(translationX.timelineDuration, translationX.tracks)}
+```
+
+[
+
+Previous
+
+animationStyles
+
+](/docs/plugins/api/properties/nodes-animationstyles/)[
+
+Next
+
+appendChild
+
+](/docs/plugins/api/properties/nodes-appendchild/)
+
+*   Signature
+*   Remarks
 
 ---
 
@@ -41645,9 +44934,9 @@ If this is called on an auto-layout frame, calling this function can cause this 
 
 Previous
 
-addDevResourceAsync
+animations
 
-](/docs/plugins/api/properties/nodes-adddevresourceasync/)[
+](/docs/plugins/api/properties/nodes-animations/)[
 
 Next
 
@@ -41707,11 +44996,195 @@ appendChild
 
 Next
 
+applyAnimationStyle
+
+](/docs/plugins/api/properties/nodes-applyanimationstyle/)
+
+*   Signature
+*   Remarks
+
+---
+
+# applyAnimationStyle | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-applyanimationstyle/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   applyAnimationStyle
+
+# applyAnimationStyle
+
+Applies a Motion animation style to this node and returns the applied animation style instance id.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+## Signature​
+
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+
+## Parameters​
+
+### styleId​
+
+The `styleId` of the animation style to apply. Use [`figmaAnimationStyles`](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/) to get available styles.
+
+### animationStyleData​
+
+Optional values used to configure the applied animation style.
+
+## Remarks​
+
+```
+const node = figma.currentPage.selection[0]const [style] = figma.motion.figmaAnimationStyles()if (node && style) {  const appliedStyleId = node.applyAnimationStyle(style.styleId, {    duration: 0.4,    timelineOffset: 0,    props: {      direction: 'right',      distance: 120,    },  })  console.log(appliedStyleId)}
+```
+
+[
+
+Previous
+
+appendChildAt
+
+](/docs/plugins/api/properties/nodes-appendchildat/)[
+
+Next
+
+applyManualKeyframeTrack
+
+](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)
+
+*   Signature
+*   Parameters
+    *   styleId
+    *   animationStyleData
+*   Remarks
+
+---
+
+# applyManualKeyframeTrack | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-applymanualkeyframetrack/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   applyManualKeyframeTrack
+
+# applyManualKeyframeTrack
+
+Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+## Signature​
+
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+
+## Parameters​
+
+### field​
+
+The property, paint, or effect field to animate.
+
+### track​
+
+The manual keyframe track to write.
+
+## Remarks​
+
+```
+const node = figma.currentPage.selection[0]if (node) {  node.applyManualKeyframeTrack(    { type: 'PROPERTY', name: 'TRANSLATION_X' },    {      baseValue: { type: 'FLOAT', value: 0 },      keyframes: [        { timelinePosition: 0, value: { type: 'FLOAT', value: 0 } },        { timelinePosition: 0.3, value: { type: 'FLOAT', value: 120 } },      ],    },  )}
+```
+
+[
+
+Previous
+
+applyAnimationStyle
+
+](/docs/plugins/api/properties/nodes-applyanimationstyle/)[
+
+Next
+
 boundVariables
 
 ](/docs/plugins/api/properties/nodes-boundvariables/)
 
 *   Signature
+*   Parameters
+    *   field
+    *   track
 *   Remarks
 
 ---
@@ -41778,9 +45251,9 @@ On nodes with independent corner radii (e.g. rectangles, frames), a `cornerRadiu
 
 Previous
 
-appendChildAt
+applyManualKeyframeTrack
 
-](/docs/plugins/api/properties/nodes-appendchildat/)[
+](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)[
 
 Next
 
@@ -45701,6 +49174,85 @@ layoutWrap
 
 Next
 
+manualKeyframeTracks
+
+](/docs/plugins/api/properties/nodes-manualkeyframetracks/)
+
+*   Signature
+*   Remarks
+
+---
+
+# manualKeyframeTracks | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-manualkeyframetracks/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   manualKeyframeTracks
+
+# manualKeyframeTracks
+
+The manual Motion keyframe tracks bound to this node.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+## Signature​
+
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+
+## Remarks​
+
+```
+const node = figma.currentPage.selection[0]const manualTranslationX = node?.manualKeyframeTracks.TRANSLATION_Xif (manualTranslationX) {  console.log(manualTranslationX.keyframes)}
+```
+
+[
+
+Previous
+
+locked
+
+](/docs/plugins/api/properties/nodes-locked/)[
+
+Next
+
 name
 
 ](/docs/plugins/api/properties/nodes-name/)
@@ -45776,9 +49328,9 @@ If the node is a [`PageNode`](/docs/plugins/api/PageNode/) with no children and 
 
 Previous
 
-locked
+manualKeyframeTracks
 
-](/docs/plugins/api/properties/nodes-locked/)[
+](/docs/plugins/api/properties/nodes-manualkeyframetracks/)[
 
 Next
 
@@ -46414,11 +49966,185 @@ relativeTransform
 
 Next
 
+removeAnimationStyle
+
+](/docs/plugins/api/properties/nodes-removeanimationstyle/)
+
+*   Signature
+*   Remarks
+
+---
+
+# removeAnimationStyle | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-removeanimationstyle/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   removeAnimationStyle
+
+# removeAnimationStyle
+
+Removes an applied Motion animation style from this node.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+## Signature​
+
+### [removeAnimationStyle](/docs/plugins/api/properties/nodes-removeanimationstyle/)(id: string): void
+
+## Parameters​
+
+### id​
+
+The applied animation style instance id returned by [`applyAnimationStyle`](/docs/plugins/api/properties/nodes-applyanimationstyle/) or read from [`animationStyles`](/docs/plugins/api/properties/nodes-animationstyles/).
+
+## Remarks​
+
+```
+const node = figma.currentPage.selection[0]const [appliedStyle] = node?.animationStyles ?? []if (node && appliedStyle) {  node.removeAnimationStyle(appliedStyle.id)}
+```
+
+[
+
+Previous
+
+remove
+
+](/docs/plugins/api/properties/nodes-remove/)[
+
+Next
+
+removeManualKeyframeTrack
+
+](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)
+
+*   Signature
+*   Parameters
+    *   id
+*   Remarks
+
+---
+
+# removeManualKeyframeTrack | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-removemanualkeyframetrack/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   removeManualKeyframeTrack
+
+# removeManualKeyframeTrack
+
+Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+## Signature​
+
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+
+## Parameters​
+
+### field​
+
+The property, paint, or effect field to remove.
+
+## Remarks​
+
+```
+const node = figma.currentPage.selection[0]if (node) {  node.removeManualKeyframeTrack({    type: 'PROPERTY',    name: 'TRANSLATION_X',  })}
+```
+
+[
+
+Previous
+
+removeAnimationStyle
+
+](/docs/plugins/api/properties/nodes-removeanimationstyle/)[
+
+Next
+
 removed
 
 ](/docs/plugins/api/properties/nodes-removed/)
 
 *   Signature
+*   Parameters
+    *   field
 *   Remarks
 
 ---
@@ -46493,9 +50219,9 @@ A node can be removed for any number of reasons. Some examples:
 
 Previous
 
-remove
+removeManualKeyframeTrack
 
-](/docs/plugins/api/properties/nodes-remove/)[
+](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)[
 
 Next
 
@@ -47594,15 +51320,107 @@ setRelaunchData
 
 Next
 
-strokeAlign
+setTimelineDuration
 
-](/docs/plugins/api/properties/nodes-strokealign/)
+](/docs/plugins/api/properties/nodes-settimelineduration/)
 
 *   Signature
 *   Parameters
     *   namespace
     *   key
     *   value
+*   Remarks
+
+---
+
+# setTimelineDuration | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-settimelineduration/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   setTimelineDuration
+
+# setTimelineDuration
+
+Sets the duration, in seconds, for the timeline with the given id.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+## Signature​
+
+### [setTimelineDuration](/docs/plugins/api/properties/nodes-settimelineduration/)(id: string, duration: number): void
+
+## Parameters​
+
+### id​
+
+A timeline id read from [`timelines`](/docs/plugins/api/properties/nodes-timelines/).
+
+### duration​
+
+The new timeline duration in seconds. Must be greater than zero.
+
+## Remarks​
+
+```
+const node = figma.currentPage.selection[0]const [timeline] = node?.timelines ?? []if (node && timeline) {  node.setTimelineDuration(timeline.id, 1.2)}
+```
+
+[
+
+Previous
+
+setSharedPluginData
+
+](/docs/plugins/api/properties/nodes-setsharedplugindata/)[
+
+Next
+
+strokeAlign
+
+](/docs/plugins/api/properties/nodes-strokealign/)
+
+*   Signature
+*   Parameters
+    *   id
+    *   duration
 *   Remarks
 
 ---
@@ -47660,9 +51478,9 @@ Inside and outside stroke are actually implemented by doubling the stroke weight
 
 Previous
 
-setSharedPluginData
+setTimelineDuration
 
-](/docs/plugins/api/properties/nodes-setsharedplugindata/)[
+](/docs/plugins/api/properties/nodes-settimelineduration/)[
 
 Next
 
@@ -48110,6 +51928,85 @@ stuckTo
 
 Next
 
+timelines
+
+](/docs/plugins/api/properties/nodes-timelines/)
+
+*   Signature
+*   Remarks
+
+---
+
+# timelines | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-timelines/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   timelines
+
+# timelines
+
+The Motion timelines that contain this node. Currently this returns the containing top-level frame's timeline.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [EmbedNode](/docs/plugins/api/EmbedNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
+*   [MediaNode](/docs/plugins/api/MediaNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SectionNode](/docs/plugins/api/SectionNode/)
+*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
+*   [SliceNode](/docs/plugins/api/SliceNode/)
+*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [StickyNode](/docs/plugins/api/StickyNode/)
+*   [TableNode](/docs/plugins/api/TableNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+*   [WidgetNode](/docs/plugins/api/WidgetNode/)
+
+## Signature​
+
+### [timelines](/docs/plugins/api/properties/nodes-timelines/): ReadonlyArray<[Timeline](/docs/plugins/api/Motion/#timeline)\> \[readonly\]
+
+## Remarks​
+
+```
+const node = figma.currentPage.selection[0]if (node) {  for (const timeline of node.timelines) {    console.log(timeline.id, timeline.duration)  }}
+```
+
+[
+
+Previous
+
+targetAspectRatio
+
+](/docs/plugins/api/properties/nodes-targetaspectratio/)[
+
+Next
+
 toString
 
 ](/docs/plugins/api/properties/nodes-tostring/)
@@ -48189,9 +52086,9 @@ Example:
 
 Previous
 
-targetAspectRatio
+timelines
 
-](/docs/plugins/api/properties/nodes-targetaspectratio/)[
+](/docs/plugins/api/properties/nodes-timelines/)[
 
 Next
 
@@ -48930,6 +52827,247 @@ MeasurementOffset
 
 ---
 
+# Motion | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/Motion/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   Motion
+
+# Motion
+
+note
+
+The Motion API is available in Beta. This API is subject to change.
+
+These types describe Motion animation styles, keyframes, timelines, and easing values used by `figma.motion` and Motion node properties.
+
+## Available animation style​
+
+`AvailableAnimationStyle` is returned by `figma.motion.figmaAnimationStyles()`. Its `props` values are type/default descriptions for each configurable property.
+
+```
+interface AvailableAnimationStyle {  readonly styleId: string  readonly name: string  readonly description?: string  readonly props?: { readonly [key: string]: AvailableAnimationStylePropValue }}
+```
+
+## Available animation style prop value​
+
+```
+type AvailableAnimationStylePropValue = string
+```
+
+## Applied animation style​
+
+`AppliedAnimationStyle` is returned by `node.animationStyles`. Its `duration` and `timelineOffset` values are expressed in seconds. Its `props` values are the configured property values for that node.
+
+```
+interface AppliedAnimationStyle {  readonly id: string  readonly styleId: string  readonly name: string  readonly duration?: number  readonly timelineOffset?: number  readonly props?: { readonly [key: string]: AnimationStylePropValue }}
+```
+
+## Animation style prop value​
+
+```
+type AnimationStylePropValue =  string | number | boolean | MotionEasing | VariableAlias
+```
+
+## Animation style configuration​
+
+`duration` and `timelineOffset` values are expressed in seconds.
+
+```
+interface AnimationStyleConfiguration {  readonly duration?: number  readonly timelineOffset?: number  readonly props?: { readonly [key: string]: AnimationStylePropValue }}
+```
+
+## Motion easing​
+
+Timeline values are expressed in seconds. `MotionEasing` uses the same easing names as prototyping transitions, with the additional `"HOLD"` value for keyframes that hold their current value until the next keyframe. Custom spring easing uses a normalized `bounce` value from 0 to 1; use `figma.motion.physicalSpringToNormalized()` to convert physical spring parameters.
+
+```
+interface MotionEasing {  readonly type:    | 'EASE_IN'    | 'EASE_OUT'    | 'EASE_IN_AND_OUT'    | 'LINEAR'    | 'EASE_IN_BACK'    | 'EASE_OUT_BACK'    | 'EASE_IN_AND_OUT_BACK'    | 'CUSTOM_CUBIC_BEZIER'    | 'GENTLE'    | 'QUICK'    | 'BOUNCY'    | 'SLOW'    | 'CUSTOM_SPRING'    | 'HOLD'  readonly easingFunctionCubicBezier?: EasingFunctionBezier  readonly easingFunctionSpring?: NormalizedSpring}
+```
+
+## Normalized spring​
+
+`bounce` is a normalized value from 0 to 1.
+
+```
+interface NormalizedSpring {  readonly bounce: number}
+```
+
+## Physical spring​
+
+`PhysicalSpring` is passed to `figma.motion.physicalSpringToNormalized()` to convert physical spring parameters into Motion's normalized `bounce` value from 0 to 1.
+
+```
+interface PhysicalSpring {  readonly mass: number  readonly stiffness: number  readonly damping: number}
+```
+
+## Keyframe value​
+
+```
+type KeyframeValue =  | { readonly type: 'FLOAT'; readonly value: number }  | { readonly type: 'COLOR'; readonly value: RGBA }  | { readonly type: 'TEXT_DATA'; readonly value: string }  | { readonly type: 'VECTOR'; readonly value: Vector }  | { readonly type: 'BOOL'; readonly value: boolean }  | { readonly type: 'CIRCLE'; readonly value: { readonly x: number; readonly y: number; readonly radius: number } }  | { readonly type: 'LINE'; readonly value: { readonly x: number; readonly y: number; readonly x2: number; readonly y2: number } }  | {      readonly type: 'CIRCLE_POINT'      readonly value: { readonly x: number; readonly y: number; readonly radius: number; readonly angle: number }    }  | { readonly type: 'COLOR_POINT'; readonly value: { readonly x: number; readonly y: number; readonly color: RGBA } }
+```
+
+## Manual keyframe input​
+
+`timelinePosition` is expressed in seconds.
+
+```
+interface ManualKeyframeInput {  readonly id?: string  readonly timelinePosition: number  readonly easing?: MotionEasing | VariableAlias  readonly value: KeyframeValue}
+```
+
+## Manual keyframe track input​
+
+```
+interface ManualKeyframeTrackInput {  readonly id?: string  readonly baseValue?: KeyframeValue  readonly keyframes: ReadonlyArray<ManualKeyframeInput>}
+```
+
+## Manual keyframe​
+
+```
+interface ManualKeyframe extends ManualKeyframeInput {  readonly id: string  readonly easing: MotionEasing | VariableAlias}
+```
+
+## Manual keyframe binding​
+
+`ManualKeyframeBinding` is returned by `node.manualKeyframeTracks`. It includes the current base value for the field, plus the sorted manual keyframes applied to that field.
+
+```
+interface ManualKeyframeBinding {  readonly id: string  readonly baseValue: KeyframeValue  readonly keyframes: ReadonlyArray<ManualKeyframe>}
+```
+
+## Manual keyframe track​
+
+```
+interface ManualKeyframeTrack {  readonly id: string  readonly keyframeOperation: 'SET' | 'OFFSET' | 'SCALE'  readonly keyframes: ReadonlyArray<ManualKeyframe>}
+```
+
+## Keyframe binding​
+
+```
+interface KeyframeBinding {  readonly baseValue: KeyframeValue  readonly timelineDuration: number  readonly tracks: ReadonlyArray<ManualKeyframeTrack>}
+```
+
+## Keyframe property field name​
+
+```
+type KeyframePropertyFieldName =  | 'CORNER_RADIUS'  | 'STROKE_WEIGHT'  | 'STACK_SPACING'  | 'STACK_PADDING_LEFT'  | 'STACK_PADDING_TOP'  | 'STACK_PADDING_RIGHT'  | 'STACK_PADDING_BOTTOM'  | 'WIDTH'  | 'HEIGHT'  | 'RECTANGLE_TOP_LEFT_CORNER_RADIUS'  | 'RECTANGLE_TOP_RIGHT_CORNER_RADIUS'  | 'RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS'  | 'RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS'  | 'BORDER_TOP_WEIGHT'  | 'BORDER_BOTTOM_WEIGHT'  | 'BORDER_LEFT_WEIGHT'  | 'BORDER_RIGHT_WEIGHT'  | 'STACK_COUNTER_SPACING'  | 'OPACITY'  | 'GRID_ROW_GAP'  | 'GRID_COLUMN_GAP'  | 'TRANSLATION_X'  | 'TRANSLATION_Y'  | 'TRANSLATION_XY'  | 'ROTATION'  | 'SCALE_X'  | 'SCALE_Y'  | 'SCALE_XY'  | 'PATH_TRIM_START'  | 'PATH_TRIM_END'
+```
+
+## Effect keyframe field name​
+
+```
+type EffectKeyframeFieldName =  | 'OFFSET_X'  | 'OFFSET_Y'  | 'RADIUS'  | 'SPREAD'  | 'COLOR'  | 'REFRACTION_RADIUS'  | 'SPECULAR_ANGLE'  | 'SPECULAR_INTENSITY'  | 'CHROMATIC_ABERRATION'  | 'SPLAY'  | 'REFRACTION_INTENSITY'  | 'START_RADIUS'  | 'NOISE_SIZE_X'  | 'NOISE_SIZE_Y'  | 'DENSITY'  | 'EFFECT_OPACITY'  | 'SECONDARY_COLOR'
+```
+
+## Keyframe field​
+
+```
+type KeyframeField =  | { readonly type: 'PROPERTY'; readonly name: KeyframePropertyFieldName }  | {      readonly type: 'INDEXED_ITEM'      readonly collection: 'fills' | 'strokes'      readonly index: number    }  | {      readonly type: 'INDEXED_ITEM'      readonly collection: 'fills' | 'strokes'      readonly index: number      readonly propertyId: string    }  | {      readonly type: 'INDEXED_ITEM'      readonly collection: 'effects'      readonly index: number      readonly field: EffectKeyframeFieldName    }  | {      readonly type: 'INDEXED_ITEM'      readonly collection: 'effects'      readonly index: number      readonly propertyId: string    }
+```
+
+## Component prop keyframe tracks​
+
+```
+type ComponentPropKeyframeTracks = Partial<Record<string, ManualKeyframeBinding>>
+```
+
+## Component prop keyframe bindings​
+
+```
+type ComponentPropKeyframeBindings = Partial<Record<string, KeyframeBinding>>
+```
+
+## Paint manual keyframe track​
+
+```
+type PaintManualKeyframeTrack =  | ManualKeyframeBinding  | { readonly properties: ComponentPropKeyframeTracks }
+```
+
+## Paint keyframe binding​
+
+```
+type PaintKeyframeBinding =  | KeyframeBinding  | { readonly properties: ComponentPropKeyframeBindings }
+```
+
+## Effect manual keyframe tracks​
+
+```
+type EffectManualKeyframeTracks = Partial<  Record<EffectKeyframeFieldName, ManualKeyframeBinding>> & {  readonly properties?: ComponentPropKeyframeTracks}
+```
+
+## Effect keyframe bindings​
+
+```
+type EffectKeyframeBindings = Partial<  Record<EffectKeyframeFieldName, KeyframeBinding>> & {  readonly properties?: ComponentPropKeyframeBindings}
+```
+
+## Manual keyframe tracks​
+
+```
+type ManualKeyframeTracks = Partial<  Record<KeyframePropertyFieldName, ManualKeyframeBinding>> & {  readonly fills?: Partial<Record<number, PaintManualKeyframeTrack>>  readonly strokes?: Partial<Record<number, PaintManualKeyframeTrack>>  readonly effects?: Partial<Record<number, EffectManualKeyframeTracks>>}
+```
+
+## Animations​
+
+```
+type Animations = Partial<  Record<KeyframePropertyFieldName, KeyframeBinding>> & {  readonly fills?: Partial<Record<number, PaintKeyframeBinding>>  readonly strokes?: Partial<Record<number, PaintKeyframeBinding>>  readonly effects?: Partial<Record<number, EffectKeyframeBindings>>}
+```
+
+## Timeline​
+
+`duration` is expressed in seconds.
+
+```
+interface Timeline {  readonly id: string  readonly duration: number}
+```
+
+[
+
+Previous
+
+MediaData
+
+](/docs/plugins/api/MediaData/)[
+
+Next
+
+NodeChange
+
+](/docs/plugins/api/NodeChange/)
+
+*   Available animation style
+*   Available animation style prop value
+*   Applied animation style
+*   Animation style prop value
+*   Animation style configuration
+*   Motion easing
+*   Normalized spring
+*   Physical spring
+*   Keyframe value
+*   Manual keyframe input
+*   Manual keyframe track input
+*   Manual keyframe
+*   Manual keyframe binding
+*   Manual keyframe track
+*   Keyframe binding
+*   Keyframe property field name
+*   Effect keyframe field name
+*   Keyframe field
+*   Component prop keyframe tracks
+*   Component prop keyframe bindings
+*   Paint manual keyframe track
+*   Paint keyframe binding
+*   Effect manual keyframe tracks
+*   Effect keyframe bindings
+*   Manual keyframe tracks
+*   Animations
+*   Timeline
+
+---
+
 # Annotation | Developer Docs
 
 Source: https://developers.figma.com/docs/plugins/api/Annotation/
@@ -49000,10 +53138,10 @@ Source: https://developers.figma.com/docs/plugins/api/Paint/
 
 # Paint
 
-Figma has five types of paints: solid colors, gradients, images, videos, and patterns (in beta).
+Figma has six types of paints: solid colors, gradients, images, videos, patterns (in beta), and shaders (in beta).
 
 ```
-type Paint =  | SolidPaint  | GradientPaint  | ImagePaint  | VideoPaint  | PatternPaint
+type Paint =  | SolidPaint  | GradientPaint  | ImagePaint  | VideoPaint  | PatternPaint  | ShaderPaint
 ```
 
 ## Common properties​
@@ -49238,6 +53376,28 @@ The horizontal alignment of the pattern
 
 * * *
 
+## ShaderPaint​
+
+A `ShaderPaint` applies a [shader](/docs/plugins/api/Shader/) to a node's `fills` or `strokes`. Use [`figma.listAvailableShaders`](/docs/plugins/api/properties/figma-listavailableshaders/) and [`figma.importShaderById`](/docs/plugins/api/properties/figma-importshaderbyid/) to discover and import shaders before applying them.
+
+### type: 'SHADER' \[readonly\]
+
+The string literal "SHADER" representing the type of paint this is. Always check the `type` before reading other properties.
+
+* * *
+
+### id: string \[readonly\]
+
+The id of the shader, as returned by [`figma.listAvailableShaders`](/docs/plugins/api/properties/figma-listavailableshaders/) and [`figma.importShaderById`](/docs/plugins/api/properties/figma-importshaderbyid/). The shader must be imported with [`figma.importShaderById`](/docs/plugins/api/properties/figma-importshaderbyid/) before it can be applied.
+
+* * *
+
+### properties?: { \[defId: string\]: [ShaderPropertyValue](/docs/plugins/api/Shader/#shader-property-value) } \[readonly\]
+
+The read/write map of property assignments, keyed by property-definition id (the keys of [`propertyDefinitions`](/docs/plugins/api/Shader/#propertydefinitions), not property names). On reads, this is populated with the paint's current assignments, including author-defined defaults, so a plugin can discover the available ids after the shader is applied.
+
+* * *
+
 [
 
 Previous
@@ -49260,6 +53420,7 @@ PublishStatus
 *   ColorStop
 *   VideoPaint
 *   PatternPaint
+*   ShaderPaint
 
 ---
 
@@ -51376,10 +55537,10 @@ Source: https://developers.figma.com/docs/plugins/api/Effect/
 
 # Effect
 
-Effects can be grouped into five categories of properties: `DropShadowEffect`, `InnerShadowEffect`, `BlurEffect`, `NoiseEffect`, and `TextureEffect`. The `Effect` type is then one of the five:
+Effects can be grouped into several categories of properties: `DropShadowEffect`, `InnerShadowEffect`, `BlurEffect`, `NoiseEffect`, `TextureEffect`, `GlassEffect`, and `ShaderEffect`. The `Effect` type is then one of these:
 
 ```
-type Effect =  | DropShadowEffect  | InnerShadowEffect  | BlurEffect  | NoiseEffect  | TextureEffect
+type Effect =  | DropShadowEffect  | InnerShadowEffect  | BlurEffect  | NoiseEffect  | TextureEffect  | GlassEffect  | ShaderEffect
 ```
 
 ## DropShadowEffect​
@@ -51758,6 +55919,34 @@ Glass effects currently do not support binding variables.
 
 * * *
 
+## ShaderEffect​
+
+A `ShaderEffect` applies a [shader](/docs/plugins/api/Shader/) to a node's `effects`. Use [`figma.listAvailableShaders`](/docs/plugins/api/properties/figma-listavailableshaders/) and [`figma.importShaderById`](/docs/plugins/api/properties/figma-importshaderbyid/) to discover and import shaders before applying them.
+
+### type: 'SHADER' \[readonly\]
+
+The string literal "SHADER" representing the type of effect this is. Always check the `type` before reading other properties.
+
+* * *
+
+### visible: boolean \[readonly\]
+
+Whether this shader effect is visible.
+
+* * *
+
+### id: string \[readonly\]
+
+The id of the shader, as returned by [`figma.listAvailableShaders`](/docs/plugins/api/properties/figma-listavailableshaders/) and [`figma.importShaderById`](/docs/plugins/api/properties/figma-importshaderbyid/). The shader must be imported with [`figma.importShaderById`](/docs/plugins/api/properties/figma-importshaderbyid/) before it can be applied.
+
+* * *
+
+### properties?: { \[defId: string\]: [ShaderPropertyValue](/docs/plugins/api/Shader/#shader-property-value) } \[readonly\]
+
+The read/write map of property assignments, keyed by property-definition id (the keys of [`propertyDefinitions`](/docs/plugins/api/Shader/#propertydefinitions), not property names). On reads, this is populated with the effect's current assignments, including author-defined defaults, so a plugin can discover the available ids after the shader is applied.
+
+* * *
+
 [
 
 Previous
@@ -51785,6 +55974,7 @@ EmbedData
     *   NoiseEffectMultitone
 *   TextureEffect
 *   GlassEffect
+*   ShaderEffect
 
 ---
 
@@ -55815,9 +60005,9 @@ MeasurementSide
 
 Next
 
-NodeChange
+Motion
 
-](/docs/plugins/api/NodeChange/)
+](/docs/plugins/api/Motion/)
 
 *   MediaData
 
@@ -55906,9 +60096,9 @@ The node that changed in the document. If the node has been removed since the ev
 
 Previous
 
-MediaData
+Motion
 
-](/docs/plugins/api/MediaData/)[
+](/docs/plugins/api/Motion/)[
 
 Next
 
@@ -56055,9 +60245,153 @@ RGB/RGBA
 
 Next
 
+Shader
+
+](/docs/plugins/api/Shader/)
+
+---
+
+# Shader | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/Shader/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   Shader
+
+# Shader
+
+A _shader_ is a programmable effect or fill you can apply to a node. These types describe the shaders returned by [`figma.listAvailableShaders`](/docs/plugins/api/properties/figma-listavailableshaders/) and [`figma.importShaderById`](/docs/plugins/api/properties/figma-importshaderbyid/), and the property values you read and write when a shader is applied as a [`ShaderEffect`](/docs/plugins/api/Effect/#shadereffect) or [`ShaderPaint`](/docs/plugins/api/Paint/#shaderpaint).
+
+A shader must be imported into the file before it can be applied. `listAvailableShaders` returns owned and subscribed-library shaders that aren't loaded in the file yet with `imported: false`; importing one brings it into the file and populates its `propertyDefinitions`. After that, apply it by setting a `{ type: 'SHADER', id }` entry on `node.effects` (for an `effect` shader), or on `node.fills` / `node.strokes` (for a `fill` shader).
+
+### Importing a shader​
+
+```
+const shaders = await figma.listAvailableShaders()const shader = shaders.find((s) => s.name === 'Fractal Noise')if (!shader) {  figma.notify('Shader not found')  figma.closePlugin()  return}// Import the shader if it isn't in the file yet. After importing, `imported` is// `true` and `propertyDefinitions` is populated.const ready = shader.imported ? shader : await figma.importShaderById(shader.id)
+```
+
+### Configuring properties​
+
+A shader's `properties` map is keyed by **property-definition id**, not by property name. Read `propertyDefinitions` to find the id for each named property, then build the `properties` map for the values you want to set. The shape of each value must match the property's declared `type` (see ShaderPropertyValue).
+
+```
+// Build a `properties` map by looking up each property's id from its name.const properties: { [defId: string]: ShaderPropertyValue } = {}for (const [defId, def] of Object.entries(ready.propertyDefinitions ?? {})) {  if (def.name === 'scale' && def.type === 'NUMBER') {    properties[defId] = 4  } else if (def.name === 'tint' && def.type === 'COLOR') {    properties[defId] = { r: 1, g: 0, b: 0.5 }  } else if (def.name === 'center' && def.type === 'POINT') {    properties[defId] = { x: 0.5, y: 0.5 }  }}
+```
+
+### Applying as an effect​
+
+An `effect` shader is applied through `node.effects` as a [`ShaderEffect`](/docs/plugins/api/Effect/#shadereffect). `visible` is required.
+
+```
+node.effects = [{ type: 'SHADER', id: ready.id, visible: true, properties }]
+```
+
+### Applying as a fill or a stroke​
+
+A `fill` shader is applied through `node.fills` or `node.strokes` as a [`ShaderPaint`](/docs/plugins/api/Paint/#shaderpaint), alongside any other paints.
+
+```
+node.fills = [{ type: 'SHADER', id: ready.id, properties }]node.strokes = [{ type: 'SHADER', id: ready.id, properties }]
+```
+
+### Reading properties back​
+
+When you read `effects`, `fills`, or `strokes`, each shader entry's `properties` map is populated with its current assignments — including author-defined defaults — so you can discover the available ids after a shader is applied.
+
+```
+const [fill] = node.fillsif (fill?.type === 'SHADER') {  for (const [defId, value] of Object.entries(fill.properties ?? {})) {    console.log(defId, value)  }}
+```
+
+## Shader​
+
+### id: string \[readonly\]
+
+A stable identifier for the shader. The same value round-trips through [`figma.importShaderById`](/docs/plugins/api/properties/figma-importshaderbyid/) and the `id` field of a [`ShaderEffect`](/docs/plugins/api/Effect/) / [`ShaderPaint`](/docs/plugins/api/Paint/) when applying the shader.
+
+* * *
+
+### name: string \[readonly\]
+
+The name of the shader.
+
+* * *
+
+### type: 'effect' | 'fill' \[readonly\]
+
+Whether the shader applies as an effect (`node.effects`) or as a fill (`node.fills` / `node.strokes`).
+
+* * *
+
+### imported: boolean \[readonly\]
+
+Whether the shader has been imported into the file yet. When `false`, call [`figma.importShaderById`](/docs/plugins/api/properties/figma-importshaderbyid/) with this shader's `id` before applying it.
+
+* * *
+
+### propertyDefinitions?: { \[defId: string\]: [ShaderPropertyDefinition](/docs/plugins/api/Shader/#shader-property-definition) } \[readonly\]
+
+The shader's declared properties, keyed by property-definition id. Populated for imported shaders; may be absent until the shader is imported.
+
+* * *
+
+## ShaderPropertyDefinition​
+
+### name: string \[readonly\]
+
+The author-defined name of the property.
+
+* * *
+
+### type: 'BOOLEAN' | 'TEXT' | 'NUMBER' | 'IMAGE' | 'INSTANCE\_SWAP' | 'SLOT' | 'COLOR' | 'POINT' | 'LINE' | 'CIRCLE' | 'CIRCLE\_POINT' | 'COLOR\_POINT' | 'GRADIENT' \[readonly\]
+
+The declared type of the property. This determines which shape of [`ShaderPropertyValue`](/docs/plugins/api/Shader/) is valid for it. `POINT` corresponds to the editor's "point" property type.
+
+* * *
+
+### defaultValue?: [ShaderPropertyValue](/docs/plugins/api/Shader/#shader-property-value) \[readonly\]
+
+The author-defined default value for the property, if any.
+
+* * *
+
+### description?: string \[readonly\]
+
+The author-defined description of the property, if any.
+
+* * *
+
+## ShaderPropertyValue​
+
+A single value assignable to a shader property. The shape that's valid for a given property depends on that property's declared `type` in its `ShaderPropertyDefinition`. Any value may also be a [`VariableAlias`](/docs/plugins/api/VariableAlias/) to bind the property to a variable.
+
+```
+type ShaderPropertyValue =  | boolean // BOOLEAN  | string // TEXT  | number // NUMBER  | RGB // COLOR  | RGBA // COLOR  | { x: number; y: number } // POINT  | { x: number; y: number; x2: number; y2: number } // LINE  | { x: number; y: number; radius: number } // CIRCLE  | { x: number; y: number; radius: number; angle: number } // CIRCLE_POINT  | { x: number; y: number; color: RGB | RGBA | VariableAlias } // COLOR_POINT  | { stops: { position: number; color: RGB | RGBA | VariableAlias }[] } // GRADIENT  | VariableAlias
+```
+
+[
+
+Previous
+
+RunEvent
+
+](/docs/plugins/api/RunEvent/)[
+
+Next
+
 SlideTransition
 
 ](/docs/plugins/api/SlideTransition/)
+
+*   Importing a shader
+*   Configuring properties
+*   Applying as an effect
+*   Applying as a fill or a stroke
+*   Reading properties back
+*   Shader
+*   ShaderPropertyDefinition
+*   ShaderPropertyValue
 
 ---
 
@@ -56130,9 +60464,9 @@ The timing of the slide transition.
 
 Previous
 
-RunEvent
+Shader
 
-](/docs/plugins/api/RunEvent/)[
+](/docs/plugins/api/Shader/)[
 
 Next
 
@@ -57790,11 +62124,111 @@ constants
 
 Next
 
+motion
+
+](/docs/plugins/api/figma-motion/)
+
+*   Signature
+
+---
+
+# figmaAnimationStyles | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-motion-figmaanimationstyles/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   [motion](/docs/plugins/api/figma-motion/)
+*   figmaAnimationStyles
+
+# figmaAnimationStyles
+
+Returns the Motion animation styles available in the current document.
+
+## Signature​
+
+### [figmaAnimationStyles](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)(): [AvailableAnimationStyle](/docs/plugins/api/Motion/#available-animation-style)\[\]
+
+## Remarks​
+
+The returned styles describe animation templates that can be applied to nodes with [`applyAnimationStyle`](/docs/plugins/api/properties/nodes-applyanimationstyle/). Their `props` values are type/default descriptions for each configurable property.
+
+```
+const styles = figma.motion.figmaAnimationStyles()for (const style of styles) {  console.log(style.name, style.styleId, style.props)}
+```
+
+[
+
+Previous
+
+motion
+
+](/docs/plugins/api/figma-motion/)[
+
+Next
+
+physicalSpringToNormalized
+
+](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)
+
+*   Signature
+*   Remarks
+
+---
+
+# physicalSpringToNormalized | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   [motion](/docs/plugins/api/figma-motion/)
+*   physicalSpringToNormalized
+
+# physicalSpringToNormalized
+
+Converts physical spring parameters to Motion's normalized `bounce` value from 0 to 1.
+
+## Signature​
+
+### [physicalSpringToNormalized](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)(spring: [PhysicalSpring](/docs/plugins/api/Motion/#physical-spring)): number
+
+## Parameters​
+
+### spring​
+
+Positive finite physical spring values.
+
+## Remarks​
+
+The returned value is the normalized `bounce` scalar used by [`NormalizedSpring`](/docs/plugins/api/Motion/).
+
+```
+const bounce = figma.motion.physicalSpringToNormalized({  mass: 1,  stiffness: 100,  damping: 10,})
+```
+
+[
+
+Previous
+
+figmaAnimationStyles
+
+](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)[
+
+Next
+
 codegen
 
 ](/docs/plugins/api/figma-codegen/)
 
 *   Signature
+*   Parameters
+    *   spring
+*   Remarks
 
 ---
 

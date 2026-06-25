@@ -85,6 +85,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "figma.motion | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-motion/",
+    "path": "/docs/plugins/api/figma-motion/",
+    "slug": "docs__plugins__api__figma-motion"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "figma.codegen | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-codegen/",
     "path": "/docs/plugins/api/figma-codegen/",
@@ -390,6 +397,20 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createbooleanoperation/",
     "path": "/docs/plugins/api/properties/figma-createbooleanoperation/",
     "slug": "docs__plugins__api__properties__figma-createbooleanoperation"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "listAvailableShaders | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-listavailableshaders/",
+    "path": "/docs/plugins/api/properties/figma-listavailableshaders/",
+    "slug": "docs__plugins__api__properties__figma-listavailableshaders"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "importShaderById | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-importshaderbyid/",
+    "path": "/docs/plugins/api/properties/figma-importshaderbyid/",
+    "slug": "docs__plugins__api__properties__figma-importshaderbyid"
   },
   {
     "dataset": "plugin-api",
@@ -792,6 +813,20 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "animationStyles | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-animationstyles/",
+    "path": "/docs/plugins/api/properties/nodes-animationstyles/",
+    "slug": "docs__plugins__api__properties__nodes-animationstyles"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "animations | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-animations/",
+    "path": "/docs/plugins/api/properties/nodes-animations/",
+    "slug": "docs__plugins__api__properties__nodes-animations"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "appendChild | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-appendchild/",
     "path": "/docs/plugins/api/properties/nodes-appendchild/",
@@ -803,6 +838,20 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-appendchildat/",
     "path": "/docs/plugins/api/properties/nodes-appendchildat/",
     "slug": "docs__plugins__api__properties__nodes-appendchildat"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "applyAnimationStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-applyanimationstyle/",
+    "path": "/docs/plugins/api/properties/nodes-applyanimationstyle/",
+    "slug": "docs__plugins__api__properties__nodes-applyanimationstyle"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "applyManualKeyframeTrack | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-applymanualkeyframetrack/",
+    "path": "/docs/plugins/api/properties/nodes-applymanualkeyframetrack/",
+    "slug": "docs__plugins__api__properties__nodes-applymanualkeyframetrack"
   },
   {
     "dataset": "plugin-api",
@@ -1219,6 +1268,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "manualKeyframeTracks | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-manualkeyframetracks/",
+    "path": "/docs/plugins/api/properties/nodes-manualkeyframetracks/",
+    "slug": "docs__plugins__api__properties__nodes-manualkeyframetracks"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "name | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-name/",
     "path": "/docs/plugins/api/properties/nodes-name/",
@@ -1286,6 +1342,20 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-remove/",
     "path": "/docs/plugins/api/properties/nodes-remove/",
     "slug": "docs__plugins__api__properties__nodes-remove"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "removeAnimationStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-removeanimationstyle/",
+    "path": "/docs/plugins/api/properties/nodes-removeanimationstyle/",
+    "slug": "docs__plugins__api__properties__nodes-removeanimationstyle"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "removeManualKeyframeTrack | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-removemanualkeyframetrack/",
+    "path": "/docs/plugins/api/properties/nodes-removemanualkeyframetrack/",
+    "slug": "docs__plugins__api__properties__nodes-removemanualkeyframetrack"
   },
   {
     "dataset": "plugin-api",
@@ -1387,6 +1457,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "setTimelineDuration | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-settimelineduration/",
+    "path": "/docs/plugins/api/properties/nodes-settimelineduration/",
+    "slug": "docs__plugins__api__properties__nodes-settimelineduration"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "strokeAlign | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-strokealign/",
     "path": "/docs/plugins/api/properties/nodes-strokealign/",
@@ -1440,6 +1517,13 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-targetaspectratio/",
     "path": "/docs/plugins/api/properties/nodes-targetaspectratio/",
     "slug": "docs__plugins__api__properties__nodes-targetaspectratio"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "timelines | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-timelines/",
+    "path": "/docs/plugins/api/properties/nodes-timelines/",
+    "slug": "docs__plugins__api__properties__nodes-timelines"
   },
   {
     "dataset": "plugin-api",
@@ -1538,6 +1622,13 @@
     "url": "https://developers.figma.com/docs/plugins/api/Measurement/",
     "path": "/docs/plugins/api/Measurement/",
     "slug": "docs__plugins__api__Measurement"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "Motion | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Motion/",
+    "path": "/docs/plugins/api/Motion/",
+    "slug": "docs__plugins__api__Motion"
   },
   {
     "dataset": "plugin-api",
@@ -2199,6 +2290,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "Shader | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Shader/",
+    "path": "/docs/plugins/api/Shader/",
+    "slug": "docs__plugins__api__Shader"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "SlideTransition | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/SlideTransition/",
     "path": "/docs/plugins/api/SlideTransition/",
@@ -2413,6 +2511,20 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-constants-colors/",
     "path": "/docs/plugins/api/properties/figma-constants-colors/",
     "slug": "docs__plugins__api__properties__figma-constants-colors"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "figmaAnimationStyles | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-motion-figmaanimationstyles/",
+    "path": "/docs/plugins/api/properties/figma-motion-figmaanimationstyles/",
+    "slug": "docs__plugins__api__properties__figma-motion-figmaanimationstyles"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "physicalSpringToNormalized | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/",
+    "path": "/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/",
+    "slug": "docs__plugins__api__properties__figma-motion-physicalspringtonormalized"
   },
   {
     "dataset": "plugin-api",
