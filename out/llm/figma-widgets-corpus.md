@@ -1037,7 +1037,7 @@ This API is only available in FigJam
 
 ## Signature​
 
-### [useStickable](/docs/widgets/api/properties/widget-usestickable/)(onStuckStatusChanged?: (e: [WidgetStuckEvent](/docs/widgets/api/type-WidgetStuckEvent/#widget-stuck-event)) => void | Promise<void>): void
+### [useStickable](/docs/widgets/api/properties/widget-usestickable/)(onStuckStatusChanged?: (e: [WidgetStuckEvent](/docs/widgets/api/type-WidgetStuckEvent/)) => void | Promise<void>): void
 
 ## Parameters​
 
@@ -1120,7 +1120,7 @@ This API is only available in FigJam
 
 ## Signature​
 
-### [useStickableHost](/docs/widgets/api/properties/widget-usestickablehost/)(onAttachmentsChanged?: (e: [WidgetAttachedStickablesChangedEvent](/docs/widgets/api/type-WidgetAttachedStickablesChangedEvent/#widget-attached-stickables-changed-event)) => void | Promise<void>): void
+### [useStickableHost](/docs/widgets/api/properties/widget-usestickablehost/)(onAttachmentsChanged?: (e: [WidgetAttachedStickablesChangedEvent](/docs/widgets/api/type-WidgetAttachedStickablesChangedEvent/)) => void | Promise<void>): void
 
 ## Parameters​
 
@@ -2915,7 +2915,7 @@ The `useSyncedState` hook lets you declare that your widget relies on some state
 
 * * *
 
-### [useSyncedMap](/docs/widgets/api/properties/widget-usesyncedmap/)<T>(name: string): [SyncedMap](/docs/widgets/api/type-SyncedMap/#synced-map)<T>
+### [useSyncedMap](/docs/widgets/api/properties/widget-usesyncedmap/)<T>(name: string): [SyncedMap](/docs/widgets/api/type-SyncedMap/)<T>
 
 The `useSyncedMap` hook works similarly to `useSyncedState`, but each value within the map is updated last-writer-wins, instead of the entire map being overwritten last-writer-wins.
 
@@ -2923,7 +2923,7 @@ The `useSyncedMap` hook works similarly to `useSyncedState`, but each value with
 
 * * *
 
-### [usePropertyMenu](/docs/widgets/api/properties/widget-usepropertymenu/)(items: [WidgetPropertyMenuItem](/docs/widgets/api/type-PropertyMenu/#widget-property-menu-item)\[\], onChange: (event: [WidgetPropertyEvent](/docs/widgets/api/type-PropertyMenu/#widget-property-event)) => void | Promise<void>): void
+### [usePropertyMenu](/docs/widgets/api/properties/widget-usepropertymenu/)(items: [WidgetPropertyMenuItem](/docs/widgets/api/type-PropertyMenu/#widgetpropertymenuitem)\[\], onChange: (event: [WidgetPropertyEvent](/docs/widgets/api/type-PropertyMenu/#widgetpropertyevent)) => void | Promise<void>): void
 
 The `usePropertyMenu` hook lets you specify the property menu to show when the widget is selected (See image below).
 
@@ -2939,7 +2939,7 @@ The `useEffect` hook can be useful for running code that should run anytime the 
 
 * * *
 
-### [useStickable](/docs/widgets/api/properties/widget-usestickable/)(onStuckStatusChanged?: (e: [WidgetStuckEvent](/docs/widgets/api/type-WidgetStuckEvent/#widget-stuck-event)) => void | Promise<void>): void
+### [useStickable](/docs/widgets/api/properties/widget-usestickable/)(onStuckStatusChanged?: (e: [WidgetStuckEvent](/docs/widgets/api/type-WidgetStuckEvent/)) => void | Promise<void>): void
 
 info
 
@@ -2951,7 +2951,7 @@ This API is only available in FigJam
 
 * * *
 
-### [useStickableHost](/docs/widgets/api/properties/widget-usestickablehost/)(onAttachmentsChanged?: (e: [WidgetAttachedStickablesChangedEvent](/docs/widgets/api/type-WidgetAttachedStickablesChangedEvent/#widget-attached-stickables-changed-event)) => void | Promise<void>): void
+### [useStickableHost](/docs/widgets/api/properties/widget-usestickablehost/)(onAttachmentsChanged?: (e: [WidgetAttachedStickablesChangedEvent](/docs/widgets/api/type-WidgetAttachedStickablesChangedEvent/)) => void | Promise<void>): void
 
 info
 
@@ -3028,7 +3028,7 @@ Toggles whether to show the component.
 
 * * *
 
-### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/#widget-click-event)) => Promise<any> | void
+### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/)) => Promise<any> | void
 
 Attach a click handler on the given node. If the given function is async or returns a promise, the widget is only terminated when the async function has completed and the promise has been resolved. The click handler is also passed a [`WidgetClickEvent`](/docs/widgets/api/type-WidgetClickEvent/) object that contains additional information about the click.
 
@@ -3042,7 +3042,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hover-style)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -3074,7 +3074,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 The blendMode of the component.
 
@@ -3094,7 +3094,7 @@ The effect of the component.
 
 ### `ConstraintProps`​
 
-### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontal-constraint)
+### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontalconstraint)
 
 The x position of the node.
 
@@ -3102,7 +3102,7 @@ This value is ignored if the node is a child of an AutoLayout frame and has posi
 
 * * *
 
-### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#vertical-constraint)
+### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#verticalconstraint)
 
 The y position of the node.
 
@@ -3120,13 +3120,13 @@ Specify `hidden` to clip the contents of the frame. `visible` and `scroll` both 
 
 ## `SizeProps`​
 
-### width?: [AutolayoutSize](/docs/widgets/api/type-Size/#autolayout-size)
+### width?: [AutolayoutSize](/docs/widgets/api/type-Size/#autolayoutsize)
 
 The width of the component.
 
 * * *
 
-### height?: [AutolayoutSize](/docs/widgets/api/type-Size/#autolayout-size)
+### height?: [AutolayoutSize](/docs/widgets/api/type-Size/#autolayoutsize)
 
 The height of the component.
 
@@ -3158,7 +3158,7 @@ The maxHeight of this component. Only affects AutoLayout and its children.
 
 ## `LayoutProps`​
 
-### spacing?: number | 'auto' | [LayoutGap](/docs/widgets/api/type-LayoutGap/#layout-gap)
+### spacing?: number | 'auto' | [LayoutGap](/docs/widgets/api/type-LayoutGap/#layoutgap)
 
 Determines distance between children of this AutoLayout frame. A single number value or 'auto' controls both horizontal and vertical gap.
 
@@ -3178,13 +3178,13 @@ Determines the auto-layout direction of this frame
 
 * * *
 
-### horizontalAlignItems?: Omit<[AlignItems](/docs/widgets/api/type-AlignItems/#align-items), 'baseline'>
+### horizontalAlignItems?: Omit<[AlignItems](/docs/widgets/api/type-AlignItems/#alignitems), 'baseline'>
 
 Determines how the children in this AutoLayout frame should be aligned in the horizontal direction.
 
 * * *
 
-### verticalAlignItems?: [AlignItems](/docs/widgets/api/type-AlignItems/#align-items)
+### verticalAlignItems?: [AlignItems](/docs/widgets/api/type-AlignItems/#alignitems)
 
 Determines how the children in this AutoLayout frame should be aligned in the vertical direction.
 
@@ -3206,7 +3206,7 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `CornerProps`​
 
-### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#corner-radius)
+### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#cornerradius)
 
 The number of pixels to round the corners of the object by.
 
@@ -3220,13 +3220,13 @@ Rectangle nodes can also have different corner radii on each of the four corners
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -3238,7 +3238,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#stroke-align)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -3446,7 +3446,7 @@ Toggles whether to show the component.
 
 * * *
 
-### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/#widget-click-event)) => Promise<any> | void
+### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/)) => Promise<any> | void
 
 Attach a click handler on the given node. If the given function is async or returns a promise, the widget is only terminated when the async function has completed and the promise has been resolved. The click handler is also passed a [`WidgetClickEvent`](/docs/widgets/api/type-WidgetClickEvent/) object that contains additional information about the click.
 
@@ -3460,7 +3460,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hover-style)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -3492,7 +3492,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 The blendMode of the component.
 
@@ -3512,7 +3512,7 @@ The effect of the component.
 
 ### `ConstraintProps`​
 
-### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontal-constraint)
+### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontalconstraint)
 
 The x position of the node.
 
@@ -3520,7 +3520,7 @@ This value is ignored if the node is a child of an AutoLayout frame and has posi
 
 * * *
 
-### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#vertical-constraint)
+### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#verticalconstraint)
 
 The y position of the node.
 
@@ -3584,7 +3584,7 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `CornerProps`​
 
-### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#corner-radius)
+### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#cornerradius)
 
 The number of pixels to round the corners of the object by.
 
@@ -3598,13 +3598,13 @@ Rectangle nodes can also have different corner radii on each of the four corners
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -3616,7 +3616,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#stroke-align)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -3785,13 +3785,13 @@ Overrides the case of the raw characters in the text node.
 
 * * *
 
-### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#font-weight)
+### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#fontweight)
 
 The font weight eg. 400, 500 or 'medium', 'bold'.
 
 * * *
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill in the text.
 
@@ -3833,7 +3833,7 @@ Whether the text should truncate if it overflows the size of the node. Set to a 
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -3845,7 +3845,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#stroke-align)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -3859,13 +3859,13 @@ Inside and outside stroke are actually implemented by doubling the stroke weight
 
 ## `SizeProps`​
 
-### width?: [AutolayoutSize](/docs/widgets/api/type-Size/#autolayout-size)
+### width?: [AutolayoutSize](/docs/widgets/api/type-Size/#autolayoutsize)
 
 The width of the component.
 
 * * *
 
-### height?: [AutolayoutSize](/docs/widgets/api/type-Size/#autolayout-size)
+### height?: [AutolayoutSize](/docs/widgets/api/type-Size/#autolayoutsize)
 
 The height of the component.
 
@@ -3917,7 +3917,7 @@ Toggles whether to show the component.
 
 * * *
 
-### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/#widget-click-event)) => Promise<any> | void
+### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/)) => Promise<any> | void
 
 Attach a click handler on the given node. If the given function is async or returns a promise, the widget is only terminated when the async function has completed and the promise has been resolved. The click handler is also passed a [`WidgetClickEvent`](/docs/widgets/api/type-WidgetClickEvent/) object that contains additional information about the click.
 
@@ -3931,7 +3931,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hover-style)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -3963,7 +3963,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 The blendMode of the component.
 
@@ -3983,7 +3983,7 @@ The effect of the component.
 
 ### `ConstraintProps`​
 
-### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontal-constraint)
+### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontalconstraint)
 
 The x position of the node.
 
@@ -3991,7 +3991,7 @@ This value is ignored if the node is a child of an AutoLayout frame and has posi
 
 * * *
 
-### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#vertical-constraint)
+### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#verticalconstraint)
 
 The y position of the node.
 
@@ -4206,7 +4206,7 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `CornerProps`​
 
-### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#corner-radius)
+### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#cornerradius)
 
 The number of pixels to round the corners of the object by.
 
@@ -4220,13 +4220,13 @@ Rectangle nodes can also have different corner radii on each of the four corners
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -4238,7 +4238,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#stroke-align)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -4270,7 +4270,7 @@ Toggles whether to show the component.
 
 * * *
 
-### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/#widget-click-event)) => Promise<any> | void
+### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/)) => Promise<any> | void
 
 Attach a click handler on the given node. If the given function is async or returns a promise, the widget is only terminated when the async function has completed and the promise has been resolved. The click handler is also passed a [`WidgetClickEvent`](/docs/widgets/api/type-WidgetClickEvent/) object that contains additional information about the click.
 
@@ -4284,7 +4284,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hover-style)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -4316,7 +4316,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 The blendMode of the component.
 
@@ -4336,7 +4336,7 @@ The effect of the component.
 
 ### `ConstraintProps`​
 
-### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontal-constraint)
+### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontalconstraint)
 
 The x position of the node.
 
@@ -4344,7 +4344,7 @@ This value is ignored if the node is a child of an AutoLayout frame and has posi
 
 * * *
 
-### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#vertical-constraint)
+### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#verticalconstraint)
 
 The y position of the node.
 
@@ -4455,7 +4455,7 @@ Usage example
 <Image  // Pass a data uri directly as the image  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAECSURBVHgBpY87TwJBFIXPnVkhbqQQE7UQNWhrsdpLI40FsdSYGGNvbWFhZ2Jj+AWER0fFD6CAhhYCod8GGmCLJRAI2Rl22LDh1RBOc1/fzb0H2EK0WPSfzj+lxG3wMIpAOKpaZfpPpddgKxG510BllSsw6MGAEAYl0zWVMn+L8boEzOXD0oRwrI1vZF9ESRetWO94XMjEDwxb0xttTF6txyNbzbU5mHmWhhtiQ3aGSkQmTH129YJLunJjdQned9DshkbF8d7o4cRiOSB0475ld+JUnTM+/Pb1d0p8ck2eKXN49/OOFfkGOXfCLnjpdamNDfLhgfFdIyE+GOg3AJHHrpoC5YtKfAfixH0AAAAASUVORK5CYII="  width={100}  height={100}/>
 ```
 
-### src: string | [ImagePaint](/docs/widgets/api/type-ImagePaint/#image-paint)
+### src: string | [ImagePaint](/docs/widgets/api/type-ImagePaint/#imagepaint)
 
 A string representing Image URL/DataURI or an ImagePaint.
 
@@ -4509,7 +4509,7 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `CornerProps`​
 
-### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#corner-radius)
+### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#cornerradius)
 
 The number of pixels to round the corners of the object by.
 
@@ -4523,13 +4523,13 @@ Rectangle nodes can also have different corner radii on each of the four corners
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -4541,7 +4541,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#stroke-align)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -4573,7 +4573,7 @@ Toggles whether to show the component.
 
 * * *
 
-### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/#widget-click-event)) => Promise<any> | void
+### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/)) => Promise<any> | void
 
 Attach a click handler on the given node. If the given function is async or returns a promise, the widget is only terminated when the async function has completed and the promise has been resolved. The click handler is also passed a [`WidgetClickEvent`](/docs/widgets/api/type-WidgetClickEvent/) object that contains additional information about the click.
 
@@ -4587,7 +4587,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hover-style)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -4619,7 +4619,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 The blendMode of the component.
 
@@ -4639,7 +4639,7 @@ The effect of the component.
 
 ### `ConstraintProps`​
 
-### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontal-constraint)
+### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontalconstraint)
 
 The x position of the node.
 
@@ -4647,7 +4647,7 @@ This value is ignored if the node is a child of an AutoLayout frame and has posi
 
 * * *
 
-### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#vertical-constraint)
+### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#verticalconstraint)
 
 The y position of the node.
 
@@ -4747,7 +4747,7 @@ Source: https://developers.figma.com/docs/widgets/api/component-Ellipse/
 
 `Ellipse` is useful for creating ellipses and circles.
 
-### arcData?: [ArcData](/docs/widgets/api/type-ArcData/#arc-data)
+### arcData?: [ArcData](/docs/widgets/api/type-ArcData/#arcdata)
 
 The "arc" properties of the Ellipse.
 
@@ -4767,7 +4767,7 @@ Toggles whether to show the component.
 
 * * *
 
-### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/#widget-click-event)) => Promise<any> | void
+### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/)) => Promise<any> | void
 
 Attach a click handler on the given node. If the given function is async or returns a promise, the widget is only terminated when the async function has completed and the promise has been resolved. The click handler is also passed a [`WidgetClickEvent`](/docs/widgets/api/type-WidgetClickEvent/) object that contains additional information about the click.
 
@@ -4781,7 +4781,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hover-style)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -4813,7 +4813,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 The blendMode of the component.
 
@@ -4833,7 +4833,7 @@ The effect of the component.
 
 ### `ConstraintProps`​
 
-### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontal-constraint)
+### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontalconstraint)
 
 The x position of the node.
 
@@ -4841,7 +4841,7 @@ This value is ignored if the node is a child of an AutoLayout frame and has posi
 
 * * *
 
-### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#vertical-constraint)
+### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#verticalconstraint)
 
 The y position of the node.
 
@@ -4897,13 +4897,13 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -4915,7 +4915,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#stroke-align)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -5087,13 +5087,13 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -5105,7 +5105,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#stroke-align)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -5137,7 +5137,7 @@ Toggles whether to show the component.
 
 * * *
 
-### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/#widget-click-event)) => Promise<any> | void
+### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/)) => Promise<any> | void
 
 Attach a click handler on the given node. If the given function is async or returns a promise, the widget is only terminated when the async function has completed and the promise has been resolved. The click handler is also passed a [`WidgetClickEvent`](/docs/widgets/api/type-WidgetClickEvent/) object that contains additional information about the click.
 
@@ -5151,7 +5151,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hover-style)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -5183,7 +5183,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 The blendMode of the component.
 
@@ -5203,7 +5203,7 @@ The effect of the component.
 
 ### `ConstraintProps`​
 
-### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontal-constraint)
+### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontalconstraint)
 
 The x position of the node.
 
@@ -5211,7 +5211,7 @@ This value is ignored if the node is a child of an AutoLayout frame and has posi
 
 * * *
 
-### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#vertical-constraint)
+### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#verticalconstraint)
 
 The y position of the node.
 
@@ -5262,13 +5262,13 @@ The length of the line.
 
 * * *
 
-### strokeCap?: [StrokeCap](/docs/widgets/api/type-StrokeCap/#stroke-cap)
+### strokeCap?: [StrokeCap](/docs/widgets/api/type-StrokeCap/#strokecap)
 
 The decoration applied to the line endpoints.
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -5302,7 +5302,7 @@ Toggles whether to show the component.
 
 * * *
 
-### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/#widget-click-event)) => Promise<any> | void
+### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/)) => Promise<any> | void
 
 Attach a click handler on the given node. If the given function is async or returns a promise, the widget is only terminated when the async function has completed and the promise has been resolved. The click handler is also passed a [`WidgetClickEvent`](/docs/widgets/api/type-WidgetClickEvent/) object that contains additional information about the click.
 
@@ -5316,7 +5316,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hover-style)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -5348,7 +5348,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 The blendMode of the component.
 
@@ -5368,7 +5368,7 @@ The effect of the component.
 
 ### `ConstraintProps`​
 
-### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontal-constraint)
+### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontalconstraint)
 
 The x position of the node.
 
@@ -5376,7 +5376,7 @@ This value is ignored if the node is a child of an AutoLayout frame and has posi
 
 * * *
 
-### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#vertical-constraint)
+### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#verticalconstraint)
 
 The y position of the node.
 
@@ -5472,7 +5472,7 @@ For usage examples, see the [Text Editing](/docs/widgets/text-editing/) guide.
 
 ## InputProps​
 
-### onTextEditEnd: (event: [TextEditEvent](/docs/widgets/api/type-TextEditEvent/#text-edit-event)) => void
+### onTextEditEnd: (event: [TextEditEvent](/docs/widgets/api/type-TextEditEvent/#texteditevent)) => void
 
 A method that is called when a user exits text edit mode (similar to [`onBlur`](https://reactjs.org/docs/events.html#onblur) in React).
 
@@ -5494,7 +5494,7 @@ Placeholder text that shows whenever `value` is `null` or an empty string.
 
 * * *
 
-### placeholderProps?: [PlaceholderProps](/docs/widgets/api/type-PlaceholderProps/#placeholder-props)
+### placeholderProps?: [PlaceholderProps](/docs/widgets/api/type-PlaceholderProps/#placeholderprops)
 
 Props to customize the text placeholder. Use this prop if you want the placeholder to render differently compared to the editable text.
 
@@ -5502,7 +5502,7 @@ All relevant props on the Input component will automatically be are applied to b
 
 * * *
 
-### inputFrameProps?: Omit<[AutoLayoutProps](/docs/widgets/api/component-AutoLayout/#auto-layout-props), 'width'>
+### inputFrameProps?: Omit<[AutoLayoutProps](/docs/widgets/api/component-AutoLayout/#autolayoutprops), 'width'>
 
 Props to customize the Autolayout frame that parents the editable text and placeholder.
 
@@ -5580,13 +5580,13 @@ Overrides the case of the raw characters in the text node.
 
 * * *
 
-### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#font-weight)
+### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#fontweight)
 
 The font weight eg. 400, 500 or 'medium', 'bold'.
 
 * * *
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill in the text.
 
@@ -5628,7 +5628,7 @@ Whether the text should truncate if it overflows the size of the node. Set to a 
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -5640,7 +5640,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#stroke-align)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -5674,7 +5674,7 @@ Toggles whether to show the component.
 
 * * *
 
-### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/#widget-click-event)) => Promise<any> | void
+### onClick?: (event: [WidgetClickEvent](/docs/widgets/api/type-WidgetClickEvent/)) => Promise<any> | void
 
 Attach a click handler on the given node. If the given function is async or returns a promise, the widget is only terminated when the async function has completed and the promise has been resolved. The click handler is also passed a [`WidgetClickEvent`](/docs/widgets/api/type-WidgetClickEvent/) object that contains additional information about the click.
 
@@ -5688,7 +5688,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hover-style)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -5720,7 +5720,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 The blendMode of the component.
 
@@ -5740,7 +5740,7 @@ The effect of the component.
 
 ### `ConstraintProps`​
 
-### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontal-constraint)
+### x?: number | [HorizontalConstraint](/docs/widgets/api/type-Constraint/#horizontalconstraint)
 
 The x position of the node.
 
@@ -5748,7 +5748,7 @@ This value is ignored if the node is a child of an AutoLayout frame and has posi
 
 * * *
 
-### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#vertical-constraint)
+### y?: number | [VerticalConstraint](/docs/widgets/api/type-Constraint/#verticalconstraint)
 
 The y position of the node.
 
@@ -6015,13 +6015,13 @@ Overrides the case of the raw characters in the text node.
 
 * * *
 
-### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#font-weight)
+### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#fontweight)
 
 The font weight eg. 400, 500 or 'medium', 'bold'.
 
 * * *
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill in the text.
 
@@ -6335,7 +6335,7 @@ The `usePropertyMenu` hook lets you specify the property menu to show when the w
 
 ## Signature​
 
-### [usePropertyMenu](/docs/widgets/api/properties/widget-usepropertymenu/)(items: [WidgetPropertyMenuItem](/docs/widgets/api/type-PropertyMenu/#widget-property-menu-item)\[\], onChange: (event: [WidgetPropertyEvent](/docs/widgets/api/type-PropertyMenu/#widget-property-event)) => void | Promise<void>): void
+### [usePropertyMenu](/docs/widgets/api/properties/widget-usepropertymenu/)(items: [WidgetPropertyMenuItem](/docs/widgets/api/type-PropertyMenu/#widgetpropertymenuitem)\[\], onChange: (event: [WidgetPropertyEvent](/docs/widgets/api/type-PropertyMenu/#widgetpropertyevent)) => void | Promise<void>): void
 
 ## Parameters​
 
@@ -6402,7 +6402,7 @@ The `useSyncedMap` hook works similarly to `useSyncedState`, but each value with
 
 ## Signature​
 
-### [useSyncedMap](/docs/widgets/api/properties/widget-usesyncedmap/)<T>(name: string): [SyncedMap](/docs/widgets/api/type-SyncedMap/#synced-map)<T>
+### [useSyncedMap](/docs/widgets/api/properties/widget-usesyncedmap/)<T>(name: string): [SyncedMap](/docs/widgets/api/type-SyncedMap/)<T>
 
 ## Parameters​
 
@@ -7190,7 +7190,7 @@ The blur radius of the shadow. Must be >= 0. A lower radius creates a sharper sh
 
 * * *
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 Determines how the color of this shadow blends with the colors underneath it.
 
@@ -7252,7 +7252,7 @@ The blur radius of the shadow. Must be >= 0. A lower radius creates a sharper sh
 
 * * *
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 Determines how the color of this shadow blends with the colors underneath it.
 
@@ -7578,13 +7578,13 @@ type Paint = SolidPaint | GradientPaint | ImagePaint
 interface PaintProps {  type: PaintType  blendMode?: BlendMode  visible?: boolean  opacity?: number}type PaintType =  | 'image'  | 'solid'  | 'gradient-linear'  | 'gradient-radial'  | 'gradient-angular'  | 'gradient-diamond'
 ```
 
-### type: [PaintType](/docs/widgets/api/type-Paint/#paint-type)
+### type: [PaintType](/docs/widgets/api/type-Paint/#painttype)
 
 One of: 'image' | 'solid' | 'gradient-linear' | 'gradient-radial' | 'gradient-angular' | 'gradient-diamond'.
 
 * * *
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 Determines how the color of this paint blends with the colors underneath it. Defaults to "NORMAL".
 
@@ -8133,19 +8133,19 @@ Overrides the case of the raw characters in the text node.
 
 * * *
 
-### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#font-weight)
+### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#fontweight)
 
 The font weight eg. 400, 500 or 'medium', 'bold'.
 
 * * *
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solid-paint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradient-paint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
 
 The paints used to fill in the text.
 
 * * *
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blend-mode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
 
 The blendMode of the component.
 

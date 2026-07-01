@@ -254,7 +254,7 @@ If you assigned a map to the [`"ui"`](/docs/plugins/manifest/#ui) field in your 
 
 you can use this variable to access each file's contents. You can then call `figma.showUI(__uiFiles__.main)`.
 
-### [fetch](/docs/plugins/api/properties/global-fetch/)(url: string, init?: [FetchOptions](/docs/plugins/api/properties/global-fetch/#fetch-options)): Promise<[FetchResponse](/docs/plugins/api/properties/global-fetch/#fetch-response)\>
+### [fetch](/docs/plugins/api/properties/global-fetch/)(url: string, init?: [FetchOptions](/docs/plugins/api/properties/global-fetch/#fetchoptions)): Promise<[FetchResponse](/docs/plugins/api/properties/global-fetch/#fetchresponse)\>
 
 Fetch a resource from the network, and return a promise with the response.
 
@@ -555,7 +555,7 @@ Adds a dev resource to a node. This will fail if the node already has a dev reso
 
 * * *
 
-### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
+### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scenenode); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scenenode); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
 
 Supported on:
 
@@ -579,7 +579,7 @@ if (figma.editorType === 'dev') {  // In Figma's Dev Mode}
 
 * * *
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 Supported on:
 
@@ -694,7 +694,7 @@ Learn more about annotations in the [Help Center](https://help.figma.com/hc/en-u
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Supported on:
 
@@ -720,7 +720,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), rowIndex: number, columnIndex: number): void
+### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), rowIndex: number, columnIndex: number): void
 
 Supported on:
 
@@ -737,7 +737,7 @@ Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Supported on:
 
@@ -782,7 +782,7 @@ Applies a Motion animation style to this node and returns the applied animation 
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Supported on:
 
@@ -1031,7 +1031,7 @@ The raw characters in the text node. Setting this property requires the font the
 
 * * *
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 Supported on:
 
@@ -1840,9 +1840,9 @@ Supported on:
 *   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
 *   [WidgetNode](/docs/plugins/api/WidgetNode/)
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -1896,7 +1896,7 @@ List of export settings stored on the node. For help on how to change this value
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 Supported on:
 
@@ -1995,7 +1995,7 @@ The paints used to fill the area of the shape. For help on how to change this va
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Supported on:
 
@@ -2021,7 +2021,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Supported on:
 
@@ -2047,7 +2047,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Supported on:
 
@@ -2073,7 +2073,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Supported on:
 
@@ -2099,7 +2099,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Supported on:
 
@@ -2232,7 +2232,7 @@ Resolves to a JSON object of CSS properties of the node. This is the same CSS th
 
 * * *
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Supported on:
 
@@ -2291,7 +2291,7 @@ Learn more about measurements in the [Help Center](https://help.figma.com/hc/en-
 
 * * *
 
-### getMeasurementsForNode(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [Measurement](/docs/plugins/api/Measurement/)\[\]
+### getMeasurementsForNode(node: [SceneNode](/docs/plugins/api/nodes/#scenenode)): [Measurement](/docs/plugins/api/Measurement/)\[\]
 
 Supported on:
 
@@ -3507,7 +3507,7 @@ Insert `characters` at index `start` in the text.
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Supported on:
 
@@ -3999,7 +3999,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 Supported on:
 
@@ -4397,7 +4397,7 @@ Determines whether a frame will scroll in presentation mode when the frame conta
 
 * * *
 
-### overlayBackground: [OverlayBackground](/docs/plugins/api/Overlay/#overlay-background) \[readonly\]
+### overlayBackground: [OverlayBackground](/docs/plugins/api/Overlay/#overlaybackground) \[readonly\]
 
 Supported on:
 
@@ -4410,7 +4410,7 @@ How this frame obscures the content under it when opened as an overlay.
 
 * * *
 
-### overlayBackgroundInteraction: [OverlayBackgroundInteraction](/docs/plugins/api/Overlay/#overlay-background-interaction) \[readonly\]
+### overlayBackgroundInteraction: [OverlayBackgroundInteraction](/docs/plugins/api/Overlay/#overlaybackgroundinteraction) \[readonly\]
 
 Supported on:
 
@@ -4423,7 +4423,7 @@ How the user can interact with the content under this frame when opened as an ov
 
 * * *
 
-### overlayPositionType: [OverlayPositionType](/docs/plugins/api/Overlay/#overlay-position-type) \[readonly\]
+### overlayPositionType: [OverlayPositionType](/docs/plugins/api/Overlay/#overlaypositiontype) \[readonly\]
 
 Supported on:
 
@@ -4522,7 +4522,7 @@ The vertical distance between paragraphs. Setting this property requires the fon
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Supported on:
 
@@ -4788,7 +4788,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Supported on:
 
@@ -6016,7 +6016,7 @@ The decoration applied to vertices which have only one connected segment.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 Supported on:
 
@@ -6278,7 +6278,7 @@ Applicable only on auto-layout frames. Determines whether strokes are included i
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 Supported on:
 
@@ -6323,7 +6323,7 @@ An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, 
 
 * * *
 
-### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Supported on:
 
@@ -6656,7 +6656,7 @@ If the manifest contains`"documentAccess": "dynamic-page"`, this property is rea
 
 * * *
 
-### vectorPaths: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths)
+### vectorPaths: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths)
 
 Supported on:
 
@@ -7022,7 +7022,7 @@ The root of the entire Figma document. This node is used to access other pages. 
 
 * * *
 
-### [showUI](/docs/plugins/api/properties/figma-showui/)(html: string, options?: [ShowUIOptions](/docs/plugins/api/properties/figma-showui/#show-uioptions)): void
+### [showUI](/docs/plugins/api/properties/figma-showui/)(html: string, options?: [ShowUIOptions](/docs/plugins/api/properties/figma-showui/#showuioptions)): void
 
 Enables you to render UI to interact with the user, or simply to access browser APIs. This function creates a modal dialog with an `<iframe>` containing the HTML markup in the `html` argument.
 
@@ -7030,7 +7030,7 @@ Enables you to render UI to interact with the user, or simply to access browser 
 
 * * *
 
-### ui: [UIAPI](/docs/plugins/api/figma-ui/#uiapi) \[readonly\]
+### ui: [UIAPI](/docs/plugins/api/figma-ui/) \[readonly\]
 
 This property contains methods used to modify and communicate with the UI created via `figma.showUI(...)`.
 
@@ -7038,7 +7038,7 @@ Read more in the [UI section](/docs/plugins/api/figma-ui/).
 
 * * *
 
-### util: [UtilAPI](/docs/plugins/api/figma-util/#util-api) \[readonly\]
+### util: [UtilAPI](/docs/plugins/api/figma-util/) \[readonly\]
 
 This property contains convenience functions for common operations.
 
@@ -7046,7 +7046,7 @@ Read more in the [util section](/docs/plugins/api/figma-util/).
 
 * * *
 
-### constants: [ConstantsAPI](/docs/plugins/api/figma-constants/#constants-api) \[readonly\]
+### constants: [ConstantsAPI](/docs/plugins/api/figma-constants/) \[readonly\]
 
 This property contains constants that can be accessed by the plugin API.
 
@@ -7054,7 +7054,7 @@ Read more in the [constants section](/docs/plugins/api/figma-constants/).
 
 * * *
 
-### motion: [MotionAPI](/docs/plugins/api/figma-motion/#motion-api) \[readonly\]
+### motion: [MotionAPI](/docs/plugins/api/figma-motion/) \[readonly\]
 
 This property contains methods for reading Motion animation styles available in the current document.
 
@@ -7062,7 +7062,7 @@ Read more in the [Motion section](/docs/plugins/api/figma-motion/).
 
 * * *
 
-### timer?: [TimerAPI](/docs/plugins/api/figma-timer/#timer-api) \[readonly\]
+### timer?: [TimerAPI](/docs/plugins/api/figma-timer/) \[readonly\]
 
 info
 
@@ -7074,7 +7074,7 @@ Read more in the [timer section](/docs/plugins/api/figma-timer/).
 
 * * *
 
-### viewport: [ViewportAPI](/docs/plugins/api/figma-viewport/#viewport-api) \[readonly\]
+### viewport: [ViewportAPI](/docs/plugins/api/figma-viewport/) \[readonly\]
 
 This property contains methods used to read and set the viewport, the user-visible area of the current page.
 
@@ -7082,7 +7082,7 @@ Read more in the [viewport section](/docs/plugins/api/figma-viewport/).
 
 * * *
 
-### clientStorage: [ClientStorageAPI](/docs/plugins/api/figma-clientStorage/#client-storage-api) \[readonly\]
+### clientStorage: [ClientStorageAPI](/docs/plugins/api/figma-clientStorage/) \[readonly\]
 
 This property contains methods to store persistent data on the user's local machine.
 
@@ -7090,13 +7090,13 @@ Read more in the [client storage section](/docs/plugins/api/figma-clientStorage/
 
 * * *
 
-### parameters: [ParametersAPI](/docs/plugins/api/figma-parameters/#parameters-api) \[readonly\]
+### parameters: [ParametersAPI](/docs/plugins/api/figma-parameters/) \[readonly\]
 
 This property contains methods to handle user inputs when a plugin is launched in query mode. See [Accepting Parameters as Input](/docs/plugins/plugin-parameters/) for more details.
 
 * * *
 
-### payments?: [PaymentsAPI](/docs/plugins/api/figma-payments/#payments-api) \[readonly\]
+### payments?: [PaymentsAPI](/docs/plugins/api/figma-payments/) \[readonly\]
 
 info
 
@@ -7128,7 +7128,7 @@ This property contains details about the active users in the file. `figma.active
 
 * * *
 
-### textreview?: [TextReviewAPI](/docs/plugins/api/figma-textreview/#text-review-api) \[readonly\]
+### textreview?: [TextReviewAPI](/docs/plugins/api/figma-textreview/) \[readonly\]
 
 info
 
@@ -7138,25 +7138,25 @@ This property contains methods that enable text review features in your plugin.
 
 * * *
 
-### variables: [VariablesAPI](/docs/plugins/api/figma-variables/#variables-api) \[readonly\]
+### variables: [VariablesAPI](/docs/plugins/api/figma-variables/) \[readonly\]
 
 This property contains methods to work with Variables and Variable Collections within Figma.
 
 * * *
 
-### teamLibrary: [TeamLibraryAPI](/docs/plugins/api/figma-teamlibrary/#team-library-api) \[readonly\]
+### teamLibrary: [TeamLibraryAPI](/docs/plugins/api/figma-teamlibrary/) \[readonly\]
 
 This property contains methods to work with assets residing in a team library.
 
 * * *
 
-### annotations: [AnnotationsAPI](/docs/plugins/api/figma-annotations/#annotations-api) \[readonly\]
+### annotations: [AnnotationsAPI](/docs/plugins/api/figma-annotations/) \[readonly\]
 
 This property contains methods to work with annotations.
 
 * * *
 
-### buzz: [BuzzAPI](/docs/plugins/api/figma-buzz/#buzz-api) \[readonly\]
+### buzz: [BuzzAPI](/docs/plugins/api/figma-buzz/) \[readonly\]
 
 This API is only available in Buzz.
 
@@ -7172,7 +7172,7 @@ Closes the plugin. You should always call this function once your plugin is done
 
 * * *
 
-### [on](/docs/plugins/api/properties/figma-on/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#arg-free-event-type), callback: () => void): void
+### [on](/docs/plugins/api/properties/figma-on/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#argfreeeventtype), callback: () => void): void
 
 ### [on](/docs/plugins/api/properties/figma-on/)(type: 'run', callback: (event: [RunEvent](/docs/plugins/api/RunEvent/)) => void): void
 
@@ -7207,7 +7207,7 @@ Registers an callback that will be called when an event happens in the editor. C
 
 * * *
 
-### once(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#arg-free-event-type), callback: () => void): void
+### once(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#argfreeeventtype), callback: () => void): void
 
 ### once(type: 'run', callback: (event: [RunEvent](/docs/plugins/api/RunEvent/)) => void): void
 
@@ -7227,7 +7227,7 @@ Same as `figma.on`, but the callback will only be called once, the first time th
 
 * * *
 
-### [off](/docs/plugins/api/properties/figma-off/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#arg-free-event-type), callback: () => void): void
+### [off](/docs/plugins/api/properties/figma-off/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#argfreeeventtype), callback: () => void): void
 
 ### [off](/docs/plugins/api/properties/figma-off/)(type: 'run', callback: (event: [RunEvent](/docs/plugins/api/RunEvent/)) => void): void
 
@@ -7249,7 +7249,7 @@ Removes a callback added with `figma.on` or `figma.once`.
 
 * * *
 
-### [notify](/docs/plugins/api/properties/figma-notify/)(message: string, options?: [NotificationOptions](/docs/plugins/api/properties/figma-notify/#notification-options)): [NotificationHandler](/docs/plugins/api/properties/figma-notify/#notification-handler)
+### [notify](/docs/plugins/api/properties/figma-notify/)(message: string, options?: [NotificationOptions](/docs/plugins/api/properties/figma-notify/#notificationoptions)): [NotificationHandler](/docs/plugins/api/properties/figma-notify/#notificationhandler)
 
 Shows a notification on the bottom of the screen.
 
@@ -7271,7 +7271,7 @@ Triggers an undo action. Reverts to the last `commitUndo()` state.
 
 * * *
 
-### [saveVersionHistoryAsync](/docs/plugins/api/properties/figma-saveversionhistoryasync/)(title: string, description?: string): Promise<[VersionHistoryResult](/docs/plugins/api/properties/figma-saveversionhistoryasync/#version-history-result)\>
+### [saveVersionHistoryAsync](/docs/plugins/api/properties/figma-saveversionhistoryasync/)(title: string, description?: string): Promise<[VersionHistoryResult](/docs/plugins/api/properties/figma-saveversionhistoryasync/#versionhistoryresult)\>
 
 Saves a new version of the file and adds it to the version history of the file. Returns the new version id.
 
@@ -7291,13 +7291,13 @@ Open a url in a new tab.
 
 This section contains to get or create new nodes.
 
-### getNodeByIdAsync(id: string): Promise<[BaseNode](/docs/plugins/api/nodes/#base-node) | null>
+### getNodeByIdAsync(id: string): Promise<[BaseNode](/docs/plugins/api/nodes/#basenode) | null>
 
 Finds a node by its id in the current document. Every node has an `id` property, which is unique within the document. If the id is invalid, or the node cannot be found (e.g. removed), returns a promise containing null.
 
 * * *
 
-### getNodeById(id: string): [BaseNode](/docs/plugins/api/nodes/#base-node) | null
+### getNodeById(id: string): [BaseNode](/docs/plugins/api/nodes/#basenode) | null
 
 **DEPRECATED:** Use [`figma.getNodeByIdAsync`](/docs/plugins/api/figma/#getnodebyidasync) instead. This function will throw an exception if the plugin manifest contains `"documentAccess": "dynamic-page"`.
 
@@ -7389,7 +7389,7 @@ Creates a new, empty component.
 
 * * *
 
-### [createComponentFromNode](/docs/plugins/api/properties/figma-createcomponentfromnode/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [ComponentNode](/docs/plugins/api/ComponentNode/)
+### [createComponentFromNode](/docs/plugins/api/properties/figma-createcomponentfromnode/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode)): [ComponentNode](/docs/plugins/api/ComponentNode/)
 
 info
 
@@ -7551,7 +7551,7 @@ Creates a new node from an SVG string. This is equivalent to the SVG import feat
 
 * * *
 
-### [createNodeFromJSXAsync](/docs/plugins/api/properties/figma-createnodefromjsxasync/)(jsx: any): Promise<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [createNodeFromJSXAsync](/docs/plugins/api/properties/figma-createnodefromjsxasync/)(jsx: any): Promise<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 This API creates a new node using the JSX API used by widgets.
 
@@ -7559,7 +7559,7 @@ This API creates a new node using the JSX API used by widgets.
 
 * * *
 
-### [combineAsVariants](/docs/plugins/api/properties/figma-combineasvariants/)(nodes: ReadonlyArray<[ComponentNode](/docs/plugins/api/ComponentNode/)\>, parent: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index?: number): [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+### [combineAsVariants](/docs/plugins/api/properties/figma-combineasvariants/)(nodes: ReadonlyArray<[ComponentNode](/docs/plugins/api/ComponentNode/)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 
 info
 
@@ -7571,7 +7571,7 @@ Creates a new [`ComponentSetNode`](/docs/plugins/api/ComponentSetNode/) by combi
 
 * * *
 
-### [group](/docs/plugins/api/properties/figma-group/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#base-node)\>, parent: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index?: number): [GroupNode](/docs/plugins/api/GroupNode/)
+### [group](/docs/plugins/api/properties/figma-group/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [GroupNode](/docs/plugins/api/GroupNode/)
 
 Creates new group containing all the nodes in `nodes`. There is no `createGroup` function -- use this instead. Group nodes have many quirks, like auto-resizing, that you can read about in the [`FrameNode`](/docs/plugins/api/FrameNode/) section.
 
@@ -7579,31 +7579,31 @@ Creates new group containing all the nodes in `nodes`. There is no `createGroup`
 
 * * *
 
-### union(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#base-node)\>, parent: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+### union(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
 
 Creates a new [`BooleanOperationNode`](/docs/plugins/api/BooleanOperationNode/) using the UNION operation using the contents of `nodes`. The arguments to `union` are the same as in [`figma.group`](/docs/plugins/api/properties/figma-group/).
 
 * * *
 
-### subtract(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#base-node)\>, parent: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+### subtract(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
 
 Creates a new [`BooleanOperationNode`](/docs/plugins/api/BooleanOperationNode/) using the SUBTRACT operation using the contents of `nodes`. The arguments to `union` are the same as in [`figma.subtract`](/docs/plugins/api/figma/#subtract).
 
 * * *
 
-### intersect(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#base-node)\>, parent: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+### intersect(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
 
 Creates a new [`BooleanOperationNode`](/docs/plugins/api/BooleanOperationNode/) using the INTERSECT operation using the contents of `nodes`. The arguments to `union` are the same as in [`figma.intersect`](/docs/plugins/api/figma/#intersect).
 
 * * *
 
-### exclude(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#base-node)\>, parent: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+### exclude(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
 
 Creates a new [`BooleanOperationNode`](/docs/plugins/api/BooleanOperationNode/) using the EXCLUDE operation using the contents of `nodes`. The arguments to `union` are the same as in [`figma.exclude`](/docs/plugins/api/figma/#exclude).
 
 * * *
 
-### [flatten](/docs/plugins/api/properties/figma-flatten/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#base-node)\>, parent?: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index?: number): [VectorNode](/docs/plugins/api/VectorNode/)
+### [flatten](/docs/plugins/api/properties/figma-flatten/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent?: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [VectorNode](/docs/plugins/api/VectorNode/)
 
 Flattens every node in nodes into a new vector network.
 
@@ -7611,7 +7611,7 @@ Flattens every node in nodes into a new vector network.
 
 * * *
 
-### [ungroup](/docs/plugins/api/properties/figma-ungroup/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)): Array<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [ungroup](/docs/plugins/api/properties/figma-ungroup/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)): Array<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Ungroups the given `node`, moving all of `node`'s children into `node`'s parent and removing `node`. Returns an array of nodes that were children of `node`.
 
@@ -7619,7 +7619,7 @@ Ungroups the given `node`, moving all of `node`'s children into `node`'s parent 
 
 * * *
 
-### transformGroup(nodes: ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>, parent: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index: number, modifiers: [TransformModifier](/docs/plugins/api/TransformModifier/)\[\]): [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+### transformGroup(nodes: ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index: number, modifiers: [TransformModifier](/docs/plugins/api/TransformModifier/)\[\]): [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
 
 Creates a new [`TransformGroupNode`](/docs/plugins/api/TransformGroupNode/) containing all the nodes in `nodes`, applying the transformations specified in `modifiers` to each child node.
 
@@ -7631,7 +7631,7 @@ Creates a new [`TransformGroupNode`](/docs/plugins/api/TransformGroupNode/) cont
 
 These APIs integrate your plugin with Figma's Dev Mode. Use the APIs to generate code and interfaces in Dev Mode.
 
-### codegen: [CodegenAPI](/docs/plugins/api/figma-codegen/#codegen-api) \[readonly\]
+### codegen: [CodegenAPI](/docs/plugins/api/figma-codegen/) \[readonly\]
 
 This property contains methods used to integrate with the Dev Mode codegen functionality.
 
@@ -7695,7 +7695,7 @@ This API is only available in Figma Slides
 
 ## Canvas Grid​
 
-### [getCanvasGrid](/docs/plugins/api/properties/figma-getcanvasgrid/)(): Array<Array<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>>
+### [getCanvasGrid](/docs/plugins/api/properties/figma-getcanvasgrid/)(): Array<Array<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>>
 
 Gets the current canvas grid layout as a 2D array of nodes.
 
@@ -7707,7 +7707,7 @@ This API is only available in Figma Slides and Figma Buzz
 
 * * *
 
-### [setCanvasGrid](/docs/plugins/api/properties/figma-setcanvasgrid/)(canvasGrid: Array<Array<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>>): void
+### [setCanvasGrid](/docs/plugins/api/properties/figma-setcanvasgrid/)(canvasGrid: Array<Array<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>>): void
 
 Sets the canvas grid layout, reorganizing nodes in the canvas.
 
@@ -7719,7 +7719,7 @@ This API is only available in Figma Slides and Figma Buzz
 
 * * *
 
-### [createCanvasRow](/docs/plugins/api/properties/figma-createcanvasrow/)(rowIndex?: number): [SceneNode](/docs/plugins/api/nodes/#scene-node)
+### [createCanvasRow](/docs/plugins/api/properties/figma-createcanvasrow/)(rowIndex?: number): [SceneNode](/docs/plugins/api/nodes/#scenenode)
 
 Creates a new row in the canvas grid at the specified index.
 
@@ -8260,7 +8260,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -8390,7 +8390,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -8448,7 +8448,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -8528,7 +8528,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -8544,7 +8544,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -8560,7 +8560,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -8576,7 +8576,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -8584,7 +8584,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -8602,7 +8602,7 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -8612,7 +8612,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -8622,7 +8622,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -8632,7 +8632,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -8642,7 +8642,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -8652,7 +8652,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -8662,7 +8662,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -8672,7 +8672,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -8916,7 +8916,7 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 
 * * *
 
-### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), rowIndex: number, columnIndex: number): void
+### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), rowIndex: number, columnIndex: number): void
 
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
@@ -9092,7 +9092,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -9124,7 +9124,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -9510,9 +9510,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -9558,19 +9558,19 @@ Determines which children of the frame are fixed children in a scrolling frame.
 
 * * *
 
-### overlayPositionType: [OverlayPositionType](/docs/plugins/api/Overlay/#overlay-position-type) \[readonly\]
+### overlayPositionType: [OverlayPositionType](/docs/plugins/api/Overlay/#overlaypositiontype) \[readonly\]
 
 How this frame is positioned when opened as an overlay.
 
 * * *
 
-### overlayBackground: [OverlayBackground](/docs/plugins/api/Overlay/#overlay-background) \[readonly\]
+### overlayBackground: [OverlayBackground](/docs/plugins/api/Overlay/#overlaybackground) \[readonly\]
 
 How this frame obscures the content under it when opened as an overlay.
 
 * * *
 
-### overlayBackgroundInteraction: [OverlayBackgroundInteraction](/docs/plugins/api/Overlay/#overlay-background-interaction) \[readonly\]
+### overlayBackgroundInteraction: [OverlayBackgroundInteraction](/docs/plugins/api/Overlay/#overlaybackgroundinteraction) \[readonly\]
 
 How the user can interact with the content under this frame when opened as an overlay.
 
@@ -9694,7 +9694,7 @@ Destroys the UI and its containing `<iframe>`. Once this has been called, the co
 
 * * *
 
-### [postMessage](/docs/plugins/api/properties/figma-ui-postmessage/)(pluginMessage: any, options?: [UIPostMessageOptions](/docs/plugins/api/properties/figma-ui-postmessage/#uipost-message-options)): void
+### [postMessage](/docs/plugins/api/properties/figma-ui-postmessage/)(pluginMessage: any, options?: [UIPostMessageOptions](/docs/plugins/api/properties/figma-ui-postmessage/#uipostmessageoptions)): void
 
 Sends a message to the UI's `<iframe>` window.
 
@@ -9702,7 +9702,7 @@ Sends a message to the UI's `<iframe>` window.
 
 * * *
 
-### [onmessage](/docs/plugins/api/properties/figma-ui-onmessage/): [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#message-event-handler) | undefined
+### [onmessage](/docs/plugins/api/properties/figma-ui-onmessage/): [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler) | undefined
 
 Register a handler for incoming messages from the UI's `<iframe>` window.
 
@@ -9710,7 +9710,7 @@ Register a handler for incoming messages from the UI's `<iframe>` window.
 
 * * *
 
-### [on](/docs/plugins/api/properties/figma-ui-on/)(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#message-event-handler)): void
+### [on](/docs/plugins/api/properties/figma-ui-on/)(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler)): void
 
 Register a handler for incoming messages from the UI's `<iframe>` window.
 
@@ -9718,13 +9718,13 @@ Register a handler for incoming messages from the UI's `<iframe>` window.
 
 * * *
 
-### once(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#message-event-handler)): void
+### once(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler)): void
 
 Register a handler for incoming messages from the UI's `<iframe>` window. Same as `figma.ui.on("message")`, but only gets called the first time.
 
 * * *
 
-### off(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#message-event-handler)): void
+### off(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler)): void
 
 Removes a handler added via `figma.ui.on`.
 
@@ -9806,7 +9806,7 @@ const rgba = figma.util.rgbaconst color = rgba('rgb(25% 25% 25% / 0.5)')
 
 * * *
 
-### solidPaint(color: string | [RGB](/docs/plugins/api/RGB/) | [RGBA](/docs/plugins/api/RGB/#rgba), overrides?: Partial<[SolidPaint](/docs/plugins/api/Paint/#solid-paint)\>): [SolidPaint](/docs/plugins/api/Paint/#solid-paint)
+### solidPaint(color: string | [RGB](/docs/plugins/api/RGB/) | [RGBA](/docs/plugins/api/RGB/#rgba), overrides?: Partial<[SolidPaint](/docs/plugins/api/Paint/#solidpaint)\>): [SolidPaint](/docs/plugins/api/Paint/#solidpaint)
 
 Creates a `SolidPaint` object, assigning color and opacity from a variety of common color encodings.
 
@@ -9928,7 +9928,7 @@ For example, a plugin can read the available Motion animation styles, convert ph
 const node = figma.currentPage.selection[0]const [style] = figma.motion.figmaAnimationStyles()if (node && style) {  node.applyAnimationStyle(style.styleId, {    duration: 0.4,    timelineOffset: 0,  })  node.applyManualKeyframeTrack(    { type: 'PROPERTY', name: 'TRANSLATION_X' },    {      baseValue: { type: 'FLOAT', value: 0 },      keyframes: [        { timelinePosition: 0, value: { type: 'FLOAT', value: 0 } },        {          timelinePosition: 0.4,          easing: {            type: 'CUSTOM_SPRING',            easingFunctionSpring: {              bounce: figma.motion.physicalSpringToNormalized({                mass: 1,                stiffness: 100,                damping: 10,              }),            },          },          value: { type: 'FLOAT', value: 120 },        },      ],    },  )  const [timeline] = node.timelines  if (timeline) {    node.setTimelineDuration(timeline.id, 1.2)  }}
 ```
 
-### [figmaAnimationStyles](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)(): [AvailableAnimationStyle](/docs/plugins/api/Motion/#available-animation-style)\[\]
+### [figmaAnimationStyles](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)(): [AvailableAnimationStyle](/docs/plugins/api/Motion/#availableanimationstyle)\[\]
 
 Returns the Motion animation styles available in the current document.
 
@@ -9936,7 +9936,7 @@ Returns the Motion animation styles available in the current document.
 
 * * *
 
-### [physicalSpringToNormalized](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)(spring: [PhysicalSpring](/docs/plugins/api/Motion/#physical-spring)): number
+### [physicalSpringToNormalized](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)(spring: [PhysicalSpring](/docs/plugins/api/Motion/#physicalspring)): number
 
 Converts physical spring parameters to Motion's normalized `bounce` value from 0 to 1.
 
@@ -10016,7 +10016,7 @@ Removes a callback added by [`figma.codegen.on`](/docs/plugins/api/properties/fi
 
 * * *
 
-### preferences: [CodegenPreferences](/docs/plugins/api/CodegenPreference/#codegen-preferences) \[readonly\]
+### preferences: [CodegenPreferences](/docs/plugins/api/CodegenPreference/#codegenpreferences) \[readonly\]
 
 Read the current preferences as specified by the user.
 
@@ -10154,7 +10154,7 @@ Zoom level. A value of 1.0 means 100% zoom, 0.5 means 50% zoom.
 
 * * *
 
-### scrollAndZoomIntoView(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#base-node)\>): void
+### scrollAndZoomIntoView(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>): void
 
 Automatically sets the viewport coordinates such that the nodes are visible on screen. It is the equivalent of pressing Shift-1.
 
@@ -10284,19 +10284,19 @@ type ParameterInputEvent<T = ParameterValues> = {  query: string,  key: string, 
 
 The `input` event is fired on every key press as the user is entering parameters for a plugin in quick actions. The expectation is that plugin will respond to these events by calling one of the APIs `result` object.
 
-### on(type: 'input', callback: (event: [ParameterInputEvent](/docs/plugins/api/figma-parameters/#parameter-input-event)) => void): void
+### on(type: 'input', callback: (event: [ParameterInputEvent](/docs/plugins/api/figma-parameters/#parameterinputevent)) => void): void
 
 Register a handler for user input events in the quick action UI.
 
 * * *
 
-### once(type: 'input', callback: (event: [ParameterInputEvent](/docs/plugins/api/figma-parameters/#parameter-input-event)) => void): void
+### once(type: 'input', callback: (event: [ParameterInputEvent](/docs/plugins/api/figma-parameters/#parameterinputevent)) => void): void
 
 Register a handler for user input events in the quick action UI. Same as `figma.parameters.on("input")`, but only gets called the first time.
 
 * * *
 
-### off(type: 'input', callback: (event: [ParameterInputEvent](/docs/plugins/api/figma-parameters/#parameter-input-event)) => void): void
+### off(type: 'input', callback: (event: [ParameterInputEvent](/docs/plugins/api/figma-parameters/#parameterinputevent)) => void): void
 
 Removes a handler added via `figma.parameters.on`.
 
@@ -10473,7 +10473,7 @@ warning
 
 If your manifest doesn't contain these fields, the payments API methods described below will throw errors if you try to use them.
 
-### status: [PaymentStatus](/docs/plugins/api/figma-payments/#payment-status) \[readonly\]
+### status: [PaymentStatus](/docs/plugins/api/figma-payments/#paymentstatus) \[readonly\]
 
 An object describing the user’s payment status. Right now, the only attribute on this object is whether the user has paid. In the future, we might add more attributes here to provide more information.
 
@@ -10493,7 +10493,7 @@ For published resources, this always returns `PAID` for the creator.
 
 * * *
 
-### setPaymentStatusInDevelopment(status: [PaymentStatus](/docs/plugins/api/figma-payments/#payment-status)): void
+### setPaymentStatusInDevelopment(status: [PaymentStatus](/docs/plugins/api/figma-payments/#paymentstatus)): void
 
 warning
 
@@ -10710,7 +10710,7 @@ This should be used with functions such as `node.setProperties()` to assign comp
 
 * * *
 
-### setBoundVariableForPaint(paint: [SolidPaint](/docs/plugins/api/Paint/#solid-paint), field: [VariableBindablePaintField](/docs/plugins/api/VariableBindablePaintField/), variable: [Variable](/docs/plugins/api/Variable/) | null): [SolidPaint](/docs/plugins/api/Paint/#solid-paint)
+### setBoundVariableForPaint(paint: [SolidPaint](/docs/plugins/api/Paint/#solidpaint), field: [VariableBindablePaintField](/docs/plugins/api/VariableBindablePaintField/), variable: [Variable](/docs/plugins/api/Variable/) | null): [SolidPaint](/docs/plugins/api/Paint/#solidpaint)
 
 Helper function to bind a variable to a [`SolidPaint`](/docs/plugins/api/Paint/).
 
@@ -10904,7 +10904,7 @@ Creates an instance of a component in Buzz, optionally positioned at specific ca
 
 * * *
 
-### getBuzzAssetTypeForNode(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [BuzzAssetType](/docs/plugins/api/BuzzAssetType/) | null
+### getBuzzAssetTypeForNode(node: [SceneNode](/docs/plugins/api/nodes/#scenenode)): [BuzzAssetType](/docs/plugins/api/BuzzAssetType/) | null
 
 Gets the Buzz asset type for a given node.
 
@@ -10912,7 +10912,7 @@ Gets the Buzz asset type for a given node.
 
 * * *
 
-### setBuzzAssetTypeForNode(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), assetType: [BuzzAssetType](/docs/plugins/api/BuzzAssetType/)): void
+### setBuzzAssetTypeForNode(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), assetType: [BuzzAssetType](/docs/plugins/api/BuzzAssetType/)): void
 
 Sets the Buzz asset type for a given node.
 
@@ -10920,7 +10920,7 @@ Sets the Buzz asset type for a given node.
 
 * * *
 
-### getTextContent(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [BuzzTextField](/docs/plugins/api/BuzzTextField/)\[\]
+### getTextContent(node: [SceneNode](/docs/plugins/api/nodes/#scenenode)): [BuzzTextField](/docs/plugins/api/BuzzTextField/)\[\]
 
 Extracts all text content fields from a node for dynamic content management.
 
@@ -10928,7 +10928,7 @@ Extracts all text content fields from a node for dynamic content management.
 
 * * *
 
-### getMediaContent(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [BuzzMediaField](/docs/plugins/api/BuzzMediaField/)\[\]
+### getMediaContent(node: [SceneNode](/docs/plugins/api/nodes/#scenenode)): [BuzzMediaField](/docs/plugins/api/BuzzMediaField/)\[\]
 
 Extracts all media content fields from a node for dynamic content management.
 
@@ -10936,7 +10936,7 @@ Extracts all media content fields from a node for dynamic content management.
 
 * * *
 
-### smartResize(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), width: number, height: number): void
+### smartResize(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), width: number, height: number): void
 
 Performs intelligent resizing of a node while maintaining layout integrity and aspect ratios.
 
@@ -11171,7 +11171,7 @@ Shows a notification on the bottom of the screen.
 
 ## Signature​
 
-### [notify](/docs/plugins/api/properties/figma-notify/)(message: string, options?: [NotificationOptions](/docs/plugins/api/properties/figma-notify/#notification-options)): [NotificationHandler](/docs/plugins/api/properties/figma-notify/#notification-handler)
+### [notify](/docs/plugins/api/properties/figma-notify/)(message: string, options?: [NotificationOptions](/docs/plugins/api/properties/figma-notify/#notificationoptions)): [NotificationHandler](/docs/plugins/api/properties/figma-notify/#notificationhandler)
 
 ## Parameters​
 
@@ -11305,7 +11305,7 @@ Saves a new version of the file and adds it to the version history of the file. 
 
 ## Signature​
 
-### [saveVersionHistoryAsync](/docs/plugins/api/properties/figma-saveversionhistoryasync/)(title: string, description?: string): Promise<[VersionHistoryResult](/docs/plugins/api/properties/figma-saveversionhistoryasync/#version-history-result)\>
+### [saveVersionHistoryAsync](/docs/plugins/api/properties/figma-saveversionhistoryasync/)(title: string, description?: string): Promise<[VersionHistoryResult](/docs/plugins/api/properties/figma-saveversionhistoryasync/#versionhistoryresult)\>
 
 ## Parameters​
 
@@ -11424,7 +11424,7 @@ Enables you to render UI to interact with the user, or simply to access browser 
 
 ## Signature​
 
-### [showUI](/docs/plugins/api/properties/figma-showui/)(html: string, options?: [ShowUIOptions](/docs/plugins/api/properties/figma-showui/#show-uioptions)): void
+### [showUI](/docs/plugins/api/properties/figma-showui/)(html: string, options?: [ShowUIOptions](/docs/plugins/api/properties/figma-showui/#showuioptions)): void
 
 ## Parameters​
 
@@ -11513,7 +11513,7 @@ Registers an callback that will be called when an event happens in the editor. C
 
 ## Signature​
 
-### [on](/docs/plugins/api/properties/figma-on/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#arg-free-event-type), callback: () => void): void
+### [on](/docs/plugins/api/properties/figma-on/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#argfreeeventtype), callback: () => void): void
 
 ### [on](/docs/plugins/api/properties/figma-on/)(type: 'run', callback: (event: [RunEvent](/docs/plugins/api/RunEvent/)) => void): void
 
@@ -11868,7 +11868,7 @@ Removes a callback added with `figma.on` or `figma.once`.
 
 ## Signature​
 
-### [off](/docs/plugins/api/properties/figma-off/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#arg-free-event-type), callback: () => void): void
+### [off](/docs/plugins/api/properties/figma-off/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#argfreeeventtype), callback: () => void): void
 
 ### [off](/docs/plugins/api/properties/figma-off/)(type: 'run', callback: (event: [RunEvent](/docs/plugins/api/RunEvent/)) => void): void
 
@@ -12415,7 +12415,7 @@ Creates a component from an existing node, preserving all of its properties and 
 
 ## Signature​
 
-### [createComponentFromNode](/docs/plugins/api/properties/figma-createcomponentfromnode/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [ComponentNode](/docs/plugins/api/ComponentNode/)
+### [createComponentFromNode](/docs/plugins/api/properties/figma-createcomponentfromnode/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode)): [ComponentNode](/docs/plugins/api/ComponentNode/)
 
 ## Remarks​
 
@@ -13002,7 +13002,7 @@ This API creates a new node using the JSX API used by widgets.
 
 ## Signature​
 
-### [createNodeFromJSXAsync](/docs/plugins/api/properties/figma-createnodefromjsxasync/)(jsx: any): Promise<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [createNodeFromJSXAsync](/docs/plugins/api/properties/figma-createnodefromjsxasync/)(jsx: any): Promise<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 ## Remarks​
 
@@ -13560,7 +13560,7 @@ Creates a new [`ComponentSetNode`](/docs/plugins/api/ComponentSetNode/) by combi
 
 ## Signature​
 
-### [combineAsVariants](/docs/plugins/api/properties/figma-combineasvariants/)(nodes: ReadonlyArray<[ComponentNode](/docs/plugins/api/ComponentNode/)\>, parent: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index?: number): [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+### [combineAsVariants](/docs/plugins/api/properties/figma-combineasvariants/)(nodes: ReadonlyArray<[ComponentNode](/docs/plugins/api/ComponentNode/)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 
 ## Parameters​
 
@@ -13670,7 +13670,7 @@ Creates new group containing all the nodes in `nodes`. There is no `createGroup`
 
 ## Signature​
 
-### [group](/docs/plugins/api/properties/figma-group/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#base-node)\>, parent: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index?: number): [GroupNode](/docs/plugins/api/GroupNode/)
+### [group](/docs/plugins/api/properties/figma-group/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [GroupNode](/docs/plugins/api/GroupNode/)
 
 ## Parameters​
 
@@ -13784,7 +13784,7 @@ Creates a new [`TransformGroupNode`](/docs/plugins/api/TransformGroupNode/) cont
 
 ## Signature​
 
-### transformGroup(nodes: ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>, parent: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index: number, modifiers: [TransformModifier](/docs/plugins/api/TransformModifier/)\[\]): [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+### transformGroup(nodes: ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index: number, modifiers: [TransformModifier](/docs/plugins/api/TransformModifier/)\[\]): [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
 
 ## Parameters​
 
@@ -13843,7 +13843,7 @@ Flattens every node in nodes into a new vector network.
 
 ## Signature​
 
-### [flatten](/docs/plugins/api/properties/figma-flatten/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#base-node)\>, parent?: [BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin), index?: number): [VectorNode](/docs/plugins/api/VectorNode/)
+### [flatten](/docs/plugins/api/properties/figma-flatten/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent?: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [VectorNode](/docs/plugins/api/VectorNode/)
 
 ## Parameters​
 
@@ -13949,7 +13949,7 @@ Ungroups the given `node`, moving all of `node`'s children into `node`'s parent 
 
 ## Signature​
 
-### [ungroup](/docs/plugins/api/properties/figma-ungroup/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)): Array<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [ungroup](/docs/plugins/api/properties/figma-ungroup/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)): Array<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 ## Parameters​
 
@@ -14123,7 +14123,7 @@ This API is only available in Figma Slides and Figma Buzz
 
 ## Signature​
 
-### [getCanvasGrid](/docs/plugins/api/properties/figma-getcanvasgrid/)(): Array<Array<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>>
+### [getCanvasGrid](/docs/plugins/api/properties/figma-getcanvasgrid/)(): Array<Array<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>>
 
 ## Remarks​
 
@@ -14174,7 +14174,7 @@ This API is only available in Figma Slides and Figma Buzz
 
 ## Signature​
 
-### [setCanvasGrid](/docs/plugins/api/properties/figma-setcanvasgrid/)(canvasGrid: Array<Array<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>>): void
+### [setCanvasGrid](/docs/plugins/api/properties/figma-setcanvasgrid/)(canvasGrid: Array<Array<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>>): void
 
 ## Parameters​
 
@@ -14233,7 +14233,7 @@ This API is only available in Figma Slides and Figma Buzz
 
 ## Signature​
 
-### [createCanvasRow](/docs/plugins/api/properties/figma-createcanvasrow/)(rowIndex?: number): [SceneNode](/docs/plugins/api/nodes/#scene-node)
+### [createCanvasRow](/docs/plugins/api/properties/figma-createcanvasrow/)(rowIndex?: number): [SceneNode](/docs/plugins/api/nodes/#scenenode)
 
 ## Parameters​
 
@@ -14397,7 +14397,7 @@ Fetch a resource from the network, and return a promise with the response.
 
 ## Signature​
 
-### [fetch](/docs/plugins/api/properties/global-fetch/)(url: string, init?: [FetchOptions](/docs/plugins/api/properties/global-fetch/#fetch-options)): Promise<[FetchResponse](/docs/plugins/api/properties/global-fetch/#fetch-response)\>
+### [fetch](/docs/plugins/api/properties/global-fetch/)(url: string, init?: [FetchOptions](/docs/plugins/api/properties/global-fetch/#fetchoptions)): Promise<[FetchResponse](/docs/plugins/api/properties/global-fetch/#fetchresponse)\>
 
 ## Parameters​
 
@@ -14517,7 +14517,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -14647,7 +14647,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -14705,7 +14705,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -14785,7 +14785,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -14801,7 +14801,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -14817,7 +14817,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -14833,7 +14833,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -14841,7 +14841,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -14907,7 +14907,7 @@ Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of t
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -14917,7 +14917,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -14927,7 +14927,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -14937,7 +14937,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -14947,7 +14947,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -14957,7 +14957,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -14967,7 +14967,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -14977,7 +14977,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -15245,9 +15245,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -15388,7 +15388,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -15420,7 +15420,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -15539,7 +15539,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -15669,7 +15669,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -15801,7 +15801,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -15881,7 +15881,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -15897,7 +15897,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -15913,7 +15913,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -15929,7 +15929,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -15937,7 +15937,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -15963,9 +15963,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -16112,7 +16112,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -16242,7 +16242,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -16300,7 +16300,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -16380,7 +16380,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -16396,7 +16396,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -16412,7 +16412,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -16428,7 +16428,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -16436,7 +16436,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -16454,7 +16454,7 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -16464,7 +16464,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -16474,7 +16474,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -16484,7 +16484,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -16494,7 +16494,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -16504,7 +16504,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -16514,7 +16514,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -16524,7 +16524,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -16768,7 +16768,7 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 
 * * *
 
-### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), rowIndex: number, columnIndex: number): void
+### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), rowIndex: number, columnIndex: number): void
 
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
@@ -16944,7 +16944,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -16976,7 +16976,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -17362,9 +17362,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -17410,19 +17410,19 @@ Determines which children of the frame are fixed children in a scrolling frame.
 
 * * *
 
-### overlayPositionType: [OverlayPositionType](/docs/plugins/api/Overlay/#overlay-position-type) \[readonly\]
+### overlayPositionType: [OverlayPositionType](/docs/plugins/api/Overlay/#overlaypositiontype) \[readonly\]
 
 How this frame is positioned when opened as an overlay.
 
 * * *
 
-### overlayBackground: [OverlayBackground](/docs/plugins/api/Overlay/#overlay-background) \[readonly\]
+### overlayBackground: [OverlayBackground](/docs/plugins/api/Overlay/#overlaybackground) \[readonly\]
 
 How this frame obscures the content under it when opened as an overlay.
 
 * * *
 
-### overlayBackgroundInteraction: [OverlayBackgroundInteraction](/docs/plugins/api/Overlay/#overlay-background-interaction) \[readonly\]
+### overlayBackgroundInteraction: [OverlayBackgroundInteraction](/docs/plugins/api/Overlay/#overlaybackgroundinteraction) \[readonly\]
 
 How the user can interact with the content under this frame when opened as an overlay.
 
@@ -17631,7 +17631,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -17761,7 +17761,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -17819,7 +17819,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -17899,7 +17899,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -17915,7 +17915,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -17931,7 +17931,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -17947,7 +17947,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -17955,7 +17955,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -17973,7 +17973,7 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -17983,7 +17983,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -17993,7 +17993,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -18003,7 +18003,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -18013,7 +18013,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -18023,7 +18023,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -18033,7 +18033,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -18043,7 +18043,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -18287,7 +18287,7 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 
 * * *
 
-### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), rowIndex: number, columnIndex: number): void
+### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), rowIndex: number, columnIndex: number): void
 
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
@@ -18463,7 +18463,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -18495,7 +18495,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -18881,9 +18881,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -19005,13 +19005,13 @@ The type of this node, represented by the string literal "CONNECTOR"
 
 * * *
 
-### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#text-sublayer-node) \[readonly\]
+### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#textsublayernode) \[readonly\]
 
 Text sublayer of the ConnectorNode
 
 * * *
 
-### textBackground: [LabelSublayerNode](/docs/plugins/api/LabelSublayer/#label-sublayer-node) \[readonly\]
+### textBackground: [LabelSublayerNode](/docs/plugins/api/LabelSublayer/#labelsublayernode) \[readonly\]
 
 Text sublayer of the ConnectorNode
 
@@ -19146,7 +19146,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -19168,7 +19168,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -19298,7 +19298,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -19430,7 +19430,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -19510,7 +19510,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -19526,7 +19526,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -19542,7 +19542,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -19558,7 +19558,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -19566,7 +19566,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -19592,9 +19592,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -19694,7 +19694,7 @@ Searches the immediate children of this node (i.e. all page nodes, not including
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/DocumentNode-findall/)(callback?: (node: [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): Array<[PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAll](/docs/plugins/api/properties/DocumentNode-findall/)(callback?: (node: [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): Array<[PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches the entire document tree. Returns all nodes for which `callback` returns true.
 
@@ -19704,7 +19704,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, you must first call
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/DocumentNode-findone/)(callback: (node: [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/DocumentNode-findone/)(callback: (node: [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire page (this node's children, its children's children, etc.). Returns the first node for which `callback` returns true.
 
@@ -19714,7 +19714,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, you must first call
 
 * * *
 
-### findAllWithCriteria<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & ([PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scene-node))>
+### findAllWithCriteria<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & ([PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scenenode))>
 
 Searches the entire document tree. Returns all nodes that satisfy all of specified criteria.
 
@@ -19744,7 +19744,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -19874,7 +19874,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -19978,7 +19978,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -20108,7 +20108,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -20166,7 +20166,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -20246,7 +20246,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -20262,7 +20262,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -20278,7 +20278,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -20294,7 +20294,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -20302,7 +20302,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -20479,7 +20479,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -20511,7 +20511,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -20773,9 +20773,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -20906,7 +20906,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -21036,7 +21036,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -21168,7 +21168,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -21248,7 +21248,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -21264,7 +21264,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -21280,7 +21280,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -21296,7 +21296,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -21304,7 +21304,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -21330,9 +21330,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -21408,7 +21408,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -21538,7 +21538,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -21596,7 +21596,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -21676,7 +21676,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -21692,7 +21692,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -21708,7 +21708,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -21724,7 +21724,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -21732,7 +21732,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -21750,7 +21750,7 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -21760,7 +21760,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -21770,7 +21770,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -21780,7 +21780,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -21790,7 +21790,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -21800,7 +21800,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -21810,7 +21810,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -21820,7 +21820,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -22064,7 +22064,7 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 
 * * *
 
-### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), rowIndex: number, columnIndex: number): void
+### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), rowIndex: number, columnIndex: number): void
 
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
@@ -22240,7 +22240,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -22272,7 +22272,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -22658,9 +22658,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -22706,19 +22706,19 @@ Determines which children of the frame are fixed children in a scrolling frame.
 
 * * *
 
-### overlayPositionType: [OverlayPositionType](/docs/plugins/api/Overlay/#overlay-position-type) \[readonly\]
+### overlayPositionType: [OverlayPositionType](/docs/plugins/api/Overlay/#overlaypositiontype) \[readonly\]
 
 How this frame is positioned when opened as an overlay.
 
 * * *
 
-### overlayBackground: [OverlayBackground](/docs/plugins/api/Overlay/#overlay-background) \[readonly\]
+### overlayBackground: [OverlayBackground](/docs/plugins/api/Overlay/#overlaybackground) \[readonly\]
 
 How this frame obscures the content under it when opened as an overlay.
 
 * * *
 
-### overlayBackgroundInteraction: [OverlayBackgroundInteraction](/docs/plugins/api/Overlay/#overlay-background-interaction) \[readonly\]
+### overlayBackgroundInteraction: [OverlayBackgroundInteraction](/docs/plugins/api/Overlay/#overlaybackgroundinteraction) \[readonly\]
 
 How the user can interact with the content under this frame when opened as an overlay.
 
@@ -22834,7 +22834,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -22964,7 +22964,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -23006,7 +23006,7 @@ This is a private API only available to [Figma partners](https://www.figma.com/p
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -23016,7 +23016,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -23026,7 +23026,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -23036,7 +23036,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -23046,7 +23046,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -23056,7 +23056,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -23066,7 +23066,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -23076,7 +23076,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -23412,9 +23412,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -23460,7 +23460,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -23540,7 +23540,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -23556,7 +23556,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -23572,7 +23572,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -23588,7 +23588,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -23596,7 +23596,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -23684,7 +23684,7 @@ Updates the vector network.
 
 * * *
 
-### vectorPaths: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths)
+### vectorPaths: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths)
 
 Exposes a simple, but incomplete representation of vectors as path. See [`VectorPaths`](/docs/plugins/api/VectorPath/)
 
@@ -23706,7 +23706,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -23836,7 +23836,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -23894,7 +23894,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -23974,7 +23974,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -23990,7 +23990,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -24006,7 +24006,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -24022,7 +24022,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -24030,7 +24030,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -24207,7 +24207,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -24239,7 +24239,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -24501,9 +24501,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -24535,7 +24535,7 @@ Updates the reactions on this node. See [`reactions`](/docs/plugins/api/properti
 
 In FigJam a stickable is any node that sticks to other nodes when put on top of them. If the node the stickable is `stuckTo` moves, the stickable moves along with it.
 
-### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 If this node is stuck to another node this property returns that node or null.
 
@@ -24617,7 +24617,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -24747,7 +24747,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -24879,7 +24879,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -24959,7 +24959,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -24975,7 +24975,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -24991,7 +24991,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -25007,7 +25007,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -25015,7 +25015,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -25041,9 +25041,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -25115,7 +25115,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -25245,7 +25245,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -25303,7 +25303,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -25383,7 +25383,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -25399,7 +25399,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -25415,7 +25415,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -25431,7 +25431,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -25439,7 +25439,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -25598,7 +25598,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -25630,7 +25630,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -25870,9 +25870,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -26001,7 +26001,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -26131,7 +26131,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -26263,7 +26263,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -26343,7 +26343,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -26359,7 +26359,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -26375,7 +26375,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -26391,7 +26391,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -26399,7 +26399,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -26425,9 +26425,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -26521,7 +26521,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -26651,7 +26651,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -26783,7 +26783,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -26863,7 +26863,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -26879,7 +26879,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -26895,7 +26895,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -26911,7 +26911,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -26919,7 +26919,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -26945,9 +26945,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -27017,7 +27017,7 @@ The guides on this page.
 
 * * *
 
-### [selection](/docs/plugins/api/properties/PageNode-selection/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [selection](/docs/plugins/api/properties/PageNode-selection/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 The selected nodes on this page. Each page stores its own selection separately. The ordering of nodes in the selection is **unspecified**, you should not be relying on it.
 
@@ -27107,7 +27107,7 @@ When in single slide view, the Slide that is currently focused is accessible via
 
 * * *
 
-### [focusedNode](/docs/plugins/api/properties/PageNode-focusednode/): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [focusedNode](/docs/plugins/api/properties/PageNode-focusednode/): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 info
 
@@ -27131,13 +27131,13 @@ Learn more about measurements in the [Help Center](https://help.figma.com/hc/en-
 
 * * *
 
-### getMeasurementsForNode(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [Measurement](/docs/plugins/api/Measurement/)\[\]
+### getMeasurementsForNode(node: [SceneNode](/docs/plugins/api/nodes/#scenenode)): [Measurement](/docs/plugins/api/Measurement/)\[\]
 
 Get all measurements pointing to a node in the current page. This includes all measurements whose start _or_ end node is the node passed in.
 
 * * *
 
-### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
+### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scenenode); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scenenode); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
 
 Adds a measurement between two nodes in the current page.
 
@@ -27199,7 +27199,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -27329,7 +27329,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -27395,7 +27395,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -27405,7 +27405,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -27415,7 +27415,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -27425,7 +27425,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -27435,7 +27435,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -27445,7 +27445,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -27455,7 +27455,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -27465,7 +27465,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -27495,9 +27495,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -27575,7 +27575,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -27705,7 +27705,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -27763,7 +27763,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -27843,7 +27843,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -27859,7 +27859,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -27875,7 +27875,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -27891,7 +27891,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -27899,7 +27899,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -28076,7 +28076,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -28108,7 +28108,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -28370,9 +28370,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -28497,7 +28497,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -28627,7 +28627,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -28685,7 +28685,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -28765,7 +28765,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -28781,7 +28781,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -28797,7 +28797,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -28813,7 +28813,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -28821,7 +28821,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -29026,7 +29026,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -29058,7 +29058,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -29350,9 +29350,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -29462,7 +29462,7 @@ An representation of a node that has been removed from the document. Can be part
 
 * * *
 
-### type: [NodeType](/docs/plugins/api/nodes/#node-type) \[readonly\]
+### type: [NodeType](/docs/plugins/api/nodes/#nodetype) \[readonly\]
 
 The type of the node before it was removed from the document
 
@@ -29562,7 +29562,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -29692,7 +29692,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -29824,7 +29824,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -29904,7 +29904,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -29920,7 +29920,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -29936,7 +29936,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -29952,7 +29952,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -29960,7 +29960,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -29986,9 +29986,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -30000,7 +30000,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -30010,7 +30010,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -30020,7 +30020,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -30030,7 +30030,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -30040,7 +30040,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -30050,7 +30050,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -30060,7 +30060,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -30070,7 +30070,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -30185,7 +30185,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -30331,7 +30331,7 @@ Most shape types have the same name as their tooltip but there are a few excepti
 
 * * *
 
-### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#text-sublayer-node) \[readonly\]
+### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#textsublayernode) \[readonly\]
 
 Text sublayer of the ShapeWithTextNode.
 
@@ -30468,7 +30468,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -30504,7 +30504,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -30634,7 +30634,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -30766,7 +30766,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -30846,7 +30846,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -30862,7 +30862,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -30878,7 +30878,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -30894,7 +30894,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -30902,7 +30902,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -30928,9 +30928,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -31004,7 +31004,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -31134,7 +31134,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -31192,7 +31192,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -31272,7 +31272,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -31288,7 +31288,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -31304,7 +31304,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -31320,7 +31320,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -31328,7 +31328,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -31570,9 +31570,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -31646,7 +31646,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -31776,7 +31776,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -31908,7 +31908,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -31988,7 +31988,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -32004,7 +32004,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -32020,7 +32020,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -32036,7 +32036,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -32044,7 +32044,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -32070,9 +32070,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -32084,7 +32084,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -32094,7 +32094,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -32104,7 +32104,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -32114,7 +32114,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -32124,7 +32124,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -32134,7 +32134,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -32144,7 +32144,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -32154,7 +32154,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -32259,7 +32259,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -32389,7 +32389,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -32447,7 +32447,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -32527,7 +32527,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -32543,7 +32543,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -32559,7 +32559,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -32575,7 +32575,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -32583,7 +32583,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -32601,7 +32601,7 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -32611,7 +32611,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -32621,7 +32621,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -32631,7 +32631,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -32641,7 +32641,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -32651,7 +32651,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -32661,7 +32661,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -32671,7 +32671,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -32915,7 +32915,7 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 
 * * *
 
-### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), rowIndex: number, columnIndex: number): void
+### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), rowIndex: number, columnIndex: number): void
 
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
@@ -33091,7 +33091,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -33123,7 +33123,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -33509,9 +33509,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -33613,7 +33613,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -33743,7 +33743,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -33875,7 +33875,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -33955,7 +33955,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -33971,7 +33971,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -33987,7 +33987,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -34003,7 +34003,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -34011,7 +34011,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -34037,9 +34037,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -34051,7 +34051,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -34061,7 +34061,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -34071,7 +34071,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -34081,7 +34081,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -34091,7 +34091,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -34101,7 +34101,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -34111,7 +34111,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -34121,7 +34121,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -34220,7 +34220,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -34350,7 +34350,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -34408,7 +34408,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -34488,7 +34488,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -34504,7 +34504,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -34520,7 +34520,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -34536,7 +34536,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -34544,7 +34544,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -34562,7 +34562,7 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -34572,7 +34572,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -34582,7 +34582,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -34592,7 +34592,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -34602,7 +34602,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -34612,7 +34612,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -34622,7 +34622,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -34632,7 +34632,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -34876,7 +34876,7 @@ Only applicable on auto-layout frames with `layoutMode` set to `"GRID"`. Returns
 
 * * *
 
-### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), rowIndex: number, columnIndex: number): void
+### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), rowIndex: number, columnIndex: number): void
 
 Applicable only on auto-layout frames with `layoutMode` set to `"GRID"`. Appends a node to the grid at the specified row and column index.
 
@@ -35052,7 +35052,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -35084,7 +35084,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -35470,9 +35470,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -35518,19 +35518,19 @@ Determines which children of the frame are fixed children in a scrolling frame.
 
 * * *
 
-### overlayPositionType: [OverlayPositionType](/docs/plugins/api/Overlay/#overlay-position-type) \[readonly\]
+### overlayPositionType: [OverlayPositionType](/docs/plugins/api/Overlay/#overlaypositiontype) \[readonly\]
 
 How this frame is positioned when opened as an overlay.
 
 * * *
 
-### overlayBackground: [OverlayBackground](/docs/plugins/api/Overlay/#overlay-background) \[readonly\]
+### overlayBackground: [OverlayBackground](/docs/plugins/api/Overlay/#overlaybackground) \[readonly\]
 
 How this frame obscures the content under it when opened as an overlay.
 
 * * *
 
-### overlayBackgroundInteraction: [OverlayBackgroundInteraction](/docs/plugins/api/Overlay/#overlay-background-interaction) \[readonly\]
+### overlayBackgroundInteraction: [OverlayBackgroundInteraction](/docs/plugins/api/Overlay/#overlaybackgroundinteraction) \[readonly\]
 
 How the user can interact with the content under this frame when opened as an overlay.
 
@@ -35645,7 +35645,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -35775,7 +35775,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -35833,7 +35833,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -35913,7 +35913,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -35929,7 +35929,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -35945,7 +35945,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -35961,7 +35961,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -35969,7 +35969,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -36128,7 +36128,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -36160,7 +36160,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -36392,9 +36392,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -36456,7 +36456,7 @@ Unlocks the node's `targetAspectRatio`.
 
 In FigJam a stickable is any node that sticks to other nodes when put on top of them. If the node the stickable is `stuckTo` moves, the stickable moves along with it.
 
-### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 If this node is stuck to another node this property returns that node or null.
 
@@ -36545,7 +36545,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -36675,7 +36675,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -36733,7 +36733,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -36813,7 +36813,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -36829,7 +36829,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -36845,7 +36845,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -36861,7 +36861,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -36869,7 +36869,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -37046,7 +37046,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -37078,7 +37078,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -37340,9 +37340,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -37451,7 +37451,7 @@ The type of this node, represented by the string literal "STICKY"
 
 * * *
 
-### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#text-sublayer-node) \[readonly\]
+### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#textsublayernode) \[readonly\]
 
 Text sublayer of the StickyNode
 
@@ -37537,7 +37537,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -37667,7 +37667,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -37799,7 +37799,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -37879,7 +37879,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -37895,7 +37895,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -37911,7 +37911,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -37927,7 +37927,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -37935,7 +37935,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -37961,9 +37961,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -38021,7 +38021,7 @@ The type of this node, represented by the string literal "TABLE\_CELL"
 
 * * *
 
-### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#text-sublayer-node) \[readonly\]
+### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#textsublayernode) \[readonly\]
 
 Text sublayer of the TableCellNode
 
@@ -38049,7 +38049,7 @@ Returns a string representation of the node. For debugging purposes only, do not
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -38288,7 +38288,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -38418,7 +38418,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -38550,7 +38550,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -38630,7 +38630,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -38646,7 +38646,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -38662,7 +38662,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -38678,7 +38678,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -38686,7 +38686,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -38712,9 +38712,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -39306,7 +39306,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -39436,7 +39436,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -39494,7 +39494,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -39574,7 +39574,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -39590,7 +39590,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -39606,7 +39606,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -39622,7 +39622,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -39630,7 +39630,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -39789,7 +39789,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -39821,7 +39821,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -40083,9 +40083,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -40242,7 +40242,7 @@ Whether updating the characters in the text node should update the name of the n
 
 ## Path-related properties​
 
-### vectorPaths: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### vectorPaths: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 The vector paths of the text path node.
 
@@ -40514,7 +40514,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -40644,7 +40644,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -40702,7 +40702,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -40782,7 +40782,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -40798,7 +40798,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -40814,7 +40814,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -40830,7 +40830,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -40838,7 +40838,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -40997,7 +40997,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -41029,7 +41029,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -41291,9 +41291,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -41433,7 +41433,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -41563,7 +41563,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -41605,7 +41605,7 @@ This is a private API only available to [Figma partners](https://www.figma.com/p
 
 ## Children-related properties​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 The list of children, sorted back-to-front. That is, the first child in the array is the bottommost layer on the screen, and the last child in the array is the topmost layer.
 
@@ -41615,7 +41615,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child to the end of the [`children`](/docs/plugins/api/properties/nodes-children/) array. That is, visually on top of all other children.
 
@@ -41625,7 +41625,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 Adds a new child at the specified index in the [`children`](/docs/plugins/api/properties/nodes-children/) array.
 
@@ -41635,7 +41635,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns all nodes for which `callback` returns true.
 
@@ -41645,7 +41645,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches the immediate children of this node (i.e. not including the children's children). Returns the first node for which `callback` returns true.
 
@@ -41655,7 +41655,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes for which `callback` returns true.
 
@@ -41665,7 +41665,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns the first node for which `callback` returns true.
 
@@ -41675,7 +41675,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Searches this entire subtree (this node's children, its children's children, etc). Returns all nodes that satisfy all of specified criteria.
 
@@ -42011,9 +42011,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -42059,7 +42059,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -42139,7 +42139,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -42155,7 +42155,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -42171,7 +42171,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -42187,7 +42187,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -42195,7 +42195,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -42284,7 +42284,7 @@ Updates the vector network.
 
 * * *
 
-### vectorPaths: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths)
+### vectorPaths: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths)
 
 Exposes a simple, but incomplete representation of vectors as path. See [`VectorPaths`](/docs/plugins/api/VectorPath/)
 
@@ -42306,7 +42306,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -42436,7 +42436,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -42494,7 +42494,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -42574,7 +42574,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -42590,7 +42590,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -42606,7 +42606,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -42622,7 +42622,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -42630,7 +42630,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -42807,7 +42807,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -42839,7 +42839,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -43101,9 +43101,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -43228,7 +43228,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -43358,7 +43358,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -43416,7 +43416,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -43496,7 +43496,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -43512,7 +43512,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -43528,7 +43528,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -43544,7 +43544,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -43552,7 +43552,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -43711,7 +43711,7 @@ A list of numbers specifying alternating dash and gap lengths, in pixels.
 
 * * *
 
-### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### strokeGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object strokes relative to the node. StrokeGeometry is always from the center regardless of the nodes `strokeAlign`.
 
@@ -43743,7 +43743,7 @@ This method performs an action similar to using the "Outline Stroke" function in
 
 * * *
 
-### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vector-paths) \[readonly\]
+### fillGeometry: [VectorPaths](/docs/plugins/api/VectorPath/#vectorpaths) \[readonly\]
 
 An array of paths representing the object fills relative to the node.
 
@@ -43997,9 +43997,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -44031,7 +44031,7 @@ Updates the reactions on this node. See [`reactions`](/docs/plugins/api/properti
 
 In FigJam a stickable is any node that sticks to other nodes when put on top of them. If the node the stickable is `stuckTo` moves, the stickable moves along with it.
 
-### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 If this node is stuck to another node this property returns that node or null.
 
@@ -44138,7 +44138,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -44268,7 +44268,7 @@ Retrieves a list of all keys stored on this node or style using [`setSharedPlugi
 
 ## Dev resource properties​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Gets all of the dev resources on a node. This includes any inherited dev resources from components and component sets.
 
@@ -44400,7 +44400,7 @@ Whether the node is locked or not, preventing certain user interactions on the c
 
 * * *
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 An array of nodes that are "stuck" to this node. In FigJam, stamps, highlights, and some widgets can "stick" to other nodes if they are dragged on top of another node.
 
@@ -44480,7 +44480,7 @@ Sets an explicit mode for the given collection on this node
 
 ## Motion node properties​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
 
@@ -44496,7 +44496,7 @@ All Motion animation keyframes on this node, including keyframes created by anim
 
 * * *
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 The manual Motion keyframe tracks bound to this node.
 
@@ -44512,7 +44512,7 @@ The Motion timelines that contain this node. Currently this returns the containi
 
 * * *
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 Applies a Motion animation style to this node and returns the applied animation style instance id.
 
@@ -44528,7 +44528,7 @@ Removes an applied Motion animation style from this node.
 
 * * *
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 Applies or replaces the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -44536,7 +44536,7 @@ Applies or replaces the manual Motion keyframe track for a property, paint, or e
 
 * * *
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 Removes the manual Motion keyframe track for a property, paint, or effect field on this node.
 
@@ -44562,9 +44562,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 Exports the node as an encoded image.
 
@@ -44578,7 +44578,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 In FigJam a stickable is any node that sticks to other nodes when put on top of them. If the node the stickable is `stuckTo` moves, the stickable moves along with it.
 
-### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 If this node is stuck to another node this property returns that node or null.
 
@@ -44751,7 +44751,7 @@ Supported on:
 
 ## Signature​
 
-### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#applied-animation-style)\[\] \[readonly\]
+### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
 ## Remarks​
 
@@ -44890,7 +44890,7 @@ Supported on:
 
 ## Signature​
 
-### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [appendChild](/docs/plugins/api/properties/nodes-appendchild/)(child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 ## Remarks​
 
@@ -44974,7 +44974,7 @@ Supported on:
 
 ## Signature​
 
-### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), rowIndex: number, columnIndex: number): void
+### [appendChildAt](/docs/plugins/api/properties/nodes-appendchildat/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), rowIndex: number, columnIndex: number): void
 
 ## Remarks​
 
@@ -45057,7 +45057,7 @@ Supported on:
 
 ## Signature​
 
-### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animation-style-configuration)): string
+### [applyAnimationStyle](/docs/plugins/api/properties/nodes-applyanimationstyle/)(styleId: string, animationStyleData?: [AnimationStyleConfiguration](/docs/plugins/api/Motion/#animationstyleconfiguration)): string
 
 ## Parameters​
 
@@ -45149,7 +45149,7 @@ Supported on:
 
 ## Signature​
 
-### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manual-keyframe-track-input)): void
+### [applyManualKeyframeTrack](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield), track: [ManualKeyframeTrackInput](/docs/plugins/api/Motion/#manualkeyframetrackinput)): void
 
 ## Parameters​
 
@@ -45347,7 +45347,7 @@ Supported on:
 
 ## Signature​
 
-### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\> \[readonly\]
+### [children](/docs/plugins/api/properties/nodes-children/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\> \[readonly\]
 
 ## Remarks​
 
@@ -46418,9 +46418,9 @@ Supported on:
 
 ### exportAsync(settings?: [ExportSettings](/docs/plugins/api/ExportSettings/)): Promise<Uint8Array>
 
-### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#export-settings-svgstring)): Promise<string>
+### exportAsync(settings: [ExportSettingsSVGString](/docs/plugins/api/ExportSettings/#exportsettingssvgstring)): Promise<string>
 
-### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#export-settings-rest)): Promise<Object>
+### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
 ## Parameters​
 
@@ -46643,7 +46643,7 @@ Supported on:
 
 ## Signature​
 
-### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findAll](/docs/plugins/api/properties/nodes-findall/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 ## Parameters​
 
@@ -46667,7 +46667,7 @@ const colors = figma.currentPage.findAll(n => n.name === "Color")
 
 caution
 
-⚠ Large documents in Figma can have tens of thousands of nodes. Be careful using this function as it could be very slow. If you only need to search immediate children, it is much faster to call `node.children.filter(callback)` or `node.findChildren(callback)`. Please refer to our [recommendations](/docs/plugins/accessing-document/#optimizing-traversals) for how to optimize document traversals.
+⚠ Large documents in Figma can have tens of thousands of nodes. Be careful using this function as it could be very slow. If you only need to search immediate children, it is much faster to call `node.children.filter(callback)` or `node.findChildren(callback)`. Please refer to our [recommendations](/docs/plugins/accessing-document/#full-document-traversal) for how to optimize document traversals.
 
 [
 
@@ -46723,7 +46723,7 @@ Supported on:
 
 ## Signature​
 
-### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAllWithCriteria](/docs/plugins/api/properties/nodes-findallwithcriteria/)<T extends NodeType\[\]>(criteria: [FindAllCriteria](/docs/plugins/api/FindAllCriteria/)<T>): Array<{ type: T\[number\] } & [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 ## Parameters​
 
@@ -46839,7 +46839,7 @@ Supported on:
 
 ## Signature​
 
-### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findChild](/docs/plugins/api/properties/nodes-findchild/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 ## Parameters​
 
@@ -46911,7 +46911,7 @@ Supported on:
 
 ## Signature​
 
-### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\]
+### [findChildren](/docs/plugins/api/properties/nodes-findchildren/)(callback?: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\]
 
 ## Parameters​
 
@@ -46981,7 +46981,7 @@ Supported on:
 
 ## Signature​
 
-### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/nodes-findone/)(callback: (node: [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 ## Parameters​
 
@@ -47003,7 +47003,7 @@ const template = figma.currentPage.findOne(n => n.name === "Template")
 
 caution
 
-⚠ Large documents in Figma can have tens of thousands of nodes. Be careful using this function as it could be very slow. If you only need to search immediate children, it is much faster to call `node.children.find(callback)` or `node.findChild(callback)`. Please refer to our [recommendations](/docs/plugins/accessing-document/#optimizing-traversals) for how to optimize document traversals.
+⚠ Large documents in Figma can have tens of thousands of nodes. Be careful using this function as it could be very slow. If you only need to search immediate children, it is much faster to call `node.children.find(callback)` or `node.findChild(callback)`. Please refer to our [recommendations](/docs/plugins/accessing-document/#full-document-traversal) for how to optimize document traversals.
 
 [
 
@@ -47146,7 +47146,7 @@ Supported on:
 
 ## Signature​
 
-### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/#dev-resource-with-node-id)\[\]>
+### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 ## Parameters​
 
@@ -48362,7 +48362,7 @@ Supported on:
 
 ## Signature​
 
-### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scene-node)): void
+### [insertChild](/docs/plugins/api/properties/nodes-insertchild/)(index: number, child: [SceneNode](/docs/plugins/api/nodes/#scenenode)): void
 
 ## Parameters​
 
@@ -49235,7 +49235,7 @@ Supported on:
 
 ## Signature​
 
-### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manual-keyframe-tracks) \[readonly\]
+### [manualKeyframeTracks](/docs/plugins/api/properties/nodes-manualkeyframetracks/): [ManualKeyframeTracks](/docs/plugins/api/Motion/#manualkeyframetracks) \[readonly\]
 
 ## Remarks​
 
@@ -49556,7 +49556,7 @@ Supported on:
 
 ## Signature​
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 ## Remarks​
 
@@ -50114,7 +50114,7 @@ Supported on:
 
 ## Signature​
 
-### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframe-field)): void
+### [removeManualKeyframeTrack](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/)(field: [KeyframeField](/docs/plugins/api/Motion/#keyframefield)): void
 
 ## Parameters​
 
@@ -51792,7 +51792,7 @@ Supported on:
 
 ## Signature​
 
-### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scene-node)\[\] \[readonly\]
+### [stuckNodes](/docs/plugins/api/properties/nodes-stucknodes/): [SceneNode](/docs/plugins/api/nodes/#scenenode)\[\] \[readonly\]
 
 ## Remarks​
 
@@ -51841,7 +51841,7 @@ Supported on:
 
 ## Signature​
 
-### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [stuckTo](/docs/plugins/api/properties/nodes-stuckto/): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 ## Remarks​
 
@@ -52743,13 +52743,13 @@ Learn more about measurements in the [Help Center](https://help.figma.com/hc/en-
 
 * * *
 
-### getMeasurementsForNode(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [Measurement](/docs/plugins/api/Measurement/)\[\]
+### getMeasurementsForNode(node: [SceneNode](/docs/plugins/api/nodes/#scenenode)): [Measurement](/docs/plugins/api/Measurement/)\[\]
 
 Get all measurements pointing to a node in the current page. This includes all measurements whose start _or_ end node is the node passed in.
 
 * * *
 
-### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scene-node); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
+### addMeasurement(start: { node: [SceneNode](/docs/plugins/api/nodes/#scenenode); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, end: { node: [SceneNode](/docs/plugins/api/nodes/#scenenode); side: [MeasurementSide](/docs/plugins/api/MeasurementSide/) }, options?: { offset?: [MeasurementOffset](/docs/plugins/api/MeasurementOffset/); freeText?: string }): [Measurement](/docs/plugins/api/Measurement/)
 
 Adds a measurement between two nodes in the current page.
 
@@ -52844,7 +52844,7 @@ The Motion API is available in Beta. This API is subject to change.
 
 These types describe Motion animation styles, keyframes, timelines, and easing values used by `figma.motion` and Motion node properties.
 
-## Available animation style​
+## AvailableAnimationStyle​
 
 `AvailableAnimationStyle` is returned by `figma.motion.figmaAnimationStyles()`. Its `props` values are type/default descriptions for each configurable property.
 
@@ -52852,13 +52852,13 @@ These types describe Motion animation styles, keyframes, timelines, and easing v
 interface AvailableAnimationStyle {  readonly styleId: string  readonly name: string  readonly description?: string  readonly props?: { readonly [key: string]: AvailableAnimationStylePropValue }}
 ```
 
-## Available animation style prop value​
+## AvailableAnimationStylePropValue​
 
 ```
 type AvailableAnimationStylePropValue = string
 ```
 
-## Applied animation style​
+## AppliedAnimationStyle​
 
 `AppliedAnimationStyle` is returned by `node.animationStyles`. Its `duration` and `timelineOffset` values are expressed in seconds. Its `props` values are the configured property values for that node.
 
@@ -52866,13 +52866,13 @@ type AvailableAnimationStylePropValue = string
 interface AppliedAnimationStyle {  readonly id: string  readonly styleId: string  readonly name: string  readonly duration?: number  readonly timelineOffset?: number  readonly props?: { readonly [key: string]: AnimationStylePropValue }}
 ```
 
-## Animation style prop value​
+## AnimationStylePropValue​
 
 ```
 type AnimationStylePropValue =  string | number | boolean | MotionEasing | VariableAlias
 ```
 
-## Animation style configuration​
+## AnimationStyleConfiguration​
 
 `duration` and `timelineOffset` values are expressed in seconds.
 
@@ -52880,7 +52880,7 @@ type AnimationStylePropValue =  string | number | boolean | MotionEasing | Varia
 interface AnimationStyleConfiguration {  readonly duration?: number  readonly timelineOffset?: number  readonly props?: { readonly [key: string]: AnimationStylePropValue }}
 ```
 
-## Motion easing​
+## MotionEasing​
 
 Timeline values are expressed in seconds. `MotionEasing` uses the same easing names as prototyping transitions, with the additional `"HOLD"` value for keyframes that hold their current value until the next keyframe. Custom spring easing uses a normalized `bounce` value from 0 to 1; use `figma.motion.physicalSpringToNormalized()` to convert physical spring parameters.
 
@@ -52888,7 +52888,7 @@ Timeline values are expressed in seconds. `MotionEasing` uses the same easing na
 interface MotionEasing {  readonly type:    | 'EASE_IN'    | 'EASE_OUT'    | 'EASE_IN_AND_OUT'    | 'LINEAR'    | 'EASE_IN_BACK'    | 'EASE_OUT_BACK'    | 'EASE_IN_AND_OUT_BACK'    | 'CUSTOM_CUBIC_BEZIER'    | 'GENTLE'    | 'QUICK'    | 'BOUNCY'    | 'SLOW'    | 'CUSTOM_SPRING'    | 'HOLD'  readonly easingFunctionCubicBezier?: EasingFunctionBezier  readonly easingFunctionSpring?: NormalizedSpring}
 ```
 
-## Normalized spring​
+## NormalizedSpring​
 
 `bounce` is a normalized value from 0 to 1.
 
@@ -52896,7 +52896,7 @@ interface MotionEasing {  readonly type:    | 'EASE_IN'    | 'EASE_OUT'    | 'EA
 interface NormalizedSpring {  readonly bounce: number}
 ```
 
-## Physical spring​
+## PhysicalSpring​
 
 `PhysicalSpring` is passed to `figma.motion.physicalSpringToNormalized()` to convert physical spring parameters into Motion's normalized `bounce` value from 0 to 1.
 
@@ -52904,13 +52904,13 @@ interface NormalizedSpring {  readonly bounce: number}
 interface PhysicalSpring {  readonly mass: number  readonly stiffness: number  readonly damping: number}
 ```
 
-## Keyframe value​
+## KeyframeValue​
 
 ```
 type KeyframeValue =  | { readonly type: 'FLOAT'; readonly value: number }  | { readonly type: 'COLOR'; readonly value: RGBA }  | { readonly type: 'TEXT_DATA'; readonly value: string }  | { readonly type: 'VECTOR'; readonly value: Vector }  | { readonly type: 'BOOL'; readonly value: boolean }  | { readonly type: 'CIRCLE'; readonly value: { readonly x: number; readonly y: number; readonly radius: number } }  | { readonly type: 'LINE'; readonly value: { readonly x: number; readonly y: number; readonly x2: number; readonly y2: number } }  | {      readonly type: 'CIRCLE_POINT'      readonly value: { readonly x: number; readonly y: number; readonly radius: number; readonly angle: number }    }  | { readonly type: 'COLOR_POINT'; readonly value: { readonly x: number; readonly y: number; readonly color: RGBA } }
 ```
 
-## Manual keyframe input​
+## ManualKeyframeInput​
 
 `timelinePosition` is expressed in seconds.
 
@@ -52918,19 +52918,19 @@ type KeyframeValue =  | { readonly type: 'FLOAT'; readonly value: number }  | { 
 interface ManualKeyframeInput {  readonly id?: string  readonly timelinePosition: number  readonly easing?: MotionEasing | VariableAlias  readonly value: KeyframeValue}
 ```
 
-## Manual keyframe track input​
+## ManualKeyframeTrackInput​
 
 ```
 interface ManualKeyframeTrackInput {  readonly id?: string  readonly baseValue?: KeyframeValue  readonly keyframes: ReadonlyArray<ManualKeyframeInput>}
 ```
 
-## Manual keyframe​
+## ManualKeyframe​
 
 ```
 interface ManualKeyframe extends ManualKeyframeInput {  readonly id: string  readonly easing: MotionEasing | VariableAlias}
 ```
 
-## Manual keyframe binding​
+## ManualKeyframeBinding​
 
 `ManualKeyframeBinding` is returned by `node.manualKeyframeTracks`. It includes the current base value for the field, plus the sorted manual keyframes applied to that field.
 
@@ -52938,73 +52938,73 @@ interface ManualKeyframe extends ManualKeyframeInput {  readonly id: string  rea
 interface ManualKeyframeBinding {  readonly id: string  readonly baseValue: KeyframeValue  readonly keyframes: ReadonlyArray<ManualKeyframe>}
 ```
 
-## Manual keyframe track​
+## ManualKeyframeTrack​
 
 ```
 interface ManualKeyframeTrack {  readonly id: string  readonly keyframeOperation: 'SET' | 'OFFSET' | 'SCALE'  readonly keyframes: ReadonlyArray<ManualKeyframe>}
 ```
 
-## Keyframe binding​
+## KeyframeBinding​
 
 ```
 interface KeyframeBinding {  readonly baseValue: KeyframeValue  readonly timelineDuration: number  readonly tracks: ReadonlyArray<ManualKeyframeTrack>}
 ```
 
-## Keyframe property field name​
+## KeyframePropertyFieldName​
 
 ```
 type KeyframePropertyFieldName =  | 'CORNER_RADIUS'  | 'STROKE_WEIGHT'  | 'STACK_SPACING'  | 'STACK_PADDING_LEFT'  | 'STACK_PADDING_TOP'  | 'STACK_PADDING_RIGHT'  | 'STACK_PADDING_BOTTOM'  | 'WIDTH'  | 'HEIGHT'  | 'RECTANGLE_TOP_LEFT_CORNER_RADIUS'  | 'RECTANGLE_TOP_RIGHT_CORNER_RADIUS'  | 'RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS'  | 'RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS'  | 'BORDER_TOP_WEIGHT'  | 'BORDER_BOTTOM_WEIGHT'  | 'BORDER_LEFT_WEIGHT'  | 'BORDER_RIGHT_WEIGHT'  | 'STACK_COUNTER_SPACING'  | 'OPACITY'  | 'GRID_ROW_GAP'  | 'GRID_COLUMN_GAP'  | 'TRANSLATION_X'  | 'TRANSLATION_Y'  | 'TRANSLATION_XY'  | 'ROTATION'  | 'SCALE_X'  | 'SCALE_Y'  | 'SCALE_XY'  | 'PATH_TRIM_START'  | 'PATH_TRIM_END'
 ```
 
-## Effect keyframe field name​
+## EffectKeyframeFieldName​
 
 ```
 type EffectKeyframeFieldName =  | 'OFFSET_X'  | 'OFFSET_Y'  | 'RADIUS'  | 'SPREAD'  | 'COLOR'  | 'REFRACTION_RADIUS'  | 'SPECULAR_ANGLE'  | 'SPECULAR_INTENSITY'  | 'CHROMATIC_ABERRATION'  | 'SPLAY'  | 'REFRACTION_INTENSITY'  | 'START_RADIUS'  | 'NOISE_SIZE_X'  | 'NOISE_SIZE_Y'  | 'DENSITY'  | 'EFFECT_OPACITY'  | 'SECONDARY_COLOR'
 ```
 
-## Keyframe field​
+## KeyframeField​
 
 ```
 type KeyframeField =  | { readonly type: 'PROPERTY'; readonly name: KeyframePropertyFieldName }  | {      readonly type: 'INDEXED_ITEM'      readonly collection: 'fills' | 'strokes'      readonly index: number    }  | {      readonly type: 'INDEXED_ITEM'      readonly collection: 'fills' | 'strokes'      readonly index: number      readonly propertyId: string    }  | {      readonly type: 'INDEXED_ITEM'      readonly collection: 'effects'      readonly index: number      readonly field: EffectKeyframeFieldName    }  | {      readonly type: 'INDEXED_ITEM'      readonly collection: 'effects'      readonly index: number      readonly propertyId: string    }
 ```
 
-## Component prop keyframe tracks​
+## ComponentPropKeyframeTracks​
 
 ```
 type ComponentPropKeyframeTracks = Partial<Record<string, ManualKeyframeBinding>>
 ```
 
-## Component prop keyframe bindings​
+## ComponentPropKeyframeBindings​
 
 ```
 type ComponentPropKeyframeBindings = Partial<Record<string, KeyframeBinding>>
 ```
 
-## Paint manual keyframe track​
+## PaintManualKeyframeTrack​
 
 ```
 type PaintManualKeyframeTrack =  | ManualKeyframeBinding  | { readonly properties: ComponentPropKeyframeTracks }
 ```
 
-## Paint keyframe binding​
+## PaintKeyframeBinding​
 
 ```
 type PaintKeyframeBinding =  | KeyframeBinding  | { readonly properties: ComponentPropKeyframeBindings }
 ```
 
-## Effect manual keyframe tracks​
+## EffectManualKeyframeTracks​
 
 ```
 type EffectManualKeyframeTracks = Partial<  Record<EffectKeyframeFieldName, ManualKeyframeBinding>> & {  readonly properties?: ComponentPropKeyframeTracks}
 ```
 
-## Effect keyframe bindings​
+## EffectKeyframeBindings​
 
 ```
 type EffectKeyframeBindings = Partial<  Record<EffectKeyframeFieldName, KeyframeBinding>> & {  readonly properties?: ComponentPropKeyframeBindings}
 ```
 
-## Manual keyframe tracks​
+## ManualKeyframeTracks​
 
 ```
 type ManualKeyframeTracks = Partial<  Record<KeyframePropertyFieldName, ManualKeyframeBinding>> & {  readonly fills?: Partial<Record<number, PaintManualKeyframeTrack>>  readonly strokes?: Partial<Record<number, PaintManualKeyframeTrack>>  readonly effects?: Partial<Record<number, EffectManualKeyframeTracks>>}
@@ -53038,31 +53038,31 @@ NodeChange
 
 ](/docs/plugins/api/NodeChange/)
 
-*   Available animation style
-*   Available animation style prop value
-*   Applied animation style
-*   Animation style prop value
-*   Animation style configuration
-*   Motion easing
-*   Normalized spring
-*   Physical spring
-*   Keyframe value
-*   Manual keyframe input
-*   Manual keyframe track input
-*   Manual keyframe
-*   Manual keyframe binding
-*   Manual keyframe track
-*   Keyframe binding
-*   Keyframe property field name
-*   Effect keyframe field name
-*   Keyframe field
-*   Component prop keyframe tracks
-*   Component prop keyframe bindings
-*   Paint manual keyframe track
-*   Paint keyframe binding
-*   Effect manual keyframe tracks
-*   Effect keyframe bindings
-*   Manual keyframe tracks
+*   AvailableAnimationStyle
+*   AvailableAnimationStylePropValue
+*   AppliedAnimationStyle
+*   AnimationStylePropValue
+*   AnimationStyleConfiguration
+*   MotionEasing
+*   NormalizedSpring
+*   PhysicalSpring
+*   KeyframeValue
+*   ManualKeyframeInput
+*   ManualKeyframeTrackInput
+*   ManualKeyframe
+*   ManualKeyframeBinding
+*   ManualKeyframeTrack
+*   KeyframeBinding
+*   KeyframePropertyFieldName
+*   EffectKeyframeFieldName
+*   KeyframeField
+*   ComponentPropKeyframeTracks
+*   ComponentPropKeyframeBindings
+*   PaintManualKeyframeTrack
+*   PaintKeyframeBinding
+*   EffectManualKeyframeTracks
+*   EffectKeyframeBindings
+*   ManualKeyframeTracks
 *   Animations
 *   Timeline
 
@@ -53210,7 +53210,7 @@ The positioning of the gradient within the layer.
 
 * * *
 
-### gradientStops: ReadonlyArray<[ColorStop](/docs/plugins/api/Paint/#color-stop)\> \[readonly\]
+### gradientStops: ReadonlyArray<[ColorStop](/docs/plugins/api/Paint/#colorstop)\> \[readonly\]
 
 Array of colors and their position within the gradient.
 
@@ -53256,7 +53256,7 @@ Applicable only for `scaleMode == "TILE" | "FILL" | "FIT"` (automatic for `scale
 
 * * *
 
-### filters?: [ImageFilters](/docs/plugins/api/Paint/#image-filters) \[readonly\]
+### filters?: [ImageFilters](/docs/plugins/api/Paint/#imagefilters) \[readonly\]
 
 The values for the image filter slides, equivalent to those in the paint picker. All values default to 0.0 and have range -1.0 to +1.0.
 
@@ -53330,7 +53330,7 @@ Applicable only for `scaleMode == "TILE" | "FILL" | "FIT"` (automatic for `scale
 
 * * *
 
-### filters?: [ImageFilters](/docs/plugins/api/Paint/#image-filters) \[readonly\]
+### filters?: [ImageFilters](/docs/plugins/api/Paint/#imagefilters) \[readonly\]
 
 The values for the video filter slides, equivalent to those in the paint picker. All values default to 0.0 and have range -1.0 to +1.0.
 
@@ -53392,7 +53392,7 @@ The id of the shader, as returned by [`figma.listAvailableShaders`](/docs/plugin
 
 * * *
 
-### properties?: { \[defId: string\]: [ShaderPropertyValue](/docs/plugins/api/Shader/#shader-property-value) } \[readonly\]
+### properties?: { \[defId: string\]: [ShaderPropertyValue](/docs/plugins/api/Shader/#shaderpropertyvalue) } \[readonly\]
 
 The read/write map of property assignments, keyed by property-definition id (the keys of [`propertyDefinitions`](/docs/plugins/api/Shader/#propertydefinitions), not property names). On reads, this is populated with the paint's current assignments, including author-defined defaults, so a plugin can discover the available ids after the shader is applied.
 
@@ -53552,7 +53552,7 @@ Returns a string representation of the node. For debugging purposes only, do not
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -55941,7 +55941,7 @@ The id of the shader, as returned by [`figma.listAvailableShaders`](/docs/plugin
 
 * * *
 
-### properties?: { \[defId: string\]: [ShaderPropertyValue](/docs/plugins/api/Shader/#shader-property-value) } \[readonly\]
+### properties?: { \[defId: string\]: [ShaderPropertyValue](/docs/plugins/api/Shader/#shaderpropertyvalue) } \[readonly\]
 
 The read/write map of property assignments, keyed by property-definition id (the keys of [`propertyDefinitions`](/docs/plugins/api/Shader/#propertydefinitions), not property names). On reads, this is populated with the effect's current assignments, including author-defined defaults, so a plugin can discover the available ids after the shader is applied.
 
@@ -56037,7 +56037,7 @@ The string literal representing the export format. When reading [`exportSettings
 
 * * *
 
-### constraint?: [ExportSettingsConstraints](/docs/plugins/api/ExportSettings/#export-settings-constraints) \[readonly\]
+### constraint?: [ExportSettingsConstraints](/docs/plugins/api/ExportSettings/#exportsettingsconstraints) \[readonly\]
 
 Constraint on the image size when exporting.
 
@@ -56171,7 +56171,7 @@ The `VectorPath` API is the recommended way to change the geometry of a vector o
 
 ## VectorPath​
 
-### [windingRule](/docs/plugins/api/properties/VectorPath-windingrule/): [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/#winding-rule) | 'NONE' \[readonly\]
+### [windingRule](/docs/plugins/api/properties/VectorPath-windingrule/): [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/#windingrule) | 'NONE' \[readonly\]
 
 The winding rule for the path (same as in SVGs). This determines whether a given point in space is inside or outside the path.
 
@@ -56456,7 +56456,7 @@ The resolved type of the variable.
 
 * * *
 
-### [resolveForConsumer](/docs/plugins/api/properties/Variable-resolveforconsumer/)(consumer: [SceneNode](/docs/plugins/api/nodes/#scene-node)): { value: [VariableValue](/docs/plugins/api/VariableValue/); resolvedType: [VariableResolvedDataType](/docs/plugins/api/VariableResolvedDataType/) }
+### [resolveForConsumer](/docs/plugins/api/properties/Variable-resolveforconsumer/)(consumer: [SceneNode](/docs/plugins/api/nodes/#scenenode)): { value: [VariableValue](/docs/plugins/api/VariableValue/); resolvedType: [VariableResolvedDataType](/docs/plugins/api/VariableResolvedDataType/) }
 
 Retrieves the resolved value for this variable if it was bound to `consumer`.
 
@@ -56490,13 +56490,13 @@ An array of scopes in the UI where this variable is shown. Setting this property
 
 * * *
 
-### codeSyntax: { \[platform in [CodeSyntaxPlatform](/docs/plugins/api/CodeSyntaxPlatform/#code-syntax-platform)\]?: string} \[readonly\]
+### codeSyntax: { \[platform in [CodeSyntaxPlatform](/docs/plugins/api/CodeSyntaxPlatform/#codesyntaxplatform)\]?: string} \[readonly\]
 
 Code syntax definitions for this variable. Supported platforms are `'WEB'`, `'ANDROID'`, and `'iOS'`.
 
 * * *
 
-### [setVariableCodeSyntax](/docs/plugins/api/properties/Variable-setvariablecodesyntax/)(platform: [CodeSyntaxPlatform](/docs/plugins/api/CodeSyntaxPlatform/#code-syntax-platform), value: string): void
+### [setVariableCodeSyntax](/docs/plugins/api/properties/Variable-setvariablecodesyntax/)(platform: [CodeSyntaxPlatform](/docs/plugins/api/CodeSyntaxPlatform/#codesyntaxplatform), value: string): void
 
 Add or modify a platform definition on [`codeSyntax`](/docs/plugins/api/Variable/#codesyntax). Acceptable platforms are `'WEB'`, `'ANDROID'`, and `'iOS'`.
 
@@ -56504,7 +56504,7 @@ Add or modify a platform definition on [`codeSyntax`](/docs/plugins/api/Variable
 
 * * *
 
-### removeVariableCodeSyntax(platform: [CodeSyntaxPlatform](/docs/plugins/api/CodeSyntaxPlatform/#code-syntax-platform)): void
+### removeVariableCodeSyntax(platform: [CodeSyntaxPlatform](/docs/plugins/api/CodeSyntaxPlatform/#codesyntaxplatform)): void
 
 Remove a platform definition from [`codeSyntax`](/docs/plugins/api/Variable/#codesyntax). Acceptable parameters are `'WEB'`, `'ANDROID'`, and `'iOS'` if previously defined.
 
@@ -57170,7 +57170,7 @@ The variables bound to a particular field.
 
 * * *
 
-### textStyleOverrides: [TextStyleOverrideType](/docs/plugins/api/TextStyleOverrides/#text-style-override-type)\[\]
+### textStyleOverrides: [TextStyleOverrideType](/docs/plugins/api/TextStyleOverrides/#textstyleoverridetype)\[\]
 
 Overrides applied over a text style.
 
@@ -57723,19 +57723,19 @@ node.vectorNetwork = {  // The vertices of the triangle  vertices: [    { x: 0, 
 
 ## VectorNetwork​
 
-### vertices: ReadonlyArray<[VectorVertex](/docs/plugins/api/VectorNetwork/#vector-vertex)\> \[readonly\]
+### vertices: ReadonlyArray<[VectorVertex](/docs/plugins/api/VectorNetwork/#vectorvertex)\> \[readonly\]
 
 Vertices are points in the graph.
 
 * * *
 
-### segments: ReadonlyArray<[VectorSegment](/docs/plugins/api/VectorNetwork/#vector-segment)\> \[readonly\]
+### segments: ReadonlyArray<[VectorSegment](/docs/plugins/api/VectorNetwork/#vectorsegment)\> \[readonly\]
 
 Segments connect vertices.
 
 * * *
 
-### regions?: ReadonlyArray<[VectorRegion](/docs/plugins/api/VectorNetwork/#vector-region)\> \[readonly\]
+### regions?: ReadonlyArray<[VectorRegion](/docs/plugins/api/VectorNetwork/#vectorregion)\> \[readonly\]
 
 Regions are defined by segments and specify that an area is to be filled. Defaults to \[\].
 
@@ -57825,7 +57825,7 @@ If the vector network does have regions, then each region must contain at least 
 
 A region also may contain an array of `fills`, or a `fillStyleId` which uses the same syntax as the corresponding fields on nodes: ([`fills`](/docs/plugins/api/properties/nodes-fills/), [`fillStyleId`](/docs/plugins/api/properties/nodes-fillstyleid/)).
 
-### windingRule: [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/#winding-rule) \[readonly\]
+### windingRule: [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/#windingrule) \[readonly\]
 
 Winding rule for this region.
 
@@ -58068,7 +58068,7 @@ The width profile of the stroke. Fixed to 'CUSTOM'.
 
 * * *
 
-### variableWidthPoints: ReadonlyArray<[VariableWidthPoint](/docs/plugins/api/VariableWidthStrokeProperties/#variable-width-point)\>
+### variableWidthPoints: ReadonlyArray<[VariableWidthPoint](/docs/plugins/api/VariableWidthStrokeProperties/#variablewidthpoint)\>
 
 An array of variable width points defining the custom width profile.
 
@@ -59430,7 +59430,7 @@ The string literal "CREATE" representing the type of document change this is. Al
 
 * * *
 
-### node: [SceneNode](/docs/plugins/api/nodes/#scene-node) | [RemovedNode](/docs/plugins/api/RemovedNode/)
+### node: [SceneNode](/docs/plugins/api/nodes/#scenenode) | [RemovedNode](/docs/plugins/api/RemovedNode/)
 
 The node that changed in the document. If the node has been removed since the event happened this will be a [`RemovedNode`](/docs/plugins/api/RemovedNode/)
 
@@ -59446,7 +59446,7 @@ The string literal "DELETE" representing the type of document change this is. Al
 
 * * *
 
-### node: [SceneNode](/docs/plugins/api/nodes/#scene-node) | [RemovedNode](/docs/plugins/api/RemovedNode/)
+### node: [SceneNode](/docs/plugins/api/nodes/#scenenode) | [RemovedNode](/docs/plugins/api/RemovedNode/)
 
 The node that changed in the document. If the node has been removed since the event happened this will be a [`RemovedNode`](/docs/plugins/api/RemovedNode/)
 
@@ -59468,7 +59468,7 @@ Array of properties that have been changed on the node.
 
 * * *
 
-### node: [SceneNode](/docs/plugins/api/nodes/#scene-node) | [RemovedNode](/docs/plugins/api/RemovedNode/)
+### node: [SceneNode](/docs/plugins/api/nodes/#scenenode) | [RemovedNode](/docs/plugins/api/RemovedNode/)
 
 The node that changed in the document. If the node has been removed since the event happened this will be a [`RemovedNode`](/docs/plugins/api/RemovedNode/)
 
@@ -59824,7 +59824,7 @@ Returns a string representation of the node. For debugging purposes only, do not
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#base-node) & [ChildrenMixin](/docs/plugins/api/node-properties/#children-mixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -60032,7 +60032,7 @@ type NodeChange =  | CreateChange  | DeleteChange  | PropertyChange
 
 ## NodeChange (common properties)​
 
-### node: [SceneNode](/docs/plugins/api/nodes/#scene-node) | [RemovedNode](/docs/plugins/api/RemovedNode/)
+### node: [SceneNode](/docs/plugins/api/nodes/#scenenode) | [RemovedNode](/docs/plugins/api/RemovedNode/)
 
 The node that changed in the document. If the node has been removed since the event happened this will be a [`RemovedNode`](/docs/plugins/api/RemovedNode/)
 
@@ -60048,7 +60048,7 @@ The string literal "CREATE" representing the type of document change this is. Al
 
 * * *
 
-### node: [SceneNode](/docs/plugins/api/nodes/#scene-node) | [RemovedNode](/docs/plugins/api/RemovedNode/)
+### node: [SceneNode](/docs/plugins/api/nodes/#scenenode) | [RemovedNode](/docs/plugins/api/RemovedNode/)
 
 The node that changed in the document. If the node has been removed since the event happened this will be a [`RemovedNode`](/docs/plugins/api/RemovedNode/)
 
@@ -60064,7 +60064,7 @@ The string literal "DELETE" representing the type of document change this is. Al
 
 * * *
 
-### node: [SceneNode](/docs/plugins/api/nodes/#scene-node) | [RemovedNode](/docs/plugins/api/RemovedNode/)
+### node: [SceneNode](/docs/plugins/api/nodes/#scenenode) | [RemovedNode](/docs/plugins/api/RemovedNode/)
 
 The node that changed in the document. If the node has been removed since the event happened this will be a [`RemovedNode`](/docs/plugins/api/RemovedNode/)
 
@@ -60086,7 +60086,7 @@ Array of properties that have been changed on the node.
 
 * * *
 
-### node: [SceneNode](/docs/plugins/api/nodes/#scene-node) | [RemovedNode](/docs/plugins/api/RemovedNode/)
+### node: [SceneNode](/docs/plugins/api/nodes/#scenenode) | [RemovedNode](/docs/plugins/api/RemovedNode/)
 
 The node that changed in the document. If the node has been removed since the event happened this will be a [`RemovedNode`](/docs/plugins/api/RemovedNode/)
 
@@ -60330,7 +60330,7 @@ Whether the shader has been imported into the file yet. When `false`, call [`fig
 
 * * *
 
-### propertyDefinitions?: { \[defId: string\]: [ShaderPropertyDefinition](/docs/plugins/api/Shader/#shader-property-definition) } \[readonly\]
+### propertyDefinitions?: { \[defId: string\]: [ShaderPropertyDefinition](/docs/plugins/api/Shader/#shaderpropertydefinition) } \[readonly\]
 
 The shader's declared properties, keyed by property-definition id. Populated for imported shaders; may be absent until the shader is imported.
 
@@ -60350,7 +60350,7 @@ The declared type of the property. This determines which shape of [`ShaderProper
 
 * * *
 
-### defaultValue?: [ShaderPropertyValue](/docs/plugins/api/Shader/#shader-property-value) \[readonly\]
+### defaultValue?: [ShaderPropertyValue](/docs/plugins/api/Shader/#shaderpropertyvalue) \[readonly\]
 
 The author-defined default value for the property, if any.
 
@@ -60690,7 +60690,7 @@ Source: https://developers.figma.com/docs/plugins/api/StyleConsumers/
 
 ## Properties​
 
-### node: [SceneNode](/docs/plugins/api/nodes/#scene-node)
+### node: [SceneNode](/docs/plugins/api/nodes/#scenenode)
 
 Node consuming style.
 
@@ -61444,7 +61444,7 @@ Supported on:
 
 ## Signature​
 
-### [findAll](/docs/plugins/api/properties/DocumentNode-findall/)(callback?: (node: [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): Array<[PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [findAll](/docs/plugins/api/properties/DocumentNode-findall/)(callback?: (node: [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): Array<[PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 ## Parameters​
 
@@ -61468,7 +61468,7 @@ await figma.loadAllPagesAsync() // call this once when the plugin runsconst colo
 
 caution
 
-⚠ Large documents in Figma can have tens of thousands of nodes. Be careful using this function as it could be very slow. Please refer to our [recommendations](/docs/plugins/accessing-document/#optimizing-traversals) for how to optimize document traversals.
+⚠ Large documents in Figma can have tens of thousands of nodes. Be careful using this function as it could be very slow. Please refer to our [recommendations](/docs/plugins/accessing-document/#full-document-traversal) for how to optimize document traversals.
 
 [
 
@@ -61513,7 +61513,7 @@ Supported on:
 
 ## Signature​
 
-### [findOne](/docs/plugins/api/properties/DocumentNode-findone/)(callback: (node: [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scene-node)) => boolean): [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [findOne](/docs/plugins/api/properties/DocumentNode-findone/)(callback: (node: [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scenenode)) => boolean): [PageNode](/docs/plugins/api/PageNode/) | [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 ## Parameters​
 
@@ -61535,7 +61535,7 @@ await figma.loadAllPagesAsync() // call this once when the plugin runsconst temp
 
 caution
 
-⚠ Large documents in Figma can have tens of thousands of nodes. Be careful using this function as it could be very slow. Please refer to our [recommendations](/docs/plugins/accessing-document/#optimizing-traversals) for how to optimize document traversals.
+⚠ Large documents in Figma can have tens of thousands of nodes. Be careful using this function as it could be very slow. Please refer to our [recommendations](/docs/plugins/accessing-document/#full-document-traversal) for how to optimize document traversals.
 
 [
 
@@ -61720,7 +61720,7 @@ Sends a message to the UI's `<iframe>` window.
 
 ## Signature​
 
-### [postMessage](/docs/plugins/api/properties/figma-ui-postmessage/)(pluginMessage: any, options?: [UIPostMessageOptions](/docs/plugins/api/properties/figma-ui-postmessage/#uipost-message-options)): void
+### [postMessage](/docs/plugins/api/properties/figma-ui-postmessage/)(pluginMessage: any, options?: [UIPostMessageOptions](/docs/plugins/api/properties/figma-ui-postmessage/#uipostmessageoptions)): void
 
 ## Parameters​
 
@@ -61781,7 +61781,7 @@ Register a handler for incoming messages from the UI's `<iframe>` window.
 
 ## Signature​
 
-### [onmessage](/docs/plugins/api/properties/figma-ui-onmessage/): [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#message-event-handler) | undefined
+### [onmessage](/docs/plugins/api/properties/figma-ui-onmessage/): [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler) | undefined
 
 ## Remarks​
 
@@ -61825,7 +61825,7 @@ Register a handler for incoming messages from the UI's `<iframe>` window.
 
 ## Signature​
 
-### [on](/docs/plugins/api/properties/figma-ui-on/)(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#message-event-handler)): void
+### [on](/docs/plugins/api/properties/figma-ui-on/)(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler)): void
 
 ## Remarks​
 
@@ -62005,7 +62005,7 @@ const solidPaint = figma.util.solidPaint// Set the current page background to re
 
 ## Signature​
 
-### solidPaint(color: string | [RGB](/docs/plugins/api/RGB/) | [RGBA](/docs/plugins/api/RGB/#rgba), overrides?: Partial<[SolidPaint](/docs/plugins/api/Paint/#solid-paint)\>): [SolidPaint](/docs/plugins/api/Paint/#solid-paint)
+### solidPaint(color: string | [RGB](/docs/plugins/api/RGB/) | [RGBA](/docs/plugins/api/RGB/#rgba), overrides?: Partial<[SolidPaint](/docs/plugins/api/Paint/#solidpaint)\>): [SolidPaint](/docs/plugins/api/Paint/#solidpaint)
 
 ## Parameters​
 
@@ -62149,7 +62149,7 @@ Returns the Motion animation styles available in the current document.
 
 ## Signature​
 
-### [figmaAnimationStyles](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)(): [AvailableAnimationStyle](/docs/plugins/api/Motion/#available-animation-style)\[\]
+### [figmaAnimationStyles](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)(): [AvailableAnimationStyle](/docs/plugins/api/Motion/#availableanimationstyle)\[\]
 
 ## Remarks​
 
@@ -62195,7 +62195,7 @@ Converts physical spring parameters to Motion's normalized `bounce` value from 0
 
 ## Signature​
 
-### [physicalSpringToNormalized](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)(spring: [PhysicalSpring](/docs/plugins/api/Motion/#physical-spring)): number
+### [physicalSpringToNormalized](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)(spring: [PhysicalSpring](/docs/plugins/api/Motion/#physicalspring)): number
 
 ## Parameters​
 
@@ -63557,7 +63557,7 @@ Gets the Buzz asset type for a given node.
 
 ## Signature​
 
-### getBuzzAssetTypeForNode(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [BuzzAssetType](/docs/plugins/api/BuzzAssetType/) | null
+### getBuzzAssetTypeForNode(node: [SceneNode](/docs/plugins/api/nodes/#scenenode)): [BuzzAssetType](/docs/plugins/api/BuzzAssetType/) | null
 
 ## Parameters​
 
@@ -63602,7 +63602,7 @@ Sets the Buzz asset type for a given node.
 
 ## Signature​
 
-### setBuzzAssetTypeForNode(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), assetType: [BuzzAssetType](/docs/plugins/api/BuzzAssetType/)): void
+### setBuzzAssetTypeForNode(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), assetType: [BuzzAssetType](/docs/plugins/api/BuzzAssetType/)): void
 
 ## Parameters​
 
@@ -63652,7 +63652,7 @@ Extracts all text content fields from a node for dynamic content management.
 
 ## Signature​
 
-### getTextContent(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [BuzzTextField](/docs/plugins/api/BuzzTextField/)\[\]
+### getTextContent(node: [SceneNode](/docs/plugins/api/nodes/#scenenode)): [BuzzTextField](/docs/plugins/api/BuzzTextField/)\[\]
 
 ## Parameters​
 
@@ -63697,7 +63697,7 @@ Extracts all media content fields from a node for dynamic content management.
 
 ## Signature​
 
-### getMediaContent(node: [SceneNode](/docs/plugins/api/nodes/#scene-node)): [BuzzMediaField](/docs/plugins/api/BuzzMediaField/)\[\]
+### getMediaContent(node: [SceneNode](/docs/plugins/api/nodes/#scenenode)): [BuzzMediaField](/docs/plugins/api/BuzzMediaField/)\[\]
 
 ## Parameters​
 
@@ -63742,7 +63742,7 @@ Performs intelligent resizing of a node while maintaining layout integrity and a
 
 ## Signature​
 
-### smartResize(node: [SceneNode](/docs/plugins/api/nodes/#scene-node), width: number, height: number): void
+### smartResize(node: [SceneNode](/docs/plugins/api/nodes/#scenenode), width: number, height: number): void
 
 ## Parameters​
 
@@ -64216,7 +64216,7 @@ Supported on:
 
 ## Signature​
 
-### [selection](/docs/plugins/api/properties/PageNode-selection/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scene-node)\>
+### [selection](/docs/plugins/api/properties/PageNode-selection/): ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 ## Remarks​
 
@@ -64492,7 +64492,7 @@ Supported on:
 
 ## Signature​
 
-### [focusedNode](/docs/plugins/api/properties/PageNode-focusednode/): [SceneNode](/docs/plugins/api/nodes/#scene-node) | null
+### [focusedNode](/docs/plugins/api/properties/PageNode-focusednode/): [SceneNode](/docs/plugins/api/nodes/#scenenode) | null
 
 ## Remarks​
 
@@ -65799,7 +65799,7 @@ Add or modify a platform definition on [`codeSyntax`](/docs/plugins/api/Variable
 
 ## Signature​
 
-### [setVariableCodeSyntax](/docs/plugins/api/properties/Variable-setvariablecodesyntax/)(platform: [CodeSyntaxPlatform](/docs/plugins/api/CodeSyntaxPlatform/#code-syntax-platform), value: string): void
+### [setVariableCodeSyntax](/docs/plugins/api/properties/Variable-setvariablecodesyntax/)(platform: [CodeSyntaxPlatform](/docs/plugins/api/CodeSyntaxPlatform/#codesyntaxplatform), value: string): void
 
 ## Remarks​
 
@@ -65891,7 +65891,7 @@ The winding rule for the path (same as in SVGs). This determines whether a given
 
 ## Signature​
 
-### [windingRule](/docs/plugins/api/properties/VectorPath-windingrule/): [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/#winding-rule) | 'NONE' \[readonly\]
+### [windingRule](/docs/plugins/api/properties/VectorPath-windingrule/): [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/#windingrule) | 'NONE' \[readonly\]
 
 ## Remarks​
 
@@ -65983,7 +65983,7 @@ Retrieves the resolved value for this variable if it was bound to `consumer`.
 
 ## Signature​
 
-### [resolveForConsumer](/docs/plugins/api/properties/Variable-resolveforconsumer/)(consumer: [SceneNode](/docs/plugins/api/nodes/#scene-node)): { value: [VariableValue](/docs/plugins/api/VariableValue/); resolvedType: [VariableResolvedDataType](/docs/plugins/api/VariableResolvedDataType/) }
+### [resolveForConsumer](/docs/plugins/api/properties/Variable-resolveforconsumer/)(consumer: [SceneNode](/docs/plugins/api/nodes/#scenenode)): { value: [VariableValue](/docs/plugins/api/VariableValue/); resolvedType: [VariableResolvedDataType](/docs/plugins/api/VariableResolvedDataType/) }
 
 ## Remarks​
 
