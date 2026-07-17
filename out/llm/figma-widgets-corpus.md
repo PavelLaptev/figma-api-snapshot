@@ -3042,7 +3042,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -3074,7 +3074,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 The blendMode of the component.
 
@@ -3086,7 +3086,7 @@ The opacity of the component.
 
 * * *
 
-### effect?: [Effect](/docs/widgets/api/type-Effect/#effect) | [Effect](/docs/widgets/api/type-Effect/#effect)\[\]
+### effect?: [Effect](/docs/widgets/api/type-Effect/) | [Effect](/docs/widgets/api/type-Effect/)\[\]
 
 The effect of the component.
 
@@ -3158,7 +3158,7 @@ The maxHeight of this component. Only affects AutoLayout and its children.
 
 ## `LayoutProps`​
 
-### spacing?: number | 'auto' | [LayoutGap](/docs/widgets/api/type-LayoutGap/#layoutgap)
+### spacing?: number | 'auto' | [LayoutGap](/docs/widgets/api/type-LayoutGap/)
 
 Determines distance between children of this AutoLayout frame. A single number value or 'auto' controls both horizontal and vertical gap.
 
@@ -3166,7 +3166,7 @@ Determines distance between children of this AutoLayout frame. A single number v
 
 * * *
 
-### padding?: [Padding](/docs/widgets/api/type-Padding/#padding)
+### padding?: [Padding](/docs/widgets/api/type-Padding/)
 
 Determines the padding between the border of the AutoLayout frame and its children.
 
@@ -3178,13 +3178,13 @@ Determines the auto-layout direction of this frame
 
 * * *
 
-### horizontalAlignItems?: Omit<[AlignItems](/docs/widgets/api/type-AlignItems/#alignitems), 'baseline'>
+### horizontalAlignItems?: Omit<[AlignItems](/docs/widgets/api/type-AlignItems/), 'baseline'>
 
 Determines how the children in this AutoLayout frame should be aligned in the horizontal direction.
 
 * * *
 
-### verticalAlignItems?: [AlignItems](/docs/widgets/api/type-AlignItems/#alignitems)
+### verticalAlignItems?: [AlignItems](/docs/widgets/api/type-AlignItems/)
 
 Determines how the children in this AutoLayout frame should be aligned in the vertical direction.
 
@@ -3206,7 +3206,7 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `CornerProps`​
 
-### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#cornerradius)
+### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/)
 
 The number of pixels to round the corners of the object by.
 
@@ -3220,13 +3220,13 @@ Rectangle nodes can also have different corner radii on each of the four corners
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/) | [Paint](/docs/widgets/api/type-Paint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/) | [SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -3238,7 +3238,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -3460,7 +3460,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -3492,7 +3492,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 The blendMode of the component.
 
@@ -3504,7 +3504,7 @@ The opacity of the component.
 
 * * *
 
-### effect?: [Effect](/docs/widgets/api/type-Effect/#effect) | [Effect](/docs/widgets/api/type-Effect/#effect)\[\]
+### effect?: [Effect](/docs/widgets/api/type-Effect/) | [Effect](/docs/widgets/api/type-Effect/)\[\]
 
 The effect of the component.
 
@@ -3584,7 +3584,7 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `CornerProps`​
 
-### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#cornerradius)
+### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/)
 
 The number of pixels to round the corners of the object by.
 
@@ -3598,13 +3598,13 @@ Rectangle nodes can also have different corner radii on each of the four corners
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/) | [Paint](/docs/widgets/api/type-Paint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/) | [SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -3616,7 +3616,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -3785,13 +3785,13 @@ Overrides the case of the raw characters in the text node.
 
 * * *
 
-### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#fontweight)
+### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/)
 
 The font weight eg. 400, 500 or 'medium', 'bold'.
 
 * * *
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/) | [Paint](/docs/widgets/api/type-Paint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill in the text.
 
@@ -3833,7 +3833,7 @@ Whether the text should truncate if it overflows the size of the node. Set to a 
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/) | [SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -3845,7 +3845,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -3931,7 +3931,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -3963,7 +3963,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 The blendMode of the component.
 
@@ -3975,7 +3975,7 @@ The opacity of the component.
 
 * * *
 
-### effect?: [Effect](/docs/widgets/api/type-Effect/#effect) | [Effect](/docs/widgets/api/type-Effect/#effect)\[\]
+### effect?: [Effect](/docs/widgets/api/type-Effect/) | [Effect](/docs/widgets/api/type-Effect/)\[\]
 
 The effect of the component.
 
@@ -4206,7 +4206,7 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `CornerProps`​
 
-### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#cornerradius)
+### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/)
 
 The number of pixels to round the corners of the object by.
 
@@ -4220,13 +4220,13 @@ Rectangle nodes can also have different corner radii on each of the four corners
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/) | [Paint](/docs/widgets/api/type-Paint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/) | [SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -4238,7 +4238,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -4284,7 +4284,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -4316,7 +4316,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 The blendMode of the component.
 
@@ -4328,7 +4328,7 @@ The opacity of the component.
 
 * * *
 
-### effect?: [Effect](/docs/widgets/api/type-Effect/#effect) | [Effect](/docs/widgets/api/type-Effect/#effect)\[\]
+### effect?: [Effect](/docs/widgets/api/type-Effect/) | [Effect](/docs/widgets/api/type-Effect/)\[\]
 
 The effect of the component.
 
@@ -4455,7 +4455,7 @@ Usage example
 <Image  // Pass a data uri directly as the image  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAECSURBVHgBpY87TwJBFIXPnVkhbqQQE7UQNWhrsdpLI40FsdSYGGNvbWFhZ2Jj+AWER0fFD6CAhhYCod8GGmCLJRAI2Rl22LDh1RBOc1/fzb0H2EK0WPSfzj+lxG3wMIpAOKpaZfpPpddgKxG510BllSsw6MGAEAYl0zWVMn+L8boEzOXD0oRwrI1vZF9ESRetWO94XMjEDwxb0xttTF6txyNbzbU5mHmWhhtiQ3aGSkQmTH129YJLunJjdQned9DshkbF8d7o4cRiOSB0475ld+JUnTM+/Pb1d0p8ck2eKXN49/OOFfkGOXfCLnjpdamNDfLhgfFdIyE+GOg3AJHHrpoC5YtKfAfixH0AAAAASUVORK5CYII="  width={100}  height={100}/>
 ```
 
-### src: string | [ImagePaint](/docs/widgets/api/type-ImagePaint/#imagepaint)
+### src: string | [ImagePaint](/docs/widgets/api/type-ImagePaint/)
 
 A string representing Image URL/DataURI or an ImagePaint.
 
@@ -4509,7 +4509,7 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `CornerProps`​
 
-### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/#cornerradius)
+### cornerRadius?: [CornerRadius](/docs/widgets/api/type-CornerRadius/)
 
 The number of pixels to round the corners of the object by.
 
@@ -4523,13 +4523,13 @@ Rectangle nodes can also have different corner radii on each of the four corners
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/) | [Paint](/docs/widgets/api/type-Paint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/) | [SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -4541,7 +4541,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -4587,7 +4587,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -4619,7 +4619,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 The blendMode of the component.
 
@@ -4631,7 +4631,7 @@ The opacity of the component.
 
 * * *
 
-### effect?: [Effect](/docs/widgets/api/type-Effect/#effect) | [Effect](/docs/widgets/api/type-Effect/#effect)\[\]
+### effect?: [Effect](/docs/widgets/api/type-Effect/) | [Effect](/docs/widgets/api/type-Effect/)\[\]
 
 The effect of the component.
 
@@ -4747,7 +4747,7 @@ Source: https://developers.figma.com/docs/widgets/api/component-Ellipse/
 
 `Ellipse` is useful for creating ellipses and circles.
 
-### arcData?: [ArcData](/docs/widgets/api/type-ArcData/#arcdata)
+### arcData?: [ArcData](/docs/widgets/api/type-ArcData/)
 
 The "arc" properties of the Ellipse.
 
@@ -4781,7 +4781,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -4813,7 +4813,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 The blendMode of the component.
 
@@ -4825,7 +4825,7 @@ The opacity of the component.
 
 * * *
 
-### effect?: [Effect](/docs/widgets/api/type-Effect/#effect) | [Effect](/docs/widgets/api/type-Effect/#effect)\[\]
+### effect?: [Effect](/docs/widgets/api/type-Effect/) | [Effect](/docs/widgets/api/type-Effect/)\[\]
 
 The effect of the component.
 
@@ -4897,13 +4897,13 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/) | [Paint](/docs/widgets/api/type-Paint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/) | [SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -4915,7 +4915,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -5087,13 +5087,13 @@ The rotation is with respect to the top-left of the object. Therefore, it is ind
 
 ## `GeometryProps`​
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/) | [Paint](/docs/widgets/api/type-Paint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/) | [SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -5105,7 +5105,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -5151,7 +5151,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -5183,7 +5183,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 The blendMode of the component.
 
@@ -5195,7 +5195,7 @@ The opacity of the component.
 
 * * *
 
-### effect?: [Effect](/docs/widgets/api/type-Effect/#effect) | [Effect](/docs/widgets/api/type-Effect/#effect)\[\]
+### effect?: [Effect](/docs/widgets/api/type-Effect/) | [Effect](/docs/widgets/api/type-Effect/)\[\]
 
 The effect of the component.
 
@@ -5262,13 +5262,13 @@ The length of the line.
 
 * * *
 
-### strokeCap?: [StrokeCap](/docs/widgets/api/type-StrokeCap/#strokecap)
+### strokeCap?: [StrokeCap](/docs/widgets/api/type-StrokeCap/)
 
 The decoration applied to the line endpoints.
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/) | [SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -5316,7 +5316,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -5348,7 +5348,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 The blendMode of the component.
 
@@ -5360,7 +5360,7 @@ The opacity of the component.
 
 * * *
 
-### effect?: [Effect](/docs/widgets/api/type-Effect/#effect) | [Effect](/docs/widgets/api/type-Effect/#effect)\[\]
+### effect?: [Effect](/docs/widgets/api/type-Effect/) | [Effect](/docs/widgets/api/type-Effect/)\[\]
 
 The effect of the component.
 
@@ -5472,7 +5472,7 @@ For usage examples, see the [Text Editing](/docs/widgets/text-editing/) guide.
 
 ## InputProps​
 
-### onTextEditEnd: (event: [TextEditEvent](/docs/widgets/api/type-TextEditEvent/#texteditevent)) => void
+### onTextEditEnd: (event: [TextEditEvent](/docs/widgets/api/type-TextEditEvent/)) => void
 
 A method that is called when a user exits text edit mode (similar to [`onBlur`](https://reactjs.org/docs/events.html#onblur) in React).
 
@@ -5494,7 +5494,7 @@ Placeholder text that shows whenever `value` is `null` or an empty string.
 
 * * *
 
-### placeholderProps?: [PlaceholderProps](/docs/widgets/api/type-PlaceholderProps/#placeholderprops)
+### placeholderProps?: [PlaceholderProps](/docs/widgets/api/type-PlaceholderProps/)
 
 Props to customize the text placeholder. Use this prop if you want the placeholder to render differently compared to the editable text.
 
@@ -5502,7 +5502,7 @@ All relevant props on the Input component will automatically be are applied to b
 
 * * *
 
-### inputFrameProps?: Omit<[AutoLayoutProps](/docs/widgets/api/component-AutoLayout/#autolayoutprops), 'width'>
+### inputFrameProps?: Omit<[AutoLayoutProps](/docs/widgets/api/component-AutoLayout/), 'width'>
 
 Props to customize the Autolayout frame that parents the editable text and placeholder.
 
@@ -5580,13 +5580,13 @@ Overrides the case of the raw characters in the text node.
 
 * * *
 
-### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#fontweight)
+### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/)
 
 The font weight eg. 400, 500 or 'medium', 'bold'.
 
 * * *
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/) | [Paint](/docs/widgets/api/type-Paint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill in the text.
 
@@ -5628,7 +5628,7 @@ Whether the text should truncate if it overflows the size of the node. Set to a 
 
 * * *
 
-### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### stroke?: HexCode | [Color](/docs/widgets/api/type-Color/) | [SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill the area of the node's stroke.
 
@@ -5640,7 +5640,7 @@ The thickness of the stroke, in pixels. This value must be non-negative and can 
 
 * * *
 
-### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/#strokealign)
+### strokeAlign?: [StrokeAlign](/docs/widgets/api/type-StrokeAlign/)
 
 The alignment of the stroke with respect to the boundaries of the node.
 
@@ -5688,7 +5688,7 @@ The key of the component.
 
 * * *
 
-### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/#hoverstyle)
+### hoverStyle?: [HoverStyle](/docs/widgets/api/type-HoverStyle/)
 
 The style to be applied when the mouse is hovering over the component.
 
@@ -5720,7 +5720,7 @@ Take this node out of the auto-layout flow, while still nesting it inside the au
 
 ### `BlendProps`​
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 The blendMode of the component.
 
@@ -5732,7 +5732,7 @@ The opacity of the component.
 
 * * *
 
-### effect?: [Effect](/docs/widgets/api/type-Effect/#effect) | [Effect](/docs/widgets/api/type-Effect/#effect)\[\]
+### effect?: [Effect](/docs/widgets/api/type-Effect/) | [Effect](/docs/widgets/api/type-Effect/)\[\]
 
 The effect of the component.
 
@@ -6015,13 +6015,13 @@ Overrides the case of the raw characters in the text node.
 
 * * *
 
-### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#fontweight)
+### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/)
 
 The font weight eg. 400, 500 or 'medium', 'bold'.
 
 * * *
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/) | [Paint](/docs/widgets/api/type-Paint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill in the text.
 
@@ -7172,7 +7172,7 @@ The type of the shadow.
 
 * * *
 
-### color: HexCode | [Color](/docs/widgets/api/type-Color/#color)
+### color: HexCode | [Color](/docs/widgets/api/type-Color/)
 
 The color of the shadow, including its opacity.
 
@@ -7190,7 +7190,7 @@ The blur radius of the shadow. Must be >= 0. A lower radius creates a sharper sh
 
 * * *
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 Determines how the color of this shadow blends with the colors underneath it.
 
@@ -7234,7 +7234,7 @@ The type of the shadow.
 
 * * *
 
-### color: HexCode | [Color](/docs/widgets/api/type-Color/#color)
+### color: HexCode | [Color](/docs/widgets/api/type-Color/)
 
 The color of the shadow, including its opacity.
 
@@ -7252,7 +7252,7 @@ The blur radius of the shadow. Must be >= 0. A lower radius creates a sharper sh
 
 * * *
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 Determines how the color of this shadow blends with the colors underneath it.
 
@@ -7578,13 +7578,13 @@ type Paint = SolidPaint | GradientPaint | ImagePaint
 interface PaintProps {  type: PaintType  blendMode?: BlendMode  visible?: boolean  opacity?: number}type PaintType =  | 'image'  | 'solid'  | 'gradient-linear'  | 'gradient-radial'  | 'gradient-angular'  | 'gradient-diamond'
 ```
 
-### type: [PaintType](/docs/widgets/api/type-Paint/#painttype)
+### type: [PaintType](/docs/widgets/api/type-Paint/)
 
 One of: 'image' | 'solid' | 'gradient-linear' | 'gradient-radial' | 'gradient-angular' | 'gradient-diamond'.
 
 * * *
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 Determines how the color of this paint blends with the colors underneath it. Defaults to "NORMAL".
 
@@ -7614,7 +7614,7 @@ The type of the solid paint.
 
 * * *
 
-### color: [Color](/docs/widgets/api/type-Color/#color) | HexCode
+### color: [Color](/docs/widgets/api/type-Color/) | HexCode
 
 The solid color of the paint.
 
@@ -7650,7 +7650,7 @@ How the image is positioned and scaled within the layer.
 
 * * *
 
-### imageTransform?: [Transform](/docs/widgets/api/type-Transform/#transform)
+### imageTransform?: [Transform](/docs/widgets/api/type-Transform/)
 
 Applicable only for `scaleMode == "crop"`. Determines how the image is positioned (thus, cropped) within the layer.
 
@@ -7779,7 +7779,7 @@ The type of the solid paint.
 
 * * *
 
-### color: [Color](/docs/widgets/api/type-Color/#color) | HexCode
+### color: [Color](/docs/widgets/api/type-Color/) | HexCode
 
 The solid color of the paint.
 
@@ -8048,7 +8048,7 @@ How the image is positioned and scaled within the layer.
 
 * * *
 
-### imageTransform?: [Transform](/docs/widgets/api/type-Transform/#transform)
+### imageTransform?: [Transform](/docs/widgets/api/type-Transform/)
 
 Applicable only for `scaleMode == "crop"`. Determines how the image is positioned (thus, cropped) within the layer.
 
@@ -8133,19 +8133,19 @@ Overrides the case of the raw characters in the text node.
 
 * * *
 
-### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/#fontweight)
+### fontWeight?: [FontWeight](/docs/widgets/api/type-FontWeight/)
 
 The font weight eg. 400, 500 or 'medium', 'bold'.
 
 * * *
 
-### fill?: HexCode | [Color](/docs/widgets/api/type-Color/#color) | [Paint](/docs/widgets/api/type-Paint/#paint) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/#solidpaint) | [GradientPaint](/docs/widgets/api/type-GradientPaint/#gradientpaint))\[\]
+### fill?: HexCode | [Color](/docs/widgets/api/type-Color/) | [Paint](/docs/widgets/api/type-Paint/) | ([SolidPaint](/docs/widgets/api/type-SolidPaint/) | [GradientPaint](/docs/widgets/api/type-GradientPaint/))\[\]
 
 The paints used to fill in the text.
 
 * * *
 
-### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/#blendmode)
+### blendMode?: [BlendMode](/docs/widgets/api/type-BlendMode/)
 
 The blendMode of the component.
 
@@ -8157,7 +8157,7 @@ The opacity of the component.
 
 * * *
 
-### effect?: [Effect](/docs/widgets/api/type-Effect/#effect) | [Effect](/docs/widgets/api/type-Effect/#effect)\[\]
+### effect?: [Effect](/docs/widgets/api/type-Effect/) | [Effect](/docs/widgets/api/type-Effect/)\[\]
 
 The effect of the component.
 

@@ -254,7 +254,7 @@ If you assigned a map to the [`"ui"`](/docs/plugins/manifest/#ui) field in your 
 
 you can use this variable to access each file's contents. You can then call `figma.showUI(__uiFiles__.main)`.
 
-### [fetch](/docs/plugins/api/properties/global-fetch/)(url: string, init?: [FetchOptions](/docs/plugins/api/properties/global-fetch/#fetchoptions)): Promise<[FetchResponse](/docs/plugins/api/properties/global-fetch/#fetchresponse)\>
+### [fetch](/docs/plugins/api/properties/global-fetch/)(url: string, init?: [FetchOptions](/docs/plugins/api/properties/global-fetch/)): Promise<[FetchResponse](/docs/plugins/api/properties/global-fetch/)\>
 
 Fetch a resource from the network, and return a promise with the response.
 
@@ -331,17 +331,23 @@ In Figma, the Node is the basis for representing layers. There are many differen
 
 In the [Typings File](/docs/plugins/api/typings/), each node type is represented with an interface. The most general `BaseNode` is always one of those interfaces:
 
+## BaseNode​
+
 ```
 type BaseNode =  DocumentNode |  PageNode |  SceneNode
 ```
 
 Most often, you will work with nodes contained within a page, also referred to as "scene nodes".
 
+## SceneNode​
+
 ```
 type SceneNode =  BooleanOperationNode |  CodeBlockNode |  ComponentNode |  ComponentSetNode |  ConnectorNode |  EllipseNode |  EmbedNode |  FrameNode |  GroupNode |  HighlightNode |  InstanceNode |  InteractiveSlideElementNode |  LineNode |  LinkUnfurlNode |  MediaNode |  PolygonNode |  RectangleNode |  SectionNode |  ShapeWithTextNode |  SliceNode |  SlideGridNode |  SlideNode |  SlideRowNode |  SlotNode |  StampNode |  StarNode |  StickyNode |  TableNode |  TextNode |  TextPathNode |  TransformGroupNode |  VectorNode |  WashiTapeNode |  WidgetNode
 ```
 
 Each node has a type property that tells you the type of the node. The list of node types is declared in NodeType. **You will typically use `node.type` when examining a node.**
+
+## NodeType​
 
 ```
 type NodeType =  "BOOLEAN_OPERATION" |  "CODE_BLOCK" |  "COMPONENT" |  "COMPONENT_SET" |  "CONNECTOR" |  "DOCUMENT" |  "ELLIPSE" |  "EMBED" |  "FRAME" |  "GROUP" |  "HIGHLIGHT" |  "INSTANCE" |  "INTERACTIVE_SLIDE_ELEMENT" |  "LINE" |  "LINK_UNFURL" |  "MEDIA" |  "PAGE" |  "POLYGON" |  "RECTANGLE" |  "SECTION" |  "SHAPE_WITH_TEXT" |  "SLICE" |  "SLIDE" |  "SLIDE_GRID" |  "SLIDE_ROW" |  "SLOT" |  "STAMP" |  "STAR" |  "STICKY" |  "TABLE" |  "TABLE_CELL" |  "TEXT" |  "TEXT_PATH" |  "TRANSFORM_GROUP" |  "VECTOR" |  "WASHI_TAPE" |  "WIDGET"
@@ -364,6 +370,10 @@ Next
 BooleanOperationNode
 
 ](/docs/plugins/api/BooleanOperationNode/)
+
+*   BaseNode
+*   SceneNode
+*   NodeType
 
 ---
 
@@ -1844,7 +1854,9 @@ Supported on:
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -4522,7 +4534,7 @@ The vertical distance between paragraphs. Setting this property requires the fon
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Supported on:
 
@@ -7022,7 +7034,7 @@ The root of the entire Figma document. This node is used to access other pages. 
 
 * * *
 
-### [showUI](/docs/plugins/api/properties/figma-showui/)(html: string, options?: [ShowUIOptions](/docs/plugins/api/properties/figma-showui/#showuioptions)): void
+### [showUI](/docs/plugins/api/properties/figma-showui/)(html: string, options?: [ShowUIOptions](/docs/plugins/api/properties/figma-showui/)): void
 
 Enables you to render UI to interact with the user, or simply to access browser APIs. This function creates a modal dialog with an `<iframe>` containing the HTML markup in the `html` argument.
 
@@ -7172,7 +7184,7 @@ Closes the plugin. You should always call this function once your plugin is done
 
 * * *
 
-### [on](/docs/plugins/api/properties/figma-on/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#argfreeeventtype), callback: () => void): void
+### [on](/docs/plugins/api/properties/figma-on/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/), callback: () => void): void
 
 ### [on](/docs/plugins/api/properties/figma-on/)(type: 'run', callback: (event: [RunEvent](/docs/plugins/api/RunEvent/)) => void): void
 
@@ -7207,7 +7219,7 @@ Registers an callback that will be called when an event happens in the editor. C
 
 * * *
 
-### once(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#argfreeeventtype), callback: () => void): void
+### once(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/), callback: () => void): void
 
 ### once(type: 'run', callback: (event: [RunEvent](/docs/plugins/api/RunEvent/)) => void): void
 
@@ -7227,7 +7239,7 @@ Same as `figma.on`, but the callback will only be called once, the first time th
 
 * * *
 
-### [off](/docs/plugins/api/properties/figma-off/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#argfreeeventtype), callback: () => void): void
+### [off](/docs/plugins/api/properties/figma-off/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/), callback: () => void): void
 
 ### [off](/docs/plugins/api/properties/figma-off/)(type: 'run', callback: (event: [RunEvent](/docs/plugins/api/RunEvent/)) => void): void
 
@@ -7249,7 +7261,7 @@ Removes a callback added with `figma.on` or `figma.once`.
 
 * * *
 
-### [notify](/docs/plugins/api/properties/figma-notify/)(message: string, options?: [NotificationOptions](/docs/plugins/api/properties/figma-notify/#notificationoptions)): [NotificationHandler](/docs/plugins/api/properties/figma-notify/#notificationhandler)
+### [notify](/docs/plugins/api/properties/figma-notify/)(message: string, options?: [NotificationOptions](/docs/plugins/api/properties/figma-notify/)): [NotificationHandler](/docs/plugins/api/properties/figma-notify/)
 
 Shows a notification on the bottom of the screen.
 
@@ -7271,7 +7283,7 @@ Triggers an undo action. Reverts to the last `commitUndo()` state.
 
 * * *
 
-### [saveVersionHistoryAsync](/docs/plugins/api/properties/figma-saveversionhistoryasync/)(title: string, description?: string): Promise<[VersionHistoryResult](/docs/plugins/api/properties/figma-saveversionhistoryasync/#versionhistoryresult)\>
+### [saveVersionHistoryAsync](/docs/plugins/api/properties/figma-saveversionhistoryasync/)(title: string, description?: string): Promise<[VersionHistoryResult](/docs/plugins/api/properties/figma-saveversionhistoryasync/)\>
 
 Saves a new version of the file and adds it to the version history of the file. Returns the new version id.
 
@@ -7559,7 +7571,7 @@ This API creates a new node using the JSX API used by widgets.
 
 * * *
 
-### [combineAsVariants](/docs/plugins/api/properties/figma-combineasvariants/)(nodes: ReadonlyArray<[ComponentNode](/docs/plugins/api/ComponentNode/)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+### [combineAsVariants](/docs/plugins/api/properties/figma-combineasvariants/)(nodes: ReadonlyArray<[ComponentNode](/docs/plugins/api/ComponentNode/)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index?: number): [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 
 info
 
@@ -7571,7 +7583,7 @@ Creates a new [`ComponentSetNode`](/docs/plugins/api/ComponentSetNode/) by combi
 
 * * *
 
-### [group](/docs/plugins/api/properties/figma-group/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [GroupNode](/docs/plugins/api/GroupNode/)
+### [group](/docs/plugins/api/properties/figma-group/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index?: number): [GroupNode](/docs/plugins/api/GroupNode/)
 
 Creates new group containing all the nodes in `nodes`. There is no `createGroup` function -- use this instead. Group nodes have many quirks, like auto-resizing, that you can read about in the [`FrameNode`](/docs/plugins/api/FrameNode/) section.
 
@@ -7579,31 +7591,31 @@ Creates new group containing all the nodes in `nodes`. There is no `createGroup`
 
 * * *
 
-### union(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+### union(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
 
 Creates a new [`BooleanOperationNode`](/docs/plugins/api/BooleanOperationNode/) using the UNION operation using the contents of `nodes`. The arguments to `union` are the same as in [`figma.group`](/docs/plugins/api/properties/figma-group/).
 
 * * *
 
-### subtract(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+### subtract(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
 
 Creates a new [`BooleanOperationNode`](/docs/plugins/api/BooleanOperationNode/) using the SUBTRACT operation using the contents of `nodes`. The arguments to `union` are the same as in [`figma.subtract`](/docs/plugins/api/figma/#subtract).
 
 * * *
 
-### intersect(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+### intersect(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
 
 Creates a new [`BooleanOperationNode`](/docs/plugins/api/BooleanOperationNode/) using the INTERSECT operation using the contents of `nodes`. The arguments to `union` are the same as in [`figma.intersect`](/docs/plugins/api/figma/#intersect).
 
 * * *
 
-### exclude(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+### exclude(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index?: number): [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
 
 Creates a new [`BooleanOperationNode`](/docs/plugins/api/BooleanOperationNode/) using the EXCLUDE operation using the contents of `nodes`. The arguments to `union` are the same as in [`figma.exclude`](/docs/plugins/api/figma/#exclude).
 
 * * *
 
-### [flatten](/docs/plugins/api/properties/figma-flatten/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent?: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [VectorNode](/docs/plugins/api/VectorNode/)
+### [flatten](/docs/plugins/api/properties/figma-flatten/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent?: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index?: number): [VectorNode](/docs/plugins/api/VectorNode/)
 
 Flattens every node in nodes into a new vector network.
 
@@ -7611,7 +7623,7 @@ Flattens every node in nodes into a new vector network.
 
 * * *
 
-### [ungroup](/docs/plugins/api/properties/figma-ungroup/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)): Array<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>
+### [ungroup](/docs/plugins/api/properties/figma-ungroup/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)): Array<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 Ungroups the given `node`, moving all of `node`'s children into `node`'s parent and removing `node`. Returns an array of nodes that were children of `node`.
 
@@ -7619,7 +7631,7 @@ Ungroups the given `node`, moving all of `node`'s children into `node`'s parent 
 
 * * *
 
-### transformGroup(nodes: ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index: number, modifiers: [TransformModifier](/docs/plugins/api/TransformModifier/)\[\]): [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+### transformGroup(nodes: ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index: number, modifiers: [TransformModifier](/docs/plugins/api/TransformModifier/)\[\]): [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
 
 Creates a new [`TransformGroupNode`](/docs/plugins/api/TransformGroupNode/) containing all the nodes in `nodes`, applying the transformations specified in `modifiers` to each child node.
 
@@ -7993,7 +8005,7 @@ Materializes a shader into the current file by `id` and returns it with `importe
 
 ## Other​
 
-### listAvailableFontsAsync(): Promise<[Font](/docs/plugins/api/FontName/#font)\[\]>
+### listAvailableFontsAsync(): Promise<[Font](/docs/plugins/api/FontName/)\[\]>
 
 Returns the lists of currently available fonts. This should be the same list as the one you'd see if you manually used the font picker.
 
@@ -8260,7 +8272,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -9514,7 +9526,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -9694,7 +9708,7 @@ Destroys the UI and its containing `<iframe>`. Once this has been called, the co
 
 * * *
 
-### [postMessage](/docs/plugins/api/properties/figma-ui-postmessage/)(pluginMessage: any, options?: [UIPostMessageOptions](/docs/plugins/api/properties/figma-ui-postmessage/#uipostmessageoptions)): void
+### [postMessage](/docs/plugins/api/properties/figma-ui-postmessage/)(pluginMessage: any, options?: [UIPostMessageOptions](/docs/plugins/api/properties/figma-ui-postmessage/)): void
 
 Sends a message to the UI's `<iframe>` window.
 
@@ -9702,7 +9716,7 @@ Sends a message to the UI's `<iframe>` window.
 
 * * *
 
-### [onmessage](/docs/plugins/api/properties/figma-ui-onmessage/): [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler) | undefined
+### [onmessage](/docs/plugins/api/properties/figma-ui-onmessage/): [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/) | undefined
 
 Register a handler for incoming messages from the UI's `<iframe>` window.
 
@@ -9710,7 +9724,7 @@ Register a handler for incoming messages from the UI's `<iframe>` window.
 
 * * *
 
-### [on](/docs/plugins/api/properties/figma-ui-on/)(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler)): void
+### [on](/docs/plugins/api/properties/figma-ui-on/)(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/)): void
 
 Register a handler for incoming messages from the UI's `<iframe>` window.
 
@@ -9718,13 +9732,13 @@ Register a handler for incoming messages from the UI's `<iframe>` window.
 
 * * *
 
-### once(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler)): void
+### once(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/)): void
 
 Register a handler for incoming messages from the UI's `<iframe>` window. Same as `figma.ui.on("message")`, but only gets called the first time.
 
 * * *
 
-### off(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler)): void
+### off(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/)): void
 
 Removes a handler added via `figma.ui.on`.
 
@@ -10016,7 +10030,7 @@ Removes a callback added by [`figma.codegen.on`](/docs/plugins/api/properties/fi
 
 * * *
 
-### preferences: [CodegenPreferences](/docs/plugins/api/CodegenPreference/#codegenpreferences) \[readonly\]
+### preferences: [CodegenPreferences](/docs/plugins/api/CodegenPreference/) \[readonly\]
 
 Read the current preferences as specified by the user.
 
@@ -10278,6 +10292,8 @@ Source: https://developers.figma.com/docs/plugins/api/figma-parameters/
 
 These are methods and properties available on the `figma.parameters` global object. See [Accepting Parameters as Input](/docs/plugins/plugin-parameters/) for more details.
 
+## ParameterInputEvent​
+
 ```
 type ParameterInputEvent<T = ParameterValues> = {  query: string,  key: string,  parameters: Partial<T>,  result: SuggestionResults,}
 ```
@@ -10394,6 +10410,7 @@ textreview
 
 ](/docs/plugins/api/figma-textreview/)
 
+*   ParameterInputEvent
 *   SuggestionResults
 *   ParameterValues
 
@@ -10473,7 +10490,7 @@ warning
 
 If your manifest doesn't contain these fields, the payments API methods described below will throw errors if you try to use them.
 
-### status: [PaymentStatus](/docs/plugins/api/figma-payments/#paymentstatus) \[readonly\]
+### status: [PaymentStatus](/docs/plugins/api/figma-payments/) \[readonly\]
 
 An object describing the user’s payment status. Right now, the only attribute on this object is whether the user has paid. In the future, we might add more attributes here to provide more information.
 
@@ -10493,7 +10510,7 @@ For published resources, this always returns `PAID` for the creator.
 
 * * *
 
-### setPaymentStatusInDevelopment(status: [PaymentStatus](/docs/plugins/api/figma-payments/#paymentstatus)): void
+### setPaymentStatusInDevelopment(status: [PaymentStatus](/docs/plugins/api/figma-payments/)): void
 
 warning
 
@@ -11171,7 +11188,7 @@ Shows a notification on the bottom of the screen.
 
 ## Signature​
 
-### [notify](/docs/plugins/api/properties/figma-notify/)(message: string, options?: [NotificationOptions](/docs/plugins/api/properties/figma-notify/#notificationoptions)): [NotificationHandler](/docs/plugins/api/properties/figma-notify/#notificationhandler)
+### [notify](/docs/plugins/api/properties/figma-notify/)(message: string, options?: [NotificationOptions](/docs/plugins/api/properties/figma-notify/)): [NotificationHandler](/docs/plugins/api/properties/figma-notify/)
 
 ## Parameters​
 
@@ -11305,7 +11322,7 @@ Saves a new version of the file and adds it to the version history of the file. 
 
 ## Signature​
 
-### [saveVersionHistoryAsync](/docs/plugins/api/properties/figma-saveversionhistoryasync/)(title: string, description?: string): Promise<[VersionHistoryResult](/docs/plugins/api/properties/figma-saveversionhistoryasync/#versionhistoryresult)\>
+### [saveVersionHistoryAsync](/docs/plugins/api/properties/figma-saveversionhistoryasync/)(title: string, description?: string): Promise<[VersionHistoryResult](/docs/plugins/api/properties/figma-saveversionhistoryasync/)\>
 
 ## Parameters​
 
@@ -11424,7 +11441,7 @@ Enables you to render UI to interact with the user, or simply to access browser 
 
 ## Signature​
 
-### [showUI](/docs/plugins/api/properties/figma-showui/)(html: string, options?: [ShowUIOptions](/docs/plugins/api/properties/figma-showui/#showuioptions)): void
+### [showUI](/docs/plugins/api/properties/figma-showui/)(html: string, options?: [ShowUIOptions](/docs/plugins/api/properties/figma-showui/)): void
 
 ## Parameters​
 
@@ -11513,7 +11530,7 @@ Registers an callback that will be called when an event happens in the editor. C
 
 ## Signature​
 
-### [on](/docs/plugins/api/properties/figma-on/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#argfreeeventtype), callback: () => void): void
+### [on](/docs/plugins/api/properties/figma-on/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/), callback: () => void): void
 
 ### [on](/docs/plugins/api/properties/figma-on/)(type: 'run', callback: (event: [RunEvent](/docs/plugins/api/RunEvent/)) => void): void
 
@@ -11868,7 +11885,7 @@ Removes a callback added with `figma.on` or `figma.once`.
 
 ## Signature​
 
-### [off](/docs/plugins/api/properties/figma-off/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/#argfreeeventtype), callback: () => void): void
+### [off](/docs/plugins/api/properties/figma-off/)(type: [ArgFreeEventType](/docs/plugins/api/properties/figma-on/), callback: () => void): void
 
 ### [off](/docs/plugins/api/properties/figma-off/)(type: 'run', callback: (event: [RunEvent](/docs/plugins/api/RunEvent/)) => void): void
 
@@ -13560,7 +13577,7 @@ Creates a new [`ComponentSetNode`](/docs/plugins/api/ComponentSetNode/) by combi
 
 ## Signature​
 
-### [combineAsVariants](/docs/plugins/api/properties/figma-combineasvariants/)(nodes: ReadonlyArray<[ComponentNode](/docs/plugins/api/ComponentNode/)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+### [combineAsVariants](/docs/plugins/api/properties/figma-combineasvariants/)(nodes: ReadonlyArray<[ComponentNode](/docs/plugins/api/ComponentNode/)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index?: number): [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 
 ## Parameters​
 
@@ -13670,7 +13687,7 @@ Creates new group containing all the nodes in `nodes`. There is no `createGroup`
 
 ## Signature​
 
-### [group](/docs/plugins/api/properties/figma-group/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [GroupNode](/docs/plugins/api/GroupNode/)
+### [group](/docs/plugins/api/properties/figma-group/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index?: number): [GroupNode](/docs/plugins/api/GroupNode/)
 
 ## Parameters​
 
@@ -13784,7 +13801,7 @@ Creates a new [`TransformGroupNode`](/docs/plugins/api/TransformGroupNode/) cont
 
 ## Signature​
 
-### transformGroup(nodes: ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index: number, modifiers: [TransformModifier](/docs/plugins/api/TransformModifier/)\[\]): [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+### transformGroup(nodes: ReadonlyArray<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>, parent: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index: number, modifiers: [TransformModifier](/docs/plugins/api/TransformModifier/)\[\]): [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
 
 ## Parameters​
 
@@ -13843,7 +13860,7 @@ Flattens every node in nodes into a new vector network.
 
 ## Signature​
 
-### [flatten](/docs/plugins/api/properties/figma-flatten/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent?: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin), index?: number): [VectorNode](/docs/plugins/api/VectorNode/)
+### [flatten](/docs/plugins/api/properties/figma-flatten/)(nodes: ReadonlyArray<[BaseNode](/docs/plugins/api/nodes/#basenode)\>, parent?: [BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/), index?: number): [VectorNode](/docs/plugins/api/VectorNode/)
 
 ## Parameters​
 
@@ -13949,7 +13966,7 @@ Ungroups the given `node`, moving all of `node`'s children into `node`'s parent 
 
 ## Signature​
 
-### [ungroup](/docs/plugins/api/properties/figma-ungroup/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)): Array<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>
+### [ungroup](/docs/plugins/api/properties/figma-ungroup/)(node: [SceneNode](/docs/plugins/api/nodes/#scenenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)): Array<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>
 
 ## Parameters​
 
@@ -14397,7 +14414,7 @@ Fetch a resource from the network, and return a promise with the response.
 
 ## Signature​
 
-### [fetch](/docs/plugins/api/properties/global-fetch/)(url: string, init?: [FetchOptions](/docs/plugins/api/properties/global-fetch/#fetchoptions)): Promise<[FetchResponse](/docs/plugins/api/properties/global-fetch/#fetchresponse)\>
+### [fetch](/docs/plugins/api/properties/global-fetch/)(url: string, init?: [FetchOptions](/docs/plugins/api/properties/global-fetch/)): Promise<[FetchResponse](/docs/plugins/api/properties/global-fetch/)\>
 
 ## Parameters​
 
@@ -14517,7 +14534,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -15249,7 +15266,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -15539,7 +15558,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -15967,7 +15986,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -16112,7 +16133,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -17366,7 +17387,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -17631,7 +17654,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -18885,7 +18908,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -19005,13 +19030,13 @@ The type of this node, represented by the string literal "CONNECTOR"
 
 * * *
 
-### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#textsublayernode) \[readonly\]
+### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/) \[readonly\]
 
 Text sublayer of the ConnectorNode
 
 * * *
 
-### textBackground: [LabelSublayerNode](/docs/plugins/api/LabelSublayer/#labelsublayernode) \[readonly\]
+### textBackground: [LabelSublayerNode](/docs/plugins/api/LabelSublayer/) \[readonly\]
 
 Text sublayer of the ConnectorNode
 
@@ -19168,7 +19193,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -19596,7 +19621,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -19744,7 +19771,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -19978,7 +20005,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -20777,7 +20804,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -20906,7 +20935,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -21334,7 +21363,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -21408,7 +21439,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -22662,7 +22693,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -22834,7 +22867,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -23416,7 +23449,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -23706,7 +23741,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -24505,7 +24540,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -24617,7 +24654,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -25045,7 +25082,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -25115,7 +25154,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -25874,7 +25913,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -26001,7 +26042,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -26429,7 +26470,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -26521,7 +26564,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -26949,7 +26992,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -27199,7 +27244,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -27499,7 +27544,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -27575,7 +27622,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -28374,7 +28421,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -28497,7 +28546,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -29354,7 +29403,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -29562,7 +29613,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -29990,7 +30041,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -30331,7 +30384,7 @@ Most shape types have the same name as their tooltip but there are a few excepti
 
 * * *
 
-### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#textsublayernode) \[readonly\]
+### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/) \[readonly\]
 
 Text sublayer of the ShapeWithTextNode.
 
@@ -30504,7 +30557,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -30932,7 +30985,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -31004,7 +31059,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -31574,7 +31629,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -31646,7 +31703,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -32074,7 +32131,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -32259,7 +32318,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -33513,7 +33572,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -33613,7 +33674,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -34041,7 +34102,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -34220,7 +34283,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -35474,7 +35537,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -35645,7 +35710,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -36396,7 +36461,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -36545,7 +36612,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -37344,7 +37411,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -37451,7 +37520,7 @@ The type of this node, represented by the string literal "STICKY"
 
 * * *
 
-### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#textsublayernode) \[readonly\]
+### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/) \[readonly\]
 
 Text sublayer of the StickyNode
 
@@ -37537,7 +37606,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -37965,7 +38034,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -38021,7 +38092,7 @@ The type of this node, represented by the string literal "TABLE\_CELL"
 
 * * *
 
-### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/#textsublayernode) \[readonly\]
+### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/) \[readonly\]
 
 Text sublayer of the TableCellNode
 
@@ -38049,7 +38120,7 @@ Returns a string representation of the node. For debugging purposes only, do not
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -38288,7 +38359,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -38716,7 +38787,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -39306,7 +39379,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -40087,7 +40160,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -40514,7 +40589,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -41295,7 +41370,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -41433,7 +41510,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -42015,7 +42092,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -42306,7 +42385,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -43105,7 +43184,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -43228,7 +43309,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -44001,7 +44082,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -44138,7 +44221,7 @@ The unique identifier of a node. For example, `1:3`. The node id can be used wit
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -44566,7 +44649,9 @@ List of export settings stored on the node. For help on how to change this value
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
-Exports the node as an encoded image.
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -46372,7 +46457,7 @@ Source: https://developers.figma.com/docs/plugins/api/properties/nodes-exportasy
 
 # exportAsync
 
-Exports the node as an encoded image.
+Exports the node in the format given by `settings`. Image formats (PNG, JPG), PDF, and the video formats (MP4, GIF, WebM) return a `Uint8Array` of the encoded file; `SVG_STRING` returns a string and `JSON_REST_V1` returns an object.
 
 If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is a [`PageNode`](/docs/plugins/api/PageNode/), you must first call [`loadAsync`](/docs/plugins/api/PageNode/#loadasync) to access this function.
 
@@ -46422,13 +46507,13 @@ Supported on:
 
 ### exportAsync(settings: [ExportSettingsREST](/docs/plugins/api/ExportSettings/#exportsettingsrest)): Promise<Object>
 
+### exportAsync(settings: [ExportSettingsMP4](/docs/plugins/api/ExportSettings/#exportsettingsmp4) | [ExportSettingsGIF](/docs/plugins/api/ExportSettings/#exportsettingsgif) | [ExportSettingsWEBM](/docs/plugins/api/ExportSettings/#exportsettingswebm)): Promise<Uint8Array>
+
 ## Parameters​
 
 ### settings​
 
 When this parameter is absent, this function defaults to exporting as a PNG at 1x resolution.
-
-Note that the result is a Uint8Array, representing the bytes of the image file (encoded in the specified format).
 
 Create a hexagon, export as PNG, and place on canvas
 
@@ -46446,6 +46531,14 @@ Export a node as a JSON object
 
 ```
 (async () => {  const json = await figma.currentPage.selection[0].exportAsync({format: 'JSON_REST_V1'})  // Return a JSON object in the same format as the Figma REST API response  console.log(json.document)})()
+```
+
+Passing an [`ExportSettingsMP4`](/docs/plugins/api/ExportSettings/), [`ExportSettingsGIF`](/docs/plugins/api/ExportSettings/), or [`ExportSettingsWEBM`](/docs/plugins/api/ExportSettings/) exports a video (returned as a `Uint8Array`). The exported node must be a top-level frame (a frame placed directly on a page) whose content is animated; the entire frame is encoded across the animation's duration. Calling video export on any other node — including a nested animated frame, or an individual layer that has keyframes but is not itself a top-level frame — rejects with an error. To export the animation a layer participates in, first resolve its enclosing top-level frame with [`getTopLevelFrame`](/docs/plugins/api/node-properties/#gettoplevelframe). Video export is only available when running in Figma.
+
+Export the selected layer's top-level frame as an MP4 and a GIF
+
+```
+(async () => {  const frame = figma.currentPage.selection[0]?.getTopLevelFrame()  if (!frame) {    figma.notify('Select a frame to export')    return  }  try {    const mp4 = await frame.exportAsync({ format: 'MP4', fps: 30, quality: 'HIGH' })    const gif = await frame.exportAsync({ format: 'GIF', fps: 15, loopCount: 0 })  } catch (e) {    // exportAsync rejects if the frame has no animated content to encode    figma.notify('This frame has no animation to export')  }})()
 ```
 
 [
@@ -49556,7 +49649,7 @@ Supported on:
 
 ## Signature​
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 ## Remarks​
 
@@ -53552,7 +53645,7 @@ Returns a string representation of the node. For debugging purposes only, do not
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -55989,7 +56082,7 @@ Source: https://developers.figma.com/docs/plugins/api/ExportSettings/
 
 # ExportSettings
 
-Figma has four types of exports: images, SVGs, PDFs, and REST API JSON.
+Figma has four types of image and document export: images, SVGs, PDFs, and REST API JSON. Top-level frames with animated content can additionally be exported as video (MP4, GIF, or WebM).
 
 ```
 type ExportSettings =  | ExportSettingsImage  | ExportSettingsSVG  | ExportSettingsPDF  | ExportSettingsREST
@@ -56037,7 +56130,7 @@ The string literal representing the export format. When reading [`exportSettings
 
 * * *
 
-### constraint?: [ExportSettingsConstraints](/docs/plugins/api/ExportSettings/#exportsettingsconstraints) \[readonly\]
+### constraint?: [ExportSettingsConstraints](/docs/plugins/api/ExportSettings/) \[readonly\]
 
 Constraint on the image size when exporting.
 
@@ -56127,6 +56220,120 @@ For more information on the shape of the output of the 'JSON\_REST\_V1' format, 
 
 * * *
 
+## Video export​
+
+A top-level frame whose content is animated can be exported as video via [`exportAsync`](/docs/plugins/api/properties/nodes-exportasync/), which returns a `Uint8Array` of the encoded file. The node must be a top-level frame (a frame placed directly on a page); exporting a nested animated frame, an individual keyframed layer, or a non-animated node rejects with an error. These types are used only by `exportAsync` — they cannot be stored on the [`exportSettings`](/docs/plugins/api/node-properties/#exportsettings) property, and are only available when running in Figma.
+
+All three video formats share a single size constraint, set via the optional `constraint` property: a `"SCALE"` multiplier on the node size, or a fixed `"WIDTH"` or `"HEIGHT"` in pixels. See each format's `constraint` field below for the accepted values. Exports are capped at 3840×2160 (4K) — larger requests are scaled down to fit, preserving aspect ratio.
+
+### ExportSettingsMP4​
+
+### format: 'MP4' \[readonly\]
+
+The string literal `"MP4"` representing the export format.
+
+* * *
+
+### fps?: 12 | 24 | 30 | 60 \[readonly\]
+
+Frames per second of the exported video. Defaults to `30`.
+
+* * *
+
+### quality?: 'LOW' | 'MEDIUM' | 'HIGH' \[readonly\]
+
+Quality preset for the exported video. Higher quality produces a larger file. Defaults to `"HIGH"`.
+
+* * *
+
+### constraint?: VideoExportConstraint \[readonly\]
+
+Constraint on the exported video size.
+
+```
+type VideoExportConstraint =  | { type: "SCALE"; value: 0.5 | 0.75 | 1 | 1.5 | 2 | 3 | 4 }  | { type: "WIDTH" | "HEIGHT"; value: number }
+```
+
+Defaults to 100% of the node size: `{ type: "SCALE", value: 1 }`.
+
+*   `"SCALE"`: A multiplier on the node size. `value` must be one of the standard Export panel scales (`0.5`, `0.75`, `1`, `1.5`, `2`, `3`, `4`). A `value` of `1` means 100% of the node size.
+*   `"WIDTH"`: The exported video is scaled to a fixed pixel width of `value`.
+*   `"HEIGHT"`: The exported video is scaled to a fixed pixel height of `value`.
+
+* * *
+
+### ExportSettingsGIF​
+
+### format: 'GIF' \[readonly\]
+
+The string literal `"GIF"` representing the export format.
+
+* * *
+
+### fps?: 8 | 12 | 15 | 24 | 30 \[readonly\]
+
+Frames per second of the exported GIF. Defaults to `15`.
+
+* * *
+
+### loopCount?: number \[readonly\]
+
+Number of times the GIF loops. `0` loops forever. Must be an integer between 0 and 1000. Defaults to `0`.
+
+* * *
+
+### constraint?: VideoExportConstraint \[readonly\]
+
+Constraint on the exported GIF size.
+
+```
+type VideoExportConstraint =  | { type: "SCALE"; value: 0.5 | 0.75 | 1 | 1.5 | 2 | 3 | 4 }  | { type: "WIDTH" | "HEIGHT"; value: number }
+```
+
+Defaults to 100% of the node size: `{ type: "SCALE", value: 1 }`.
+
+*   `"SCALE"`: A multiplier on the node size. `value` must be one of the standard Export panel scales (`0.5`, `0.75`, `1`, `1.5`, `2`, `3`, `4`). A `value` of `1` means 100% of the node size.
+*   `"WIDTH"`: The exported GIF is scaled to a fixed pixel width of `value`.
+*   `"HEIGHT"`: The exported GIF is scaled to a fixed pixel height of `value`.
+
+* * *
+
+### ExportSettingsWEBM​
+
+### format: 'WEBM' \[readonly\]
+
+The string literal `"WEBM"` representing the export format.
+
+* * *
+
+### fps?: 12 | 24 | 30 | 60 \[readonly\]
+
+Frames per second of the exported video. Defaults to `30`.
+
+* * *
+
+### quality?: 'LOW' | 'MEDIUM' | 'HIGH' \[readonly\]
+
+Quality preset for the exported video. Higher quality produces a larger file. Defaults to `"HIGH"`.
+
+* * *
+
+### constraint?: VideoExportConstraint \[readonly\]
+
+Constraint on the exported video size.
+
+```
+type VideoExportConstraint =  | { type: "SCALE"; value: 0.5 | 0.75 | 1 | 1.5 | 2 | 3 | 4 }  | { type: "WIDTH" | "HEIGHT"; value: number }
+```
+
+Defaults to 100% of the node size: `{ type: "SCALE", value: 1 }`.
+
+*   `"SCALE"`: A multiplier on the node size. `value` must be one of the standard Export panel scales (`0.5`, `0.75`, `1`, `1.5`, `2`, `3`, `4`). A `value` of `1` means 100% of the node size.
+*   `"WIDTH"`: The exported video is scaled to a fixed pixel width of `value`.
+*   `"HEIGHT"`: The exported video is scaled to a fixed pixel height of `value`.
+
+* * *
+
 [
 
 Previous
@@ -56149,6 +56356,10 @@ FindAllCriteria
     *   ExportSettingsSVGString
 *   ExportSettingsPDF
 *   ExportSettingsREST
+*   Video export
+    *   ExportSettingsMP4
+    *   ExportSettingsGIF
+    *   ExportSettingsWEBM
 
 ---
 
@@ -56171,7 +56382,7 @@ The `VectorPath` API is the recommended way to change the geometry of a vector o
 
 ## VectorPath​
 
-### [windingRule](/docs/plugins/api/properties/VectorPath-windingrule/): [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/#windingrule) | 'NONE' \[readonly\]
+### [windingRule](/docs/plugins/api/properties/VectorPath-windingrule/): [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/) | 'NONE' \[readonly\]
 
 The winding rule for the path (same as in SVGs). This determines whether a given point in space is inside or outside the path.
 
@@ -57531,17 +57742,23 @@ Source: https://developers.figma.com/docs/plugins/api/Overlay/
 
 # Overlay
 
+## OverlayBackground​
+
 ```
 type OverlayBackground =  { readonly type: "NONE" } |  { readonly type: "SOLID_COLOR", readonly color: RGBA }
 ```
 
 An overlay either has no background or a single colored background (usually transparent).
 
+## OverlayPositionType​
+
 ```
 type OverlayPositionType = "CENTER" | "TOP_LEFT" | "TOP_CENTER" | "TOP_RIGHT" | "BOTTOM_LEFT" | "BOTTOM_CENTER" | "BOTTOM_RIGHT" | "MANUAL"
 ```
 
 Describes where the overlay is located with respect to the device screen. The exception is `"MANUAL"`, which is relative to the element that triggered the overlay.
+
+## OverlayBackgroundInteraction​
 
 ```
 type OverlayBackgroundInteraction = "NONE" | "CLOSE_ON_CLICK_OUTSIDE"
@@ -57560,6 +57777,10 @@ Next
 NodeChangeProperty
 
 ](/docs/plugins/api/NodeChangeProperty/)
+
+*   OverlayBackground
+*   OverlayPositionType
+*   OverlayBackgroundInteraction
 
 ---
 
@@ -57825,7 +58046,7 @@ If the vector network does have regions, then each region must contain at least 
 
 A region also may contain an array of `fills`, or a `fillStyleId` which uses the same syntax as the corresponding fields on nodes: ([`fills`](/docs/plugins/api/properties/nodes-fills/), [`fillStyleId`](/docs/plugins/api/properties/nodes-fillstyleid/)).
 
-### windingRule: [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/#windingrule) \[readonly\]
+### windingRule: [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/) \[readonly\]
 
 Winding rule for this region.
 
@@ -59149,6 +59370,8 @@ Source: https://developers.figma.com/docs/plugins/api/CodeSyntaxPlatform/
 
 # CodeSyntaxPlatform
 
+## CodeSyntaxPlatform​
+
 ```
 type CodeSyntaxPlatform =    "WEB" |    "ANDROID" |    "iOS"
 ```
@@ -59168,6 +59391,8 @@ Next
 ColorPalette
 
 ](/docs/plugins/api/ColorPalette/)
+
+*   CodeSyntaxPlatform
 
 ---
 
@@ -59824,7 +60049,7 @@ Returns a string representation of the node. For debugging purposes only, do not
 
 * * *
 
-### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/#childrenmixin)) | null \[readonly\]
+### [parent](/docs/plugins/api/properties/nodes-parent/): ([BaseNode](/docs/plugins/api/nodes/#basenode) & [ChildrenMixin](/docs/plugins/api/node-properties/)) | null \[readonly\]
 
 Returns the parent of this node, if any. This property is not meant to be directly edited. To reparent, see [`appendChild`](/docs/plugins/api/properties/nodes-appendchild/).
 
@@ -60190,6 +60415,8 @@ Source: https://developers.figma.com/docs/plugins/api/RGB/
 
 # RGB/RGBA
 
+## RGBA​
+
 ```
 interface RGBA {  // "Red"  readonly r: number  // "Green"  readonly g: number  // "Blue"  readonly b: number  // "Alpha" or "opacity"  readonly a: number}
 ```
@@ -60217,6 +60444,8 @@ Next
 RunEvent
 
 ](/docs/plugins/api/RunEvent/)
+
+*   RGBA
 
 ---
 
@@ -60832,6 +61061,8 @@ Source: https://developers.figma.com/docs/plugins/api/TextStyleOverrides/
 
 # TextStyleOverrides
 
+## TextStyleOverrideType​
+
 ```
 type TextStyleOverrideType  = {    type: "SEMANTIC_ITALIC" | "SEMANTIC_WEIGHT" | "HYPERLINK" | "TEXT_DECORATION"}
 ```
@@ -60870,6 +61101,7 @@ TextSublayer
 
 ](/docs/plugins/api/TextSublayer/)
 
+*   TextStyleOverrideType
 *   Samples
     *   Example: Text node that consumes a style with two overrides
 
@@ -61720,7 +61952,7 @@ Sends a message to the UI's `<iframe>` window.
 
 ## Signature​
 
-### [postMessage](/docs/plugins/api/properties/figma-ui-postmessage/)(pluginMessage: any, options?: [UIPostMessageOptions](/docs/plugins/api/properties/figma-ui-postmessage/#uipostmessageoptions)): void
+### [postMessage](/docs/plugins/api/properties/figma-ui-postmessage/)(pluginMessage: any, options?: [UIPostMessageOptions](/docs/plugins/api/properties/figma-ui-postmessage/)): void
 
 ## Parameters​
 
@@ -61781,7 +62013,7 @@ Register a handler for incoming messages from the UI's `<iframe>` window.
 
 ## Signature​
 
-### [onmessage](/docs/plugins/api/properties/figma-ui-onmessage/): [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler) | undefined
+### [onmessage](/docs/plugins/api/properties/figma-ui-onmessage/): [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/) | undefined
 
 ## Remarks​
 
@@ -61825,7 +62057,7 @@ Register a handler for incoming messages from the UI's `<iframe>` window.
 
 ## Signature​
 
-### [on](/docs/plugins/api/properties/figma-ui-on/)(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/#messageeventhandler)): void
+### [on](/docs/plugins/api/properties/figma-ui-on/)(type: 'message', callback: [MessageEventHandler](/docs/plugins/api/properties/figma-ui-onmessage/)): void
 
 ## Remarks​
 
@@ -65891,7 +66123,7 @@ The winding rule for the path (same as in SVGs). This determines whether a given
 
 ## Signature​
 
-### [windingRule](/docs/plugins/api/properties/VectorPath-windingrule/): [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/#windingrule) | 'NONE' \[readonly\]
+### [windingRule](/docs/plugins/api/properties/VectorPath-windingrule/): [WindingRule](/docs/plugins/api/properties/VectorPath-windingrule/) | 'NONE' \[readonly\]
 
 ## Remarks​
 
