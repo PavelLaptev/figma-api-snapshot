@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/figma-motion-playheadposition/",
+  "path": "/docs/plugins/api/properties/figma-motion-playheadposition/",
+  "slug": "docs__plugins__api__properties__figma-motion-playheadposition",
+  "title": "playheadPosition | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Global Objects](/docs/plugins/api/global-objects/)\n*   [figma](/docs/plugins/api/figma/)\n*   [motion](/docs/plugins/api/figma-motion/)\n*   playheadPosition\n\n# playheadPosition\n\nThe current playhead position of the Motion timeline, in seconds.\n\n## Signature​\n\n### [playheadPosition](/docs/plugins/api/properties/figma-motion-playheadposition/): number | undefined \\[readonly\\]\n\n## Remarks​\n\nReturns `undefined` when there is no active Motion timeline in the editor UI.\n\n```\nconst node = figma.currentPage.selection[0]const playheadPosition = figma.motion.playheadPositionif (node && playheadPosition !== undefined) {  node.applyManualKeyframeTrack(    { type: 'PROPERTY', name: 'OPACITY' },    {      baseValue: { type: 'FLOAT', value: 1 },      keyframes: [        {          timelinePosition: playheadPosition,          value: { type: 'FLOAT', value: 0 },        },      ],    },  )}\n```\n\n[\n\nPrevious\n\nmotion\n\n](/docs/plugins/api/figma-motion/)[\n\nNext\n\nfigmaAnimationStyles\n\n](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)\n\n*   Signature\n*   Remarks"
+}

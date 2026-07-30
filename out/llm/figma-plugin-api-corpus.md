@@ -9934,13 +9934,21 @@ note
 
 The Motion API is available in Beta. This API is subject to change.
 
-These APIs are available on `figma.motion` and provide access to Motion animation styles in the current document.
+These APIs are available on `figma.motion` and provide access to the active Motion timeline playhead and Motion animation styles in the current document.
 
-For example, a plugin can read the available Motion animation styles, convert physical spring parameters to a normalized spring value, apply one to the selected node, add a manual keyframe track, and adjust the node's timeline duration.
+For example, a plugin can read the current playhead position and available Motion animation styles, convert physical spring parameters to a normalized spring value, apply one to the selected node, add a manual keyframe track, and adjust the node's timeline duration.
 
 ```
-const node = figma.currentPage.selection[0]const [style] = figma.motion.figmaAnimationStyles()if (node && style) {  node.applyAnimationStyle(style.styleId, {    duration: 0.4,    timelineOffset: 0,  })  node.applyManualKeyframeTrack(    { type: 'PROPERTY', name: 'TRANSLATION_X' },    {      baseValue: { type: 'FLOAT', value: 0 },      keyframes: [        { timelinePosition: 0, value: { type: 'FLOAT', value: 0 } },        {          timelinePosition: 0.4,          easing: {            type: 'CUSTOM_SPRING',            easingFunctionSpring: {              bounce: figma.motion.physicalSpringToNormalized({                mass: 1,                stiffness: 100,                damping: 10,              }),            },          },          value: { type: 'FLOAT', value: 120 },        },      ],    },  )  const [timeline] = node.timelines  if (timeline) {    node.setTimelineDuration(timeline.id, 1.2)  }}
+const playheadPosition = figma.motion.playheadPositionconst node = figma.currentPage.selection[0]const [style] = figma.motion.figmaAnimationStyles()if (node) {  if (style) {    node.applyAnimationStyle(style.styleId, {      duration: 0.4,      timelineOffset: 0,    })  }  if (playheadPosition !== undefined) {    const endPosition = playheadPosition + 0.4    node.applyManualKeyframeTrack(      { type: 'PROPERTY', name: 'TRANSLATION_X' },      {        baseValue: { type: 'FLOAT', value: 0 },        keyframes: [          {            timelinePosition: playheadPosition,            easing: {              type: 'CUSTOM_SPRING',              easingFunctionSpring: {                bounce: figma.motion.physicalSpringToNormalized({                  mass: 1,                  stiffness: 100,                  damping: 10,                }),              },            },            value: { type: 'FLOAT', value: 0 },          },          {            timelinePosition: endPosition,            value: { type: 'FLOAT', value: 120 },          },        ],      },    )    const [timeline] = node.timelines    if (timeline) {      node.setTimelineDuration(timeline.id, Math.max(timeline.duration, endPosition))    }  }}
 ```
+
+### [playheadPosition](/docs/plugins/api/properties/figma-motion-playheadposition/): number | undefined \[readonly\]
+
+The current playhead position of the Motion timeline, in seconds.
+
+[View more →](/docs/plugins/api/properties/figma-motion-playheadposition/)
+
+* * *
 
 ### [figmaAnimationStyles](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)(): [AvailableAnimationStyle](/docs/plugins/api/Motion/#availableanimationstyle)\[\]
 
@@ -9968,9 +9976,9 @@ colors
 
 Next
 
-figmaAnimationStyles
+playheadPosition
 
-](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)
+](/docs/plugins/api/properties/figma-motion-playheadposition/)
 
 ---
 
@@ -62364,6 +62372,52 @@ motion
 
 ---
 
+# playheadPosition | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-motion-playheadposition/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   [motion](/docs/plugins/api/figma-motion/)
+*   playheadPosition
+
+# playheadPosition
+
+The current playhead position of the Motion timeline, in seconds.
+
+## Signature​
+
+### [playheadPosition](/docs/plugins/api/properties/figma-motion-playheadposition/): number | undefined \[readonly\]
+
+## Remarks​
+
+Returns `undefined` when there is no active Motion timeline in the editor UI.
+
+```
+const node = figma.currentPage.selection[0]const playheadPosition = figma.motion.playheadPositionif (node && playheadPosition !== undefined) {  node.applyManualKeyframeTrack(    { type: 'PROPERTY', name: 'OPACITY' },    {      baseValue: { type: 'FLOAT', value: 1 },      keyframes: [        {          timelinePosition: playheadPosition,          value: { type: 'FLOAT', value: 0 },        },      ],    },  )}
+```
+
+[
+
+Previous
+
+motion
+
+](/docs/plugins/api/figma-motion/)[
+
+Next
+
+figmaAnimationStyles
+
+](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)
+
+*   Signature
+*   Remarks
+
+---
+
 # figmaAnimationStyles | Developer Docs
 
 Source: https://developers.figma.com/docs/plugins/api/properties/figma-motion-figmaanimationstyles/
@@ -62395,9 +62449,9 @@ const styles = figma.motion.figmaAnimationStyles()for (const style of styles) { 
 
 Previous
 
-motion
+playheadPosition
 
-](/docs/plugins/api/figma-motion/)[
+](/docs/plugins/api/properties/figma-motion-playheadposition/)[
 
 Next
 

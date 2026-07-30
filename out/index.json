@@ -2514,6 +2514,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "playheadPosition | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-motion-playheadposition/",
+    "path": "/docs/plugins/api/properties/figma-motion-playheadposition/",
+    "slug": "docs__plugins__api__properties__figma-motion-playheadposition"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "figmaAnimationStyles | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-motion-figmaanimationstyles/",
     "path": "/docs/plugins/api/properties/figma-motion-figmaanimationstyles/",
