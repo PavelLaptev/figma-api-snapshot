@@ -58446,23 +58446,23 @@ This action alters the playing status of all video fills on the destination node
 
 ## "SET\_VARIABLE" action​
 
-Variables are stored values that represent design attributes or saved states. They can be string, number, color, or boolean value types. This action can set and modify the values of variables in prototypes.
+Variables are stored values that represent design attributes or saved states. They can be string, number, color, boolean, easing, or timing value types. This action can set and modify the values of variables in prototypes.
 
 *   `variableId`: string: The variable ID of an existing variable that an action will modify.
-*   `variableValue`: `VariableData`: The value we want to set variableId during the prototyping. The value can be a boolean, float, string, color, variable or expression.
+*   `variableValue`: `VariableData`: The value to assign to `variableId` during prototyping. The value can be a boolean, float, string, color, easing, timing, variable, or expression.
 
 Important data types:
 
 *   `VariableDataType`: Defines the types of data a VariableData object can hold
 
 ```
-type VariableDataType = 'BOOLEAN' | 'FLOAT' | 'STRING' | 'VARIABLE_ALIAS' | 'COLOR' | 'EXPRESSION'
+type VariableDataType =  | 'BOOLEAN'  | 'FLOAT'  | 'STRING'  | 'VARIABLE_ALIAS'  | 'COLOR'  | 'EXPRESSION'  | 'EASING'  | 'TIMING'
 ```
 
 *   `VariableResolvedDataType`: Defines the types of data a VariableData object can eventually equal
 
 ```
-type VariableResolvedDataType = 'BOOLEAN' | 'COLOR' | 'FLOAT' | 'STRING'
+type VariableResolvedDataType = 'BOOLEAN' | 'COLOR' | 'EASING' | 'FLOAT' | 'STRING' | 'TIMING'
 ```
 
 *   `ExpressionFunction`: Defines the list of operators available to use in an Expression
@@ -58474,7 +58474,7 @@ type ExpressionFunction =  | 'ADDITION'  | 'SUBTRACTION'  | 'MULTIPLICATION'  | 
 *   `VariableData`: Defines an object which contains a value, VariableDataType and VariableResolvedDataType.
 
 ```
-interface VariableData = {  type?: VariableDataType  resolvedType?: VariableResolvedDataType  value?: number | boolean | string | RGB | RGBA | VariableAlias | Expression}
+interface VariableData = {  type?: VariableDataType  resolvedType?: VariableResolvedDataType  value?: number | boolean | string | RGB | RGBA | MotionEasing | VariableAlias | Expression}
 ```
 
 *   `Expression`: Defines the [Expression](https://help.figma.com/hc/en-us/articles/15253194385943) object, which contains a list of `VariableData` objects strung together by operators (`ExpressionFunction`). This is essentially just a mathematical statement.
@@ -63212,15 +63212,17 @@ Source: https://developers.figma.com/docs/plugins/api/VariableResolvedDataType/
 # VariableResolvedDataType
 
 ```
-type VariableResolvedDataType =  "BOOLEAN" |  "COLOR" |  "FLOAT" |  "STRING"
+type VariableResolvedDataType =  "BOOLEAN" |  "COLOR" |  "EASING" |  "FLOAT" |  "STRING" |  "TIMING"
 ```
 
-The list of resolved [`Variable`](/docs/plugins/api/Variable/) types that Figma current supports.
+The list of resolved [`Variable`](/docs/plugins/api/Variable/) types that Figma currently supports.
 
 *   `"BOOLEAN"` variables can be assigned to `true` or `false`
 *   `"COLOR"` variables can be assigned to [`RGB`](/docs/plugins/api/RGB/) values
+*   `"EASING"` variables can be assigned to [`MotionEasing`](/docs/plugins/api/Motion/) values
 *   `"FLOAT"` variables can be assigned to `number` values
 *   `"STRING"` variables can be assigned to `string` values
+*   `"TIMING"` variables can be assigned to `number` values representing seconds
 
 Since a variable can be assigned to a [`VariableAlias`](/docs/plugins/api/VariableAlias/) for any given mode, this type refers to the type of the fully resolved value (after following all aliases).
 
@@ -65992,12 +65994,14 @@ Source: https://developers.figma.com/docs/plugins/api/VariableValue/
 # VariableValue
 
 ```
-type VariableValue =  string |  number |  boolean |  RGB |  RGBA |  VariableAlias
+type VariableValue =  string |  number |  boolean |  RGB |  RGBA |  MotionEasing |  VariableAlias
 ```
+
+[`MotionEasing`](/docs/plugins/api/Motion/) values are used by variables whose resolved type is `"EASING"`. Number values are used by both `"FLOAT"` and `"TIMING"` variables; timing values represent seconds.
 
 ## Variable Alias​
 
-Created via `figma.variables.createVariableBinding()`. Used to alias variables to other variables. Each `VariableValue` has at least one corresponding [`VariableResolvedDataType`](/docs/plugins/api/VariableResolvedDataType/).
+Used to alias variables to other variables. Each `VariableValue` has at least one corresponding [`VariableResolvedDataType`](/docs/plugins/api/VariableResolvedDataType/).
 
 [
 
