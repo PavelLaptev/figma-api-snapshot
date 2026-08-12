@@ -2199,51 +2199,6 @@ The weight of the font (e.g. 400 for "Regular", 700 for "Bold").
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Supported on:
-
-*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
-*   [CodeBlockNode](/docs/plugins/api/CodeBlockNode/)
-*   [ComponentNode](/docs/plugins/api/ComponentNode/)
-*   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
-*   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
-*   [DocumentNode](/docs/plugins/api/DocumentNode/)
-*   [EllipseNode](/docs/plugins/api/EllipseNode/)
-*   [EmbedNode](/docs/plugins/api/EmbedNode/)
-*   [FrameNode](/docs/plugins/api/FrameNode/)
-*   [GroupNode](/docs/plugins/api/GroupNode/)
-*   [HighlightNode](/docs/plugins/api/HighlightNode/)
-*   [InstanceNode](/docs/plugins/api/InstanceNode/)
-*   [InteractiveSlideElementNode](/docs/plugins/api/InteractiveSlideElementNode/)
-*   [LineNode](/docs/plugins/api/LineNode/)
-*   [LinkUnfurlNode](/docs/plugins/api/LinkUnfurlNode/)
-*   [MediaNode](/docs/plugins/api/MediaNode/)
-*   [PageNode](/docs/plugins/api/PageNode/)
-*   [PolygonNode](/docs/plugins/api/PolygonNode/)
-*   [RectangleNode](/docs/plugins/api/RectangleNode/)
-*   [SectionNode](/docs/plugins/api/SectionNode/)
-*   [ShapeWithTextNode](/docs/plugins/api/ShapeWithTextNode/)
-*   [SliceNode](/docs/plugins/api/SliceNode/)
-*   [SlideGridNode](/docs/plugins/api/SlideGridNode/)
-*   [SlideNode](/docs/plugins/api/SlideNode/)
-*   [SlideRowNode](/docs/plugins/api/SlideRowNode/)
-*   [SlotNode](/docs/plugins/api/SlotNode/)
-*   [StampNode](/docs/plugins/api/StampNode/)
-*   [StarNode](/docs/plugins/api/StarNode/)
-*   [StickyNode](/docs/plugins/api/StickyNode/)
-*   [TableNode](/docs/plugins/api/TableNode/)
-*   [TextNode](/docs/plugins/api/TextNode/)
-*   [TextPathNode](/docs/plugins/api/TextPathNode/)
-*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
-*   [VectorNode](/docs/plugins/api/VectorNode/)
-*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
-*   [WidgetNode](/docs/plugins/api/WidgetNode/)
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getDevResourcesAsync(options?: { includeChildren?: boolean }): Promise<[DevResourceWithNodeId](/docs/plugins/api/DevResource/)\[\]>
 
 Supported on:
@@ -8339,12 +8294,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -14612,12 +14561,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -15636,12 +15579,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -16208,12 +16145,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -17732,12 +17663,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -19038,7 +18963,7 @@ The type of this node, represented by the string literal "CONNECTOR"
 
 * * *
 
-### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/) \[readonly\]
+### text: [TextSublayerNode](/docs/plugins/api/TextSublayer/) & [SublayerDimensionsMixin](/docs/plugins/api/node-properties/) \[readonly\]
 
 Text sublayer of the ConnectorNode
 
@@ -19268,12 +19193,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -19849,12 +19768,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -20080,12 +19993,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -21013,12 +20920,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -21514,12 +21415,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -22945,12 +22840,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -23816,12 +23705,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -24732,12 +24615,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -25229,12 +25106,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -26120,12 +25991,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -26639,12 +26504,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -27322,12 +27181,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -27697,12 +27550,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -28621,12 +28468,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -29691,12 +29532,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -30635,12 +30470,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -31134,12 +30963,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -31781,12 +31604,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -32393,12 +32210,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -33752,12 +33563,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -34358,12 +34163,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -35788,12 +35587,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -36687,12 +36480,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -37684,12 +37471,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -38434,12 +38215,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -39454,12 +39229,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -40667,12 +40436,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -41588,12 +41351,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -42460,12 +42217,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
@@ -43387,12 +43138,6 @@ This property uses a set of heuristics to determine if a node is an asset. At a 
 
 * * *
 
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
-
-* * *
-
 ### getTopLevelFrame(): [FrameNode](/docs/plugins/api/FrameNode/) | undefined
 
 Returns the top-most frame that contains this node. If the node is not inside a frame, this will return undefined.
@@ -44296,12 +44041,6 @@ This property is useful if you're building a [plugin for code generation](/docs/
 info
 
 This property uses a set of heuristics to determine if a node is an asset. At a high level an icon is a small vector graphic and an image is a node with an image fill.
-
-* * *
-
-### getCSSAsync(): Promise<{ \[key: string\]: string }>
-
-Resolves to a JSON object of CSS properties of the node. This is the same CSS that Figma shows in the inspect panel and is helpful if you are building a [plugin for code generation](/docs/plugins/codegen-plugins/).
 
 * * *
 
