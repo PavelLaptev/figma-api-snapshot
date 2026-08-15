@@ -1303,6 +1303,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "paragraphSpacing | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-paragraphspacing/",
+    "path": "/docs/plugins/api/properties/TextNode-paragraphspacing/",
+    "slug": "docs__plugins__api__properties__TextNode-paragraphspacing"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "parent | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-parent/",
     "path": "/docs/plugins/api/properties/nodes-parent/",
@@ -1517,6 +1524,13 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-targetaspectratio/",
     "path": "/docs/plugins/api/properties/nodes-targetaspectratio/",
     "slug": "docs__plugins__api__properties__nodes-targetaspectratio"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "textWrapStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-textwrapstyle/",
+    "path": "/docs/plugins/api/properties/TextNode-textwrapstyle/",
+    "slug": "docs__plugins__api__properties__TextNode-textwrapstyle"
   },
   {
     "dataset": "plugin-api",
@@ -1902,6 +1916,13 @@
     "url": "https://developers.figma.com/docs/plugins/api/TextDecorationThickness/",
     "path": "/docs/plugins/api/TextDecorationThickness/",
     "slug": "docs__plugins__api__TextDecorationThickness"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "TextWrapStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TextWrapStyle/",
+    "path": "/docs/plugins/api/TextWrapStyle/",
+    "slug": "docs__plugins__api__TextWrapStyle"
   },
   {
     "dataset": "plugin-api",

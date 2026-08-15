@@ -2661,6 +2661,17 @@ Get the `textStyleId` from characters in range `start` (inclusive) to `end` (exc
 
 * * *
 
+### getRangeTextWrapStyle(start: number, end: number): [TextWrapStyle](/docs/plugins/api/TextWrapStyle/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+Supported on:
+
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
+
+Get the `textWrapStyle` for a paragraph containing characters in range `start` (inclusive) to `end` (exclusive).
+
+* * *
+
 ### getRelaunchData(): { \[command: string\]: string }
 
 Supported on:
@@ -4478,7 +4489,7 @@ The indentation of paragraphs (offset of the first line from the left). Setting 
 
 * * *
 
-### paragraphSpacing: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+### [paragraphSpacing](/docs/plugins/api/properties/TextNode-paragraphspacing/): number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 Supported on:
 
@@ -4486,6 +4497,8 @@ Supported on:
 *   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
 
 The vertical distance between paragraphs. Setting this property requires the font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-paragraphspacing/)
 
 * * *
 
@@ -5659,6 +5672,17 @@ Set the provided [`TextStyle`](/docs/plugins/api/TextStyle/) to characters in ra
 
 * * *
 
+### setRangeTextWrapStyle(start: number, end: number, value: [TextWrapStyle](/docs/plugins/api/TextWrapStyle/)): void
+
+Supported on:
+
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
+
+Set the `textWrapStyle` for a paragraph containing characters in range `start` (inclusive) to `end` (exclusive). Requires the font to be loaded.
+
+* * *
+
 ### setReactionsAsync(reactions: Array<[Reaction](/docs/plugins/api/Reaction/)\>): Promise<void>
 
 Supported on:
@@ -6411,6 +6435,19 @@ Supported on:
 *   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
 
 The text decoration thickness. If the text is not underlined, this value will be null. Requires the font to be loaded.
+
+* * *
+
+### [textWrapStyle](/docs/plugins/api/properties/TextNode-textwrapstyle/): [TextWrapStyle](/docs/plugins/api/TextWrapStyle/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+Supported on:
+
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
+
+Controls how text wraps within each paragraph. Setting this property requires the font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-textwrapstyle/)
 
 * * *
 
@@ -38684,9 +38721,19 @@ The indentation of paragraphs (offset of the first line from the left). Setting 
 
 * * *
 
-### paragraphSpacing: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+### [paragraphSpacing](/docs/plugins/api/properties/TextNode-paragraphspacing/): number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 The vertical distance between paragraphs. Setting this property requires the font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-paragraphspacing/)
+
+* * *
+
+### [textWrapStyle](/docs/plugins/api/properties/TextNode-textwrapstyle/): [TextWrapStyle](/docs/plugins/api/TextWrapStyle/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+Controls how text wraps within each paragraph. Setting this property requires the font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-textwrapstyle/)
 
 * * *
 
@@ -39137,6 +39184,18 @@ Get the `paragraphSpacing` for a paragraph containing characters in range `start
 ### setRangeParagraphSpacing(start: number, end: number, value: number): void
 
 Set the `paragraphSpacing` for a paragraph containing characters in range `start` (inclusive) to `end` (exclusive).
+
+* * *
+
+### getRangeTextWrapStyle(start: number, end: number): [TextWrapStyle](/docs/plugins/api/TextWrapStyle/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+Get the `textWrapStyle` for a paragraph containing characters in range `start` (inclusive) to `end` (exclusive).
+
+* * *
+
+### setRangeTextWrapStyle(start: number, end: number, value: [TextWrapStyle](/docs/plugins/api/TextWrapStyle/)): void
+
+Set the `textWrapStyle` for a paragraph containing characters in range `start` (inclusive) to `end` (exclusive). Requires the font to be loaded.
 
 * * *
 
@@ -49333,6 +49392,55 @@ openTypeFeatures
 
 Next
 
+paragraphSpacing
+
+](/docs/plugins/api/properties/TextNode-paragraphspacing/)
+
+*   Signature
+*   Remarks
+
+---
+
+# paragraphSpacing | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/TextNode-paragraphspacing/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   paragraphSpacing
+
+# paragraphSpacing
+
+The vertical distance between paragraphs. Setting this property requires the font to be loaded.
+
+Supported on:
+
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
+
+## Signature​
+
+### [paragraphSpacing](/docs/plugins/api/properties/TextNode-paragraphspacing/): number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+## Remarks​
+
+**Working with Paragraph Level Fields**
+
+```
+const text = figma.createText()await figma.loadFontAsync({ family: 'Inter', style: 'Regular' })// Create text with two paragraphs, separated by \ntext.characters = "hello figma, welcome to my plugin!\nI love the Figma Plugin API!"text.resize(120, 30)text.textAutoResize = 'HEIGHT'// Apply 20px paragraph spacing - all paragraphs covered by the provided text range will be// modified, and remaining paragraphs will be untouched.text.setRangeParagraphSpacing(0, 1, 20)// text.paragraphSpacing = Symbol(figma.mixed)// text.getStyledTextSegments(['paragraphSpacing']) =//    [//      {//        "characters": "hello figma, welcome to my plugin!\n",//        "start": 0,//        "end": 35,//        "paragraphSpacing": 20//      },//      {//        "characters": "I love the Figma Plugin API!",//        "start": 35,//        "end": 63,//        "paragraphSpacing": 0//      }//    ]text.setRangeTextWrapStyle(38, 39, 'BALANCE')// text.textWrapStyle = Symbol(figma.mixed)// text.getStyledTextSegments(['textWrapStyle']) =//    [//      {//        "characters": "hello figma, welcome to my plugin!\n",//        "start": 0,//        "end": 35,//        "textWrapStyle": "AUTO"//      },//      {//        "characters": "I love the Figma Plugin API!",//        "start": 35,//        "end": 63,//        "textWrapStyle": "BALANCE"//      }//    ]
+```
+
+[
+
+Previous
+
+overflowDirection
+
+](/docs/plugins/api/properties/nodes-overflowdirection/)[
+
+Next
+
 parent
 
 ](/docs/plugins/api/properties/nodes-parent/)
@@ -49408,9 +49516,9 @@ Components accessed via [`instance.getMainComponentAsync()`](/docs/plugins/api/I
 
 Previous
 
-overflowDirection
+paragraphSpacing
 
-](/docs/plugins/api/properties/nodes-overflowdirection/)[
+](/docs/plugins/api/properties/TextNode-paragraphspacing/)[
 
 Next
 
@@ -51768,6 +51876,55 @@ stuckTo
 
 Next
 
+textWrapStyle
+
+](/docs/plugins/api/properties/TextNode-textwrapstyle/)
+
+*   Signature
+*   Remarks
+
+---
+
+# textWrapStyle | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/TextNode-textwrapstyle/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   textWrapStyle
+
+# textWrapStyle
+
+Controls how text wraps within each paragraph. Setting this property requires the font to be loaded.
+
+Supported on:
+
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
+
+## Signature​
+
+### [textWrapStyle](/docs/plugins/api/properties/TextNode-textwrapstyle/): [TextWrapStyle](/docs/plugins/api/TextWrapStyle/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+## Remarks​
+
+**Working with Paragraph Level Fields**
+
+```
+const text = figma.createText()await figma.loadFontAsync({ family: 'Inter', style: 'Regular' })// Create text with two paragraphs, separated by \ntext.characters = "hello figma, welcome to my plugin!\nI love the Figma Plugin API!"text.resize(120, 30)text.textAutoResize = 'HEIGHT'// Apply 20px paragraph spacing - all paragraphs covered by the provided text range will be// modified, and remaining paragraphs will be untouched.text.setRangeParagraphSpacing(0, 1, 20)// text.paragraphSpacing = Symbol(figma.mixed)// text.getStyledTextSegments(['paragraphSpacing']) =//    [//      {//        "characters": "hello figma, welcome to my plugin!\n",//        "start": 0,//        "end": 35,//        "paragraphSpacing": 20//      },//      {//        "characters": "I love the Figma Plugin API!",//        "start": 35,//        "end": 63,//        "paragraphSpacing": 0//      }//    ]text.setRangeTextWrapStyle(38, 39, 'BALANCE')// text.textWrapStyle = Symbol(figma.mixed)// text.getStyledTextSegments(['textWrapStyle']) =//    [//      {//        "characters": "hello figma, welcome to my plugin!\n",//        "start": 0,//        "end": 35,//        "textWrapStyle": "AUTO"//      },//      {//        "characters": "I love the Figma Plugin API!",//        "start": 35,//        "end": 63,//        "textWrapStyle": "BALANCE"//      }//    ]
+```
+
+[
+
+Previous
+
+targetAspectRatio
+
+](/docs/plugins/api/properties/nodes-targetaspectratio/)[
+
+Next
+
 timelines
 
 ](/docs/plugins/api/properties/nodes-timelines/)
@@ -51841,9 +51998,9 @@ const node = figma.currentPage.selection[0]if (node) {  for (const timeline of n
 
 Previous
 
-targetAspectRatio
+textWrapStyle
 
-](/docs/plugins/api/properties/nodes-targetaspectratio/)[
+](/docs/plugins/api/properties/TextNode-textwrapstyle/)[
 
 Next
 
@@ -53412,9 +53569,19 @@ The indentation of paragraphs (offset of the first line from the left). Setting 
 
 * * *
 
-### paragraphSpacing: number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+### [paragraphSpacing](/docs/plugins/api/properties/TextNode-paragraphspacing/): number | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 The vertical distance between paragraphs. Setting this property requires the font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-paragraphspacing/)
+
+* * *
+
+### [textWrapStyle](/docs/plugins/api/properties/TextNode-textwrapstyle/): [TextWrapStyle](/docs/plugins/api/TextWrapStyle/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+Controls how text wraps within each paragraph. Setting this property requires the font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-textwrapstyle/)
 
 * * *
 
@@ -53628,6 +53795,18 @@ Set the `paragraphSpacing` for a paragraph containing characters in range `start
 
 * * *
 
+### getRangeTextWrapStyle(start: number, end: number): [TextWrapStyle](/docs/plugins/api/TextWrapStyle/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+Get the `textWrapStyle` for a paragraph containing characters in range `start` (inclusive) to `end` (exclusive).
+
+* * *
+
+### setRangeTextWrapStyle(start: number, end: number, value: [TextWrapStyle](/docs/plugins/api/TextWrapStyle/)): void
+
+Set the `textWrapStyle` for a paragraph containing characters in range `start` (inclusive) to `end` (exclusive). Requires the font to be loaded.
+
+* * *
+
 ### [fills](/docs/plugins/api/properties/nodes-fills/): ReadonlyArray<[Paint](/docs/plugins/api/Paint/)\> | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 The paints used to fill the area of the shape. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
@@ -53668,9 +53847,9 @@ TextStyleOverrides
 
 Next
 
-Transition
+TextWrapStyle
 
-](/docs/plugins/api/Transition/)
+](/docs/plugins/api/TextWrapStyle/)
 
 *   Basic traits
 *   Text node traits
@@ -54987,7 +55166,13 @@ Value to replace the text [`paragraphIndent`](/docs/plugins/api/TextNode/#paragr
 
 ### paragraphSpacing: number
 
-Value to replace the text [`paragraphSpacing`](/docs/plugins/api/TextNode/#paragraphspacing) with.
+Value to replace the text [`paragraphSpacing`](/docs/plugins/api/properties/TextNode-paragraphspacing/) with.
+
+* * *
+
+### textWrapStyle: [TextWrapStyle](/docs/plugins/api/TextWrapStyle/)
+
+Value to replace the text [`textWrapStyle`](/docs/plugins/api/properties/TextNode-textwrapstyle/) with.
 
 * * *
 
@@ -56953,6 +57138,43 @@ TextDecorationColor
 
 ---
 
+# TextWrapStyle | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/TextWrapStyle/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   TextWrapStyle
+
+# TextWrapStyle
+
+```
+type TextWrapStyle = 'AUTO' | 'BALANCE' | 'PRETTY'
+```
+
+Controls how text wraps within a paragraph. The possible values are:
+
+*   `'AUTO'`: The default. Uses the standard line-breaking algorithm.
+*   `'BALANCE'`: Attempts to equalize line lengths across lines in the paragraph. Useful for headings and short text blocks where visual balance matters. Due to performance considerations, `BALANCE` only works for paragraphs that are 6 wrapped lines or under.
+*   `'PRETTY'`: Reduces orphaned words at the end of paragraphs. Useful for body text where readability is the priority.
+
+[
+
+Previous
+
+TextSublayer
+
+](/docs/plugins/api/TextSublayer/)[
+
+Next
+
+Transition
+
+](/docs/plugins/api/Transition/)
+
+---
+
 # StyledTextSegment | Developer Docs
 
 Source: https://developers.figma.com/docs/plugins/api/StyledTextSegment/
@@ -57107,6 +57329,12 @@ The paragraph indent.
 ### paragraphSpacing: number
 
 The paragraph spacing.
+
+* * *
+
+### textWrapStyle: [TextWrapStyle](/docs/plugins/api/TextWrapStyle/)
+
+The text wrap style applied to the paragraph.
 
 * * *
 
@@ -60128,7 +60356,7 @@ Source: https://developers.figma.com/docs/plugins/api/NodeChangeProperty/
 # NodeChangeProperty
 
 ```
-type NodeChangeProperty =  | 'pointCount'  | 'name'  | 'width'  | 'height'  | 'parent'  | 'pluginData'  | 'constraints'  | 'locked'  | 'visible'  | 'opacity'  | 'blendMode'  | 'layoutGrids'  | 'guides'  | 'characters'  | 'openTypeFeatures'  | 'styledTextSegments'  | 'vectorNetwork'  | 'effects'  | 'exportSettings'  | 'arcData'  | 'autoRename'  | 'fontName'  | 'innerRadius'  | 'fontSize'  | 'lineHeight'  | 'leadingTrim'  | 'paragraphIndent'  | 'paragraphSpacing'  | 'listSpacing'  | 'hangingPunctuation'  | 'hangingList'  | 'letterSpacing'  | 'textAlignHorizontal'  | 'textAlignVertical'  | 'textCase'  | 'textDecoration'  | 'textAutoResize'  | 'fills'  | 'topLeftRadius'  | 'topRightRadius'  | 'bottomLeftRadius'  | 'bottomRightRadius'  | 'constrainProportions'  | 'strokes'  | 'strokeWeight'  | 'strokeAlign'  | 'strokeCap'  | 'strokeJoin'  | 'strokeMiterLimit'  | 'booleanOperation'  | 'overflowDirection'  | 'dashPattern'  | 'backgrounds'  | 'handleMirroring'  | 'cornerRadius'  | 'cornerSmoothing'  | 'relativeTransform'  | 'x'  | 'y'  | 'rotation'  | 'isMask'  | 'clipsContent'  | 'type'  | 'overlayPositionType'  | 'overlayBackgroundInteraction'  | 'overlayBackground'  | 'prototypeStartNode'  | 'prototypeBackgrounds'  | 'expanded'  | 'fillStyleId'  | 'strokeStyleId'  | 'backgroundStyleId'  | 'textStyleId'  | 'effectStyleId'  | 'gridStyleId'  | 'description'  | 'layoutMode'  | 'paddingLeft'  | 'paddingTop'  | 'paddingRight'  | 'paddingBottom'  | 'itemSpacing'  | 'layoutAlign'  | 'counterAxisSizingMode'  | 'primaryAxisSizingMode'  | 'primaryAxisAlignItems'  | 'counterAxisAlignItems'  | 'layoutGrow'  | 'layoutPositioning'  | 'itemReverseZIndex'  | 'hyperlink'  | 'mediaData'  | 'stokeTopWeight'  | 'strokeBottomWeight'  | 'strokeLeftWeight'  | 'strokeRightWeight'  | 'reactions'  | 'flowStartingPoints'  | 'shapeType'  | 'connectorStart'  | 'connectorEnd'  | 'connectorLineType'  | 'connectorStartStrokeCap'  | 'connectorEndStrokeCap'  | 'codeLanguage'  | 'widgetSyncedState'  | 'componentPropertyDefinitions'  | 'componentPropertyReferences'  | 'componentProperties'  | 'embedData'  | 'linkUnfurlData'  | 'text'  | 'authorVisible'  | 'authorName'  | 'code'  | 'textBackground'
+type NodeChangeProperty =  | 'pointCount'  | 'name'  | 'width'  | 'height'  | 'parent'  | 'pluginData'  | 'constraints'  | 'locked'  | 'visible'  | 'opacity'  | 'blendMode'  | 'layoutGrids'  | 'guides'  | 'characters'  | 'openTypeFeatures'  | 'styledTextSegments'  | 'vectorNetwork'  | 'effects'  | 'exportSettings'  | 'arcData'  | 'autoRename'  | 'fontName'  | 'innerRadius'  | 'fontSize'  | 'lineHeight'  | 'leadingTrim'  | 'paragraphIndent'  | 'paragraphSpacing'  | 'textWrapStyle'  | 'listSpacing'  | 'hangingPunctuation'  | 'hangingList'  | 'letterSpacing'  | 'textAlignHorizontal'  | 'textAlignVertical'  | 'textCase'  | 'textDecoration'  | 'textAutoResize'  | 'fills'  | 'topLeftRadius'  | 'topRightRadius'  | 'bottomLeftRadius'  | 'bottomRightRadius'  | 'constrainProportions'  | 'strokes'  | 'strokeWeight'  | 'strokeAlign'  | 'strokeCap'  | 'strokeJoin'  | 'strokeMiterLimit'  | 'booleanOperation'  | 'overflowDirection'  | 'dashPattern'  | 'backgrounds'  | 'handleMirroring'  | 'cornerRadius'  | 'cornerSmoothing'  | 'relativeTransform'  | 'x'  | 'y'  | 'rotation'  | 'isMask'  | 'clipsContent'  | 'type'  | 'overlayPositionType'  | 'overlayBackgroundInteraction'  | 'overlayBackground'  | 'prototypeStartNode'  | 'prototypeBackgrounds'  | 'expanded'  | 'fillStyleId'  | 'strokeStyleId'  | 'backgroundStyleId'  | 'textStyleId'  | 'effectStyleId'  | 'gridStyleId'  | 'description'  | 'layoutMode'  | 'paddingLeft'  | 'paddingTop'  | 'paddingRight'  | 'paddingBottom'  | 'itemSpacing'  | 'layoutAlign'  | 'counterAxisSizingMode'  | 'primaryAxisSizingMode'  | 'primaryAxisAlignItems'  | 'counterAxisAlignItems'  | 'layoutGrow'  | 'layoutPositioning'  | 'itemReverseZIndex'  | 'hyperlink'  | 'mediaData'  | 'stokeTopWeight'  | 'strokeBottomWeight'  | 'strokeLeftWeight'  | 'strokeRightWeight'  | 'reactions'  | 'flowStartingPoints'  | 'shapeType'  | 'connectorStart'  | 'connectorEnd'  | 'connectorLineType'  | 'connectorStartStrokeCap'  | 'connectorEndStrokeCap'  | 'codeLanguage'  | 'widgetSyncedState'  | 'componentPropertyDefinitions'  | 'componentPropertyReferences'  | 'componentProperties'  | 'embedData'  | 'linkUnfurlData'  | 'text'  | 'authorVisible'  | 'authorName'  | 'code'  | 'textBackground'
 ```
 
 Different properties that can be reported by a [PropertyChange](/docs/plugins/api/DocumentChange/#propertychange).
@@ -60632,7 +60860,7 @@ Source: https://developers.figma.com/docs/plugins/api/StyleChangeProperty/
 # StyleChangeProperty
 
 ```
-type StyleChangeProperty =  | 'name'  | 'pluginData'  | 'type'  | 'description'  | 'remote'  | 'documentationLinks'  | 'fontSize'  | 'textDecoration'  | 'leadingTrim'  | 'letterSpacing'  | 'lineHeight'  | 'paragraphIndent'  | 'paragraphSpacing'  | 'listSpacing'  | 'hangingPunctuation'  | 'hangingList'  | 'textCase'  | 'paint'  | 'effects'  | 'layoutGrids'
+type StyleChangeProperty =  | 'name'  | 'pluginData'  | 'type'  | 'description'  | 'remote'  | 'documentationLinks'  | 'fontSize'  | 'textDecoration'  | 'leadingTrim'  | 'letterSpacing'  | 'lineHeight'  | 'paragraphIndent'  | 'paragraphSpacing'  | 'textWrapStyle'  | 'listSpacing'  | 'hangingPunctuation'  | 'hangingList'  | 'textCase'  | 'paint'  | 'effects'  | 'layoutGrids'
 ```
 
 Different properties that can be reported by a [StylePropertyChange](/docs/plugins/api/DocumentChange/#stylepropertychange).
@@ -60881,9 +61109,9 @@ When the easing `type` is `"CUSTOM_SPRING"`, then `easingFunctionSpring` will de
 
 Previous
 
-TextSublayer
+TextWrapStyle
 
-](/docs/plugins/api/TextSublayer/)[
+](/docs/plugins/api/TextWrapStyle/)[
 
 Next
 

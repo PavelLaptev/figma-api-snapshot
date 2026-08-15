@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/TextWrapStyle/",
+  "path": "/docs/plugins/api/TextWrapStyle/",
+  "slug": "docs__plugins__api__TextWrapStyle",
+  "title": "TextWrapStyle | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   TextWrapStyle\n\n# TextWrapStyle\n\n```\ntype TextWrapStyle = 'AUTO' | 'BALANCE' | 'PRETTY'\n```\n\nControls how text wraps within a paragraph. The possible values are:\n\n*   `'AUTO'`: The default. Uses the standard line-breaking algorithm.\n*   `'BALANCE'`: Attempts to equalize line lengths across lines in the paragraph. Useful for headings and short text blocks where visual balance matters. Due to performance considerations, `BALANCE` only works for paragraphs that are 6 wrapped lines or under.\n*   `'PRETTY'`: Reduces orphaned words at the end of paragraphs. Useful for body text where readability is the priority.\n\n[\n\nPrevious\n\nTextSublayer\n\n](/docs/plugins/api/TextSublayer/)[\n\nNext\n\nTransition\n\n](/docs/plugins/api/Transition/)"
+}
