@@ -9904,70 +9904,6 @@ colors
 
 ---
 
-# figma.motion | Developer Docs
-
-Source: https://developers.figma.com/docs/plugins/api/figma-motion/
-
-*   [](/)
-*   Plugins
-*   [Global Objects](/docs/plugins/api/global-objects/)
-*   [figma](/docs/plugins/api/figma/)
-*   motion
-
-# figma.motion
-
-note
-
-The Motion API is available in Beta. This API is subject to change.
-
-These APIs are available on `figma.motion` and provide access to the active Motion timeline playhead and Motion animation styles in the current document.
-
-For example, a plugin can read the current playhead position and available Motion animation styles, convert physical spring parameters to a normalized spring value, apply one to the selected node, add a manual keyframe track, and adjust the node's timeline duration.
-
-```
-const playheadPosition = figma.motion.playheadPositionconst node = figma.currentPage.selection[0]const [style] = figma.motion.figmaAnimationStyles()if (node) {  if (style) {    node.applyAnimationStyle(style.styleId, {      duration: 0.4,      timelineOffset: 0,    })  }  if (playheadPosition !== undefined) {    const endPosition = playheadPosition + 0.4    node.applyManualKeyframeTrack(      { type: 'PROPERTY', name: 'TRANSLATION_X' },      {        baseValue: { type: 'FLOAT', value: 0 },        keyframes: [          {            timelinePosition: playheadPosition,            easing: {              type: 'CUSTOM_SPRING',              easingFunctionSpring: {                bounce: figma.motion.physicalSpringToNormalized({                  mass: 1,                  stiffness: 100,                  damping: 10,                }),              },            },            value: { type: 'FLOAT', value: 0 },          },          {            timelinePosition: endPosition,            value: { type: 'FLOAT', value: 120 },          },        ],      },    )    const [timeline] = node.timelines    if (timeline) {      node.setTimelineDuration(timeline.id, Math.max(timeline.duration, endPosition))    }  }}
-```
-
-### [playheadPosition](/docs/plugins/api/properties/figma-motion-playheadposition/): number | undefined \[readonly\]
-
-The current playhead position of the Motion timeline, in seconds.
-
-[View more →](/docs/plugins/api/properties/figma-motion-playheadposition/)
-
-* * *
-
-### [figmaAnimationStyles](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)(): [AvailableAnimationStyle](/docs/plugins/api/Motion/#availableanimationstyle)\[\]
-
-Returns the Motion animation styles available in the current document.
-
-[View more →](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)
-
-* * *
-
-### [physicalSpringToNormalized](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)(spring: [PhysicalSpring](/docs/plugins/api/Motion/#physicalspring)): number
-
-Converts physical spring parameters to Motion's normalized `bounce` value from 0 to 1.
-
-[View more →](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)
-
-* * *
-
-[
-
-Previous
-
-colors
-
-](/docs/plugins/api/properties/figma-constants-colors/)[
-
-Next
-
-playheadPosition
-
-](/docs/plugins/api/properties/figma-motion-playheadposition/)
-
----
-
 # figma.codegen | Developer Docs
 
 Source: https://developers.figma.com/docs/plugins/api/figma-codegen/
@@ -14161,65 +14097,6 @@ setCanvasGrid
 ](/docs/plugins/api/properties/figma-setcanvasgrid/)
 
 *   Signature
-*   Remarks
-
----
-
-# setCanvasGrid | Developer Docs
-
-Source: https://developers.figma.com/docs/plugins/api/properties/figma-setcanvasgrid/
-
-*   [](/)
-*   Plugins
-*   [Global Objects](/docs/plugins/api/global-objects/)
-*   [figma](/docs/plugins/api/figma/)
-*   setCanvasGrid
-
-# setCanvasGrid
-
-Sets the canvas grid layout, reorganizing nodes in the canvas.
-
-info
-
-This API is only available in Figma Slides and Figma Buzz
-
-## Signature​
-
-### [setCanvasGrid](/docs/plugins/api/properties/figma-setcanvasgrid/)(canvasGrid: Array<Array<[SceneNode](/docs/plugins/api/nodes/#scenenode)\>>): void
-
-## Parameters​
-
-### canvasGrid​
-
-A 2D array representing the new canvas grid layout
-
-## Remarks​
-
-This allows you to programmatically rearrange the layout of slides or assets in the canvas grid. All nodes in the current grid must be included in the new layout.
-
-For example:
-
-```
-const grid = figma.getCanvasGrid()const [firstRow, ...rest] = grid// move the first row to the endfigma.setCanvasGrid([...rest, firstRow])
-```
-
-[
-
-Previous
-
-getCanvasGrid
-
-](/docs/plugins/api/properties/figma-getcanvasgrid/)[
-
-Next
-
-createCanvasRow
-
-](/docs/plugins/api/properties/figma-createcanvasrow/)
-
-*   Signature
-*   Parameters
-    *   canvasGrid
 *   Remarks
 
 ---
@@ -62339,152 +62216,6 @@ motion
 
 ---
 
-# playheadPosition | Developer Docs
-
-Source: https://developers.figma.com/docs/plugins/api/properties/figma-motion-playheadposition/
-
-*   [](/)
-*   Plugins
-*   [Global Objects](/docs/plugins/api/global-objects/)
-*   [figma](/docs/plugins/api/figma/)
-*   [motion](/docs/plugins/api/figma-motion/)
-*   playheadPosition
-
-# playheadPosition
-
-The current playhead position of the Motion timeline, in seconds.
-
-## Signature​
-
-### [playheadPosition](/docs/plugins/api/properties/figma-motion-playheadposition/): number | undefined \[readonly\]
-
-## Remarks​
-
-Returns `undefined` when there is no active Motion timeline in the editor UI.
-
-```
-const node = figma.currentPage.selection[0]const playheadPosition = figma.motion.playheadPositionif (node && playheadPosition !== undefined) {  node.applyManualKeyframeTrack(    { type: 'PROPERTY', name: 'OPACITY' },    {      baseValue: { type: 'FLOAT', value: 1 },      keyframes: [        {          timelinePosition: playheadPosition,          value: { type: 'FLOAT', value: 0 },        },      ],    },  )}
-```
-
-[
-
-Previous
-
-motion
-
-](/docs/plugins/api/figma-motion/)[
-
-Next
-
-figmaAnimationStyles
-
-](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)
-
-*   Signature
-*   Remarks
-
----
-
-# figmaAnimationStyles | Developer Docs
-
-Source: https://developers.figma.com/docs/plugins/api/properties/figma-motion-figmaanimationstyles/
-
-*   [](/)
-*   Plugins
-*   [Global Objects](/docs/plugins/api/global-objects/)
-*   [figma](/docs/plugins/api/figma/)
-*   [motion](/docs/plugins/api/figma-motion/)
-*   figmaAnimationStyles
-
-# figmaAnimationStyles
-
-Returns the Motion animation styles available in the current document.
-
-## Signature​
-
-### [figmaAnimationStyles](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)(): [AvailableAnimationStyle](/docs/plugins/api/Motion/#availableanimationstyle)\[\]
-
-## Remarks​
-
-The returned styles describe animation templates that can be applied to nodes with [`applyAnimationStyle`](/docs/plugins/api/properties/nodes-applyanimationstyle/). Their `props` values are type/default descriptions for each configurable property.
-
-```
-const styles = figma.motion.figmaAnimationStyles()for (const style of styles) {  console.log(style.name, style.styleId, style.props)}
-```
-
-[
-
-Previous
-
-playheadPosition
-
-](/docs/plugins/api/properties/figma-motion-playheadposition/)[
-
-Next
-
-physicalSpringToNormalized
-
-](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)
-
-*   Signature
-*   Remarks
-
----
-
-# physicalSpringToNormalized | Developer Docs
-
-Source: https://developers.figma.com/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/
-
-*   [](/)
-*   Plugins
-*   [Global Objects](/docs/plugins/api/global-objects/)
-*   [figma](/docs/plugins/api/figma/)
-*   [motion](/docs/plugins/api/figma-motion/)
-*   physicalSpringToNormalized
-
-# physicalSpringToNormalized
-
-Converts physical spring parameters to Motion's normalized `bounce` value from 0 to 1.
-
-## Signature​
-
-### [physicalSpringToNormalized](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)(spring: [PhysicalSpring](/docs/plugins/api/Motion/#physicalspring)): number
-
-## Parameters​
-
-### spring​
-
-Positive finite physical spring values.
-
-## Remarks​
-
-The returned value is the normalized `bounce` scalar used by [`NormalizedSpring`](/docs/plugins/api/Motion/).
-
-```
-const bounce = figma.motion.physicalSpringToNormalized({  mass: 1,  stiffness: 100,  damping: 10,})
-```
-
-[
-
-Previous
-
-figmaAnimationStyles
-
-](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)[
-
-Next
-
-codegen
-
-](/docs/plugins/api/figma-codegen/)
-
-*   Signature
-*   Parameters
-    *   spring
-*   Remarks
-
----
-
 # on | Developer Docs
 
 Source: https://developers.figma.com/docs/plugins/api/properties/figma-codegen-on/
@@ -62566,6 +62297,60 @@ timer
 *   Parameters
     *   type
     *   callback
+*   Remarks
+
+---
+
+# physicalSpringToNormalized | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   [motion](/docs/plugins/api/figma-motion/)
+*   physicalSpringToNormalized
+
+# physicalSpringToNormalized
+
+Converts physical spring parameters to Motion's normalized `bounce` value from 0 to 1.
+
+## Signature​
+
+### [physicalSpringToNormalized](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)(spring: [PhysicalSpring](/docs/plugins/api/Motion/#physicalspring)): number
+
+## Parameters​
+
+### spring​
+
+Positive finite physical spring values.
+
+## Remarks​
+
+The returned value is the normalized `bounce` scalar used by [`NormalizedSpring`](/docs/plugins/api/Motion/).
+
+```
+const bounce = figma.motion.physicalSpringToNormalized({  mass: 1,  stiffness: 100,  damping: 10,})
+```
+
+[
+
+Previous
+
+figmaAnimationStyles
+
+](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)[
+
+Next
+
+codegen
+
+](/docs/plugins/api/figma-codegen/)
+
+*   Signature
+*   Parameters
+    *   spring
 *   Remarks
 
 ---
@@ -65768,6 +65553,52 @@ setWidgetSyncedState
 
 ---
 
+# figmaAnimationStyles | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-motion-figmaanimationstyles/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   [motion](/docs/plugins/api/figma-motion/)
+*   figmaAnimationStyles
+
+# figmaAnimationStyles
+
+Returns the Motion animation styles available in the current document.
+
+## Signature​
+
+### [figmaAnimationStyles](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)(): [AvailableAnimationStyle](/docs/plugins/api/Motion/#availableanimationstyle)\[\]
+
+## Remarks​
+
+The returned styles describe animation templates that can be applied to nodes with [`applyAnimationStyle`](/docs/plugins/api/properties/nodes-applyanimationstyle/). Their `props` values are type/default descriptions for each configurable property.
+
+```
+const styles = figma.motion.figmaAnimationStyles()for (const style of styles) {  console.log(style.name, style.styleId, style.props)}
+```
+
+[
+
+Previous
+
+playheadPosition
+
+](/docs/plugins/api/properties/figma-motion-playheadposition/)[
+
+Next
+
+physicalSpringToNormalized
+
+](/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/)
+
+*   Signature
+*   Remarks
+
+---
+
 # VariableBindablePaintStyleField | Developer Docs
 
 Source: https://developers.figma.com/docs/plugins/api/VariableBindablePaintStyleField/
@@ -66329,6 +66160,52 @@ Next
 setVariableCodeSyntax
 
 ](/docs/plugins/api/properties/Variable-setvariablecodesyntax/)
+
+*   Signature
+*   Remarks
+
+---
+
+# playheadPosition | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-motion-playheadposition/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   [motion](/docs/plugins/api/figma-motion/)
+*   playheadPosition
+
+# playheadPosition
+
+The current playhead position of the Motion timeline, in seconds.
+
+## Signature​
+
+### [playheadPosition](/docs/plugins/api/properties/figma-motion-playheadposition/): number | undefined \[readonly\]
+
+## Remarks​
+
+Returns `undefined` when there is no active Motion timeline in the editor UI.
+
+```
+const node = figma.currentPage.selection[0]const playheadPosition = figma.motion.playheadPositionif (node && playheadPosition !== undefined) {  node.applyManualKeyframeTrack(    { type: 'PROPERTY', name: 'OPACITY' },    {      baseValue: { type: 'FLOAT', value: 1 },      keyframes: [        {          timelinePosition: playheadPosition,          value: { type: 'FLOAT', value: 0 },        },      ],    },  )}
+```
+
+[
+
+Previous
+
+motion
+
+](/docs/plugins/api/figma-motion/)[
+
+Next
+
+figmaAnimationStyles
+
+](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/)
 
 *   Signature
 *   Remarks
