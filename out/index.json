@@ -85,6 +85,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "figma.motion | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/figma-motion/",
+    "path": "/docs/plugins/api/figma-motion/",
+    "slug": "docs__plugins__api__figma-motion"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "figma.codegen | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/figma-codegen/",
     "path": "/docs/plugins/api/figma-codegen/",
@@ -502,6 +509,13 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-getcanvasgrid/",
     "path": "/docs/plugins/api/properties/figma-getcanvasgrid/",
     "slug": "docs__plugins__api__properties__figma-getcanvasgrid"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "setCanvasGrid | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-setcanvasgrid/",
+    "path": "/docs/plugins/api/properties/figma-setcanvasgrid/",
+    "slug": "docs__plugins__api__properties__figma-setcanvasgrid"
   },
   {
     "dataset": "plugin-api",
@@ -2003,13 +2017,6 @@
   },
   {
     "dataset": "plugin-api",
-    "title": "StrokeCap | Developer Docs",
-    "url": "https://developers.figma.com/docs/plugins/api/StrokeCap/",
-    "path": "/docs/plugins/api/StrokeCap/",
-    "slug": "docs__plugins__api__StrokeCap"
-  },
-  {
-    "dataset": "plugin-api",
     "title": "StrokeJoin | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StrokeJoin/",
     "path": "/docs/plugins/api/StrokeJoin/",
@@ -2521,10 +2528,17 @@
   },
   {
     "dataset": "plugin-api",
-    "title": "on | Developer Docs",
-    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-codegen-on/",
-    "path": "/docs/plugins/api/properties/figma-codegen-on/",
-    "slug": "docs__plugins__api__properties__figma-codegen-on"
+    "title": "playheadPosition | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-motion-playheadposition/",
+    "path": "/docs/plugins/api/properties/figma-motion-playheadposition/",
+    "slug": "docs__plugins__api__properties__figma-motion-playheadposition"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "figmaAnimationStyles | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-motion-figmaanimationstyles/",
+    "path": "/docs/plugins/api/properties/figma-motion-figmaanimationstyles/",
+    "slug": "docs__plugins__api__properties__figma-motion-figmaanimationstyles"
   },
   {
     "dataset": "plugin-api",
@@ -2532,6 +2546,13 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/",
     "path": "/docs/plugins/api/properties/figma-motion-physicalspringtonormalized/",
     "slug": "docs__plugins__api__properties__figma-motion-physicalspringtonormalized"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "on | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-codegen-on/",
+    "path": "/docs/plugins/api/properties/figma-codegen-on/",
+    "slug": "docs__plugins__api__properties__figma-codegen-on"
   },
   {
     "dataset": "plugin-api",
@@ -2969,13 +2990,6 @@
   },
   {
     "dataset": "plugin-api",
-    "title": "figmaAnimationStyles | Developer Docs",
-    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-motion-figmaanimationstyles/",
-    "path": "/docs/plugins/api/properties/figma-motion-figmaanimationstyles/",
-    "slug": "docs__plugins__api__properties__figma-motion-figmaanimationstyles"
-  },
-  {
-    "dataset": "plugin-api",
     "title": "VariableBindablePaintStyleField | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/VariableBindablePaintStyleField/",
     "path": "/docs/plugins/api/VariableBindablePaintStyleField/",
@@ -3064,13 +3078,6 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/Variable-scopes/",
     "path": "/docs/plugins/api/properties/Variable-scopes/",
     "slug": "docs__plugins__api__properties__Variable-scopes"
-  },
-  {
-    "dataset": "plugin-api",
-    "title": "playheadPosition | Developer Docs",
-    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-motion-playheadposition/",
-    "path": "/docs/plugins/api/properties/figma-motion-playheadposition/",
-    "slug": "docs__plugins__api__properties__figma-motion-playheadposition"
   },
   {
     "dataset": "widgets",
