@@ -2017,6 +2017,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "StrokeCap | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/StrokeCap/",
+    "path": "/docs/plugins/api/StrokeCap/",
+    "slug": "docs__plugins__api__StrokeCap"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "StrokeJoin | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/StrokeJoin/",
     "path": "/docs/plugins/api/StrokeJoin/",
