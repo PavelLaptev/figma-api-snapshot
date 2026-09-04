@@ -1334,14 +1334,6 @@ For more tips on testing widget interactions, read our [Testing](/docs/widgets/t
 
 ## View and adjust widget sublayers​
 
-tip
-
-💡 **Want to design your widget in Figma first?**
-
-Figma’s [Widget Code Generator](https://www.figma.com/community/plugin/1096460041736534298/Widget-Code-Generator) plugin generates widget UI from existing frames. This translates your design into components and properties in the widget API.
-
-You’ll still need to edit the generated code to add interactivity and support user events. **[Use the Widget Code Generator plugin →](https://help.figma.com/hc/en-us/articles/5601345554967)**
-
 If you insert a widget into a design file, you can view widget sublayers in the layers panel. This allows you to select individual layers and adjust their properties.
 
 You can only view layers and adjust properties for widgets that are still in development. You can’t do this with published versions of the widget.

@@ -2163,7 +2163,7 @@ If the manifest contains `"documentAccess": "dynamic-page"`, **and** the node is
 
 * * *
 
-### fontName: [FontName](/docs/plugins/api/FontName/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+### [fontName](/docs/plugins/api/properties/TextNode-fontname/): [FontName](/docs/plugins/api/FontName/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
 Supported on:
 
@@ -2171,7 +2171,9 @@ Supported on:
 *   [TextPathNode](/docs/plugins/api/TextPathNode/)
 *   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
 
-The font family (e.g. "Inter"), and font style (e.g. "Regular"). Setting this property to a different value requires the new font to be loaded.
+The font family (e.g. `"Inter"`), font style (e.g. `"Regular"`). For [variable fonts](/docs/plugins/api/FontName/), also [`variationSettings`](/docs/plugins/api/FontName/#variationsettings). Setting this property to a different value requires the new font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-fontname/)
 
 * * *
 
@@ -2438,7 +2440,7 @@ Supported on:
 *   [TextPathNode](/docs/plugins/api/TextPathNode/)
 *   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
 
-Get the `fontName`s from characters in range `start` (inclusive) to `end` (exclusive).
+Get the `fontName`s from characters in range `start` (inclusive) to `end` (exclusive). For [variable fonts](/docs/plugins/api/FontName/), each entry includes [`variationSettings`](/docs/plugins/api/FontName/#variationsettings).
 
 * * *
 
@@ -2486,7 +2488,7 @@ Supported on:
 *   [TextPathNode](/docs/plugins/api/TextPathNode/)
 *   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
 
-Get the `fontName` from characters in range `start` (inclusive) to `end` (exclusive).
+Get the `fontName` from characters in range `start` (inclusive) to `end` (exclusive). For [variable fonts](/docs/plugins/api/FontName/), the returned [`FontName`](/docs/plugins/api/FontName/) includes [`variationSettings`](/docs/plugins/api/FontName/#variationsettings). Returns `figma.mixed` when the range contains more than one font or when variation settings differ.
 
 * * *
 
@@ -5499,7 +5501,7 @@ Can be bound to color variables by using [`setBoundVariableForPaint`](/docs/plug
 
 * * *
 
-### setRangeFontName(start: number, end: number, value: [FontName](/docs/plugins/api/FontName/)): void
+### [setRangeFontName](/docs/plugins/api/properties/TextNode-setrangefontname/)(start: number, end: number, value: [FontNameInput](/docs/plugins/api/FontName/#fontnameinput)): void
 
 Supported on:
 
@@ -5508,6 +5510,8 @@ Supported on:
 *   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
 
 Set the `fontName` from characters in range `start` (inclusive) to `end` (exclusive). Requires the new font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-setrangefontname/)
 
 * * *
 
@@ -8048,7 +8052,7 @@ Returns the lists of currently available fonts. This should be the same list as 
 
 * * *
 
-### [loadFontAsync](/docs/plugins/api/properties/figma-loadfontasync/)(fontName: [FontName](/docs/plugins/api/FontName/)): Promise<void>
+### [loadFontAsync](/docs/plugins/api/properties/figma-loadfontasync/)(fontName: [FontNameInput](/docs/plugins/api/FontName/#fontnameinput)): Promise<void>
 
 Makes a font available _in the plugin_ for use when creating and modifying text. Calling this function is **necessary** to modify any property of a text node that may cause the rendered text to change, including `.characters`, `.fontSize`, `.fontName`, etc.
 
@@ -8057,6 +8061,14 @@ You can either pass in a hardcoded font, a font loaded via `listAvailableFontsAs
 Read more about how to work with fonts, when to load them, and how to load them in the [Working with Text](/docs/plugins/working-with-text/) page.
 
 [View more →](/docs/plugins/api/properties/figma-loadfontasync/)
+
+* * *
+
+### [getFontFamilyVariationAxes](/docs/plugins/api/properties/figma-getfontfamilyvariationaxes/)(family: string): string\[\] | null
+
+Returns the [OpenType variation axis](https://fonts.google.com/knowledge/glossary/axis_in_variable_fonts) tags a variable font family exposes, or `null` for a static family. These are the tags accepted by [`variationSettings`](/docs/plugins/api/FontName/#variationsettings).
+
+[View more →](/docs/plugins/api/properties/figma-getfontfamilyvariationaxes/)
 
 * * *
 
@@ -13303,7 +13315,7 @@ Read more about how to work with fonts, when to load them, and how to load them 
 
 ## Signature​
 
-### [loadFontAsync](/docs/plugins/api/properties/figma-loadfontasync/)(fontName: [FontName](/docs/plugins/api/FontName/)): Promise<void>
+### [loadFontAsync](/docs/plugins/api/properties/figma-loadfontasync/)(fontName: [FontNameInput](/docs/plugins/api/FontName/#fontnameinput)): Promise<void>
 
 ## Remarks​
 
@@ -13315,6 +13327,16 @@ A common question is whether a plugin needs to be careful about calling `loadFon
 
 However, note that `loadFontAsync` returns a Promise. Even a Promise resolves immediately, it still needs to round-trip to the JavaScript event loop. So you probably shouldn't call `loadFontAsync` on the same font repeatedly inside a loop.
 
+**Variable fonts**
+
+You can pass a [`FontNameInput`](/docs/plugins/api/FontName/) and omit `style` to load every style of the family in one call. This works for both variable and static families, and is convenient when you plan to drive the font with [`variationSettings`](/docs/plugins/api/FontName/#variationsettings) rather than enumerating named instances. [`variationSettings`](/docs/plugins/api/FontName/#variationsettings) on the argument is ignored — variation values affect what gets rendered, not what gets loaded — so you can pass the same object you later assign to `node.fontName`.
+
+Loading and applying a variable font
+
+```
+(async () => {  await figma.loadFontAsync({ family: 'Inter' })  const text = figma.createText()  text.fontName = {    family: 'Inter',    style: 'Regular',    variationSettings: { wght: 550 },  }  text.characters = 'Hello, world'})()
+```
+
 [
 
 Previous
@@ -13322,6 +13344,55 @@ Previous
 importShaderById
 
 ](/docs/plugins/api/properties/figma-importshaderbyid/)[
+
+Next
+
+getFontFamilyVariationAxes
+
+](/docs/plugins/api/properties/figma-getfontfamilyvariationaxes/)
+
+*   Signature
+*   Remarks
+
+---
+
+# getFontFamilyVariationAxes | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/figma-getfontfamilyvariationaxes/
+
+*   [](/)
+*   Plugins
+*   [Global Objects](/docs/plugins/api/global-objects/)
+*   [figma](/docs/plugins/api/figma/)
+*   getFontFamilyVariationAxes
+
+# getFontFamilyVariationAxes
+
+Returns the [OpenType variation axis](https://fonts.google.com/knowledge/glossary/axis_in_variable_fonts) tags a variable font family exposes, or `null` for a static family. These are the tags accepted by [`variationSettings`](/docs/plugins/api/FontName/#variationsettings).
+
+## Signature​
+
+### [getFontFamilyVariationAxes](/docs/plugins/api/properties/figma-getfontfamilyvariationaxes/)(family: string): string\[\] | null
+
+## Remarks​
+
+The family has to be available in the editor but does not have to be loaded, so this can be called before [`figma.loadFontAsync`](/docs/plugins/api/properties/figma-loadfontasync/) to decide what to load. Throws for an unknown family, so `null` always means the family is static.
+
+Each tag is a 4-character OpenType axis tag such as `"wght"` (weight), `"wdth"` (width), `"slnt"` (slant), `"opsz"` (optical size), or a custom tag defined by the font designer.
+
+Discovering variation axes, then applying one
+
+```
+(async () => {  const family = 'Inter'  const axes = figma.getFontFamilyVariationAxes(family)  if (axes === null) {    console.log(`${family} is a static font`)    return  }  await figma.loadFontAsync({ family })  const text = figma.createText()  if (axes.includes('wght')) {    text.fontName = { family, style: 'Regular', variationSettings: { wght: 550 } }  }  text.characters = 'Variable!'})()
+```
+
+[
+
+Previous
+
+loadFontAsync
+
+](/docs/plugins/api/properties/figma-loadfontasync/)[
 
 Next
 
@@ -13368,9 +13439,9 @@ The `data` passed in must be encoded as a PNG, JPEG, or GIF. Images have a maxim
 
 Previous
 
-loadFontAsync
+getFontFamilyVariationAxes
 
-](/docs/plugins/api/properties/figma-loadfontasync/)[
+](/docs/plugins/api/properties/figma-getfontfamilyvariationaxes/)[
 
 Next
 
@@ -39024,9 +39095,11 @@ The size of the font. Has minimum value of 1.
 
 * * *
 
-### fontName: [FontName](/docs/plugins/api/FontName/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+### [fontName](/docs/plugins/api/properties/TextNode-fontname/): [FontName](/docs/plugins/api/FontName/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
-The font family (e.g. "Inter"), and font style (e.g. "Regular"). Setting this property to a different value requires the new font to be loaded.
+The font family (e.g. `"Inter"`), font style (e.g. `"Regular"`). For [variable fonts](/docs/plugins/api/FontName/), also [`variationSettings`](/docs/plugins/api/FontName/#variationsettings). Setting this property to a different value requires the new font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-fontname/)
 
 * * *
 
@@ -39150,19 +39223,21 @@ Set the `fontSize` from characters in range `start` (inclusive) to `end` (exclus
 
 ### getRangeFontName(start: number, end: number): [FontName](/docs/plugins/api/FontName/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
-Get the `fontName` from characters in range `start` (inclusive) to `end` (exclusive).
+Get the `fontName` from characters in range `start` (inclusive) to `end` (exclusive). For [variable fonts](/docs/plugins/api/FontName/), the returned [`FontName`](/docs/plugins/api/FontName/) includes [`variationSettings`](/docs/plugins/api/FontName/#variationsettings). Returns `figma.mixed` when the range contains more than one font or when variation settings differ.
 
 * * *
 
-### setRangeFontName(start: number, end: number, value: [FontName](/docs/plugins/api/FontName/)): void
+### [setRangeFontName](/docs/plugins/api/properties/TextNode-setrangefontname/)(start: number, end: number, value: [FontNameInput](/docs/plugins/api/FontName/#fontnameinput)): void
 
 Set the `fontName` from characters in range `start` (inclusive) to `end` (exclusive). Requires the new font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-setrangefontname/)
 
 * * *
 
 ### getRangeAllFontNames(start: number, end: number): [FontName](/docs/plugins/api/FontName/)\[\]
 
-Get the `fontName`s from characters in range `start` (inclusive) to `end` (exclusive).
+Get the `fontName`s from characters in range `start` (inclusive) to `end` (exclusive). For [variable fonts](/docs/plugins/api/FontName/), each entry includes [`variationSettings`](/docs/plugins/api/FontName/#variationsettings).
 
 * * *
 
@@ -40438,9 +40513,11 @@ The size of the font. Has minimum value of 1.
 
 * * *
 
-### fontName: [FontName](/docs/plugins/api/FontName/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+### [fontName](/docs/plugins/api/properties/TextNode-fontname/): [FontName](/docs/plugins/api/FontName/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
-The font family (e.g. "Inter"), and font style (e.g. "Regular"). Setting this property to a different value requires the new font to be loaded.
+The font family (e.g. `"Inter"`), font style (e.g. `"Regular"`). For [variable fonts](/docs/plugins/api/FontName/), also [`variationSettings`](/docs/plugins/api/FontName/#variationsettings). Setting this property to a different value requires the new font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-fontname/)
 
 * * *
 
@@ -40516,19 +40593,21 @@ Set the `fontSize` from characters in range `start` (inclusive) to `end` (exclus
 
 ### getRangeFontName(start: number, end: number): [FontName](/docs/plugins/api/FontName/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
 
-Get the `fontName` from characters in range `start` (inclusive) to `end` (exclusive).
+Get the `fontName` from characters in range `start` (inclusive) to `end` (exclusive). For [variable fonts](/docs/plugins/api/FontName/), the returned [`FontName`](/docs/plugins/api/FontName/) includes [`variationSettings`](/docs/plugins/api/FontName/#variationsettings). Returns `figma.mixed` when the range contains more than one font or when variation settings differ.
 
 * * *
 
-### setRangeFontName(start: number, end: number, value: [FontName](/docs/plugins/api/FontName/)): void
+### [setRangeFontName](/docs/plugins/api/properties/TextNode-setrangefontname/)(start: number, end: number, value: [FontNameInput](/docs/plugins/api/FontName/#fontnameinput)): void
 
 Set the `fontName` from characters in range `start` (inclusive) to `end` (exclusive). Requires the new font to be loaded.
+
+[View more →](/docs/plugins/api/properties/TextNode-setrangefontname/)
 
 * * *
 
 ### getRangeAllFontNames(start: number, end: number): [FontName](/docs/plugins/api/FontName/)\[\]
 
-Get the `fontName`s from characters in range `start` (inclusive) to `end` (exclusive).
+Get the `fontName`s from characters in range `start` (inclusive) to `end` (exclusive). For [variable fonts](/docs/plugins/api/FontName/), each entry includes [`variationSettings`](/docs/plugins/api/FontName/#variationsettings).
 
 * * *
 
@@ -47241,13 +47320,67 @@ findOne
 
 Next
 
+fontName
+
+](/docs/plugins/api/properties/TextNode-fontname/)
+
+*   Signature
+*   Parameters
+    *   widgetId
+*   Remarks
+
+---
+
+# fontName | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/TextNode-fontname/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   fontName
+
+# fontName
+
+The font family (e.g. `"Inter"`), font style (e.g. `"Regular"`). For [variable fonts](/docs/plugins/api/FontName/), also [`variationSettings`](/docs/plugins/api/FontName/#variationsettings). Setting this property to a different value requires the new font to be loaded.
+
+Supported on:
+
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
+
+## Signature​
+
+### [fontName](/docs/plugins/api/properties/TextNode-fontname/): [FontName](/docs/plugins/api/FontName/) | [figma.mixed](/docs/plugins/api/properties/figma-mixed/)
+
+## Remarks​
+
+When reading, `variationSettings` is populated only when the font is a variable font, and includes every axis the family defines (not just overrides). Returns `figma.mixed` when the text node has more than one font, or when variation settings differ across character ranges.
+
+When writing, pass a [`FontName`](/docs/plugins/api/FontName/) or [`FontNameInput`](/docs/plugins/api/FontName/). Omit `style` to let Figma pick the named instance closest to `variationSettings`. Supply `variationSettings` to override specific axes; keys must match the family's axis tags (see [`figma.getFontFamilyVariationAxes`](/docs/plugins/api/properties/figma-getfontfamilyvariationaxes/)). An omitted axis keeps the named instance's default.
+
+Set a variable font with custom weight
+
+```
+(async () => {  const text = figma.createText()  await figma.loadFontAsync({ family: 'Inter', style: 'Regular' })  text.fontName = {    family: 'Inter',    style: 'Regular',    variationSettings: { wght: 650 },  }  text.characters = 'Almost bold'})()
+```
+
+[
+
+Previous
+
+findWidgetNodesByWidgetId
+
+](/docs/plugins/api/properties/nodes-findwidgetnodesbywidgetid/)[
+
+Next
+
 getDevResourcesAsync
 
 ](/docs/plugins/api/properties/nodes-getdevresourcesasync/)
 
 *   Signature
-*   Parameters
-    *   widgetId
 *   Remarks
 
 ---
@@ -47318,9 +47451,9 @@ An optional parameter to include getting all of the dev resources on the childre
 
 Previous
 
-findWidgetNodesByWidgetId
+fontName
 
-](/docs/plugins/api/properties/nodes-findwidgetnodesbywidgetid/)[
+](/docs/plugins/api/properties/TextNode-fontname/)[
 
 Next
 
@@ -51283,14 +51416,66 @@ setGridChildPosition
 
 Next
 
-setRelaunchData
+setRangeFontName
 
-](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+](/docs/plugins/api/properties/TextNode-setrangefontname/)
 
 *   Signature
 *   Parameters
     *   key
     *   value
+*   Remarks
+
+---
+
+# setRangeFontName | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/TextNode-setrangefontname/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   setRangeFontName
+
+# setRangeFontName
+
+Set the `fontName` from characters in range `start` (inclusive) to `end` (exclusive). Requires the new font to be loaded.
+
+Supported on:
+
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
+
+## Signature​
+
+### [setRangeFontName](/docs/plugins/api/properties/TextNode-setrangefontname/)(start: number, end: number, value: [FontNameInput](/docs/plugins/api/FontName/#fontnameinput)): void
+
+## Remarks​
+
+Accepts a [`FontNameInput`](/docs/plugins/api/FontName/). Pass `variationSettings` to override specific axes of a [variable font](/docs/plugins/api/FontName/). Omit `style` to let Figma pick the named instance closest to `variationSettings`.
+
+Override weight on a character range
+
+```
+(async () => {  const text = figma.createText()  await figma.loadFontAsync({ family: 'Inter' })  text.characters = 'Hello world'  text.setRangeFontName(0, 5, {    family: 'Inter',    style: 'Regular',    variationSettings: { wght: 700 },  })})()
+```
+
+[
+
+Previous
+
+setPluginData
+
+](/docs/plugins/api/properties/nodes-setplugindata/)[
+
+Next
+
+setRelaunchData
+
+](/docs/plugins/api/properties/nodes-setrelaunchdata/)
+
+*   Signature
 *   Remarks
 
 ---
@@ -51411,9 +51596,9 @@ code.ts
 
 Previous
 
-setPluginData
+setRangeFontName
 
-](/docs/plugins/api/properties/nodes-setplugindata/)[
+](/docs/plugins/api/properties/TextNode-setrangefontname/)[
 
 Next
 
@@ -55399,7 +55584,7 @@ Value to replace the text [`textDecoration`](/docs/plugins/api/TextNode/#textdec
 
 ### fontName: [FontName](/docs/plugins/api/FontName/)
 
-Value to replace the text [`fontName`](/docs/plugins/api/TextNode/#fontname) with.
+Value to replace the text [`fontName`](/docs/plugins/api/properties/TextNode-fontname/) with. For [variable fonts](/docs/plugins/api/FontName/), this includes [`variationSettings`](/docs/plugins/api/FontName/#variationsettings).
 
 * * *
 
@@ -56697,10 +56882,50 @@ Source: https://developers.figma.com/docs/plugins/api/FontName/
 # FontName
 
 ```
-interface Font {  fontName: FontName}interface FontName {  readonly family: string  readonly style: string}
+interface Font {  fontName: FontName}interface FontName {  readonly family: string  readonly style: string  readonly variationSettings?: FontVariationSettings}
 ```
 
 Describes a font used by a text node. For example, the default font is `{ family: "Inter", style: "Regular" }`.
+
+Reads always include `family` and `style`. For [variable fonts](https://fonts.google.com/knowledge/glossary/variable_fonts), they also include `variationSettings` with every axis the family defines. Static fonts omit `variationSettings`.
+
+## variationSettings​
+
+The variable font axis values applied to the text, for example `{ wght: 600, slnt: -10 }`. Absent for a static font.
+
+Reading reports every axis the family defines. When setting, an omitted axis keeps the value of the named instance `style` refers to, so `{ wght: 900 }` on Inter Regular changes only the weight and leaves slant at Regular's default. Setting an axis the family does not define throws; use [`figma.getFontFamilyVariationAxes`](/docs/plugins/api/properties/figma-getfontfamilyvariationaxes/) to discover the valid tags.
+
+## FontVariationSettings​
+
+```
+interface FontVariationSettings {  readonly [axis: string]: number}
+```
+
+Variable font axis values keyed by [OpenType variation axis](https://fonts.google.com/knowledge/glossary/axis_in_variable_fonts) tag, mirroring the CSS `font-variation-settings` property. A tag is always four ASCII characters, for example `"wght"`, `"wdth"`, `"slnt"`, or `"opsz"`.
+
+Setting a font with custom variation settings
+
+```
+(async () => {  const text = figma.createText()  await figma.loadFontAsync({ family: 'Inter', style: 'Regular' })  text.fontName = {    family: 'Inter',    style: 'Regular',    variationSettings: { wght: 600, slnt: -5 },  }  text.characters = 'Hello, variable fonts!'})()
+```
+
+## FontNameInput​
+
+```
+interface FontNameInput {  readonly family: string  readonly style?: string  readonly variationSettings?: FontVariationSettings}
+```
+
+A font to apply where `style` can be inferred rather than named. Unlike [`FontName`](/docs/plugins/api/FontName/), `style` may be omitted, in which case Figma resolves the named instance that most closely matches `variationSettings`. Reads always return a fully populated [`FontName`](/docs/plugins/api/FontName/).
+
+Accepted by [`figma.loadFontAsync`](/docs/plugins/api/properties/figma-loadfontasync/), [`setRangeFontName`](/docs/plugins/api/properties/TextNode-setrangefontname/), and when assigning [`fontName`](/docs/plugins/api/properties/TextNode-fontname/).
+
+Omitting `style` in `loadFontAsync` loads every style of the family (variable or static). Omitting `style` when setting a font lets Figma pick the named instance closest to `variationSettings`. for example `{ family: 'Inter', variationSettings: { wght: 900 } }` resolves to Inter Black.
+
+Inferring a named instance from variation settings
+
+```
+(async () => {  await figma.loadFontAsync({ family: 'Inter' })  const text = figma.createText()  text.characters = 'Hello'  text.setRangeFontName(0, text.characters.length, {    family: 'Inter',    variationSettings: { wght: 900 },  })  // Read back: { family: 'Inter', style: 'Black', variationSettings: { wght: 900, slnt: 0 } }  console.log(text.fontName)})()
+```
 
 [
 
@@ -56715,6 +56940,10 @@ Next
 FontStyle
 
 ](/docs/plugins/api/FontStyle/)
+
+*   variationSettings
+*   FontVariationSettings
+*   FontNameInput
 
 ---
 
@@ -57477,7 +57706,7 @@ The size of the font. Has minimum value of 1.
 
 ### fontName: [FontName](/docs/plugins/api/FontName/)
 
-The font family (e.g. "Inter"), and font style (e.g. "Regular").
+The font family (e.g. `"Inter"`), font style (e.g. `"Regular"`). For [variable fonts](/docs/plugins/api/FontName/), also [`variationSettings`](/docs/plugins/api/FontName/#variationsettings).
 
 * * *
 

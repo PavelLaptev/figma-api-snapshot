@@ -421,6 +421,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "getFontFamilyVariationAxes | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/figma-getfontfamilyvariationaxes/",
+    "path": "/docs/plugins/api/properties/figma-getfontfamilyvariationaxes/",
+    "slug": "docs__plugins__api__properties__figma-getfontfamilyvariationaxes"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "createImage | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/figma-createimage/",
     "path": "/docs/plugins/api/properties/figma-createimage/",
@@ -1051,6 +1058,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "fontName | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-fontname/",
+    "path": "/docs/plugins/api/properties/TextNode-fontname/",
+    "slug": "docs__plugins__api__properties__TextNode-fontname"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "getDevResourcesAsync | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-getdevresourcesasync/",
     "path": "/docs/plugins/api/properties/nodes-getdevresourcesasync/",
@@ -1447,6 +1461,13 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setplugindata/",
     "path": "/docs/plugins/api/properties/nodes-setplugindata/",
     "slug": "docs__plugins__api__properties__nodes-setplugindata"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "setRangeFontName | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-setrangefontname/",
+    "path": "/docs/plugins/api/properties/TextNode-setrangefontname/",
+    "slug": "docs__plugins__api__properties__TextNode-setrangefontname"
   },
   {
     "dataset": "plugin-api",
