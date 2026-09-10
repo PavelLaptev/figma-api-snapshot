@@ -1210,6 +1210,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### constrainProportions: boolean
@@ -6688,7 +6690,7 @@ Supported on:
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [InstanceNode](/docs/plugins/api/InstanceNode/)
 
-**DEPRECATED:** Use [`componentProperties`](/docs/plugins/api/InstanceNode/#componentproperties) instead.
+**DEPRECATED:** Deprecated for instances. Use [`componentProperties`](/docs/plugins/api/InstanceNode/#componentproperties) instead. Not deprecated for components/variants in component sets.
 
 Variant properties and values for this node. Is `null` for nodes that are not variants.
 
@@ -8529,6 +8531,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -9643,7 +9647,7 @@ How the user can interact with the content under this frame when opened as an ov
 
 ### [variantProperties](/docs/plugins/api/properties/nodes-variantproperties/): { \[property: string\]: string } | null \[readonly\]
 
-**DEPRECATED:** Use [`componentProperties`](/docs/plugins/api/InstanceNode/#componentproperties) instead.
+**DEPRECATED:** Deprecated for instances. Use [`componentProperties`](/docs/plugins/api/InstanceNode/#componentproperties) instead. Not deprecated for components/variants in component sets.
 
 Variant properties and values for this node. Is `null` for nodes that are not variants.
 
@@ -14858,6 +14862,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -15956,6 +15962,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -16178,6 +16186,8 @@ Creates an instance of this component. By default, the instance will be parented
 ### createSlot(): [SlotNode](/docs/plugins/api/SlotNode/)
 
 Creates a new slot node within this component.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/#add-slot-properties) guide for how to create slot properties and change their values in instances.
 
 * * *
 
@@ -16456,6 +16466,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -17571,7 +17583,7 @@ How the user can interact with the content under this frame when opened as an ov
 
 ### [variantProperties](/docs/plugins/api/properties/nodes-variantproperties/): { \[property: string\]: string } | null \[readonly\]
 
-**DEPRECATED:** Use [`componentProperties`](/docs/plugins/api/InstanceNode/#componentproperties) instead.
+**DEPRECATED:** Deprecated for instances. Use [`componentProperties`](/docs/plugins/api/InstanceNode/#componentproperties) instead. Not deprecated for components/variants in component sets.
 
 Variant properties and values for this node. Is `null` for nodes that are not variants.
 
@@ -17977,6 +17989,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -19591,6 +19605,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -20328,6 +20344,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -21333,6 +21351,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -21762,6 +21782,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -23631,6 +23653,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -24064,6 +24088,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -25052,6 +25078,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -25477,6 +25505,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -26440,6 +26470,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -26961,6 +26993,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -27946,6 +27980,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -28869,6 +28905,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -30011,6 +30049,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -30955,6 +30995,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -31382,6 +31424,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -32101,6 +32145,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -32641,6 +32687,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -34072,6 +34120,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -34359,6 +34409,8 @@ Source: https://developers.figma.com/docs/plugins/api/SlotNode/
 
 A SlotNode represents a slot within a component or instance. In Figma, a slot is a child frame of a component that has freeform content editing. Slots can be created with [`createSlot`](/docs/plugins/api/ComponentNode/#createslot), which also creates a property within [`ComponentPropertyDefinitions`](/docs/plugins/api/ComponentPropertyDefinitions/) corresponding to that slot.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/#add-slot-properties) guide for how to create slot properties and change their values in instances.
+
 ## Slot properties​
 
 ### type: 'SLOT' \[readonly\]
@@ -34606,6 +34658,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -36034,6 +36088,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -36935,6 +36991,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -38004,6 +38062,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -38756,6 +38816,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -39728,6 +39790,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -40942,6 +41006,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -42304,6 +42370,8 @@ All component properties that are attached on this node. A node can only have `c
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
 
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
+
 * * *
 
 ### [boundVariables](/docs/plugins/api/properties/nodes-boundvariables/)?: { readonly \[field in [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)} & { readonly \[field in [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/)\]?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]} & { fills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; strokes?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; effects?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; layoutGrids?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\]; componentProperties?: { \[propertyName: string\]: [VariableAlias](/docs/plugins/api/VariableAlias/) }; textRangeFills?: [VariableAlias](/docs/plugins/api/VariableAlias/)\[\] } \[readonly\]
@@ -42738,6 +42806,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -43662,6 +43732,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -44648,6 +44720,8 @@ An array of `ConnectorNode`s that are attached to a node.
 All component properties that are attached on this node. A node can only have `componentPropertyReferences` if it is a component sublayer or an instance sublayer. It will be `null` otherwise. The value in the key-value pair refers to the component property name as returned by `componentPropertyDefinitions` on the containing component, component set or main component (for instances).
 
 When setting, may throw the following errors: cannotApplySlotPropertyToNonFrameNode, cannotApplySlotPropertyToFrameWithGrid, or cannotApplySlotPropertyToFrame.
+
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 * * *
 
@@ -45778,13 +45852,9 @@ Supported on:
 
 ## Remarks​
 
-[Component properties-related properties](https://help.figma.com/hc/en-us/articles/5579474826519-Create-and-use-component-properties) define parts of the component people can change by tying them to specific design properties. You can create component properties for any main component or component set, and apply them to nested layers of the component or variant.
+[Component properties](https://help.figma.com/hc/en-us/articles/5579474826519-Create-and-use-component-properties) define the changeable aspects of a component by tying them to specific design properties. You can create component properties for any main component or component set, and apply them to nested layers of the component or variant.
 
-Component properties-related properties and methods for component sets, components, and instances
-
-```
-componentSet.componentPropertyDefinitions// Output{  Size: {    type: 'VARIANT',    defaultValue: 'Small',    variantOptions: ['Small', 'Medium', 'Large'],  },  IconVisible#0:0: {    type: 'BOOLEAN',    defaultValue: false,  },  ButtonText#0:1: {    type: 'TEXT',    defaultValue: 'submit',  },  IconInstance#0:2: {    type: 'INSTANCE_SWAP',    defaultValue: '1:1',    preferredValues: [      {type: 'COMPONENT', key: 'ckey1'},      {type: 'COMPONENT_SET', key: 'sgkey1'}    ],  },}// componentProperties on an instanceinstance.componentProperties// Output{  Size: {    type: 'VARIANT',    value: 'Medium',  },  IconVisible#0:0: {    type: 'BOOLEAN',    value: false,  },  ButtonText#0:1: {    type: 'TEXT',    value: 'cancel',  },  IconInstance#0:2: {    type: 'INSTANCE_SWAP',    defaultValue: '1:1',    preferredValues: [      {type: 'COMPONENT', key: 'ckey1'},      {type: 'COMPONENT_SET', key: 'sgkey1'}    ],  },}// component property definitions can be created, edited, and deletedcomponent.addComponentProperty("ButtonIcon", "INSTANCE_SWAP", "2:22")// returns "ButtonIcon#4:3"component.editComponentProperty(  "ButtonIcon#4:3",  {name: "PrimaryButtonIcon", defaultValue: "1:100"})// returns "PrimaryButtonIcon#5:5"component.deleteComponentProperty("PrimaryButtonIcon#5:5")// componentPropertyDefinitions and componentProperties work similarly for// main components and their instances but will never have 'VARIANT'// properties.component.componentPropertyDefinitions// Output{  ImageVisible#0:0: {    type: 'BOOLEAN',    defaultValue: true,  },  Icon#0:1: {    type: 'INSTANCE_SWAP',    defaultValue: '7:23',  },}instance.componentProperties// Output{  ImageVisible#0:0: {    type: 'BOOLEAN',    value: true,  },  Icon#0:1: {    type: 'INSTANCE_SWAP',    value: '1:24',  },}// component properties can be applied to node properties of nested layerscomponent.children[0].children[0].componentPropertyReferences = {  'visible': 'IconVisible#0:0'}component.children[0].children[0].visible// Outputfalse // gets value from component property definition// Use setProperties on an instance to configure itinstance.setProperties({ Size: 'Large', 'ButtonText#0:1': 'login' })instance.componentProperties// Output{  Size: {    type: 'VARIANT',    value: 'Large',  },  IconVisible#0:0: {    type: 'BOOLEAN',    value: false,  },  ButtonText#0:1: {    type: 'TEXT',    value: 'login',  },}instance.setProperties({ 'IconVisible#0:0': true })instance.componentProperties// Output{  Size: {    type: 'VARIANT',    value: 'Large',  },  IconVisible#0:0: {    type: 'BOOLEAN',    value: true,  },  ButtonText#0:1: {    type: 'TEXT',    value: 'login',  },}
-```
+See the [Working with Component Properties](/docs/plugins/working-with-component-properties/) guide for how to create properties and change their values in instances.
 
 [
 
@@ -52617,7 +52687,7 @@ Source: https://developers.figma.com/docs/plugins/api/properties/nodes-variantpr
 
 # variantProperties
 
-**DEPRECATED:** Use [`componentProperties`](/docs/plugins/api/InstanceNode/#componentproperties) instead.
+**DEPRECATED:** Deprecated for instances. Use [`componentProperties`](/docs/plugins/api/InstanceNode/#componentproperties) instead. Not deprecated for components/variants in component sets.
 
 Variant properties and values for this node. Is `null` for nodes that are not variants.
 
@@ -53062,7 +53132,7 @@ Source: https://developers.figma.com/docs/plugins/api/ComponentPropertyOptions/
 type ComponentPropertyOptions = {  preferredValues?: InstanceSwapPreferredValue[]  description?: string  slotSettings?: SlotSettings}
 ```
 
-Additional options that can be specified when creating a new component property. `description` and `slotSettings` are only applicable to slot properties. See [`SlotSettings`](/docs/plugins/api/SlotSettings/) for the available fields.
+Additional options that can be specified when creating a new component property with [`addComponentProperty`](/docs/plugins/api/ComponentNode/#addcomponentproperty). `description` and `slotSettings` are only applicable to slot properties. See [`SlotSettings`](/docs/plugins/api/SlotSettings/) for the available fields.
 
 [
 
