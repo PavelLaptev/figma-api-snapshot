@@ -66479,7 +66479,7 @@ Source: https://developers.figma.com/docs/plugins/api/VariableScope/
 # VariableScope
 
 ```
-type VariableScope =    "ALL_SCOPES" |    "TEXT_CONTENT" |    "CORNER_RADIUS" |    "WIDTH_HEIGHT" |    "GAP" |    "ALL_FILLS" |    "FRAME_FILL" |    "SHAPE_FILL" |    "TEXT_FILL" |    "STROKE_COLOR" |    "EFFECT_COLOR" |    "STROKE_FLOAT" |    "EFFECT_FLOAT" |    "OPACITY" |    "FONT_FAMILY" |    "FONT_STYLE" |    "FONT_WEIGHT" |    "FONT_SIZE" |    "LINE_HEIGHT" |    "LETTER_SPACING" |    "PARAGRAPH_SPACING" |    "PARAGRAPH_INDENT"
+type VariableScope =    "ALL_SCOPES" |    "TEXT_CONTENT" |    "CORNER_RADIUS" |    "WIDTH_HEIGHT" |    "GAP" |    "ALL_FILLS" |    "FRAME_FILL" |    "SHAPE_FILL" |    "TEXT_FILL" |    "STROKE_COLOR" |    "EFFECT_COLOR" |    "STROKE_FLOAT" |    "EFFECT_FLOAT" |    "OPACITY" |    "COLOR_OPACITY" |    "FONT_FAMILY" |    "FONT_STYLE" |    "FONT_WEIGHT" |    "FONT_SIZE" |    "LINE_HEIGHT" |    "LETTER_SPACING" |    "PARAGRAPH_SPACING" |    "PARAGRAPH_INDENT"
 ```
 
 Scopes allow a variable to be shown or hidden in the variable picker for various fields. This is useful to help declutter the Figma UI if you have a large number of variables. Scopes are currently supported for `FLOAT`, `STRING` and `COLOR` variables.
@@ -66488,7 +66488,9 @@ Scopes allow a variable to be shown or hidden in the variable picker for various
 
 `ALL_FILLS` is a special scope that means that the variable is available in the variable picker for all color fill fields. If `ALL_FILLS` is set, no additional fill scopes can be set.
 
-Valid scopes for `FLOAT` variables are: `ALL_SCOPES`, `TEXT_CONTENT`, `CORNER_RADIUS`, `WIDTH_HEIGHT`, `GAP`, `OPACITY`, `STROKE_FLOAT`, `EFFECT_FLOAT`, `FONT_WEIGHT`, `FONT_SIZE`, `LINE_HEIGHT`, `LETTER_SPACING`, `PARAGRAPH_SPACING`, and `PARAGRAPH_INDENT`.
+Valid scopes for `FLOAT` variables are: `ALL_SCOPES`, `TEXT_CONTENT`, `CORNER_RADIUS`, `WIDTH_HEIGHT`, `GAP`, `OPACITY`, `COLOR_OPACITY`, `STROKE_FLOAT`, `EFFECT_FLOAT`, `FONT_WEIGHT`, `FONT_SIZE`, `LINE_HEIGHT`, `LETTER_SPACING`, `PARAGRAPH_SPACING`, and `PARAGRAPH_INDENT`.
+
+`OPACITY` corresponds to layer opacity, while `COLOR_OPACITY` corresponds to the opacity channel of a color.
 
 Valid scopes for `COLOR` variables are: `ALL_SCOPES`, `ALL_FILLS`, `FRAME_FILL`, `SHAPE_FILL`, `TEXT_FILL`, `STROKE_COLOR`, and `EFFECT_COLOR`.
 
@@ -66523,7 +66525,7 @@ Source: https://developers.figma.com/docs/plugins/api/VariableValue/
 # VariableValue
 
 ```
-type VariableValue =  string |  number |  boolean |  RGB |  RGBA |  MotionEasing |  VariableAlias
+type VariableValue =  | string  | number  | boolean  | RGB  | RGBA  | MotionEasing  | VariableAlias  | VariableComposedColor
 ```
 
 [`MotionEasing`](/docs/plugins/api/Motion/) values are used by variables whose resolved type is `"EASING"`. Number values are used by both `"FLOAT"` and `"TIMING"` variables; timing values represent seconds.
@@ -66531,6 +66533,10 @@ type VariableValue =  string |  number |  boolean |  RGB |  RGBA |  MotionEasing
 ## Variable Alias​
 
 Used to alias variables to other variables. Each `VariableValue` has at least one corresponding [`VariableResolvedDataType`](/docs/plugins/api/VariableResolvedDataType/).
+
+## VariableComposedColor​
+
+Used to combine a color with a separate opacity percentage. Either the color or the opacity must be a [`VariableAlias`](/docs/plugins/api/VariableAlias/), or both.
 
 [
 
@@ -66547,6 +66553,7 @@ setBoundVariable
 ](/docs/plugins/api/properties/TextStyle-setboundvariable/)
 
 *   Variable Alias
+*   VariableComposedColor
 
 ---
 
