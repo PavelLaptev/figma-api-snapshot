@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/CustomAnimationStyle-animationentries/",
+  "path": "/docs/plugins/api/properties/CustomAnimationStyle-animationentries/",
+  "slug": "docs__plugins__api__properties__CustomAnimationStyle-animationentries",
+  "title": "animationEntries | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)\n*   animationEntries\n\n# animationEntries\n\nThe Figma animations contained in this custom animation style, in order.\n\n## Signature​\n\n### [animationEntries](/docs/plugins/api/properties/CustomAnimationStyle-animationentries/): [AnimationEntry](/docs/plugins/api/Motion/#animationentry)\\[\\] \\[readonly\\]\n\n## Remarks​\n\n```\nconst [style] = await figma.getLocalCustomAnimationStylesAsync()for (const entry of style?.animationEntries ?? []) {  console.log(entry.id, entry.name, entry.props)}\n```\n\n[\n\nPrevious\n\nCustomAnimationStyle\n\n](/docs/plugins/api/CustomAnimationStyle/)[\n\nNext\n\naddAnimationEntryAsync\n\n](/docs/plugins/api/properties/CustomAnimationStyle-addanimationentryasync/)\n\n*   Signature\n*   Remarks"
+}

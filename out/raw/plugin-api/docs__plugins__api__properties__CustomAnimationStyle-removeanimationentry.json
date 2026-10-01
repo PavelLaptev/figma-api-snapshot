@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.figma.com/docs/plugins/api/properties/CustomAnimationStyle-removeanimationentry/",
+  "path": "/docs/plugins/api/properties/CustomAnimationStyle-removeanimationentry/",
+  "slug": "docs__plugins__api__properties__CustomAnimationStyle-removeanimationentry",
+  "title": "removeAnimationEntry | Developer Docs",
+  "markdown": "*   [](/)\n*   Plugins\n*   [Data Types](/docs/plugins/api/data-types/)\n*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)\n*   removeAnimationEntry\n\n# removeAnimationEntry\n\nRemoves an animation entry from this custom animation style. Throws if the style is remote, or if the style has no entry with that id.\n\n## Signature​\n\n### removeAnimationEntry(id: string): void\n\n## Parameters​\n\n### id​\n\nThe `id` of the entry to remove, read from [`animationEntries`](/docs/plugins/api/properties/CustomAnimationStyle-animationentries/).\n\n[\n\nPrevious\n\naddAnimationEntryAsync\n\n](/docs/plugins/api/properties/CustomAnimationStyle-addanimationentryasync/)\n\n*   Signature\n*   Parameters\n    *   id"
+}

@@ -1667,6 +1667,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "CustomAnimationStyle | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/CustomAnimationStyle/",
+    "path": "/docs/plugins/api/CustomAnimationStyle/",
+    "slug": "docs__plugins__api__CustomAnimationStyle"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "Annotation | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/Annotation/",
     "path": "/docs/plugins/api/Annotation/",
@@ -3064,6 +3071,27 @@
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextStyle-setboundvariable/",
     "path": "/docs/plugins/api/properties/TextStyle-setboundvariable/",
     "slug": "docs__plugins__api__properties__TextStyle-setboundvariable"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "animationEntries | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/CustomAnimationStyle-animationentries/",
+    "path": "/docs/plugins/api/properties/CustomAnimationStyle-animationentries/",
+    "slug": "docs__plugins__api__properties__CustomAnimationStyle-animationentries"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "addAnimationEntryAsync | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/CustomAnimationStyle-addanimationentryasync/",
+    "path": "/docs/plugins/api/properties/CustomAnimationStyle-addanimationentryasync/",
+    "slug": "docs__plugins__api__properties__CustomAnimationStyle-addanimationentryasync"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "removeAnimationEntry | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/CustomAnimationStyle-removeanimationentry/",
+    "path": "/docs/plugins/api/properties/CustomAnimationStyle-removeanimationentry/",
+    "slug": "docs__plugins__api__properties__CustomAnimationStyle-removeanimationentry"
   },
   {
     "dataset": "plugin-api",

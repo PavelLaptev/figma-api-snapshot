@@ -628,7 +628,9 @@ Supported on:
 *   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
 *   [WidgetNode](/docs/plugins/api/WidgetNode/)
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -1523,6 +1525,7 @@ Supported on:
 
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [GridStyle](/docs/plugins/api/GridStyle/)
 *   [PaintStyle](/docs/plugins/api/PaintStyle/)
@@ -1540,6 +1543,7 @@ Supported on:
 
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [GridStyle](/docs/plugins/api/GridStyle/)
 *   [PaintStyle](/docs/plugins/api/PaintStyle/)
@@ -1593,6 +1597,7 @@ Supported on:
 
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [GridStyle](/docs/plugins/api/GridStyle/)
 *   [PaintStyle](/docs/plugins/api/PaintStyle/)
@@ -2326,6 +2331,7 @@ Supported on:
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 *   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [DocumentNode](/docs/plugins/api/DocumentNode/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [EllipseNode](/docs/plugins/api/EllipseNode/)
@@ -2377,6 +2383,7 @@ Supported on:
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 *   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [DocumentNode](/docs/plugins/api/DocumentNode/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [EllipseNode](/docs/plugins/api/EllipseNode/)
@@ -2425,6 +2432,7 @@ Supported on:
 
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [GridStyle](/docs/plugins/api/GridStyle/)
 *   [PaintStyle](/docs/plugins/api/PaintStyle/)
@@ -2775,6 +2783,7 @@ Supported on:
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 *   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [DocumentNode](/docs/plugins/api/DocumentNode/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [EllipseNode](/docs/plugins/api/EllipseNode/)
@@ -2826,6 +2835,7 @@ Supported on:
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 *   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [DocumentNode](/docs/plugins/api/DocumentNode/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [EllipseNode](/docs/plugins/api/EllipseNode/)
@@ -3684,6 +3694,7 @@ Supported on:
 
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [GridStyle](/docs/plugins/api/GridStyle/)
 *   [PaintStyle](/docs/plugins/api/PaintStyle/)
@@ -4716,6 +4727,7 @@ Supported on:
 
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [GridStyle](/docs/plugins/api/GridStyle/)
 *   [PaintStyle](/docs/plugins/api/PaintStyle/)
@@ -5407,6 +5419,7 @@ Supported on:
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 *   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [DocumentNode](/docs/plugins/api/DocumentNode/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [EllipseNode](/docs/plugins/api/EllipseNode/)
@@ -5821,6 +5834,7 @@ Supported on:
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 *   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [DocumentNode](/docs/plugins/api/DocumentNode/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [EllipseNode](/docs/plugins/api/EllipseNode/)
@@ -7858,6 +7872,16 @@ Creates a new Grid style.
 
 * * *
 
+### createCustomAnimationStyle(): [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
+
+info
+
+This API is only available in Figma Design
+
+Creates a new custom animation style. See [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
+
+* * *
+
 The APIs below allow access to local styles, which are returned in the same order as displayed in the UI. Only local styles are returned, not the ones from the team library.
 
 ### getLocalPaintStylesAsync(): Promise<[PaintStyle](/docs/plugins/api/PaintStyle/)\[\]>
@@ -7916,6 +7940,20 @@ Returns the list of local grid styles.
 
 * * *
 
+### getLocalCustomAnimationStylesAsync(): Promise<[CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)\[\]>
+
+Returns the list of local custom animation styles.
+
+* * *
+
+### getLocalCustomAnimationStyles(): [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)\[\]
+
+**DEPRECATED:** Use [`figma.getLocalCustomAnimationStylesAsync`](/docs/plugins/api/figma/#getlocalcustomanimationstylesasync) instead. This function will throw an exception if the plugin manifest contains `"documentAccess": "dynamic-page"`.
+
+Returns the list of local custom animation styles.
+
+* * *
+
 ### moveLocalPaintStyleAfter(targetNode: [PaintStyle](/docs/plugins/api/PaintStyle/), reference: [PaintStyle](/docs/plugins/api/PaintStyle/) | null): void
 
 info
@@ -7956,6 +7994,16 @@ Reorders a target node after the specified reference node (if provided) or to be
 
 * * *
 
+### moveLocalCustomAnimationStyleAfter(targetNode: [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/), reference: [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/) | null): void
+
+info
+
+This API is only available in Figma Design
+
+Reorders a target node after the specified reference node (if provided) or to be first if reference is null. The target and reference nodes must live in the same folder. The target and reference nodes must be local custom animation styles.
+
+* * *
+
 ### moveLocalPaintFolderAfter(targetFolder: string, reference: string | null): void
 
 info
@@ -7993,6 +8041,16 @@ info
 This API is only available in Figma Design
 
 Reorders a target folder after the specified reference folder (if provided) or to be first in the parent folder if reference is null. The target and reference folders must have the same parent folder. The target and reference folders must contain grid styles. When referring to nested folders, the full delimited folder name must be used. See the [`BaseStyle`](/docs/plugins/api/BaseStyle/) section for more info.
+
+* * *
+
+### moveLocalCustomAnimationFolderAfter(targetFolder: string, reference: string | null): void
+
+info
+
+This API is only available in Figma Design
+
+Reorders a target folder after the specified reference folder (if provided) or to be first in the parent folder if reference is null. The target and reference folders must have the same parent folder. The target and reference folders must contain custom animation styles. When referring to nested folders, the full delimited folder name must be used. See the [`BaseStyle`](/docs/plugins/api/BaseStyle/) section for more info.
 
 * * *
 
@@ -8595,7 +8653,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -14926,7 +14986,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -16026,7 +16088,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -16531,7 +16595,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -18054,7 +18120,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -19669,7 +19737,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -20409,7 +20479,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -21415,7 +21487,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -21847,7 +21921,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -23717,7 +23793,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -24153,7 +24231,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -25142,7 +25222,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -25570,7 +25652,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -26534,7 +26618,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -27058,7 +27144,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -28044,7 +28132,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -28970,7 +29060,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -30113,7 +30205,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -31059,7 +31153,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -31489,7 +31585,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -32209,7 +32307,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -32752,7 +32852,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -34184,7 +34286,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -34723,7 +34827,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -36152,7 +36258,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -37056,7 +37164,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -38126,7 +38236,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -38881,7 +38993,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -39855,7 +39969,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -41071,7 +41187,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -42434,7 +42552,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -42871,7 +42991,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -43797,7 +43919,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -44785,7 +44909,9 @@ Sets an explicit mode for the given collection on this node
 
 ### [animationStyles](/docs/plugins/api/properties/nodes-animationstyles/): [AppliedAnimationStyle](/docs/plugins/api/Motion/#appliedanimationstyle)\[\] \[readonly\]
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 [View more →](/docs/plugins/api/properties/nodes-animationstyles/)
 
@@ -45015,7 +45141,9 @@ Source: https://developers.figma.com/docs/plugins/api/properties/nodes-animation
 
 # animationStyles
 
-The Motion animation style instances currently applied to this node. Their `props` values are the configured property values for this node.
+The Motion animation style instances currently applied to this node.
+
+Each entry is discriminated by `type`: `"FIGMA"` for a Figma-provided animation style, whose `props` values are the configured property values for this node, and `"CUSTOM"` for a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 Supported on:
 
@@ -45061,7 +45189,7 @@ Supported on:
 ## Remarks​
 
 ```
-const node = figma.currentPage.selection[0]if (node) {  for (const style of node.animationStyles) {    console.log(style.name, style.id, style.props)  }}
+const node = figma.currentPage.selection[0]if (node) {  for (const style of node.animationStyles) {    if (style.type === 'FIGMA') {      console.log(style.name, style.id, style.props)    } else {      console.log(style.name, style.id)    }  }}
 ```
 
 [
@@ -45368,11 +45496,11 @@ Supported on:
 
 ### styleId​
 
-The `styleId` of the animation style to apply. Use [`figmaAnimationStyles`](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/) to get available styles.
+The animation style to apply. For a Figma animation style, the `styleId` from [`figmaAnimationStyles`](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/). For a custom animation style, the `id` of a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 ### animationStyleData​
 
-Optional values used to configure the applied animation style.
+Optional values used to configure the applied animation style. Omit `type`, or set it to `"FIGMA"`, for a Figma animation style; set it to `"CUSTOM"` to apply a custom animation style.
 
 ## Remarks​
 
@@ -46081,8 +46209,8 @@ Supported on:
 
 Changing this property on a non-wrapping auto-layout frame will throw an error.
 
-*   `"AUTO"`: If all children of this auto-layout frame have [`layoutAlign`](/docs/plugins/api/properties/nodes-layoutalign/) set to `"STRETCH"`, the tracks will stretch to fill the auto-layout frame. This is like flexbox `align-content: stretch`. Otherwise, each track will be as tall as the tallest child of the track, and will align based on the value of [`counterAxisAlignItems`](/docs/plugins/api/properties/nodes-counteraxisalignitems/). This is like flexbox `align-content: start | center | end`. [`counterAxisSpacing`](/docs/plugins/api/properties/nodes-counteraxisspacing/) is respected when `counterAxisAlignContent` is set to `"AUTO"`.
-*   `"SPACE_BETWEEN"`: Tracks are all sized based on the tallest child in the track. The free space within the auto-layout frame is divided up evenly between each track. If the total height of all tracks is taller than the height of the auto-layout frame, the spacing will be 0.
+*   `"AUTO"`: If all children of this auto-layout frame have [`layoutAlign`](/docs/plugins/api/properties/nodes-layoutalign/) set to `"STRETCH"`, the tracks will stretch to fill the auto-layout frame. This is like flexbox `align-content: stretch`. Otherwise, each track will be sized to the largest child along the counter axis, and will align based on the value of [`counterAxisAlignItems`](/docs/plugins/api/properties/nodes-counteraxisalignitems/). This is like flexbox `align-content: start | center | end`. [`counterAxisSpacing`](/docs/plugins/api/properties/nodes-counteraxisspacing/) is respected when `counterAxisAlignContent` is set to `"AUTO"`.
+*   `"SPACE_BETWEEN"`: Tracks are all sized based on the largest child along the counter axis in the track. The free space within the auto-layout frame is divided up evenly between each track. If the total size of all tracks along the counter axis exceeds the auto-layout frame’s counter-axis size, the spacing will be 0.
 
 [
 
@@ -46433,6 +46561,7 @@ Supported on:
 
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [GridStyle](/docs/plugins/api/GridStyle/)
 *   [PaintStyle](/docs/plugins/api/PaintStyle/)
@@ -46486,6 +46615,7 @@ Supported on:
 
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [GridStyle](/docs/plugins/api/GridStyle/)
 *   [PaintStyle](/docs/plugins/api/PaintStyle/)
@@ -46537,6 +46667,7 @@ Supported on:
 
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [GridStyle](/docs/plugins/api/GridStyle/)
 *   [PaintStyle](/docs/plugins/api/PaintStyle/)
@@ -49442,7 +49573,7 @@ Supported on:
 
 ## Remarks​
 
-This property can only be set on layers with `layoutMode === "HORIZONTAL"`. Setting it on layers without this property will throw an Error.
+This property can only be set on layers with `layoutMode === "HORIZONTAL"` or `layoutMode === "VERTICAL"`. Setting it on layers with a different `layoutMode` will throw an Error.
 
 This property must be set to `"WRAP"` in order for the [`counterAxisSpacing`](/docs/plugins/api/properties/nodes-counteraxisspacing/) and [`counterAxisAlignContent`](/docs/plugins/api/properties/nodes-counteraxisaligncontent/) properties to be applicable.
 
@@ -50447,7 +50578,7 @@ Supported on:
 
 ### id​
 
-The applied animation style instance id returned by [`applyAnimationStyle`](/docs/plugins/api/properties/nodes-applyanimationstyle/) or read from [`animationStyles`](/docs/plugins/api/properties/nodes-animationstyles/).
+The applied animation style instance id returned by [`applyAnimationStyle`](/docs/plugins/api/properties/nodes-applyanimationstyle/) or read from [`animationStyles`](/docs/plugins/api/properties/nodes-animationstyles/). The id determines which applied style is removed, whether it is a Figma animation style or a [`CustomAnimationStyle`](/docs/plugins/api/CustomAnimationStyle/).
 
 ## Remarks​
 
@@ -51408,6 +51539,7 @@ Supported on:
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 *   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [DocumentNode](/docs/plugins/api/DocumentNode/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [EllipseNode](/docs/plugins/api/EllipseNode/)
@@ -51708,6 +51840,7 @@ Supported on:
 *   [ComponentNode](/docs/plugins/api/ComponentNode/)
 *   [ComponentSetNode](/docs/plugins/api/ComponentSetNode/)
 *   [ConnectorNode](/docs/plugins/api/ConnectorNode/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 *   [DocumentNode](/docs/plugins/api/DocumentNode/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [EllipseNode](/docs/plugins/api/EllipseNode/)
@@ -53375,10 +53508,32 @@ type AvailableAnimationStylePropValue = string
 
 ## AppliedAnimationStyle​
 
-`AppliedAnimationStyle` is returned by `node.animationStyles`. Its `duration` and `timelineOffset` values are expressed in seconds. Its `props` values are the configured property values for that node.
+`AppliedAnimationStyle` is returned by `node.animationStyles`. Narrow on `type` before reading the Figma-only fields. Its `duration` and `timelineOffset` values are expressed in seconds. Its `props` values are the configured property values for that node.
 
 ```
-interface AppliedAnimationStyle {  readonly id: string  readonly styleId: string  readonly name: string  readonly duration?: number  readonly timelineOffset?: number  readonly props?: { readonly [key: string]: AnimationStylePropValue }}
+type AppliedAnimationStyle = AppliedFigmaAnimationStyle | AppliedCustomAnimationStyle
+```
+
+## AppliedFigmaAnimationStyle​
+
+```
+interface AppliedFigmaAnimationStyle {  readonly type: 'FIGMA'  readonly id: string  readonly styleId: string  readonly name: string  readonly description?: string  readonly duration?: number  readonly timelineOffset?: number  readonly props?: { readonly [key: string]: AnimationStylePropValue }}
+```
+
+## AppliedCustomAnimationStyle​
+
+`styleId` is the `id` of the [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/) this instance references.
+
+```
+interface AppliedCustomAnimationStyle {  readonly type: 'CUSTOM'  readonly id: string  readonly styleId: string  readonly name: string  readonly timelineOffset?: number}
+```
+
+## AnimationEntry​
+
+One Figma animation contained in a [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/). Read via `style.animationEntries` and created by `style.addAnimationEntryAsync()`.
+
+```
+type AnimationEntry = AppliedFigmaAnimationStyle
 ```
 
 ## AnimationStylePropValue​
@@ -53389,10 +53544,24 @@ type AnimationStylePropValue =  string | number | boolean | MotionEasing | Varia
 
 ## AnimationStyleConfiguration​
 
-`duration` and `timelineOffset` values are expressed in seconds.
+Passed to `node.applyAnimationStyle()`. `duration` and `timelineOffset` values are expressed in seconds and must be finite and non-negative. Omit `type`, or set it to `"FIGMA"`, to apply a Figma animation style; set it to `"CUSTOM"` to apply a [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/).
 
 ```
-interface AnimationStyleConfiguration {  readonly duration?: number  readonly timelineOffset?: number  readonly props?: { readonly [key: string]: AnimationStylePropValue }}
+type AnimationStyleConfiguration =  | FigmaAnimationStyleConfiguration  | CustomAnimationStyleConfiguration
+```
+
+## FigmaAnimationStyleConfiguration​
+
+```
+interface FigmaAnimationStyleConfiguration {  readonly type?: 'FIGMA'  readonly duration?: number  readonly timelineOffset?: number  readonly props?: { readonly [key: string]: AnimationStylePropValue }}
+```
+
+## CustomAnimationStyleConfiguration​
+
+A custom animation style carries its own duration and props, so only the timeline offset is configurable when applying one.
+
+```
+interface CustomAnimationStyleConfiguration {  readonly type: 'CUSTOM'  readonly timelineOffset?: number}
 ```
 
 ## MotionEasing​
@@ -53556,8 +53725,13 @@ NodeChange
 *   AvailableAnimationStyle
 *   AvailableAnimationStylePropValue
 *   AppliedAnimationStyle
+*   AppliedFigmaAnimationStyle
+*   AppliedCustomAnimationStyle
+*   AnimationEntry
 *   AnimationStylePropValue
 *   AnimationStyleConfiguration
+*   FigmaAnimationStyleConfiguration
+*   CustomAnimationStyleConfiguration
 *   MotionEasing
 *   NormalizedSpring
 *   PhysicalSpring
@@ -53580,6 +53754,217 @@ NodeChange
 *   ManualKeyframeTracks
 *   Animations
 *   Timeline
+
+---
+
+# CustomAnimationStyle | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/CustomAnimationStyle/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   CustomAnimationStyle
+
+# CustomAnimationStyle
+
+note
+
+The Motion API is available in Beta. This API is subject to change.
+
+## CustomAnimationStyle​
+
+A custom animation style is a reusable Motion animation defined in the file, as opposed to a Figma-provided animation style from [`figma.motion.figmaAnimationStyles()`](/docs/plugins/api/figma-motion/). It holds an ordered list of [animation entries](/docs/plugins/api/Motion/#animationentry), and is applied to a node with [`applyAnimationStyle`](/docs/plugins/api/node-properties/#applyanimationstyle) by passing `{ type: 'CUSTOM' }`:
+
+```
+const style = figma.createCustomAnimationStyle()style.name = 'Fade in'const [opacity] = figma.motion.figmaAnimationStyles()if (opacity) {  await style.addAnimationEntryAsync(opacity.styleId)}const node = figma.currentPage.selection[0]if (node) {  node.applyAnimationStyle(style.id, { type: 'CUSTOM', timelineOffset: 0.25 })}
+```
+
+Animation entries can only be added to and removed from local styles — both methods throw on a remote style.
+
+### type: 'CUSTOM\_ANIMATION'
+
+The string literal "CUSTOM\_ANIMATION" representing the style type. Always check the `type` before reading other properties.
+
+* * *
+
+### [animationEntries](/docs/plugins/api/properties/CustomAnimationStyle-animationentries/): [AnimationEntry](/docs/plugins/api/Motion/#animationentry)\[\] \[readonly\]
+
+The Figma animations contained in this custom animation style, in order.
+
+[View more →](/docs/plugins/api/properties/CustomAnimationStyle-animationentries/)
+
+* * *
+
+### [addAnimationEntryAsync](/docs/plugins/api/properties/CustomAnimationStyle-addanimationentryasync/)(styleId: string, props?: { \[key: string\]: [AnimationStylePropValue](/docs/plugins/api/Motion/#animationstylepropvalue) }): Promise<[AnimationEntry](/docs/plugins/api/Motion/#animationentry)\>
+
+Adds a Figma animation to this custom animation style and resolves with the created entry. Throws if the style is remote, or if the animation cannot be added programmatically.
+
+[View more →](/docs/plugins/api/properties/CustomAnimationStyle-addanimationentryasync/)
+
+* * *
+
+### removeAnimationEntry(id: string): void
+
+Removes an animation entry from this custom animation style. Throws if the style is remote, or if the style has no entry with that id.
+
+[View more →](/docs/plugins/api/properties/CustomAnimationStyle-removeanimationentry/)
+
+* * *
+
+## Base style properties​
+
+### id: string \[readonly\]
+
+The unique identifier of the style in the document the plugin is executing from. You can assign this value via `setFillStyleIdAsync`, `setStrokeStyleIdAsync`, `setTextStyleIdAsync`, etc. to make the node properties reflect that of the style node.
+
+* * *
+
+### getStyleConsumersAsync(): Promise<[StyleConsumers](/docs/plugins/api/StyleConsumers/)\[\]>
+
+The consumers of this style. The `fields` in `StyleConsumers` refers to the field where the style is applied (e.g. a PaintStyle can be applied in `setFillStyleIdAsync` or `setStrokeStyleIdAsync`).
+
+* * *
+
+### consumers: [StyleConsumers](/docs/plugins/api/StyleConsumers/)\[\] \[readonly\]
+
+**DEPRECATED:** Use `getStyleConsumersAsync` instead. Accessing this property will throw an exception if the plugin manifest contains `"documentAccess": "dynamic-page"`.
+
+The consumers of this style. The `fields` in `StyleConsumers` refers to the field where the style is applied (e.g. a PaintStyle can be applied in `setFillStyleIdAsync` or `setStrokeStyleIdAsync`).
+
+* * *
+
+### name: string
+
+The name of the style node. Note that setting this also sets "autoRename" to false on [`TextNode`](/docs/plugins/api/TextNode/).
+
+* * *
+
+### remove(): void
+
+Deletes a local style.
+
+* * *
+
+## Plugin data properties​
+
+### getPluginData(key: string): string
+
+Retrieves custom information that was stored on this node or style using [`setPluginData`](/docs/plugins/api/properties/nodes-setplugindata/). If there is no data stored for the provided key, an empty string is returned.
+
+* * *
+
+### [setPluginData](/docs/plugins/api/properties/nodes-setplugindata/)(key: string, value: string): void
+
+Lets you store custom information on any node or style, **private** to your plugin. The total size of your entry (`pluginId`, `key`, `value`) cannot exceed 100 kB.
+
+[View more →](/docs/plugins/api/properties/nodes-setplugindata/)
+
+* * *
+
+### getPluginDataKeys(): string\[\]
+
+Retrieves a list of all keys stored on this node or style using using [`setPluginData`](/docs/plugins/api/properties/nodes-setplugindata/). This enables iterating through all data stored privately on a node or style by your plugin.
+
+* * *
+
+### getSharedPluginData(namespace: string, key: string): string
+
+Retrieves custom information that was stored on this node or style using [`setSharedPluginData`](/docs/plugins/api/properties/nodes-setsharedplugindata/). If there is no data stored for the provided namespace and key, an empty string is returned.
+
+* * *
+
+### [setSharedPluginData](/docs/plugins/api/properties/nodes-setsharedplugindata/)(namespace: string, key: string, value: string): void
+
+Lets you store custom information on any node or style, **public** to all plugins. The total size of your entry (`namespace`, `key`, `value`) cannot exceed 100 kB.
+
+[View more →](/docs/plugins/api/properties/nodes-setsharedplugindata/)
+
+* * *
+
+### getSharedPluginDataKeys(namespace: string): string\[\]
+
+Retrieves a list of all keys stored on this node or style using [`setSharedPluginData`](/docs/plugins/api/properties/nodes-setsharedplugindata/). This enables iterating through all data stored in a given namespace.
+
+* * *
+
+## Publishable properties​
+
+### [description](/docs/plugins/api/properties/nodes-description/): string
+
+The plain-text annotation entered by the user for this style/component.
+
+[View more →](/docs/plugins/api/properties/nodes-description/)
+
+* * *
+
+### [descriptionMarkdown](/docs/plugins/api/properties/nodes-descriptionmarkdown/): string
+
+The rich-text annotation entered by the user for this style/component.
+
+[View more →](/docs/plugins/api/properties/nodes-descriptionmarkdown/)
+
+* * *
+
+### [documentationLinks](/docs/plugins/api/properties/nodes-documentationlinks/): ReadonlyArray<[DocumentationLink](/docs/plugins/api/DocumentationLink/)\>
+
+The documentation links for this style/component.
+
+[View more →](/docs/plugins/api/properties/nodes-documentationlinks/)
+
+* * *
+
+### remote: boolean \[readonly\]
+
+Whether this style/component is a remote style/component that doesn't live in the file (i.e. is from the team library). Remote components are read-only: attempts to change their properties will throw.
+
+* * *
+
+### key: string \[readonly\]
+
+The key to use with [`figma.importComponentByKeyAsync`](/docs/plugins/api/figma/#importcomponentbykeyasync), [`figma.importComponentSetByKeyAsync`](/docs/plugins/api/figma/#importcomponentsetbykeyasync) and [`figma.importStyleByKeyAsync`](/docs/plugins/api/figma/#importstylebykeyasync). Note that while this key is present on local and published components, you can only import components that are already published.
+
+* * *
+
+### getPublishStatusAsync(): Promise<[PublishStatus](/docs/plugins/api/PublishStatus/)\>
+
+Gets the status of this style/component in the team library.
+
+* * *
+
+## Folders​
+
+Styles can be put inside folders (including nested folders) by setting the name of the style to be a delimited path name. For example, the following code would move a paint style named `Style 1` into a nested folder named `b`. Folder `b` resides in folder `a`.
+
+```
+const style = figma.createPaintStyle() style.name = "a/b/Style 1"
+```
+
+Folder names cannot be empty strings and they are unique within the same hierarchy. Since two nested folders can have the same name when residing in different parent folders, we refer to folders by their absolute delimited folder name. The following function `getNamePrefix` can be used to get the absolute folder name given a style name.
+
+```
+const getNameParts = (name: string) => {  const nameParts = name.split('/').filter((part: string) => !!part)  return nameParts.map((part: string) => part.trim())}const getNamePrefix = (name: string): string => {  const pathParts = getNameParts(name)  pathParts.pop()  return pathParts.join('/')}
+```
+
+[
+
+Previous
+
+TextStyle
+
+](/docs/plugins/api/TextStyle/)[
+
+Next
+
+animationEntries
+
+](/docs/plugins/api/properties/CustomAnimationStyle-animationentries/)
+
+*   CustomAnimationStyle
+*   Base style properties
+*   Plugin data properties
+*   Publishable properties
+*   Folders
 
 ---
 
@@ -55874,7 +56259,13 @@ Previous
 
 PaintStyle
 
-](/docs/plugins/api/PaintStyle/)
+](/docs/plugins/api/PaintStyle/)[
+
+Next
+
+CustomAnimationStyle
+
+](/docs/plugins/api/CustomAnimationStyle/)
 
 *   TextStyle
 *   Base style properties
@@ -61976,7 +62367,7 @@ Source: https://developers.figma.com/docs/plugins/api/BaseStyle/
 
 # BaseStyle
 
-[Styles](https://help.figma.com/hc/en-us/articles/360039238753-Styles-in-Figma) in Figma define reusable colors, text properties, effects, or layout grids that can be applied to nodes.
+[Styles](https://help.figma.com/hc/en-us/articles/360039238753-Styles-in-Figma) in Figma define reusable colors, text properties, effects, layout grids, or Motion animations that can be applied to nodes.
 
 Here are the different types of styles, each with their own set of properties:
 
@@ -61984,11 +62375,12 @@ Here are the different types of styles, each with their own set of properties:
 *   [TextStyle](/docs/plugins/api/TextStyle/)
 *   [EffectStyle](/docs/plugins/api/EffectStyle/)
 *   [GridStyle](/docs/plugins/api/GridStyle/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
 
 In the [type declarations](/docs/plugins/api/typings/), each style type is represented with an interface. The most general, `BaseStyle`, is a [union](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) of these interfaces:
 
 ```
-type BaseStyle = PaintStyle | TextStyle | EffectStyle | GridStyle
+type BaseStyle = PaintStyle | TextStyle | EffectStyle | GridStyle | CustomAnimationStyle
 ```
 
 ## Base style properties​
@@ -66605,6 +66997,143 @@ LibraryVariable
 *   Parameters
     *   field
     *   variable
+
+---
+
+# animationEntries | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/CustomAnimationStyle-animationentries/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
+*   animationEntries
+
+# animationEntries
+
+The Figma animations contained in this custom animation style, in order.
+
+## Signature​
+
+### [animationEntries](/docs/plugins/api/properties/CustomAnimationStyle-animationentries/): [AnimationEntry](/docs/plugins/api/Motion/#animationentry)\[\] \[readonly\]
+
+## Remarks​
+
+```
+const [style] = await figma.getLocalCustomAnimationStylesAsync()for (const entry of style?.animationEntries ?? []) {  console.log(entry.id, entry.name, entry.props)}
+```
+
+[
+
+Previous
+
+CustomAnimationStyle
+
+](/docs/plugins/api/CustomAnimationStyle/)[
+
+Next
+
+addAnimationEntryAsync
+
+](/docs/plugins/api/properties/CustomAnimationStyle-addanimationentryasync/)
+
+*   Signature
+*   Remarks
+
+---
+
+# addAnimationEntryAsync | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/CustomAnimationStyle-addanimationentryasync/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
+*   addAnimationEntryAsync
+
+# addAnimationEntryAsync
+
+Adds a Figma animation to this custom animation style and resolves with the created entry. Throws if the style is remote, or if the animation cannot be added programmatically.
+
+## Signature​
+
+### [addAnimationEntryAsync](/docs/plugins/api/properties/CustomAnimationStyle-addanimationentryasync/)(styleId: string, props?: { \[key: string\]: [AnimationStylePropValue](/docs/plugins/api/Motion/#animationstylepropvalue) }): Promise<[AnimationEntry](/docs/plugins/api/Motion/#animationentry)\>
+
+## Parameters​
+
+### styleId​
+
+The `styleId` of the Figma animation style to add, from [`figmaAnimationStyles`](/docs/plugins/api/properties/figma-motion-figmaanimationstyles/).
+
+### props​
+
+Optional property overrides for the new entry.
+
+## Remarks​
+
+```
+const style = figma.createCustomAnimationStyle()const [opacity] = figma.motion.figmaAnimationStyles()if (opacity) {  const entry = await style.addAnimationEntryAsync(opacity.styleId)  console.log(entry.id, entry.name)}
+```
+
+[
+
+Previous
+
+animationEntries
+
+](/docs/plugins/api/properties/CustomAnimationStyle-animationentries/)[
+
+Next
+
+removeAnimationEntry
+
+](/docs/plugins/api/properties/CustomAnimationStyle-removeanimationentry/)
+
+*   Signature
+*   Parameters
+    *   styleId
+    *   props
+*   Remarks
+
+---
+
+# removeAnimationEntry | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/CustomAnimationStyle-removeanimationentry/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   [CustomAnimationStyle](/docs/plugins/api/CustomAnimationStyle/)
+*   removeAnimationEntry
+
+# removeAnimationEntry
+
+Removes an animation entry from this custom animation style. Throws if the style is remote, or if the style has no entry with that id.
+
+## Signature​
+
+### removeAnimationEntry(id: string): void
+
+## Parameters​
+
+### id​
+
+The `id` of the entry to remove, read from [`animationEntries`](/docs/plugins/api/properties/CustomAnimationStyle-animationentries/).
+
+[
+
+Previous
+
+addAnimationEntryAsync
+
+](/docs/plugins/api/properties/CustomAnimationStyle-addanimationentryasync/)
+
+*   Signature
+*   Parameters
+    *   id
 
 ---
 
