@@ -54298,6 +54298,12 @@ The read/write map of property assignments, keyed by property-definition id (the
 
 * * *
 
+### propertyMetadata?: { \[defId: string\]: [ShaderPropertyDefinition](/docs/plugins/api/Shader/#shaderpropertydefinition) } \[readonly\]
+
+Read-only property definitions, keyed by the same ids as `properties`. Each entry includes the name, input type, and any default value or description. Supplied on reads of an applied shader fill or stroke.
+
+* * *
+
 [
 
 Previous
@@ -56878,6 +56884,12 @@ The id of the shader, as returned by [`figma.listAvailableShaders`](/docs/plugin
 ### properties?: { \[defId: string\]: [ShaderPropertyValue](/docs/plugins/api/Shader/#shaderpropertyvalue) } \[readonly\]
 
 The read/write map of property assignments, keyed by property-definition id (the keys of [`propertyDefinitions`](/docs/plugins/api/Shader/#propertydefinitions), not property names). On reads, this is populated with the effect's current assignments, including author-defined defaults, so a plugin can discover the available ids after the shader is applied.
+
+* * *
+
+### propertyMetadata?: { \[defId: string\]: [ShaderPropertyDefinition](/docs/plugins/api/Shader/#shaderpropertydefinition) } \[readonly\]
+
+Read-only property definitions, keyed by the same ids as `properties`. Each entry includes the name, input type, and any default value or description. Supplied on reads of an applied shader effect.
 
 * * *
 
