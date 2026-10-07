@@ -1,6 +1,6 @@
 {
   "name": "figma-api-snapshot",
-  "version": "1.218.0",
+  "version": "1.219.0",
   "description": "Crawl and compress Figma Plugin API docs into LLM-friendly local datasets",
   "type": "module",
   "private": true,
