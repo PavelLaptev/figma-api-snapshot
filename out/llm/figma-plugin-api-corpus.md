@@ -9887,7 +9887,7 @@ Source: https://developers.figma.com/docs/plugins/api/figma-util/
 
 The `figma.util` global object provides a set of convenience functions for common operations.
 
-### rgb(color: string | [RGB](/docs/plugins/api/RGB/) | [RGBA](/docs/plugins/api/RGB/#rgba)): [RGB](/docs/plugins/api/RGB/)
+### rgb(color: string | [RGBWithColorSpace](/docs/plugins/api/RGB/) | [RGBAWithColorSpace](/docs/plugins/api/RGB/) | [ColorWithColorSpace](/docs/plugins/api/RGB/)): [RGBWithColorSpace](/docs/plugins/api/RGB/)
 
 Creates an `RGB` color object from a variety of common color encodings.
 
@@ -9911,11 +9911,11 @@ const rgb = figma.util.rgbconst color = rgb('#FF00FF')
 
 * * *
 
-### rgba(color: string | [RGB](/docs/plugins/api/RGB/) | [RGBA](/docs/plugins/api/RGB/#rgba)): [RGBA](/docs/plugins/api/RGB/#rgba)
+### rgba(color: string | [RGBWithColorSpace](/docs/plugins/api/RGB/) | [RGBAWithColorSpace](/docs/plugins/api/RGB/) | [ColorWithColorSpace](/docs/plugins/api/RGB/), alphaOverride?: number): [RGBAWithColorSpace](/docs/plugins/api/RGB/)
 
 Creates an `RGBA` color object from a variety of common color encodings.
 
-Accepted color formats include CSS color strings with hex, `rgb()`, `hsl()`, or `lab()` encodings, as well as `RGB` and `RGBA` objects. Alpha defaults to 1 (opaque) if not provided in the input. If a string encoding cannot be parsed, an error will be thrown.
+Accepted color formats include CSS color strings with hex, `rgb()`, `hsl()`, or `lab()` encodings, as well as `RGB`, `RGBA`, and `ColorWithColorSpace` objects. Alpha defaults to 1 (opaque) if not provided in the input. If supplied, `alphaOverride` takes precedence over alpha encoded in `color`. If a string encoding cannot be parsed, an error will be thrown.
 
 Examples:
 
@@ -9933,7 +9933,7 @@ const rgba = figma.util.rgbaconst color = rgba('rgb(25% 25% 25% / 0.5)')
 
 * * *
 
-### solidPaint(color: string | [RGB](/docs/plugins/api/RGB/) | [RGBA](/docs/plugins/api/RGB/#rgba), overrides?: Partial<[SolidPaint](/docs/plugins/api/Paint/#solidpaint)\>): [SolidPaint](/docs/plugins/api/Paint/#solidpaint)
+### solidPaint(color: string | [RGBWithColorSpace](/docs/plugins/api/RGB/) | [RGBAWithColorSpace](/docs/plugins/api/RGB/) | [ColorWithColorSpace](/docs/plugins/api/RGB/), overrides?: Partial<[SolidPaint](/docs/plugins/api/Paint/#solidpaint)\>): [SolidPaint](/docs/plugins/api/Paint/#solidpaint)
 
 Creates a `SolidPaint` object, assigning color and opacity from a variety of common color encodings.
 
@@ -9944,7 +9944,7 @@ Optionally, you can provide a set of overrides for any of the non-color properti
 Examples:
 
 ```
-// Set the current page background to redfigma.currentPage.backgrounds = [figma.util.solidPaint("#FF0000")]// Modify an existing SolidPaint with new color and opacityif (node.fills[0].type === 'SOLID') {  const updated = figma.util.solidPaint('#FF00FF88', node.fills[0])}
+// Set the current page background to redfigma.currentPage.backgrounds = [figma.util.solidPaint("#FF0000")]// Create a solid paint from an OKLCH colorfigma.currentPage.backgrounds = [figma.util.solidPaint('oklch(40.1% 0.123 21.57)')]// Modify an existing SolidPaint with new color and opacityif (node.fills[0].type === 'SOLID') {  const updated = figma.util.solidPaint('#FF00FF88', node.fills[0])}
 ```
 
 You can alias this function for more concise code:
@@ -54078,7 +54078,7 @@ The string literal "SOLID" representing the type of paint this is. Always check 
 
 * * *
 
-### color: [RGB](/docs/plugins/api/RGB/) \[readonly\]
+### color: [RGBWithColorSpace](/docs/plugins/api/RGB/) \[readonly\]
 
 The color of the paint. This does not have a alpha property, use `opacity` instead.
 
@@ -54180,7 +54180,7 @@ The position of the stop along the gradient between 0 and 1
 
 * * *
 
-### color: [RGBA](/docs/plugins/api/RGB/#rgba) \[readonly\]
+### color: [RGBAWithColorSpace](/docs/plugins/api/RGB/) \[readonly\]
 
 The color value of the gradient stop
 
@@ -56491,7 +56491,7 @@ The string literal representing the type of effect this is. Always check the `ty
 
 * * *
 
-### color: [RGBA](/docs/plugins/api/RGB/#rgba) \[readonly\]
+### color: [RGBAWithColorSpace](/docs/plugins/api/RGB/) \[readonly\]
 
 The color of the shadow, including its opacity.
 
@@ -56547,7 +56547,7 @@ The string literal representing the type of effect this is. Always check the `ty
 
 * * *
 
-### color: [RGBA](/docs/plugins/api/RGB/#rgba) \[readonly\]
+### color: [RGBAWithColorSpace](/docs/plugins/api/RGB/) \[readonly\]
 
 The color of the shadow, including its opacity.
 
@@ -56677,7 +56677,7 @@ The string literal representing the type of effect this is. Always check the `ty
 
 * * *
 
-### color: [RGBA](/docs/plugins/api/RGB/#rgba) \[readonly\]
+### color: [RGBAWithColorSpace](/docs/plugins/api/RGB/) \[readonly\]
 
 The color of the noise effect.
 
@@ -56735,7 +56735,7 @@ The string literal representing the type of noise this is. Always check the `noi
 
 * * *
 
-### secondaryColor: [RGBA](/docs/plugins/api/RGB/#rgba) \[readonly\]
+### secondaryColor: [RGBAWithColorSpace](/docs/plugins/api/RGB/) \[readonly\]
 
 The secondary color of the noise effect.
 
@@ -61371,6 +61371,8 @@ Represents a color just like RGBA but without an alpha value. This is only used 
 
 Figma supports [color management](https://help.figma.com/hc/en-us/articles/360039825114). All colors are specified in the same color space which will be the color profile of the document, [`documentColorProfile`](/docs/plugins/api/DocumentNode/#documentcolorprofile).
 
+Color values in paints, gradient stops, and effects can include a `sourceColor` property that preserves the original color space and components used to author the color. The `r`, `g`, and `b` fields remain the RGB projection for the current document color profile. Supported source color spaces are `SRGB`, `DISPLAY_P3`, `HSL`, `HSB`, `OKLAB`, and `OKLCH`.
+
 [
 
 Previous
@@ -63058,13 +63060,13 @@ const rgb = figma.util.rgbconst color = rgb('#FF00FF')
 
 ## Signature​
 
-### rgb(color: string | [RGB](/docs/plugins/api/RGB/) | [RGBA](/docs/plugins/api/RGB/#rgba)): [RGB](/docs/plugins/api/RGB/)
+### rgb(color: string | [RGBWithColorSpace](/docs/plugins/api/RGB/) | [RGBAWithColorSpace](/docs/plugins/api/RGB/) | [ColorWithColorSpace](/docs/plugins/api/RGB/)): [RGBWithColorSpace](/docs/plugins/api/RGB/)
 
 ## Parameters​
 
 ### color​
 
-A CSS color string, `RGB` object, or `RGBA` object. The input color's alpha value, if any, will be ignored.
+A CSS color string, `RGB` object, `RGBA` object, or `ColorWithColorSpace`. The input color's alpha value, if any, will be ignored.
 
 [
 
@@ -63101,7 +63103,7 @@ Source: https://developers.figma.com/docs/plugins/api/properties/figma-util-rgba
 
 Creates an `RGBA` color object from a variety of common color encodings.
 
-Accepted color formats include CSS color strings with hex, `rgb()`, `hsl()`, or `lab()` encodings, as well as `RGB` and `RGBA` objects. Alpha defaults to 1 (opaque) if not provided in the input. If a string encoding cannot be parsed, an error will be thrown.
+Accepted color formats include CSS color strings with hex, `rgb()`, `hsl()`, or `lab()` encodings, as well as `RGB`, `RGBA`, and `ColorWithColorSpace` objects. Alpha defaults to 1 (opaque) if not provided in the input. If supplied, `alphaOverride` takes precedence over alpha encoded in `color`. If a string encoding cannot be parsed, an error will be thrown.
 
 Examples:
 
@@ -63117,13 +63119,17 @@ const rgba = figma.util.rgbaconst color = rgba('rgb(25% 25% 25% / 0.5)')
 
 ## Signature​
 
-### rgba(color: string | [RGB](/docs/plugins/api/RGB/) | [RGBA](/docs/plugins/api/RGB/#rgba)): [RGBA](/docs/plugins/api/RGB/#rgba)
+### rgba(color: string | [RGBWithColorSpace](/docs/plugins/api/RGB/) | [RGBAWithColorSpace](/docs/plugins/api/RGB/) | [ColorWithColorSpace](/docs/plugins/api/RGB/), alphaOverride?: number): [RGBAWithColorSpace](/docs/plugins/api/RGB/)
 
 ## Parameters​
 
 ### color​
 
-A CSS color string, `RGB` object, or `RGBA` object.
+A CSS color string, `RGB` object, `RGBA` object, or `ColorWithColorSpace`.
+
+### alphaOverride​
+
+An optional alpha value that takes precedence over alpha encoded in `color`.
 
 [
 
@@ -63142,6 +63148,7 @@ solidPaint
 *   Signature
 *   Parameters
     *   color
+    *   alphaOverride
 
 ---
 
@@ -63167,7 +63174,7 @@ Optionally, you can provide a set of overrides for any of the non-color properti
 Examples:
 
 ```
-// Set the current page background to redfigma.currentPage.backgrounds = [figma.util.solidPaint("#FF0000")]// Modify an existing SolidPaint with new color and opacityif (node.fills[0].type === 'SOLID') {  const updated = figma.util.solidPaint('#FF00FF88', node.fills[0])}
+// Set the current page background to redfigma.currentPage.backgrounds = [figma.util.solidPaint("#FF0000")]// Create a solid paint from an OKLCH colorfigma.currentPage.backgrounds = [figma.util.solidPaint('oklch(40.1% 0.123 21.57)')]// Modify an existing SolidPaint with new color and opacityif (node.fills[0].type === 'SOLID') {  const updated = figma.util.solidPaint('#FF00FF88', node.fills[0])}
 ```
 
 You can alias this function for more concise code:
@@ -63178,7 +63185,7 @@ const solidPaint = figma.util.solidPaint// Set the current page background to re
 
 ## Signature​
 
-### solidPaint(color: string | [RGB](/docs/plugins/api/RGB/) | [RGBA](/docs/plugins/api/RGB/#rgba), overrides?: Partial<[SolidPaint](/docs/plugins/api/Paint/#solidpaint)\>): [SolidPaint](/docs/plugins/api/Paint/#solidpaint)
+### solidPaint(color: string | [RGBWithColorSpace](/docs/plugins/api/RGB/) | [RGBAWithColorSpace](/docs/plugins/api/RGB/) | [ColorWithColorSpace](/docs/plugins/api/RGB/), overrides?: Partial<[SolidPaint](/docs/plugins/api/Paint/#solidpaint)\>): [SolidPaint](/docs/plugins/api/Paint/#solidpaint)
 
 ## Parameters​
 
