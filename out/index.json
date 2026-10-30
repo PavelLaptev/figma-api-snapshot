@@ -1072,6 +1072,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "getRangeAllFontNames | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-getrangeallfontnames/",
+    "path": "/docs/plugins/api/properties/TextNode-getrangeallfontnames/",
+    "slug": "docs__plugins__api__properties__TextNode-getrangeallfontnames"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "getStyledTextSegments | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/TextNode-getstyledtextsegments/",
     "path": "/docs/plugins/api/properties/TextNode-getstyledtextsegments/",

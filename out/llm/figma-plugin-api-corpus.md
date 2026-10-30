@@ -2442,7 +2442,7 @@ Gets the status of this style/component in the team library.
 
 * * *
 
-### getRangeAllFontNames(start: number, end: number): [FontName](/docs/plugins/api/FontName/)\[\]
+### [getRangeAllFontNames](/docs/plugins/api/properties/TextNode-getrangeallfontnames/)(start: number, end: number): [FontName](/docs/plugins/api/FontName/)\[\]
 
 Supported on:
 
@@ -2451,6 +2451,8 @@ Supported on:
 *   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
 
 Get the `fontName`s from characters in range `start` (inclusive) to `end` (exclusive). For [variable fonts](/docs/plugins/api/FontName/), each entry includes [`variationSettings`](/docs/plugins/api/FontName/#variationsettings).
+
+[View more →](/docs/plugins/api/properties/TextNode-getrangeallfontnames/)
 
 * * *
 
@@ -39411,9 +39413,11 @@ Set the `fontName` from characters in range `start` (inclusive) to `end` (exclus
 
 * * *
 
-### getRangeAllFontNames(start: number, end: number): [FontName](/docs/plugins/api/FontName/)\[\]
+### [getRangeAllFontNames](/docs/plugins/api/properties/TextNode-getrangeallfontnames/)(start: number, end: number): [FontName](/docs/plugins/api/FontName/)\[\]
 
 Get the `fontName`s from characters in range `start` (inclusive) to `end` (exclusive). For [variable fonts](/docs/plugins/api/FontName/), each entry includes [`variationSettings`](/docs/plugins/api/FontName/#variationsettings).
+
+[View more →](/docs/plugins/api/properties/TextNode-getrangeallfontnames/)
 
 * * *
 
@@ -40785,9 +40789,11 @@ Set the `fontName` from characters in range `start` (inclusive) to `end` (exclus
 
 * * *
 
-### getRangeAllFontNames(start: number, end: number): [FontName](/docs/plugins/api/FontName/)\[\]
+### [getRangeAllFontNames](/docs/plugins/api/properties/TextNode-getrangeallfontnames/)(start: number, end: number): [FontName](/docs/plugins/api/FontName/)\[\]
 
 Get the `fontName`s from characters in range `start` (inclusive) to `end` (exclusive). For [variable fonts](/docs/plugins/api/FontName/), each entry includes [`variationSettings`](/docs/plugins/api/FontName/#variationsettings).
+
+[View more →](/docs/plugins/api/properties/TextNode-getrangeallfontnames/)
 
 * * *
 
@@ -47658,13 +47664,61 @@ fontName
 
 Next
 
+getRangeAllFontNames
+
+](/docs/plugins/api/properties/TextNode-getrangeallfontnames/)
+
+*   Signature
+*   Parameters
+    *   options
+
+---
+
+# getRangeAllFontNames | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/TextNode-getrangeallfontnames/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   getRangeAllFontNames
+
+# getRangeAllFontNames
+
+Get the `fontName`s from characters in range `start` (inclusive) to `end` (exclusive). For [variable fonts](/docs/plugins/api/FontName/), each entry includes [`variationSettings`](/docs/plugins/api/FontName/#variationsettings).
+
+Supported on:
+
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TextSublayerNode](/docs/plugins/api/TextSublayer/)
+
+## Signature​
+
+### [getRangeAllFontNames](/docs/plugins/api/properties/TextNode-getrangeallfontnames/)(start: number, end: number): [FontName](/docs/plugins/api/FontName/)\[\]
+
+## Remarks​
+
+Throws if `start === end` (an empty range). Only call `node.getRangeAllFontNames(0, node.characters.length)` when `node.characters.length > 0`.
+
+For empty text, load the node's concrete `fontName` with [`figma.loadFontAsync`](/docs/plugins/api/properties/figma-loadfontasync/) before editing instead of enumerating a range.
+
+[
+
+Previous
+
+getDevResourcesAsync
+
+](/docs/plugins/api/properties/nodes-getdevresourcesasync/)[
+
+Next
+
 getStyledTextSegments
 
 ](/docs/plugins/api/properties/TextNode-getstyledtextsegments/)
 
 *   Signature
-*   Parameters
-    *   options
+*   Remarks
 
 ---
 
@@ -47764,9 +47818,9 @@ See [`insertCharacters`](/docs/plugins/api/properties/TextNode-insertcharacters/
 
 Previous
 
-getDevResourcesAsync
+getRangeAllFontNames
 
-](/docs/plugins/api/properties/nodes-getdevresourcesasync/)[
+](/docs/plugins/api/properties/TextNode-getrangeallfontnames/)[
 
 Next
 
@@ -54294,7 +54348,9 @@ The id of the shader, as returned by [`figma.listAvailableShaders`](/docs/plugin
 
 ### properties?: { \[defId: string\]: [ShaderPropertyValue](/docs/plugins/api/Shader/#shaderpropertyvalue) } \[readonly\]
 
-The read/write map of property assignments, keyed by property-definition id (the keys of [`propertyDefinitions`](/docs/plugins/api/Shader/#propertydefinitions), not property names). On reads, this is populated with the paint's current assignments, including author-defined defaults, so a plugin can discover the available ids after the shader is applied.
+The read/write map of property assignments, keyed by property-definition id (the keys of [`propertyDefinitions`](/docs/plugins/api/Shader/#propertydefinitions), not property names). On reads, this is populated with the paint's current assignments, including author-defined defaults, so a plugin can discover the available ids after the shader is applied. Animated properties are omitted; read their tracks through [`manualKeyframeTracks`](/docs/plugins/api/properties/nodes-manualkeyframetracks/).
+
+On writes, omitted static properties reset to their author-defined defaults. For the same shader at the same array index, omitted animated properties keep their keyframe bindings, even when `properties` is empty or absent. Use [`removeManualKeyframeTrack`](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/) to remove a track.
 
 * * *
 
@@ -56883,7 +56939,9 @@ The id of the shader, as returned by [`figma.listAvailableShaders`](/docs/plugin
 
 ### properties?: { \[defId: string\]: [ShaderPropertyValue](/docs/plugins/api/Shader/#shaderpropertyvalue) } \[readonly\]
 
-The read/write map of property assignments, keyed by property-definition id (the keys of [`propertyDefinitions`](/docs/plugins/api/Shader/#propertydefinitions), not property names). On reads, this is populated with the effect's current assignments, including author-defined defaults, so a plugin can discover the available ids after the shader is applied.
+The read/write map of property assignments, keyed by property-definition id (the keys of [`propertyDefinitions`](/docs/plugins/api/Shader/#propertydefinitions), not property names). On reads, this is populated with the effect's current assignments, including author-defined defaults, so a plugin can discover the available ids after the shader is applied. Animated properties are omitted; read their tracks through [`manualKeyframeTracks`](/docs/plugins/api/properties/nodes-manualkeyframetracks/).
+
+On writes, omitted static properties reset to their author-defined defaults. For the same shader at the same array index, omitted animated properties keep their keyframe bindings, even when `properties` is empty or absent. Use [`removeManualKeyframeTrack`](/docs/plugins/api/properties/nodes-removemanualkeyframetrack/) to remove a track.
 
 * * *
 
