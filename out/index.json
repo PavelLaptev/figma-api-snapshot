@@ -1443,6 +1443,13 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "scene3d | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-scene3d/",
+    "path": "/docs/plugins/api/properties/nodes-scene3d/",
+    "slug": "docs__plugins__api__properties__nodes-scene3d"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "setBoundVariable | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-setboundvariable/",
     "path": "/docs/plugins/api/properties/nodes-setboundvariable/",
@@ -1576,6 +1583,20 @@
   },
   {
     "dataset": "plugin-api",
+    "title": "transform3d | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-transform3d/",
+    "path": "/docs/plugins/api/properties/nodes-transform3d/",
+    "slug": "docs__plugins__api__properties__nodes-transform3d"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "transformOrigin | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-transformorigin/",
+    "path": "/docs/plugins/api/properties/nodes-transformorigin/",
+    "slug": "docs__plugins__api__properties__nodes-transformorigin"
+  },
+  {
+    "dataset": "plugin-api",
     "title": "variableWidthStrokeProperties | Developer Docs",
     "url": "https://developers.figma.com/docs/plugins/api/properties/nodes-variablewidthstrokeproperties/",
     "path": "/docs/plugins/api/properties/nodes-variablewidthstrokeproperties/",
@@ -1699,6 +1720,13 @@
     "url": "https://developers.figma.com/docs/plugins/api/BlendMode/",
     "path": "/docs/plugins/api/BlendMode/",
     "slug": "docs__plugins__api__BlendMode"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "Scene3d | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Scene3d/",
+    "path": "/docs/plugins/api/Scene3d/",
+    "slug": "docs__plugins__api__Scene3d"
   },
   {
     "dataset": "plugin-api",
@@ -2070,6 +2098,20 @@
     "url": "https://developers.figma.com/docs/plugins/api/Vector/",
     "path": "/docs/plugins/api/Vector/",
     "slug": "docs__plugins__api__Vector"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "Transform3d | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/Transform3d/",
+    "path": "/docs/plugins/api/Transform3d/",
+    "slug": "docs__plugins__api__Transform3d"
+  },
+  {
+    "dataset": "plugin-api",
+    "title": "TransformOrigin | Developer Docs",
+    "url": "https://developers.figma.com/docs/plugins/api/TransformOrigin/",
+    "path": "/docs/plugins/api/TransformOrigin/",
+    "slug": "docs__plugins__api__TransformOrigin"
   },
   {
     "dataset": "plugin-api",

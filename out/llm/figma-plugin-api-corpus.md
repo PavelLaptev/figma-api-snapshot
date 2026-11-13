@@ -948,6 +948,10 @@ Supported on:
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### bottomLeftRadius: number
@@ -1127,6 +1131,10 @@ Supported on:
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 
 Whether the frame clips its contents. That is, whether layers inside the frame are visible outside the bounds of the frame.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -1724,6 +1732,10 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effects: ReadonlyArray<[Effect](/docs/plugins/api/Effect/)\>
@@ -1752,6 +1764,10 @@ Supported on:
 *   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -4379,6 +4395,10 @@ Supported on:
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### [openTypeFeatures](/docs/plugins/api/properties/TextNode-opentypefeatures/): { readonly \[feature in [OpenTypeFeature](/docs/plugins/api/OpenTypeFeature/)\]: boolean} | [figma.mixed](/docs/plugins/api/properties/figma-mixed/) \[readonly\]
@@ -5130,6 +5150,22 @@ The rotation of the node in degrees. Returns values from -180 to 180. Identical 
 
 * * *
 
+### [scene3d](/docs/plugins/api/properties/nodes-scene3d/): [Scene3d](/docs/plugins/api/Scene3d/) | null
+
+Supported on:
+
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+
+The container's [`Scene3d`](/docs/plugins/api/Scene3d/), or `null` when none is configured. Assign a new object to update it, or `null` to clear it.
+
+Instances inherit their main component's scene until overridden. Assigning `null` opts an instance out of the inherited scene.
+
+[View more →](/docs/plugins/api/properties/nodes-scene3d/)
+
+* * *
+
 ### setBoundVariable(field: [VariableBindableNodeField](/docs/plugins/api/VariableBindableNodeField/) | [VariableBindableTextField](/docs/plugins/api/VariableBindableTextField/), variable: [Variable](/docs/plugins/api/Variable/) | null): void
 
 Supported on:
@@ -5250,6 +5286,10 @@ Supported on:
 *   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -6641,6 +6681,66 @@ Supported on:
 *   [SlotNode](/docs/plugins/api/SlotNode/)
 
 The radius of the top right corner, in pixels. This value must be non-negative and can be fractional.
+
+* * *
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
 
 * * *
 
@@ -8851,6 +8951,10 @@ Set the [`GridStyle`](/docs/plugins/api/GridStyle/) that the [`layoutGrids`](/do
 
 Whether the frame clips its contents. That is, whether layers inside the frame are visible outside the bounds of the frame.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### guides: ReadonlyArray<[Guide](/docs/plugins/api/Guide/)\>
@@ -9339,11 +9443,19 @@ Determines the right stroke weight on a rectangle node or frame-like node. Must 
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -9365,6 +9477,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -9373,11 +9489,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -9605,6 +9729,44 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
+## 3D scene properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [scene3d](/docs/plugins/api/properties/nodes-scene3d/): [Scene3d](/docs/plugins/api/Scene3d/) | null
+
+The container's [`Scene3d`](/docs/plugins/api/Scene3d/), or `null` when none is configured. Assign a new object to update it, or `null` to clear it.
+
+Instances inherit their main component's scene until overridden. Assigning `null` opts an instance out of the inherited scene.
+
+[View more →](/docs/plugins/api/properties/nodes-scene3d/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -9764,6 +9926,8 @@ swapComponent
 *   Individual strokes-related properties
 *   Blend-related properties
 *   Layout-related properties
+*   3D transform properties
+*   3D scene properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -15066,11 +15230,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -15092,6 +15264,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -15100,11 +15276,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -15416,6 +15600,28 @@ Rescales the node. This API function is the equivalent of using the Scale Tool f
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -15672,6 +15878,7 @@ CodeBlockNode
 *   Blend-related properties
 *   Children-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -15726,11 +15933,19 @@ Duplicates the node. By default, the duplicate will be parented under `figma.cur
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -16793,6 +17008,10 @@ Set the [`GridStyle`](/docs/plugins/api/GridStyle/) that the [`layoutGrids`](/do
 
 Whether the frame clips its contents. That is, whether layers inside the frame are visible outside the bounds of the frame.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### guides: ReadonlyArray<[Guide](/docs/plugins/api/Guide/)\>
@@ -17281,11 +17500,19 @@ Determines the right stroke weight on a rectangle node or frame-like node. Must 
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -17307,6 +17534,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -17315,11 +17546,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -17547,6 +17786,44 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
+## 3D scene properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [scene3d](/docs/plugins/api/properties/nodes-scene3d/): [Scene3d](/docs/plugins/api/Scene3d/) | null
+
+The container's [`Scene3d`](/docs/plugins/api/Scene3d/), or `null` when none is configured. Assign a new object to update it, or `null` to clear it.
+
+Instances inherit their main component's scene until overridden. Assigning `null` opts an instance out of the inherited scene.
+
+[View more →](/docs/plugins/api/properties/nodes-scene3d/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -17743,6 +18020,8 @@ ComponentSetNode
 *   Individual strokes-related properties
 *   Blend-related properties
 *   Layout-related properties
+*   3D transform properties
+*   3D scene properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -18318,6 +18597,10 @@ Set the [`GridStyle`](/docs/plugins/api/GridStyle/) that the [`layoutGrids`](/do
 
 Whether the frame clips its contents. That is, whether layers inside the frame are visible outside the bounds of the frame.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### guides: ReadonlyArray<[Guide](/docs/plugins/api/Guide/)\>
@@ -18806,11 +19089,19 @@ Determines the right stroke weight on a rectangle node or frame-like node. Must 
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -18832,6 +19123,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -18840,11 +19135,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -19298,11 +19601,19 @@ Duplicates the node. By default, the duplicate will be parented under `figma.cur
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -20559,11 +20870,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -20585,6 +20904,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -20593,11 +20916,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -20976,6 +21307,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -21092,6 +21445,7 @@ EmbedNode
 *   Corner-related properties
 *   Geometry-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -22119,6 +22473,10 @@ Set the [`GridStyle`](/docs/plugins/api/GridStyle/) that the [`layoutGrids`](/do
 
 Whether the frame clips its contents. That is, whether layers inside the frame are visible outside the bounds of the frame.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### guides: ReadonlyArray<[Guide](/docs/plugins/api/Guide/)\>
@@ -22607,11 +22965,19 @@ Determines the right stroke weight on a rectangle node or frame-like node. Must 
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -22633,6 +22999,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -22641,11 +23011,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -22873,6 +23251,44 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
+## 3D scene properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [scene3d](/docs/plugins/api/properties/nodes-scene3d/): [Scene3d](/docs/plugins/api/Scene3d/) | null
+
+The container's [`Scene3d`](/docs/plugins/api/Scene3d/), or `null` when none is configured. Assign a new object to update it, or `null` to clear it.
+
+Instances inherit their main component's scene until overridden. Assigning `null` opts an instance out of the inherited scene.
+
+[View more →](/docs/plugins/api/properties/nodes-scene3d/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -23020,6 +23436,8 @@ GroupNode
 *   Individual strokes-related properties
 *   Blend-related properties
 *   Layout-related properties
+*   3D transform properties
+*   3D scene properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -23371,11 +23789,19 @@ Whether this container is shown as expanded in the layers panel.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -23397,6 +23823,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -23405,11 +23835,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -23626,6 +24064,28 @@ Resizes the node. Children of the node are never resized, even if those children
 Rescales the node. This API function is the equivalent of using the Scale Tool from the toolbar.
 
 [View more →](/docs/plugins/api/properties/nodes-rescale/)
+
+* * *
+
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
 
 * * *
 
@@ -23890,6 +24350,7 @@ HighlightNode
 *   Container-related properties
 *   Blend-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -24311,11 +24772,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -24337,6 +24806,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -24345,11 +24818,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -24728,6 +25209,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -24828,6 +25331,7 @@ InstanceNode
 *   Corner-related properties
 *   Geometry-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -25732,11 +26236,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -25758,6 +26270,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -25766,11 +26282,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -26131,6 +26655,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Export-related properties​
 
 ### exportSettings: ReadonlyArray<[ExportSettings](/docs/plugins/api/ExportSettings/)\>
@@ -26224,6 +26770,7 @@ LinkUnfurlNode
 *   Blend-related properties
 *   Geometry-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Export-related properties
 *   Reaction prototyping-related properties
 *   Annotation properties
@@ -28212,11 +28759,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -28238,6 +28793,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -28246,11 +28805,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -28629,6 +29196,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -28745,6 +29334,7 @@ RectangleNode
 *   Corner-related properties
 *   Geometry-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -29140,11 +29730,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -29166,6 +29764,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -29174,11 +29776,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -29615,6 +30225,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -29732,6 +30364,7 @@ RemovedNode
 *   Geometry-related properties
 *   Individual strokes-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -30791,11 +31424,19 @@ Sets the strokes of the node asynchronously. This is the only way to set pattern
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -33050,6 +33691,10 @@ Set the [`GridStyle`](/docs/plugins/api/GridStyle/) that the [`layoutGrids`](/do
 
 Whether the frame clips its contents. That is, whether layers inside the frame are visible outside the bounds of the frame.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### guides: ReadonlyArray<[Guide](/docs/plugins/api/Guide/)\>
@@ -33538,11 +34183,19 @@ Determines the right stroke weight on a rectangle node or frame-like node. Must 
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -33564,6 +34217,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -33572,11 +34229,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -33804,6 +34469,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -33897,6 +34584,7 @@ SlideRowNode
 *   Individual strokes-related properties
 *   Blend-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Complex stroke-related properties
@@ -35025,6 +35713,10 @@ Set the [`GridStyle`](/docs/plugins/api/GridStyle/) that the [`layoutGrids`](/do
 
 Whether the frame clips its contents. That is, whether layers inside the frame are visible outside the bounds of the frame.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### guides: ReadonlyArray<[Guide](/docs/plugins/api/Guide/)\>
@@ -35513,11 +36205,19 @@ Determines the right stroke weight on a rectangle node or frame-like node. Must 
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -35539,6 +36239,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -35547,11 +36251,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -35779,6 +36491,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -35926,6 +36660,7 @@ StampNode
 *   Individual strokes-related properties
 *   Blend-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -36338,11 +37073,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -36364,6 +37107,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -36372,11 +37119,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -36779,6 +37534,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -36838,6 +37615,7 @@ StarNode
 *   Layout-related properties
 *   Export-related properties
 *   Reaction prototyping-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Stickable properties
 
@@ -37244,11 +38022,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -37270,6 +38056,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -37278,11 +38068,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -37661,6 +38459,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -37777,6 +38597,7 @@ StickyNode
 *   Corner-related properties
 *   Geometry-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -37874,11 +38695,19 @@ Sets the fills of the node asynchronously. This is the only way to set pattern f
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -38631,11 +39460,19 @@ Sets the fills of the node asynchronously. This is the only way to set pattern f
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -40051,11 +40888,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -40077,6 +40922,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -40085,11 +40934,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -40450,6 +41307,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -40568,6 +41447,7 @@ textAutoResize
 *   Blend-related properties
 *   Geometry-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -41271,11 +42151,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -41297,6 +42185,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -41305,11 +42197,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -41670,6 +42570,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -41789,6 +42711,7 @@ autoRename
 *   Blend-related properties
 *   Geometry-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -42134,11 +43057,19 @@ Whether this container is shown as expanded in the layers panel.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -42160,6 +43091,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -42168,11 +43103,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -42389,6 +43332,28 @@ Resizes the node. Children of the node are never resized, even if those children
 Rescales the node. This API function is the equivalent of using the Scale Tool from the toolbar.
 
 [View more →](/docs/plugins/api/properties/nodes-rescale/)
+
+* * *
+
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
 
 * * *
 
@@ -42652,6 +43617,7 @@ VectorNode
 *   Container-related properties
 *   Blend-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -43075,11 +44041,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -43101,6 +44075,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -43109,11 +44087,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -43492,6 +44478,28 @@ Constraints of this node relative to its containing [`FrameNode`](/docs/plugins/
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -43608,6 +44616,7 @@ WashiTapeNode
 *   Corner-related properties
 *   Geometry-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -44003,11 +45012,19 @@ Sets the duration, in seconds, for the timeline with the given id.
 
 Opacity of the node, as shown in the Layer panel. Must be between 0 and 1.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### blendMode: [BlendMode](/docs/plugins/api/BlendMode/)
 
 Blend mode of this node, as shown in the Layer panel. In addition to the blend modes that paints & effects support, the layer blend mode can also have the value PASS\_THROUGH.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -44029,6 +45046,10 @@ Type of masking to use if this node is a mask. Defaults to `"ALPHA"`. You must c
 
 Array of effects. See [`Effect`](/docs/plugins/api/Effect/) type. For help on how to change this value, see [Editing Properties](/docs/plugins/editing-properties/).
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### effectStyleId: string
@@ -44037,11 +45058,19 @@ The id of the [`EffectStyle`](/docs/plugins/api/EffectStyle/) object that the pr
 
 If the manifest contains`"documentAccess": "dynamic-page"`, this property is read-only. Use `setEffectStyleIdAsync` to update the style.
 
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
+
 * * *
 
 ### setEffectStyleIdAsync(styleId: string): Promise<void>
 
 Set the [`EffectStyle`](/docs/plugins/api/EffectStyle/) that the properties of this node are linked to.
+
+Preserve 3D
+
+This property is ignored during rendering if `scene3d.preserve3d` is `true`, so avoid applying it to those nodes. See [`preserve3d`](/docs/plugins/api/Scene3d/#preserve3d) for guidance.
 
 * * *
 
@@ -44394,6 +45423,28 @@ Rescales the node. This API function is the equivalent of using the Scale Tool f
 
 * * *
 
+## 3D transform properties​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+[View more →](/docs/plugins/api/properties/nodes-transform3d/)
+
+* * *
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+[View more →](/docs/plugins/api/properties/nodes-transformorigin/)
+
+* * *
+
 ## Lock aspect ratio properties​
 
 ### [targetAspectRatio](/docs/plugins/api/properties/nodes-targetaspectratio/): [Vector](/docs/plugins/api/Vector/) | null \[readonly\]
@@ -44493,6 +45544,7 @@ WidgetNode
 *   Blend-related properties
 *   Geometry-related properties
 *   Layout-related properties
+*   3D transform properties
 *   Lock aspect ratio properties
 *   Export-related properties
 *   Reaction prototyping-related properties
@@ -51317,6 +52369,62 @@ resolvedVariableModes
 
 Next
 
+scene3d
+
+](/docs/plugins/api/properties/nodes-scene3d/)
+
+*   Signature
+*   Remarks
+
+---
+
+# scene3d | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-scene3d/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   scene3d
+
+# scene3d
+
+The container's [`Scene3d`](/docs/plugins/api/Scene3d/), or `null` when none is configured. Assign a new object to update it, or `null` to clear it.
+
+Instances inherit their main component's scene until overridden. Assigning `null` opts an instance out of the inherited scene.
+
+Supported on:
+
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+
+## Signature​
+
+### [scene3d](/docs/plugins/api/properties/nodes-scene3d/): [Scene3d](/docs/plugins/api/Scene3d/) | null
+
+## Remarks​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+Assigning `{ perspective: -1, preserve3d: false }` reads back as `null` when `visible` is omitted or `true`. With `visible: false`, it reads back as an object.
+
+```
+const scene = figma.createFrame()scene.resize(400, 300)scene.scene3d = { perspective: 800, preserve3d: true }const card = figma.createRectangle()scene.appendChild(card)card.resize(160, 100)card.x = 120card.y = 100card.transform3d = {  type: 'FIXED_ORDER',  translateZ: 40,  rotateX: 0,  rotateY: 30,  rotateZ: 0,}// Disable perspective while keeping the other scene settings.scene.scene3d = { ...scene.scene3d, perspective: -1 }
+```
+
+[
+
+Previous
+
+rotation
+
+](/docs/plugins/api/properties/nodes-rotation/)[
+
+Next
+
 setBoundVariable
 
 ](/docs/plugins/api/properties/nodes-setboundvariable/)
@@ -51396,9 +52504,9 @@ The variable to bind to the field. If `null` is provided, the field will be unbo
 
 Previous
 
-rotation
+scene3d
 
-](/docs/plugins/api/properties/nodes-rotation/)[
+](/docs/plugins/api/properties/nodes-scene3d/)[
 
 Next
 
@@ -52794,6 +53902,142 @@ timelines
 
 Next
 
+transform3d
+
+](/docs/plugins/api/properties/nodes-transform3d/)
+
+*   Signature
+*   Remarks
+
+---
+
+# transform3d | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-transform3d/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   transform3d
+
+# transform3d
+
+The node's [`Transform3d`](/docs/plugins/api/Transform3d/). Defaults to `{ type: 'NONE' }`. Assign a new `FIXED_ORDER` object to update it, or `{ type: 'NONE' }` to remove it. Assigning a `FREEFORM` value throws an error.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+
+## Signature​
+
+### [transform3d](/docs/plugins/api/properties/nodes-transform3d/): [Transform3d](/docs/plugins/api/Transform3d/)
+
+## Remarks​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+```
+const card = figma.createRectangle()card.resize(160, 100)card.transform3d = {  type: 'FIXED_ORDER',  translateZ: 40,  rotateX: 0,  rotateY: 30,  rotateZ: 0,  backfaceVisible: false,}// Preserve the other settings when changing one rotation.if (card.transform3d.type === 'FIXED_ORDER') {  card.transform3d = { ...card.transform3d, rotateY: 45 }}// Remove the transform.card.transform3d = { type: 'NONE' }
+```
+
+[
+
+Previous
+
+toString
+
+](/docs/plugins/api/properties/nodes-tostring/)[
+
+Next
+
+transformOrigin
+
+](/docs/plugins/api/properties/nodes-transformorigin/)
+
+*   Signature
+*   Remarks
+
+---
+
+# transformOrigin | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/properties/nodes-transformorigin/
+
+*   [](/)
+*   Plugins
+*   [Shared Node Properties](/docs/plugins/api/node-properties/)
+*   transformOrigin
+
+# transformOrigin
+
+The origin for the node's 3D transform, corresponding to CSS `transform-origin`. Defaults to 50 percent on both axes. Assign a new [`TransformOrigin`](/docs/plugins/api/TransformOrigin/) object to update it.
+
+Supported on:
+
+*   [BooleanOperationNode](/docs/plugins/api/BooleanOperationNode/)
+*   [ComponentNode](/docs/plugins/api/ComponentNode/)
+*   [EllipseNode](/docs/plugins/api/EllipseNode/)
+*   [FrameNode](/docs/plugins/api/FrameNode/)
+*   [GroupNode](/docs/plugins/api/GroupNode/)
+*   [HighlightNode](/docs/plugins/api/HighlightNode/)
+*   [InstanceNode](/docs/plugins/api/InstanceNode/)
+*   [LineNode](/docs/plugins/api/LineNode/)
+*   [PolygonNode](/docs/plugins/api/PolygonNode/)
+*   [RectangleNode](/docs/plugins/api/RectangleNode/)
+*   [SlideNode](/docs/plugins/api/SlideNode/)
+*   [SlotNode](/docs/plugins/api/SlotNode/)
+*   [StampNode](/docs/plugins/api/StampNode/)
+*   [StarNode](/docs/plugins/api/StarNode/)
+*   [TextNode](/docs/plugins/api/TextNode/)
+*   [TextPathNode](/docs/plugins/api/TextPathNode/)
+*   [TransformGroupNode](/docs/plugins/api/TransformGroupNode/)
+*   [VectorNode](/docs/plugins/api/VectorNode/)
+*   [WashiTapeNode](/docs/plugins/api/WashiTapeNode/)
+
+## Signature​
+
+### [transformOrigin](/docs/plugins/api/properties/nodes-transformorigin/): [TransformOrigin](/docs/plugins/api/TransformOrigin/)
+
+## Remarks​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+```
+const card = figma.createRectangle()card.resize(160, 100)// Rotate around the middle of the left edge, like a hinged door.card.transformOrigin = {  x: { unit: 'PIXELS', value: 0 },  y: { unit: 'PERCENT', value: 50 },}card.transform3d = {  type: 'FIXED_ORDER',  translateZ: 0,  rotateX: 0,  rotateY: 45,  rotateZ: 0,}
+```
+
+[
+
+Previous
+
+transform3d
+
+](/docs/plugins/api/properties/nodes-transform3d/)[
+
+Next
+
 variableWidthStrokeProperties
 
 ](/docs/plugins/api/properties/nodes-variablewidthstrokeproperties/)
@@ -52848,9 +54092,9 @@ Variable width strokes are also not supported in combination with dynamic stroke
 
 Previous
 
-toString
+transformOrigin
 
-](/docs/plugins/api/properties/nodes-tostring/)[
+](/docs/plugins/api/properties/nodes-transformorigin/)[
 
 Next
 
@@ -53231,9 +54475,9 @@ Transition
 
 Next
 
-TransformModifier
+Transform3d
 
-](/docs/plugins/api/TransformModifier/)
+](/docs/plugins/api/Transform3d/)
 
 ---
 
@@ -53691,7 +54935,25 @@ interface KeyframeBinding {  readonly baseValue: KeyframeValue  readonly timelin
 ## KeyframePropertyFieldName​
 
 ```
-type KeyframePropertyFieldName =  | 'CORNER_RADIUS'  | 'STROKE_WEIGHT'  | 'STACK_SPACING'  | 'STACK_PADDING_LEFT'  | 'STACK_PADDING_TOP'  | 'STACK_PADDING_RIGHT'  | 'STACK_PADDING_BOTTOM'  | 'WIDTH'  | 'HEIGHT'  | 'RECTANGLE_TOP_LEFT_CORNER_RADIUS'  | 'RECTANGLE_TOP_RIGHT_CORNER_RADIUS'  | 'RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS'  | 'RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS'  | 'BORDER_TOP_WEIGHT'  | 'BORDER_BOTTOM_WEIGHT'  | 'BORDER_LEFT_WEIGHT'  | 'BORDER_RIGHT_WEIGHT'  | 'STACK_COUNTER_SPACING'  | 'OPACITY'  | 'GRID_ROW_GAP'  | 'GRID_COLUMN_GAP'  | 'TRANSLATION_X'  | 'TRANSLATION_Y'  | 'TRANSLATION_XY'  | 'ROTATION'  | 'SCALE_X'  | 'SCALE_Y'  | 'SCALE_XY'  | 'PATH_TRIM_START'  | 'PATH_TRIM_END'
+type KeyframePropertyFieldName =  | 'CORNER_RADIUS'  | 'STROKE_WEIGHT'  | 'STACK_SPACING'  | 'STACK_PADDING_LEFT'  | 'STACK_PADDING_TOP'  | 'STACK_PADDING_RIGHT'  | 'STACK_PADDING_BOTTOM'  | 'WIDTH'  | 'HEIGHT'  | 'RECTANGLE_TOP_LEFT_CORNER_RADIUS'  | 'RECTANGLE_TOP_RIGHT_CORNER_RADIUS'  | 'RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS'  | 'RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS'  | 'BORDER_TOP_WEIGHT'  | 'BORDER_BOTTOM_WEIGHT'  | 'BORDER_LEFT_WEIGHT'  | 'BORDER_RIGHT_WEIGHT'  | 'STACK_COUNTER_SPACING'  | 'OPACITY'  | 'GRID_ROW_GAP'  | 'GRID_COLUMN_GAP'  | 'TRANSLATION_X'  | 'TRANSLATION_Y'  | 'TRANSLATION_XY'  | 'ROTATION'  | 'SCALE_X'  | 'SCALE_Y'  | 'SCALE_XY'  | 'PATH_TRIM_START'  | 'PATH_TRIM_END'  | 'TRANSFORM_3D_TRANSLATION_Z'  | 'TRANSFORM_3D_ROTATION_X'  | 'TRANSFORM_3D_ROTATION_Y'  | 'TRANSFORM_3D_ROTATION_Z'  | 'SCENE_3D_PERSPECTIVE'
+```
+
+### 3D transform keyframes​
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+Use the 3D property names with [`applyManualKeyframeTrack`](/docs/plugins/api/properties/nodes-applymanualkeyframetrack/) and `FLOAT` keyframe values:
+
+*   `TRANSFORM_3D_TRANSLATION_Z`: Z translation in pixels.
+*   `TRANSFORM_3D_ROTATION_X`, `TRANSFORM_3D_ROTATION_Y`, and `TRANSFORM_3D_ROTATION_Z`: rotation in degrees, using the same direction as the corresponding [`Transform3d`](/docs/plugins/api/Transform3d/) property.
+*   `SCENE_3D_PERSPECTIVE`: container perspective in pixels. Keyframe values and the base value must be nonnegative, even though a static [`Scene3d`](/docs/plugins/api/Scene3d/) can use a negative perspective to disable projection.
+
+3D transform tracks require a `FIXED_ORDER` transform; imported `FREEFORM` transforms cannot be keyframed. Scene perspective applies to frames, components, and instances. Timeline positions are in seconds, as with other Motion tracks.
+
+```
+const scene = figma.createFrame()scene.resize(400, 300)scene.scene3d = { perspective: 800, preserve3d: true }const card = figma.createRectangle()scene.appendChild(card)card.resize(160, 100)card.x = 120card.y = 100card.transform3d = {  type: 'FIXED_ORDER',  translateZ: 0,  rotateX: 0,  rotateY: 0,  rotateZ: 0,}card.applyManualKeyframeTrack(  { type: 'PROPERTY', name: 'TRANSFORM_3D_ROTATION_Y' },  {    baseValue: { type: 'FLOAT', value: 0 },    keyframes: [      { timelinePosition: 0, value: { type: 'FLOAT', value: 0 } },      { timelinePosition: 1, value: { type: 'FLOAT', value: 180 } },    ],  },)
 ```
 
 ## EffectKeyframeFieldName​
@@ -53797,6 +55059,7 @@ NodeChange
 *   ManualKeyframeTrack
 *   KeyframeBinding
 *   KeyframePropertyFieldName
+    *   3D transform keyframes
 *   EffectKeyframeFieldName
 *   KeyframeField
 *   ComponentPropKeyframeTracks
@@ -54418,6 +55681,73 @@ Next
 BuzzAssetType
 
 ](/docs/plugins/api/BuzzAssetType/)
+
+---
+
+# Scene3d | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/Scene3d/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   Scene3d
+
+# Scene3d
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+A shared 3D rendering context for the children of a [`FrameNode`](/docs/plugins/api/FrameNode/), [`ComponentNode`](/docs/plugins/api/ComponentNode/), or [`InstanceNode`](/docs/plugins/api/InstanceNode/). Set it with [`scene3d`](/docs/plugins/api/properties/nodes-scene3d/) to configure perspective and whether children share a 3D space.
+
+Apply [`Transform3d`](/docs/plugins/api/Transform3d/) to children to rotate them in 3D or move them along the Z axis. The container's `perspective` controls how those transformed children are projected onto the canvas. To disable perspective without changing the other scene settings, set `perspective` to `-1`. See [`scene3d`](/docs/plugins/api/properties/nodes-scene3d/) for a complete example.
+
+Reads return `null` when no scene is configured. Assigning `{ perspective: -1, preserve3d: false }` also reads back as `null` when `visible` is omitted or `true`. With `visible: false`, it reads back as an object.
+
+Instances inherit their main component's scene until overridden. Assigning `null` clears a frame or component's scene, or opts an instance out of its inherited scene.
+
+### perspective: number \[readonly\]
+
+Perspective distance in pixels, corresponding to CSS `perspective`. Negative values disable perspective; `-1` is the default. `0` and positive values below `1` render as `1px` perspective. The assigned value is preserved and must be finite.
+
+* * *
+
+### preserve3d: boolean \[readonly\]
+
+Whether children share a 3D rendering context—a shared space in which their transformed depth determines rendering order. Corresponds to CSS `transform-style: preserve-3d` when `true`, or `flat` when `false`.
+
+When `true`, children share a 3D space. Overlapping surfaces are rendered according to their transformed depth along the Z axis. Surfaces in the same plane follow layer order.
+
+When `false`, children are flattened into the container's plane and drawn in layer order, regardless of their depth.
+
+Flattening properties
+
+Avoid applying [opacity](/docs/plugins/api/node-properties/#opacity), [blend modes](/docs/plugins/api/node-properties/#blendmode), [`effects`](/docs/plugins/api/node-properties/#effects) (including linked effect styles), or [`clipsContent`](/docs/plugins/api/node-properties/#clipscontent) to a container whose `scene3d.preserve3d` is `true`. These properties have no visual effect on that container: it renders with full opacity and `PASS_THROUGH` blending, without effects or clipping. Their stored values are retained and apply again when `preserve3d` is `false`.
+
+To apply opacity, blending, effects, or clipping to the whole scene, use an ancestor frame with `preserve3d: false`. Put the perspective on that flat frame and keep `preserve3d: true` on an inner container so its children still share a 3D space. Applying opacity to individual children fades each one separately, which can make overlapping children show through one another.
+
+* * *
+
+### visible?: boolean \[readonly\]
+
+Whether the scene's perspective effect is applied. Defaults to `true` when omitted on assignment. Setting this to `false` preserves the stored perspective value; `preserve3d` applies independently.
+
+* * *
+
+[
+
+Previous
+
+RunEvent
+
+](/docs/plugins/api/RunEvent/)[
+
+Next
+
+Shader
+
+](/docs/plugins/api/Shader/)
 
 ---
 
@@ -59202,6 +60532,128 @@ Variable
 
 ---
 
+# Transform3d | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/Transform3d/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   Transform3d
+
+# Transform3d
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+The 3D transform applied to a node, set with [`transform3d`](/docs/plugins/api/properties/nodes-transform3d/).
+
+```
+type Transform3d =  | { readonly type: 'NONE' }  | {      readonly type: 'FIXED_ORDER'      readonly translateZ: number      readonly rotateX: number      readonly rotateY: number      readonly rotateZ: number      readonly backfaceVisible?: boolean      readonly visible?: boolean    }  | {      readonly type: 'FREEFORM'      readonly backfaceVisible: boolean      readonly visible?: boolean    }
+```
+
+*   `NONE`: No 3D transform. Assign `{ type: 'NONE' }` to remove an existing transform.
+*   `FIXED_ORDER`: An editable transform corresponding to the CSS transform functions `translateZ() rotateX() rotateY() rotateZ()`, in that order. All four numeric fields are required and must be finite. `translateZ` is in pixels; the rotations are in degrees. Negative values are allowed.
+*   `FREEFORM`: An imported transform that plugins can read. Assigning it throws an error.
+
+For `FIXED_ORDER` transforms, you can also set:
+
+*   `backfaceVisible`: Shows or hides the back of the layer. In CSS, this is `backface-visibility: visible` (`true`) or `backface-visibility: hidden` (`false`).
+*   `visible`: Turns the 3D transform on or off without clearing its settings.
+
+Both options default to `true` if you leave them out. You can't edit the returned object directly, so copy the current `FIXED_ORDER` value and assign it back with your changes. This keeps the other settings intact. See [`transform3d`](/docs/plugins/api/properties/nodes-transform3d/) for an example.
+
+A 3D transform changes how the layer looks on the canvas. It doesn't change its layout size or [`relativeTransform`](/docs/plugins/api/properties/nodes-relativetransform/).
+
+Perspective is configured on a container with [`scene3d`](/docs/plugins/api/properties/nodes-scene3d/). Use [`transformOrigin`](/docs/plugins/api/properties/nodes-transformorigin/) to change the point around which the transform is applied.
+
+Fixed-order rotations and Z translation can be animated with the [Motion keyframe API](/docs/plugins/api/Motion/#keyframepropertyfieldname).
+
+[
+
+Previous
+
+Transform
+
+](/docs/plugins/api/Transform/)[
+
+Next
+
+TransformModifier
+
+](/docs/plugins/api/TransformModifier/)
+
+---
+
+# TransformOrigin | Developer Docs
+
+Source: https://developers.figma.com/docs/plugins/api/TransformOrigin/
+
+*   [](/)
+*   Plugins
+*   [Data Types](/docs/plugins/api/data-types/)
+*   TransformOrigin
+
+# TransformOrigin
+
+note
+
+3D transforms are available in beta. The API is subject to change.
+
+The point around which a node's 3D transform is applied, corresponding to the X/Y values of CSS `transform-origin`. Set with [`transformOrigin`](/docs/plugins/api/properties/nodes-transformorigin/). Defaults to `50% 50%`: `{ x: { unit: 'PERCENT', value: 50 }, y: { unit: 'PERCENT', value: 50 } }`.
+
+Changing the origin can move the rendered node. Each axis has its own unit: `PERCENT` corresponds to CSS `%`, and `PIXELS` to `px`. See [`transformOrigin`](/docs/plugins/api/properties/nodes-transformorigin/) for an example of rotating around a layer's left edge.
+
+## TransformOrigin​
+
+### x: [TransformOriginAxis](/docs/plugins/api/TransformOrigin/#transformoriginaxis) \[readonly\]
+
+The horizontal origin, measured from the node's left edge.
+
+* * *
+
+### y: [TransformOriginAxis](/docs/plugins/api/TransformOrigin/#transformoriginaxis) \[readonly\]
+
+The vertical origin, measured from the node's top edge.
+
+* * *
+
+## TransformOriginAxis​
+
+The `{ unit, value }` shape used for each axis.
+
+### unit: 'PERCENT' | 'PIXELS' \[readonly\]
+
+The unit for this axis. `"PERCENT"` is relative to the node's width (x) or height (y), with 50 at the center. `"PIXELS"` is an offset from the node's top-left corner.
+
+* * *
+
+### value: number \[readonly\]
+
+The finite offset in the specified unit. Values outside the node's bounds are allowed.
+
+* * *
+
+[
+
+Previous
+
+TransformModifier
+
+](/docs/plugins/api/TransformModifier/)[
+
+Next
+
+Trigger
+
+](/docs/plugins/api/Trigger/)
+
+*   TransformOrigin
+*   TransformOriginAxis
+
+---
+
 # VariableWidthStrokeProperties | Developer Docs
 
 Source: https://developers.figma.com/docs/plugins/api/VariableWidthStrokeProperties/
@@ -61474,9 +62926,9 @@ RGB/RGBA
 
 Next
 
-Shader
+Scene3d
 
-](/docs/plugins/api/Shader/)
+](/docs/plugins/api/Scene3d/)
 
 ---
 
@@ -61603,9 +63055,9 @@ type ShaderPropertyValue =  | boolean // BOOLEAN  | string // TEXT  | number // 
 
 Previous
 
-RunEvent
+Scene3d
 
-](/docs/plugins/api/RunEvent/)[
+](/docs/plugins/api/Scene3d/)[
 
 Next
 
@@ -62217,15 +63669,15 @@ Type of repeat modifier.
 
 Previous
 
-Transform
+Transform3d
 
-](/docs/plugins/api/Transform/)[
+](/docs/plugins/api/Transform3d/)[
 
 Next
 
-Trigger
+TransformOrigin
 
-](/docs/plugins/api/Trigger/)
+](/docs/plugins/api/TransformOrigin/)
 
 *   Repeat Modifiers
     *   Linear Repeat Modifiers
@@ -62262,9 +63714,9 @@ The `"ON_MEDIA_HIT"` and `"ON_MEDIA_END"` trigger types can only trigger from a 
 
 Previous
 
-TransformModifier
+TransformOrigin
 
-](/docs/plugins/api/TransformModifier/)[
+](/docs/plugins/api/TransformOrigin/)[
 
 Next
 
