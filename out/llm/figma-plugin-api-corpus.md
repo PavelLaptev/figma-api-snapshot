@@ -52756,7 +52756,7 @@ The data you want to store. If you want to store a value type other than a strin
 
 ## Remarks​
 
-The data is specific to your plugin ID. Plugins with other IDs won't be able to read this data. You can retrieve it later by calling `getPluginData` with the same key. To find all data stored on a node or style by your plugin use `getPluginDataKeys`.
+The data is specific to your plugin ID. Plugins with other IDs won't be able to read this data. You can retrieve it later by calling `getPluginData` with the same key. To find all data stored on a node or style by your plugin use `getPluginDataKeys`. Use [`setSharedPluginData`](/docs/plugins/api/properties/nodes-setsharedplugindata/) instead if other plugins need to read this data.
 
 caution
 
@@ -53063,7 +53063,7 @@ The data you want to store. If you want to store a value type other than a strin
 
 This lets you store custom information on any node or style. You can retrieve it later by calling [`getSharedPluginData`](/docs/plugins/api/node-properties/#getsharedplugindata) with the same namespace and key. To find all data stored on a node or style in a particular namespace, use [`getSharedPluginDataKeys`](/docs/plugins/api/node-properties/#getsharedplugindatakeys).
 
-Any data you write using this API will be readable by any plugin. The intent is to allow plugins to interoperate with each other. Use [`setPluginData`](/docs/plugins/api/properties/nodes-setplugindata/) instead if you don't want other plugins to be able to read your data.
+Any data you write using this API will be readable by any plugin. The intent is to allow plugins to interoperate with each other.
 
 You must also provide a `namespace` argument to avoid key collisions with other plugins. This argument is mandatory to prevent multiple plugins from using generic key names like `data` and overwriting one another. We recommend passing a value that identifies your plugin. This namespace can be given to authors of other plugins so that they can read data from your plugin.
 
